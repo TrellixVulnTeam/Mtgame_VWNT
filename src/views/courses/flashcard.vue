@@ -703,6 +703,7 @@
           }
         }else{
           this.list2 = this.In_the_castle;
+          this.title = this.titleUrl.InTheSea;
         }
       },
       //pop向左右切换卡牌
@@ -1313,7 +1314,7 @@
     }
   }
 
-  @media screen and (max-width: 900px) {
+  @media only screen and (min-device-width: 812px) and (max-device-width: 1023px){
     .cardlist[data-v-52d5b23f] {
       top: 50% !important;
       transform: translateY(-48%) !important;
@@ -1329,6 +1330,5 @@
       margin-top: -3px !important;
     }
   }
-
 
 </style>

@@ -30,7 +30,7 @@
 
       <img src="../assets/image/rightback.png"  @click="back" class="backbutton"/>
 	  <div>
-		<h2 class="jump" @click="jump()">Flashcards</h2>
+		<h2 class="jump" @click="jump()" v-if="this.part!=='part3'">Flashcards</h2>
 	  </div>
 			<div class="menulist" id="scrollbody">
 				<div class="styletit">

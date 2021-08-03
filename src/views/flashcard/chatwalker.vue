@@ -4747,7 +4747,7 @@
     }
 
     .camel img{
-        top: 37%;
+      top: 37%;
     }
 
     .camelbutton img{
@@ -5711,7 +5711,7 @@
       }
     }
   }
-  @media screen and (min-width: 822px)  and (max-width: 824px){
+  /*@media only screen and (min-device-width: 823px)  and (max-device-width: 823px){
     .wandbutton img{
       width: 8%;
       top: 18%;
@@ -6034,7 +6034,7 @@
         position: absolute;
       }
     }
-  }
+  }*/
   @media screen and (min-width: 1600px) {
     .tower{
     width: 18%;
@@ -6470,7 +6470,2988 @@
       left: 50%;
     }
   }
-  @media only screen and (device-width: 414px) and (device-height: 896px){
+  //手机
+  @media only screen and (min-device-width: 812px) and (max-device-width: 1023px){
+    .wavebutton img {
+      top: 58%;
+    }
+    .elfbutton img {
+      top: 38%;
+    }
+    .unicornbutton img {
+      top: 51%;
+    }
+    .mermaidbutton img {
+      width: 11%;
+      top: 79%;
+      left: 65%;
+      position: absolute;
+    }
+    .mermaid img {
+      width: 19%;
+      top: 50%;
+      left: 74%;
+    }
+    .unicorn img {
+      width: 15%;
+      top: 38%;
+    }
+    .wave img {
+      width: 10%;
+      top: 36%;
+      left: 60%;
+      position: absolute;
+      z-index: 1;
+    }
+    .forest img {
+      width: 45%;
+      top: -7%;
+      left: 55%;
+      position: absolute;
+    }
+    .wandbutton img{
+      width: 8%;
+      top: 16%;
+      left: 38%;
+    }
+    .witch img{
+      width: 19%;
+      top: 3%;
+    }
+    .fairy img {
+      width: 23%;
+      top: 36%;
+      left: 31%;
+      position: absolute;
+    }
+    .tower1button img {
+      width: 8%;
+      top: 7%;
+      left: 9%;
+      position: absolute;
+    }
+    .tower1 img {
+      width: 10%;
+      top: 15%;
+      left: 3%;
+      position: absolute;
+    }
+    .laughbutton img {
+      width: 9%;
+      top: 52%;
+      left: 5%;
+      position: absolute;
+    }
+    .giantbutton img{
+      width: 9%;
+      top: 72%;
+      left: 9%;
+    }
+    .giant img {
+      width: 31%;
+      top: 32%;
+      left: 5%;
+      position: absolute;
+    }
+    .crowd img {
+      width: 30.5%;
+      height: 48%;
+      top: 24%;
+      left: 8%;
+      position: absolute;
+    }
+    .tent img {
+      width: 38%;
+      top: -8%;
+      left: 0%;
+      -webkit-transform: rotate(-5deg);
+      transform: rotate(-5deg);
+    }
+    .cheer img {
+      width: 29%;
+      height: 47%;
+      top: 30%;
+      left: 4%;
+      position: absolute;
+      transform: rotate(2deg);
+    }
+    .watch img {
+      width: 30.5% !important;
+      top: 28.3% !important;
+      left: 74% !important;
+      transform: rotate(-2deg);
+    }
+    .unicyclebutton img {
+      top: 78%;
+      left: 18%;
+    }
+    .clown img {
+      top: 38%;
+    }
+    .trick img {
+      top: 34%;
+    }
+    .acrobat img {
+      top: -19%;
+    }
+    .net img {
+      top: 12%;
+    }
+    .trickbutton img {
+      top: 67%;
+    }
+    .juggle img {
+      width: 17%;
+      top: 38%;
+      left: 65%;
+      position: absolute;
+      z-index: 1;
+    }
+    .tank img {
+      width: 33%;
+      top: 66%;
+      left: 47%;
+      position: absolute;
+      z-index: 1;
+    }
+    .flippers img {
+      width: 32%;
+      top: 61%;
+      left: 49%;
+      position: absolute;
+      z-index: 1;
+    }
+    .waves img{
+      height: 100%;
+      top: 0% !important;
+      left: 0%;
+    }
+    .surf img {
+      top: 5%;
+    }
+    .lifeJacket img {
+      top: 12%;
+    }
+    .dive img {
+      top: 43%;
+    }
+    .divebutton img {
+      top: 61%;
+    }
+    .mask img {
+      top: 52%;
+    }
+    .blow img {
+      top: 1%;
+    }
+    .cactus {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 400%;
+        top: 131%;
+        left: 0%;
+        position: absolute;
+      }
+    }
+
+    .cactusbutton {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 95%;
+        top: 190%;
+        left: 60%;
+        position: absolute;
+      }
+    }
+
+    .camel img{
+      top: 37%;
+    }
+
+    .camelbutton img{
+      top: 15%;
+    }
+
+    .compass {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 52%;
+        top: 112%;
+        left: 183%;
+        position: absolute;
+      }
+    }
+
+    .compassbutton img{
+      width: 11%;
+      top: 57%;
+      left: 14%;
+      position: absolute;
+    }
+
+    .dunes {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 590%;
+        top: 44.5%;
+        left: 79%;
+        position: absolute;
+        transform: rotate(
+          1deg
+        );
+        z-index: 1;
+      }
+    }
+
+    .dunesbutton img{
+      width: 8%;
+      top: 17%;
+      left: 28%;
+      position: absolute;
+    }
+
+    .hot {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 185%;
+        top: 66%;
+        left: 26%;
+        position: absolute;
+        z-index: 1;
+      }
+    }
+
+    .hotbutton img{
+      width: 6%;
+      top: 46%;
+      left: 67%;
+      position: absolute;
+    }
+
+    .lizard {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 175%;
+        top: 175%;
+        left: 115%;
+        position: absolute;
+        z-index: 3;
+      }
+    }
+
+    .lizardbutton img{
+      width: 8%;
+      top: 83%;
+      left: 28%;
+      position: absolute;
+    }
+
+    .lost {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 150%;
+        top: 65%;
+        left: 190%;
+        position: absolute;
+        z-index: 2;
+      }
+    }
+
+    .lostbutton img{
+      width: 7%;
+      top: 33%;
+      left: 30%;
+      position: absolute;
+    }
+
+    .map {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 160%;
+        top: 117%;
+        left: 537%;
+        position: absolute;
+        z-index: 1;
+      }
+    }
+
+    .mapbutton img{
+      width: 7%;
+      top: 57%;
+      left: 46%;
+      position: absolute;
+    }
+
+    .sand {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 250%;
+        top: 175%;
+        left: 330%;
+        position: absolute;
+        z-index: 1;
+      }
+    }
+
+    .sandbutton img{
+      width: 7%;
+      top: 65%;
+      left: 38%;
+      position: absolute;
+    }
+
+    .sandstorm {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 185%;
+        top: 66%;
+        left: 26%;
+        position: absolute;
+        z-index: 1;
+      }
+    }
+
+    .thirsty {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 150%;
+        top: 112%;
+        left: 760%;
+        position: absolute;
+        z-index: 1;
+      }
+    }
+
+    .thirstybutton img{
+      width: 9%;
+      top: 37%;
+      left: 83%;
+      position: absolute;
+    }
+
+    .water {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 45%;
+        top: 135%;
+        left: 760%;
+        position: absolute;
+        z-index: 1;
+      }
+    }
+
+    .waterbutton img{
+      width: 8%;
+      top: 72%;
+      left: 74%;
+      position: absolute;
+    }
+
+    .shovel {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 340%;
+        top: -2%;
+        left: 0%;
+        position: absolute;
+        z-index: 1;
+      }
+    }
+
+    .shovelbutton img{
+      width: 13%;
+      top: 7%;
+      left: 8%;
+      position: absolute;
+    }
+    .igloo {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 185%;
+        top: 66%;
+        left: 26%;
+        position: absolute;
+        z-index: 1;
+      }
+    }
+
+    .igloobutton {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 80%;
+        top: 70%;
+        left: 190%;
+        position: absolute;
+      }
+    }
+
+    .cold {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 135%;
+        top: 95%;
+        left: 125%;
+        position: absolute;
+        z-index: 2;
+      }
+    }
+
+    .coldbutton {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 75%;
+        top: 135%;
+        left: 70%;
+        position: absolute;
+      }
+    }
+
+    .tusk {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 220%;
+        top: 126%;
+        left: 780%;
+        position: absolute;
+        z-index: 1;
+      }
+    }
+
+    .tuskbutton {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 65%;
+        top: 215%;
+        left: 860%;
+        position: absolute;
+      }
+    }
+
+    .walrusbutton {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 80%;
+        top: 125%;
+        left: 865%;
+        position: absolute;
+      }
+    }
+    .orca {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 280%;
+        top: 60%;
+        left: 525%;
+        position: absolute;
+        z-index: 1;
+      }
+    }
+
+    .orcabutton {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 75%;
+        top: 85%;
+        left: 725%;
+        position: absolute;
+      }
+    }
+
+    .ice {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 400%;
+        top: 150%;
+        left: 390%;
+        position: absolute;
+      }
+    }
+
+    .icebutton {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 60%;
+        top: 215%;
+        left: 570%;
+        position: absolute;
+      }
+    }
+
+    .seal {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 130%;
+        top: 160%;
+        left: 435%;
+        position: absolute;
+        z-index: 1;
+      }
+    }
+
+    .sled {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 230%;
+        top: 180%;
+        left: 33%;
+        position: absolute;
+      }
+    }
+
+    .polarbear {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 150%;
+        top: 72%;
+        left: 342%;
+        position: absolute;
+      }
+    }
+
+    .polarbearbutton {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 130%;
+        top: 120%;
+        left: 280%;
+        position: absolute;
+      }
+    }
+
+    .snow {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 380%;
+        top: -4%;
+        left: -4%;
+        position: absolute;
+      }
+    }
+
+    .snowbutton {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 75%;
+        top: 30%;
+        left: 190%;
+        position: absolute;
+      }
+    }
+
+    .iceberg {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 180%;
+        top: 165%;
+        left: 605%;
+        position: absolute;
+      }
+    }
+
+    .blizzard {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 630%;
+        top: -12%;
+        left: 400%;
+        position: absolute;
+      }
+    }
+
+    .tower{
+      width: 19%;
+      left:2.4%;
+      top:14.5%;
+      position: absolute;
+      z-index:1;
+    }
+
+    .dragon {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 185%;
+        top: 137%;
+        left: 62%;
+        position: absolute;
+      }
+    }
+
+    .dragonbutton {
+      height: 20%;
+      width: 10%;
+      display: block;
+      float: left;
+      top: 44%;
+      position: absolute;
+      left: 1%;
+
+      img {
+        width: 90%;
+        top: 165%;
+        left: 140%;
+        position: absolute;
+      }
+    }
+
+    .shield {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 109%;
+        top: 63%;
+        left: 460%;
+        position: absolute;
+      }
+    }
+
+    .shieldbutton {
+      height: 20%;
+      width: 10%;
+      display: block;
+      float: left;
+      top: 44%;
+      position: absolute;
+      left: 1%;
+
+      img {
+        width: 75%;
+        top: -120%;
+        left: 510%;
+        position: absolute;
+      }
+    }
+
+    .swordbutton {
+      height: 20%;
+      width: 10%;
+      display: block;
+      float: left;
+      top: 44%;
+      position: absolute;
+      left: 1%;
+
+      img {
+        width: 75%;
+        top: -80%;
+        left: 380%;
+        position: absolute;
+      }
+    }
+    .roarbutton {
+      height: 20%;
+      width: 10%;
+      display: block;
+      float: left;
+      top: 44%;
+      position: absolute;
+      left: 1%;
+
+      img {
+        width: 90%;
+        top: 25%;
+        left: 220%;
+        position: absolute;
+      }
+    }
+
+    .knight {
+      height: 40%;
+      width: 10%;
+      top: 0;
+      position: absolute;
+
+      img {
+        width: 160%;
+        top: 144%;
+        left: 300%;
+        position: absolute;
+      }
+    }
+
+    .knightbutton {
+      height: 20%;
+      width: 10%;
+      display: block;
+      float: left;
+      top: 44%;
+      position: absolute;
+      left: 1%;
+
+      img {
+        width: 90%;
+        top: 50%;
+        left: 436%;
+        position: absolute;
+      }
+    }
+
+    .horsebutton {
+      height: 20%;
+      width: 10%;
+      display: block;
+      float: left;
+      top: 44%;
+      position: absolute;
+      left: 1%;
+
+      img {
+        width: 90%;
+        top: 9%;
+        left: 48%;
+        position: absolute;
+      }
+    }
+
+    .castle {
+      height: 40%;
+      width: 10%;
+      top: 0;
+      position: absolute;
+
+      img {
+        width: 235%;
+        top: 38%;
+        left: 686%;
+        position: absolute;
+      }
+    }
+
+    .castlebutton {
+      height: 20%;
+      width: 10%;
+      display: block;
+      float: left;
+      top: 44%;
+      position: absolute;
+      left: 1%;
+
+      img {
+        width: 90%;
+        top: -95%;
+        left: 825%;
+        position: absolute;
+      }
+    }
+
+    .queen {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 60%;
+        top: 155%;
+        left: 745%;
+        position: absolute;
+      }
+    }
+
+    .queenbutton {
+      height: 20%;
+      width: 10%;
+      display: block;
+      float: left;
+      top: 44%;
+      position: absolute;
+      left: 1%;
+
+      img {
+        width: 90%;
+        top: 195%;
+        left: 635%;
+        position: absolute;
+      }
+    }
+
+    .king {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 70%;
+        top: 148%;
+        left: 789%;
+        position: absolute;
+      }
+    }
+
+    .kingbutton {
+      height: 20%;
+      width: 10%;
+      display: block;
+      float: left;
+      top: 44%;
+      position: absolute;
+      left: 1%;
+
+      img {
+        width: 90%;
+        top: 80%;
+        left: 850%;
+        position: absolute;
+      }
+    }
+
+    .wizard {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 84%;
+        top: 60%;
+        left: 576%;
+        position: absolute;
+      }
+    }
+
+    .wizardbutton {
+      height: 20%;
+      width: 10%;
+      display: block;
+      float: left;
+      top: 44%;
+      position: absolute;
+      left: 1%;
+
+      img {
+        width: 90%;
+        top: -120%;
+        left: 630%;
+        position: absolute;
+      }
+    }
+
+    .princess {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 79%;
+        top: -4%;
+        left: 64%;
+        position: absolute;
+      }
+    }
+
+    .princessbutton {
+      height: 20%;
+      width: 10%;
+      display: block;
+      float: left;
+      top: 44%;
+      position: absolute;
+      left: 1%;
+
+      img {
+        width: 90%;
+        top: -90%;
+        left: 150%;
+        position: absolute;
+      }
+    }
+
+    .screambutton {
+      height: 20%;
+      width: 10%;
+      display: block;
+      float: left;
+      top: 44%;
+      position: absolute;
+      left: 1%;
+
+      img {
+        width: 90%;
+        top: -180%;
+        left: 130%;
+        position: absolute;
+      }
+    }
+    .mirror {
+      img {
+        width: 40%;
+        top: 55%;
+        left: 40%;
+      }
+    }
+
+    .wardrobe {
+      height: 32%;
+
+      img {
+        width: 70%;
+      }
+    }
+
+    .wardrobebutton img {
+      width: 81%;
+    }
+
+    .bed {
+      width: 22%;
+    }
+
+    .sleep {
+      width: 22%;
+    }
+
+    .bedbutton {
+      img {
+        width: 70%;
+      }
+    }
+
+    .sleepbutton {
+      img {
+        width: 70%;
+        left: 0;
+      }
+    }
+
+    .lamp {
+      img {
+        width: 45%;
+        top: 40%;
+        left: 25%;
+      }
+    }
+
+    .lampbutton {
+      top: 45%;
+
+      img {
+        width: 40%;
+        top: 37%;
+      }
+    }
+
+    .sofabutton {
+      img {
+        width: 40%;
+      }
+    }
+
+    .desk {
+      top: 2%;
+    }
+
+    .deskbutton {
+      top: 0%;
+      left: 36%;
+    }
+
+    .sofa {
+      width: 45%;
+    }
+
+    .phone {
+      .img2 {
+        top: 52%;
+        right: 31%;
+      }
+
+      .img1 {
+        right: 45%;
+        top: 48%;
+      }
+    }
+
+    .phonebutton {
+      img {
+        width: 40%;
+        top: 40%;
+      }
+    }
+
+    .cupboard {
+      img {
+        width: 45%;
+        top: 57%;
+        left: 52%;
+      }
+    }
+
+    .wash {
+      img {
+        width: 75%;
+      }
+    }
+
+    .washbutton {
+      img {
+        width: 40%;
+      }
+    }
+
+    .sink {
+      img {
+        width: 40%;
+        top: 85%;
+      }
+    }
+
+    .toiletbutton {
+      img {
+        width: 40%;
+      }
+    }
+  }
+  //平板
+  @media only screen and (min-device-width: 1024px) and (max-device-width: 1600px){
+    .wingbutton img {
+      width: 10%;
+      top: 43%;
+      left: 40%;
+    }
+    .fairy img {
+      width: 25%;
+      top: 47%;
+    }
+    .forestbutton img {
+      width: 11%;
+      top: 23%;
+    }
+    .wandbutton img {
+      width: 10%;
+      top: 19%;
+      left: 38%;
+      position: absolute;
+    }
+    .witchbutton img {
+      width: 9%;
+      top: 23%;
+      left: 16%;
+    }
+    .witch img {
+      width: 20%;
+      top: 14%;
+    }
+    .tower1button img {
+      width: 10%;
+      top: 15%;
+      left: 4%;
+    }
+    .tower1 img {
+      width: 12%;
+      top: 24%;
+      left: 2%;
+    }
+    .laughbutton img {
+      width: 9%;
+      top: 62%;
+      left: 4%;
+    }
+    .giantbutton img {
+      top: 73%;
+    }
+
+    .giant img {
+      top: 48%;
+    }
+    .elfbutton img {
+      top: 46%;
+      left: 65%;
+    }
+    .wavebutton img {
+      width: 8%;
+      top: 62%;
+      left: 55%;
+    }
+    .unicornbutton img {
+      width: 10%;
+      top: 61%;
+      left: 82%;
+      position: absolute;
+    }
+    .wave img{
+      width: 12%;
+      top: 46%;
+      left: 59%;
+    }
+    .forest img{
+      width: 49%;
+      top: 14%;
+    }
+    .unicorn img{
+      width: 17%;
+      top: 49%;
+      left: 67%;
+    }
+    .mermaidbutton img {
+      top: 82%;
+      width: 12%;
+    }
+    .mermaid img{
+      width: 22%;
+      top: 63%;
+      left: 72%;
+    }
+    .watch img {
+      width: 30.5%;
+      height: 42%;
+      top: 32.7%;
+      left: 74%;
+    }
+
+    .watchbutton img {
+      width: 8%;
+    }
+    .crowd img {
+      width: 30.5%;
+      top: 26%;
+      left: 8%;
+      height: 45%;
+    }
+    .crowdbutton img {
+      width: 9%;
+    }
+    .cheer img {
+      width: 36.7%;
+      top: 30.55%;
+      height: 44%;
+      left: 4%;
+    }
+    .cheer img {
+      width: 36.7% !important;
+      top: 30.55% !important;
+
+      left: 4% !important;
+    }
+    .tentbutton img {
+      top: 22%;
+      left: 9%;
+      position: absolute;
+    }
+    .tent img {
+      width: 42%;
+      top: 3%;
+      left: 0%;
+    }
+    .tightropebutton img {
+      width: 10%;
+      top: 9%;
+      left: 46%;
+      position: absolute;
+    }
+    .tightrope img {
+      width: 85%;
+      top: -4%;
+      left: -12%;
+      position: absolute;
+    }
+    .netbutton img {
+      width: 7%;
+    }
+    .acrobatbutton img {
+      width: 9%;
+      top: 13%;
+      left: 84%;
+      position: absolute;
+    }
+    .acrobat img {
+      width: 24%;
+      top: -14%;
+      left: 61%;
+    }
+    .clownbutton img {
+      width: 8%;
+      top: 65%;
+      left: 36%;
+      position: absolute;
+    }
+    .unicyclebutton img{
+      width: 10% !important;
+      top: 75% !important;
+      left: 17% !important;
+    }
+    .clown img {
+      width: 23%;
+      top: 49%;
+      left: 21%;
+      position: absolute;
+    }
+    .magicianbutton img{
+      width: 10% !important;
+      top: 45% !important;
+    }
+    .trickbutton img {
+      width: 7%;
+      top: 64%;
+      left: 56%;
+      position: absolute;
+    }
+    .trick img {
+      width: 29%;
+      top: 39%;
+      left: 38%;
+      position: absolute;
+    }
+    .jugglebutton img {
+      width: 9%;
+      top: 72%;
+      left: 62%;
+    }
+    .juggle img {
+      width: 25%;
+      top: 43%;
+      left: 61%;
+      z-index: 1;
+    }
+    .sailboatbutton img {
+      width: 10%;
+      top: 63%;
+      left: 79%;
+    }
+    .blow img {
+      width: 50%;
+      top: 10%;
+      left: 53%;
+    }
+    .lifeJacket img {
+      width: 43%;
+      top: 17%;
+      left: 29%;
+    }
+    .lifeJacketbutton img {
+      width: 12%;
+      top: 27%;
+      left: 54%;
+    }
+    .surfbutton img {
+      width: 8%;
+      top: 30%;
+      left: 35%;
+    }
+    .blowbutton img {
+      width: 7%;
+      top: 50%;
+      left: 62%;
+    }
+    .surfboardbutton img {
+      width: 11%;
+      top: 55%;
+      left: 35%;
+    }
+    .surf img {
+      width: 40%;
+      top: 13%;
+      left: 30%;
+    }
+    .tank img {
+      width: 40%;
+      top: 69%;
+    }
+    .mask img {
+      width: 45% !important;
+      top: 61% !important;
+      left: 6%  !important;
+    }
+    .tankbutton img {
+      top: 71%;
+      left: 60%;
+    }
+    .flippersbutton img {
+      width: 9%;
+      top: 77%;
+      left: 81%;
+    }
+    .flippers img {
+      width: 40%;
+      top: 65%;
+    }
+    .windbutton img {
+      width: 8%;
+      top: 6%;
+      left: 85%;
+    }
+    .divebutton img {
+      width: 8%;
+      top: 65%;
+    }
+    .maskbutton img {
+      width: 8%;
+      top: 76%;
+    }
+    .dive img {
+      width: 45%;
+      top: 55%;
+      left: 5%;
+    }
+    .wind img {
+      width: 50%;
+      top: -9%;
+      left: 54%;
+    }
+    .wavesbutton img {
+      width: 10%;
+      top: 15%;
+      left: 17%;
+    }
+    .waves img {
+      height: 105%;
+      top: -1%;
+    }
+    .map img{
+      top: 125%;
+      width: 240%;
+      left: 480%;
+    }
+    .thirsty img {
+      width: 220%;
+      top: 120%;
+      left: 725%;
+    }
+    .camel img{
+      width: 270%;
+      top: 61%;
+      left: 420%;
+    }
+    .hotbutton img{
+      top: 49%;
+    }
+    .waterbutton img {
+      width: 9%;
+      top: 73%;
+      left: 73%;
+    }
+    .water img{
+      width: 58%;
+      top: 142%;
+      left: 737%;
+    }
+    .cactus img {
+      width: 420%;
+      top: 157%;
+      left: 2%;
+    }
+    .lizardbutton img {
+      width: 10%;
+      top: 87%;
+    }
+    .lizard img{
+      width: 185%;
+      top: 182%;
+    }
+    .cactusbutton img {
+      width: 100%;
+      top: 195%;
+      left: 55%;
+    }
+    .lost img{
+      width: 170%;
+      top: 100%;
+    }
+    .compassbutton img {
+      width: 12%;
+      top: 60%;
+      left: 13%;
+    }
+    .lostbutton img {
+      width: 8%;
+      top: 40%;
+      left: 33%;
+    }
+    .dunesbutton img{
+      width: 10%;
+      top: 19%;
+      left: 27%;
+    }
+    .compass img {
+      width: 54%;
+      top: 132%;
+      left: 183%;
+      position: absolute;
+    }
+    .shovel img {
+      width: 420%;
+      top: 30%;
+      left: -1%;
+    }
+    .shovelbutton img{
+      width: 15%;
+      top: 15%;
+      left: 8%;
+    }
+    .dunes img{
+      width: 800%;
+      top: 57.5%;
+      left: -74%;
+    }
+    .igloo {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 185%;
+        top: 75%;
+        left: 26%;
+        position: absolute;
+        z-index: 1;
+      }
+    }
+
+    .igloobutton {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 80%;
+        top: 70%;
+        left: 190%;
+        position: absolute;
+      }
+    }
+
+    .cold {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 135%;
+        top: 130%;
+        left: 125%;
+        position: absolute;
+        z-index: 2;
+      }
+    }
+
+    .coldbutton {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 75%;
+        top: 150%;
+        left: 70%;
+        position: absolute;
+      }
+    }
+
+    .tusk {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 220%;
+        top: 153%;
+        left: 780%;
+        position: absolute;
+        z-index: 1;
+      }
+    }
+
+    .tuskbutton {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 65%;
+        top: 215%;
+        left: 860%;
+        position: absolute;
+      }
+    }
+
+    .walrusbutton {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 80%;
+        top: 145%;
+        left: 865%;
+        position: absolute;
+      }
+    }
+    .orca {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 280%;
+        top: 85%;
+        left: 525%;
+        position: absolute;
+        z-index: 1;
+      }
+    }
+
+    .orcabutton {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 75%;
+        top: 85%;
+        left: 725%;
+        position: absolute;
+      }
+    }
+
+    .ice {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 455%;
+        top: 162%;
+        left: 375%;
+        position: absolute;
+      }
+    }
+
+    .icebutton {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 60%;
+        top: 220%;
+        left: 570%;
+        position: absolute;
+      }
+    }
+
+    .seal {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 130%;
+        top: 165%;
+        left: 435%;
+        position: absolute;
+        z-index: 1;
+      }
+    }
+
+    .sled {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 230%;
+        top: 197%;
+        left: 33%;
+        position: absolute;
+      }
+    }
+
+    .polarbear {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 150%;
+        top: 82%;
+        left: 342%;
+        position: absolute;
+      }
+    }
+
+    .polarbearbutton {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 130%;
+        top: 120%;
+        left: 280%;
+        position: absolute;
+      }
+    }
+
+    .snow {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 380%;
+        top: -4%;
+        left: -4%;
+        position: absolute;
+      }
+    }
+
+    .snowbutton {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 75%;
+        top: 30%;
+        left: 190%;
+        position: absolute;
+      }
+    }
+
+    .iceberg {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 180%;
+        top: 165%;
+        left: 605%;
+        position: absolute;
+      }
+    }
+
+    .blizzard {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 630%;
+        top: -12%;
+        left: 400%;
+        position: absolute;
+      }
+    }
+    .tower{
+      width: 20%;
+      left:1.4%;
+      top:25.5%;
+      position: absolute;
+      z-index:1;
+    }
+
+    .dragon {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 275%;
+        top: 140%;
+        left: 15%;
+        position: absolute;
+      }
+    }
+
+    .dragonbutton {
+      height: 20%;
+      width: 10%;
+      display: block;
+      float: left;
+      top: 44%;
+      position: absolute;
+      left: 1%;
+
+      img {
+        width: 90%;
+        top: 165%;
+        left: 140%;
+        position: absolute;
+      }
+    }
+
+    .shield {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 109%;
+        top: 83%;
+        left: 460%;
+        position: absolute;
+      }
+    }
+
+    .shieldbutton {
+      height: 20%;
+      width: 10%;
+      display: block;
+      float: left;
+      top: 44%;
+      position: absolute;
+      left: 1%;
+
+      img {
+        width: 75%;
+        top: -75%;
+        left: 510%;
+        position: absolute;
+      }
+    }
+
+    .swordbutton {
+      height: 20%;
+      width: 10%;
+      display: block;
+      float: left;
+      top: 44%;
+      position: absolute;
+      left: 1%;
+
+      img {
+        width: 75%;
+        top: -45%;
+        left: 380%;
+        position: absolute;
+      }
+    }
+    .roarbutton {
+      height: 20%;
+      width: 10%;
+      display: block;
+      float: left;
+      top: 44%;
+      position: absolute;
+      left: 1%;
+
+      img {
+        width: 90%;
+        top: 25%;
+        left: 220%;
+        position: absolute;
+      }
+    }
+
+    .knight {
+      height: 40%;
+      width: 10%;
+      top: 0;
+      position: absolute;
+
+      img {
+        width: 235%;
+        top: 154%;
+        left: 300%;
+        position: absolute;
+      }
+    }
+
+    .knightbutton {
+      height: 20%;
+      width: 10%;
+      display: block;
+      float: left;
+      top: 44%;
+      position: absolute;
+      left: 1%;
+
+      img {
+        width: 90%;
+        top: 50%;
+        left: 436%;
+        position: absolute;
+      }
+    }
+
+    .horsebutton {
+      height: 20%;
+      width: 10%;
+      display: block;
+      float: left;
+      top: 44%;
+      position: absolute;
+      left: 1%;
+
+      img {
+        width: 90%;
+        top: 28%;
+        left: 48%;
+        position: absolute;
+      }
+    }
+
+    .castle {
+      height: 40%;
+      width: 10%;
+      top: 0;
+      position: absolute;
+
+      img {
+        width: 235%;
+        top: 100%;
+        left: 686%;
+        position: absolute;
+      }
+    }
+
+    .castlebutton {
+      height: 20%;
+      width: 10%;
+      display: block;
+      float: left;
+      top: 44%;
+      position: absolute;
+      left: 1%;
+
+      img {
+        width: 90%;
+        top: -5%;
+        left: 825%;
+        position: absolute;
+      }
+    }
+
+    .queen {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 60%;
+        top: 174%;
+        left: 745%;
+        position: absolute;
+      }
+    }
+
+    .queenbutton {
+      height: 20%;
+      width: 10%;
+      display: block;
+      float: left;
+      top: 44%;
+      position: absolute;
+      left: 1%;
+
+      img {
+        width: 90%;
+        top: 195%;
+        left: 635%;
+        position: absolute;
+      }
+    }
+
+    .king {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 70%;
+        top: 170%;
+        left: 789%;
+        position: absolute;
+      }
+    }
+
+    .kingbutton {
+      height: 20%;
+      width: 10%;
+      display: block;
+      float: left;
+      top: 44%;
+      position: absolute;
+      left: 1%;
+
+      img {
+        width: 90%;
+        top: 80%;
+        left: 850%;
+        position: absolute;
+      }
+    }
+
+    .wizard {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 84%;
+        top: 78%;
+        left: 576%;
+        position: absolute;
+      }
+    }
+
+    .wizardbutton {
+      height: 20%;
+      width: 10%;
+      display: block;
+      float: left;
+      top: 44%;
+      position: absolute;
+      left: 1%;
+
+      img {
+        width: 90%;
+        top: -73%;
+        left: 630%;
+        position: absolute;
+      }
+    }
+
+    .princess {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 79%;
+        top: 33%;
+        left: 64%;
+        position: absolute;
+      }
+    }
+
+    .princessbutton {
+      height: 20%;
+      width: 10%;
+      display: block;
+      float: left;
+      top: 44%;
+      position: absolute;
+      left: 1%;
+
+      img {
+        width: 100%;
+        top: -65%;
+        left: 150%;
+        position: absolute;
+      }
+    }
+
+    .screambutton {
+      height: 20%;
+      width: 10%;
+      display: block;
+      float: left;
+      top: 44%;
+      position: absolute;
+      left: 1%;
+
+      img {
+        width: 90%;
+        top: -140%;
+        left: 130%;
+        position: absolute;
+      }
+    }
+
+    .mirror img {
+      width: 70%;
+    }
+
+    .wardrobe img {
+      top: 25%;
+      left: 8%;
+    }
+
+    .bed {
+      height: 55%;
+      top: 8%;
+
+      img {
+        width: 95%;
+        top: 30%;
+        position: absolute;
+      }
+    }
+
+    .sleep {
+      height: 60%;
+
+      img {
+        width: 95%;
+      }
+    }
+
+    .sleepbutton {
+      top: 20%;
+      height: 10%;
+    }
+
+    .desk {
+      img {
+        width: 68%;
+        top: 55%;
+      }
+    }
+
+    .deskbutton {
+      top: 5%;
+      left: 39%;
+    }
+
+    .chair {
+      height: 30%;
+      width: 10%;
+      top: 23%;
+      left: 44%;
+
+      img {
+        width: 45%;
+        top: 58%;
+        left: 0%;
+      }
+    }
+
+    .wash {
+      height: 55%;
+      top: 16%;
+
+      img {
+        width: 85%;
+        left: 8%;
+      }
+    }
+
+    .washbutton {
+      top: 12%;
+    }
+
+    .toilet {
+      width: 25%;
+
+      img {
+        width: 70%;
+        top: 10%;
+        left: 30%;
+      }
+    }
+
+    .lamp {
+      img {
+        width: 60%;
+        top: 45%;
+        left: 25%;
+      }
+    }
+
+    .sofa {
+      width: 46%;
+
+      img {
+        top: 60%;
+      }
+    }
+
+    .sofabutton {
+      top: 53%;
+    }
+
+    .phone {
+      top: 56%;
+      width: 9%;
+      left: 31%;
+
+      .img2 {
+        top: 58%;
+      }
+
+      .img1 {
+        top: 55%;
+      }
+    }
+
+    .cupboard {
+      top: 48%;
+    }
+
+    .phonebutton {
+      top: 60%;
+    }
+
+  }
+  /*@media only screen and (device-width: 414px) and (device-height: 896px){
+    .wavebutton img {
+      top: 58%;
+    }
+    .elfbutton img {
+      top: 38%;
+    }
+    .unicornbutton img {
+      top: 51%;
+    }
+    .mermaidbutton img {
+      width: 11%;
+      top: 79%;
+      left: 65%;
+      position: absolute;
+    }
+    .mermaid img {
+      width: 19%;
+      top: 50%;
+      left: 74%;
+    }
+    .unicorn img {
+      width: 15%;
+      top: 38%;
+    }
+    .wave img {
+      width: 10%;
+      top: 36%;
+      left: 60%;
+      position: absolute;
+      z-index: 1;
+    }
+    .forest img {
+      width: 45%;
+      top: -7%;
+      left: 55%;
+      position: absolute;
+    }
+    .wandbutton img{
+      width: 8%;
+      top: 16%;
+      left: 38%;
+    }
+    .witch img{
+      width: 19%;
+      top: 3%;
+    }
+    .fairy img {
+      width: 23%;
+      top: 36%;
+      left: 31%;
+      position: absolute;
+    }
+    .tower1button img {
+      width: 8%;
+      top: 7%;
+      left: 9%;
+      position: absolute;
+    }
+    .tower1 img {
+      width: 10%;
+      top: 15%;
+      left: 3%;
+      position: absolute;
+    }
+    .laughbutton img {
+      width: 9%;
+      top: 52%;
+      left: 5%;
+      position: absolute;
+    }
+    .giantbutton img{
+      width: 9%;
+      top: 72%;
+      left: 9%;
+    }
+    .giant img {
+      width: 31%;
+      top: 32%;
+      left: 5%;
+      position: absolute;
+    }
+    .crowd img {
+      width: 30.5%;
+      height: 48%;
+      top: 24%;
+      left: 8%;
+      position: absolute;
+    }
+    .tent img {
+      width: 38%;
+      top: -8%;
+      left: 0%;
+      -webkit-transform: rotate(-5deg);
+      transform: rotate(-5deg);
+    }
+    .cheer img {
+      width: 29%;
+      height: 47%;
+      top: 30%;
+      left: 4%;
+      position: absolute;
+      transform: rotate(2deg);
+    }
+    .watch img {
+      width: 30.5% !important;
+      top: 28.3% !important;
+      left: 74% !important;
+      transform: rotate(-2deg);
+    }
+    .unicyclebutton img {
+      top: 78%;
+      left: 18%;
+    }
+    .clown img {
+      top: 38%;
+    }
+    .trick img {
+      top: 34%;
+    }
+    .acrobat img {
+      top: -19%;
+    }
+    .net img {
+      top: 12%;
+    }
+    .trickbutton img {
+      top: 67%;
+    }
+    .juggle img {
+      width: 17%;
+      top: 38%;
+      left: 65%;
+      position: absolute;
+      z-index: 1;
+    }
+    .tank img {
+      width: 33%;
+      top: 66%;
+      left: 47%;
+      position: absolute;
+      z-index: 1;
+    }
+    .flippers img {
+      width: 32%;
+      top: 61%;
+      left: 49%;
+      position: absolute;
+      z-index: 1;
+    }
+    .waves img{
+      height: 100%;
+      top: 0% !important;
+      left: 0%;
+    }
+    .surf img {
+      top: 5%;
+    }
+    .lifeJacket img {
+      top: 12%;
+    }
+    .dive img {
+      top: 43%;
+    }
+    .divebutton img {
+      top: 61%;
+    }
+    .mask img {
+      top: 52%;
+    }
+    .blow img {
+      top: 1%;
+    }
+    .cactus {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 400%;
+        top: 131%;
+        left: 0%;
+        position: absolute;
+      }
+    }
+
+    .cactusbutton {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 95%;
+        top: 190%;
+        left: 60%;
+        position: absolute;
+      }
+    }
+
+    .camel img{
+      top: 37%;
+    }
+
+    .camelbutton img{
+      top: 15%;
+    }
+
+    .compass {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 52%;
+        top: 112%;
+        left: 183%;
+        position: absolute;
+      }
+    }
+
+    .compassbutton img{
+      width: 11%;
+      top: 57%;
+      left: 14%;
+      position: absolute;
+    }
+
+    .dunes {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 590%;
+        top: 44.5%;
+        left: 79%;
+        position: absolute;
+        transform: rotate(
+          1deg
+        );
+        z-index: 1;
+      }
+    }
+
+    .dunesbutton img{
+      width: 8%;
+      top: 17%;
+      left: 28%;
+      position: absolute;
+    }
+
+    .hot {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 185%;
+        top: 66%;
+        left: 26%;
+        position: absolute;
+        z-index: 1;
+      }
+    }
+
+    .hotbutton img{
+      width: 6%;
+      top: 46%;
+      left: 67%;
+      position: absolute;
+    }
+
+    .lizard {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 175%;
+        top: 175%;
+        left: 115%;
+        position: absolute;
+        z-index: 3;
+      }
+    }
+
+    .lizardbutton img{
+      width: 8%;
+      top: 83%;
+      left: 28%;
+      position: absolute;
+    }
+
+    .lost {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 150%;
+        top: 65%;
+        left: 190%;
+        position: absolute;
+        z-index: 2;
+      }
+    }
+
+    .lostbutton img{
+      width: 7%;
+      top: 33%;
+      left: 30%;
+      position: absolute;
+    }
+
+    .map {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 160%;
+        top: 117%;
+        left: 537%;
+        position: absolute;
+        z-index: 1;
+      }
+    }
+
+    .mapbutton img{
+      width: 7%;
+      top: 57%;
+      left: 46%;
+      position: absolute;
+    }
+
+    .sand {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 250%;
+        top: 175%;
+        left: 330%;
+        position: absolute;
+        z-index: 1;
+      }
+    }
+
+    .sandbutton img{
+      width: 7%;
+      top: 65%;
+      left: 38%;
+      position: absolute;
+    }
+
+    .sandstorm {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 185%;
+        top: 66%;
+        left: 26%;
+        position: absolute;
+        z-index: 1;
+      }
+    }
+
+    .thirsty {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 150%;
+        top: 112%;
+        left: 760%;
+        position: absolute;
+        z-index: 1;
+      }
+    }
+
+    .thirstybutton img{
+      width: 9%;
+      top: 37%;
+      left: 83%;
+      position: absolute;
+    }
+
+    .water {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 45%;
+        top: 135%;
+        left: 760%;
+        position: absolute;
+        z-index: 1;
+      }
+    }
+
+    .waterbutton img{
+      width: 8%;
+      top: 72%;
+      left: 74%;
+      position: absolute;
+    }
+
+    .shovel {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 340%;
+        top: -2%;
+        left: 0%;
+        position: absolute;
+        z-index: 1;
+      }
+    }
+
+    .shovelbutton img{
+      width: 13%;
+      top: 7%;
+      left: 8%;
+      position: absolute;
+    }
+    .igloo {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 185%;
+        top: 66%;
+        left: 26%;
+        position: absolute;
+        z-index: 1;
+      }
+    }
+
+    .igloobutton {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 80%;
+        top: 70%;
+        left: 190%;
+        position: absolute;
+      }
+    }
+
+    .cold {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 135%;
+        top: 95%;
+        left: 125%;
+        position: absolute;
+        z-index: 2;
+      }
+    }
+
+    .coldbutton {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 75%;
+        top: 135%;
+        left: 70%;
+        position: absolute;
+      }
+    }
+
+    .tusk {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 220%;
+        top: 126%;
+        left: 780%;
+        position: absolute;
+        z-index: 1;
+      }
+    }
+
+    .tuskbutton {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 65%;
+        top: 215%;
+        left: 860%;
+        position: absolute;
+      }
+    }
+
+    .walrusbutton {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 80%;
+        top: 125%;
+        left: 865%;
+        position: absolute;
+      }
+    }
+    .orca {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 280%;
+        top: 60%;
+        left: 525%;
+        position: absolute;
+        z-index: 1;
+      }
+    }
+
+    .orcabutton {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 75%;
+        top: 85%;
+        left: 725%;
+        position: absolute;
+      }
+    }
+
+    .ice {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 400%;
+        top: 150%;
+        left: 390%;
+        position: absolute;
+      }
+    }
+
+    .icebutton {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 60%;
+        top: 215%;
+        left: 570%;
+        position: absolute;
+      }
+    }
+
+    .seal {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 130%;
+        top: 160%;
+        left: 435%;
+        position: absolute;
+        z-index: 1;
+      }
+    }
+
+    .sled {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 230%;
+        top: 180%;
+        left: 33%;
+        position: absolute;
+      }
+    }
+
+    .polarbear {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 150%;
+        top: 72%;
+        left: 342%;
+        position: absolute;
+      }
+    }
+
+    .polarbearbutton {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 130%;
+        top: 120%;
+        left: 280%;
+        position: absolute;
+      }
+    }
+
+    .snow {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 380%;
+        top: -4%;
+        left: -4%;
+        position: absolute;
+      }
+    }
+
+    .snowbutton {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 75%;
+        top: 30%;
+        left: 190%;
+        position: absolute;
+      }
+    }
+
+    .iceberg {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 180%;
+        top: 165%;
+        left: 605%;
+        position: absolute;
+      }
+    }
+
+    .blizzard {
+      height: 40%;
+      width: 10%;
+      top: 0%;
+      position: absolute;
+
+      img {
+        width: 630%;
+        top: -12%;
+        left: 400%;
+        position: absolute;
+      }
+    }
+
+
+
     .tower{
     width: 20%;
     left:1.4%;
@@ -6921,8 +9902,8 @@
         width: 40%;
       }
     }
-  }
-  @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+  }*/
+  /*@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
     .tower{
     width: 19%;
     left:2.4%;
@@ -7373,5 +10354,5 @@
         width: 40%;
       }
     }
-  }
+  }*/
 </style>
