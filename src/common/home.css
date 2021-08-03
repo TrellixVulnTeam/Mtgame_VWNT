@@ -1,0 +1,106 @@
+.home01{
+	display: block;
+	width: 100%;
+	height: 100%;
+	font-family: "luckiestGuy";
+}
+.home01 .container{
+	background-image: url(../assets/image/home_back.jpg);
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.container{
+	animation: cloudMass 30s linear 0s infinite alternate;
+	    -moz-animation: cloudMass 30s linear 0s infinite alternate;
+	    -webkit-animation: cloudMass 30s linear 0s infinite alternate;
+	    -o-animation: cloudMass 30s linear 0s infinite alternate;
+}
+@keyframes cloudMass {
+	0%   {background-position: 0% 100%, center center;}
+	25%  {background-position: 25% 75%, center center;}
+	50%  {background-position: 50% 50%, center center;}
+	75%  {background-position: 75% 25%, center center;}
+	100% {background-position: 100% 0%, center center;}
+}
+.profile{
+	-ms-flex: 0 0 65%;
+	flex: 0 0 65%;
+	max-width: 65%;
+	position: relative;
+}
+.profile img{
+	display: block;
+	margin: auto;
+	width: 84%;
+}
+.profile .name{
+	position: absolute;
+	top: 27%;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 36px;
+	font-weight: bolder;
+	color: #7d4e28;
+	white-space: nowrap;
+	text-align: center;
+}
+.profile .name span{
+	margin-left: 12px;
+}
+.profile .number{
+	position: absolute;
+	color: #ffffff;
+	font-size: 50px;
+    right: 31%;
+    bottom: 20%;
+}
+.monkey_img{
+	-ms-flex: 0 0 35%;
+	flex: 0 0 35%;
+	max-width: 35%;
+	align-self: flex-end;
+	position: relative;
+}
+.monkey_img img{
+	position: absolute;
+	bottom: 0;
+}
+
+@media only screen and (max-width: 568px) {
+	.profile .number{
+		font-size: 40px;
+	}
+}
+@media only screen and (min-width: 736px) {
+	.profile .number{
+	    font-size: 50px;
+		right: 31%;
+	}
+}
+@media only screen and (min-width: 812px) {
+	.profile .name{
+		top: 30%;
+	}
+	.profile .number{
+	    bottom: 21%;
+	}
+}
+@media only screen and (min-width: 1024px) {
+	.profile .name{
+		font-size: 50px;
+	}
+	.profile .number{
+		font-size: 70px;
+	}
+}
+@media only screen and (min-width: 1366px) {
+	.profile .name{
+		top: 30%;
+		font-size: 60px;
+	}
+	.profile .number{
+		font-size: 90px;
+		bottom: 21%;
+	}
+}

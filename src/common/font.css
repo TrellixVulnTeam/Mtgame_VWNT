@@ -1,0 +1,20 @@
+@font-face {
+	font-family:'pepper';
+	src: url('pepper-kids.ttf');
+}
+@font-face {
+	font-family:'kg';
+	src: url('KG.ttf');
+}
+@font-face {
+	font-family:'LH';
+	src: url('LetterHunt.ttf');
+}
+@font-face {
+	font-family:'OldR';
+	src: url('Oldenburg-Regular.ttf');
+}
+@font-face {
+	font-family:'cboard';
+	src: url('ChalkboardSE-Light-01.ttf');
+}

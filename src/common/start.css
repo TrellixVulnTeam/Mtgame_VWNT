@@ -1,0 +1,173 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+/*html,body{*/
+	/*width: 100%;*/
+	/*height: 100%;*/
+/*}*/
+
+.start01 .container{
+	width: 100%;
+    height: 200%;
+    background: linear-gradient(to bottom, #2BA7E0 , #48C0F0);
+}
+.start01{
+	width: 100%;
+    height: 100%;
+    display: block;
+}
+.start01 .container .back{
+	width: 100%;
+    height: 100%;
+}
+
+.start01 .container .back a{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+    height: 100%;
+/* 	background-image: url(../assets/image/back-05.png), url(../assets/image/back-01.png);
+	background-size: auto, 100% auto;
+	background-repeat: repeat, no-repeat;
+	background-position: center center; */
+  /*   animation: cloudMass 30s linear 0s infinite normal; */
+    /* Firefox: */
+    /* -moz-animation: cloudMass 30s linear 0s infinite normal; */
+    /* Safari and Chrome: */
+    /* -webkit-animation: cloudMass 30s linear 0s infinite normal; */
+    /* Opera: */
+    /* -o-animation: cloudMass 30s linear 0s infinite normal; */
+}
+.start01  a{
+	animation: cloudMass 30s linear 0s infinite normal;
+	-moz-animation: cloudMass 30s linear 0s infinite normal;
+	-webkit-animation: cloudMass 30s linear 0s infinite normal;
+	-o-animation: cloudMass 30s linear 0s infinite normal;
+}
+/*动画*/
+@keyframes cloudMass {
+	0%   {background-position: 0% 100%, center center;}
+	25%  {background-position: 25% 75%, center center;}
+	50%  {background-position: 50% 50%, center center;}
+	75%  {background-position: 75% 25%, center center;}
+	100% {background-position: 100% 0%, center center;}
+}
+.start01 .rotate{
+	width: 90%;
+	height: 0;
+	top: -20%;
+	padding-bottom: 40%;
+	position: relative;
+}
+.start01 .rotate .rotate-img{
+	position: absolute;
+	width: 100%;
+	animation: rotate 15s linear 0s infinite normal;
+    /* Firefox: */
+    -moz-animation: rotate 15s linear 0s infinite normal;
+    /* Safari and Chrome: */
+    -webkit-animation: rotate 15s linear 0s infinite normal;
+    /* Opera: */
+    -o-animation: rotate 15s linear 0s infinite normal;
+}
+@-webkit-keyframes rotate{
+    from {
+    	-webkit-transform: rotate(0deg);
+	}
+    to {
+    	-webkit-transform: rotate(360deg);
+	}
+}
+
+.start01 .rotate .plane{
+	width: 30%;
+	position: absolute;
+	top: -14%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.start01 .rotate .plane img{
+	width: 100%;
+}
+.start01 .rotate .plane .wind-img{
+	width: auto;
+	position: absolute;
+    right: 5px;
+    top: 33%;
+    width: 26%;
+    animation: windImgSize 1.6s linear 0s infinite alternate;
+    -moz-animation: windImgSize 1.6s linear 0s infinite alternate;
+    -webkit-animation: windImgSize 1.6s linear 0s infinite alternate;
+    -o-animation: windImgSize 1.6s linear 0s infinite alternate;
+}
+@-webkit-keyframes windImgSize{
+    from {
+    	right: 5px;
+	    top: 33%;
+	    width: 26%;
+	}
+    to {
+    	right: 12px;
+	    top: 39%;
+	    width: 18%;
+	}
+}
+.start01 .rotate .m_town{
+	width: 60%;
+	position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+	bottom: 17%;
+}
+.start01 .rotate .m_town img{
+	display: block;
+	width: 80%;
+	margin: auto;
+	animation: imgSize 1.6s linear 0s infinite alternate;
+    -moz-animation: imgSize 1.6s linear 0s infinite alternate;
+    -webkit-animation: imgSize 1.6s linear 0s infinite alternate;
+    -o-animation: imgSize 1.6s linear 0s infinite alternate;
+}
+@-webkit-keyframes imgSize{
+    from {
+    	width: 80%;
+	}
+    to {
+    	width: 65%;
+	}
+}
+.start01 .rotate .m_btn_start{
+	width: 60%;
+	position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+	bottom: -9%;
+}
+.start01 .rotate .m_btn_start img{
+	display: block;
+	width: 45%;
+	margin: auto;
+	cursor: pointer;
+}
+@media screen and (min-width: 812px) and (max-width:1023px) {
+	.start01 .rotate {
+		    width: 80%;
+	}
+	.start01 .rotate .plane {
+	    top: -11%;
+	}
+	.start01 .rotate .m_town {
+	    bottom: 23%;
+	}
+	.start01 .rotate .m_btn_start {
+	    bottom:0%;
+	}
+}
+@media screen and (min-width: 1600px){
+  .start01 .rotate .m_btn_start {
+    bottom:-1%;
+    left: 50%;
+  }
+}

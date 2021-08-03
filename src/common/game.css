@@ -1,0 +1,102 @@
+.game{
+	display: block;
+	width: 100%;
+	height: 100%;
+	font-family: "luckiestGuy";
+}
+.game .container{
+	background-image: url(../assets/image/game_back.jpg);
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.container{
+	animation: cloudMass 30s linear 0s infinite alternate;
+	    -moz-animation: cloudMass 30s linear 0s infinite alternate;
+	    -webkit-animation: cloudMass 30s linear 0s infinite alternate;
+	    -o-animation: cloudMass 30s linear 0s infinite alternate;
+}
+@keyframes cloudMass {
+	0%   {background-position: 0% 100%, center center;}
+	25%  {background-position: 25% 75%, center center;}
+	50%  {background-position: 50% 50%, center center;}
+	75%  {background-position: 75% 25%, center center;}
+	100% {background-position: 100% 0%, center center;}
+}
+.row{
+	height: 100%;
+}
+.game .left_monkey{
+	-ms-flex: 0 0 37%;
+	flex: 0 0 37%;
+	max-width: 37%;
+	align-self: flex-end;
+	position: relative;
+}
+.game .left_monkey img{
+	position: absolute;
+	bottom: 0;
+	left: auto;
+}
+.right_opt{
+	-ms-flex: 0 0 63%;
+	flex: 0 0 63%;
+	max-width: 63%;
+	height: 82%;
+}
+.right_opt ul{
+	width: 90%;
+	height: 100%;
+	justify-content: space-between;
+}
+.right_opt li{
+	-ms-flex: 0 0 49%;
+	flex: 0 0 49%;
+	max-width: 49%;
+	position: relative;
+	padding: 6px 0;
+}
+.right_opt li a{
+	position: absolute;
+	width: 100%;
+    height: calc(100% - 12px);
+}
+.right_opt li img{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+.right_opt li a span{
+	position: absolute;
+    color: #ffffff;
+    bottom: 8%;
+    font-size: 26px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+.right_opt li .choice{
+	position: absolute;
+	top: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 72%;
+	height: calc(100% - 20px);
+}
+
+@media only screen and (max-width: 640px) {
+	.right_opt li a span{
+		font-size: 22px;
+	}
+}
+@media only screen and (min-width: 991px) and (max-width: 1024px) {
+	.right_opt li a span{
+		font-size: 32px;
+	}
+}
+@media only screen and (min-width: 1024px) {
+	.right_opt li a span{
+		bottom: 12%;
+		font-size: 42px;
+	}
+}

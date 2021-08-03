@@ -1,0 +1,178 @@
+@font-face {
+    font-family: 'luckiestGuy';
+	src: url('LuckiestGuy.ttf');
+}
+*{
+	margin:0; 
+	padding:0;
+}
+body,html{
+	width: 100%;
+	height: 100%;
+	font-family: "luckiestGuy";
+}
+ul, li{
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	background-color: transparent;
+	-webkit-text-decoration-skip: objects
+}
+.w-80{
+	width: 80%;
+}
+.w-90{
+	width: 90%;
+}
+.w-100{
+	width: 100%;
+}
+.d-flex {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+.d-blcok{
+	display: block;
+}
+
+/* div .container{ */
+	/* width: 100%;
+    height: 100%;
+    overflow: hidden; */
+/*     animation: cloudMass 30s linear 0s infinite alternate; */
+    /* -moz-animation: cloudMass 30s linear 0s infinite alternate; */
+    /* -webkit-animation: cloudMass 30s linear 0s infinite alternate; */
+    /* -o-animation: cloudMass 30s linear 0s infinite alternate; */
+/* } */
+/* .home01  .container{
+	    animation: cloudMass 30s linear 0s infinite alternate;
+	    -moz-animation: cloudMass 30s linear 0s infinite alternate;
+	    -webkit-animation: cloudMass 30s linear 0s infinite alternate;
+	    -o-animation: cloudMass 30s linear 0s infinite alternate;
+} */
+/*动画*/
+/* @keyframes cloudMass {
+	0%   {background-position: 0% 100%, center center;}
+	25%  {background-position: 25% 75%, center center;}
+	50%  {background-position: 50% 50%, center center;}
+	75%  {background-position: 75% 25%, center center;}
+	100% {background-position: 100% 0%, center center;}
+} */
+
+.prev_next{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 99;
+}
+.prev_next a{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.prev_next a.prev{
+	left: 20px;
+}
+.prev_next a.next{
+	right: 20px;
+}
+.prev_next a img{
+	width: 50px;
+}
+
+.row{
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	align-items: center;
+	height: 100%;
+}
+.number_setting{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 999;
+}
+.number_setting .left_number{
+	width: 19%;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.number_setting .left_number .icon_num{
+	position: absolute;
+	top: 40%;
+    transform: translateY(-50%);
+    right: 20%;
+    color: #ffffff;
+	font-family: "luckiestGuy";
+}
+.number_setting .left_number .icon{
+	font-size: 20px;
+	margin-right: 6px;
+}
+.number_setting .left_number .num{
+	font-size: 28px;
+}
+.number_setting .right_setting{
+	width: 10.2%;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.number_setting .left_number img,
+.number_setting .right_setting img{
+	width: 100%;
+}
+
+@media only screen and (min-width: 568px) {
+	.number_setting .left_number .icon {
+	    font-size: 16px;
+	    margin-right: 4px;
+	}
+	.number_setting .left_number .num{
+		font-size: 22px;
+	}
+}
+@media only screen and (min-width: 667px) {
+	.number_setting .left_number .icon {
+	    font-size: 18px;
+	    margin-right: 6px;
+	}
+	.number_setting .left_number .num {
+	    font-size: 24px;
+	}
+}
+@media only screen and (min-width: 812px) {
+	.number_setting .left_number .icon {
+	    font-size: 20px;
+	    margin-right: 6px;
+	}
+	.number_setting .left_number .num {
+	    font-size: 28px;
+	}
+}
+@media only screen and (min-width: 1024px) {
+	.number_setting .left_number .icon {
+	    font-size: 28px;
+	    margin-right: 2px;
+	}
+	.number_setting .left_number .num {
+	    font-size: 42px;
+	}
+}
+@media only screen and (min-width: 1366px) {
+	.number_setting .left_number .icon {
+	    font-size: 36px;
+	    margin-right: 6px;
+	}
+	.number_setting .left_number .num {
+	    font-size: 54px;
+	}
+}

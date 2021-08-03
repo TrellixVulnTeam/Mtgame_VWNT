@@ -1,0 +1,171 @@
+/* @font-face {
+    font-family: 'luckiestGuy';
+	src: url('LuckiestGuy.ttf');
+} */
+*{
+	margin: 0;
+	padding: 0;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+	/* font-family: "luckiestGuy"; */
+}
+#app > div{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.index{
+	width: 100%;
+	    height: 100%;
+	    display: block;
+	/* 	font-family: "luckiestGuy"; */
+}
+.index .container{
+	position: relative;
+	width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #2BA7E0 , #48C0F0);
+	/* background: linear-gradient(to bottom, #43A3FF , #24B5F5); */
+    overflow: hidden;
+    -moz-transition: all 1s ease 0s;
+    -webkit-transition: all 1s ease 0s;
+    transition: all 1s ease 0s;
+    -o-transition: all 1s ease 0s;
+}
+
+.container .imgWrap{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+
+
+    overflow: hidden;
+}
+.container .imgWrap img{
+	display: block;
+	width: 100%;
+	margin-bottom: -45%;
+	transition: 0.3s ease -webkit-transform;
+}
+.itemWarp {
+	width: 100%;
+	height: 200%;
+	position: relative;
+	transition: 0.4s ease -webkit-transform;
+}
+.itemWarp .item{
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	transition: all 0.4s;
+}
+.itemWarp .item .yun{
+    z-index: 99;
+    width: 90%;
+    position: absolute;
+    top: 5%;
+    opacity: 1;
+}
+.itemWarp2{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 2200px;
+	transition: all 0.4s;
+}
+.itemWarp2 .item2{
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	transition: all 0.4s;
+}
+.itemWarp2 .game{
+	transform:rotate(0deg);
+}
+.itemWarp2 .exercise{
+	transform:rotate(72deg);
+}
+.itemWarp2 .courses{
+	transform:rotate(144deg);
+}
+.itemWarp2 .watch{
+	transform:rotate(216deg);
+}
+.itemWarp2 .books{
+	transform:rotate(288deg);
+}
+.itemWarp2 .item2 .monkey{
+    z-index: 99;
+    position: absolute;
+    top: 1%;
+	height: 100%;
+    width: 40%;
+    transition: all 0.4s;
+}
+
+/* .itemWarp2 .books .monkey{
+	top: 1.2%;
+	width: 38%;
+}
+.itemWarp2 .watch .monkey{
+	top: 1.2%;
+	width: 38%;
+} */
+.itemWarp2 .item2 .monkey img{
+	width: 100%;
+}
+.itemWarp2 .item2.active{
+	z-index: 200;
+}
+   @media screen and (min-width: 900px) and (max-width: 1024px){
+    	.itemWarp2 .item2 .monkey{
+    	    top: 9%;
+    		height: 100%;
+
+    	}
+    }
+@media screen and (min-width: 1025px)and (max-width: 1600px){
+	.itemWarp2 {
+		top: 26%;
+	}
+	/* .itemWarp .item .yun{
+	    z-index: 99;
+	    width: 90%;
+	    position: absolute;
+	    top: 2%;
+	    opacity: 1;
+	}
+	.container .imgWrap img {
+	    margin-bottom: -55%;
+	} */
+	/* .itemWarp2 .item2 .monkey{
+		top:2%
+	}
+	.itemWarp2 .books .monkey,
+	.itemWarp2 .watch .monkey{
+		top: 1.2%;
+	} */
+}
+@media screen and (max-width: 740px) {
+	/* .container .imgWrap img{
+		margin-bottom: -50%;
+	} */
+}
+@media screen and (max-width: 570px) {
+
+}
+@media screen and (min-width: 1600px){
+  .itemWarp2 {
+    top: 60%;
+  }
+  .itemWarp2 .item2 .monkey{
+    top: -25%;
+    width: 35%;
+  }
+}

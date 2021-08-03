@@ -1,0 +1,286 @@
+<!DOCTYPE html><html><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=format-detection content="telephone=no"><meta name=msapplication-tap-highlight content=no><meta name=viewport content="user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1,width=device-width,height=device-height,viewport-fit=cover"><script src=http://api.html5media.info/1.1.8/html5media.min.js></script><title>Monkey Town</title><style>*{
+    user-select:none;
+  }
+  /*#body {*/
+    /*!*background-color:red;*!*/
+    /*padding:0px !important;*/
+    /*margin:0px !important;*/
+    /*width: 100% !important;*/
+    /*height: 100% !important;*/
+    /*position: relative !important;*/
+    /*overflow: hidden;*/
+  /*}*/
+  /*#app{*/
+    /*padding:0px !important;*/
+    /*margin:0 !important;*/
+    /*position:relative !important;*/
+    /*display:block !important;*/
+    /*top:0 !important;*/
+    /*left:0 !important;*/
+    /*pointer-events:auto;*/
+    /*z-index:1;*/
+    /*!*background-color:yellow;*!*/
+  /*}*/
+
+      html {
+        touch-action: manipulation;
+      }
+
+      select {
+        -webkit-appearance: none;
+      }
+
+      input,
+      button,
+      select,
+      textarea {
+        outline: none
+      }
+
+      /*@mixin iphonex-css {*/
+        /*padding-top: constant(safe-area-inset-top); //为导航栏+状态栏的高度 88px*/
+        /*padding-top: env(safe-area-inset-top); //为导航栏+状态栏的高度 88px*/
+        /*padding-left: constant(safe-area-inset-left); //如果未竖屏时为0*/
+        /*padding-left: env(safe-area-inset-left); //如果未竖屏时为0*/
+        /*padding-right: constant(safe-area-inset-right); //如果未竖屏时为0*/
+        /*padding-right: env(safe-area-inset-right); //如果未竖屏时为0*/
+        /*padding-bottom: constant(safe-area-inset-bottom); //为底下圆弧的高度 34px*/
+        /*padding-bottom: env(safe-area-inset-bottom); //为底下圆弧的高度 34px*/
+      /*}*/
+
+      /*// iphonex 适配*/
+      /*@mixin iphonex-media {*/
+        /*@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {*/
+          /*body.iphonex {*/
+            /*@include iphonex-css;*/
+          /*}*/
+        /*}*/
+      /*}*/
+
+      /*iframe {*/
+        /*border: none;*/
+      /*}*/</style><link href=css/app.ff2aa76fae4f1fd36efd017813c98029.css rel=stylesheet></head><body id=body><div id=app style="padding: 0;margin: 0;"></div><script type=text/javascript src=js/manifest.211d99677294a21b63aa.js></script><script type=text/javascript src=js/app.9a70405c72db697f3cbf.js></script></body><script>function setFontsize(){
+      if(document.documentElement.clientWidth===0){
+        setTimeout(function(){
+          setFontsize();
+        },100)
+      }
+      var body = document.getElementById('body');
+      var app = document.getElementById('app');
+      var allwidth=window.screen.width;
+      var allheight=window.screen.height;
+      //body.style.width=allheight+"px";
+      //body.style.height=allwidth+"px";
+      // if(allwidth>allheight){
+        app.style.width=allwidth+"px";
+        app.style.height=allheight+"px";
+      // }else {
+      //   app.style.width=allheight+"px";
+      //   app.style.height=allwidth+"px";
+      // }
+      //alert(app.style.height);
+    }
+    // setFontsize();
+
+    // 设置隐藏属性和改变可见属性的事件的名称
+    // var timeurl='http://107.150.121.34/monkeytownHK/user/playTime';
+     var timeurl= localStorage.getItem('localurl')+'/user/playTime';
+    localStorage.setItem('startTimeid','');
+    localStorage.setItem('gamename','');
+    var hidden, visibilityChange;
+    if (typeof document.hidden !== "undefined") { // Opera 12.10 and Firefox 18 and later support
+      hidden = "hidden";
+      visibilityChange = "visibilitychange";
+    } else if (typeof document.msHidden !== "undefined") {
+      hidden = "msHidden";
+      visibilityChange = "msvisibilitychange";
+    } else if (typeof document.webkitHidden !== "undefined") {
+      hidden = "webkitHidden";
+      visibilityChange = "webkitvisibilitychange";
+    }
+
+    // var videoElement = document.getElementById("videoElement");
+
+    localStorage.setItem("gamemusic", "true");
+    // 如果页面是隐藏状态，则暂停视频
+    // 如果页面是展示状态，则播放视频
+    function handleVisibilityChange() {
+      if (document[hidden]) {
+        // videoElement.pause();
+        // alert("网页被挂起");
+        var audio = document.getElementById('music');
+        var partmusic = document.getElementById('partmusic');
+        var gameplay = document.getElementById('gameplay');
+        audio.pause();
+        if (gameplay != null && partmusic != null) {
+          partmusic.pause();
+        }
+         if(localStorage.getItem('gamename')!=''){
+        var endtime = (new Date()).getTime();
+        var paramObj = {
+        	httpUrl : timeurl,
+        	type : 'post',
+        	data : {
+        		id: localStorage.getItem('startTimeid'),
+        		time: endtime,
+        		name: localStorage.getItem('gamename'),
+        		studentId:localStorage.getItem('studentId')
+        	}
+        }
+        /*请求调用*/
+        httpRequest(paramObj,function(respondDada) {
+            //这里编写成功的回调函数
+            // console.log(respondDada)
+        },function() {
+        	// alert('网络错误')
+          alertMsg("You must be connected to the internet.<br>Please connect and try again.");
+        });
+       }
+      } else {
+        // alert("网页被呼起");
+        // videoElement.play();
+        var audio = document.getElementById('music');
+        var partmusic = document.getElementById('partmusic');
+        var gameplay = document.getElementById('gameplay');
+        // console.log(partmusic);
+        if (gameplay == null) {
+          // if(audio.stop()){
+          if (localStorage.getItem('audiomusic') == "false") {
+            audio.pause();
+          } else {
+            audio.play();
+          }
+        } else {
+          if (localStorage.getItem('gamemusic') == "false") {
+            // partmusic.pause();
+          } else {
+            partmusic.play();
+          }
+        }
+        if(localStorage.getItem('gamename')!=''){
+           var starttime = (new Date()).getTime();
+         localStorage.setItem('startTimeid',starttime);
+        var paramObj = {
+        	httpUrl : timeurl,
+        	type : 'post',
+        	data : {
+        		id: starttime,
+        		time: starttime,
+        		name: localStorage.getItem('gamename'),
+        		studentId:localStorage.getItem('studentId')
+        	}
+        }
+        /*请求调用*/
+        httpRequest(paramObj,function(respondDada) {
+            //这里编写成功的回调函数
+            // console.log(respondDada)
+        },function() {
+        	// alert('网络错误')
+          alertMsg("You must be connected to the internet.<br>Please connect and try again.");
+        });
+        }
+
+      }
+    }
+    document.addEventListener(visibilityChange, handleVisibilityChange, false);
+
+
+
+    //                      function closeGame(){
+    //                        var p1=document.getElementById("ifameid");
+    //                        var childs = p1.childNodes;
+    //                        for(var i = childs.length - 1; i >= 0; i--) {
+    //                        	p1.removeChild(childs[i]);
+    //                        }
+    //                        var audio = document.getElementById('music');
+    //                        if(localStorage.getItem('audiomusic')=="false"){
+    //
+    //                        }else{
+    //                        	audio.play();
+    //                        }
+    //                        };
+    function backgo() {
+      history.go(-3);
+
+    }
+
+    function backgo2() {
+      history.go(-1);
+
+    }
+
+    function test() {
+      alertFram.style.display = "none";
+    }
+    // document.addEventListener("pause", function(){
+    // 	//从前台切换到后台
+    //   var audio = document.getElementById('music');
+    //    var partmusic = document.getElementById('partmusic');
+    //   if(localStorage.getItem('audiomusic')=="false"){
+    //       audio.stop();alert("1");
+    //   }else{
+    //   	audio.stop();alert("2");
+    //   }
+    //   if(partmusic){
+    //     if(localStorage.getItem('gamemusic')=="false"){
+    //       partmusic.stop();alert("3");
+    //   }else{
+    //   	  partmusic.stop();alert("4");
+    //   }
+    //   }
+    // }, false);
+
+    function httpRequest(paramObj, fun, errFun) {
+      var xmlhttp = null;
+      /*创建XMLHttpRequest对象，
+       *老版本的 Internet Explorer（IE5 和 IE6）使用 ActiveX 对象：new ActiveXObject("Microsoft.XMLHTTP")
+       * */
+      if (window.XMLHttpRequest) {
+        xmlhttp = new XMLHttpRequest();
+      } else if (window.ActiveXObject) {
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+      }
+      /*判断是否支持请求*/
+      if (xmlhttp == null) {
+        alert('你的浏览器不支持XMLHttp');
+        return;
+      }
+      /*请求方式，并且转换为大写*/
+      var httpType = (paramObj.type || 'GET').toUpperCase();
+      /*数据类型*/
+      var dataType = paramObj.dataType || 'json';
+      /*请求接口*/
+      var httpUrl = paramObj.httpUrl || '';
+      /*是否异步请求*/
+      var async = paramObj.async || true;
+      /*请求参数--post请求参数格式为：foo=bar&lorem=ipsum*/
+      var paramData = paramObj.data || [];
+      var requestData = '';
+      for (var name in paramData) {
+        requestData += name + '=' + paramData[name] + '&';
+      }
+      requestData = requestData == '' ? '' : requestData.substring(0, requestData.length - 1);
+      // console.log(requestData)
+
+      /*请求接收*/
+      xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+          /*成功回调函数*/
+          fun(xmlhttp.responseText);
+        } else {
+          /*失败回调函数*/
+          errFun;
+        }
+      }
+
+      /*接口连接，先判断连接类型是post还是get*/
+      if (httpType == 'GET') {
+        xmlhttp.open("GET", httpUrl, async);
+        xmlhttp.send(null);
+      } else if (httpType == 'POST') {
+        xmlhttp.open("POST", httpUrl, async);
+        //发送合适的请求头信息
+        xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xmlhttp.send(requestData);
+      }
+    }</script></html>
