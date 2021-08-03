@@ -6471,7 +6471,7 @@
     }
   }
   //手机
-  @media only screen and (min-device-width: 812px) and (max-device-width: 1023px){
+  @media only screen and (min-device-width: 812px) and (max-device-width: 1023px) and (-webkit-device-pixel-ratio: 3){
     .wavebutton img {
       top: 58%;
     }
@@ -7638,7 +7638,7 @@
     }
   }
   //平板
-  @media only screen and (min-device-width: 1024px) and (max-device-width: 1600px){
+  @media only screen and (min-device-width: 1024px) and (max-device-width: 1600px) and (-webkit-device-pixel-ratio: 3){
     .wingbutton img {
       width: 10%;
       top: 43%;
@@ -9903,7 +9903,7 @@
       }
     }
   }*/
-  /*@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+  @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
     .tower{
     width: 19%;
     left:2.4%;
@@ -10354,5 +10354,5 @@
         width: 40%;
       }
     }
-  }*/
+  }
 </style>
