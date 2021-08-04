@@ -1249,7 +1249,7 @@
         }else if (name === 'shovel' && this.walkers) {
           this.shovel = !this.shovel;
           this.zhezhao = !this.zhezhao;
-          audio.src=this.mp3.shovel;
+          audio.src=this.mp3.sandstorm;
         }else if (name === 'thirsty' ) {
           this.thirsty = !this.thirsty;
           this.zhezhao = !this.zhezhao;
@@ -1261,51 +1261,51 @@
         }else if (name === 'blow' ) {
           this.blow = !this.blow;
           this.zhezhao = !this.zhezhao;
-          audio.src=this.mp3.water;
+          audio.src=this.mp3.blow;
         }else if (name === 'dive' ) {
           this.dive = !this.dive;
           this.zhezhao = !this.zhezhao;
-          audio.src=this.mp3.water;
+          audio.src=this.mp3.dive;
         }else if (name === 'flippers' ) {
           this.flippers = !this.flippers;
           this.zhezhao = !this.zhezhao;
-          audio.src=this.mp3.water;
+          audio.src=this.mp3.flippers;
         }else if (name === 'lifeJacket' ) {
           this.lifeJacket = !this.lifeJacket;
           this.zhezhao = !this.zhezhao;
-          audio.src=this.mp3.water;
+          audio.src=this.mp3.lifeJacket;
         }else if (name === 'mask' ) {
           this.mask = !this.mask;
           this.zhezhao = !this.zhezhao;
-          audio.src=this.mp3.water;
+          audio.src=this.mp3.mask;
         }else if (name === 'sail' ) {
           this.sail = !this.sail;
           this.zhezhao = !this.zhezhao;
-          audio.src=this.mp3.water;
+          audio.src=this.mp3.sail;
         }else if (name === 'sailboat' ) {
           this.sailboat = !this.sailboat;
           this.zhezhao = !this.zhezhao;
-          audio.src=this.mp3.water;
+          audio.src=this.mp3.sailboat;
         }else if (name === 'surf' ) {
           this.surf = !this.surf;
           this.zhezhao = !this.zhezhao;
-          audio.src=this.mp3.water;
+          audio.src=this.mp3.surf;
         }else if (name === 'surfboard' ) {
           this.surfboard = !this.surfboard;
           this.zhezhao = !this.zhezhao;
-          audio.src=this.mp3.water;
+          audio.src=this.mp3.surfboard;
         }else if (name === 'tank' ) {
           this.tank = !this.tank;
           this.zhezhao = !this.zhezhao;
-          audio.src=this.mp3.water;
+          audio.src=this.mp3.tank;
         }else if (name === 'waves' ) {
           this.waves = !this.waves;
           this.zhezhao = !this.zhezhao;
-          audio.src=this.mp3.water;
+          audio.src=this.mp3.waves;
         }else if (name === 'wind' ) {
           this.wind = !this.wind;
           this.zhezhao = !this.zhezhao;
-          audio.src=this.mp3.water;
+          audio.src=this.mp3.wind;
         }else if (name === 'acrobat' ) {
           this.acrobat = !this.acrobat;
           this.zhezhao = !this.zhezhao;

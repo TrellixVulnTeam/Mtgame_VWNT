@@ -1314,7 +1314,7 @@
     }
   }
 
-  @media only screen and (min-device-width: 812px) and (max-device-width: 1023px){
+  @media only screen and (min-device-width: 812px) and (max-device-width: 1023px) and (-webkit-device-pixel-ratio: 3){
     .cardlist[data-v-52d5b23f] {
       top: 50% !important;
       transform: translateY(-48%) !important;
