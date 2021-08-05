@@ -5,7 +5,7 @@
       src="../../assets/video/gamemusic.mp3"></audio>
 		</span>
     <img src="../../assets/image/rightback.png" @click="gomemu" class="backbutton"/>
-    <div v-if="zhezhao"
+    <div v-if="zhezhao" @click="showgif()"
          style="width: 100%; height: 100%;display:block;position: absolute;opacity: 0.5;z-index: 100;background-color: black">
     </div>
     <!--选择不同的背景-->
@@ -19,50 +19,52 @@
       <img src="../../assets/image/201906H5 Fairy Tales_In_the_castle_MT/stillObj(with Sword+Shield boy)/Cloud_0.png"
          style="width: 18%;left:2.4%;top:15.5%;position: absolute;"/>
       <div class="shield">
-        <img src="../../assets/image/201906H5 Fairy Tales_In_the_castle_MT/stillObj(with Sword+Shield boy)/Sword+ShieldA_0.png" v-if="shield" @click="showgif('shield')">
-        <img src="../../assets/image/201906H5 Fairy Tales_In_the_castle_MT/GIF/Shield.gif" style="z-index: 100" v-if="!shieldgif"
+        <img src="../../assets/image/201906H5 Fairy Tales_In_the_castle_MT/stillObj(with Sword+Shield boy)/Sword+ShieldA_0.png" v-if="shield&&sword" @click="showgif('shield')">
+        <img src="../../assets/image/201906H5 Fairy Tales_In_the_castle_MT/GIF/Shield.gif" style="z-index: 100" v-if="!shield"
            @click="showgif('shield')">
         <img src="../../assets/image/201906H5 Fairy Tales_In_the_castle_MT/GIF/Sword.gif" style="z-index: 100" v-if="!sword"
            @click="showgif('sword')">
       </div>
       <div class="shieldbutton">
       <img src="../../assets/image/201906H5 Fairy Tales_In_the_castle_MT/Word/word_shield Comp 1_0.png" v-if="walkers"
-           :style="{zIndex: !shieldgif ? 100 : 1}" @click="showgif('shield')">
+           :style="{zIndex: !shield ? 100 : 1}" @click="showgif('shield')">
       </div>
       <div class="swordbutton">
       <img src="../../assets/image/201906H5 Fairy Tales_In_the_castle_MT/Word/word_sword Comp 1_0.png" v-if="walkers"
            :style="{zIndex: !sword ? 100 : 1}" @click="showgif('sword')">
       </div>
       <div class="dragon">
-        <img src="../../assets/image/201906H5 Fairy Tales_In_the_castle_MT/PNG/dragon_00.png" v-if="dragon" @click="showgif('dragon')">
-        <img src="../../assets/image/201906H5 Fairy Tales_In_the_castle_MT/GIF/roar.gif" style="z-index: 100" v-if="!dragon"
+        <img src="../../assets/image/201906H5 Fairy Tales_In_the_castle_MT/Png/dragon_00.png" v-if="dragon&&roar" @click="showgif('dragon')">
+        <img src="../../assets/image/201906H5 Fairy Tales_In_the_castle_MT/GIF/dragon.gif" style="z-index: 100" v-if="!dragon"
            @click="showgif('dragon')">
+        <img src="../../assets/image/201906H5 Fairy Tales_In_the_castle_MT/GIF/roar.gif" style="z-index: 100" v-if="!roar"
+           @click="showgif('roar')">
       </div>
       <div class="dragonbutton">
       <img src="../../assets/image/201906H5 Fairy Tales_In_the_castle_MT/Word/word_dragon Comp 1_0.png" v-if="walkers"
-           :style="{zIndex: !dragongif ? 100 : 1}" @click="showgif('dragon')">
+           :style="{zIndex: !dragon ? 100 : 1}" @click="showgif('dragon')">
       </div>
       <div class="roarbutton">
       <img src="../../assets/image/201906H5 Fairy Tales_In_the_castle_MT/Word/word_roar Comp 1_0.png"
            :style="{zIndex: !roar ? 100 : 1}" @click="showgif('roar')">
       </div>
       <div class="knight">
-        <img src="../../assets/image/201906H5 Fairy Tales_In_the_castle_MT/PNG/knight_00.png" v-if="knight" @click="showgif('knight')">
-        <img src="../../assets/image/201906H5 Fairy Tales_In_the_castle_MT/GIF/knight.gif" style="z-index: 100" v-if="!knightgif"
+        <img src="../../assets/image/201906H5 Fairy Tales_In_the_castle_MT/Png/knight_00.png" v-if="knight&&horse" @click="showgif('knight')">
+        <img src="../../assets/image/201906H5 Fairy Tales_In_the_castle_MT/GIF/knight.gif" style="z-index: 100" v-if="!knight"
            @click="showgif('knight')">
         <img src="../../assets/image/201906H5 Fairy Tales_In_the_castle_MT/GIF/horse.gif" style="z-index: 100" v-if="!horse"
            @click="showgif('horse')">
       </div>
       <div class="knightbutton">
       <img src="../../assets/image/201906H5 Fairy Tales_In_the_castle_MT/Word/word_knight Comp 1_0.png"
-           :style="{zIndex: !knightgif ? 100 : 1}" @click="showgif('knight')">
+           :style="{zIndex: !knight ? 100 : 1}" @click="showgif('knight')">
       </div>
       <div class="horsebutton">
       <img src="../../assets/image/201906H5 Fairy Tales_In_the_castle_MT/Word/word_horse Comp 1_0.png"
            :style="{zIndex: !horse ? 100 : 1}" @click="showgif('horse')">
       </div>
       <div class="castle">
-        <img src="../../assets/image/201906H5 Fairy Tales_In_the_castle_MT/PNG/castle_00.png" v-if="castle" @click="showgif('castle')">
+        <img src="../../assets/image/201906H5 Fairy Tales_In_the_castle_MT/Png/castle_00.png" v-if="castle" @click="showgif('castle')">
         <img src="../../assets/image/201906H5 Fairy Tales_In_the_castle_MT/GIF/castle.gif" style="z-index: 100" v-if="!castle"
            @click="showgif('castle')">
       </div>
@@ -71,7 +73,7 @@
            :style="{zIndex: !castle ? 100 : 1}" @click="showgif('castle')">
       </div>
       <div class="queen">
-        <img src="../../assets/image/201906H5 Fairy Tales_In_the_castle_MT/PNG/queen_00.png" v-if="queen" @click="showgif('queen')">
+        <img src="../../assets/image/201906H5 Fairy Tales_In_the_castle_MT/Png/queen_00.png" v-if="queen" @click="showgif('queen')">
         <img src="../../assets/image/201906H5 Fairy Tales_In_the_castle_MT/GIF/queen.gif" style="z-index: 100" v-if="!queen"
            @click="showgif('queen')">
       </div>
@@ -80,7 +82,7 @@
            :style="{zIndex: !queen ? 100 : 1}" @click="showgif('queen')">
       </div>
       <div class="king">
-        <img src="../../assets/image/201906H5 Fairy Tales_In_the_castle_MT/PNG/king_00.png" v-if="king" @click="showgif('king')">
+        <img src="../../assets/image/201906H5 Fairy Tales_In_the_castle_MT/Png/king_00.png" v-if="king" @click="showgif('king')">
         <img src="../../assets/image/201906H5 Fairy Tales_In_the_castle_MT/GIF/king.gif" style="z-index: 100" v-if="!king"
            @click="showgif('king')">
       </div>
@@ -89,7 +91,7 @@
            :style="{zIndex: !king ? 100 : 1}" @click="showgif('king')">
       </div>
       <div class="wizard">
-        <img src="../../assets/image/201906H5 Fairy Tales_In_the_castle_MT/PNG/wizard_00.png" v-if="wizard" @click="showgif('wizard')">
+        <img src="../../assets/image/201906H5 Fairy Tales_In_the_castle_MT/Png/wizard_00.png" v-if="wizard" @click="showgif('wizard')">
         <img src="../../assets/image/201906H5 Fairy Tales_In_the_castle_MT/GIF/wizard.gif" style="z-index: 100" v-if="!wizard"
            @click="showgif('wizard')">
       </div>
@@ -98,15 +100,15 @@
            :style="{zIndex: !wizard ? 100 : 1}" @click="showgif('wizard')">
       </div>
       <div class="princess">
-        <img src="../../assets/image/201906H5 Fairy Tales_In_the_castle_MT/PNG/princess_00.png" v-if="princess" @click="showgif('princess')">
-        <img src="../../assets/image/201906H5 Fairy Tales_In_the_castle_MT/GIF/princess.gif" style="z-index: 100" v-if="!princessgif"
+        <img src="../../assets/image/201906H5 Fairy Tales_In_the_castle_MT/PNG/princess_00.png" v-if="princess&&scream" @click="showgif('princess')">
+        <img src="../../assets/image/201906H5 Fairy Tales_In_the_castle_MT/GIF/princess.gif" style="z-index: 100" v-if="!princess"
            @click="showgif('princess')">
         <img src="../../assets/image/201906H5 Fairy Tales_In_the_castle_MT/GIF/scream.gif" style="z-index: 100" v-if="!scream"
            @click="showgif('scream')">
       </div>
       <div class="princessbutton">
       <img src="../../assets/image/201906H5 Fairy Tales_In_the_castle_MT/Word/word_princess Comp 1_0.png"
-           :style="{zIndex: !princessgif ? 100 : 1}" @click="showgif('princess')">
+           :style="{zIndex: !princess ? 100 : 1}" @click="showgif('princess')">
       </div>
       <div class="screambutton">
       <img src="../../assets/image/201906H5 Fairy Tales_In_the_castle_MT/Word/word_scream Comp 1_0.png"
@@ -271,7 +273,7 @@
              :style="{zIndex: !iceberg ? 100 : 2}" @click="showgif('iceberg')" v-if="walkers">
       </div>
       <div class="tusk">
-        <img src="../../assets/image/201907H5 The Arctic_MT/201907H5 The Arctic_MT_GIF_PNG/png/tusk_Comp_1_0000000000.png" v-if="tusk" @click="showgif('tusk')">
+        <img src="../../assets/image/201907H5 The Arctic_MT/201907H5 The Arctic_MT_GIF_PNG/png/tusk_Comp_1_0000000000.png" v-if="tusk&&walrus" @click="showgif('tusk')">
         <img src="../../assets/image/201907H5 The Arctic_MT/201907H5 The Arctic_MT_GIF_PNG/tusk_Comp_1.gif" style="z-index: 100" v-if="!tusk" @click="showgif('tusk')">
         <img src="../../assets/image/201907H5 The Arctic_MT/201907H5 The Arctic_MT_GIF_PNG/walrus.gif" style="z-index: 100" v-if="!walrus" @click="showgif('walrus')">
       </div>
@@ -330,7 +332,7 @@
       </div>
       <div class="cactusbutton">
         <img src="../../assets/image/201907H5 The desert_MT/Word/word_cactus_w Comp 1_00000.png"
-             :style="{zIndex: !cactus ? 100 : 1}" @click="showgif('cactus')">
+             :style="{zIndex: !cactus ? 100 : 3}" @click="showgif('cactus')">
       </div>
       <div class="camel">
         <img src="../../assets/image/201907H5 The desert_MT/201907H5 The desert_MT_GIF_PNG/png/camel_0000000000.png" v-if="camel" @click="showgif('camel')">
@@ -374,14 +376,14 @@
       </div>
       <div class="lostbutton">
         <img src="../../assets/image/201907H5 The desert_MT/Word/word_lost Comp 1_00000.png" v-if="walkers"
-             :style="{zIndex: !lost ? 100 : 1}" @click="showgif('lost')">
+             :style="{zIndex: !lost ? 100 : 2}" @click="showgif('lost')">
       </div>
       <div class="map">
-        <img src="../../assets/image/201907H5 The desert_MT/201907H5 The desert_MT_GIF_PNG/png/map_Comp_2_0000000000.png" v-if="map" @click="showgif('map')">
+        <img src="../../assets/image/201907H5 The desert_MT/201907H5 The desert_MT_GIF_PNG/png/map_Comp_2_0000000000.png" v-if="map&&hot" @click="showgif('map')">
         <img src="../../assets/image/201907H5 The desert_MT/201907H5 The desert_MT_GIF_PNG/map.gif" style="z-index: 100" v-if="!map && hot"
              @click="showgif('map')">
         <img src="../../assets/image/201907H5 The desert_MT/201907H5 The desert_MT_GIF_PNG/hot.gif" style="z-index: 100" v-if="!hot"
-             @click="showgif('map')">
+             @click="showgif('hot')">
       </div>
       <div class="mapbutton">
         <img src="../../assets/image/201907H5 The desert_MT/Word/word_map_w Comp 1_00000.png"
@@ -601,7 +603,7 @@
       </div>
       <div class="tentbutton">
         <img src="../../assets/image/201908H5 At the circus_MT/Word/word_tent Comp 1_00000.png"
-             :style="{zIndex: !tent ? 100 : 1}" @click="showgif('tent')">
+             :style="{zIndex: !tent ? 100 : 2}" @click="showgif('tent')">
       </div>
       <div class="tightrope">
         <img src="../../assets/image/201908H5 At the circus_MT/GIF_PNG/png/tightrope_0000000000.png" v-if="tightrope" @click="showgif('tightrope')">
@@ -772,11 +774,12 @@
 
 <script>
 
-  var qs = require('qs');
-  export default {
+const qs = require('qs');
+export default {
     name: "chatwalker",
     data() {
       return {
+        word:'',
         mp3:{
           snow:require('../../assets/Flashcard Audio/July/snow.mp3'),
           igloo:require('../../assets/Flashcard Audio/July/igloo.mp3'),
@@ -1023,7 +1026,7 @@
       }
       // var timestamp = (new Date()).getTime();
       // localStorage.setItem('startTimeid', timestamp);
-      if (localStorage.getItem('gamemusic') == "false") {
+      if (localStorage.getItem('gamemusic') === "false") {
         this.show = false;
       } else {
         this.show = true;
@@ -1056,7 +1059,7 @@
       window.removeEventListener('popstate', this.gomemu, false);
     },
     methods: {
-      async showgif(name) {
+      async showgif1(name) {
         let audio = new Audio();
         if (name === 'bed') {
           this.bed = !this.bed;
@@ -1404,13 +1407,31 @@
           audio.src=this.mp3.witch;
         }
         await audio.play();
+        //this.closeGif(name);
+      },
+      //点击播放动画
+      async showgif(name){
+        if (name===undefined){
+          this.zhezhao = !this.zhezhao;
+          this.$data[this.word]=!this.$data[this.word];
+        }else {
+          this.word=name;
+          let audio = new Audio();
+          this.$data[this.word]=!this.$data[this.word];
+          this.zhezhao = !this.zhezhao;
+          audio.src=this.$data.mp3[this.word];
+          await audio.play();
+        }
+      },
+      closeGif(){
+
       },
       bodyScroll(event) {
         event.preventDefault();
       },
 
       changesett() {
-        if (this.onef == false) {
+        if (this.onef === false) {
           setTimeout(() => {
             this.resume3 = !this.resume3;
 
@@ -1432,8 +1453,8 @@
       //   }
       // },
       gomemu() {
-        var audio = document.getElementById('music');
-        if (localStorage.getItem('audiomusic') == "false") {
+        const audio = document.getElementById('music');
+        if (localStorage.getItem('audiomusic') === "false") {
 
         } else {
           audio.play();
@@ -1467,7 +1488,7 @@
 
       sound() {
         this.show = !this.show;
-        if (this.show == false) {
+        if (this.show === false) {
           // this.$refs.MusicPlay.pause();
           localStorage.setItem("gamemusic", "false");
         } else {
@@ -1478,7 +1499,7 @@
     },
     watch: {
       'onef': function (newVal) {
-        if (this.onef == true) {
+        if (this.onef === true) {
           setTimeout(() => {
             this.onef = false;
             this.zhezhao = false;
@@ -1488,7 +1509,7 @@
         }
       },
       'video': function (newVal) {
-        if (this.video == true) {
+        if (this.video === true) {
           this.$refs.videos.play();
           setTimeout(() => {
             this.$refs.videos.pause();
@@ -1823,6 +1844,7 @@
     left: 0%;
     transform: rotate(-5deg);
     position: absolute;
+    z-index: 1;
   }
 
   .tentbutton img {
@@ -2166,7 +2188,7 @@
       top: 175%;
       left: 115%;
       position: absolute;
-      z-index: 3;
+      z-index: 2;
     }
   }
 
@@ -3567,9 +3589,9 @@
       position: absolute;
     }
     .tent img {
-      width: 42%;
-      top: 3%;
-      left: 0%;
+      width: 40%;
+      top: 5%;
+      left: -2%;
     }
     .tightropebutton img {
       width: 10%;
@@ -3579,7 +3601,7 @@
     }
     .tightrope img {
       width: 85%;
-      top: -4%;
+      top: -1%;
       left: -12%;
       position: absolute;
     }
@@ -4833,7 +4855,7 @@
         top: 175%;
         left: 115%;
         position: absolute;
-        z-index: 3;
+        z-index: 2;
       }
     }
 
@@ -6566,6 +6588,7 @@
       left: 0%;
       -webkit-transform: rotate(-5deg);
       transform: rotate(-5deg);
+      z-index: 1;
     }
     .cheer img {
       width: 29%;
@@ -6759,7 +6782,7 @@
         top: 175%;
         left: 115%;
         position: absolute;
-        z-index: 3;
+        z-index: 1;
       }
     }
 
@@ -7764,9 +7787,9 @@
       position: absolute;
     }
     .tent img {
-      width: 42%;
-      top: 3%;
-      left: 0%;
+      width: 40%;
+      top: 5%;
+      left: -2%;
     }
     .tightropebutton img {
       width: 10%;
@@ -7776,7 +7799,7 @@
     }
     .tightrope img {
       width: 85%;
-      top: -4%;
+      top: -1%;
       left: -12%;
       position: absolute;
     }

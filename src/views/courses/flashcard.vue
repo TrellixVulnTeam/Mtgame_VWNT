@@ -6,7 +6,7 @@
 
       <transition name="fade1">
         <div style="width: 100%;height: 100%;">
-          <img src="../../assets/image/picture.png" class="backbutton" @click="gocard()" v-if="this.unit!=='Our World'&&this.unit!=='My Home'&&this.unit!=='Fun Time!'"/>
+          <img src="../../assets/image/picture.png" class="backbutton" @click="gocard()" v-if="this.unit!=='Our World'&&this.unit!=='My Home'&&this.unit!=='Fun Time!'&&this.unit!=='My Community'"/>
           <img :src="title" class="toptitle">
           <div>
             <div class="cardleft">
@@ -594,18 +594,7 @@
           });
       },
       turncard(turn){
-          switch(turn) {
-            case 'left':
-              if (this.part === 'part2'){
-                this.part='part1'
-              }
-              break;
-            case 'right':
-              if (this.part === 'part1'){
-                this.part='part2'
-              }
-              break;
-          }
+        this.part = (this.part === 'part1') ?  'part2' : 'part1';
         this.createdpop();
       },
       pop() {
@@ -710,10 +699,12 @@
       turnpop(turn){
         if (turn==='left'&&this.falshCardId!==1) {
           this.falshCardId=this.falshCardId-2;
-          this.showpop();
-        }else if(turn==='right'&&this.falshCardId!==12){
-          this.showpop();
+        }else if(turn==='left'&&this.falshCardId===1){
+          this.falshCardId=11;
+        }else if(turn==='right'&&this.falshCardId===12){
+          this.falshCardId=0;
         }
+        this.showpop();
       },
       //展示pop
       startpop(li) {
