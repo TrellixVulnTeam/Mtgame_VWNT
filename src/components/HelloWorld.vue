@@ -973,9 +973,11 @@
 					})
 				}, 300);
 				}else if(this.game=='1'){
+				  console.log(this.UnitsList);
 					setTimeout(() => {
             if(this.part==='part1'){
               this.menuId=this.UnitsList[0].menu_detail_id_1;
+              console.log(this.menuId);
             }else if(this.part==='part2'){
               this.menuId=this.UnitsList[0].menu_detail_id_2;
             }else if(this.part==='part3'){
@@ -1184,6 +1186,10 @@
     // },
 	  created() {
 		  console.log(this.$route.query);
+		  this.cources=this.$route.query.cources;
+      this.courseId=this.$route.query.courseId;
+      this.level=this.$route.query.level;
+      this.levelsId=this.$route.query.levelsId;
 		  if(this.$route.query.studentId){
         this.part=this.$route.query.part;
 		    if(localStorage.getItem('userId')){
@@ -1500,7 +1506,7 @@
           studentId:localStorage.getItem('studentId'),
           unitsId:this.unitsId
         })).then(res=>{
-          console.log(res);
+          console.log(res.data.UnitsList[0].menu_detail_id_1);
           this.UnitsList=res.data.UnitsList;
           this.sum=res.data.sumCoins;
           localStorage.setItem('sumCoins',this.sum);

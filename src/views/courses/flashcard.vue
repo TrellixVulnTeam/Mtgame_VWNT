@@ -55,7 +55,7 @@
       <div class='popContainer' v-show="popp">
         <div class="withcolor">
           <div class="close" @click="pop">
-            <img src="../../assets/image/cloce2.png">
+            <img src="../../assets/image/cloce2.png" style="z-index: 1;position: relative;">
           </div>
           <div class="cardleft2">
             <img src="../../assets/image/cardleft.png" @click="turnpop('left')" style="width: 40%;top: 40%;position: relative;">
@@ -620,6 +620,8 @@
         })
       },
       back() {
+        const audio = document.getElementById('music');
+        audio.volume=1;
         this.$router.push({
           path: '/courses',
           query: {
@@ -747,6 +749,8 @@
         }
       },
       home() {
+        const audio = document.getElementById('music');
+        audio.volume=1;
         setTimeout(() => {
           this.$router.push({path: '/source'})
         }, 1000);
@@ -759,6 +763,9 @@
     },
 
     created() { //生命周期里接收参数
+      const audio = document.getElementById('music');
+      audio.play();
+      audio.volume=0.1;
       console.log(this.$route.query);
       this.pic = this.$axios.defaults.baseURL2;
       this.unit = this.$route.query.unit;

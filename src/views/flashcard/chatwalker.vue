@@ -19,7 +19,7 @@
       <img src="../../assets/image/201906H5 Fairy Tales_In_the_castle_MT/stillObj(with Sword+Shield boy)/Cloud_0.png"
          style="width: 18%;left:2.4%;top:15.5%;position: absolute;"/>
       <div class="shield">
-        <img src="../../assets/image/201906H5 Fairy Tales_In_the_castle_MT/stillObj(with Sword+Shield boy)/Sword+ShieldA_0.png" v-if="shield&&sword" @click="showgif('shield')">
+        <img src="../../assets/image/201906H5 Fairy Tales_In_the_castle_MT/stillObj(with Sword+Shield boy)/Sword+ShieldA_0.png" v-if="shield&&sword" @click="walkers && showgif('shield')">
         <img src="../../assets/image/201906H5 Fairy Tales_In_the_castle_MT/GIF/Shield.gif" style="z-index: 100" v-if="!shield"
            @click="showgif('shield')">
         <img src="../../assets/image/201906H5 Fairy Tales_In_the_castle_MT/GIF/Sword.gif" style="z-index: 100" v-if="!sword"
@@ -34,7 +34,7 @@
            :style="{zIndex: !sword ? 100 : 1}" @click="showgif('sword')">
       </div>
       <div class="dragon">
-        <img src="../../assets/image/201906H5 Fairy Tales_In_the_castle_MT/Png/dragon_00.png" v-if="dragon&&roar" @click="showgif('dragon')">
+        <img src="../../assets/image/201906H5 Fairy Tales_In_the_castle_MT/Png/dragon_00.png" v-if="dragon&&roar" @click="showgif('roar')">
         <img src="../../assets/image/201906H5 Fairy Tales_In_the_castle_MT/GIF/dragon.gif" style="z-index: 100" v-if="!dragon"
            @click="showgif('dragon')">
         <img src="../../assets/image/201906H5 Fairy Tales_In_the_castle_MT/GIF/roar.gif" style="z-index: 100" v-if="!roar"
@@ -91,7 +91,7 @@
            :style="{zIndex: !king ? 100 : 1}" @click="showgif('king')">
       </div>
       <div class="wizard">
-        <img src="../../assets/image/201906H5 Fairy Tales_In_the_castle_MT/Png/wizard_00.png" v-if="wizard" @click="showgif('wizard')">
+        <img src="../../assets/image/201906H5 Fairy Tales_In_the_castle_MT/Png/wizard_00.png" v-if="wizard" @click="walkers && showgif('wizard')">
         <img src="../../assets/image/201906H5 Fairy Tales_In_the_castle_MT/GIF/wizard.gif" style="z-index: 100" v-if="!wizard"
            @click="showgif('wizard')">
       </div>
@@ -127,7 +127,7 @@
       </div>
       <div class="giantbutton">
         <img src="../../assets/image/201906H5 Fairy Tales_enchanted_forest_MT/Word/word_giant Comp 1_0.png"
-             :style="{zIndex: !giant ? 100 : 1}" @click="showgif('giant')">
+             :style="{zIndex: !giant ? 100 : 1}" @click="showgif('giant')" >
       </div>
       <div class="fairy">
         <img src="../../assets/image/201906H5 Fairy Tales_enchanted_forest_MT/Png/fairy_00.png" v-if="fairy&&wing" @click="showgif('fairy')">
@@ -177,7 +177,7 @@
              :style="{zIndex: !witch ? 100 : 1}" @click="showgif('witch')">
       </div>
       <div class="tower1">
-        <img src="../../assets/image/201906H5 Fairy Tales_enchanted_forest_MT/Png/tower_00.png" v-if="tower" @click="showgif('tower')">
+        <img src="../../assets/image/201906H5 Fairy Tales_enchanted_forest_MT/Png/tower_00.png" v-if="tower" @click="walkers && showgif('tower')">
         <img src="../../assets/image/201906H5 Fairy Tales_enchanted_forest_MT/GIF/tower.gif" style="z-index: 100" v-if="!tower"
              @click="showgif('tower')">
       </div>
@@ -186,7 +186,7 @@
              :style="{zIndex: !tower ? 100 : 1}" @click="showgif('tower')">
       </div>
       <div class="mermaid">
-        <img src="../../assets/image/201906H5 Fairy Tales_enchanted_forest_MT/Png/mermaid_00.png" v-if="mermaid" @click="showgif('mermaid')">
+        <img src="../../assets/image/201906H5 Fairy Tales_enchanted_forest_MT/Png/mermaid_00.png" v-if="mermaid" @click="walkers && showgif('mermaid')">
         <img src="../../assets/image/201906H5 Fairy Tales_enchanted_forest_MT/GIF/mermaid.gif" style="z-index: 100" v-if="!mermaid"
              @click="showgif('mermaid')">
       </div>
@@ -246,7 +246,7 @@
              :style="{zIndex: !seal ? 100 : 1}" @click="showgif('seal')">
       </div>
       <div class="sled">
-        <img src="../../assets/image/201907H5 The Arctic_MT/201907H5 The Arctic_MT_GIF_PNG/png/sled_Comp_1_0000000000.png" v-if="sled" @click="showgif('sled')">
+        <img src="../../assets/image/201907H5 The Arctic_MT/201907H5 The Arctic_MT_GIF_PNG/png/sled_Comp_1_0000000000.png" v-if="sled" @click="walkers && showgif('sled')">
         <img src="../../assets/image/201907H5 The Arctic_MT/201907H5 The Arctic_MT_GIF_PNG/sled_Comp_1.gif" style="z-index: 100" v-if="!sled"
              @click="showgif('sled')">
       </div>
@@ -264,7 +264,7 @@
              :style="{zIndex: !ice ? 100 : 1}" @click="showgif('ice')">
       </div>
       <div class="iceberg">
-        <img src="../../assets/image/201907H5 The Arctic_MT/201907H5 The Arctic_MT_GIF_PNG/png/ice_berg_Comp_1_0000000000.png" v-if="iceberg" @click="showgif('iceberg')">
+        <img src="../../assets/image/201907H5 The Arctic_MT/201907H5 The Arctic_MT_GIF_PNG/png/ice_berg_Comp_1_0000000000.png" v-if="iceberg" @click="walkers && showgif('iceberg')">
         <img src="../../assets/image/201907H5 The Arctic_MT/201907H5 The Arctic_MT_GIF_PNG/ice_berg_Comp_1.gif" style="z-index: 100" v-if="!iceberg"
              @click="showgif('iceberg')">
       </div>
@@ -295,7 +295,7 @@
              :style="{zIndex: !orca ? 100 : 1}" @click="showgif('orca')">
       </div>
       <div class="blizzard">
-        <img src="../../assets/image/201907H5 The Arctic_MT/201907H5 The Arctic_MT_GIF_PNG/png/blizzard_Comp_1_0000000000.png" v-if="blizzard" @click="showgif('blizzard')">
+        <img src="../../assets/image/201907H5 The Arctic_MT/201907H5 The Arctic_MT_GIF_PNG/png/blizzard_Comp_1_0000000000.png" v-if="blizzard" @click="walkers && showgif('blizzard')">
         <img src="../../assets/image/201907H5 The Arctic_MT/201907H5 The Arctic_MT_GIF_PNG/blizzard_Comp_1.gif" style="z-index: 100" v-if="!blizzard"
              @click="showgif('blizzard')"/>
       </div>
@@ -362,7 +362,7 @@
              :style="{zIndex: !lizard ? 100 : 2}" @click="showgif('lizard')">
       </div>
       <div class="lost">
-        <img src="../../assets/image/201907H5 The desert_MT/201907H5 The desert_MT_GIF_PNG/png/lost_Comp_1_0000000000.png" v-if="lost" @click="showgif('lost')">
+        <img src="../../assets/image/201907H5 The desert_MT/201907H5 The desert_MT_GIF_PNG/png/lost_Comp_1_0000000000.png" v-if="lost" @click="walkers && showgif('lost')">
         <img src="../../assets/image/201907H5 The desert_MT/201907H5 The desert_MT_GIF_PNG/lost.gif" style="z-index: 100" v-if="!lost"
              @click="showgif('lost')">
       </div>
@@ -403,7 +403,7 @@
              :style="{zIndex: !sand ? 100 : 1}" @click="showgif('sand')">
       </div>
       <div class="shovel">
-        <img src="../../assets/image/201907H5 The desert_MT/201907H5 The desert_MT_GIF_PNG/png/shovel_0000000000.png" v-if="shovel" @click="showgif('shovel')">
+        <img src="../../assets/image/201907H5 The desert_MT/201907H5 The desert_MT_GIF_PNG/png/shovel_0000000000.png" v-if="shovel" @click="walkers && showgif('shovel')">
         <img src="../../assets/image/201907H5 The desert_MT/201907H5 The desert_MT_GIF_PNG/shovel.gif" style="z-index: 100" v-if="!shovel"
              @click="showgif('shovel')">
       </div>
@@ -454,12 +454,12 @@
              :style="{zIndex: !sailboat ? 100 : 2}" @click="showgif('sailboat')">
       </div>
       <div class="dive">
-        <img src="../../assets/image/201908H5 In the sea_MT/GIF_PNG/png/dive_0000000000.png" v-if="dive&&mask" @click="showgif('dive')">
+        <img src="../../assets/image/201908H5 In the sea_MT/GIF_PNG/png/dive_0000000000.png" v-if="dive&&mask" @click="walkers && showgif('dive')">
         <img src="../../assets/image/201908H5 In the sea_MT/GIF_PNG/dive.gif" style="z-index: 100" v-if="!dive"
              @click="showgif('dive')">
       </div>
       <div class="divebutton">
-        <img src="../../assets/image/201908H5 In the sea_MT/Word/word_dive Comp 1_00000.png"
+        <img src="../../assets/image/201908H5 In the sea_MT/Word/word_dive Comp 1_00000.png" v-if="walkers"
              :style="{zIndex: !dive ? 100 : 2}" @click="showgif('dive')">
       </div>
       <div class="mask">
@@ -467,11 +467,11 @@
              @click="showgif('mask')">
       </div>
       <div class="maskbutton">
-        <img src="../../assets/image/201908H5 In the sea_MT/Word/word_mask Comp 1_00000.png"
+        <img src="../../assets/image/201908H5 In the sea_MT/Word/word_mask Comp 1_00000.png" v-if="walkers"
              :style="{zIndex: !mask ? 100 : 2}" @click="showgif('mask')">
       </div>
       <div class="flippers">
-        <img src="../../assets/image/201908H5 In the sea_MT/GIF_PNG/png/flippers_0000000000.png" v-if="flippers&&tank" @click="showgif('flippers')">
+        <img src="../../assets/image/201908H5 In the sea_MT/GIF_PNG/png/flippers_0000000000.png" v-if="flippers&&tank" @click="walkers && showgif('flippers')">
         <img src="../../assets/image/201908H5 In the sea_MT/GIF_PNG/flippers.gif" style="z-index: 100" v-if="!flippers"
              @click="showgif('flippers')">
       </div>
@@ -480,11 +480,11 @@
              @click="showgif('tank')">
       </div>
       <div class="flippersbutton">
-        <img src="../../assets/image/201908H5 In the sea_MT/Word/word_flippers Comp 1_00000.png"
+        <img src="../../assets/image/201908H5 In the sea_MT/Word/word_flippers Comp 1_00000.png" v-if="walkers"
              :style="{zIndex: !flippers ? 100 : 2}" @click="showgif('flippers')">
       </div>
       <div class="tankbutton">
-        <img src="../../assets/image/201908H5 In the sea_MT/Word/word_tank Comp 1_00000.png"
+        <img src="../../assets/image/201908H5 In the sea_MT/Word/word_tank Comp 1_00000.png" v-if="walkers"
              :style="{zIndex: !tank ? 100 : 2}" @click="showgif('tank')">
       </div>
       <div class="surf">
@@ -542,7 +542,7 @@
              :style="{zIndex: !acrobat ? 100 : 1}" @click="showgif('acrobat')">
       </div>
       <div class="cheer">
-        <img src="../../assets/image/201908H5 At the circus_MT/GIF_PNG/png/cheercut_0000000000.png" v-if="cheer" @click="showgif('cheer')">
+        <img src="../../assets/image/201908H5 At the circus_MT/GIF_PNG/png/cheercut_0000000000.png" v-if="cheer" @click="walkers && showgif('cheer')">
         <img src="../../assets/image/201908H5 At the circus_MT/GIF_PNG/cheercut.gif" style="z-index: 100" v-if="!cheer"
              @click="showgif('cheer')">
       </div>
@@ -606,16 +606,16 @@
              :style="{zIndex: !tent ? 100 : 2}" @click="showgif('tent')">
       </div>
       <div class="tightrope">
-        <img src="../../assets/image/201908H5 At the circus_MT/GIF_PNG/png/tightrope_0000000000.png" v-if="tightrope" @click="showgif('tightrope')">
+        <img src="../../assets/image/201908H5 At the circus_MT/GIF_PNG/png/tightrope_0000000000.png" v-if="tightrope" @click="walkers && showgif('tightrope')">
         <img src="../../assets/image/201908H5 At the circus_MT/GIF_PNG/tightrope.gif" style="z-index: 100" v-if="!tightrope"
              @click="showgif('tightrope')">
       </div>
       <div class="tightropebutton">
-        <img src="../../assets/image/201908H5 At the circus_MT/Word/word_tightrope Comp 1_00000.png"
+        <img src="../../assets/image/201908H5 At the circus_MT/Word/word_tightrope Comp 1_00000.png" v-if="walkers"
              :style="{zIndex: !tightrope ? 100 : 1}" @click="showgif('tightrope')">
       </div>
       <div class="trick">
-        <img src="../../assets/image/201908H5 At the circus_MT/GIF_PNG/png/trick_0000000000.png" v-if="trick&&magician" @click="showgif('trick')">
+        <img src="../../assets/image/201908H5 At the circus_MT/GIF_PNG/png/trick_0000000000.png" v-if="trick&&magician" @click="walkers && showgif('trick')">
         <img src="../../assets/image/201908H5 At the circus_MT/GIF_PNG/trick.gif" style="z-index: 100" v-if="!trick"
              @click="showgif('trick')">
         <img src="../../assets/image/201908H5 At the circus_MT/GIF_PNG/magician.gif" style="z-index: 100" v-if="!magician"
@@ -1030,6 +1030,8 @@ export default {
         this.show = false;
       } else {
         this.show = true;
+        const audio = document.getElementById('music');
+        audio.pause();
       }
 
       // 统计时间
@@ -1411,20 +1413,21 @@ export default {
       },
       //点击播放动画
       async showgif(name){
-        if (name===undefined){
+        if (name===undefined || this.word){
           this.zhezhao = !this.zhezhao;
           this.$data[this.word]=!this.$data[this.word];
+          this.word=null;
         }else {
           this.word=name;
           let audio = new Audio();
           this.$data[this.word]=!this.$data[this.word];
           this.zhezhao = !this.zhezhao;
           audio.src=this.$data.mp3[this.word];
-          await audio.play();
+          if(this.word){
+            await audio.play();
+            audio.volume=0.5;
+          }
         }
-      },
-      closeGif(){
-
       },
       bodyScroll(event) {
         event.preventDefault();
@@ -1453,12 +1456,6 @@ export default {
       //   }
       // },
       gomemu() {
-        const audio = document.getElementById('music');
-        if (localStorage.getItem('audiomusic') === "false") {
-
-        } else {
-          audio.play();
-        }
         // var endtimestamp = (new Date()).getTime();
         // this.$axios.post(this.timeurl, qs.stringify({
         //   id: localStorage.getItem('startTimeid'),
@@ -6154,7 +6151,7 @@ export default {
     left: 1%;
 
     img {
-      width: 90%;
+      width: 80%;
       top: 25%;
       left: 220%;
       position: absolute;
@@ -6185,7 +6182,7 @@ export default {
     left: 1%;
 
     img {
-      width: 90%;
+      width: 80%;
       top: 54%;
       left: 436%;
       position: absolute;

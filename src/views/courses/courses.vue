@@ -511,7 +511,6 @@
         }, 1000);
       },
       chartroom1(li) {
-        console.log(li);
         this.courseId=li.course_id;
         this.cources=li.name;
         this.chosegame=false;
@@ -633,7 +632,6 @@
     created() { //生命周期里接收参数
       this.pic=this.$axios.defaults.baseURL2;
       if(this.$route.query.levelsId){
-        console.log("cou"+this.$route.query);
         this.level= this.$route.query.level;
         this.levelsId= this.$route.query.levelsId;
         this.courseId= this.$route.query.courseId;

@@ -29,8 +29,8 @@ Vue.prototype.$axios = axios;
 // axios.defaults.baseURL = 'http://localhost:8080/monkeytownHK';
 axios.defaults.baseURL = 'http://107.150.121.34/monkeytownHK';
 axios.defaults.baseURL2 = 'http://107.150.121.34/monkeytownHK';
-// axios.defaults.baseURL = 'http://localhost:8080/monkeytownHK';
-// axios.defaults.baseURL2 = 'http://localhost:8080/monkeytownHK';
+ //axios.defaults.baseURL = 'http://localhost:8080/monkeytownHK';
+ //axios.defaults.baseURL2 = 'http://localhost:8080/monkeytownHK';
 // axios.defaults.baseURL3 = 'http://localhost:8080/monkeytownHK';
 localStorage.setItem('localurl',axios.defaults.baseURL);
 Vue.use(Bounce)
