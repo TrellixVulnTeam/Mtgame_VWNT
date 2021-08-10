@@ -46,6 +46,27 @@
 	-webkit-animation: cloudMass 30s linear 0s infinite normal;
 	-o-animation: cloudMass 30s linear 0s infinite normal;
 }
+
+.secret{
+  background-color: white;
+  width: 320px;
+  height: 400px;
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-75%);
+  border-radius: 15px;
+}
+.secret .title{
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.secret .text{
+  margin-left: 10px;
+  margin-right: 10px;
+}
 /*动画*/
 @keyframes cloudMass {
 	0%   {background-position: 0% 100%, center center;}

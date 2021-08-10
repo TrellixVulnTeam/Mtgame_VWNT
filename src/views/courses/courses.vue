@@ -227,12 +227,12 @@
                   <img src="../../assets/image/moon/myhome.png" v-if="li.name==='My Home'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">
                   <img src="../../assets/image/moon/ourworld.png" v-if="li.name==='Our World'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">
                   <img src="../../assets/image/moon/fairytales.png" v-if="li.name==='Fairy Tales'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">
-                  <img src="../../assets/image/moon/schooltime.png" v-if="li.name==='School Life'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">
                   <img src="../../assets/image/moon/animals.png" v-if="li.name==='Animals'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">
                   <img src="../../assets/image/moon/myfamily.png" v-if="li.name==='Family Time'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">
                   <img src="../../assets/image/moon/holidays.png" v-if="li.name==='Holidays'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">
                   <img src="../../assets/image/moon/Exploration.png" v-if="li.name==='Exploration'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">
                   <img src="../../assets/image/moon/Summer Fun.png" v-if="li.name==='Summer Fun'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">
+                  <img src="../../assets/image/moon/schooltime.png" v-if="li.name==='School Time'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">
                   <!--<img src="../../assets/image/comingsoon.png" v-show="!li.name=='My Body'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;z-index: 99;">-->
                   <img src="../../assets/image/comingsoon.png" v-show="!li.status"  style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;z-index: 99;">
                   <!--<h3><span>{{li.unit_name}}</span></h3>-->
@@ -298,13 +298,12 @@
             <img src="../../assets/image/moon/myhome1.png" v-if="this.unitname==='My Home'" class="imgpart">
             <img src="../../assets/image/moon/ourworld1.png" v-if="this.unitname==='Our World'" class="imgpart">
             <img src="../../assets/image/moon/fairytales1.png" v-if="this.unitname==='Fairy Tales'" class="imgpart">
-            <img src="../../assets/image/moon/schooltime1.png" v-if="this.unitname==='School Life'" class="imgpart">
             <img src="../../assets/image/moon/animals1.png" v-if="this.unitname==='Animals'" class="imgpart">
             <img src="../../assets/image/moon/myfamily1.png" v-if="this.unitname==='Family Time'" class="imgpart">
             <img src="../../assets/image/moon/holidays1.png" v-if="this.unitname==='Holidays'" class="imgpart">
             <img src="../../assets/image/moon/Exploration1.png" v-if="this.unitname==='Exploration'" class="imgpart">
             <img src="../../assets/image/moon/summerfun1.png" v-if="this.unitname==='Summer Fun'" class="imgpart">
-
+            <img src="../../assets/image/moon/schooltime1.png" v-if="this.unitname==='School Time'" class="imgpart">
           </button>
           <button class="animapng7" @click="tohome(2)">
             <img src="../../assets/image/moon/mealtime2.png" v-if="this.unitname==='MEAL TIME'"  class="imgpart">
@@ -327,13 +326,12 @@
             <img src="../../assets/image/moon/myhome2.png" v-if="this.unitname==='My Home'" class="imgpart">
             <img src="../../assets/image/moon/ourworld2.png" v-if="this.unitname==='Our World'" class="imgpart">
             <img src="../../assets/image/moon/fairytales2.png" v-if="this.unitname==='Fairy Tales'" class="imgpart">
-            <img src="../../assets/image/moon/schooltime2.png" v-if="this.unitname==='School Life'" class="imgpart">
             <img src="../../assets/image/moon/animals2.png" v-if="this.unitname==='Animals'" class="imgpart">
             <img src="../../assets/image/moon/myfamily2.png" v-if="this.unitname==='Family Time'" class="imgpart">
             <img src="../../assets/image/moon/holidays2.png" v-if="this.unitname==='Holidays'" class="imgpart">
             <img src="../../assets/image/moon/Exploration2.png" v-if="this.unitname==='Exploration'" class="imgpart">
             <img src="../../assets/image/moon/summerfun2.png" v-if="this.unitname==='Summer Fun'" class="imgpart">
-
+            <img src="../../assets/image/moon/schooltime2.png" v-if="this.unitname==='School Time'" class="imgpart">
           </button>
 
         </div>

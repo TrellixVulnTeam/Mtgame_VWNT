@@ -1303,7 +1303,7 @@
                                 this.lightstar="http://107.150.121.34/monkeytownHK/image/img/2-2star.png";
                               }else if(this.unit==='Summer Fun'){
                                 this.star="http://107.150.121.34/monkeytownHK/image/img/8-8start2.png";
-                                this.lightstar="http://107.150.121.34/monkeytownHK/image/img/8-8star.png";
+                                this.lightstar="http://107.150.121.34/monkeytownHK/image/img/8-8start.png";
                               }
                             }else{
                               this.bgimg[i].active=false;
@@ -1458,7 +1458,7 @@
               this.lightstar="http://107.150.121.34/monkeytownHK/image/img/6-star.png";
             }else if(this.unit==='Summer Fun'){
               this.star="http://107.150.121.34/monkeytownHK/image/img/8-8start2.png";
-              this.lightstar="http://107.150.121.34/monkeytownHK/image/img/8-8star.png";
+              this.lightstar="http://107.150.121.34/monkeytownHK/image/img/8-8start.png";
             }else if(this.unit==='School Life'){
               this.star="http://107.150.121.34/monkeytownHK/image/img/9-9star2.png";
               this.lightstar="http://107.150.121.34/monkeytownHK/image/img/9-9star.png";

@@ -634,6 +634,31 @@
              @click="showgif('crowd')">
       </div>
     </div>
+    <div v-else-if="this.unit === 'School Time' && this.part === 'part1'">
+      <img src="../../assets/image/201909H5 Classroom_MT/Walker_BG/bg_0.png"
+           style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;"/>
+      <div class="backpack">
+        <img src="../../assets/image/201909H5 Classroom_MT/GIF_PNG/backpack_00.png" v-if="backpack" @click="showgif('backpack')">
+        <img src="../../assets/image/201909H5 Classroom_MT/GIF/backpack.gif" style="z-index: 100" v-if="!backpack"
+             @click="showgif('backpack')">
+      </div>
+      <div class="stillobj_0">
+        <img src="../../assets/image/201909H5 Classroom_MT/Still object/stillobj_0.png">
+      </div>
+      <div class="stillobj_boy_0">
+        <img src="../../assets/image/201909H5 Classroom_MT/Still object/stillobj_boy_0.png">
+      </div>
+      <div class="chair1">
+        <img src="../../assets/image/201909H5 Classroom_MT/GIF_PNG/chair_part1_00.png">
+      </div>
+      <div class="chair2">
+        <img src="../../assets/image/201909H5 Classroom_MT/GIF_PNG/chair_part2_00.png">
+      </div>
+    </div>
+    <div v-else-if="this.unit === 'School Time' && this.part === 'part2'">
+      <img src="../../assets/image/201909H5 SchoolTime_MT/Walker_BG/bg_0.png"
+           style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;"/>
+    </div>
     <div v-else>
     <img src="../../assets/image/H5 Thing/Walker_BG/bg_0.png"
          style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;">
@@ -856,6 +881,21 @@ export default {
           wind:require('../../assets/Flashcard Audio/august/wind.mp3'),
         },
         cardType:'default',
+        backpack:true,
+        blackboard:true,
+        book:true,
+        chair1:true,
+        chair2:true,
+        clock:true,
+        crayons:true,
+        desk2:true,
+        eraser:true,
+        listen:true,
+        pencil:true,
+        read:true,
+        sit:true,
+        teacher:true,
+        write:true,
         elf:true,
         fairy:true,
         forest:true,
@@ -1425,7 +1465,6 @@ export default {
           audio.src=this.$data.mp3[this.word];
           if(this.word){
             await audio.play();
-            audio.volume=0.5;
           }
         }
       },
@@ -1552,6 +1591,34 @@ export default {
     z-index: 201;
   }
 
+  .stillobj_0 img[data-v-580a76d2] {
+    width: 30%;
+    left: 70%;
+    top: 62%;
+    position: absolute;
+  }
+
+  .chair1 img[data-v-580a76d2] {
+    width: 30%;
+    left: 70%;
+    top: 62%;
+    position: absolute;
+  }
+
+  .chair2 img[data-v-580a76d2] {
+    width: 30%;
+    left: 70%;
+    top: 62%;
+    position: absolute;
+  }
+
+  .desk1 img{
+    width: 30%;
+    left: 70%;
+    top: 62%;
+    position: absolute;
+  }
+  
   .backbutton {
     // display: block;
     z-index: 101;
@@ -1568,7 +1635,6 @@ export default {
     right: 15px;
     top: 15px;
   }
-
 
   .contain {
     width: 100%;
@@ -2185,7 +2251,7 @@ export default {
       top: 175%;
       left: 115%;
       position: absolute;
-      z-index: 2;
+      z-index: 3;
     }
   }
 

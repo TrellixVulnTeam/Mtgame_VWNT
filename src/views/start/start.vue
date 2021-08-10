@@ -1,4 +1,4 @@
-<template>
+<template xmlns="http://www.w3.org/1999/html">
 	<div class="startpage">
 	<div class="start01">
 		<div class="container">
@@ -19,6 +19,11 @@
 						<div class="m_btn_start">
 							<img src="../../assets/image/start-01.png" @click="alreadylogin" />
 						</div>
+            <div class="secret" v-if="secret">
+              <h3 class="title">服务协议和隐私政策</h3>
+              <h4 class="text">请你务必审慎阅读、充分理解”服务协议“和”隐私政策”各条款，我们需要你的手机信息。</h4>
+              <h4 class="text">你可阅读《服务协议》和《隐私协议》了解详细信息。如你同意，请点击”同意“开始接受我们的服务</h4>
+            </div>
 					</div>
 				</a>
 			</div>
@@ -39,6 +44,7 @@
 		},
 		data() {
 			return {
+        secret:flase,
 				username:'',
 				password:'',
 				guardianId:'',
@@ -55,7 +61,7 @@
 		methods: {
 			alreadylogin() {
 				var audio = document.getElementById('music');
-				if(localStorage.getItem('audiomusic')=="false"){
+				if(localStorage.getItem('audiomusic')==="false"){
 				    audio.pause();
 				}else{
 					audio.play();
