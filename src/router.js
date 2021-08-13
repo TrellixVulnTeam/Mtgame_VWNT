@@ -62,6 +62,7 @@ import Flashcard from "./views/courses/flashcard.vue";
 // import Learn from "./views/learn/Learn.vue";
 // import Game from "./views/game/Game.vue";
 import Start from "./views/start/start.vue";
+import PrivacyPolicy from "./views/PrivacyPolicy.vue"
 import Info from "./views/info/info.vue";
 import Chosegame from "./views/chosegame/chosegame.vue";
 import Courses from "./views/courses/courses.vue";
@@ -140,6 +141,11 @@ export default new Router({
 			name: "about",
 			component: About
 		},
+    {
+      path: "/PrivacyPolicy",
+      name: "PrivacyPolicy",
+      component:PrivacyPolicy,
+    },
     {
     	path: "/demo",
     	name: "demo",

@@ -1087,7 +1087,7 @@
   }
 
   .namesize {
-    font-size: 14px !important;
+    font-size: 23px !important;
   }
 
   .leftbox1 {

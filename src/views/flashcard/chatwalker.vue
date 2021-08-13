@@ -642,6 +642,10 @@
         <img src="../../assets/image/201909H5 Classroom_MT/GIF/backpack.gif" style="z-index: 100" v-if="!backpack"
              @click="showgif('backpack')">
       </div>
+      <div class="backpackbutton">
+        <img src="../../assets/image/201909H5 Classroom_MT/Word/word_backpack Comp 1_0.png"
+             :style="{zIndex: !backpack ? 100 : 1}" @click="showgif('backpack')">
+      </div>
       <div class="stillobj_0">
         <img src="../../assets/image/201909H5 Classroom_MT/Still object/stillobj_0.png">
       </div>
@@ -649,15 +653,194 @@
         <img src="../../assets/image/201909H5 Classroom_MT/Still object/stillobj_boy_0.png">
       </div>
       <div class="chair1">
-        <img src="../../assets/image/201909H5 Classroom_MT/GIF_PNG/chair_part1_00.png">
+        <img src="../../assets/image/201909H5 Classroom_MT/GIF_PNG/chair_part1_00.png" v-if="chair" @click="walkers && showgif('chair')">
+        <img src="../../assets/image/201909H5 Classroom_MT/GIF/chair_part1.gif" style="z-index: 100" v-if="!chair"
+             @click="showgif('chair')">
       </div>
       <div class="chair2">
-        <img src="../../assets/image/201909H5 Classroom_MT/GIF_PNG/chair_part2_00.png">
+        <img src="../../assets/image/201909H5 Classroom_MT/GIF_PNG/chair_part2_00.png" v-if="chair" @click="walkers && showgif('chair')">
+        <img src="../../assets/image/201909H5 Classroom_MT/GIF/chair_part2.gif" style="z-index: 100" v-if="!chair"
+             @click="showgif('chair')">
+      </div>
+      <div class="chairbutton">
+        <img src="../../assets/image/201909H5 Classroom_MT/Word/word_chair_0.png" v-if="!walkers"
+             :style="{zIndex: !chair ? 100 : 1}" @click="showgif('chair')">
+      </div>
+      <div class="desk2">
+        <img src="../../assets/image/201909H5 Classroom_MT/GIF_PNG/desk_00.png" v-if="desk2" @click="showgif('desk2')">
+        <img src="../../assets/image/201909H5 Classroom_MT/GIF/desk.gif" style="z-index: 100" v-if="!desk2"
+             @click="showgif('desk2')">
+      </div>
+      <div class="crayons">
+        <img src="../../assets/image/201909H5 Classroom_MT/GIF_PNG/crayons_00.png" v-if="crayons" @click="walkers && showgif('crayons')">
+        <img src="../../assets/image/201909H5 Classroom_MT/GIF/crayons.gif" style="z-index: 100" v-if="!crayons"
+             @click="showgif('crayons')">
+      </div>
+      <div class="crayonsbutton">
+        <img src="../../assets/image/201909H5 Classroom_MT/Word/word_crayons Comp 1_0.png" v-if="walkers"
+             :style="{zIndex: !crayons ? 100 : 1}" @click="showgif('crayons')">
+      </div>
+      <div class="book">
+        <img src="../../assets/image/201909H5 Classroom_MT/GIF_PNG/book Comp 1_00.png" v-if="book" @click="showgif('book')">
+        <img src="../../assets/image/201909H5 Classroom_MT/GIF/book.gif" style="z-index: 100" v-if="!book"
+             @click="showgif('book')">
+      </div>
+      <div class="bookbutton">
+        <img src="../../assets/image/201909H5 Classroom_MT/Word/word_book Comp 1_0.png"
+             :style="{zIndex: !book ? 100 : 2}" @click="showgif('book')">
+      </div>
+      <div class="listen">
+        <img src="../../assets/image/201909H5 Classroom_MT/GIF_PNG/listen Comp 1_00.png" v-if="listen" @click="walkers && showgif('listen')">
+        <img src="../../assets/image/201909H5 Classroom_MT/GIF/listen.gif" style="z-index: 100" v-if="!listen"
+             @click="showgif('listen')">
+      </div>
+      <div class="listenbutton">
+        <img src="../../assets/image/201909H5 Classroom_MT/Word/word_listen Comp 1_0.png" v-if="walkers"
+             :style="{zIndex: !listen ? 100 : 1}" @click="showgif('listen')">
+      </div>
+      <div class="eraser">
+        <img src="../../assets/image/201909H5 Classroom_MT/GIF_PNG/eraser_00.png" v-if="eraser" @click="showgif('eraser')">
+        <img src="../../assets/image/201909H5 Classroom_MT/GIF/eraser.gif" style="z-index: 100" v-if="!eraser"
+             @click="showgif('eraser')">
+      </div>
+      <div class="eraserbutton">
+        <img src="../../assets/image/201909H5 Classroom_MT/Word/word_eraser Comp 1_0.png"
+             :style="{zIndex: !eraser ? 100 : 1}" @click="showgif('eraser')">
+      </div>
+      <div class="pencil">
+        <img src="../../assets/image/201909H5 Classroom_MT/GIF_PNG/pencil Comp 1_00.png" v-if="pencil" @click="showgif('pencil')">
+        <img src="../../assets/image/201909H5 Classroom_MT/GIF/pencil.gif" style="z-index: 100" v-if="!pencil"
+             @click="showgif('pencil')">
+      </div>
+      <div class="pencilbutton">
+        <img src="../../assets/image/201909H5 Classroom_MT/Word/word_pencil Comp 1_0.png"
+             :style="{zIndex: !pencil ? 100 : 1}" @click="showgif('pencil')">
+      </div>
+      <div class="read">
+        <img src="../../assets/image/201909H5 Classroom_MT/GIF_PNG/read_00.png" v-if="read&&sit" @click="showgif('read')">
+        <img src="../../assets/image/201909H5 Classroom_MT/GIF/read.gif" style="z-index: 100" v-if="!read&&walkers"
+             @click="showgif('read')">
+        <img src="../../assets/image/201909H5 Classroom_MT/GIF/sit.gif" style="z-index: 100" v-if="!sit || !walkers&&!read"
+             @click="showgif('sit')">
+      </div>
+      <div class="readbutton">
+        <img src="../../assets/image/201909H5 Classroom_MT/Word/word_read Comp 1_0.png" v-if="walkers"
+             :style="{zIndex: !read ? 100 : 1}" @click="showgif('read')">
+      </div>
+      <div class="sitbutton">
+        <img src="../../assets/image/201909H5 Classroom_MT/Word/word_sit_0.png" v-if="!walkers"
+             :style="{zIndex: !sit ? 100 : 1}" @click="showgif('sit')">
+      </div>
+      <div class="clock">
+        <img src="../../assets/image/201909H5 Classroom_MT/GIF_PNG/clock_00.png" v-if="clock" @click="walkers && showgif('clock')">
+        <img src="../../assets/image/201909H5 Classroom_MT/GIF/clock.gif" style="z-index: 100" v-if="!clock"
+             @click="showgif('clock')">
+      </div>
+      <div class="clockbutton">
+        <img src="../../assets/image/201909H5 Classroom_MT/Word/word_clock Comp 1_0.png" v-if="walkers"
+             :style="{zIndex: !clock ? 100 : 1}" @click="showgif('clock')">
+      </div>
+      <div class="write">
+        <img src="../../assets/image/201909H5 Classroom_MT/GIF_PNG/write_00.png" v-if="write&&teacher" @click="showgif('write')">
+        <img src="../../assets/image/201909H5 Classroom_MT/GIF/write.gif" style="z-index: 100" v-if="!write"
+             @click="showgif('write')">
+        <img src="../../assets/image/201909H5 Classroom_MT/GIF/teacher.gif" style="z-index: 100" v-if="!teacher"
+             @click="showgif('teacher')">
+      </div>
+      <div class="writebutton">
+        <img src="../../assets/image/201909H5 Classroom_MT/Word/word_write Comp 1_0.png"
+             :style="{zIndex: !write ? 100 : 1}" @click="showgif('write')">
+      </div>
+      <div class="teacherbutton">
+        <img src="../../assets/image/201909H5 Classroom_MT/Word/word_teacher Comp 1_0.png"
+             :style="{zIndex: !teacher ? 100 : 1}" @click="showgif('teacher')">
+      </div>
+      <div class="desk2button">
+        <img src="../../assets/image/201909H5 Classroom_MT/Word/word_desk Comp 1_0.png"
+             :style="{zIndex: !desk2 ? 100 : 1}" @click="showgif('desk2')">
+      </div>
+      <div class="board">
+        <img src="../../assets/image/201909H5 Classroom_MT/GIF_PNG/blackboard_00.png" v-if="blackboard" @click="walkers && showgif('blackboard')">
+        <img src="../../assets/image/201909H5 Classroom_MT/GIF/blackboard.gif" style="z-index: 100" v-if="!blackboard"
+             @click="showgif('board')">
+      </div>
+      <div class="blackboardbutton">
+        <img src="../../assets/image/201909H5 Classroom_MT/Word/word_board Comp 1_0.png" v-if="walkers"
+             :style="{zIndex: !blackboard ? 100 : 1}" @click="showgif('blackboard')">
       </div>
     </div>
     <div v-else-if="this.unit === 'School Time' && this.part === 'part2'">
       <img src="../../assets/image/201909H5 SchoolTime_MT/Walker_BG/bg_0.png"
            style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;"/>
+      <div class="ball">
+        <img src="../../assets/image/201909H5 SchoolTime_MT/GIF_PNG/ball Comp 1_00.png" v-if="ball" @click="showgif('ball')">
+        <img src="../../assets/image/201909H5 SchoolTime_MT/GIF/ball.gif" style="z-index: 100" v-if="!ball"
+             @click="showgif('ball')">
+      </div>
+      <div class="bell">
+        <img src="../../assets/image/201909H5 SchoolTime_MT/GIF_PNG/bell_00.png" v-if="bell" @click="showgif('bell')">
+        <img src="../../assets/image/201909H5 SchoolTime_MT/GIF/bell.gif" style="z-index: 100" v-if="!bell"
+             @click="showgif('bell')">
+      </div>
+      <div class="climb">
+        <img src="../../assets/image/201909H5 SchoolTime_MT/GIF_PNG/climb Comp 1_00.png" v-if="climb" @click="showgif('climb')">
+        <img src="../../assets/image/201909H5 SchoolTime_MT/GIF/climb.gif" style="z-index: 100" v-if="!climb"
+             @click="showgif('climb')">
+      </div>
+      <div class="kick">
+        <img src="../../assets/image/201909H5 SchoolTime_MT/GIF_PNG/kick Comp 1_00.png" v-if="kick" @click="showgif('kick')">
+        <img src="../../assets/image/201909H5 SchoolTime_MT/GIF/kick.gif" style="z-index: 100" v-if="!kick"
+             @click="showgif('kick')">
+      </div>
+      <div class="lineup">
+        <img src="../../assets/image/201909H5 SchoolTime_MT/GIF_PNG/line up Comp 1_00.png" v-if="lineup" @click="showgif('lineup')">
+        <img src="../../assets/image/201909H5 SchoolTime_MT/GIF/line-up.gif" style="z-index: 100" v-if="!lineup"
+             @click="showgif('lineup')">
+      </div>
+      <div class="playground">
+        <img src="../../assets/image/201909H5 SchoolTime_MT/GIF_PNG/playground_00.png" v-if="playground" @click="showgif('playground')">
+        <img src="../../assets/image/201909H5 SchoolTime_MT/GIF/playground.gif" style="z-index: 100" v-if="!playground"
+             @click="showgif('playground')">
+      </div>
+      <div class="ring">
+        <img src="../../assets/image/201909H5 SchoolTime_MT/GIF_PNG/ring_00.png" v-if="ring" @click="showgif('ring')">
+        <img src="../../assets/image/201909H5 SchoolTime_MT/GIF/ring.gif" style="z-index: 100" v-if="!ring"
+             @click="showgif('ring')">
+      </div>
+      <div class="run">
+        <img src="../../assets/image/201909H5 SchoolTime_MT/GIF_PNG/run Comp 1_00.png" v-if="run" @click="showgif('run')">
+        <img src="../../assets/image/201909H5 SchoolTime_MT/GIF/run.gif" style="z-index: 100" v-if="!run"
+             @click="showgif('run')">
+      </div>
+      <div class="seesaw">
+        <img src="../../assets/image/201909H5 SchoolTime_MT/GIF_PNG/seesaw Comp 1_00.png" v-if="seesaw" @click="showgif('seesaw')">
+        <img src="../../assets/image/201909H5 SchoolTime_MT/GIF/seesaw.gif" style="z-index: 100" v-if="!seesaw"
+             @click="showgif('seesaw')">
+      </div>
+      <div class="slide">
+        <img src="../../assets/image/201909H5 SchoolTime_MT/GIF_PNG/slide Comp 1_00.png" v-if="slide" @click="showgif('slide')">
+        <img src="../../assets/image/201909H5 SchoolTime_MT/GIF/slide.gif" style="z-index: 100" v-if="!slide"
+             @click="showgif('slide')">
+      </div>
+      <div class="snack">
+        <img src="../../assets/image/201909H5 SchoolTime_MT/GIF_PNG/snack_00.png" v-if="snack" @click="showgif('snack')">
+        <img src="../../assets/image/201909H5 SchoolTime_MT/GIF/snack.gif" style="z-index: 100" v-if="!snack"
+             @click="showgif('snack')">
+      </div>
+      <div class="swing">
+        <img src="../../assets/image/201909H5 SchoolTime_MT/GIF_PNG/swing Comp 1_00.png" v-if="swing" @click="showgif('swing')">
+        <img src="../../assets/image/201909H5 SchoolTime_MT/GIF/swing.gif" style="z-index: 100" v-if="!swing"
+             @click="showgif('swing')">
+      </div>
+      <div class="toys">
+        <img src="../../assets/image/201909H5 SchoolTime_MT/GIF_PNG/toys_00.png" v-if="toys" @click="showgif('toys')">
+        <img src="../../assets/image/201909H5 SchoolTime_MT/GIF/toys.gif" style="z-index: 100" v-if="!toys"
+             @click="showgif('toys')">
+      </div>
+      <div class="backpackbutton">
+        <img src="../../assets/image/201909H5 Classroom_MT/Word/word_backpack Comp 1_0.png"
+             :style="{zIndex: !backpack ? 100 : 1}" @click="showgif('backpack')">
+      </div>
     </div>
     <div v-else>
     <img src="../../assets/image/H5 Thing/Walker_BG/bg_0.png"
@@ -806,6 +989,7 @@ export default {
       return {
         word:'',
         mp3:{
+          //JULY
           snow:require('../../assets/Flashcard Audio/July/snow.mp3'),
           igloo:require('../../assets/Flashcard Audio/July/igloo.mp3'),
           cold:require('../../assets/Flashcard Audio/July/cold.mp3'),
@@ -830,6 +1014,7 @@ export default {
           sandstorm:require('../../assets/Flashcard Audio/July/sandstorm.mp3'),
           thirsty:require('../../assets/Flashcard Audio/July/thirsty.mp3'),
           water:require('../../assets/Flashcard Audio/July/water.mp3'),
+          //JUNE
           castle:require('../../assets/Flashcard Audio/June/Castle.mp3'),
           dragon:require('../../assets/Flashcard Audio/June/dragon.mp3'),
           horse:require('../../assets/Flashcard Audio/June/Horse.mp3'),
@@ -854,7 +1039,7 @@ export default {
           wing:require('../../assets/Flashcard Audio/June/Wings.mp3'),
           witch:require('../../assets/Flashcard Audio/June/Witch.mp3'),
           wizard:require('../../assets/Flashcard Audio/June/Wizard.mp3'),
-
+          //AUGUST
           acrobat:require('../../assets/Flashcard Audio/august/Acrobat.mp3'),
           blow:require('../../assets/Flashcard Audio/august/blow.mp3'),
           cheer:require('../../assets/Flashcard Audio/august/cheer.mp3'),
@@ -870,7 +1055,7 @@ export default {
           sail:require('../../assets/Flashcard Audio/august/sail.mp3'),
           sailboat:require('../../assets/Flashcard Audio/august/sailboat.mp3'),
           surf:require('../../assets/Flashcard Audio/august/Surf.mp3'),
-          surfboard:require('../../assets/Flashcard Audio/august/sailboat.mp3'),
+          surfboard:require('../../assets/Flashcard Audio/august/surfboard.mp3'),
           tank:require('../../assets/Flashcard Audio/august/Tank.mp3'),
           tent:require('../../assets/Flashcard Audio/august/tent.mp3'),
           tightrope:require('../../assets/Flashcard Audio/august/tightrope.mp3'),
@@ -879,13 +1064,27 @@ export default {
           watch:require('../../assets/Flashcard Audio/august/watch.mp3'),
           waves:require('../../assets/Flashcard Audio/august/waves.mp3'),
           wind:require('../../assets/Flashcard Audio/august/wind.mp3'),
+
         },
         cardType:'default',
+        ball:true,
+        bell:true,
+        climb:true,
+        junglegym:true,
+        kick:true,
+        lineup:true,
+        playground:true,
+        ring:true,
+        run:true,
+        seesaw:true,
+        slide:true,
+        snack:true,
+        swing:true,
+        toys:true,
         backpack:true,
         blackboard:true,
         book:true,
-        chair1:true,
-        chair2:true,
+        chair:true,
         clock:true,
         crayons:true,
         desk2:true,
@@ -1591,34 +1790,218 @@ export default {
     z-index: 201;
   }
 
-  .stillobj_0 img[data-v-580a76d2] {
+  .stillobj_0 img {
     width: 30%;
     left: 70%;
     top: 62%;
     position: absolute;
   }
 
-  .chair1 img[data-v-580a76d2] {
-    width: 30%;
-    left: 70%;
-    top: 62%;
+  .stillobj_boy_0 img {
+    width: 20%;
+    left: 57%;
+    top: 58%;
     position: absolute;
   }
 
-  .chair2 img[data-v-580a76d2] {
-    width: 30%;
-    left: 70%;
-    top: 62%;
+  .chair1 img {
+    width: 20%;
+    left: 58%;
+    top: 59%;
     position: absolute;
   }
 
-  .desk1 img{
-    width: 30%;
-    left: 70%;
-    top: 62%;
+  .chair2 img {
+    width: 20%;
+    left: 58%;
+    top: 58%;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .desk2 img {
+    width: 26.5%;
+    left: 63.8%;
+    height: 47%;
+    top: 55%;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .crayons img {
+    width: 5%;
+    left: 80%;
+    top: 61%;
     position: absolute;
   }
-  
+
+  .crayonsbutton img {
+    width: 8%;
+    top: 72%;
+    left: 71%;
+    position: absolute;
+  }
+
+  .sitbutton img {
+    width: 6%;
+    top: 44%;
+    left: 10%;
+    position: absolute;
+  }
+
+  .chairbutton img {
+    width: 8%;
+    top: 83%;
+    left: 48%;
+    position: absolute;
+  }
+
+  .book img {
+    width: 12%;
+    left: 75%;
+    top: 39%;
+    position: absolute;
+    z-index: 2;
+  }
+
+  .bookbutton img {
+    width: 7%;
+    top: 49%;
+    left: 71%;
+    position: absolute;
+  }
+
+  .eraser img {
+    width: 4%;
+    left: 55%;
+    top: 49%;
+    position: absolute;
+  }
+
+  .eraserbutton img {
+    width: 8%;
+    top: 44%;
+    left: 53%;
+    position: absolute;
+  }
+
+  .pencil img {
+    width: 7%;
+    left: 36%;
+    height: 9%;
+    top: 47%;
+    position: absolute;
+  }
+
+  .pencilbutton img {
+    width: 8%;
+    top: 42%;
+    left: 36%;
+    position: absolute;
+  }
+
+  .read img {
+    width: 19%;
+    left: 15%;
+    top: 33%;
+    position: absolute;
+  }
+
+  .readbutton img {
+    width: 8%;
+    top: 42%;
+    left: 9%;
+    position: absolute;
+  }
+
+  .clock img {
+    width: 7%;
+    left: 29%;
+    top: 6%;
+    position: absolute;
+  }
+
+  .clockbutton img {
+    width: 8%;
+    top: 13%;
+    left: 19%;
+    position: absolute;
+  }
+
+  .listen img {
+    width: 17%;
+    left: 36%;
+    top: 44%;
+    position: absolute;
+  }
+
+  .listenbutton img {
+    width: 8%;
+    top: 71%;
+    left: 47%;
+    position: absolute;
+  }
+
+  .backpack img {
+    width: 7%;
+    left: 36%;
+    top: 58%;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .backpackbutton img {
+    width: 10%;
+    top: 82%;
+    left: 32%;
+    position: absolute;
+  }
+
+  .write img {
+    width: 31%;
+    left: 63%;
+    height: 54%;
+    top: 7%;
+    transform: rotate(1deg);
+    position: absolute;
+    z-index: 1;
+  }
+
+  .writebutton img {
+    width: 7%;
+    top: 2%;
+    left: 84%;
+    position: absolute;
+  }
+
+  .desk2button img {
+    width: 7%;
+    top: 53%;
+    left: 84%;
+    position: absolute;
+  }
+
+  .teacherbutton img {
+    width: 8%;
+    top: 12%;
+    left: 55%;
+    position: absolute;
+  }
+
+  .board img {
+    width: 49%;
+    left: 53%;
+    top: -4%;
+    position: absolute;
+  }
+
+  .blackboardbutton img {
+    width: 8%;
+    top: 29%;
+    left: 81%;
+    position: absolute;
+  }
+
   .backbutton {
     // display: block;
     z-index: 101;
@@ -3527,6 +3910,97 @@ export default {
   /*}*/
 
   @media screen and (min-width: 1024px) and (max-width: 1600px) {
+    .write img {
+      width: 32%;
+      left: 63%;
+      height: 54%;
+      top: 5%;
+    }
+    .board img {
+      width: 50%;
+      height: 49%;
+      left: 52%;
+      top: -4%;
+    }
+    .chair2 img {
+      width: 22%;
+      left: 57%;
+      top: 61%;
+      position: absolute;
+      z-index: -1;
+    }
+    .chair1 img {
+      width: 21%;
+      left: 58%;
+      top: 63%;
+    }
+    .crayonsbutton img {
+      width: 9%;
+      top: 72%;
+      left: 71%;
+      position: absolute;
+    }
+    .chair1 img {
+      width: 21%;
+      left: 58%;
+      top: 63%;
+      position: absolute;
+    }
+    .stillobj_boy_0 img {
+      width: 21%;
+      top: 62%;
+    }
+    .crayons img {
+      width: 6%;
+      left: 76%;
+      top: 65%;
+      position: absolute;
+    }
+    .desk2 img {
+      width: 32%;
+      left: 57%;
+      height: 41%;
+      top: 60%;
+      z-index: -2;
+    }
+
+    .stillobj_0 img {
+      width: 36%;
+      left: 64%;
+      top: 66%;
+    }
+    .readbutton img {
+      top: 44%;
+      left: 11%;
+    }
+    .read img {
+      width: 20%;
+      left: 17%;
+      top: 38%;
+      position: absolute;
+    }
+    .book img {
+      width: 16%;
+      left: 74%;
+      top: 39%;
+    }
+    .clock img {
+      width: 9%;
+      left: 29%;
+      top: 7%;
+    }
+    .eraser img {
+      top: 50%;
+    }
+    .backpack img {
+      width: 8%;
+      left: 36%;
+      top: 54%;
+    }
+    .backpackbutton img {
+      width: 11%;
+      top: 75%;
+    }
     .wingbutton img {
       width: 10%;
       top: 43%;
@@ -4623,7 +5097,6 @@ export default {
     }
 
   }
-
   /*@media screen and (min-width: 1355px)and (max-width: 1600px){*/
 
   /*}*/
@@ -4631,6 +5104,52 @@ export default {
 
   /*}*/
   @media screen and (min-width: 812px) and (max-width: 1023px) {
+    .desk2 img {
+      left: 63.8%;
+      height: 52%;
+    }
+    .chair2 img {
+      width: 20%;
+      left: 60%;
+      top: 52%;
+      position: absolute;
+      z-index: -1;
+    }
+    .chair1 img {
+      left: 60%;
+      top: 53%;
+    }
+    .stillobj_boy_0 img {
+      top: 53%;
+      left: 59%;
+    }
+    .write img {
+      top: 6%;
+    }
+    .book img {
+      left: 76%;
+      top: 38%;
+    }
+    .board img {
+      width: 48%;
+      left: 54%;
+      top: -4%;
+      height: 50%;
+    }
+    .crayons img {
+      width: 6%;
+      left: 79%;
+      top: 59%;
+    }
+    .backpack img {
+      top: 59%;
+    }
+    .listen img {
+      top: 42%;
+    }
+    .read img {
+      top: 25%;
+    }
     .wavebutton img {
       top: 58%;
     }
@@ -6557,6 +7076,52 @@ export default {
   }
   //手机
   @media only screen and (min-device-width: 812px) and (max-device-width: 1023px) and (-webkit-device-pixel-ratio: 3){
+    .desk2 img {
+      left: 63.8%;
+      height: 52%;
+    }
+    .chair2 img {
+      width: 20%;
+      left: 60%;
+      top: 52%;
+      position: absolute;
+      z-index: -1;
+    }
+    .chair1 img {
+      left: 60%;
+      top: 53%;
+    }
+    .stillobj_boy_0 img {
+      top: 53%;
+      left: 59%;
+    }
+    .write img {
+      top: 6%;
+    }
+    .book img {
+      left: 76%;
+      top: 38%;
+    }
+    .board img {
+      width: 48%;
+      left: 54%;
+      top: -4%;
+      height: 50%;
+    }
+    .crayons img {
+      width: 6%;
+      left: 79%;
+      top: 59%;
+    }
+    .backpack img {
+      top: 59%;
+    }
+    .listen img {
+      top: 42%;
+    }
+    .read img {
+      top: 25%;
+    }
     .wavebutton img {
       top: 58%;
     }
@@ -7725,6 +8290,97 @@ export default {
   }
   //平板
   @media only screen and (min-device-width: 1024px) and (max-device-width: 1600px) and (-webkit-device-pixel-ratio: 3){
+    .write img {
+      width: 32%;
+      left: 63%;
+      height: 54%;
+      top: 5%;
+    }
+    .board img {
+      width: 50%;
+      height: 49%;
+      left: 52%;
+      top: -4%;
+    }
+    .chair2 img {
+      width: 22%;
+      left: 57%;
+      top: 61%;
+      position: absolute;
+      z-index: -1;
+    }
+    .chair1 img {
+      width: 21%;
+      left: 58%;
+      top: 63%;
+    }
+    .crayonsbutton img {
+      width: 9%;
+      top: 72%;
+      left: 71%;
+      position: absolute;
+    }
+    .chair1 img {
+      width: 21%;
+      left: 58%;
+      top: 63%;
+      position: absolute;
+    }
+    .stillobj_boy_0 img {
+      width: 21%;
+      top: 62%;
+    }
+    .crayons img {
+      width: 6%;
+      left: 76%;
+      top: 65%;
+      position: absolute;
+    }
+    .desk2 img {
+      width: 32%;
+      left: 57%;
+      height: 41%;
+      top: 60%;
+      z-index: -2;
+    }
+
+    .stillobj_0 img {
+      width: 36%;
+      left: 64%;
+      top: 66%;
+    }
+    .readbutton img {
+      top: 44%;
+      left: 11%;
+    }
+    .read img {
+      width: 20%;
+      left: 17%;
+      top: 38%;
+      position: absolute;
+    }
+    .book img {
+      width: 16%;
+      left: 74%;
+      top: 39%;
+    }
+    .clock img {
+      width: 9%;
+      left: 29%;
+      top: 7%;
+    }
+    .eraser img {
+      top: 50%;
+    }
+    .backpack img {
+      width: 8%;
+      left: 36%;
+      top: 54%;
+    }
+    .backpackbutton img {
+      width: 11%;
+      top: 75%;
+    }
     .wingbutton img {
       width: 10%;
       top: 43%;

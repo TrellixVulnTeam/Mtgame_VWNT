@@ -220,62 +220,62 @@
             id:1,
             cardName:'cactus',
             audio:require('../../assets/Flashcard Audio/July/cactus.mp3'),
-            img:require('../../assets/image/desert/cactus_flashcard-01.png')
+            img:require('../../assets/image/desert/cactus.png')
           },{
             id:2,
             cardName:'camel',
             audio:require('../../assets/Flashcard Audio/July/Camel.mp3'),
-            img:require('../../assets/image/desert/camel_flashcard-01.png')
+            img:require('../../assets/image/desert/camel.png')
           },{
             id:3,
             cardName:'dunes',
             audio:require('../../assets/Flashcard Audio/July/dunes.mp3'),
-            img:require('../../assets/image/desert/dunes_flashcard-01.png')
+            img:require('../../assets/image/desert/dunes.png')
           },{
             id:4,
             cardName:'hot',
             audio:require('../../assets/Flashcard Audio/July/Hot.mp3'),
-            img:require('../../assets/image/desert/hot_flashcard-01.png')
+            img:require('../../assets/image/desert/hot.png')
           },{
             id:5,
             cardName:'lizard',
             audio:require('../../assets/Flashcard Audio/July/lizard.mp3'),
-            img:require('../../assets/image/desert/lizard_flashcard-01.png')
+            img:require('../../assets/image/desert/lizard.png')
           },{
             id:6,
             cardName:'map',
             audio:require('../../assets/Flashcard Audio/July/Map.mp3'),
-            img:require('../../assets/image/desert/map_flashcard-01.png')
+            img:require('../../assets/image/desert/map.png')
           },{
             id:7,
             cardName:'sand',
             audio:require('../../assets/Flashcard Audio/July/Sand.mp3'),
-            img:require('../../assets/image/desert/sand_flashcard-01.png')
+            img:require('../../assets/image/desert/sand.png')
           },{
             id:8,
             cardName:'water',
             audio:require('../../assets/Flashcard Audio/July/water.mp3'),
-            img:require('../../assets/image/desert/water_flashcard-01.png')
+            img:require('../../assets/image/desert/water.png')
           },{
             id:9,
             cardName:'compass',
             audio:require('../../assets/Flashcard Audio/July/compass.mp3'),
-            img:require('../../assets/image/desert/compass_flashcard-01.png')
+            img:require('../../assets/image/desert/compass.png')
           },{
             id:10,
             cardName:'lost',
             audio:require('../../assets/Flashcard Audio/July/lost.mp3'),
-            img:require('../../assets/image/desert/lost_flashcard-01.png')
+            img:require('../../assets/image/desert/lost.png')
           },{
             id:11,
             cardName:'sandstorm',
             audio:require('../../assets/Flashcard Audio/July/sandstorm.mp3'),
-            img:require('../../assets/image/desert/sandstorm_flashcard-01.png')
+            img:require('../../assets/image/desert/shovel.png')
           },{
             id:12,
             cardName:'thirsty',
             audio:require('../../assets/Flashcard Audio/July/thirsty.mp3'),
-            img:require('../../assets/image/desert/thirsty_flashcard-01.png')
+            img:require('../../assets/image/desert/thirsty.png')
           }
         ],
         ExplorationPart2:[
@@ -283,62 +283,62 @@
             id:1,
             cardName:'blizzard',
             audio:require('../../assets/Flashcard Audio/July/blizzard.mp3'),
-            img:require('../../assets/image/arctic/blizzard_flashcard-01.png')
+            img:require('../../assets/image/arctic/blizzard.png')
           },{
             id:2,
             cardName:'cold',
             audio:require('../../assets/Flashcard Audio/July/cold.mp3'),
-            img:require('../../assets/image/arctic/cold_flashcard-01.png')
+            img:require('../../assets/image/arctic/cold.png')
           },{
             id:3,
             cardName:'ice berg',
             audio:require('../../assets/Flashcard Audio/July/iceberg.mp3'),
-            img:require('../../assets/image/arctic/ice berg_flashcard-01.png')
+            img:require('../../assets/image/arctic/ice_berg.png')
           },{
             id:4,
             cardName:'ice',
             audio:require('../../assets/Flashcard Audio/July/ice.mp3'),
-            img:require('../../assets/image/arctic/ice_flashcard-01.png')
+            img:require('../../assets/image/arctic/ice.png')
           },{
             id:5,
             cardName:'igloo',
             audio:require('../../assets/Flashcard Audio/July/igloo.mp3'),
-            img:require('../../assets/image/arctic/igloo_flashcard-01.png')
+            img:require('../../assets/image/arctic/igloo.png')
           },{
             id:6,
             cardName:'orca',
             audio:require('../../assets/Flashcard Audio/July/orca.mp3'),
-            img:require('../../assets/image/arctic/orca_flashcard-01.png')
+            img:require('../../assets/image/arctic/orca.png')
           },{
             id:7,
             cardName:'polar bear',
             audio:require('../../assets/Flashcard Audio/July/polar bear.mp3'),
-            img:require('../../assets/image/arctic/polar beat_flashcard-01.png')
+            img:require('../../assets/image/arctic/polar_bear.png')
           },{
             id:8,
             cardName:'seal',
             audio:require('../../assets/Flashcard Audio/July/seal.mp3'),
-            img:require('../../assets/image/arctic/seal_flashcard-01.png')
+            img:require('../../assets/image/arctic/seal.png')
           },{
             id:9,
             cardName:'sled',
             audio:require('../../assets/Flashcard Audio/July/sled.mp3'),
-            img:require('../../assets/image/arctic/sled_flashcard-01.png')
+            img:require('../../assets/image/arctic/sled.png')
           },{
             id:10,
             cardName:'snow',
             audio:require('../../assets/Flashcard Audio/July/snow.mp3'),
-            img:require('../../assets/image/arctic/snow_flashcard-01.png')
+            img:require('../../assets/image/arctic/snow.png')
           },{
             id:11,
             cardName:'tusk',
             audio:require('../../assets/Flashcard Audio/July/tusk.mp3'),
-            img:require('../../assets/image/arctic/tusk_flashcard-01.png')
+            img:require('../../assets/image/arctic/tusk.png')
           },{
             id:12,
             cardName:'walrus',
             audio:require('../../assets/Flashcard Audio/July/Walrus.mp3'),
-            img:require('../../assets/image/arctic/walrus_flashcard-01.png')
+            img:require('../../assets/image/arctic/walrus.png')
           }
         ],
         SummerFunPart1:[
@@ -346,62 +346,62 @@
             id:1,
             cardName:'blow',
             audio:require('../../assets/Flashcard Audio/august/blow.mp3'),
-            img:require('../../assets/image/InTheSea/blow_flashcard-01.png')
+            img:require('../../assets/image/InTheSea/blow.png')
           },{
             id:2,
             cardName:'life jacket',
             audio:require('../../assets/Flashcard Audio/august/life jacket.mp3'),
-            img:require('../../assets/image/InTheSea/life jacket_flashcard-01.png')
+            img:require('../../assets/image/InTheSea/life jacket.png')
           },{
             id:3,
             cardName:'sail',
             audio:require('../../assets/Flashcard Audio/august/sail.mp3'),
-            img:require('../../assets/image/InTheSea/sail_flashcard-01.png')
+            img:require('../../assets/image/InTheSea/sail.png')
           },{
             id:4,
             cardName:'sailboat',
             audio:require('../../assets/Flashcard Audio/august/sailboat.mp3'),
-            img:require('../../assets/image/InTheSea/sailboat_flashcard-01.png')
+            img:require('../../assets/image/InTheSea/sailboat.png')
           },{
             id:5,
             cardName:'surf',
             audio:require('../../assets/Flashcard Audio/august/Surf.mp3'),
-            img:require('../../assets/image/InTheSea/surf_flashcard-01.png')
+            img:require('../../assets/image/InTheSea/surf.png')
           },{
             id:6,
             cardName:'surfboard',
             audio:require('../../assets/Flashcard Audio/august/sailboat.mp3'),
-            img:require('../../assets/image/InTheSea/surfboard_flashcard-01.png')
+            img:require('../../assets/image/InTheSea/surfboard.png')
           },{
             id:7,
             cardName:'waves',
             audio:require('../../assets/Flashcard Audio/august/waves.mp3'),
-            img:require('../../assets/image/InTheSea/waves_flashcard-01.png')
+            img:require('../../assets/image/InTheSea/waves.png')
           },{
             id:8,
             cardName:'wind',
             audio:require('../../assets/Flashcard Audio/august/wind.mp3'),
-            img:require('../../assets/image/InTheSea/wind_flashcard-01.png')
+            img:require('../../assets/image/InTheSea/wind.png')
           },{
             id:9,
             cardName:'dive',
             audio:require('../../assets/Flashcard Audio/august/Dive.mp3'),
-            img:require('../../assets/image/InTheSea/dive_flashcard-01.png')
+            img:require('../../assets/image/InTheSea/dive.png')
           },{
             id:10,
             cardName:'flippers',
             audio:require('../../assets/Flashcard Audio/august/flippers.mp3'),
-            img:require('../../assets/image/InTheSea/flippers_flashcard-01.png')
+            img:require('../../assets/image/InTheSea/flippers.png')
           },{
             id:11,
             cardName:'tank',
             audio:require('../../assets/Flashcard Audio/august/Tank.mp3'),
-            img:require('../../assets/image/InTheSea/tank_flashcard-01.png')
+            img:require('../../assets/image/InTheSea/tank.png')
           },{
             id:12,
             cardName:'mask',
             audio:require('../../assets/Flashcard Audio/august/Mask.mp3'),
-            img:require('../../assets/image/InTheSea/mask_flashcard-01.png')
+            img:require('../../assets/image/InTheSea/mask.png')
           }
         ],
         SummerFunPart2:[
@@ -409,188 +409,188 @@
             id:1,
             cardName:'acrobat',
             audio:require('../../assets/Flashcard Audio/august/Acrobat.mp3'),
-            img:require('../../assets/image/AtTheCircus/acrobat_flashcard-01.png')
+            img:require('../../assets/image/AtTheCircus/acrobat.png')
           },{
             id:2,
             cardName:'clown',
             audio:require('../../assets/Flashcard Audio/august/clown.mp3'),
-            img:require('../../assets/image/AtTheCircus/clown_flashcard-01.png')
+            img:require('../../assets/image/AtTheCircus/clown.png')
           },{
             id:3,
             cardName:'crowd',
             audio:require('../../assets/Flashcard Audio/august/crowd.mp3'),
-            img:require('../../assets/image/AtTheCircus/crowd_flashcard-01.png')
+            img:require('../../assets/image/AtTheCircus/crowd.png')
           },{
             id:4,
             cardName:'juggle',
             audio:require('../../assets/Flashcard Audio/august/Juggle.mp3'),
-            img:require('../../assets/image/AtTheCircus/juggle_flashcard-01.png')
+            img:require('../../assets/image/AtTheCircus/juggle.png')
           },{
             id:5,
             cardName:'net',
             audio:require('../../assets/Flashcard Audio/august/Net.mp3'),
-            img:require('../../assets/image/AtTheCircus/net_flashcard-01.png')
+            img:require('../../assets/image/AtTheCircus/net.png')
           },{
             id:6,
             cardName:'tent',
             audio:require('../../assets/Flashcard Audio/august/tent.mp3'),
-            img:require('../../assets/image/AtTheCircus/tent_flashcard-01.png')
+            img:require('../../assets/image/AtTheCircus/tent.png')
           },{
             id:7,
             cardName:'unicycle',
             audio:require('../../assets/Flashcard Audio/august/unicycle.mp3'),
-            img:require('../../assets/image/AtTheCircus/unicycle_flashcard-01.png')
+            img:require('../../assets/image/AtTheCircus/unicycle.png')
           },{
             id:8,
             cardName:'watch',
             audio:require('../../assets/Flashcard Audio/august/watch.mp3'),
-            img:require('../../assets/image/AtTheCircus/watch_flashcard-01.png')
+            img:require('../../assets/image/AtTheCircus/watch.png')
           },{
             id:9,
             cardName:'cheer',
             audio:require('../../assets/Flashcard Audio/august/cheer.mp3'),
-            img:require('../../assets/image/AtTheCircus/cheer_flashcard-01.png')
+            img:require('../../assets/image/AtTheCircus/cheer.png')
           },{
             id:10,
             cardName:'magician',
             audio:require('../../assets/Flashcard Audio/august/magician.mp3'),
-            img:require('../../assets/image/AtTheCircus/magician_flashcard-01.png')
+            img:require('../../assets/image/AtTheCircus/magician.png')
           },{
             id:11,
             cardName:'tightrope',
             audio:require('../../assets/Flashcard Audio/august/tightrope.mp3'),
-            img:require('../../assets/image/AtTheCircus/tightrope_flashcard-01.png')
+            img:require('../../assets/image/AtTheCircus/tightrope.png')
           },{
             id:12,
             cardName:'trick',
             audio:require('../../assets/Flashcard Audio/august/trick.mp3'),
-            img:require('../../assets/image/AtTheCircus/trick_flashcard-01.png')
+            img:require('../../assets/image/AtTheCircus/trick.png')
           }
         ],
         SchoolTimePart1:[
           {
             id:1,
-            cardName:'acrobat',
+            cardName:'desk',
             audio:require('../../assets/Flashcard Audio/august/Acrobat.mp3'),
-            img:require('../../assets/image/AtTheCircus/acrobat_flashcard-01.png')
+            img:require('../../assets/image/Classroom/Desk.png')
           },{
             id:2,
-            cardName:'clown',
+            cardName:'chair',
             audio:require('../../assets/Flashcard Audio/august/clown.mp3'),
-            img:require('../../assets/image/AtTheCircus/clown_flashcard-01.png')
+            img:require('../../assets/image/Classroom/Chair.png')
           },{
             id:3,
-            cardName:'crowd',
+            cardName:'backpack',
             audio:require('../../assets/Flashcard Audio/august/crowd.mp3'),
-            img:require('../../assets/image/AtTheCircus/crowd_flashcard-01.png')
+            img:require('../../assets/image/Classroom/Backpack.png')
           },{
             id:4,
-            cardName:'juggle',
+            cardName:'eraser',
             audio:require('../../assets/Flashcard Audio/august/Juggle.mp3'),
-            img:require('../../assets/image/AtTheCircus/juggle_flashcard-01.png')
+            img:require('../../assets/image/Classroom/Eraser.png')
           },{
             id:5,
-            cardName:'net',
+            cardName:'pencil',
             audio:require('../../assets/Flashcard Audio/august/Net.mp3'),
-            img:require('../../assets/image/AtTheCircus/net_flashcard-01.png')
+            img:require('../../assets/image/Classroom/Pencil.png')
           },{
             id:6,
-            cardName:'tent',
+            cardName:'sit',
             audio:require('../../assets/Flashcard Audio/august/tent.mp3'),
-            img:require('../../assets/image/AtTheCircus/tent_flashcard-01.png')
+            img:require('../../assets/image/Classroom/Sit.png')
           },{
             id:7,
-            cardName:'unicycle',
+            cardName:'teacher',
             audio:require('../../assets/Flashcard Audio/august/unicycle.mp3'),
-            img:require('../../assets/image/AtTheCircus/unicycle_flashcard-01.png')
+            img:require('../../assets/image/Classroom/Teacher.png')
           },{
             id:8,
-            cardName:'watch',
+            cardName:'write',
             audio:require('../../assets/Flashcard Audio/august/watch.mp3'),
-            img:require('../../assets/image/AtTheCircus/watch_flashcard-01.png')
+            img:require('../../assets/image/Classroom/Write.png')
           },{
             id:9,
-            cardName:'cheer',
+            cardName:'board',
             audio:require('../../assets/Flashcard Audio/august/cheer.mp3'),
-            img:require('../../assets/image/AtTheCircus/cheer_flashcard-01.png')
+            img:require('../../assets/image/Classroom/Board.png')
           },{
             id:10,
-            cardName:'magician',
+            cardName:'clock',
             audio:require('../../assets/Flashcard Audio/august/magician.mp3'),
-            img:require('../../assets/image/AtTheCircus/magician_flashcard-01.png')
+            img:require('../../assets/image/Classroom/Clock.png')
           },{
             id:11,
-            cardName:'tightrope',
+            cardName:'crayons',
             audio:require('../../assets/Flashcard Audio/august/tightrope.mp3'),
-            img:require('../../assets/image/AtTheCircus/tightrope_flashcard-01.png')
+            img:require('../../assets/image/Classroom/Crayons.png')
           },{
             id:12,
-            cardName:'trick',
+            cardName:'listen',
             audio:require('../../assets/Flashcard Audio/august/trick.mp3'),
-            img:require('../../assets/image/AtTheCircus/trick_flashcard-01.png')
+            img:require('../../assets/image/Classroom/listen.png')
           }
         ],
         SchoolTimePart2:[
           {
             id:1,
-            cardName:'acrobat',
+            cardName:'kick',
             audio:require('../../assets/Flashcard Audio/august/Acrobat.mp3'),
-            img:require('../../assets/image/AtTheCircus/acrobat_flashcard-01.png')
+            img:require('../../assets/image/SchoolTime/Kick.png')
           },{
             id:2,
-            cardName:'clown',
+            cardName:'ball',
             audio:require('../../assets/Flashcard Audio/august/clown.mp3'),
-            img:require('../../assets/image/AtTheCircus/clown_flashcard-01.png')
+            img:require('../../assets/image/SchoolTime/Ball.png')
           },{
             id:3,
-            cardName:'crowd',
+            cardName:'snack',
             audio:require('../../assets/Flashcard Audio/august/crowd.mp3'),
-            img:require('../../assets/image/AtTheCircus/crowd_flashcard-01.png')
+            img:require('../../assets/image/SchoolTime/Snack.png')
           },{
             id:4,
-            cardName:'juggle',
+            cardName:'swing',
             audio:require('../../assets/Flashcard Audio/august/Juggle.mp3'),
-            img:require('../../assets/image/AtTheCircus/juggle_flashcard-01.png')
+            img:require('../../assets/image/SchoolTime/Swing.png')
           },{
             id:5,
-            cardName:'net',
+            cardName:'run',
             audio:require('../../assets/Flashcard Audio/august/Net.mp3'),
-            img:require('../../assets/image/AtTheCircus/net_flashcard-01.png')
+            img:require('../../assets/image/SchoolTime/Run.png')
           },{
             id:6,
-            cardName:'tent',
+            cardName:'slide',
             audio:require('../../assets/Flashcard Audio/august/tent.mp3'),
-            img:require('../../assets/image/AtTheCircus/tent_flashcard-01.png')
+            img:require('../../assets/image/SchoolTime/Slide.png')
           },{
             id:7,
-            cardName:'unicycle',
+            cardName:'playground',
             audio:require('../../assets/Flashcard Audio/august/unicycle.mp3'),
-            img:require('../../assets/image/AtTheCircus/unicycle_flashcard-01.png')
+            img:require('../../assets/image/SchoolTime/Playground.png')
           },{
             id:8,
-            cardName:'watch',
+            cardName:'climb',
             audio:require('../../assets/Flashcard Audio/august/watch.mp3'),
-            img:require('../../assets/image/AtTheCircus/watch_flashcard-01.png')
+            img:require('../../assets/image/SchoolTime/Climb.png')
           },{
             id:9,
-            cardName:'cheer',
+            cardName:'toys',
             audio:require('../../assets/Flashcard Audio/august/cheer.mp3'),
-            img:require('../../assets/image/AtTheCircus/cheer_flashcard-01.png')
+            img:require('../../assets/image/SchoolTime/Toys.png')
           },{
             id:10,
-            cardName:'magician',
+            cardName:'ring',
             audio:require('../../assets/Flashcard Audio/august/magician.mp3'),
-            img:require('../../assets/image/AtTheCircus/magician_flashcard-01.png')
+            img:require('../../assets/image/SchoolTime/Ring.png')
           },{
             id:11,
-            cardName:'tightrope',
+            cardName:'seesaw',
             audio:require('../../assets/Flashcard Audio/august/tightrope.mp3'),
-            img:require('../../assets/image/AtTheCircus/tightrope_flashcard-01.png')
+            img:require('../../assets/image/SchoolTime/Seesaw.png')
           },{
             id:12,
-            cardName:'trick',
+            cardName:'slide',
             audio:require('../../assets/Flashcard Audio/august/trick.mp3'),
-            img:require('../../assets/image/AtTheCircus/trick_flashcard-01.png')
+            img:require('../../assets/image/SchoolTime/Slide.png')
           }
         ],
         list:[],

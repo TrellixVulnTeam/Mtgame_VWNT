@@ -29,6 +29,9 @@
 			</div>
 		</div>
 	</div>
+    <div @click="PrivacyPolicy" class="Privacy">
+      <p>Privacy Policy</p>
+    </div>
 	</div>
 
 
@@ -44,7 +47,7 @@
 		},
 		data() {
 			return {
-        secret:flase,
+        secret:false,
 				username:'',
 				password:'',
 				guardianId:'',
@@ -59,6 +62,11 @@
 			};
 		},
 		methods: {
+      PrivacyPolicy(){
+        this.$router.push({ //核心语句
+          path: '/PrivacyPolicy', //跳转的路径
+        })
+      },
 			alreadylogin() {
 				var audio = document.getElementById('music');
 				if(localStorage.getItem('audiomusic')==="false"){
@@ -113,4 +121,5 @@
     width: 100%;
     position: absolute;
   }
+
 </style>

@@ -1775,8 +1775,8 @@
       //left: -16%;
     }
     .dndList-list2.itemsGt6{
-      left: -2%;
-      top:70%;
+      left: 9%;
+      top:90%;
     }
     .dndList-list1.itemsGt6{
       //left: 63%;

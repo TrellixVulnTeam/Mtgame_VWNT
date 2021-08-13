@@ -617,24 +617,24 @@
 				})
 			},
 			walkersunit(li){
-         this.popp = !this.popp;
+         //this.popp = !this.popp;
 				 this.unitname=li.name;
 				 this.unitsId=li.units_detail_id;
 
-				// this.walkers = false;
-          		// this.$router.push({
-				// path: '/home',
-				// query: {
-				// unit:this.unitname,
-				// unitsId:this.unitsId,
-				// levelsId:this.levelsId,
-				// courseId:this.courseId,
-				// part:'part3',
-				// style:this.style,
-				// level:this.level,
-              	// 	cources:this.cources
-            		// }
-          		// });
+				this.walkers = false;
+          		this.$router.push({
+				path: '/home',
+				query: {
+				unit:this.unitname,
+				unitsId:this.unitsId,
+				levelsId:this.levelsId,
+				courseId:this.courseId,
+				part:'part3',
+				style:this.style,
+				level:this.level,
+              		cources:this.cources
+            		}
+          		});
 
 				// if(this.style=="game"){
 				// this.walkers = false;
