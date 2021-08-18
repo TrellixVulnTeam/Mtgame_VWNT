@@ -470,6 +470,7 @@
 		document.body.removeEventListener('touchmove',this.bodyScroll,{passive: false});
 		},
 		created() { //生命周期里接收参数
+		  console.log(123);
 			this.type = this.$route.query.type;
 			this.account=this.$route.query.account;
 			this.part=this.$route.query.part;

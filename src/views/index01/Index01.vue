@@ -37,7 +37,7 @@
 						</a>
 					</div>
 					<div class="item2 books" >
-						<a  class="monkey book0001"  style="pointer-events: painted">
+						<a  class="monkey book0001" @click="jumpcourses" style="pointer-events: painted">
 							<!-- 关闭主页course点击入口 -->
 							<!-- <img src="../../assets/image/courses1.png"  @click="jumpcourses" style="z-index: 100;"/> -->
 							<img src="../../assets/image/courses1.png"   style="z-index: 100;"/>

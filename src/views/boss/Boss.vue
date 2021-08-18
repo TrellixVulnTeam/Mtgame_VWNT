@@ -319,8 +319,8 @@
           {active:false,spring:'Our World'},
           {active:false,spring:'Fairy Tales'},
           {active:false,spring:'Exploration'},
-          {active:false,spring:'xxxxxx'},
-          {active:false,spring:'School Life'},
+          {active:false,spring:'Summer Fun'},
+          {active:false,spring:'School time'},
           {active:false,spring:'Animals'},
           {active:false,spring:'Family Time'},
           {active:false,spring:'Holidays'},
@@ -811,6 +811,7 @@
      window.removeEventListener('popstate',this.gomemu,false);
     },
 		created() { //生命周期里接收参数
+		  console.log(this.$route.query.unit);
 		this.pic=this.$axios.defaults.baseURL2;
 		this.unit = this.$route.query.unit;
 		this.part = this.$route.query.part;

@@ -233,7 +233,7 @@
                     <img src="../../assets/image/moon/holidays.png" v-if="li.name==='Holidays'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">
                     <img src="../../assets/image/moon/Exploration.png" v-if="li.name==='Exploration'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">
                     <img src="../../assets/image/moon/Summer Fun.png" v-if="li.name==='Summer Fun'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">
-
+                    <img src="../../assets/image/moon/schooltime.png" v-if="li.name==='School Time'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">
                     <!--<img src="../../assets/image/comingsoon.png" v-show="!li.name=='My Body'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;z-index: 99;">-->
                     <img src="../../assets/image/comingsoon.png" v-show="!li.status"  style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;z-index: 99;">
 
@@ -617,24 +617,24 @@
 				})
 			},
 			walkersunit(li){
-         //this.popp = !this.popp;
+         this.popp = !this.popp;
 				 this.unitname=li.name;
 				 this.unitsId=li.units_detail_id;
 
-				this.walkers = false;
-          		this.$router.push({
-				path: '/home',
-				query: {
-				unit:this.unitname,
-				unitsId:this.unitsId,
-				levelsId:this.levelsId,
-				courseId:this.courseId,
-				part:'part3',
-				style:this.style,
-				level:this.level,
-              		cources:this.cources
-            		}
-          		});
+				// this.walkers = false;
+        //   		this.$router.push({
+				// path: '/home',
+				// query: {
+				// unit:this.unitname,
+				// unitsId:this.unitsId,
+				// levelsId:this.levelsId,
+				// courseId:this.courseId,
+				// part:'part3',
+				// style:this.style,
+				// level:this.level,
+        //       		cources:this.cources
+        //     		}
+        //   		});
 
 				// if(this.style=="game"){
 				// this.walkers = false;

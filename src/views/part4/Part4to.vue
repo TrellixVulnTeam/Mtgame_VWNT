@@ -427,8 +427,8 @@
                   setTimeout(() => {
                     that.nowtime = document.getElementsByTagName("svg").length;
                     //console.log(that.nowtime);
-
-                    if (that.nowtime == truetime) { //连接的数量
+                    console.log(this.list2);
+                    if (that.nowtime === truetime) { //连接的数量
                       that.zhezhao = true;
                       that.countpage += 1;
                       if (that.falselist.length <= 0) { //错误list的长度
@@ -851,7 +851,7 @@
       }else if(this.part==='part3'){
         this.url1=this.url+'exerciseD';
       }
-      if(this.gamename==''||this.gamename==undefined){
+      if(this.gamename===''||this.gamename===undefined){
         this.gamename=localStorage.getItem('gamename')
       }else {
         localStorage.setItem('gamename',this.gamename);
@@ -886,8 +886,6 @@
           }
         }else if(this.part==='part3'){
           for (let i in res.data) {
-            console.log(3);
-            console.log(res.data);
             this.listD.push(res.data[i]); //属性
             this.question = this.listD.length - 3;
           }
