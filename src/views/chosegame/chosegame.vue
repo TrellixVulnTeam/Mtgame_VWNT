@@ -303,7 +303,7 @@
             <img src="../../assets/image/moon/myhome1.png" v-if="this.unitname==='My Home'" class="imgpart">
             <img src="../../assets/image/moon/ourworld1.png" v-if="this.unitname==='Our World'" class="imgpart">
             <img src="../../assets/image/moon/fairytales1.png" v-if="this.unitname==='Fairy Tales'" class="imgpart">
-            <img src="../../assets/image/moon/schooltime1.png" v-if="this.unitname==='School Life'" class="imgpart">
+            <img src="../../assets/image/moon/schooltime1.png" v-if="this.unitname==='School Time'" class="imgpart">
             <img src="../../assets/image/moon/animals1.png" v-if="this.unitname==='Animals'" class="imgpart">
             <img src="../../assets/image/moon/myfamily1.png" v-if="this.unitname==='Family Time'" class="imgpart">
             <img src="../../assets/image/moon/holidays1.png" v-if="this.unitname==='Holidays'" class="imgpart">
@@ -331,7 +331,7 @@
             <img src="../../assets/image/moon/myhome2.png" v-if="this.unitname==='My Home'" class="imgpart">
             <img src="../../assets/image/moon/ourworld2.png" v-if="this.unitname==='Our World'" class="imgpart">
             <img src="../../assets/image/moon/fairytales2.png" v-if="this.unitname==='Fairy Tales'" class="imgpart">
-            <img src="../../assets/image/moon/schooltime2.png" v-if="this.unitname==='School Life'" class="imgpart">
+            <img src="../../assets/image/moon/schooltime2.png" v-if="this.unitname==='School Time'" class="imgpart">
             <img src="../../assets/image/moon/animals2.png" v-if="this.unitname==='Animals'" class="imgpart">
             <img src="../../assets/image/moon/myfamily2.png" v-if="this.unitname==='Family Time'" class="imgpart">
             <img src="../../assets/image/moon/holidays2.png" v-if="this.unitname==='Holidays'" class="imgpart">
@@ -359,7 +359,7 @@
             <img src="../../assets/image/moon/myhome3.png" v-if="this.unitname==='My Home'" class="imgpart">
             <img src="../../assets/image/moon/ourworld3.png" v-if="this.unitname==='Our World'" class="imgpart">
             <img src="../../assets/image/moon/fairytales3.png" v-if="this.unitname==='Fairy Tales'" class="imgpart">
-            <img src="../../assets/image/moon/schooltime3.png" v-if="this.unitname==='School Life'" class="imgpart">
+            <img src="../../assets/image/moon/schooltime3.png" v-if="this.unitname==='School Time'" class="imgpart">
             <img src="../../assets/image/moon/animals3.png" v-if="this.unitname==='Animals'" class="imgpart">
             <img src="../../assets/image/moon/myfamily3.png" v-if="this.unitname==='Family Time'" class="imgpart">
             <img src="../../assets/image/moon/holidays3.png" v-if="this.unitname==='Holidays'" class="imgpart">

@@ -274,7 +274,7 @@
           {active:false,spring:'Fairy Tales'},
           {active:false,spring:'Exploration'},
           {active:false,spring:'Summer Fun'},
-          {active:false,spring:'School Life'},
+          {active:false,spring:'School Time'},
           {active:false,spring:'Animals'},
           {active:false,spring:'Family Time'},
           {active:false,spring:'Holidays'},

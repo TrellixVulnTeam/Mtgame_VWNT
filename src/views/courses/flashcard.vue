@@ -588,9 +588,9 @@
             img:require('../../assets/image/SchoolTime/Seesaw.png')
           },{
             id:12,
-            cardName:'slide',
+            cardName:'bell',
             audio:require('../../assets/Flashcard Audio/august/trick.mp3'),
-            img:require('../../assets/image/SchoolTime/Slide.png')
+            img:require('../../assets/image/SchoolTime/bell.png')
           }
         ],
         list:[],

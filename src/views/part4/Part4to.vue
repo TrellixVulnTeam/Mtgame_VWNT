@@ -501,7 +501,8 @@
                                   menuId: that.menuId,
                                   unitsId: that.unitsId,
                                   unit: that.unit,
-                                  part:that.part
+                                  part:that.part,
+                                  num:that.num
                                 }
                               });
 
@@ -623,7 +624,8 @@
                                         menuId: that.menuId,
                                         unitsId: that.unitsId,
                                         unit: that.unit,
-                                        part:that.part
+                                        part:that.part,
+                                        num:that.num
                                       }
                                     });
 
@@ -654,6 +656,7 @@
     },
     data() {
       return {
+        num:0,
         popp: false,
         ruleimg8: false,
         spanp: '',
@@ -703,7 +706,7 @@
           {active:false,spring:'Fairy Tales'},
           {active:false,spring:'Exploration'},
           {active:false,spring:'Summer Fun'},
-          {active:false,spring:'School Life'},
+          {active:false,spring:'School Time'},
           {active:false,spring:'Animals'},
           {active:false,spring:'Family Time'},
           {active:false,spring:'Holidays'},
@@ -879,16 +882,22 @@
             this.listD.push(res.data.ListPart1[i]); //属性
             this.question = this.listD.length;
           }
+          this.num = this.question * this.listD[0].length;
+          console.log(this.question * this.listD[0].length);
         }else if(this.part==='part2'){
           for (let i in res.data.ListPart2) {
             this.listD.push(res.data.ListPart2[i]); //属性
             this.question = this.listD.length;
           }
+          this.num = this.question * this.listD[0].length;
+          console.log(this.question * this.listD[0].length);
         }else if(this.part==='part3'){
           for (let i in res.data) {
             this.listD.push(res.data[i]); //属性
             this.question = this.listD.length - 3;
           }
+          this.num = this.question * this.listD[0].length;
+          console.log(this.question * this.listD[0].length);
         }
         this.shownumb = true;
         this.list = this.listD[this.countpage - 1];
@@ -1539,7 +1548,7 @@
       font-family: pepper;
       color: white;
       bottom: 15%;
-      left: 8%;
+      left: 10%;
       position: absolute;
       font-size: xx-large;
       max-height: 80%;
@@ -1648,7 +1657,7 @@
       font-family: pepper;
       color: white;
       bottom: 15%;
-      left: 8%;
+      left: 10%;
       position: absolute;
       font-size: xx-large;
       max-height: 80%;
@@ -1897,7 +1906,7 @@
       font-family: pepper;
       color: white;
       bottom: 0%;
-      left: 8%;
+      left: 10%;
       position: absolute;
       font-size: xx-large;
       max-height: 80%;

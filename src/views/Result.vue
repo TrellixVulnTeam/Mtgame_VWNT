@@ -194,6 +194,7 @@
 				action2:false,
 				action3:false,
 				unitsId:'',
+        num:0,
 				unit:'',
 				menuId:'',
 				nextmenu:'',
@@ -470,7 +471,7 @@
 		document.body.removeEventListener('touchmove',this.bodyScroll,{passive: false});
 		},
 		created() { //生命周期里接收参数
-		  console.log(123);
+		  console.log(this.$route.query);
 			this.type = this.$route.query.type;
 			this.account=this.$route.query.account;
 			this.part=this.$route.query.part;
@@ -478,6 +479,7 @@
 			this.menuId=this.$route.query.menuId;
 			this.unitsId=this.$route.query.unitsId;
 			this.unit=this.$route.query.unit;
+      this.num=this.$route.query.num;
       if(this.part==='part1'){
         this.url1=this.url+'accountSumPart1';
       }else if(this.part==='part2'){
@@ -492,6 +494,7 @@
 				menuDetailId:this.menuId,
 				partName:this.partName,
 				score:this.account,
+        num:this.num,
 			})).then(res => {
 				this.star = res.data.star;
 				this.score = res.data.score;
