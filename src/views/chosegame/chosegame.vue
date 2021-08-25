@@ -236,10 +236,8 @@
                     <img src="../../assets/image/moon/schooltime.png" v-if="li.name==='School Time'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">
                     <!--<img src="../../assets/image/comingsoon.png" v-show="!li.name=='My Body'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;z-index: 99;">-->
                     <img src="../../assets/image/comingsoon.png" v-show="!li.status"  style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;z-index: 99;">
-
-                     <!--<h3><span>{{li.unit_name}}</span></h3>-->
-										<!--<span>{{li.name}}</span> -->
-										<p><i><img src="../../assets/image/star_frame.png"></i>{{li.stars}}</p>
+										<p><i><img src="../../assets/image/star_frame.png"></i>{{li.start}}</p>
+<!--                    <p><i><img src="../../assets/image/star_frame.png"></i>{{li.stars}}</p>-->
 									</a>
 								</div>
 							</div>
@@ -426,6 +424,7 @@
 				chosegame:true,
 				chartroom:false,
         starts:"0/30",
+        start:0,
 				walkers:false,
         phonics:0,
 				runners:false,
@@ -595,6 +594,7 @@
 				}else if(li.name=="Runners"){
 					this.level="RUNNERS";
 				}
+				let that=this;
 				this.levelsId=li.levels_detail_id;
 				this.url3=this.url+"Units";
 				this.$axios.post(this.url3,qs.stringify({
@@ -602,16 +602,6 @@
 				levelsId:this.levelsId
 				})).then(res=>{
 				this.unitsList=res.data.unitsList;
-          // for(var i=0;i<this.unitsList.length;i++){
-          //   if(this.unitsList[i].unit_name=="September"){
-          //     this.starts=this.unitsList[i].stars;
-          //     this.unitname=this.unitsList[i].unit_name;
-          //     this.unitsId=this.unitsList[i].units_detail_id;
-          //   }
-          // }
-				// for(var i=0;i<this.unitsList.length;i++){
-				// 	this.unitsList[i].bg="../../assets/image/1Bugs.png";
-				// }
 				}, res => {
 				    alertMsg("You must be connected to the internet.<br>Please connect and try again.");
 				})
@@ -695,9 +685,9 @@
 				if(this.$route.query.levelsId){
 					this.level= this.$route.query.level;
 					this.levelsId= this.$route.query.levelsId;
-					this.courseId= this.$route.query.courseId;this.unitname= this.$route.query.unit;
+					this.courseId= this.$route.query.courseId;
+					this.unitname= this.$route.query.unit;
 					this.cources=this.$route.query.cources;
-					// if(this.$route.query.style=="game"){
 						this.chosegame =false;
 						this.walkers=true;
 						this.url3=this.url+"Units";
@@ -706,27 +696,11 @@
 						levelsId:this.levelsId
 						})).then(res=>{
 						this.unitsList=res.data.unitsList;
-						// for(var i=0;i<this.unitsList.length;i++){
-						//   if(this.unitsList[i].unit_name=="September"){
-            //     this.starts=this.unitsList[i].stars;
-            //     this.unitname=this.unitsList[i].unit_name;
-            //     this.unitsId=this.unitsList[i].units_detail_id;
-            //   }
-            // }
-
-							 // for(var i=0;i<this.unitsList.length;i++){
-							 // 	this.unitsList[i].bg="./assets/image/1Bugs.png";
-							 // }
 						}, res => {
 						    alertMsg("You must be connected to the internet.<br>Please connect and try again.");
 						})
-					// }else if(this.$route.query.style=="courses"){
-					// 	// this.walkers = false;
-					// 	this.chosegame =false;
-					// 	this.activitiesmenu = true;
-					// }
 				}
-			    this.style= this.$route.query.style; //接受参数关键代码
+        this.style= this.$route.query.style; //接受参数关键代码
 				this.firstName=localStorage.getItem('firstName');
 				this.gameImage=localStorage.getItem('gameImage');
 				this.sum=localStorage.getItem('sumCoins');
@@ -749,13 +723,6 @@
 				}, res => {
 				    alertMsg("You must be connected to the internet.<br>Please connect and try again.");
 				})
-			 // this.bodyHeight=document.documentElement.clientHeight;
-			 // this.bodyWidth=document.documentElement.clientWidth;
-			 // var h=document.getElementById("container");
-			 // h.style.height=this.bodyHeight+"px";
-			 // h.style.width=this.bodyWidth+"px";
-			 // console.log(this.bodyHeight);
-
 
 		}
 	};

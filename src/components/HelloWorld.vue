@@ -1144,6 +1144,7 @@
 				})
 			},
 			back(){
+        console.log(12);
 				this.$router.push({ //核心语句
 						path: '/chosegame', //跳转的路径
 						query: {
