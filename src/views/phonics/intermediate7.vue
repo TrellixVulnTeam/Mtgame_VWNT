@@ -97,7 +97,7 @@
         <div class="settinglist">
           <img src="../../assets/image/interbar.png" style="width: 100%;bottom: 0;height: 100%;"  >
 
-          <span class="fontsize">Listen and match the pictures to the correct words. </span>
+          <span class="fontsize">Listen and match the words. </span>
           <div @click="changesett">
             <img src="../../assets/image/interpause.png" class=" repeat"  >
 

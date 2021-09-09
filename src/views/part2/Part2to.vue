@@ -929,12 +929,8 @@
 				}
 				if(localStorage.getItem('gamemusic')=="false"){
 				    this.show=false;
-            // partmusic.pause();
-            // this.$refs.MusicPlay.pause();
 				}else{
 					 this.show=true;
-            // partmusic.play();
-           // this.$refs.MusicPlay.play();
 				}
 
 				this.$axios.post(this.url1, qs.stringify({
@@ -976,7 +972,6 @@
 							this.list1[i].margin = 1;
 						}
 					}
-					//console.log(this.list1.length);
 					if (this.list1.length == 2) {
 						for (var i = 0; i < this.list1.length; i++) {
 							this.list1[i].width1 = 1;

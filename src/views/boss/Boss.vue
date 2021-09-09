@@ -320,7 +320,7 @@
           {active:false,spring:'Fairy Tales'},
           {active:false,spring:'Exploration'},
           {active:false,spring:'Summer Fun'},
-          {active:false,spring:'School time'},
+          {active:false,spring:'School Time'},
           {active:false,spring:'Animals'},
           {active:false,spring:'Family Time'},
           {active:false,spring:'Holidays'},
@@ -336,6 +336,7 @@
 				zhezhao:false,
 				changered:false,
 				changeblue:false,
+        partName:'',
 				answer:false,
 				unitsId:'',
 				unit:'',
@@ -692,7 +693,7 @@
 										//路由传参时push和query搭配使用 ，作用时传递参数
 
 										// type:this.part,
-										// partName:this.part,
+										partName:this.partName,
 										account:this.account,
 										menuId: this.menuId,
 										unitsId:this.unitsId,
@@ -731,7 +732,7 @@
 									query: {
 										//路由传参时push和query搭配使用 ，作用时传递参数
 										// type:this.part,
-										// partName:this.part,
+                    partName:this.partName,
 										account:this.account,
 										menuId: this.menuId,
 										unitsId:this.unitsId,
@@ -788,7 +789,7 @@
 								query: {
 									//路由传参时push和query搭配使用 ，作用时传递参数
 									// type:this.part,
-									// partName:this.part,
+                  partName:this.partName,
 									account:this.account,
 									menuId: this.menuId,
 									unitsId:this.unitsId,
@@ -819,8 +820,10 @@
     this.gamename=this.$route.query.name;
       if(this.part==='part1'){
         this.url1=this.url+'partBoss1';
+        this.partName = 'partBoss1';
       }else if(this.part==='part2'){
         this.url1=this.url+'partBoss1';
+        this.partName = 'partBoss2';
       }else if(this.part==='part3'){
 
       }
@@ -1607,7 +1610,7 @@
       font-size: x-large;
       max-height: 80%;
       min-height: 50%;
-      margin-left: 2%;
+      margin-left: 4%;
       transform: scale(1.6);
     }
     .inputbar{

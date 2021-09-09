@@ -1144,7 +1144,6 @@
 				})
 			},
 			back(){
-        console.log(12);
 				this.$router.push({ //核心语句
 						path: '/chosegame', //跳转的路径
 						query: {
@@ -1284,9 +1283,9 @@
                               }else if(this.unit==='Fairy Tales'){
                                 this.star="http://107.150.121.34/monkeytownHK/image/img/6-star2.png";
                                 this.lightstar="http://107.150.121.34/monkeytownHK/image/img/6-star.png";
-                              }else if(this.unit==='School Life'){
+                              }else if(this.unit==='School Time'){
                                 this.star="http://107.150.121.34/monkeytownHK/image/img/9-9star2.png";
-                                this.lightstar="http://107.150.121.34/monkeytownHK/image/img/9-9star.png";
+                                this.lightstar="http://107.150.121.34/monkeytownHK/image/img/9-star.png";
                               }else if(this.unit==='Animals'){
                                 this.star="http://107.150.121.34/monkeytownHK/image/img/10-10star2.png";
                                 this.lightstar="http://107.150.121.34/monkeytownHK/image/img/10-10star.png";
@@ -1338,7 +1337,7 @@
                             this.sum=res.data.sumCoins;
                             localStorage.setItem('sumCoins',this.sum);
 
-                            for(var i=0;i<res.data.UnitsList.length-1;i++){
+                            for(var i=0;i<res.data.UnitsList.length;i++){
                               if(res.data.UnitsList[i].star=="0"){
                                 this.stars[i].onestart=false;
                                 this.stars[i].twostart=false;
@@ -1357,7 +1356,7 @@
                                 this.stars[i].threestart=true;
                               }
                             }
-
+                            console.log(this.starts);
                           }, res => {
                             console.info('false');
                           });
@@ -1460,9 +1459,9 @@
             }else if(this.unit==='Summer Fun'){
               this.star="http://107.150.121.34/monkeytownHK/image/img/8-8start2.png";
               this.lightstar="http://107.150.121.34/monkeytownHK/image/img/8-8start.png";
-            }else if(this.unit==='School Life'){
-              this.star="http://107.150.121.34/monkeytownHK/image/img/9-9star2.png";
-              this.lightstar="http://107.150.121.34/monkeytownHK/image/img/9-9star.png";
+            }else if(this.unit==='School Time'){
+              this.star="http://107.150.121.34/monkeytownHK/image/img/9-star2.png";
+              this.lightstar="http://107.150.121.34/monkeytownHK/image/img/9-star.png";
             }else if(this.unit==='Animals'){
               this.star="http://107.150.121.34/monkeytownHK/image/img/10-10star2.png";
               this.lightstar="http://107.150.121.34/monkeytownHK/image/img/10-10star.png";
@@ -1507,12 +1506,11 @@
           studentId:localStorage.getItem('studentId'),
           unitsId:this.unitsId
         })).then(res=>{
-          console.log(res.data.UnitsList[0].menu_detail_id_1);
           this.UnitsList=res.data.UnitsList;
           this.sum=res.data.sumCoins;
           localStorage.setItem('sumCoins',this.sum);
           // res.data.UnitsList.splice(8,1);
-          for(var i=0;i<res.data.UnitsList.length-1;i++){
+          for(var i=0;i<res.data.UnitsList.length;i++){
             if(res.data.UnitsList[i].star=="0"){
               this.stars[i].onestart=false;
               this.stars[i].twostart=false;
@@ -2070,9 +2068,14 @@
 			font-size: 2rem;
 		}
 	}
+  @media only screen and (min-width: 1024px) and (max-width: 1600px) and (-webkit-device-pixel-ratio: 3){
+    .imgposit {
+      margin-left: -3% ;
+    }
+  }
 	@media screen and (min-width: 1355px) and (max-width: 1600px) {
 		.imgposit {
-			margin-left: 6%;
+			margin-left: 0%;
 		}
 
 		.jump{

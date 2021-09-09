@@ -4,6 +4,7 @@
 		<audio autoplay="autoplay" loop="loop" ref="MusicPlay" v-if="show" id="partmusic"><source  src="../../assets/video/gamemusic.mp3"></audio>
 		</span>
     <img src="../../assets/image/interbg4.png"  style="width: 100%; z-index: -2;top:0; height:100%;display:block;position: absolute;">
+<!--    <img class="again" src="../../assets/image/again.png" @click="again()">-->
 
     <transition name="fades">
       <div class="contain" v-if="!resume3">
@@ -90,7 +91,9 @@
               </canvas>
 
             </div>
-            <div class="bottomquestion"><span class="stroke">{{question}}</span></div>
+            <div class="bottomquestion">
+              <span class="stroke">{{question}}</span>
+            </div>
             <!--<div>-->
               <!--<img class="repeatsound" src="../../assets/image/makesound.png" @click="listen()">-->
               <!--<img class="rightbird" src="../../assets/image/bird.png">-->
@@ -396,7 +399,9 @@
       window.removeEventListener('popstate',this.gomemu,false);
     },
     methods: {
+      again(){
 
+      },
       bodyScroll(event) {
         event.preventDefault();
       },
@@ -835,6 +840,14 @@
     align-content: center;
     -webkit-box-align: center;
     position: relative;
+  }
+  .again{
+    width: 5%;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%,-60%);
+    position: absolute;
+    z-index: 100;
   }
   .bottomquestion{
     position: absolute;

@@ -33,7 +33,7 @@
             <img src="../../assets/image/12-12bg.png"  style="width: 100%; z-index: -1;background-color: #ffd55f;height: 100%;display:block;position: absolute;" v-if="bgimg[21].active">
             <img src="../../assets/image/1-1bg.png"  style="width: 100%; z-index: -1;background-color: #ffd55f;height: 100%;display:block;position: absolute;" v-if="bgimg[22].active">
             <img src="../../assets/image/2-2bg.png"  style="width: 100%; z-index: -1;background-color: #ffd55f;height: 100%;display:block;position: absolute;" v-if="bgimg[23].active">
-						<p class="fontsizes">{{this.countpage}}/{{this.question}}</p>
+						<p class="fontsizes" v-if="this.shownumb">{{this.countpage}}/{{this.question}}</p>
 					</div>
 				</transition>
 				<transition name="fade1">
@@ -193,29 +193,32 @@
 		name: "part3to",
 		watch: {
 			'onef': function(newVal) {
-				if (this.onef == true) {
+				if (this.onef === true) {
 					setTimeout(() => {
 						this.onef = false;
 						this.list1 =this.listC[this.countpage-1];
 						for(var i = 0; i < this.list1.length; i++){
 							this.list1[i].size=0;
-							console.log(this.list1[i].name.length);
 							if(this.list1[i].name.length>=10){
 								this.list1[i].size=1;
 							}
 						}
-						if (this.list1.length == 4) {
+						if (this.list1.length === 4) {
 							this.consize1 = true;
-						} else if (this.list1.length == 6) {
+              this.consize2 = false;
+              this.consize3 = false;
+						} else if (this.list1.length === 6) {
+              this.consize1 = false;
 							this.consize2 = true;
-						} else if (this.list1.length == 8) {
+              this.consize3 = false;
+						} else if (this.list1.length === 8) {
+              this.consize1 = false;
+              this.consize1 = false;
 							this.consize3 = true;
 						}
-						// this.showstart = false;
-                           setTimeout(() => {
+            setTimeout(() => {
 							for (var i = 0; i < this.list1.length; i++) {
 								this.list1[i].flag = 1;
-								//console.log(this.list1);
 							}
 						}, 500);
 						setTimeout(() => {
@@ -225,12 +228,9 @@
 							//console.log(this.list1);
 						}, 2500);
 						this.list2 = [];
-
 					}, 2000);
-
 				}
 			},
-
 		},
 		data() {
 			return {
@@ -315,6 +315,7 @@
         ],
 				unit:'',
 				menuId:'',
+        shownumb:false,
 				timeout: 0,
 				consize1: false,
 				consize2: false,
@@ -546,7 +547,7 @@
       }else if(this.part==='part3'){
         this.url1=this.url+'exerciseC';
       }
-      if(this.gamename==''||this.gamename==undefined){
+      if(this.gamename===''||this.gamename===undefined){
         this.gamename=localStorage.getItem('gamename')
       }else {
         localStorage.setItem('gamename',this.gamename);
@@ -560,28 +561,26 @@
 				this.bgimg[i].active=false;
 			}
 		}
-		if(localStorage.getItem('gamemusic')=="false"){
+		if(localStorage.getItem('gamemusic')==="false"){
 		    this.show=false;
 		}else{
 			 this.show=true;
 		}
 
-			if (this.onef == true) {
 			this.$axios.post(this.url1, qs.stringify({
 				  menuDetailId: this.menuId,
 			})).then(res => {
-
 			for (let i in res.data.ListC) {
 			    this.listC.push(res.data.ListC[i]); //属性
 			}
-				// this.listC=res.data;
 				this.list1 =this.listC[this.countpage-1];
 				 this.question=this.listC.length;
-				if (this.list1.length == 4) {
+				 this.shownumb = true;
+				if (this.list1.length === 4) {
 					this.consize1 = true;
-				} else if (this.list1.length == 6) {
+				} else if (this.list1.length === 6) {
 					this.consize2 = true;
-				} else if (this.list1.length == 8) {
+				} else if (this.list1.length === 8) {
 					this.consize3 = true;
 				}
 				for(var i = 0; i < this.list1.length; i++){
@@ -590,15 +589,16 @@
 						this.list1[i].size=1;
 					}
 				}
-				setTimeout(() => {
-						this.onef = false;
-				}, 1000);
+
+        if (this.onef === true) {
+          setTimeout(() => {
+            this.onef = false;
+          }, 1000);
+        }
 						this.timeout = 0;
-						//console.log(this.list1);
 						setTimeout(() => {
 							for (var i = 0; i < this.list1.length; i++) {
 								this.list1[i].flag = 1;
-								//console.log(this.list1);
 							}
 						}, 500);
 						setTimeout(() => {
@@ -612,7 +612,6 @@
 				alertMsg("You must be connected to the internet.<br>Please connect and try again.");
 			});
 
-		}
     // 统计时间
     this.$axios.post(this.timeurl, qs.stringify({
       id: timestamp,
@@ -1363,6 +1362,7 @@
 			width: 20% !important;
 			margin: 0 4%;
 		}
+
     .list3{
       width: 16% !important;
       margin: 0 4%;
@@ -1417,7 +1417,7 @@
 
     .list2 {
       width: 20% !important;
-      margin: 0 4%;
+      margin: 0 6%;
     }
     .list3{
       width: 16% !important;
@@ -1469,4 +1469,11 @@
       top: 20%;
     }
   }
+  @media only screen and (min-device-width: 812px) and (max-device-width: 1023px) and (-webkit-device-pixel-ratio: 3) or (-webkit-device-pixel-ratio: 2){
+    .list2 {
+      width: 20% !important;
+      margin: 0 4%;
+    }
+  }
+
 </style>

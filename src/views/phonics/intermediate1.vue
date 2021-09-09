@@ -26,7 +26,7 @@
               <source src="../../assets/video/correct.mp3" ></audio>
             <div class="topbox" v-if="!reload">
               <button class="textsize">
-                <span>Does the sound make the <span style="color: #f42a64">{{titname}}</span> sound?</span>
+                <span>Does this word make the <span style="color: #f42a64">{{titname}}</span> sound?</span>
                 <!--<audio   ref="videos"   autoplay="autoplay" :src="audio1">-->
                  <!--</audio>-->
                 <audio  @canplay="getDuration"   ref="videos" id="videos" autoplay="autoplay" :src="audio1"></audio>
@@ -734,6 +734,7 @@
   #answer-box {
     display: -ms-flexbox;
     display: flex;
+    top: 21%;
   }
 
   .about {
@@ -1487,7 +1488,8 @@
       margin-top: 2%;
     }
     .bordercolor {
-      top: 0%;
+      top: 50%;
+      left: 8%;
     }
     .centersound{
       bottom:45%;

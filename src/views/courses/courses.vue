@@ -215,8 +215,6 @@
                   <img src="../../assets/image/moon/s4.png" v-if="li.name==='Clothes'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">
                   <img src="../../assets/image/moon/s5.png" v-if="li.name==='Theme Park'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">
                   <img src="../../assets/image/moon/s6.png" v-if="li.name==='Space'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">
-                  <!--<img src="../../assets/image/moon/s7.png" v-if="li.name==='My Family'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">-->
-                  <!--<img src="../../assets/image/moon/s8.png" v-if="li.name==='Holidays'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">-->
                   <img src="../../assets/image/moon/mybody.png" v-if="li.name==='My Body'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">
                   <img src="../../assets/image/moon/myweekend.png" v-if="li.name==='My Weekend'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">
                   <img src="../../assets/image/moon/wild-animals.png" v-if="li.name==='Wild Animals'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">
@@ -233,11 +231,7 @@
                   <img src="../../assets/image/moon/Exploration.png" v-if="li.name==='Exploration'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">
                   <img src="../../assets/image/moon/Summer Fun.png" v-if="li.name==='Summer Fun'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">
                   <img src="../../assets/image/moon/schooltime.png" v-if="li.name==='School Time'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">
-                  <!--<img src="../../assets/image/comingsoon.png" v-show="!li.name=='My Body'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;z-index: 99;">-->
                   <img src="../../assets/image/comingsoon.png" v-show="!li.status"  style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;z-index: 99;">
-                  <!--<h3><span>{{li.unit_name}}</span></h3>-->
-                  <!--<span>{{li.name}}</span> -->
-                  <p><i><img src="../../assets/image/star_frame.png"></i>{{li.stars}}</p>
                 </a>
               </div>
             </div>
@@ -554,7 +548,14 @@
           studentId:localStorage.getItem('studentId'),
           levelsId:this.levelsId
         })).then(res=>{
-          this.unitsList=res.data.unitsList;
+          //this.unitsList=res.data.unitsList;
+          this.unitsList=[];
+          for (let i = 0; i < res.data.unitsList.length; i++) {
+            if(res.data.unitsList[i].name==="Summer Fun" || res.data.unitsList[i].name==="School Time"){
+              this.unitsList.push(res.data.unitsList[i]);
+              console.log(this.unitsList);
+            }
+          }
           // for(var i=0;i<this.unitsList.length;i++){
           //   if(this.unitsList[i].unit_name=="September"){
           //     this.starts=this.unitsList[i].stars;
@@ -643,18 +644,14 @@
           studentId:localStorage.getItem('studentId'),
           levelsId:this.levelsId
         })).then(res=>{
-          this.unitsList=res.data.unitsList;
-          // for(var i=0;i<this.unitsList.length;i++){
-          //   if(this.unitsList[i].unit_name=="September"){
-          //     this.starts=this.unitsList[i].stars;
-          //     this.unitname=this.unitsList[i].unit_name;
-          //     this.unitsId=this.unitsList[i].units_detail_id;
-          //   }
-          // }
-
-          // for(var i=0;i<this.unitsList.length;i++){
-          // 	this.unitsList[i].bg="./assets/image/1Bugs.png";
-          // }
+          //this.unitsList=res.data.unitsList;
+          this.unitsList=[];
+          for (let i = 0; i < res.data.unitsList.length; i++) {
+            if(res.data.unitsList[i].name==="Summer Fun" || res.data.unitsList[i].name==="School Time"){
+              this.unitsList.push(res.data.unitsList[i]);
+              console.log(this.unitsList);
+            }
+          }
         }, res => {
           alertMsg("You must be connected to the internet.<br>Please connect and try again.");
         })

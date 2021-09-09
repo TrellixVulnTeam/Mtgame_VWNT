@@ -13,7 +13,7 @@
               <img src="../../assets/image/cardleft1.png" @click="turncard('left')" style="width: 40%;top: 40%;position: relative;">
             </div>
 
-            <div class="cardlist" style="padding-top: 10%">
+            <div class="cardlist">
               <div class="eightCard">
                 <div class="list" v-for="li in list" :key="li.id" @click="startpop(li)" >
                   <img :src=li.img class="card-img1">
@@ -471,62 +471,62 @@
           {
             id:1,
             cardName:'desk',
-            audio:require('../../assets/Flashcard Audio/august/Acrobat.mp3'),
+            audio:require('../../assets/Flashcard Audio/september/Desk.mp3'),
             img:require('../../assets/image/Classroom/Desk.png')
           },{
             id:2,
             cardName:'chair',
-            audio:require('../../assets/Flashcard Audio/august/clown.mp3'),
+            audio:require('../../assets/Flashcard Audio/september/chair.mp3'),
             img:require('../../assets/image/Classroom/Chair.png')
           },{
             id:3,
             cardName:'backpack',
-            audio:require('../../assets/Flashcard Audio/august/crowd.mp3'),
+            audio:require('../../assets/Flashcard Audio/september/Backpack.mp3'),
             img:require('../../assets/image/Classroom/Backpack.png')
           },{
             id:4,
             cardName:'eraser',
-            audio:require('../../assets/Flashcard Audio/august/Juggle.mp3'),
+            audio:require('../../assets/Flashcard Audio/september/eraser.mp3'),
             img:require('../../assets/image/Classroom/Eraser.png')
           },{
             id:5,
             cardName:'pencil',
-            audio:require('../../assets/Flashcard Audio/august/Net.mp3'),
+            audio:require('../../assets/Flashcard Audio/september/Pencil.mp3'),
             img:require('../../assets/image/Classroom/Pencil.png')
           },{
             id:6,
             cardName:'sit',
-            audio:require('../../assets/Flashcard Audio/august/tent.mp3'),
+            audio:require('../../assets/Flashcard Audio/september/sit.mp3'),
             img:require('../../assets/image/Classroom/Sit.png')
           },{
             id:7,
             cardName:'teacher',
-            audio:require('../../assets/Flashcard Audio/august/unicycle.mp3'),
+            audio:require('../../assets/Flashcard Audio/september/teacher.mp3'),
             img:require('../../assets/image/Classroom/Teacher.png')
           },{
             id:8,
             cardName:'write',
-            audio:require('../../assets/Flashcard Audio/august/watch.mp3'),
+            audio:require('../../assets/Flashcard Audio/september/write.mp3'),
             img:require('../../assets/image/Classroom/Write.png')
           },{
             id:9,
             cardName:'board',
-            audio:require('../../assets/Flashcard Audio/august/cheer.mp3'),
+            audio:require('../../assets/Flashcard Audio/september/board.mp3'),
             img:require('../../assets/image/Classroom/Board.png')
           },{
             id:10,
             cardName:'clock',
-            audio:require('../../assets/Flashcard Audio/august/magician.mp3'),
+            audio:require('../../assets/Flashcard Audio/september/Clock.mp3'),
             img:require('../../assets/image/Classroom/Clock.png')
           },{
             id:11,
             cardName:'crayons',
-            audio:require('../../assets/Flashcard Audio/august/tightrope.mp3'),
+            audio:require('../../assets/Flashcard Audio/september/crayons.mp3'),
             img:require('../../assets/image/Classroom/Crayons.png')
           },{
             id:12,
             cardName:'listen',
-            audio:require('../../assets/Flashcard Audio/august/trick.mp3'),
+            audio:require('../../assets/Flashcard Audio/september/listen.mp3'),
             img:require('../../assets/image/Classroom/listen.png')
           }
         ],
@@ -534,62 +534,62 @@
           {
             id:1,
             cardName:'kick',
-            audio:require('../../assets/Flashcard Audio/august/Acrobat.mp3'),
+            audio:require('../../assets/Flashcard Audio/september/Kick.mp3'),
             img:require('../../assets/image/SchoolTime/Kick.png')
           },{
             id:2,
             cardName:'ball',
-            audio:require('../../assets/Flashcard Audio/august/clown.mp3'),
+            audio:require('../../assets/Flashcard Audio/september/ball.mp3'),
             img:require('../../assets/image/SchoolTime/Ball.png')
           },{
             id:3,
             cardName:'snack',
-            audio:require('../../assets/Flashcard Audio/august/crowd.mp3'),
+            audio:require('../../assets/Flashcard Audio/september/Snack.mp3'),
             img:require('../../assets/image/SchoolTime/Snack.png')
           },{
             id:4,
             cardName:'swing',
-            audio:require('../../assets/Flashcard Audio/august/Juggle.mp3'),
+            audio:require('../../assets/Flashcard Audio/september/swing.mp3'),
             img:require('../../assets/image/SchoolTime/Swing.png')
           },{
             id:5,
             cardName:'run',
-            audio:require('../../assets/Flashcard Audio/august/Net.mp3'),
+            audio:require('../../assets/Flashcard Audio/september/run.mp3'),
             img:require('../../assets/image/SchoolTime/Run.png')
           },{
             id:6,
             cardName:'slide',
-            audio:require('../../assets/Flashcard Audio/august/tent.mp3'),
+            audio:require('../../assets/Flashcard Audio/september/slide.mp3'),
             img:require('../../assets/image/SchoolTime/Slide.png')
           },{
             id:7,
             cardName:'playground',
-            audio:require('../../assets/Flashcard Audio/august/unicycle.mp3'),
+            audio:require('../../assets/Flashcard Audio/september/playground.mp3'),
             img:require('../../assets/image/SchoolTime/Playground.png')
           },{
             id:8,
             cardName:'climb',
-            audio:require('../../assets/Flashcard Audio/august/watch.mp3'),
+            audio:require('../../assets/Flashcard Audio/september/climb.mp3'),
             img:require('../../assets/image/SchoolTime/Climb.png')
           },{
             id:9,
             cardName:'toys',
-            audio:require('../../assets/Flashcard Audio/august/cheer.mp3'),
+            audio:require('../../assets/Flashcard Audio/september/Toys.mp3'),
             img:require('../../assets/image/SchoolTime/Toys.png')
           },{
             id:10,
             cardName:'ring',
-            audio:require('../../assets/Flashcard Audio/august/magician.mp3'),
+            audio:require('../../assets/Flashcard Audio/september/Ring.mp3'),
             img:require('../../assets/image/SchoolTime/Ring.png')
           },{
             id:11,
             cardName:'seesaw',
-            audio:require('../../assets/Flashcard Audio/august/tightrope.mp3'),
+            audio:require('../../assets/Flashcard Audio/september/seesaw.mp3'),
             img:require('../../assets/image/SchoolTime/Seesaw.png')
           },{
             id:12,
             cardName:'bell',
-            audio:require('../../assets/Flashcard Audio/august/trick.mp3'),
+            audio:require('../../assets/Flashcard Audio/september/Bell.mp3'),
             img:require('../../assets/image/SchoolTime/bell.png')
           }
         ],
@@ -705,19 +705,21 @@
       //初始化pop
       //单元数组 单元名+part12，前八个为walker，后四个runner
       createdpop(){
-        if(this.level==='WALKERS'){
-          this.list = this.$data[this.unit.replace(" ","")+this.part.replace("p","P")].slice(0,8);
-        }else {
-          this.list = this.$data[this.unit.replace(" ","")+this.part.replace("p","P")];
-        }
-        this.title = this.$data.titleUrl[this.unit.replace(" ","")+this.part.replace("p","P")];
+          if (this.level === 'WALKERS') {
+            this.list = this.$data[this.unit.replace(" ", "") + this.part.replace("p", "P")].slice(0, 8);
+          } else {
+            this.list = this.$data[this.unit.replace(" ", "") + this.part.replace("p", "P")];
+          }
+          this.title = this.$data.titleUrl[this.unit.replace(" ", "") + this.part.replace("p", "P")];
       },
-      //pop向左右切换卡牌
+      //pop向左右切换卡牌http://103.218.241.33/assets/image/6-6logo.png
       turnpop(turn){
         if (turn==='left'&&this.flashCardId!==1) {
           this.flashCardId=this.flashCardId-2;
-        }else if(turn==='left'&&this.flashCardId===1){
+        }else if(turn==='left'&&this.flashCardId===1&&this.level!=='WALKERS'){
           this.flashCardId=11;
+        }else if(turn==='left'&&this.flashCardId===1&&this.level==='WALKERS'){
+          this.flashCardId=8;
         }else if(turn==='right'&&this.flashCardId===12){
           this.flashCardId=0;
         }else if(turn==='right'&&this.flashCardId===8&&this.level==='WALKERS'){
@@ -801,6 +803,8 @@
     display: flex;
   }
 
+
+
   .acstyle {
     height: 70%;
     position: absolute;
@@ -867,7 +871,16 @@
     padding: 10px 40px;
     background-color: #43BE76;
     border-radius: 30px;
-    margin-top: 10px;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .eightCard {
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
   }
 
   .eightCard div:first-child:nth-last-child(8),
@@ -876,38 +889,38 @@
     margin: 0 1.6% 0 1.6%;
   }
 
-  @media only screen and (min-device-width : 768px) and (max-device-width : 1366px)  and (orientation : landscape) {
-    .cardlist {
-      width: 80%;
-      height: 90%;
-      left: 10%;
-      top: 10%;
-      position: absolute;
-    }
-
-  }
-
-
-  @media only screen and (min-device-width : 812px) and (max-device-height : 375px)  and (orientation : landscape) {
-    .cardlist {
-      width: 80%;
-      height: 90%;
-      left: 10%;
-      top: -5%;
-      position: absolute;
-    }
-
-    .jump{
-    color: white;
-    font-size: 25px;
-    font-family: kg;
-    display: inline-block;
-    padding: 5px 35px;
-    background-color: #43BE76;
-    border-radius: 30px;
-    margin-top: -5px;
-    }
-  }
+  //@media only screen and (min-device-height:  : 768px) and (max-device-height : 1366px)  and (orientation : landscape) {
+  //  .cardlist {
+  //    width: 80%;
+  //    height: 90%;
+  //    left: 10%;
+  //    top: 10%;
+  //    position: absolute;
+  //  }
+  //
+  //}
+  //
+  //
+  //@media only screen and (min-device-height:  : 812px) and (max-device-height : 375px)  and (orientation : landscape) {
+  //  .cardlist {
+  //    width: 80%;
+  //    height: 90%;
+  //    left: 10%;
+  //    top: -5%;
+  //    position: absolute;
+  //  }
+  //
+  //  .jump{
+  //  color: white;
+  //  font-size: 25px;
+  //  font-family: kg;
+  //  display: inline-block;
+  //  padding: 5px 35px;
+  //  background-color: #43BE76;
+  //  border-radius: 30px;
+  //  margin-top: -5px;
+  //  }
+  //}
   .cardright {
     width: 15%;
     right: 0;
@@ -929,7 +942,7 @@
     //top: 25%;
   }
   .card-img1 {
-    width: 100%;
+    width: 95%;
     position: absolute;
   }
 
@@ -1082,267 +1095,285 @@
     max-width: 100%;
   }
 
-  @media screen and (max-width: 481px) {
-    .fontsize {
-      bottom: 16%;
-      position: absolute;
-      font-size: 1.2rem;
-      margin-left: 2%;
-    }
-  }
+  //@media screen and (max-width: 481px) {
+  //  .fontsize {
+  //    bottom: 16%;
+  //    position: absolute;
+  //    font-size: 1.2rem;
+  //    margin-left: 2%;
+  //  }
+  //}
+  //
+  //@media screen and (min-width: 482px) and (max-width: 569px) {
+  //  .fontsize {
+  //    bottom: 16%;
+  //    position: absolute;
+  //    font-size: 1.2rem;
+  //    margin-left: 2%;
+  //  }
+  //}
+  //
+  //
+  //@media screen and (min-width: 812px) and (max-width:895px) {
+  //  .animapng7 {
+  //    font-size: 3rem;
+  //  }
+  //}
+  //@media screen and (min-width: 896px) and (max-width:1023px) {
+  //  .animapng7 {
+  //    font-size: 3rem;
+  //  }
+  //}
+  //
+  //@media screen and (min-width: 1024px) and (max-width: 1199px) {
+  //  .fontsize {
+  //    bottom: 13%;
+  //    position: absolute;
+  //    font-size: 2.5rem;
+  //    margin-left: 2%;
+  //  }
+  //
+  //  .acstyle {
+  //    height: 70%;
+  //    position: absolute;
+  //    left: 5%;
+  //    bottom: 9%;
+  //  }
+  //
+  //  .setting {
+  //    width: 14%;
+  //    position: absolute;
+  //    right: 8%;
+  //    bottom: 0%;
+  //  }
+  //
+  //  .leftmar2 {
+  //    left: 43%;
+  //  }
+  //
+  //  .coinstyle {
+  //    height: 70%;
+  //    position: absolute;
+  //    left: 35%;
+  //    bottom: 9%;
+  //  }
+  //
+  //
+  //  .close {
+  //    width: 60px;
+  //    height: 60px;
+  //    margin: -25px;
+  //  }
+  //
+  //  .close img {
+  //    height: 60px;
+  //    width: 60px;
+  //  }
+  //  .animapng7 {
+  //    font-size: 3rem;
+  //  }
+  //  .pstyle{
+  //    font-size: 2rem;
+  //  }
+  //  .backbutton{
+  //    top: 5%;
+  //    left: 5%;
+  //  }
+  //  .toptitle{
+  //    top: 5%;
+  //  }
+  //  .list{
+  //    top: 0%;
+  //  }
+  //}
+  //
+  //@media screen and (min-width: 1200px) and (max-width: 1600px) {
+  //  .fontsize {
+  //    bottom: 13%;
+  //    position: absolute;
+  //    font-size: 3rem;
+  //    margin-left: 2%;
+  //  }
+  //
+  //  .acstyle {
+  //    height: 70%;
+  //    position: absolute;
+  //    left: 5%;
+  //    bottom: 9%;
+  //  }
+  //
+  //  .setting {
+  //    width: 14%;
+  //    position: absolute;
+  //    right: 8%;
+  //    bottom: 0%;
+  //  }
+  //
+  //  .leftmar2 {
+  //    left: 43%;
+  //  }
+  //
+  //  .coinstyle {
+  //    height: 70%;
+  //    position: absolute;
+  //    left: 35%;
+  //    bottom: 9%;
+  //  }
+  //
+  //
+  //  .close {
+  //    width: 60px;
+  //    height: 60px;
+  //    margin: -25px;
+  //  }
+  //
+  //  .close img {
+  //    height: 60px;
+  //    width: 60px;
+  //  }
+  //  .animapng7 {
+  //    font-size: 4rem;
+  //  }
+  //  .pstyle{
+  //    font-size: 2rem;
+  //  }
+  //  .backbutton{
+  //    top: 5%;
+  //    left: 5%;
+  //  }
+  //  .toptitle{
+  //    top: 5%;
+  //  }
+  //  .list{
+  //    top: 0%;
+  //  }
+  //}
+  //
+  //@media screen and (min-width: 823px) and (max-width: 824px) {
+  //  .cardlist{
+  //    top:0%;
+  //  }
+  //  .jump{
+  //    margin-top: 5px;
+  //    padding: 5px 20px;
+  //  }
+  //}
+  //
+  //@media screen and (min-width: 1600px) {
+  //
+  //  .fontsize {
+  //    bottom: 13%;
+  //    position: absolute;
+  //    font-size: 3rem;
+  //    margin-left: 2%;
+  //  }
+  //
+  //  .acstyle {
+  //    height: 70%;
+  //    position: absolute;
+  //    left: 5%;
+  //    bottom: 9%;
+  //  }
+  //
+  //  .setting {
+  //    width: 14%;
+  //    position: absolute;
+  //    right: 8%;
+  //    bottom: 0%;
+  //  }
+  //
+  //  .leftmar2 {
+  //    left: 43%;
+  //  }
+  //
+  //  .coinstyle {
+  //    height: 70%;
+  //    position: absolute;
+  //    left: 35%;
+  //    bottom: 9%;
+  //  }
+  //
+  //  .close {
+  //    width: 80px;
+  //    height: 80px;
+  //    margin: -35px;
+  //  }
+  //
+  //  .close img {
+  //    height: 80px;
+  //    width: 80px;
+  //  }
+  //  .animapng7 {
+  //    font-size: 6rem;
+  //  }
+  //  .pstyle{
+  //    font-size:3rem;
+  //  }
+  //  .backbutton{
+  //    top: 5%;
+  //    left: 5%;
+  //  }
+  //  .toptitle{
+  //    top: 5%;
+  //  }
+  //}
 
-  @media screen and (min-width: 482px) and (max-width: 569px) {
-    .fontsize {
-      bottom: 16%;
-      position: absolute;
-      font-size: 1.2rem;
-      margin-left: 2%;
-    }
-  }
-
-
-  @media screen and (min-width: 812px) and (max-width:895px) {
-    .animapng7 {
-      font-size: 3rem;
-    }
-  }
-  @media screen and (min-width: 896px) and (max-width:1023px) {
-    .animapng7 {
-      font-size: 3rem;
-    }
-  }
-
-  @media screen and (min-width: 1024px) and (max-width: 1199px) {
-    .fontsize {
-      bottom: 13%;
-      position: absolute;
-      font-size: 2.5rem;
-      margin-left: 2%;
-    }
-
-    .acstyle {
-      height: 70%;
-      position: absolute;
-      left: 5%;
-      bottom: 9%;
-    }
-
-    .setting {
-      width: 14%;
-      position: absolute;
-      right: 8%;
-      bottom: 0%;
-    }
-
-    .leftmar2 {
-      left: 43%;
-    }
-
-    .coinstyle {
-      height: 70%;
-      position: absolute;
-      left: 35%;
-      bottom: 9%;
-    }
-
-
-    .close {
-      width: 60px;
-      height: 60px;
-      margin: -25px;
-    }
-
-    .close img {
-      height: 60px;
-      width: 60px;
-    }
-    .animapng7 {
-      font-size: 3rem;
-    }
-    .pstyle{
-      font-size: 2rem;
-    }
-    .backbutton{
-      top: 5%;
-      left: 5%;
-    }
-    .toptitle{
-      top: 5%;
-    }
-    .list{
-      top: 0%;
-    }
-  }
-
-  @media screen and (min-width: 1200px) and (max-width: 1600px) {
-    .fontsize {
-      bottom: 13%;
-      position: absolute;
-      font-size: 3rem;
-      margin-left: 2%;
-    }
-
-    .acstyle {
-      height: 70%;
-      position: absolute;
-      left: 5%;
-      bottom: 9%;
-    }
-
-    .setting {
-      width: 14%;
-      position: absolute;
-      right: 8%;
-      bottom: 0%;
-    }
-
-    .leftmar2 {
-      left: 43%;
-    }
-
-    .coinstyle {
-      height: 70%;
-      position: absolute;
-      left: 35%;
-      bottom: 9%;
-    }
-
-
-    .close {
-      width: 60px;
-      height: 60px;
-      margin: -25px;
-    }
-
-    .close img {
-      height: 60px;
-      width: 60px;
-    }
-    .animapng7 {
-      font-size: 4rem;
-    }
-    .pstyle{
-      font-size: 2rem;
-    }
-    .backbutton{
-      top: 5%;
-      left: 5%;
-    }
-    .toptitle{
-      top: 5%;
-    }
-    .list{
-      top: 0%;
-    }
-  }
-
-  @media screen and (min-width: 823px) and (max-width: 824px) {
-    .cardlist{
-      top:0%;
-    }
-    .jump{
-      margin-top: 5px;
-      padding: 5px 20px;
-    }
-  }
-
-  @media screen and (min-width: 1600px) {
-
-    .fontsize {
-      bottom: 13%;
-      position: absolute;
-      font-size: 3rem;
-      margin-left: 2%;
-    }
-
-    .acstyle {
-      height: 70%;
-      position: absolute;
-      left: 5%;
-      bottom: 9%;
-    }
-
-    .setting {
-      width: 14%;
-      position: absolute;
-      right: 8%;
-      bottom: 0%;
-    }
-
-    .leftmar2 {
-      left: 43%;
-    }
-
-    .coinstyle {
-      height: 70%;
-      position: absolute;
-      left: 35%;
-      bottom: 9%;
-    }
-
-    .close {
-      width: 80px;
-      height: 80px;
-      margin: -35px;
-    }
-
-    .close img {
-      height: 80px;
-      width: 80px;
-    }
-    .animapng7 {
-      font-size: 6rem;
-    }
-    .pstyle{
-      font-size:3rem;
-    }
-    .backbutton{
-      top: 5%;
-      left: 5%;
-    }
-    .toptitle{
-      top: 5%;
-    }
-  }
-
-  @media only screen and (min-device-width: 812px) and (max-device-width: 1023px) and (-webkit-device-pixel-ratio: 3){
+  //手机分辨率
+  @media only screen and (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 3),
+  (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 2),
+  (min-width: 812px) and (max-width: 1023px){
     .eightCard div:first-child:nth-last-child(8),
     .eightCard div:nth-last-child(8):first-child ~div{
       width: 14%;
-      margin: 0 3.5% 0 3.5%;
+      margin: 0 3.5%;
     }
 
-    .cardlist {
-      top: 50% !important;
-      transform: translateY(-48%) !important;
-      position: absolute;
+    .eightCard {
+      transform: translate(-50%, -50%);
+      left: 50%;
+      width: 90%;
     }
+
     .toptitle{
-      top :10px !important;
+      top :10px;
     }
+
     .jump {
-      font-size: 25px !important;
-      padding: 5px 20px !important;
-      border-radius: 25px !important;
-      margin-top: -3px !important;
+      font-size: 25px;
+      padding: 5px 20px;
+      border-radius: 25px ;
     }
   }
-  @media only screen and (min-device-width: 375px) and (max-device-width: 811px) and (-webkit-device-pixel-ratio: 3){
+
+  //手机分辨率
+  @media only screen and (min-device-height: 375px) and (max-device-height: 811px) and (-webkit-device-pixel-ratio: 3),
+  (min-device-height: 375px) and (max-device-height: 811px) and (-webkit-device-pixel-ratio: 2),
+  (min-width: 375px) and (max-width: 811px){
     .jump {
       font-size: 25px;
       padding: 5px 20px ;
       border-radius: 25px;
-      margin-top: -3px ;
     }
   }
-  @media only screen and (min-device-width: 375px) and (max-device-width: 811px) and (-webkit-device-pixel-ratio: 2){
-    .jump {
-      font-size: 25px;
-      padding: 5px 20px ;
-      border-radius: 25px;
-      margin-top: -3px ;
+
+  //平板分辨率
+  @media only screen and (min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 3),
+  (min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 2),
+  (min-width: 1024px) and (max-width: 1600px){
+    .eightCard div:first-child:nth-last-child(8),
+    .eightCard div:nth-last-child(8):first-child ~ div {
+      width: 18%;
+      margin: 0 2%;
+    }
+
+    .eightCard {
+      transform: translateY(-55%);
+    }
+
+    .fontsize {
+      font-size: 3rem;
     }
   }
-  @media only screen and (min-device-width: 1024px) and (max-device-width: 1600px) and (-webkit-device-pixel-ratio: 3){}
+
 
 </style>

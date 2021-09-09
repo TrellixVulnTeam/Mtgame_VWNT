@@ -1416,7 +1416,7 @@
       font-family: pepper;
       color: white;
       bottom: 0%;
-      left: 8%;
+      left: 10%;
       position: absolute;
       font-size: x-large;
       max-height: 80%;

@@ -270,6 +270,7 @@
 			}
 		},
 		created() { //生命周期里接收参数
+		  console.log(this.$route.query);
 			this.pic=this.$axios.defaults.baseURL2;
 			this.unit = this.$route.query.unit;
 			this.part = this.$route.query.part;
@@ -283,26 +284,17 @@
       }else if(this.part==='part3'){
         this.url1=this.url+'exerciseG';
       }
-      if(this.gamename==''||this.gamename==undefined){
+      if(this.gamename===''||this.gamename===undefined){
         this.gamename=localStorage.getItem('gamename')
       }else {
         localStorage.setItem('gamename',this.gamename);
       }
       var timestamp = (new Date()).getTime();
       localStorage.setItem('startTimeid',timestamp);
-			for(var i=0;i<this.bgimg.length;i++){
-				if(this.unit===this.bgimg[i].spring){
-					this.bgimg[i].active=true;
-				}else{
-					this.bgimg[i].active=false;
-				}
+			for(let i=0; i<this.bgimg.length; i++){
+        this.bgimg[i].active = this.unit === this.bgimg[i].spring;
 			}
-			if(localStorage.getItem('gamemusic')=="false"){
-			    this.show=false;
-			}else{
-				 this.show=true;
-			}
-
+			this.show = localStorage.getItem('gamemusic') !== "false";
 				this.$axios.post(this.url1, qs.stringify({
 						  menuDetailId: this.menuId,
 					})).then(res => {
@@ -322,10 +314,6 @@
               this.allquestion = this.listG.length - 3;
             }
           }
-						// for (let i in res.data) {
-						//     this.listG.push(res.data[i]); //属性
-						// }
-						//  this.allquestion=this.listG.length-3;
 						this.list1 =this.listG[this.countpage-1];
 						this.question=this.list1[0].question;
             this.shownumb=true;
@@ -334,13 +322,11 @@
 						}else{
 							this.questionsize=0;
 						  }
-          if(this.onef == true) {
+          if(this.onef === true) {
             setTimeout(() => {
               this.onef = false;
-            }, 1000);
+            }, 3000);
           }
-					 //    this.list1=res.data.Maplist;
-						// this.question=res.data.question;
 					}, res => {
 						alertMsg("You must be connected to the internet.<br>Please connect and try again.");
 					});
@@ -374,15 +360,14 @@
 						corePy: imgsty[i].offsetTop + imgsty[i].offsetHeight/2
 					}
 					this.centerP.push(coreP);
-
 				}
 				this.canvasObj = canvas;
 				this.canvasH = imgBox.clientHeight; // 存储canvas的高度，用于清空画布
 				canvas.width = imgBox.clientWidth; // 动态赋值canvas的宽度
-	      		canvas.height = imgBox.clientHeight; // 动态赋值canvas的高度
-	      		this.context = canvas.getContext('2d');
+        canvas.height = imgBox.clientHeight; // 动态赋值canvas的高度
+        this.context = canvas.getContext('2d');
 				this.setCanvasStyle();
-			}, 4000);
+			 }, 5000);
 		},
 		destroyed() {
 		document.body.removeEventListener('touchmove',this.bodyScroll,{passive: false});
@@ -406,8 +391,7 @@
 		    },
 			// 在canvas中鼠标按下
 			canvasDown(e) {
-				//console.log(e);
-			    if(e.touches && e.touches.length==1){
+			    if(e.touches && e.touches.length===1){
 					 this.canvasMoveUse = true;
 				     const t = e.target;
 				     let canvasX;
@@ -420,9 +404,10 @@
 				     	//console.log(e.changedTouches);
 					   if(e.changedTouches){
 					    	canvasX = e.changedTouches[0].clientX - t.parentNode.offsetLeft;
-					        canvasY = e.changedTouches[0].clientY - t.parentNode.offsetTop;
+                canvasY = e.changedTouches[0].clientY - t.parentNode.offsetTop;
+               console.log("canvasX:"+canvasX+"canvasY:"+canvasY);
 					}
-				};
+				}
 				   this.context.beginPath();
 				    this.context.moveTo(canvasX, canvasY);
 				    this.context.stroke();
@@ -435,7 +420,7 @@
 
 			// canvas中鼠标移动
 			canvasMove(e) {
-				//console.log(e);
+        console.log(e);
 				if(this.canvasMoveUse) {
 					// 只有允许移动时调用
 					const t = e.target;
@@ -448,6 +433,7 @@
 					} else {
 						canvasX = e.changedTouches[0].clientX - t.parentNode.offsetLeft;
 						canvasY = e.changedTouches[0].clientY - t.parentNode.offsetTop;
+            console.log("canvasX:"+canvasX+"canvasY:"+canvasY);
 					};
 					// 连接到移动的位置并上色
 					this.context.lineTo(canvasX, canvasY);
@@ -467,24 +453,25 @@
 				this.centerP.forEach((item, index) => {
 					if (this.context.isPointInPath(item.corePx, item.corePy)) { // 获取答题选项下标
 						anwserIndex = index;
-					};
-          // console.log(this.context.isPointInPath(item.corePx, item.corePy));
-					if (this.question == this.list1[index].value) { // 获取正确选项下标
+					}
+           console.log(this.context.isPointInPath(item.corePx, item.corePy));
+					if (this.question === this.list1[index].value) { // 获取正确选项下标
 						successIndex = index;
-					};
+					}
 					if (this.context.isPointInPath(item.corePx, item.corePy)) {
 						isSelect = true;
 						anwserList.push(item);
-					};
+					}
 				});
 				if (!isSelect) { // 没有选中
 					this.canvasObj.height = this.canvasH;
 					this.setCanvasStyle();
+					console.log("miss");
 				} else {
 					if (anwserList.length === 1) { // 答题时只有圈中一个选项才能进行判断
 					     this.zhezhao=true;
 						// console.log(anwserIndex);
-						if (this.question == this.list1[anwserIndex].value) {
+						if (this.question === this.list1[anwserIndex].value) {
 							/*回答正确在这里写效果*/
 							this.soundscorrect=true;
 							setTimeout(() => {
@@ -495,7 +482,7 @@
 								this.issuccess1=true;
 								this.score="1";
 								this.countpage += 1;
-								if(this.fisrtanswer==false){
+								if(this.fisrtanswer===false){
 									this.account += 1;
 								}
 								this.context.beginPath(); // 重新绘制一个圆
@@ -648,7 +635,7 @@
 
 
 			changesett() {
-					if(this.action==false&&this.onef==false){
+        if(this.action===false&&this.onef===false){
 				this.action=true;
 				setTimeout(() => {
 				this.action=false;
@@ -660,8 +647,8 @@
 						this.canvasObj = canvas;
 						this.canvasH = imgBox.clientHeight; // 存储canvas的高度，用于清空画布
 						canvas.width = imgBox.clientWidth; // 动态赋值canvas的宽度
-			      		canvas.height = imgBox.clientHeight; // 动态赋值canvas的高度
-			      		this.context = canvas.getContext('2d');
+            canvas.height = imgBox.clientHeight; // 动态赋值canvas的高度
+            this.context = canvas.getContext('2d');
 						this.setCanvasStyle();
 					}, 2100);
 				}
@@ -724,8 +711,8 @@
 		},
 		watch: {
 			'onef': function(newVal) {
-				if(this.onef == true) {
-					      if(this.score=="1"){
+				if(this.onef === true) {
+					      if(this.score==="1"){
 							//  this.$axios.post(this.url, qs.stringify({
 							// 	partName: 'partG',
 							// 	userId:this.getCookie('userId'),

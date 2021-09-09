@@ -411,7 +411,7 @@
       },
       change7() {
         if (this.key != true && this.UnitsList.length != 0) {
-          this.spanp = "Listen and match the pictures to the correct words. ";
+          this.spanp = "Listen and match the words. ";
           setTimeout(() => {
             this.changei7 = true;
             this.popp = !this.popp;
