@@ -716,11 +716,21 @@
         <img src="../../assets/image/201909H5 Classroom_MT/Word/word_pencil Comp 1_0.png"
              :style="{zIndex: !pencil ? 100 : 1}" @click="showGif('pencil')">
       </div>
+<!--      <div class="read">-->
+<!--        <img src="../../assets/image/201909H5 Classroom_MT/GIF_PNG/read_00.png" v-if="read&&sit" @click="showGif('read')">-->
+<!--        <img src="../../assets/image/201909H5 Classroom_MT/GIF/read.gif" style="z-index: 100" v-if="!read&&walkers"-->
+<!--             @click="showGif('read')">-->
+<!--        <img src="../../assets/image/201909H5 Classroom_MT/GIF/sit.gif" style="z-index: 100" v-if="!sit || !walkers&&!read"-->
+<!--             @click="showGif('sit')">-->
+<!--      </div>-->
       <div class="read">
-        <img src="../../assets/image/201909H5 Classroom_MT/GIF_PNG/read_00.png" v-if="read&&sit" @click="showGif('read')">
+        <img src="../../assets/image/201909H5 Classroom_MT/GIF_PNG/read_00.png" v-if="read&&walkers" @click="showGif('read')">
         <img src="../../assets/image/201909H5 Classroom_MT/GIF/read.gif" style="z-index: 100" v-if="!read&&walkers"
-             @click="showGif('read')">
-        <img src="../../assets/image/201909H5 Classroom_MT/GIF/sit.gif" style="z-index: 100" v-if="!sit || !walkers&&!read"
+        @click="showGif('read')">
+      </div>
+      <div class="read">
+        <img src="../../assets/image/201909H5 Classroom_MT/GIF_PNG/sit_00.png" v-if="sit&&!walkers" @click="showGif('sit')">
+        <img src="../../assets/image/201909H5 Classroom_MT/GIF/sit.gif" style="z-index: 100" v-if="!sit"
              @click="showGif('sit')">
       </div>
       <div class="readbutton">
@@ -889,7 +899,7 @@
       </div>
       <div class="bellButton">
         <img src="../../assets/image/201909H5 SchoolTime_MT/Word/word_bell Comp 1_0.png" v-if="walkers"
-             :style="{zIndex: !bell ? 100 : 1}" @click="showGif('bell')">
+             :style="{zIndex: !bell ? 100 : 3}" @click="showGif('bell')">
       </div>
       <div class="ringButton">
         <img src="../../assets/image/201909H5 SchoolTime_MT/Word/word_ring Comp 1_0.png" v-if="walkers"
@@ -902,6 +912,148 @@
       <div class="junglegymButton">
         <img src="../../assets/image/201909H5 SchoolTime_MT/Word/word_jungle gym Comp 1_0.png" v-if="walkers"
              :style="{zIndex: !junglegym ? 100 : 1}" @click="showGif('junglegym')">
+      </div>
+    </div>
+    <div v-else-if="this.unit === 'Animals' && this.part === 'part1'">
+      <img src="../../assets/image/201910H5 Pets_MT/Walker_BG/bg_0.png"
+           style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;"/>
+      <div class="big">
+        <img src="../../assets/image/201910H5 Pets_MT/PNG/big_00.png" v-if="big" @click="!walkers && showGif('big')">
+        <img src="../../assets/image/201910H5 Pets_MT/PNG/big_00.png" v-if="puppy" @click="walkers && showGif('puppy')">
+        <img src="../../assets/image/201910H5 Pets_MT/GIF/puppy.gif" style="z-index: 100" v-if="!big"
+             @click="showGif('big')">
+        <img src="../../assets/image/201910H5 Pets_MT/GIF/puppy.gif" style="z-index: 100" v-if="!puppy"
+             @click="showGif('puppy')">
+      </div>
+      <div class="small">
+        <img src="../../assets/image/201910H5 Pets_MT/PNG/small_00.png" v-if="small" @click="walkers && showGif('small')">
+        <img src="../../assets/image/201910H5 Pets_MT/GIF/small.gif" style="z-index: 100" v-if="!small"
+             @click="showGif('small')">
+      </div>
+      <div class="tank1">
+        <img src="../../assets/image/201910H5 Pets_MT/PNG/tank_00.png" v-if="tank1" @click="showGif('tank1')">
+        <img src="../../assets/image/201910H5 Pets_MT/GIF/tank.gif" style="z-index: 100" v-if="!tank1"
+             @click="showGif('tank1')">
+      </div>
+      <div class="fish">
+        <img src="../../assets/image/201910H5 Pets_MT/PNG/fish_00.png" v-if="!walkers&&fish" @click="showGif('fish')">
+        <img src="../../assets/image/201910H5 Pets_MT/PNG/fish_00.png" v-if="walkers&&goldfish" @click="showGif('goldfish')">
+        <img src="../../assets/image/201910H5 Pets_MT/GIF/fish.gif" style="z-index: 100" v-if="!fish"
+             @click="showGif('fish')">
+        <img src="../../assets/image/201910H5 Pets_MT/GIF/goldfish.gif" style="z-index: 100" v-if="!goldfish"
+             @click="showGif('goldfish')">
+      </div>
+      <div class="kitten">
+        <img src="../../assets/image/201910H5 Pets_MT/PNG/kitten_00.png" v-if="walkers&&kitten" @click="showGif('kitten')">
+        <img src="../../assets/image/201910H5 Pets_MT/PNG/kitten_00.png" v-if="!walkers&&cat" @click="showGif('cat')">
+        <img src="../../assets/image/201910H5 Pets_MT/GIF/kitten.gif" style="z-index: 100" v-if="!kitten"
+             @click="showGif('kitten')">
+        <img src="../../assets/image/201910H5 Pets_MT/GIF/kitten.gif" style="z-index: 100" v-if="!cat"
+             @click="showGif('cat')">
+      </div>
+      <div class="turtle">
+        <img src="../../assets/image/201910H5 Pets_MT/PNG/turtle_00.png" v-if="turtle" @click="walkers && showGif('turtle')">
+        <img src="../../assets/image/201910H5 Pets_MT/GIF/turtle.gif" style="z-index: 100" v-if="!turtle"
+             @click="showGif('turtle')">
+      </div>
+      <div class="hamster">
+        <img src="../../assets/image/201910H5 Pets_MT/PNG/hamster_00.png" v-if="hamster" @click="walkers && showGif('hamster')">
+        <img src="../../assets/image/201910H5 Pets_MT/GIF/hamster.gif" style="z-index: 100" v-if="!hamster"
+             @click="showGif('hamster')">
+      </div>
+      <div class="brush">
+        <img src="../../assets/image/201910H5 Pets_MT/PNG/brush_00.png" v-if="brush" @click="showGif('brush')">
+        <img src="../../assets/image/201910H5 Pets_MT/GIF/brush.gif" style="z-index: 100" v-if="!brush"
+             @click="showGif('brush')">
+      </div>
+      <div class="feed">
+        <img src="../../assets/image/201910H5 Pets_MT/PNG/feed_00.png" v-if="feed" @click="showGif('feed')">
+        <img src="../../assets/image/201910H5 Pets_MT/GIF/feed.gif" style="z-index: 100" v-if="!feed"
+             @click="showGif('feed')">
+      </div>
+      <div class="cage">
+        <img src="../../assets/image/201910H5 Pets_MT/PNG/cage_00.png" v-if="cage" @click="showGif('cage')">
+        <img src="../../assets/image/201910H5 Pets_MT/GIF/cage.gif" style="z-index: 100" v-if="!cage"
+             @click="showGif('cage')">
+      </div>
+      <div class="bird">
+        <img src="../../assets/image/201910H5 Pets_MT/PNG/bird_00.png" v-if="bird" @click="!walkers && showGif('bird')">
+        <img src="../../assets/image/201910H5 Pets_MT/GIF/bird.gif" style="z-index: 100" v-if="!bird"
+             @click="showGif('bird')">
+      </div>
+      <div class="parrot">
+        <img src="../../assets/image/201910H5 Pets_MT/PNG/parrot_00.png" v-if="parrot" @click="walkers && showGif('parrot')">
+        <img src="../../assets/image/201910H5 Pets_MT/GIF/parrot.gif" style="z-index: 100" v-if="!parrot"
+             @click="showGif('parrot')">
+      </div>
+      <div class="puppy">
+        <img src="../../assets/image/201910H5 Pets_MT/PNG/puppy_00.png" v-if="puppy" @click="showGif('puppy')">
+        <img src="../../assets/image/201910H5 Pets_MT/GIF/puppy.gif" style="z-index: 100" v-if="!puppy"
+             @click="showGif('puppy')">
+      </div>
+      <div class="feedButton">
+        <img src="../../assets/image/201910H5 Pets_MT/Word/word_feed Comp 1_0.png"
+             :style="{zIndex: !feed ? 100 : 1}" @click="showGif('feed')">
+      </div>
+      <div class="brushButton">
+        <img src="../../assets/image/201910H5 Pets_MT/Word/word_brush Comp 1_0.png"
+             :style="{zIndex: !brush ? 100 : 1}" @click="showGif('brush')">
+      </div>
+      <div class="cageButton">
+        <img src="../../assets/image/201910H5 Pets_MT/Word/word_cage Comp 1_0.png"
+             :style="{zIndex: !cage ? 100 : 1}" @click="showGif('cage')">
+      </div>
+      <div class="birdButton">
+        <img src="../../assets/image/201910H5 Pets_MT/Word/word_bird Comp 1_0.png" v-if="!walkers"
+             :style="{zIndex: !bird ? 100 : 1}" @click="showGif('bird')">
+      </div>
+      <div class="tank1Button">
+        <img src="../../assets/image/201910H5 Pets_MT/Word/word_tank Comp 1_0.png"
+             :style="{zIndex: !tank1 ? 100 : 1}" @click="showGif('tank1')">
+      </div>
+      <div class="fishButton">
+        <img src="../../assets/image/201910H5 Pets_MT/Word/word_fish Comp 1_0.png" v-if="!walkers"
+             :style="{zIndex: !fish ? 100 : 1}" @click="showGif('fish')">
+      </div>
+      <div class="catButton">
+        <img src="../../assets/image/201910H5 Pets_MT/Word/word_cat Comp 1_0.png" v-if="!walkers"
+             :style="{zIndex: !kitten ? 100 : 1}" @click="showGif('kitten')">
+      </div>
+      <div class="dogButton">
+        <img src="../../assets/image/201910H5 Pets_MT/Word/word_dog Comp 1_0.png" v-if="!walkers"
+             :style="{zIndex: !puppy ? 100 : 1}" @click="showGif('puppy')">
+      </div>
+      <div class="puppyButton">
+        <img src="../../assets/image/201910H5 Pets_MT/Word/word_puppy Comp 1_0.png" v-if="walkers"
+             :style="{zIndex: !puppy ? 100 : 1}" @click="showGif('puppy')">
+      </div>
+      <div class="goldfishButton">
+        <img src="../../assets/image/201910H5 Pets_MT/Word/word_goldfish Comp 1_0.png" v-if="walkers"
+             :style="{zIndex: !goldfis ? 100 : 1}" @click="showGif('goldfis')">
+      </div>
+      <div class="hamsterButton">
+        <img src="../../assets/image/201910H5 Pets_MT/Word/word_hamster Comp 1_0.png" v-if="walkers"
+             :style="{zIndex: !hamster ? 100 : 1}" @click="showGif('hamster')">
+      </div>
+      <div class="turtleButton">
+        <img src="../../assets/image/201910H5 Pets_MT/Word/word_turtle Comp 1_0.png" v-if="walkers"
+             :style="{zIndex: !turtle ? 100 : 1}" @click="showGif('turtle')">
+      </div>
+      <div class="parrotButton">
+        <img src="../../assets/image/201910H5 Pets_MT/Word/word_parrot Comp 1_0.png" v-if="walkers"
+             :style="{zIndex: !parrot ? 100 : 1}" @click="showGif('parrot')">
+      </div>
+      <div class="smallButton">
+        <img src="../../assets/image/201910H5 Pets_MT/Word/word_small Comp 1_0.png" v-if="walkers"
+             :style="{zIndex: !small ? 100 : 1}" @click="showGif('small')">
+      </div>
+      <div class="bigButton">
+        <img src="../../assets/image/201910H5 Pets_MT/Word/word_big Comp 1_0.png" v-if="walkers"
+             :style="{zIndex: !big ? 100 : 1}" @click="showGif('big')">
+      </div>
+      <div class="kittenButton">
+        <img src="../../assets/image/201910H5 Pets_MT/Word/word_kitten Comp 1_0.png" v-if="walkers"
+             :style="{zIndex: !kitten ? 100 : 1}" @click="showGif('kitten')">
       </div>
     </div>
     <div v-else>
@@ -1157,6 +1309,22 @@ export default {
           toys:require('../../assets/Flashcard Audio/september/Toys.mp3'),
         },
         cardType:'default',
+        dog:true,
+        cat:true,
+        big:true,
+        bird:true,
+        brush:true,
+        cage:true,
+        feed:true,
+        fish:true,
+        goldfish:true,
+        hamster:true,
+        kitten:true,
+        parrot:true,
+        puppy:true,
+        small:true,
+        tank1:true,
+        turtle:true,
         ball:true,
         bell:true,
         climb:true,
@@ -1529,6 +1697,223 @@ export default {
     position: fixed;
     background-color: #44ccc2;
     z-index: 201;
+  }
+
+  .big img {
+    width: 18%;
+    left: 13%;
+    top: 74%;
+    position: absolute;
+  }
+
+  .hamster img {
+    width: 20%;
+    left: 79.5%;
+    top: 72%;
+    position: absolute;
+  }
+
+  .fish img {
+    width: 20%;
+    left: 53.5%;
+    top: 72%;
+    position: absolute;
+  }
+
+  .turtle img{
+    width: 15%;
+    left: 81%;
+    top: 48%;
+    position: absolute;
+  }
+
+  .kitten img {
+    width: 30%;
+    left: 59%;
+    top: 36%;
+    position: absolute;
+  }
+
+  .tank1 img {
+    width: 28%;
+    left: 32%;
+    top: 59%;
+    position: absolute;
+  }
+
+  .small img {
+    width: 11%;
+    left: 3%;
+    top: 76%;
+    position: absolute;
+  }
+
+  .bird img {
+    width: 6%;
+    left: 83%;
+    top: 9%;
+    position: absolute;
+  }
+
+  .brush img {
+    width: 16%;
+    left: 4%;
+    top: 21%;
+    position: absolute;
+  }
+
+  .cage img {
+    width: 13%;
+    left: 46%;
+    top: -2%;
+    position: absolute;
+  }
+
+  .feed img {
+    width: 16%;
+    left: 30%;
+    top: 16%;
+    position: absolute;
+  }
+
+  .puppy img {
+    width: 16%;
+    left: 16%;
+    top: 27%;
+    position: absolute;
+  }
+
+  .parrot img{
+    width: 11%;
+    left: 68%;
+    top: 6%;
+    position: absolute;
+  }
+
+  .parrot img{
+    width: 11%;
+    left: 68%;
+    top: 6%;
+    position: absolute;
+  }
+
+  .feedButton img {
+    width: 6%;
+    left: 29%;
+    top: 15%;
+    position: absolute;
+  }
+
+  .brushButton img {
+    width: 6%;
+    left: 24%;
+    top: 23%;
+    position: absolute;
+  }
+
+  .cageButton img {
+    width: 6%;
+    left: 50%;
+    top: 24%;
+    position: absolute;
+  }
+
+  .birdButton img {
+    width: 6%;
+    left: 83%;
+    top: 26%;
+    position: absolute;
+  }
+
+  .tankButton img{
+    width: 11%;
+    left: 68%;
+    top: 6%;
+    position: absolute;
+  }
+
+  .fishButton img {
+    width: 5%;
+    left: 48%;
+    top: 87%;
+    position: absolute;
+  }
+
+  .catButton img {
+    width: 6%;
+    left: 56%;
+    top: 45%;
+    position: absolute;
+  }
+
+  .kittenButton img {
+    width: 6%;
+    left: 56%;
+    top: 45%;
+    position: absolute;
+  }
+
+  .dogButton img {
+    width: 6%;
+    left: 12%;
+    top: 48%;
+    position: absolute;
+  }
+
+  .puppyButton img {
+    width: 6%;
+    left: 12%;
+    top: 48%;
+    position: absolute;
+  }
+
+  .turtleButton img {
+    width: 5%;
+    left: 85%;
+    top: 43%;
+    position: absolute;
+  }
+
+  .goldfishButton img {
+    width: 7%;
+    left: 69%;
+    top: 91%;
+    position: absolute;
+  }
+
+  .hamsterButton img {
+    width: 7%;
+    left: 86%;
+    top: 67%;
+    position: absolute;
+  }
+
+  .parrotButton img {
+    width: 6%;
+    left: 72%;
+    top: 26%;
+    position: absolute;
+  }
+
+  .smallButton img {
+    width: 6%;
+    left: 11%;
+    top: 68%;
+    position: absolute;
+  }
+
+  .bigButton img {
+    width: 5%;
+    left: 22%;
+    top: 70%;
+    position: absolute;
+  }
+
+  .tank1Button img {
+    width: 5.5%;
+    left: 36%;
+    top: 87%;
+    position: absolute;
   }
 
   .climb img {

@@ -1,6 +1,4 @@
 <template>
-
-
   <div id="demo">
     <audio autoplay="autoplay" loop="loop" ref="MusicPlay" v-if="show" id="bookmusic"><source  src="../../assets/video/book.mp3"></audio>
 
@@ -592,7 +590,6 @@
                 str_2 = str_2 + "<span class='text2' id=str" + i + ">" + str.charAt(i) + "</span>";
               }
               oP[0].innerHTML = str_2;
-              // play();
             };
 
             function play() {
@@ -604,9 +601,7 @@
                 that.time = setTimeout(play, that.allplay);
                 if (a >= len) {
                   clearTimeout(that.time);
-
                   document.getElementById('out').style.display = 'none';
-                  // that.repeat=false;
                 }
               } else {
                 a = 0;
@@ -619,7 +614,6 @@
         }
       },
       close(idx, is_open) {
-        // console.log('1');
         if (this.isOpenedTop && is_open == 0) {//下一页
           if (this.wordlength < this.items[idx].word.length) {
             this.open(idx,is_open);
@@ -627,13 +621,11 @@
             this.record();
             this.showsound=false;
             this.items.forEach(item => (item.is_open = 1));
-            // this.isOpenedTop = false;
             this.isCloseddTop = true;
             this.backgrou = true;
             this.video = false;
             this.helps=false;
             var elements = document.getElementsByClassName('p' + idx);
-            // console.log(elements);
             var childs = elements[0].childNodes;
             for (var i = childs.length - 1; i >= 0; i--) {
               elements[0].removeChild(childs[i]);
@@ -655,20 +647,14 @@
 
       },
       reset() {
-
         this.items.forEach(item => (item.is_open = 0));
-
-        // this.topOpen();
         this.isOpenedTop = false;
         this.isCloseddTop = false;
         this.buttons = false;
         setTimeout(() => {
           this.thend = false;
           this.backgrou = false;
-
         }, 500)
-
-        // console.log(this.isCloseddTop);
       },
       record(){
         this.$axios.post(this.pageurl, qs.stringify({
@@ -689,7 +675,6 @@
       back() {
         var audio = document.getElementById('music');
         if(localStorage.getItem('audiomusic')==="false"){
-
         }else{
           audio.play();
         }
@@ -718,104 +703,94 @@
       },
       next() {
         this.loading=true;
-
         if(this.nextId!=null){
-
-
-        if(this.isAllLoaded===true){
-          this.isAllLoaded=false;
-          this.imgLoad=0;
-          if(this.nextId!=null){
-        this.$axios.post(this.url2,qs.stringify({
-          id:this.booklevelid,
-          studentId:localStorage.getItem('studentId')
-        })).then(res=>{
-
-          this.listBookName=res.data.listBookName;
-          for(var i=0;i<this.listBookName.length;i++){
-            this.listBookName[i].before_img=this.pic+this.listBookName[i].before_img;
-            this.listBookName[i].before_img1=this.pic+this.listBookName[i].before_img1;
-            this.listBookName[i].bg_img=this.pic+this.listBookName[i].bg_img;
-            this.listBookName[i].foot_img=this.pic+this.listBookName[i].foot_img;
-            this.listBookName[i].head_img=this.pic+this.listBookName[i].head_img;
-            this.listBookName[i].word_img=this.pic+this.listBookName[i].word_img;
-            if(this.listBookName[i].book_id===this.nextId){
-              localStorage.setItem('backimg',this.listBookName[i].before_img);
-              localStorage.setItem('backimg2',this.listBookName[i].before_img1);
-              localStorage.setItem('insetimg',this.listBookName[i].bg_img);
-              localStorage.setItem('fontimg',this.listBookName[i].head_img);
-              localStorage.setItem('wordimg',this.listBookName[i].word_img);
-              this.backimg=localStorage.getItem('backimg');
-              this.backimg2=localStorage.getItem('backimg2');
-              this.insetimg=localStorage.getItem('insetimg');
-              // this.insetimg="url("+localStorage.getItem('insetimg')+")";
-              this.fontimg=localStorage.getItem('fontimg');
-              this.wordimg=localStorage.getItem('wordimg');
-              this.isOpenedTop = false;
-              this.isCloseddTop = false;
-              this.buttons = false;
-              setTimeout(() => {
-                this.thend = false;
-                this.backgrou = false;
-              }, 500)
-            }
-          }
-
-          this.$axios.post(this.url,qs.stringify({
-            bookId:this.nextId
+          if(this.isAllLoaded===true){
+            this.isAllLoaded=false;
+            this.imgLoad=0;
+          this.$axios.post(this.url2,qs.stringify({
+            id:this.booklevelid,
+            studentId:localStorage.getItem('studentId')
           })).then(res=>{
-            this.bookId=this.nextId;
-            this.items=res.data.listBookDetail;
-            // this.items[this.items.length-1].bg=this.items[this.items.length-1].foot_img;
-            for(var i=0;i<this.items.length;i++){
-              for(var j=0;j<this.items[i].word.length;j++){
-                this.items[i].word[j].audio=this.pic+this.items[i].word[j].audio;
-              }
-              this.items[i].word1=this.items[i].word;
-              if(i>=1){
-                this.items[i].word=this.items[i-1].word1;
-              }
-              this.items[i].bg=this.pic+this.items[i].bg;
-              if(i===this.items.length-1){
-                this.items[i].bg=this.pic+this.items[i].foot_img;
-              }
-            }
+            this.listBookName=res.data.listBookName;
             for(var i=0;i<this.listBookName.length;i++){
+              this.listBookName[i].before_img=this.pic+this.listBookName[i].before_img;
+              this.listBookName[i].before_img1=this.pic+this.listBookName[i].before_img1;
+              this.listBookName[i].bg_img=this.pic+this.listBookName[i].bg_img;
+              this.listBookName[i].foot_img=this.pic+this.listBookName[i].foot_img;
+              this.listBookName[i].head_img=this.pic+this.listBookName[i].head_img;
+              this.listBookName[i].word_img=this.pic+this.listBookName[i].word_img;
               if(this.listBookName[i].book_id===this.nextId){
-                if(this.listBookName[i+1]!=undefined&&this.listBookName[i+1]!='undefined'){
-                  this.nextId=this.listBookName[i+1].book_id;
-                  // console.log(this.nextId);
-                }else {
-                  this.nextId=null;
-                }
-                break;
+                localStorage.setItem('backimg',this.listBookName[i].before_img);
+                localStorage.setItem('backimg2',this.listBookName[i].before_img1);
+                localStorage.setItem('insetimg',this.listBookName[i].bg_img);
+                localStorage.setItem('fontimg',this.listBookName[i].head_img);
+                localStorage.setItem('wordimg',this.listBookName[i].word_img);
+                this.backimg=localStorage.getItem('backimg');
+                this.backimg2=localStorage.getItem('backimg2');
+                this.insetimg=localStorage.getItem('insetimg');
+                // this.insetimg="url("+localStorage.getItem('insetimg')+")";
+                this.fontimg=localStorage.getItem('fontimg');
+                this.wordimg=localStorage.getItem('wordimg');
+                this.isOpenedTop = false;
+                this.isCloseddTop = false;
+                this.buttons = false;
+                setTimeout(() => {
+                  this.thend = false;
+                  this.backgrou = false;
+                }, 500)
               }
             }
-            this.endPage=this.items.length;
-
-            // this.resizeimg();
-            // console.log(this.items);
+            this.$axios.post(this.url,qs.stringify({
+              bookId:this.nextId
+            })).then(res=>{
+              this.bookId=this.nextId;
+              this.items=res.data.listBookDetail;
+              // this.items[this.items.length-1].bg=this.items[this.items.length-1].foot_img;
+              for(var i=0;i<this.items.length;i++){
+                for(var j=0;j<this.items[i].word.length;j++){
+                  this.items[i].word[j].audio=this.pic+this.items[i].word[j].audio;
+                }
+                this.items[i].word1=this.items[i].word;
+                if(i>=1){
+                  this.items[i].word=this.items[i-1].word1;
+                }
+                this.items[i].bg=this.pic+this.items[i].bg;
+                if(i===this.items.length-1){
+                  this.items[i].bg=this.pic+this.items[i].foot_img;
+                }
+              }
+              for(var i=0;i<this.listBookName.length;i++){
+                if(this.listBookName[i].book_id===this.nextId){
+                  if(this.listBookName[i+1]!==undefined&&this.listBookName[i+1]!=='undefined'){
+                    this.nextId=this.listBookName[i+1].book_id;
+                    // console.log(this.nextId);
+                  }else {
+                    this.nextId=null;
+                  }
+                  break;
+                }
+              }
+              this.endPage=this.items.length;
+            }, res => {
+              alertMsg("You must be connected to the internet.<br>Please connect and try again.");
+            });
           }, res => {
             alertMsg("You must be connected to the internet.<br>Please connect and try again.");
-          });
-        }, res => {
-          alertMsg("You must be connected to the internet.<br>Please connect and try again.");
-        })
-        }
-        }
+          })
+          }else {
+            this.back();
+          }
         }else {
-
           this.reset();
         }
       },
+
       bodyScroll(event) {
         event.preventDefault();
       },
       help() {
-        console.log('ss');
-
         if(this.helps===true){
-        if(document.getElementById('out').style.display == 'none'){
+        if(document.getElementById('out').style.display === 'none'){
 
           this.wordlength-=1;
           this.repeat=true;
@@ -825,7 +800,7 @@
       },
       updated(idx) {
         // console.log(idx);
-        if(this.loading ==true){
+        if(this.loading ===true){
           alertMsg4("Loading...");
 
           let imgList = document.getElementsByClassName('backclass4');//图片集合
@@ -924,7 +899,6 @@
               if(i>=1){
                 this.items[i].word=this.items[i-1].word1;
               }
-        // console.log(this.items);
         this.items[i].bg=this.pic+this.items[i].bg;
             if(i===this.items.length-1){
               this.items[i].bg=this.pic+this.items[i].foot_img;
@@ -979,6 +953,7 @@
   #out {
     display: none;
   }
+
 
   .backbutton {
     // display: block;
@@ -1455,6 +1430,18 @@
 
   }
 
+  @media screen and (min-width: 375px) and (max-width: 811px){
+    .album__paper {
+      width: 45%;
+      height: 90%;
+      bottom: 3%;
+    }
+
+    .helpbutton{
+      left: 60%;
+    }
+  }
+
   @media screen and (min-width: 1355px) and (max-width: 1600px) {
     .album__paper {
       bottom: 15%;
@@ -1465,6 +1452,7 @@
     .albem_center{
       margin-left: -315px;
     }
+
     .backclass {
       //  width: 540px;
       // height: 580px;
@@ -1497,12 +1485,10 @@
     }
 
     .backclass4 {
-
       max-width: 630px;
       max-height:720px;
 
     }.backclass5 {
-
       max-width: 630px;
       max-height:720px;
 
@@ -1694,8 +1680,8 @@
     }
     .album__paper {
       bottom: 18%;
-      max-width: 630px;
-      max-height:720px;
+      max-width: 500px;
+      max-height:600px;
     }
     .albem_center{
       margin-left: -315px;
@@ -1764,7 +1750,7 @@
       width: 160px;
       position: absolute;
       bottom: 15%;
-      left: 15%;
+      left: 25%;
     }
 
     .buttonsimg2 {
@@ -1772,7 +1758,7 @@
       width: 160px;
       position: absolute;
       bottom: 15%;
-      right: 15%;
+      right: 10%;
     }
     .helpbutton {
       bottom: 28%;

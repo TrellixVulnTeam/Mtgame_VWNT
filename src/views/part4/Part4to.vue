@@ -222,23 +222,25 @@
   export default {
     name: "part4to",
     watch: {
-
       'loaded': function(newVal) {
-        if (this.onef == true) {
+        console.log('标记3');
+        if (this.onef === true) {
+          console.log('标记1');
           if (this.list1.length > 2 || this.list2.length > 2) {
             this.changwidth = true;
           }
           for (var i = 0; i < this.list2.length; i++) {
-            if (this.list2[i].name.length > 10) {
+            if (this.list2[i].name.length > 10) {c
               this.list2[i].size = 1;
             }
           }
           setTimeout(() => {
             this.onef = false;
           }, 2000);
-
         }
-        if (this.onef == false) {
+        if (this.onef === false) {
+          jsPlumb.reset();
+          console.log('标记2');
           setTimeout(() => {
             const that = this;
             jsPlumb.ready(function() {
@@ -270,9 +272,12 @@
               });
               // suspend drawing and initialise.
               instance.batch(function() {
+                console.log('标记8');
                 instance.bind("click", function(component, originalEvent) {
+                  console.log('标记9');
                   jsPlumb.detach(component);
                 });
+                console.log('标记10');
                 // configure some drop options for use by all endpoints.
                 var exampleDropOptions = {
                   tolerance: "touch",
@@ -303,6 +308,8 @@
                   isTarget: false,
                   dropOptions: exampleDropOptions
                 };
+                console.log('标记12');
+                console.log(exampleEndpoint2);
                 var exampleEndpoint3 = {
                   endpoint: ["Image", {
                     src: "http://103.218.241.33/monkeytreeApp/www/assets/image/star.png"
@@ -326,10 +333,12 @@
                   isTarget: true,
                   dropOptions: exampleDropOptions
                 };
+                console.log(exampleEndpoint3);
                 if (that.list1.length > 2 || that.list2.length > 2) {
                   that.changwidth = true;
+                  console.log('标记13');
                 }
-
+                console.log('标记11');
                 for (var i = 0; i < that.list1.length; i++) {
                   if(that.loaded==true){
                     instance.addEndpoint(
@@ -338,6 +347,7 @@
                     },
                     exampleEndpoint2
                   )
+                    console.log('标记14');
                   }
 
                 }
@@ -351,12 +361,15 @@
                   )
                   }
                 }
-                //   instance.bind("connectionDrag", function(connection) {
-                //
-                // });
+                console.log('标记6');
+                console.log(instance);
+                // 请单点击一下连接线,
+                instance.bind('click', function (conn, originalEvent) {
+                  alert('点击了线')
+                })
                 instance.bind("connectionDragStop", function(connection) {
                   that.zhezhao = true;
-                  //console.log(connection);
+                  console.log(connection);
                   var truetime = that.list1.length;
                   for (var i = 0; i < that.list1.length; i++) {
                     if (connection.sourceId == that.list1[i].id) {
@@ -423,10 +436,11 @@
                       }
                     }
                   }
-
+                  console.log('标记5');
                   setTimeout(() => {
+                    console.log('标记4');
                     that.nowtime = document.getElementsByTagName("svg").length;
-                    //console.log(that.nowtime);
+                    console.log(that.nowtime);
                     console.log(this.list2);
                     if (that.nowtime === truetime) { //连接的数量
                       that.zhezhao = true;
@@ -518,10 +532,10 @@
                         that.soundsWrong = true;
                         for (var i = 0; i < that.list2.length; i++) {
                           for (var k = 0; k < that.falselist.length; k++) {
-                            if (that.falselist[k] == that.list2[i].id) {
+                            if (that.falselist[k] === that.list2[i].id) {
                               that.list2[i].issuccess = 1; //晃动错误
                             }
-                            if (that.falselist[k] == svgLine[i]._jsPlumb.targetId) {
+                            if (that.falselist[k] === svgLine[i]._jsPlumb.targetId) {
                               svgLine[i].children[0].setAttribute("stroke", "#cc6453");
                             }
                           }
@@ -644,6 +658,7 @@
                     }
                   }, 400);
                 });
+                console.log('标记7');
                 // make .window divs draggable
                 //instance.draggable(jsPlumb.getSelector(".drag-drop-demo .window"));
               });
@@ -651,7 +666,6 @@
             });
           }, 500);
         }
-
       },
     },
     data() {
@@ -868,7 +882,7 @@
           this.bgimg[i].active = false;
         }
       }
-      if (localStorage.getItem('gamemusic') == "false") {
+      if (localStorage.getItem('gamemusic') === "false") {
         this.show = false;
       } else {
         this.show = true;
@@ -933,7 +947,7 @@
             if (this.list1.length > 2 || this.list2.length > 2) {
               this.changwidth = true;
             }
-          }, 1000);
+          }, 1500);
         }
       }, res => {
         alertMsg("You must be connected to the internet.<br>Please connect and try again.");

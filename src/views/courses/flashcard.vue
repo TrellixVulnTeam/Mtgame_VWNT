@@ -593,6 +593,132 @@
             img:require('../../assets/image/SchoolTime/bell.png')
           }
         ],
+        AnimalsPart1:[
+          {
+            id:1,
+            cardName:'turtle',
+            audio:require('../../assets/Flashcard Audio/september/Desk.mp3'),
+            img:require('../../assets/image/Pets/Turtle.png')
+          },{
+            id:2,
+            cardName:'bird',
+            audio:require('../../assets/Flashcard Audio/september/chair.mp3'),
+            img:require('../../assets/image/Pets/Bird.png')
+          },{
+            id:3,
+            cardName:'brush',
+            audio:require('../../assets/Flashcard Audio/september/Backpack.mp3'),
+            img:require('../../assets/image/Pets/Brush.png')
+          },{
+            id:4,
+            cardName:'cage',
+            audio:require('../../assets/Flashcard Audio/september/eraser.mp3'),
+            img:require('../../assets/image/Pets/Cage.png')
+          },{
+            id:5,
+            cardName:'feed',
+            audio:require('../../assets/Flashcard Audio/september/Pencil.mp3'),
+            img:require('../../assets/image/Pets/Feed.png')
+          },{
+            id:6,
+            cardName:'fish',
+            audio:require('../../assets/Flashcard Audio/september/sit.mp3'),
+            img:require('../../assets/image/Pets/Fish.png')
+          },{
+            id:7,
+            cardName:'goldfish',
+            audio:require('../../assets/Flashcard Audio/september/teacher.mp3'),
+            img:require('../../assets/image/Pets/Goldfish.png')
+          },{
+            id:8,
+            cardName:'hamster',
+            audio:require('../../assets/Flashcard Audio/september/write.mp3'),
+            img:require('../../assets/image/Pets/Hamster.png')
+          },{
+            id:9,
+            cardName:'kitten',
+            audio:require('../../assets/Flashcard Audio/september/board.mp3'),
+            img:require('../../assets/image/Pets/Kitten.png')
+          },{
+            id:10,
+            cardName:'parrot',
+            audio:require('../../assets/Flashcard Audio/september/Clock.mp3'),
+            img:require('../../assets/image/Pets/Parrot.png')
+          },{
+            id:11,
+            cardName:'puppy',
+            audio:require('../../assets/Flashcard Audio/september/crayons.mp3'),
+            img:require('../../assets/image/Pets/Puppy.png')
+          },{
+            id:12,
+            cardName:'tank',
+            audio:require('../../assets/Flashcard Audio/september/listen.mp3'),
+            img:require('../../assets/image/Pets/Tank.png')
+          }
+        ],
+        AnimalsPart2:[
+          {
+            id:1,
+            cardName:'crocodile',
+            audio:require('../../assets/Flashcard Audio/september/Desk.mp3'),
+            img:require('../../assets/image/Zoo/Crocodile.png')
+          },{
+            id:2,
+            cardName:'elephant',
+            audio:require('../../assets/Flashcard Audio/september/chair.mp3'),
+            img:require('../../assets/image/Zoo/Elephant.png')
+          },{
+            id:3,
+            cardName:'giraffe',
+            audio:require('../../assets/Flashcard Audio/september/Backpack.mp3'),
+            img:require('../../assets/image/Zoo/Giraffe.png')
+          },{
+            id:4,
+            cardName:'gorilla',
+            audio:require('../../assets/Flashcard Audio/september/eraser.mp3'),
+            img:require('../../assets/image/Zoo/Gorilla.png')
+          },{
+            id:5,
+            cardName:'hippo',
+            audio:require('../../assets/Flashcard Audio/september/Pencil.mp3'),
+            img:require('../../assets/image/Zoo/Hippo.png')
+          },{
+            id:6,
+            cardName:'lion',
+            audio:require('../../assets/Flashcard Audio/september/sit.mp3'),
+            img:require('../../assets/image/Zoo/Lion.png')
+          },{
+            id:7,
+            cardName:'lizard',
+            audio:require('../../assets/Flashcard Audio/september/teacher.mp3'),
+            img:require('../../assets/image/Zoo/Lizard.png')
+          },{
+            id:8,
+            cardName:'monkey',
+            audio:require('../../assets/Flashcard Audio/september/write.mp3'),
+            img:require('../../assets/image/Zoo/Monkey.png')
+          },{
+            id:9,
+            cardName:'panda',
+            audio:require('../../assets/Flashcard Audio/september/board.mp3'),
+            img:require('../../assets/image/Zoo/Panda.png')
+          },{
+            id:10,
+            cardName:'roar',
+            audio:require('../../assets/Flashcard Audio/september/Clock.mp3'),
+            img:require('../../assets/image/Zoo/Roar.png')
+          },{
+            id:11,
+            cardName:'snake',
+            audio:require('../../assets/Flashcard Audio/september/crayons.mp3'),
+            img:require('../../assets/image/Zoo/Snake.png')
+          },{
+            id:12,
+            cardName:'tiger',
+            audio:require('../../assets/Flashcard Audio/september/listen.mp3'),
+            img:require('../../assets/image/Zoo/Tiger.png')
+          }
+        ],
         list:[],
         titleUrl:{
           MyCommunity:require('../../assets/image/2-logo.png'),
@@ -613,11 +739,13 @@
           Exploration:require('../../assets/image/7-7logo.png'),
           ExplorationPart2:require('../../assets/image/7-7logo1.png'),
           ExplorationPart1:require('../../assets/image/7-7logo2.png'),
-          SummerFunPart2:require('../../assets/image/8-8logo1.png'),
-          SummerFunPart1:require('../../assets/image/8-8logo2.png'),
+          SummerFunPart2:require('../../assets/image/8-8logo2.png'),
+          SummerFunPart1:require('../../assets/image/8-8logo1.png'),
           SchoolTime:require('../../assets/image/9-9logo.png'),
           SchoolTimePart1:require('../../assets/image/9-9logo1.png'),
           SchoolTimePart2:require('../../assets/image/9-9logo2.png'),
+          AnimalsPart1:require('../../assets/image/10-10logo1.png'),
+          AnimalsPart2:require('../../assets/image/10-10logo2.png'),
         },
         title:'../../assets/image/6-6logo.png',
         flashCardUrl:'http://107.150.121.34/monkeytownHK/image/img/9315e4a9-e1ec-4f49-8db5-5b3a9b6ae083.png',
@@ -756,7 +884,7 @@
     created() { //生命周期里接收参数
       const audio = document.getElementById('music');
       audio.play();
-      audio.volume=0.1;
+      audio.volume=0;
       console.log(this.$route.query);
       this.pic = this.$axios.defaults.baseURL2;
       this.unit = this.$route.query.unit;

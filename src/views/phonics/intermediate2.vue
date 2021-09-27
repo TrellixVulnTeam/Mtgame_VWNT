@@ -4,7 +4,8 @@
 		<audio autoplay="autoplay" loop="loop" ref="MusicPlay" v-if="show" id="partmusic"><source  src="../../assets/video/gamemusic.mp3"></audio>
 		</span>
     <img src="../../assets/image/interbg4.png"  style="width: 100%; z-index: -2;top:0; height:100%;display:block;position: absolute;">
-<!--    <img class="again" src="../../assets/image/again.png" @click="again()">-->
+    <img class="again" src="../../assets/image/again.png" @click="again">
+
 
     <transition name="fades">
       <div class="contain" v-if="!resume3">
@@ -156,6 +157,9 @@
             this.list1 =this.listG[this.countpage-1];
             this.truesound=this.pic+this.list1[0].audio;
             this.question=this.list1[0].question;
+            console.log(this.list1);
+            console.log(this.truesound);
+            console.log(this.question);
             for(var i=0;i<this.list1.length;i++){
               this.list1[i].bg=this.pic+this.list1[i].bg;
               this.list1[i].audio2=this.pic+this.list1[i].audio2;
@@ -167,7 +171,7 @@
         };
       },
       'video': function(newVal) {
-
+        console.log('播放');
         if (this.video === true) {
           // var myVid = document.getElementById("titlemp3");
           // if (myVid != null) {
@@ -400,7 +404,9 @@
     },
     methods: {
       again(){
-
+        let audio = new Audio();
+        audio.src=this.truesound;
+        audio.play();
       },
       bodyScroll(event) {
         event.preventDefault();
@@ -498,7 +504,6 @@
 
       // canvas中鼠标放开
       canvasUp(e) {
-
         this.context.closePath();
         let isSelect = false; // 用于判断是否选中了选项
         let anwserIndex;

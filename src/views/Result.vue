@@ -217,6 +217,7 @@
 		},
 		methods: {
 			change1(){
+        console.log('next');
         localStorage.setItem('startTimeid','');
         localStorage.setItem('gamename','');
 				var audio = document.getElementById('music');
@@ -260,6 +261,7 @@
 				}, 1000);
 			},
 			change2(){//NEXT
+        console.log('next');
         localStorage.setItem('startTimeid','');
         localStorage.setItem('gamename','');
 			var audio = document.getElementById('music');

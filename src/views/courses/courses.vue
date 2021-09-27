@@ -551,7 +551,7 @@
           //this.unitsList=res.data.unitsList;
           this.unitsList=[];
           for (let i = 0; i < res.data.unitsList.length; i++) {
-            if(res.data.unitsList[i].name==="Summer Fun" || res.data.unitsList[i].name==="School Time"){
+            if(res.data.unitsList[i].name==="Summer Fun" || res.data.unitsList[i].name==="School Time" || res.data.unitsList[i].name==="Animals"){
               this.unitsList.push(res.data.unitsList[i]);
               console.log(this.unitsList);
             }
@@ -647,7 +647,7 @@
           //this.unitsList=res.data.unitsList;
           this.unitsList=[];
           for (let i = 0; i < res.data.unitsList.length; i++) {
-            if(res.data.unitsList[i].name==="Summer Fun" || res.data.unitsList[i].name==="School Time"){
+            if(res.data.unitsList[i].name==="Summer Fun" || res.data.unitsList[i].name==="School Time" || res.data.unitsList[i].name==="Animals"){
               this.unitsList.push(res.data.unitsList[i]);
               console.log(this.unitsList);
             }

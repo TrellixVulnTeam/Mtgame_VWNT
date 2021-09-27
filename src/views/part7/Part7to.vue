@@ -37,7 +37,7 @@
 					</div>
 				</transition>
 				<transition name="fade1">
-					<div v-show="!onef" style="width: 100%; height: 90%;display:block;position: absolute;">
+					<div v-show="!onet  || !onef" style="width: 100%; height: 90%;display:block;position: absolute;">
 						<img src="../../assets/image/seasons.png"  style="width: 100%; z-index: -1;background-color: #ffd55f; height: 100%;display:block;position: absolute;" v-if="bgimg[0].active">
 						<img src="../../assets/image/4-bg.png"  style="width: 100%; z-index: -1;background-color: #ffd55f; height: 100%;display:block;position: absolute;" v-if="bgimg[1].active">
 						<img src="../../assets/image/5-bg.png"  style="width: 100%; z-index: -1;background-color: #ffd55f;height: 100%;display:block;position: absolute;" v-if="bgimg[2].active">
@@ -222,9 +222,9 @@
           {active:false,spring:'On the Farm'},
         ],
 				list1: [
-
 				],
 				onef: true,
+        onet:true,
 				fade: 'fade',
 				levels: 0,
 				flag2: true,
@@ -322,10 +322,28 @@
 						}else{
 							this.questionsize=0;
 						  }
-          if(this.onef === true) {
+          if(this.onet === true) {
             setTimeout(() => {
-              this.onef = false;
-            }, 3000);
+              this.onet = false;
+              setTimeout(() => {
+                const canvas = document.getElementById('canvas'); // 初次进来初始化画布
+                let imgBox = document.getElementById('imgBox');
+                let imgsty = document.getElementsByClassName('imgsty');
+                for (let i=0; i<imgsty.length; i++) {
+                  let coreP = { // 获取图片中心点位置
+                    corePx: imgsty[i].offsetLeft + imgsty[i].offsetWidth/2,
+                    corePy: imgsty[i].offsetTop + imgsty[i].offsetHeight/2
+                  }
+                  this.centerP.push(coreP);
+                }
+                this.canvasObj = canvas;
+                this.canvasH = imgBox.clientHeight; // 存储canvas的高度，用于清空画布
+                canvas.width = imgBox.clientWidth; // 动态赋值canvas的宽度
+                canvas.height = imgBox.clientHeight; // 动态赋值canvas的高度
+                this.context = canvas.getContext('2d');
+                this.setCanvasStyle();
+              }, 1000);
+            }, 1000);
           }
 					}, res => {
 						alertMsg("You must be connected to the internet.<br>Please connect and try again.");
@@ -350,24 +368,26 @@
 			  document.body.addEventListener('touchmove',this.bodyScroll,{passive: false});
 		},
 		mounted() {
-			setTimeout(() => {
-				const canvas = document.getElementById('canvas'); // 初次进来初始化画布
-				let imgBox = document.getElementById('imgBox');
-				let imgsty = document.getElementsByClassName('imgsty');
-				for (let i=0; i<imgsty.length; i++) {
-					let coreP = { // 获取图片中心点位置
-						corePx: imgsty[i].offsetLeft + imgsty[i].offsetWidth/2,
-						corePy: imgsty[i].offsetTop + imgsty[i].offsetHeight/2
-					}
-					this.centerP.push(coreP);
-				}
-				this.canvasObj = canvas;
-				this.canvasH = imgBox.clientHeight; // 存储canvas的高度，用于清空画布
-				canvas.width = imgBox.clientWidth; // 动态赋值canvas的宽度
-        canvas.height = imgBox.clientHeight; // 动态赋值canvas的高度
-        this.context = canvas.getContext('2d');
-				this.setCanvasStyle();
-			 }, 5000);
+			// setTimeout(() => {
+      //   console.log('开始执行');
+      //   console.log(document.getElementsByClassName('imgsty').length);
+			// 	const canvas = document.getElementById('canvas'); // 初次进来初始化画布
+			// 	let imgBox = document.getElementById('imgBox');
+			// 	let imgsty = document.getElementsByClassName('imgsty');
+			// 	for (let i=0; i<imgsty.length; i++) {
+			// 		let coreP = { // 获取图片中心点位置
+			// 			corePx: imgsty[i].offsetLeft + imgsty[i].offsetWidth/2,
+			// 			corePy: imgsty[i].offsetTop + imgsty[i].offsetHeight/2
+			// 		}
+			// 		this.centerP.push(coreP);
+			// 	}
+			// 	this.canvasObj = canvas;
+			// 	this.canvasH = imgBox.clientHeight; // 存储canvas的高度，用于清空画布
+			// 	canvas.width = imgBox.clientWidth; // 动态赋值canvas的宽度
+      //   canvas.height = imgBox.clientHeight; // 动态赋值canvas的高度
+      //   this.context = canvas.getContext('2d');
+			// 	this.setCanvasStyle();
+			//   }, 4000);
 		},
 		destroyed() {
 		document.body.removeEventListener('touchmove',this.bodyScroll,{passive: false});
@@ -405,7 +425,7 @@
 					   if(e.changedTouches){
 					    	canvasX = e.changedTouches[0].clientX - t.parentNode.offsetLeft;
                 canvasY = e.changedTouches[0].clientY - t.parentNode.offsetTop;
-               console.log("canvasX:"+canvasX+"canvasY:"+canvasY);
+               //console.log("canvasX:"+canvasX+"canvasY:"+canvasY);
 					}
 				}
 				   this.context.beginPath();
@@ -711,17 +731,12 @@
 		},
 		watch: {
 			'onef': function(newVal) {
+        console.log('watch执行');
+        console.log(this.onef);
+        console.log(this.score);
 				if(this.onef === true) {
+          console.log('watch');
 					      if(this.score==="1"){
-							//  this.$axios.post(this.url, qs.stringify({
-							// 	partName: 'partG',
-							// 	userId:this.getCookie('userId'),
-							// 	numQuestion: this.countpage,
-							// 	account: 1
-							// })).then(res => {
-							//     this.list1=res.data.Maplist;
-							// 	this.question=res.data.question;
-
 								setTimeout(() => {
 								this.onef = false;
 								this.fisrtanswer=false;
@@ -737,20 +752,10 @@
 								  }
 
 							   }, 2000);
-
-							// }, res => {
-							// 	alertMsg("You must be connected to the internet.<br>Please connect and try again.");
-							// })
+                  console.log('true');
 						  }else{
-						// 	  this.$axios.post(this.url, qs.stringify({
-						// 	partName: 'partG',
-						// 	userId:this.getCookie('userId'),
-						// 	numQuestion: this.countpage,
-						// })).then(res => {
-						//     this.list1=res.data.Maplist;
-						// 	this.question=res.data.question;
-
 							setTimeout(() => {
+                console.log('false');
 							this.onef = false;
 							this.issuccess1=false;
 							this.issuccess2=false;
@@ -763,11 +768,6 @@
 								this.questionsize=0;
 							  }
 						   }, 2000);
-
-
-						// }, res => {
-						// 	alertMsg("You must be connected to the internet.<br>Please connect and try again.");
-						// })
 						  }
 				};
 			},

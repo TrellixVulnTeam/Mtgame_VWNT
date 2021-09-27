@@ -865,7 +865,6 @@
 			gomemu(){
 				var audio = document.getElementById('music');
 				if(localStorage.getItem('audiomusic')=="false"){
-
 				}else{
 					audio.play();
 				}
@@ -980,26 +979,7 @@
 					}
           setTimeout(() => {
 				      	this.onef = false;
-				      	// this.video=true;
-                // const canvas = document.getElementById('canvas'); // 初次进来初始化画布
-                // let imgBox = document.getElementById('imgBox');
-                // let imgsty = document.getElementsByClassName('imgsty');
-                // for (let i=0; i<imgsty.length; i++) {
-                // 	let coreP = { // 获取图片中心点位置
-                // 		corePx: imgsty[i].offsetLeft + imgsty[i].offsetWidth/2,
-                // 		corePy: imgsty[i].offsetTop + imgsty[i].offsetHeight/2
-                // 	}
-                // 	this.centerP.push(coreP);
-                //   console.log(this.centerP);
-                // }
-                // this.canvasObj = canvas;
-                // this.canvasH = imgBox.clientHeight; // 存储canvas的高度，用于清空画布
-                // canvas.width = imgBox.clientWidth; // 动态赋值canvas的宽度
-                // 	canvas.height = imgBox.clientHeight; // 动态赋值canvas的高度
-                // 	this.context = canvas.getContext('2d');
-                // this.setCanvasStyle();
-                // // console.log(this.context);
-                // this.zhezhao=false;
+
 					}, 1000);
 				}
 

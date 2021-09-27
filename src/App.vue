@@ -428,6 +428,11 @@
 		//margin-left: 2%;
 	}
 
+  @media screen and (min-width: 375px) and (max-width: 811px){
+    .text2{
+      font-size: 22px !important;
+    }
+  }
 
   .text2{
        width: 100%;

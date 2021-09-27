@@ -20,10 +20,10 @@
 							  <a class="abgcgreen" @click="chartroom1(courseList[0])">
 								<div class="l-box">
 										<img src="../../assets/image/greenmonkey.png" class="p-monkey">
-
 								</div>
-								<p class="pbgcgreen">{{this.courseList[0].name}}</p>
-							  </a>
+<!--								<p class="pbgcgreen">{{this.courseList[0].name}}</p>-->
+                  <p class="pbgcgreen">CHAT ROOM</p>
+                </a>
 							</div>
 						</div>
             <!-- phonics -->
@@ -38,7 +38,8 @@
             		<div class="l-box">
                     <img src="../../assets/image/pinkmonkey.png" class="p-monkey">
             		</div>
-            		<p class="pbgcgreen backgrou">{{this.courseList[1].name}}</p>
+<!--            		<p class="pbgcgreen backgrou">{{this.courseList[1].name}}</p>-->
+                <p class="pbgcgreen backgrou">PHONICS</p>
             	  </a>
             	</div>
             </div>
@@ -52,8 +53,9 @@
 						<div v-if="chartroom" style="width: 100%;height: 100%;">
 
 						<div class="chart-room-out">
-							<h2 class="chartroom-title"><span>{{cources}}</span></h2>
-							<div class="chart-room">
+<!--							<h2 class="chartroom-title"><span>{{cources}}</span></h2>-->
+              <h2 class="chartroom-title"><span>CHAT ROOM</span></h2>
+              <div class="chart-room">
 								<div class="left-walkers"  v-for="(li,i) in levelsList">
 									<a @click="walkers1(li)">
 										<img src="../../assets/image/selectW.png" v-if="i===0" class="sizeselect">
@@ -682,6 +684,7 @@
 
 		created() { //生命周期里接收参数
 				this.pic=this.$axios.defaults.baseURL2;
+      console.log(this.$route.query);
 				if(this.$route.query.levelsId){
 					this.level= this.$route.query.level;
 					this.levelsId= this.$route.query.levelsId;
