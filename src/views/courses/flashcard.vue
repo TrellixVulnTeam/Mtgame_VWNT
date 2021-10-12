@@ -596,127 +596,208 @@
         AnimalsPart1:[
           {
             id:1,
-            cardName:'turtle',
-            audio:require('../../assets/Flashcard Audio/september/Desk.mp3'),
-            img:require('../../assets/image/Pets/Turtle.png')
+            cardName:'dog',
+            audio:require('../../assets/Flashcard Audio/october/Dog.mp3'),
+            img:require('../../assets/image/Pets/Puppy.png')
           },{
             id:2,
-            cardName:'bird',
-            audio:require('../../assets/Flashcard Audio/september/chair.mp3'),
-            img:require('../../assets/image/Pets/Bird.png')
+            cardName:'cat',
+            audio:require('../../assets/Flashcard Audio/october/Cat.mp3'),
+            img:require('../../assets/image/Pets/Kitten.png')
           },{
             id:3,
             cardName:'brush',
-            audio:require('../../assets/Flashcard Audio/september/Backpack.mp3'),
+            audio:require('../../assets/Flashcard Audio/october/brush.mp3'),
             img:require('../../assets/image/Pets/Brush.png')
           },{
             id:4,
+            cardName:'feed',
+            audio:require('../../assets/Flashcard Audio/october/feed.mp3'),
+            img:require('../../assets/image/Pets/Feed.png')
+          },{
+            id:5,
             cardName:'cage',
-            audio:require('../../assets/Flashcard Audio/september/eraser.mp3'),
+            audio:require('../../assets/Flashcard Audio/october/Cage.mp3'),
             img:require('../../assets/image/Pets/Cage.png')
+          },{
+            id:6,
+            cardName:'tank',
+            audio:require('../../assets/Flashcard Audio/october/Tank.mp3'),
+            img:require('../../assets/image/Pets/Tank.png')
+          },{
+            id:7,
+            cardName:'bird',
+            audio:require('../../assets/Flashcard Audio/october/bird.mp3'),
+            img:require('../../assets/image/Pets/Bird.png')
+          },{
+            id:8,
+            cardName:'fish',
+            audio:require('../../assets/Flashcard Audio/october/Fish.mp3'),
+            img:require('../../assets/image/Pets/Fish.png')
+          },{
+            id:1,
+            cardName:'small',
+            audio:require('../../assets/Flashcard Audio/october/small.mp3'),
+            img:require('../../assets/image/Pets/Small.png')
+          },{
+            id:2,
+            cardName:'big',
+            audio:require('../../assets/Flashcard Audio/october/Big.mp3'),
+            img:require('../../assets/image/Pets/Big.png')
+          },{
+            id:3,
+            cardName:'puppy',
+            audio:require('../../assets/Flashcard Audio/october/Puppy.mp3'),
+            img:require('../../assets/image/Pets/Puppy.png')
+          },{
+            id:4,
+            cardName:'brush',
+            audio:require('../../assets/Flashcard Audio/october/brush.mp3'),
+            img:require('../../assets/image/Pets/Brush.png')
           },{
             id:5,
             cardName:'feed',
-            audio:require('../../assets/Flashcard Audio/september/Pencil.mp3'),
+            audio:require('../../assets/Flashcard Audio/october/feed.mp3'),
             img:require('../../assets/image/Pets/Feed.png')
           },{
             id:6,
-            cardName:'fish',
-            audio:require('../../assets/Flashcard Audio/september/sit.mp3'),
-            img:require('../../assets/image/Pets/Fish.png')
+            cardName:'cage',
+            audio:require('../../assets/Flashcard Audio/october/Cage.mp3'),
+            img:require('../../assets/image/Pets/Cage.png')
           },{
             id:7,
-            cardName:'goldfish',
-            audio:require('../../assets/Flashcard Audio/september/teacher.mp3'),
-            img:require('../../assets/image/Pets/Goldfish.png')
+            cardName:'tank',
+            audio:require('../../assets/Flashcard Audio/october/Tank.mp3'),
+            img:require('../../assets/image/Pets/Tank.png')
           },{
             id:8,
-            cardName:'hamster',
-            audio:require('../../assets/Flashcard Audio/september/write.mp3'),
-            img:require('../../assets/image/Pets/Hamster.png')
-          },{
-            id:9,
             cardName:'kitten',
-            audio:require('../../assets/Flashcard Audio/september/board.mp3'),
+            audio:require('../../assets/Flashcard Audio/october/Kitten.mp3'),
             img:require('../../assets/image/Pets/Kitten.png')
           },{
-            id:10,
+            id:9,
             cardName:'parrot',
-            audio:require('../../assets/Flashcard Audio/september/Clock.mp3'),
+            audio:require('../../assets/Flashcard Audio/october/parrot.mp3'),
             img:require('../../assets/image/Pets/Parrot.png')
           },{
+            id:10,
+            cardName:'turtle',
+            audio:require('../../assets/Flashcard Audio/october/turtle.mp3'),
+            img:require('../../assets/image/Pets/Turtle.png')
+          },{
             id:11,
-            cardName:'puppy',
-            audio:require('../../assets/Flashcard Audio/september/crayons.mp3'),
-            img:require('../../assets/image/Pets/Puppy.png')
+            cardName:'hamster',
+            audio:require('../../assets/Flashcard Audio/october/Hamster.mp3'),
+            img:require('../../assets/image/Pets/Hamster.png')
           },{
             id:12,
-            cardName:'tank',
-            audio:require('../../assets/Flashcard Audio/september/listen.mp3'),
-            img:require('../../assets/image/Pets/Tank.png')
+            cardName:'goldfish',
+            audio:require('../../assets/Flashcard Audio/october/Goldfish.mp3'),
+            img:require('../../assets/image/Pets/Goldfish.png')
           }
         ],
         AnimalsPart2:[
           {
             id:1,
-            cardName:'crocodile',
-            audio:require('../../assets/Flashcard Audio/september/Desk.mp3'),
-            img:require('../../assets/image/Zoo/Crocodile.png')
+            cardName:'tall',
+            audio:require('../../assets/Flashcard Audio/october/Tall.mp3'),
+            img:require('../../assets/image/Zoo/Tall.png')
           },{
             id:2,
-            cardName:'elephant',
-            audio:require('../../assets/Flashcard Audio/september/chair.mp3'),
-            img:require('../../assets/image/Zoo/Elephant.png')
+            cardName:'short',
+            audio:require('../../assets/Flashcard Audio/october/short.mp3'),
+            img:require('../../assets/image/Zoo/Short.png')
           },{
             id:3,
-            cardName:'giraffe',
-            audio:require('../../assets/Flashcard Audio/september/Backpack.mp3'),
-            img:require('../../assets/image/Zoo/Giraffe.png')
+            cardName:'monkey',
+            audio:require('../../assets/Flashcard Audio/october/Monkey.mp3'),
+            img:require('../../assets/image/Zoo/Monkey.png')
           },{
             id:4,
-            cardName:'gorilla',
-            audio:require('../../assets/Flashcard Audio/september/eraser.mp3'),
-            img:require('../../assets/image/Zoo/Gorilla.png')
+            cardName:'giraffe',
+            audio:require('../../assets/Flashcard Audio/october/giraffe.mp3'),
+            img:require('../../assets/image/Zoo/Giraffe.png')
           },{
             id:5,
-            cardName:'hippo',
-            audio:require('../../assets/Flashcard Audio/september/Pencil.mp3'),
-            img:require('../../assets/image/Zoo/Hippo.png')
+            cardName:'lion',
+            audio:require('../../assets/Flashcard Audio/october/Lion.mp3'),
+            img:require('../../assets/image/Zoo/Lion.png')
           },{
             id:6,
-            cardName:'lion',
-            audio:require('../../assets/Flashcard Audio/september/sit.mp3'),
-            img:require('../../assets/image/Zoo/Lion.png')
+            cardName:'tiger',
+            audio:require('../../assets/Flashcard Audio/october/Tiger.mp3'),
+            img:require('../../assets/image/Zoo/Tiger.png')
+          },{
+            id:7,
+            cardName:'elephant',
+            audio:require('../../assets/Flashcard Audio/october/Elephant.mp3'),
+            img:require('../../assets/image/Zoo/Elephant.png')
+          },{
+            id:8,
+            cardName:'hippo',
+            audio:require('../../assets/Flashcard Audio/october/Hippo.mp3'),
+            img:require('../../assets/image/Zoo/Hippo.png')
+          },{
+            id:1,
+            cardName:'penguin',
+            audio:require('../../assets/Flashcard Audio/october/Penguin.mp3'),
+            img:require('../../assets/image/Zoo/Penguin.png')
+          },{
+            id:2,
+            cardName:'zookeeper',
+            audio:require('../../assets/Flashcard Audio/october/zookeeper.mp3'),
+            img:require('../../assets/image/Zoo/Zookeeper.png')
+          },{
+            id:3,
+            cardName:'roar',
+            audio:require('../../assets/Flashcard Audio/october/roar.mp3'),
+            img:require('../../assets/image/Zoo/Roar.png')
+          },{
+            id:4,
+            cardName:'tiger',
+            audio:require('../../assets/Flashcard Audio/october/Tiger.mp3'),
+            img:require('../../assets/image/Zoo/Tiger.png')
+          },{
+            id:5,
+            cardName:'sleep',
+            audio:require('../../assets/Flashcard Audio/october/Sleep.mp3'),
+            img:require('../../assets/image/Zoo/Sleep.png')
+          },{
+            id:6,
+            cardName:'panda',
+            audio:require('../../assets/Flashcard Audio/october/Panda.mp3'),
+            img:require('../../assets/image/Zoo/Panda.png')
           },{
             id:7,
             cardName:'lizard',
-            audio:require('../../assets/Flashcard Audio/september/teacher.mp3'),
+            audio:require('../../assets/Flashcard Audio/october/lizard.mp3'),
             img:require('../../assets/image/Zoo/Lizard.png')
           },{
             id:8,
-            cardName:'monkey',
-            audio:require('../../assets/Flashcard Audio/september/write.mp3'),
-            img:require('../../assets/image/Zoo/Monkey.png')
+            cardName:'gorilla',
+            audio:require('../../assets/Flashcard Audio/october/Gorilla.mp3'),
+            img:require('../../assets/image/Zoo/Gorilla.png')
           },{
             id:9,
-            cardName:'panda',
-            audio:require('../../assets/Flashcard Audio/september/board.mp3'),
-            img:require('../../assets/image/Zoo/Panda.png')
+            cardName:'hippo',
+            audio:require('../../assets/Flashcard Audio/october/Hippo.mp3'),
+            img:require('../../assets/image/Zoo/Hippo.png')
           },{
             id:10,
-            cardName:'roar',
-            audio:require('../../assets/Flashcard Audio/september/Clock.mp3'),
-            img:require('../../assets/image/Zoo/Roar.png')
+            cardName:'crocodile',
+            audio:require('../../assets/Flashcard Audio/october/crocodile.mp3'),
+            img:require('../../assets/image/Zoo/Crocodile.png')
           },{
             id:11,
             cardName:'snake',
-            audio:require('../../assets/Flashcard Audio/september/crayons.mp3'),
+            audio:require('../../assets/Flashcard Audio/october/Snake.mp3'),
             img:require('../../assets/image/Zoo/Snake.png')
-          },{
+          }
+          ,{
             id:12,
-            cardName:'tiger',
-            audio:require('../../assets/Flashcard Audio/september/listen.mp3'),
-            img:require('../../assets/image/Zoo/Tiger.png')
+            cardName:'splash',
+            audio:require('../../assets/Flashcard Audio/october/splash.mp3'),
+            img:require('../../assets/image/Zoo/Splash.png')
           }
         ],
         list:[],
@@ -833,12 +914,20 @@
       //初始化pop
       //单元数组 单元名+part12，前八个为walker，后四个runner
       createdpop(){
+        if (this.unit==='Animals'){
+          if (this.level === 'WALKERS') {
+            this.list = this.$data[this.unit.replace(" ", "") + this.part.replace("p", "P")].slice(0, 8);
+          } else {
+            this.list = this.$data[this.unit.replace(" ", "") + this.part.replace("p", "P")].slice(8,20);
+          }
+        }else {
           if (this.level === 'WALKERS') {
             this.list = this.$data[this.unit.replace(" ", "") + this.part.replace("p", "P")].slice(0, 8);
           } else {
             this.list = this.$data[this.unit.replace(" ", "") + this.part.replace("p", "P")];
           }
-          this.title = this.$data.titleUrl[this.unit.replace(" ", "") + this.part.replace("p", "P")];
+        }
+        this.title = this.$data.titleUrl[this.unit.replace(" ", "") + this.part.replace("p", "P")];
       },
       //pop向左右切换卡牌http://103.218.241.33/assets/image/6-6logo.png
       turnpop(turn){
@@ -883,8 +972,9 @@
 
     created() { //生命周期里接收参数
       const audio = document.getElementById('music');
-      audio.play();
-      audio.volume=0;
+      // audio.play();
+      // audio.volume=0.1;
+      audio.pause();
       console.log(this.$route.query);
       this.pic = this.$axios.defaults.baseURL2;
       this.unit = this.$route.query.unit;

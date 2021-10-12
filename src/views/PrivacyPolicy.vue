@@ -1,269 +1,178 @@
 <template>
-
-  <div class="body">
+   <div class="body">
     <img src="../assets/image/rightback.png" @click="goIndex" class="backButton"/>
-    <div v-if="privacy">
-      <strong>Privacy Policy</strong>
+    <div style="padding-left: 3%;padding-bottom: 140px;" v-if="!privacy">
+      <strong>隐私声明</strong>
       <p>
-        embraiz built the MonkeyTownHK app as
-        a Free app. This SERVICE is provided by
-        embraiz at no cost and is intended for use as
-        is.
+        本条例自2014年10月23日起生效
       </p>
       <p>
-        This page is used to inform visitors regarding our
-        policies with the collection, use, and disclosure of Personal
-        Information if anyone decided to use our Service.
+        此隐私保护条例的中文版本是基于英文条例之翻译版本，如条例中出现解释模糊或定义不清情况最终以英文条例为参考。
+      </p>
+      <p><strong>个人资料收集</strong></p>
+      <p>
+        我们对您个人资料的收集目的是为了提供更优质的服务。
       </p>
       <p>
-        If you choose to use our Service, then you agree to
-        the collection and use of information in relation to this
-        policy. The Personal Information that we collect is
-        used for providing and improving the Service. We will not use or share your information with
-        anyone except as described in this Privacy Policy.
-      </p>
-      <p>
-        The terms used in this Privacy Policy have the same meanings
-        as in our Terms and Conditions, which is accessible at
-        MonkeyTownHK unless otherwise defined in this Privacy Policy.
-      </p>
-      <p><strong>Information Collection and Use</strong></p>
-      <p>
-        For a better experience, while using our Service, we
-        may require you to provide us with certain personally
-        identifiable information, including but not limited to phonenumber. The information that
-        we request will be retained by us and used as described in this privacy policy.
-      </p>
-      <div><p>
-        The app does use third party services that may collect
-        information used to identify you.
-      </p>
-        <p>
-          Link to privacy policy of third party service providers used
-          by the app
-        </p>
-        <ul>
-          <li><a href="https://www.google.com/policies/privacy/" target="_blank" rel="noopener noreferrer">Google Play
-            Services</a></li><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
-          <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----></ul>
-      </div>
-      <p><strong>Log Data</strong></p>
-      <p>
-        We want to inform you that whenever you
-        use our Service, in a case of an error in the app
-        we collect data and information (through third party
-        products) on your phone called Log Data. This Log Data may
-        include information such as your device Internet Protocol
-        (“IP”) address, device name, operating system version, the
-        configuration of the app when utilizing our Service,
-        the time and date of your use of the Service, and other
-        statistics.
-      </p>
-      <p><strong>Cookies</strong></p>
-      <p>
-        Cookies are files with a small amount of data that are
-        commonly used as anonymous unique identifiers. These are sent
-        to your browser from the websites that you visit and are
-        stored on your device's internal memory.
-      </p>
-      <p>
-        This Service does not use these “cookies” explicitly. However,
-        the app may use third party code and libraries that use
-        “cookies” to collect information and improve their services.
-        You have the option to either accept or refuse these cookies
-        and know when a cookie is being sent to your device. If you
-        choose to refuse our cookies, you may not be able to use some
-        portions of this Service.
-      </p>
-      <p><strong>Service Providers</strong></p>
-      <p>
-        We may employ third-party companies and
-        individuals due to the following reasons:
+        我们的服务包括但不局限于：
       </p>
       <ul>
-        <li>To facilitate our Service;</li>
-        <li>To provide the Service on our behalf;</li>
-        <li>To perform Service-related services; or</li>
-        <li>To assist us in analyzing how our Service is used.</li>
+        <li>a.处理您的申请与登记</li>
+        <li>b.回复您的各项问题及投诉建议</li>
+        <li>c.为您及时提供中心的最新消息</li>
+        <li>d.为您及时提供孩子的学习状况</li>
+        <li>e.为您及时提供最合适孩子的课程以及上课时段</li>
+        <li>f.为学生提供上课所需教材</li>
+        <li>g.处理您的各项消费记录及单据</li>
       </ul>
+      <br/>
       <p>
-        We want to inform users of this Service
-        that these third parties have access to your Personal
-        Information. The reason is to perform the tasks assigned to
-        them on our behalf. However, they are obligated not to
-        disclose or use the information for any other purpose.
+        我们会尽力确保您可以及时收到最新的信息。
       </p>
-      <p><strong>Security</strong></p>
       <p>
-        We value your trust in providing us your
-        Personal Information, thus we are striving to use commercially
-        acceptable means of protecting it. But remember that no method
-        of transmission over the internet, or method of electronic
-        storage is 100% secure and reliable, and we cannot
-        guarantee its absolute security.
+        如果您不愿接收到我们的新信息，请将以下信息发送至<span><a href="mailto:unsubscribe@monkeytree.com.hk">unsubscribe@monkeytree.com.hk</a></span>
       </p>
-      <p><strong>Links to Other Sites</strong></p>
+      <ul>
+        <li>a.您的姓名</li>
+        <li>b.您的相关资料</li>
+        <li>c.您不愿收到新信息的原因</li>
+      </ul>
+      <br/>
+      <p><strong>保证您个人资料准确无误</strong></p>
       <p>
-        This Service may contain links to other sites. If you click on
-        a third-party link, you will be directed to that site. Note
-        that these external sites are not operated by us.
-        Therefore, we strongly advise you to review the
-        Privacy Policy of these websites. We have
-        no control over and assume no responsibility for the content,
-        privacy policies, or practices of any third-party sites or
-        services.
+        我们会尽力保证您的个人资料实时更新及准确无误。
       </p>
-      <p><strong>Children’s Privacy</strong></p>
       <p>
-        These Services do not address anyone under the age of 13.
-        We do not knowingly collect personally
-        identifiable information from children under 13 years of age. In the case
-        we discover that a child under 13 has provided
-        us with personal information, we immediately
-        delete this from our servers. If you are a parent or guardian
-        and you are aware that your child has provided us with
-        personal information, please contact us so that
-        we will be able to do necessary actions.
+        我们将会以您留给我们的数据来与您联系。
       </p>
-      <p><strong>Changes to This Privacy Policy</strong></p>
       <p>
-        We may update our Privacy Policy from
-        time to time. Thus, you are advised to review this page
-        periodically for any changes. We will
-        notify you of any changes by posting the new Privacy Policy on
-        this page.
+        如果您需要更新您的数据请发邮件到<span><a href="mailto:personaldata@monkeytree.com.hk">personaldata@monkeytree.com.hk</a></span>
       </p>
-      <p>This policy is effective as of 2021-08-12</p>
-      <p><strong>Contact Us</strong></p>
+      <p><strong>个人信息保障</strong></p>
       <p>
-        If you have any questions or suggestions about our
-        Privacy Policy, do not hesitate to contact us at shu.lok@embraiz.com.
+        我们将会对您的个人资料严格保密。未经您的同意我们不会将您的任何数据用于或公开给非蒙奇千里儿童俱乐部之用途。
       </p>
-      <p>This privacy policy page was created at <a href="https://privacypolicytemplate.net" target="_blank"
-                                                    rel="noopener noreferrer">privacypolicytemplate.net </a>and
-        modified/generated by <a href="https://app-privacy-policy-generator.nisrulz.com/" target="_blank"
-                                 rel="noopener noreferrer">App Privacy Policy Generator</a></p>
+      <p>
+        我们会将您的部分个人资料转给第三方，如：公司雇员、或关联公司其中包括子公司、合作伙伴等，目的是为您提供更好地服务。
+      </p>
+      <p><strong>个人资料的保存</strong></p>
+      <p>
+        我们会以适合的安保系统来管理您的数据以防止未经授权的浏览。
+      </p>
+      <p>
+        我们对您个人资料的保留时间不会长于达致数据用途（或任何直接相关的目的）所需的时间，且须受与保留资料有关的法律、法定及监管规定的规限。
+      </p>
+      <p>
+        如果您对我们的相关政策有任何疑问请与我们联系。<span><a href="mailto:personaldata@monkeytree.com.hk">personaldata@monkeytree.com.hk</a></span>或将信件寄往以下地址:
+      </p>
+      <p>
+        香港北角英皇道101号10楼1002室
+      </p>
+      <p><strong>影像声明</strong></p>
+      <p>
+        蒙奇千里儿童俱乐部 会在不影响课堂的情况下拍摄一些学生或老师的照片或录像。这些照片或影像会出现在公共场所及网络。如果您拒绝这些照片或影像出现在公共场所及网络，请以邮件的方式告知我们 personaldata@monkeytree.com.hk 邮件内容包括：
+      </p>
+      <ul>
+        <li>a.您和您孩子的姓名</li>
+        <li>b.您的联系电话</li>
+        <li>c.您所在的分校名称</li>
+      </ul>
+      <p><strong>隐私声明变更</strong></p>
+      <p>我们会不定时对隐私声明进行更新，更新前亦不会做出通知。您可以经常登录本网站已查询最新条款。
+      </p>
+
     </div>
-    <div v-if="service">
-      <strong>欢迎阅读《APP用户服务协议》(以下简称“本协议”)。本协议阐述之条款和条件适用于您（以下简称“用户”）使用APP的各种产品和服务。</strong>
+    <div style="padding-left: 3%;padding-bottom: 140px;" v-if="service">
+      <strong>用户协议</strong>
 
-      <p>1. 服务协议的确认</p>
+      <p>本声明自2014年10月23日起生效</p>
 
-      <p>1.1 广州钜学网络科技有限公司及相关关联企业（以下合称“钜学公司”）同意按照本协议的规定及其不时发布的操作规则提供基于互联网移动网的NGTC珠宝v课APP、钜学官方网站（www.juxue211.com）等相关服务（以下简称“钜学服务”）。</p>
+      <p>蒙奇千里儿童俱乐部声明，本APP下的中文内容是根据英文之翻译版本，如若出现解释模糊，定义不清的情况，内容以英文为准。</p>
 
-      <p>1.2 钜学服务使用人（以下简称“用户”）应当基于了解本协议全部内容、在独立思考的基础上认可、同意本协议的全部条款并按照页面上的提示完成全部的注册程序，用户的注册、登录、使用等行为将视为完全接受本协议及钜学公司公示的各项规则、规范。</p>
+      <strong>免责声明</strong>
 
-      <p>1.3 钜学公司享有对钜学APP、钜学官方网站上一切活动的监督、提示、检查、纠正等权利。</p>
+      <p>我们会对载于本APP的内容进行即时更新以便管理，但APP上内容因更新而做出的修改恕不另行通知</p>
 
-      <strong>2. 服务内容</strong>
+      <p>我们不会因为载于APP上的信息错误而导致的损失承担任何责任。</p>
 
-      <p>2.1 钜学服务的具体内容由钜学公司根据实际情况提供，包括但不限于授权用户通过其帐号上传、搜索并向互相关联的用户推送相关信息、授权用户对其进行收录、分享等，钜学公司有权对其提供的服务或产品形态进行升级或其他调整，均以APP\网站内容更新的方式通知用户，不单独通知用户。</p>
+        <strong>声明变更</strong>
 
-      <p>2.2 钜学公司提供的钜学服务中可能包括广告，用户同意在使用过程中显示钜学和第三方供应商、合作伙伴提供的广告。</p>
+      <p>我们会不定时对本APP的各项声明进行更新，更新前亦不会做出通知。您可以经常登录本APP已查询最新条款。</p>
 
-      <p>2.3 钜学公司仅提供与钜学服务相关的技术服务等，除此之外与相关网络服务有关的设备（如个人电脑、手机、及其他与接入互联网或移动网有关的装置）及所需费用（如为接入互联网而支付的电话费及上网费、为使用移动网而支付的手机费）均应由用户自行负担。</p>
+          <strong>版权声明</strong>
 
-        <strong>3. 服务变更、中断或终止</strong>
+      <p>除特殊声明外，载于本APP上的一切资料之版权归蒙奇千里儿童俱乐部所有。</p>
 
-      <p>3.1 鉴于网络服务的特殊性（包括但不限于不可抗力、网络稳定性、系统稳定性、技术故障、用户所在位置、用户关机、用户手机病毒或恶意的网络攻击行为及其他任何技术、互联网络、通信线路、内容侵权等原因），用户同意，钜学公司有权随时中断或终止部分或全部钜学服务，钜学公司将尽可能及时以合理方式通知用户，并尽可能在第一时间对此进行修复。但对因此导致用户不能发送和接受阅读信息、或接发错信息，钜学公司不承担任何责任，用户须承担以上风险。</p>
+      <p>本APP所载一切资料包括（文字、照片、图画 等）仅限于个人以及非商业之用途。相关资料未经蒙奇千里儿童俱乐部同意，禁止用于公共及其他商业用途。</p>
+    </div>
+    <div style="padding-left: 3%;padding-bottom: 140px;padding-right:9%;">
+        <h4 class="title">Privacy Statement</h4>
+        <p class="p1">Effective Date: from 23rd October, 2014</p>
+        <p class="p1">This Privacy Statement has been translated into Chinese. In case of inconsistency or ambiguity between the English and Chinese versions, the English version shall prevail.</p>
+        <h5 class="mt-4">Collection of Personal Data</h5>
+        <p class="p1">Monkey Tree English Learning Center Limited (“Monkey Tree English Learning Center”, “Monkey Tree”, “MTELC”, “we”, “us”, or “our”) collects personal data that we believe to be relevant and required to provide the best service to you.</p>
+        <p class="p1">Our services include, but are not limited to, the following:</p>
+      <ul class="mt-3 ml-5" style="list-style: disc;">
+        <li><p>Processing your application and registration</p></li>
+        <li class="mt-2"><p>Replying to your or your child’s inquiries, concerns or complaints</p></li>
+        <li class="mt-2"><p>Direct marketing, such as delivering news, offers and promotions relevant for you or your child</p></li>
+        <li class="mt-2"><p>Providing up-to-date information regarding your or your child’s attendance, progress and upcoming classes</p></li>
+        <li class="mt-2"><p>Assigning available and best suited classes to you or your child</p></li>
+        <li class="mt-2"><p>Providing relevant class materials for you or your child during class</p></li>
+        <li class="mt-2"><p>Issuing invoices, collecting course fees, issuing receipts, and maintaining your payment history</p></li>
+      </ul>
+      <ul class="mt-3 ml-5" style="list-style: disc;">
+        <li><p>Processing your application and registration</p></li>
+        <li class="mt-2"><p>Replying to your or your child’s inquiries, concerns or complaints</p></li>
+        <li class="mt-2"><p>Direct marketing, such as delivering news, offers and promotions relevant for you or your child</p></li>
+        <li class="mt-2"><p>Providing up-to-date information regarding your or your child’s attendance, progress and upcoming classes</p></li>
+        <li class="mt-2"><p>Assigning available and best suited classes to you or your child</p></li>
+        <li class="mt-2"><p>Providing relevant class materials for you or your child during class</p></li>
+        <li class="mt-2"><p>Issuing invoices, collecting course fees, issuing receipts, and maintaining your payment history</p></li>
+      </ul>
+      <p class="p1">All direct marketing activities will be relevant to current Monkey Tree events, promotions and updates. Monkey Tree will endeavor to limit all direct marketing activities to contain material strictly relevant to you personally.</p>
+      <p class="p1">If you prefer your personal data not to be used for the purposes of direct marketing activities, please send an email to
+        <span><a href="mailto:unsubscribe@monkeytree.com.hk">unsubscribe@monkeytree.com.hk</a></span> containing the following information:
+      </p>
+      <ol type="a" class="mt-3 ml-5">
+        <li><p>Your name</p></li>
+        <li><p>Your related information</p></li>
+        <li><p>Your intention to opt-out of Monkey Tree’s direct marketing activities</p></li>
+      </ol>
+      <h5 class="mt-4">Accuracy of your Personal Information</h5>
+      <p class="p1">We will, as manageable by our best effort, keep your personal data accurate and up-to date.</p>
+      <p class="p1">We rely on you to disclose all material information to us and to inform us of any errors or changes in such information.</p>
+      <p class="p1">If you would like to notify us of any changes, such as a change of your contact number, please e-mail us at
+        <span><a href="mailto:personaldata@monkeytree.com.hk">personaldata@monkeytree.com.hk</a></span>.
+      </p>
+      <h5 class="mt-4">Disclosing Your Personal Information</h5>
+      <p class="p1">We keep all personal data strictly confidential, and we will not disclose personal data outside of Monkey Tree unless we have your consent or are required to by law.</p>
+      <p class="p1">We may transfer your personal data to third parties such as employees, related companies, including subsidiaries and associated companies, as necessary to provide the best service to you.</p>
 
-      <p>3.2 用户理解，钜学公司需要定期或不定期地对提供钜学服务的平台或相关设备进行检修和维护，如因此类情况而造成服务在合理期间内的中断，钜学公司将尽可能事先通知，但无需为此承担任何责任。</p>
+      <h5 class="mt-4">Protecting and Retaining Your Personal Information</h5>
+      <p class="p1">We maintain appropriate security systems to prevent unauthorized access to all personal data.</p>
+      <p class="p1">We retain personal data for no longer than is required to fulfill the purpose or any directly related purposes for which the data is to be used, subject to legal, statutory and regulatory requirements for the retention of data.</p>
+      <p class="p1">If you have any questions or concerns regarding Monkey Tree’s Privacy Statement, please feel free to contact us at personaldata@monkeytree.com.hk or write to the following address:</p>
+      <p class="p1">Room 1002, 10/F, 101 King’s Road, North Point, Hong Kong</p>
 
-      <p>3.3 用户提供的个人资料不真实、用户违反法律法规国家政策或本协议规定的使用规则，钜学公司有权随时中断或终止向用户提供本协议项下的钜学服务，而无需对用户或任何第三方承担任何责任。</p>
-
-          <strong>4. 使用规则</strong>
-
-      <p>4.1 用户在申请注册钜学服务时，必须向钜学公司提供准确的主体资料（用户为个人时，包括姓名、性别、出生年月、电话、邮箱等；用户为单位时，包括名称、注册地址、注册号等），如主体资料有任何变动，必须及时更新。因用户提供资料的真实性问题导致协议双方或第三方的任何损失均由用户承担。</p>
-
-      <p>4.2 用户注册成功后，将获得一个钜学帐号及由用户设置的密码，该用户帐号和密码由用户负责保管；用户应当对该用户帐号所有行为负相关法律责任。</p>
-
-            <strong>用户在使用钜学服务过程中，必须遵循以下原则:</strong>
-
-      <p>(1) 遵守中国有关的法律和法规；</p>
-
-      <p>(2) 不得为任何非法目的而使用钜学服务；</p>
-
-      <p>(3) 遵守所有与网络服务有关的网络协议、规定和程序；</p>
-
-      <p>(4) 不得利用钜学服务系统进行任何可能对互联网的正常运转造成不利影响的行为；</p>
-
-      <p>(5) 不得利用钜学网络服务系统进行任何不利于钜学公司的行为。</p>
-
-              <strong>4.3 用户不得使用钜学服务制作、上传、发送、传播敏感信息和违反国家法律制度的信息，包括但不限于下列信息:</strong>
-
-      <p>(1) 反对宪法所确定的基本原则的；</p>
-
-      <p>(2) 危害国家安全，泄露国家秘密，颠覆国家政权，破坏国家统一的；</p>
-
-      <p>(3) 损害国家荣誉和利益的；</p>
-
-      <p>(4) 煽动民族仇恨、民族歧视，破坏民族团结的；</p>
-
-      <p>(5) 破坏国家宗教政策，宣扬邪教和封建迷信的；</p>
-
-      <p>(6) 散布谣言，扰乱社会秩序，破坏社会稳定的；</p>
-
-      <p>(7) 散布淫秽、色情、赌博、暴力、凶杀、恐怖或者教唆犯罪的；</p>
-
-      <p>(8) 侮辱或者诽谤他人，侵害他人合法权益的；</p>
-
-      <p>(9) 含有法律、行政法规禁止的其他内容的。</p>
-
-      <p>4.4 用户同意在任何情况下不使用其他用户的帐号或密码。在您怀疑他人在使用您的帐号或密码时，您同意立即通知钜学公司。</p>
-
-      <p>4.5 用户有权更改、删除在钜学服务中的个人资料、注册信息及传送内容等，但删除有关信息的同时也会删除任何您储存在系统中的文字和图片。用户需承担该风险。</p>
-
-      <p>4.6 如因用户违反本协议中的任何条款，钜学公司有权依据本协议终止对违约用户钜学帐号提供服务。</p>
-
-      <p>4.7 如用户注册钜学帐号后长期不登录该帐号，钜学公司有权回收该帐号，以免造成资源浪费，由此带来问题均由用户自行承担。</p>
-
-                <strong>5. 知识产权</strong>
-
-      <p>5.1 钜学公司提供钜学服务中所包含的任何文本、图片、标识、音频、视频资料均受著作权、商标权、专利权及其他财产权法律的保护。</p>
-
-      <p>5.2 未经相关权利人和钜学公司的同意，上述资料均不得以任何方式被展示于其他任何第三方平台或被用于其他任何商业目的；用户不得擅自复制、修改、编纂上述内容、或创造与内容有关的衍生产品。</p>
-
-                  <strong>6. 隐私保护</strong>
-
-      <p>6.1 本协议所指的“隐私”包括《电信和互联网用户个人信息保护规定》第4条规定的用户个人信息的内容以及未来不时制定或修订的法律法规中明确规定的隐私应包括的内容。</p>
-
-      <p>6.2 保护用户隐私和个人数据是钜学公司的一项基本制度，钜学公司将采取各种制度、安全技术和程序等措施来保护用户隐私和个人数据不被未经授权的访问、使用或泄漏，并保证不会将单个用户的注册资料及用户在使用钜学服务时存储在钜学公司的非公开内容向除合作单位以外的第三方公开或用于任何非法的用途，但下列情况除外：</p>
-
-      <p>(1) 事先获得用户的明确授权；</p>
-
-      <p>(2) 根据有关法律法规的要求；</p>
-
-      <p>(3) 按照相关政府主管部门的要求；</p>
-
-      <p>(4) 为维护社会公众的利益；</p>
-
-      <p>(5) 用户侵害本协议项下钜学公司的合法权益的情况下而为维护钜学公司的合法权益所必须。</p>
-
-      <p>6.3 用户在注册钜学APP帐号或使用钜学APP服务的过程中，需要提供一些必要的信息，例如：姓名、电话、邮箱、性别、出生年月、名称、注册地址、注册号等。为向用户提供帐号注册服务或进行用户身份识别，需要用户填写手机号码；部分功能需要用户授权使用用户的相机或相册；部分功能需要用户授权访问用户的手机通讯录等。若用户不授权或提供的信息不完整，则无法使用本服务或在使用过程中受到限制。用户授权提供的信息，钜学公司承诺将采取措施保护用户的个人信息安全。</p>
-
-      <p>6.4 为了向用户提供更好的用户体验和提高钜学APP的服务质量，钜学公司将可能会收集使用或向第三方提供用户的非个人隐私信息。钜学公司将对该第三方使用用户个人数据的行为进行监督和管理，尽一切可能努力保护用户个人信息的安全。</p>
-
-                    <strong>7. 免责声明</strong>
-
-      <p>7.1 用户在使用钜学服务的过程中应遵守国家法律法规及政策规定，对其所制作、上传、发送、传播的信息和内容承担任何法律责任，与钜学公司无关。</p>
-
-      <p>7.2 钜学APP在其页面上向用户显示、推送的任何信息和内容如系钜学公司利用技术手段根据用户指令从互联网任何第三方网站搜索、定位、匹配后推荐给用户而非钜学公司单方制作的，则该显示、推送的信息和内容并不代表钜学公司及钜学APP的观点，钜学公司并不对上述信息的准确性和正确性负责。</p>
-
-      <p>7.3钜学公司提供钜学APP服务中所包含的任何文本、图片、标识、音频、视频资料均为教学用途，不涉及任何实体物品的商业活动。</p>
-
-      <p>7.4钜学APP在其页面上向用户显示、推送的任何信息和内容如存在侵权任何第三方知识产权的嫌疑，权利人和相关利害关系人应当向钜学公司发出权利通知，钜学公司经过核实后根据有关法律法规有权采取包括但不限于断开该侵权内容的链接或删除并停止传输该侵权内容，但钜学公司并不对该侵权内容承担法律责任。</p>
-
-      <p>7.5用户违反本协议的规定，导致或产生的任何第三方主张的任何索赔、要求或损失，包括合理的律师费，用户同意赔偿钜学公司，使之免受损害。</p>
-
-                      <strong>8. 其他条款</strong>
-
-      <p>8.1 钜学公司有权随时修改本协议的任何条款，一旦本协议的内容发生变动，钜学公司将会在钜学APP平台中公布修改后的协议内容或通过其他适当方式向用户公布修改内容。用户不同意上述修改内容，有权选择停止使用钜学服务，但用户继续使用，则视为接受钜学公司对本协议相关条款的修改。</p>
-
-      <p>8.2 本《协议》所定的任何条款无论因何种原因部分或全部无效或不具有执行力，本协议的其余条款仍应有效并具备约束力。</p>
-
-      <p>8.3 本协议的订立、执行和解释及纠纷的解决均应适用中华人民共和国法律并受中华人民共和国法院管辖。如双方就本协议内容或执行发生任何纠纷或争议，首先应友好协商解决，协商不成的，任何一方均可向钜学公司所在地的有管辖权的人民法院提起诉讼。</p>
-
-      <p>8.4 本协议的版权归钜学公司所有，本协议各项条款内容的最终解释权及修改权归钜学公司所有。</p>
+      <h5 class="mt-4">Statement on Photography and Videography</h5>
+      <p class="p1" style="line-height: 30px">Monkey Tree will occasionally take photographs and videos of students and employees with as little disturbance to the class or center environment as possible. Such photographs and videos may be published, and viewed by the general public, in hard copy, via electronic media or on the website. If you object to your or your child’s photograph being published or wish to restrict its use, please notify us at
+        <span><a href="mailto:personaldata@monkeytree.com.hk">personaldata@monkeytree.com.hk</a></span> containing the following information:
+      </p>
+      <ol type="a" class="mt-3 ml-5">
+        <li><p>Your or your child’s name</p></li>
+        <li><p>Your contact number (as registered at Monkey Tree)</p></li>
+        <li><p>The Monkey Tree Center which you or your child attends</p></li>
+      </ol>
+      <p class="p1">Changes to this Privacy Statement</p>
+      <p class="p1">We update our Privacy Statement from time to time without prior notice. We encourage you to check this Website occasionally to ensure that you are aware of the most recent terms.</p>
+      <div class="col-lg-5 col-xs-12 col-md-12">
+        <p>Headquarters:</p>
+        <p>Room 2801, 28/F, Citicorp Centre,</p>
+        <p>Causeway Bay, Hong Kong</p>
+        <p>Tel: <a href="tel:3563-6771">(852) 3563-6771</a></p>
+        <p>Email: <a href="mailto:enquiry@monkeytree.com.hk">enquiry@monkeytree.com.hk</a></p>
+      </div>
     </div>
   </div>
   <!--  </html>-->
@@ -306,6 +215,74 @@ export default {
 </script>
 
 <style scoped lang="less">
+
+.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-top: 5%;
+}
+.col-md-12 {
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+.col-lg-5 {
+  color: #7e8486;
+  -ms-flex: 0 0 41.666667%;
+  flex: 0 0 41.666667%;
+  max-width: 41.666667%;
+}
+ol {
+  color: #7e8486;
+  display: block;
+  list-style-type: decimal;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+ul {
+  color: #7e8486;
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+.mt-3, .my-3 {
+  margin-top: 1rem!important;
+}
+h5 {
+  display: block;
+  font-size: 1.1em;
+  margin-block-start: 1.67em;
+  margin-block-end: 1.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+.mt-4, .my-4 {
+  margin-top: 1.5rem!important;
+}
+.p1{
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  color: #7e8486;
+}
+  h4.title {
+    font-size: 1.5rem;
+    margin: 20px 0 50px 0;
+    color: #333333;
+  }
 .body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   padding: 1em;
@@ -321,7 +298,9 @@ export default {
 .backButton {
   width: 6%;
   position: absolute;
-  top: 0px;
-  margin-bottom: 10px;
+  /* top: 0px; */
+  /* margin-bottom: 10px; */
+  margin: -7% 3%;
 }
+
 </style>

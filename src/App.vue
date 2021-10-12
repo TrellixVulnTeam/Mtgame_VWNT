@@ -167,7 +167,7 @@
       this.url1=this.url+"version";
       this.$axios
       	.post(this.url1,qs.stringify({
-      			version:23,
+      			version:24,
             // 等待发布版本是
             // 发布出去的版本是16,17,19,21
             // 测试版本20

@@ -509,7 +509,6 @@
 						courseId:this.courseId
 						})).then(res=>{
 							this.levelsList=res.data.levelsList;
-
 						}, res => {
 						    alertMsg("You must be connected to the internet.<br>Please connect and try again.");
 						})

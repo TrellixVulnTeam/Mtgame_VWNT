@@ -918,12 +918,9 @@
       <img src="../../assets/image/201910H5 Pets_MT/Walker_BG/bg_0.png"
            style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;"/>
       <div class="big">
-        <img src="../../assets/image/201910H5 Pets_MT/PNG/big_00.png" v-if="big" @click="!walkers && showGif('big')">
-        <img src="../../assets/image/201910H5 Pets_MT/PNG/big_00.png" v-if="puppy" @click="walkers && showGif('puppy')">
-        <img src="../../assets/image/201910H5 Pets_MT/GIF/puppy.gif" style="z-index: 100" v-if="!big"
+        <img src="../../assets/image/201910H5 Pets_MT/PNG/big_00.png" v-if="big" @click="walkers && showGif('big')">
+        <img src="../../assets/image/201910H5 Pets_MT/GIF/big.gif" style="z-index: 100" v-if="!big"
              @click="showGif('big')">
-        <img src="../../assets/image/201910H5 Pets_MT/GIF/puppy.gif" style="z-index: 100" v-if="!puppy"
-             @click="showGif('puppy')">
       </div>
       <div class="small">
         <img src="../../assets/image/201910H5 Pets_MT/PNG/small_00.png" v-if="small" @click="walkers && showGif('small')">
@@ -987,9 +984,12 @@
              @click="showGif('parrot')">
       </div>
       <div class="puppy">
-        <img src="../../assets/image/201910H5 Pets_MT/PNG/puppy_00.png" v-if="puppy" @click="showGif('puppy')">
+        <img src="../../assets/image/201910H5 Pets_MT/PNG/puppy_00.png" v-if="walkers&&puppy" @click="showGif('puppy')">
+        <img src="../../assets/image/201910H5 Pets_MT/PNG/puppy_00.png" v-if="!walkers&&dog" @click="showGif('dog')">
         <img src="../../assets/image/201910H5 Pets_MT/GIF/puppy.gif" style="z-index: 100" v-if="!puppy"
              @click="showGif('puppy')">
+        <img src="../../assets/image/201910H5 Pets_MT/GIF/puppy.gif" style="z-index: 100" v-if="!dog"
+             @click="showGif('dog')">
       </div>
       <div class="feedButton">
         <img src="../../assets/image/201910H5 Pets_MT/Word/word_feed Comp 1_0.png"
@@ -1017,11 +1017,11 @@
       </div>
       <div class="catButton">
         <img src="../../assets/image/201910H5 Pets_MT/Word/word_cat Comp 1_0.png" v-if="!walkers"
-             :style="{zIndex: !kitten ? 100 : 1}" @click="showGif('kitten')">
+             :style="{zIndex: !cat ? 100 : 1}" @click="showGif('cat')">
       </div>
       <div class="dogButton">
         <img src="../../assets/image/201910H5 Pets_MT/Word/word_dog Comp 1_0.png" v-if="!walkers"
-             :style="{zIndex: !puppy ? 100 : 1}" @click="showGif('puppy')">
+             :style="{zIndex: !dog ? 100 : 1}" @click="showGif('dog')">
       </div>
       <div class="puppyButton">
         <img src="../../assets/image/201910H5 Pets_MT/Word/word_puppy Comp 1_0.png" v-if="walkers"
@@ -1029,7 +1029,7 @@
       </div>
       <div class="goldfishButton">
         <img src="../../assets/image/201910H5 Pets_MT/Word/word_goldfish Comp 1_0.png" v-if="walkers"
-             :style="{zIndex: !goldfis ? 100 : 1}" @click="showGif('goldfis')">
+             :style="{zIndex: !goldfish ? 100 : 1}" @click="showGif('goldfish')">
       </div>
       <div class="hamsterButton">
         <img src="../../assets/image/201910H5 Pets_MT/Word/word_hamster Comp 1_0.png" v-if="walkers"
@@ -1054,6 +1054,171 @@
       <div class="kittenButton">
         <img src="../../assets/image/201910H5 Pets_MT/Word/word_kitten Comp 1_0.png" v-if="walkers"
              :style="{zIndex: !kitten ? 100 : 1}" @click="showGif('kitten')">
+      </div>
+    </div>
+    <div v-else-if="this.unit === 'Animals' && this.part === 'part2'">
+      <img src="../../assets/image/201910H5 Zoo_MT/Walker_BG/bg_0.png"
+           style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;"/>
+      <div class="still_roar">
+        <img  src="../../assets/image/201910H5 Zoo_MT/stillObj/still_roar_00.png" v-if="roar1"/>
+      </div>
+      <div class="crocodile">
+        <img src="../../assets/image/201910H5 Zoo_MT/PNG/crocodile Comp 1_00.png" v-if="crocodile" @click="walkers&&showGif('crocodile')">
+        <img src="../../assets/image/201910H5 Zoo_MT/GIF/crocodile.gif" style="z-index: 100" v-if="!crocodile"
+             @click="showGif('crocodile')">
+      </div>
+      <div class="elephant">
+        <img src="../../assets/image/201910H5 Zoo_MT/PNG/elephant Comp 1_00.png" v-if="!walkers&&elephant" @click="showGif('elephant')">
+        <img src="../../assets/image/201910H5 Zoo_MT/PNG/elephant Comp 1_00.png" v-if="walkers&&splash" @click="showGif('splash')">
+        <img src="../../assets/image/201910H5 Zoo_MT/GIF/elephant.gif" style="z-index: 100" v-if="!splash"
+             @click="showGif('splash')">
+        <img src="../../assets/image/201910H5 Zoo_MT/GIF/elephant.gif" style="z-index: 100" v-if="!elephant"
+             @click="showGif('elephant')">
+      </div>
+      <div class="giraffe">
+        <img src="../../assets/image/201910H5 Zoo_MT/PNG/giraffe Comp 2_00.png" v-if="giraffe" @click="!walkers&&showGif('giraffe')">
+        <img src="../../assets/image/201910H5 Zoo_MT/GIF/giraffe.gif" style="z-index: 100" v-if="!giraffe"
+             @click="showGif('giraffe')">
+      </div>
+      <div class="gorilla">
+        <img src="../../assets/image/201910H5 Zoo_MT/PNG/gorilla Comp 1_00.png" v-if="gorilla" @click="walkers&&showGif('gorilla')">
+        <img src="../../assets/image/201910H5 Zoo_MT/GIF/gorilla.gif" style="z-index: 100" v-if="!gorilla"
+             @click="showGif('gorilla')">
+      </div>
+      <div class="hippo">
+        <img src="../../assets/image/201910H5 Zoo_MT/PNG/hippo Comp 1_00.png" v-if="hippo" @click="showGif('hippo')">
+        <img src="../../assets/image/201910H5 Zoo_MT/GIF/hippo.gif" style="z-index: 100" v-if="!hippo"
+             @click="showGif('hippo')">
+      </div>
+      <div class="lion">
+        <img src="../../assets/image/201910H5 Zoo_MT/PNG/lion Comp 1_00.png" v-if="!walkers&&lion" @click="showGif('lion')">
+        <img src="../../assets/image/201910H5 Zoo_MT/GIF/lion.gif" style="z-index: 100" v-if="!lion"
+             @click="showGif('lion')">
+        <img src="../../assets/image/201910H5 Zoo_MT/PNG/lion Comp 1_00.png" v-if="walkers&&roar1" @click="showGif('roar1')">
+      </div>
+      <div class="roar1">
+        <img src="../../assets/image/201910H5 Zoo_MT/GIF/roar.gif" style="z-index: 100" v-if="!roar1"
+             @click="showGif('roar1')">
+      </div>
+      <div class="lizard1">
+        <img src="../../assets/image/201910H5 Zoo_MT/PNG/lizard Comp 1_00.png" v-if="lizard1" @click="walkers&&showGif('lizard1')">
+        <img src="../../assets/image/201910H5 Zoo_MT/GIF/lizard.gif" style="z-index: 100" v-if="!lizard1"
+             @click="showGif('lizard1')">
+      </div>
+      <div class="monkey">
+        <img src="../../assets/image/201910H5 Zoo_MT/PNG/monkey Comp 1_00.png" v-if="monkey&&tall" @click="!walkers&&showGif('tall')">
+        <img src="../../assets/image/201910H5 Zoo_MT/GIF/monkey.gif" style="z-index: 100" v-if="!monkey"
+             @click="showGif('monkey')">
+<!--        <img src="../../assets/image/201910H5 Zoo_MT/PNG/tall Comp 2_00.png" v-if="!walkers&&tall&&monkey" @click="showGif('tall')">-->
+        <img src="../../assets/image/201910H5 Zoo_MT/GIF/tall.gif" style="z-index: 100" v-if="!tall"
+             @click="showGif('tall')">
+      </div>
+      <div class="panda">
+        <img src="../../assets/image/201910H5 Zoo_MT/PNG/panda Comp 1_00.png" v-if="panda" @click="walkers&&showGif('panda')">
+        <img src="../../assets/image/201910H5 Zoo_MT/GIF/panda.gif" style="z-index: 100" v-if="!panda"
+             @click="showGif('panda')">
+      </div>
+      <div class="penguin">
+        <img src="../../assets/image/201910H5 Zoo_MT/PNG/penguin Comp 1_00.png" v-if="penguin" @click="walkers&&showGif('penguin')">
+        <img src="../../assets/image/201910H5 Zoo_MT/GIF/penguin.gif" style="z-index: 100" v-if="!penguin"
+             @click="showGif('penguin')">
+      </div>
+      <div class="short">
+        <img src="../../assets/image/201910H5 Zoo_MT/PNG/short Comp 1_00.png" v-if="short" @click="!walkers&&showGif('short')">
+        <img src="../../assets/image/201910H5 Zoo_MT/GIF/short.gif" style="z-index: 100" v-if="!short"
+             @click="showGif('short')">
+      </div>
+      <div class="sleep1">
+        <img src="../../assets/image/201910H5 Zoo_MT/PNG/sleep 2 Comp 1_00.png" v-if="sleep1" @click="walkers&&showGif('sleep1')">
+        <img src="../../assets/image/201910H5 Zoo_MT/GIF/sleep.gif" style="z-index: 100" v-if="!sleep1"
+             @click="showGif('sleep1')">
+      </div>
+      <div class="snake">
+        <img src="../../assets/image/201910H5 Zoo_MT/PNG/snake Comp 2_00.png" v-if="snake" @click="walkers&&showGif('snake')">
+        <img src="../../assets/image/201910H5 Zoo_MT/GIF/snake.gif" style="z-index: 100" v-if="!snake"
+             @click="showGif('snake')">
+      </div>
+      <div class="tiger">
+        <img src="../../assets/image/201910H5 Zoo_MT/PNG/tiger Comp 1_00.png" v-if="tiger" @click="showGif('tiger')">
+        <img src="../../assets/image/201910H5 Zoo_MT/GIF/tiger.gif" style="z-index: 100" v-if="!tiger"
+             @click="showGif('tiger')">
+      </div>
+      <div class="zookeeper">
+        <img src="../../assets/image/201910H5 Zoo_MT/PNG/zookeeper Comp 2_00.png" v-if="zookeeper" @click="walkers&&showGif('zookeeper')">
+        <img src="../../assets/image/201910H5 Zoo_MT/GIF/zookeeper.gif" style="z-index: 100" v-if="!zookeeper"
+             @click="showGif('zookeeper')">
+      </div>
+      <div class="tallButton">
+        <img src="../../assets/image/201910H5 Zoo_MT/Word/word_tall Comp 1_0.png" v-if="!walkers"
+             :style="{zIndex: !tall ? 100 : 1}" @click="showGif('tall')">
+      </div>
+      <div class="shortButton">
+        <img src="../../assets/image/201910H5 Zoo_MT/Word/word_short Comp 1_0.png" v-if="!walkers"
+             :style="{zIndex: !short ? 100 : 1}" @click="showGif('short')">
+      </div>
+      <div class="monkeyButton">
+        <img src="../../assets/image/201910H5 Zoo_MT/Word/word_monkey Comp 1_0.png" v-if="!walkers"
+             :style="{zIndex: !monkey ? 100 : 1}" @click="showGif('monkey')">
+      </div>
+      <div class="giraffeButton">
+        <img src="../../assets/image/201910H5 Zoo_MT/Word/word_giraffe Comp 1_0.png" v-if="!walkers"
+             :style="{zIndex: !giraffe ? 100 : 1}" @click="showGif('giraffe')">
+      </div>
+      <div class="lionButton">
+        <img src="../../assets/image/201910H5 Zoo_MT/Word/word_lion Comp 1_0.png" v-if="!walkers"
+             :style="{zIndex: !lion ? 100 : 1}" @click="showGif('lion')">
+      </div>
+      <div class="hippoButton">
+        <img src="../../assets/image/201910H5 Zoo_MT/Word/word_hippo Comp 1_0.png"
+             :style="{zIndex: !hippo ? 100 : 1}" @click="showGif('hippo')">
+      </div>
+      <div class="roar1Button">
+        <img src="../../assets/image/201910H5 Zoo_MT/Word/word_roar Comp 1_0.png" v-if="walkers"
+             :style="{zIndex: !roar1 ? 100 : 1}" @click="showGif('roar1')">
+      </div>
+      <div class="zookeeperButton">
+        <img src="../../assets/image/201910H5 Zoo_MT/Word/word_zookeeper Comp 1_0.png" v-if="walkers"
+             :style="{zIndex: !zookeeper ? 100 : 1}" @click="showGif('zookeeper')">
+      </div>
+      <div class="penguinButton">
+        <img src="../../assets/image/201910H5 Zoo_MT/Word/word_penguin Comp 1_0.png" v-if="walkers"
+             :style="{zIndex: !penguin ? 100 : 1}" @click="showGif('penguin')">
+      </div>
+      <div class="snakeButton">
+        <img src="../../assets/image/201910H5 Zoo_MT/Word/word_snake Comp 1_0.png" v-if="walkers"
+             :style="{zIndex: !snake ? 100 : 1}" @click="showGif('snake')">
+      </div>
+      <div class="splashButton">
+        <img src="../../assets/image/201910H5 Zoo_MT/Word/word_splash Comp 1_0.png" v-if="walkers"
+             :style="{zIndex: !splash ? 100 : 1}" @click="showGif('splash')">
+      </div>
+      <div class="crocodileButton">
+        <img src="../../assets/image/201910H5 Zoo_MT/Word/word_crocodile Comp 1_0.png" v-if="walkers"
+             :style="{zIndex: !crocodile ? 100 : 1}" @click="showGif('crocodile')">
+      </div>
+      <div class="sleep1Button">
+        <img src="../../assets/image/201910H5 Zoo_MT/Word/word_sleep Comp 1_0.png" v-if="walkers"
+             :style="{zIndex: !sleep1 ? 100 : 1}" @click="showGif('sleep1')">
+      </div>
+      <div class="pandaButton">
+        <img src="../../assets/image/201910H5 Zoo_MT/Word/word_panda Comp 1_0.png" v-if="walkers"
+             :style="{zIndex: !panda ? 100 : 1}" @click="showGif('panda')">
+      </div>
+      <div class="lizard1Button">
+        <img src="../../assets/image/201910H5 Zoo_MT/Word/word_lizard Comp 1_0.png" v-if="walkers"
+             :style="{zIndex: !lizard1 ? 100 : 1}" @click="showGif('lizard1')">
+      </div>
+      <div class="gorillaButton">
+        <img src="../../assets/image/201910H5 Zoo_MT/Word/word_gorilla Comp 1_0.png" v-if="walkers"
+             :style="{zIndex: !gorilla ? 100 : 1}" @click="showGif('gorilla')">
+      </div>
+      <div class="elephantButton">
+        <img src="../../assets/image/201910H5 Zoo_MT/Word/word_elephant Comp 1_0.png" v-if="!walkers"
+             :style="{zIndex: !elephant ? 100 : 1}" @click="showGif('elephant')">
+      </div>
+      <div class="tigerButton">
+        <img src="../../assets/image/201910H5 Zoo_MT/Word/word_tiger Comp 1_0.png"
+             :style="{zIndex: !tiger ? 100 : 1}" @click="showGif('tiger')">
       </div>
     </div>
     <div v-else>
@@ -1307,8 +1472,61 @@ export default {
           snack:require('../../assets/Flashcard Audio/september/Snack.mp3'),
           swing:require('../../assets/Flashcard Audio/september/swing.mp3'),
           toys:require('../../assets/Flashcard Audio/september/Toys.mp3'),
+          //October
+          big:require('../../assets/Flashcard Audio/october/Big.mp3'),
+          bird:require('../../assets/Flashcard Audio/october/bird.mp3'),
+          brush:require('../../assets/Flashcard Audio/october/brush.mp3'),
+          cage:require('../../assets/Flashcard Audio/october/Cage.mp3'),
+          cat:require('../../assets/Flashcard Audio/october/Cat.mp3'),
+          crocodile:require('../../assets/Flashcard Audio/october/crocodile.mp3'),
+          dog:require('../../assets/Flashcard Audio/october/Dog.mp3'),
+          elephant:require('../../assets/Flashcard Audio/october/Elephant.mp3'),
+          feed:require('../../assets/Flashcard Audio/october/feed.mp3'),
+          fish:require('../../assets/Flashcard Audio/october/Fish.mp3'),
+          giraffe:require('../../assets/Flashcard Audio/october/giraffe.mp3'),
+          goldfish:require('../../assets/Flashcard Audio/october/Goldfish.mp3'),
+          gorilla:require('../../assets/Flashcard Audio/october/Gorilla.mp3'),
+          hamster:require('../../assets/Flashcard Audio/october/Hamster.mp3'),
+          hippo:require('../../assets/Flashcard Audio/october/Hippo.mp3'),
+          kitten:require('../../assets/Flashcard Audio/october/Kitten.mp3'),
+          lion:require('../../assets/Flashcard Audio/october/Lion.mp3'),
+          lizard1:require('../../assets/Flashcard Audio/october/lizard.mp3'),
+          monkey:require('../../assets/Flashcard Audio/october/Monkey.mp3'),
+          panda:require('../../assets/Flashcard Audio/october/Panda.mp3'),
+          parrot:require('../../assets/Flashcard Audio/october/parrot.mp3'),
+          penguin:require('../../assets/Flashcard Audio/october/Penguin.mp3'),
+          puppy:require('../../assets/Flashcard Audio/october/Puppy.mp3'),
+          roar1:require('../../assets/Flashcard Audio/october/roar.mp3'),
+          short:require('../../assets/Flashcard Audio/october/short.mp3'),
+          sleep1:require('../../assets/Flashcard Audio/october/Sleep.mp3'),
+          small:require('../../assets/Flashcard Audio/october/small.mp3'),
+          splash:require('../../assets/Flashcard Audio/october/splash.mp3'),
+          snake:require('../../assets/Flashcard Audio/october/Snake.mp3'),
+          tall:require('../../assets/Flashcard Audio/october/Tall.mp3'),
+          tank1:require('../../assets/Flashcard Audio/october/Tank.mp3'),
+          tiger:require('../../assets/Flashcard Audio/october/Tiger.mp3'),
+          turtle:require('../../assets/Flashcard Audio/october/turtle.mp3'),
+          zookeeper:require('../../assets/Flashcard Audio/october/zookeeper.mp3'),
         },
         cardType:'default',
+        crocodile:true,
+        elephant:true,
+        giraffe:true,
+        gorilla:true,
+        hippo:true,
+        lion:true,
+        lizard1:true,
+        monkey:true,
+        panda:true,
+        penguin:true,
+        roar1:true,
+        short:true,
+        sleep1:true,
+        snake:true,
+        splash:true,
+        tall:true,
+        tiger:true,
+        zookeeper:true,
         dog:true,
         cat:true,
         big:true,
@@ -1699,6 +1917,253 @@ export default {
     z-index: 201;
   }
 
+  .crocodile img {
+    width: 18%;
+    left: 63%;
+    top: 87%;
+    position: absolute;
+  }
+
+  .roar1 img {
+    width: 25%;
+    left: 5%;
+    top: -0.5%;
+    position: absolute;
+  }
+
+  .zookeeperButton img {
+    width: 8%;
+    left: 22%;
+    top: 36%;
+    position: absolute;
+  }
+
+  .penguinButton img {
+    width: 7%;
+    left: 28%;
+    top: 65%;
+    position: absolute;
+  }
+  .snakeButton img {
+    width: 7%;
+    left: 56%;
+    top: 81%;
+    position: absolute;
+  }
+  .splashButton img {
+    width: 7%;
+    left: 59%;
+    top: 56%;
+    position: absolute;
+  }
+  .crocodileButton img {
+    width: 8%;
+    left: 82%;
+    top: 91%;
+    position: absolute;
+  }
+  .hippoButton img {
+    width: 5%;
+    left: 19%;
+    top: 87%;
+    position: absolute;
+  }
+  .pandaButton img {
+    width: 6%;
+    left: 69%;
+    top: 37%;
+    position: absolute;
+  }
+  .tallButton img {
+    width: 5%;
+    left: 19%;
+    top: 87%;
+    position: absolute;
+  }
+
+  .gorillaButton img {
+    width: 6%;
+    left: 88%;
+    top: 39%;
+    position: absolute;
+  }
+  .lizard1Button img {
+    width: 6%;
+    left: 73%;
+    top: 9%;
+    position: absolute;
+  }
+  .sleep1Button img {
+    width: 6%;
+    left: 42%;
+    top: 46%;
+    position: absolute;
+  }
+  .roar1Button img {
+    width: 5%;
+    left: 17%;
+    top: 22%;
+    position: absolute;
+  }
+
+
+  .shortButton img {
+    width: 6%;
+    left: 32%;
+    top: 87%;
+    position: absolute;
+  }
+
+  .monkeyButton img {
+    width: 7%;
+    left: 26%;
+    top: 66%;
+    position: absolute;
+  }
+
+  .giraffeButton img {
+    width: 7%;
+    left: 3%;
+    top: 43%;
+    position: absolute;
+  }
+
+  .lionButton img {
+    width: 5%;
+    left: 16%;
+    top: 27%;
+    position: absolute;
+  }
+
+  .hippoButton img {
+    width: 7%;
+    left: 85%;
+    top: 61%;
+    position: absolute;
+  }
+
+  .elephantButton img {
+    width: 8%;
+    left: 71%;
+    top: 47%;
+    position: absolute;
+  }
+
+  .tigerButton img {
+    width: 5%;
+    left: 50%;
+    top: 14%;
+    position: absolute;
+  }
+
+  .elephant img {
+    width: 39%;
+    left: 57%;
+    top: 36%;
+    position: absolute;
+  }
+
+  .still_roar img {
+    width: 12%;
+    left: 16%;
+    top: 0%;
+    position: absolute;
+  }
+
+  .giraffe img {
+    width: 12%;
+    left: 0%;
+    top: 47%;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .gorilla img {
+    width: 16%;
+    left: 84%;
+    top: 6%;
+    position: absolute;
+  }
+
+  .hippo img {
+    width: 18%;
+    left: 78%;
+    top: 67%;
+    position: absolute;
+  }
+
+  .lion img {
+    width: 12%;
+    left: 5%;
+    top: -1%;
+    position: absolute;
+  }
+
+  .lizard1 img {
+    width: 7%;
+    left: 77%;
+    top: 11%;
+    position: absolute;
+  }
+
+  .monkey img {
+    width: 18%;
+    left: 7%;
+    top: 35%;
+    position: absolute;
+  }
+
+  .panda img {
+    width: 18%;
+    left: 57%;
+    top: 15%;
+    position: absolute;
+  }
+
+  .penguin img {
+    width: 7%;
+    left: 28%;
+    top: 47%;
+    position: absolute;
+  }
+
+
+  .short img {
+    width: 13%;
+    left: 21%;
+    top: 69%;
+    position: absolute;
+  }
+
+  .sleep1 img {
+    width: 22%;
+    left: 46%;
+    top: 23%;
+    position: absolute;
+  }
+
+  .snake img {
+    width: 10%;
+    left: 47%;
+    top: 80%;
+    position: absolute;
+  }
+
+
+  .tiger img {
+    width: 16%;
+    left: 35%;
+    top: 1%;
+    position: absolute;
+  }
+
+  .zookeeper img {
+    width: 7%;
+    left: 30%;
+    top: 19%;
+    position: absolute;
+  }
+
   .big img {
     width: 18%;
     left: 13%;
@@ -1718,6 +2183,7 @@ export default {
     left: 53.5%;
     top: 72%;
     position: absolute;
+    z-index: 1;
   }
 
   .turtle img{
@@ -4676,6 +5142,200 @@ export default {
   @media only screen and (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 812px) and (max-width: 1023px){
+    .elephantButton img {
+      width: 9%;
+      left: 71%;
+      top: 45%;
+      position: absolute;
+    }
+    .monkeyButton img {
+      width: 7%;
+      left: 22%;
+      top: 64%;
+      position: absolute;
+    }
+    .panda img {
+      width: 18%;
+      left: 57%;
+      top: 13%;
+      position: absolute;
+    }
+    .sleep1 img {
+      width: 21%;
+      left: 46%;
+      top: 21%;
+      position: absolute;
+    }
+
+    .crocodileButton img {
+      width: 8%;
+      left: 81%;
+      top: 91%;
+      position: absolute;
+    }
+    .crocodile img {
+      width: 17%;
+      left: 63%;
+      top: 85%;
+      position: absolute;
+    }
+    .snake img {
+      width: 9%;
+      left: 47%;
+      top: 79%;
+      position: absolute;
+    }
+    .elephant img {
+      width: 37%;
+      left: 58%;
+      top: 30%;
+      position: absolute;
+    }
+    .hippo img {
+      width: 16%;
+      left: 78%;
+      top: 67%;
+      position: absolute;
+    }
+    .gorilla img {
+      width: 14%;
+      left: 84%;
+      top: 6%;
+      position: absolute;
+    }
+    .lizard1 img {
+      width: 6%;
+      left: 77.5%;
+      height: 19%;
+      top: 11%;
+      position: absolute;
+    }
+    .short img {
+      width: 11%;
+      left: 21%;
+      top: 68%;
+      position: absolute;
+    }
+    .monkey img {
+      width: 14%;
+      left: 7%;
+      top: 39%;
+      position: absolute;
+    }
+    .giraffe img {
+      width: 10%;
+      left: 0%;
+      top: 47%;
+      position: absolute;
+      z-index: 1;
+    }
+    .lion img {
+      width: 10%;
+      left: 6%;
+      top: -1%;
+      position: absolute;
+    }
+    .penguin img {
+      width: 6%;
+      left: 29%;
+      top: 46%;
+    }
+    .tiger img {
+      width: 16%;
+      left: 35%;
+      top: -1%;
+      position: absolute;
+    }
+    .zookeeper img {
+      width: 6%;
+      left: 30%;
+      top: 18%;
+      position: absolute;
+    }
+    .bigButton img {
+      width: 5%;
+      left: 22%;
+      top: 67%;
+    }
+    .goldfishButton img {
+      width: 8%;
+      left: 69%;
+      top: 91%;
+    }
+    .hamsterButton img {
+      top: 65%;
+    }
+    .turtleButton img {
+      top: 41%;
+    }
+    .parrotButton img {
+      left: 74%;
+    }
+    .small img {
+      width: 10%;
+      top: 75%;
+    }
+    .big img {
+      top: 71%;
+    }
+    .parrot img {
+      width: 10%;
+      left: 70%;
+      top: 4%;
+    }
+    .bird img {
+      top: 8%;
+    }
+    .birdButton img {
+      width: 5%;
+      top: 23%;
+    }
+    .turtle img {
+      width: 14%;
+      top: 46%;
+    }
+    .cageButton img {
+      top: 31%;
+    }
+    .hamster img {
+      width: 20%;
+      left: 79.5%;
+      top: 70%;
+      height: 28%;
+    }
+    .kitten img {
+      width: 27%;
+      left: 59%;
+      top: 31%;
+    }
+    .fish img {
+      width: 21%;
+      left: 52.5%;
+      top: 71.5%;
+      height: 25%;
+    }
+    .feed img {
+      top: 8%;
+    }
+    .brush img {
+      top: 15%;
+    }
+    .puppy img {
+      top: 20%;
+    }
+    .brushButton img {
+      top: 16%;
+    }
+    .tank1 img {
+      width: 24%;
+      left: 33%;
+      top: 59%;
+    }
+    .feedButton img {
+      width: 5%;
+      left: 30%;
+      top: 7%;
+    }
     .seesawButton img {
       width: 7%;
       left: 26%;
@@ -5981,6 +6641,268 @@ export default {
   @media only screen and (min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 1024px) and (max-width: 1600px){
+    .elephantButton img {
+      width: 10%;
+      left: 65%;
+      top: 53%;
+      position: absolute;
+    }
+    .sleep1Button img {
+      width: 7%;
+      left: 42%;
+      top: 44%;
+      position: absolute;
+    }
+    .zookeeperButton img {
+      width: 10%;
+      left: 19%;
+      top: 36%;
+      position: absolute;
+    }
+    .roar1 img {
+      width: 31%;
+      left: 4%;
+      top: 1.5%;
+      position: absolute;
+    }
+    .lizard1Button img {
+      width: 6%;
+      left: 73%;
+      top: 10%;
+      position: absolute;
+    }
+    .gorillaButton img {
+      width: 6%;
+      left: 88%;
+      top: 37%;
+      position: absolute;
+    }
+    .crocodileButton img {
+      width: 9%;
+      left: 82%;
+      top: 91%;
+      position: absolute;
+    }
+    .monkeyButton img {
+      width: 9%;
+      left: 25%;
+      top: 66%;
+      position: absolute;
+    }
+    .panda img {
+      width: 23%;
+      left: 51.5%;
+      top: 16%;
+      position: absolute;
+    }
+    .lizard1 img {
+      width: 7%;
+      left: 77%;
+      top: 12%;
+      position: absolute;
+    }
+    .gorilla img {
+      width: 19%;
+      left: 83%;
+      top: 6%;
+      position: absolute;
+    }
+    .sleep1 img {
+      width: 24%;
+      left: 46%;
+      top: 27%;
+    }
+    .zookeeper img {
+      width: 8%;
+      left: 29%;
+      top: 23%;
+      position: absolute;
+    }
+    .penguin img {
+      top: 51%;
+    }
+    .elephant img {
+      top: 46%;
+    }
+    .hippo img {
+      top: 71%;
+    }
+    .crocodile img {
+      top: 88%;
+    }
+    .snake img {
+      top: 83%;
+    }
+    .tiger img {
+      width: 17%;
+      left: 35%;
+      top: 4%;
+      position: absolute;
+    }
+    .still_roar img {
+      width: 14%;
+      left: 17%;
+      top: 3%;
+      position: absolute;
+    }
+    .roar1Button img {
+      width: 6%;
+      left: 18%;
+      top: 22%;
+      position: absolute;
+    }
+    .lion img {
+      width: 15%;
+      left: 4%;
+      top: 1%;
+      position: absolute;
+    }
+    .giraffe img {
+      width: 16%;
+      left: -1%;
+      height: 51%;
+      top: 48%;
+      position: absolute;
+      z-index: 1;
+    }
+    .monkey img {
+      width: 20%;
+      left: 6%;
+      top: 37%;
+      height: 63%;
+      position: absolute;
+    }
+    .short img {
+      width: 16%;
+      left: 21%;
+      top: 71%;
+      position: absolute;
+    }
+    .goldfishButton img {
+      width: 9%;
+      left: 69%;
+      top: 95%;
+      position: absolute;
+    }
+    .kittenButton img {
+      width: 7%;
+      left: 54%;
+      top: 56%;
+      position: absolute;
+    }
+    .puppyButton img {
+      width: 7%;
+      left: 12%;
+      top: 48%;
+    }
+    .smallButton img {
+      width: 7%;
+      left: 10%;
+      top: 70%;
+    }
+    .turtleButton img {
+      width: 6%;
+      left: 85%;
+      top: 44%;
+    }
+    .hamsterButton img {
+      width: 8%;
+      left: 86%;
+      top: 71%;
+      position: absolute;
+    }
+    .parrotButton img {
+      width: 7%;
+      left: 73%;
+      top: 24%;
+    }
+    .fishButton img {
+      width: 6%;
+      left: 46%;
+      top: 87%;
+      position: absolute;
+    }
+    .tank1Button img {
+      width: 6.5%;
+    }
+    .feedButton img {
+      width: 7%;
+      left: 33%;
+      top: 18%;
+      position: absolute;
+    }
+    .brushButton img {
+      width: 7%;
+      left: 24%;
+      top: 25%;
+    }
+    .puppy img {
+      width: 18%;
+      left: 15%;
+      top: 31%;
+      position: absolute;
+    }
+    .feed img {
+      width: 17%;
+      top: 25%;
+    }
+    .brush img {
+      width: 17%;
+      top: 29%;
+    }
+    .catButton img {
+      left: 55%;
+      top: 55%;
+    }
+    .kitten img {
+      top: 47%;
+    }
+    .fish img {
+      width: 22%;
+      left: 51.7%;
+      top: 73%;
+      height: 22%;
+    }
+    .tank1 img {
+      top: 65%;
+    }
+    .cageButton img {
+      width: 7%;
+      top: 21%;
+    }
+    .cage img {
+      top: -1%;
+    }
+    .parrot img {
+      width: 12%;
+      left: 69%;
+      top: 8%;
+      position: absolute;
+    }
+    .bird img {
+      width: 7%;
+      left: 82.6%;
+      top: 10%;
+      position: absolute;
+    }
+    .big img {
+      width: 21%;
+      left: 11%;
+      top: 75.5%;
+    }
+    .small img {
+      width: 12%;
+      top: 78%;
+    }
+    .turtle img {
+      top: 50%;
+    }
+    .hamster img {
+      width: 21%;
+      left: 78.5%;
+      top: 76.5%;
+      height: 20%;
+    }
     .snack img {
       top: 63%;
     }

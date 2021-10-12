@@ -384,10 +384,11 @@
     position: absolute;
     z-index: 1;
     color: white;
-    font-size: 18px;
-    top: 83%;
-    left: 80%;
-
+    font-size: 10px;
+    top: 84.5%;
+    left: 76%;
+    -webkit-transform: translateY(-85%);
+    transform: translateY(-85%);
     padding-bottom: 2px;
     border-bottom: 2px solid white;
   }
@@ -474,8 +475,9 @@
     z-index: 1;
     color: white;
     font-size: 10px;
-    top: 91.5%;
-    left: 80%;
+    top: 90.5%;
+    left: 74%;
+    -webkit-transform: translateY(-85%);
     transform: translateY(-85%);
     padding-bottom: 2px;
     border-bottom: 2px solid white;

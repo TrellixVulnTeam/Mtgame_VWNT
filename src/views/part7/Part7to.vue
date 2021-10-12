@@ -37,7 +37,8 @@
 					</div>
 				</transition>
 				<transition name="fade1">
-					<div v-show="!onet  || !onef" style="width: 100%; height: 90%;display:block;position: absolute;">
+<!--					<div v-show="!onet  || !onef" style="width: 100%; height: 90%;display:block;position: absolute;">-->
+            <div v-show="!onef" style="width: 100%; height: 90%;display:block;position: absolute;">
 						<img src="../../assets/image/seasons.png"  style="width: 100%; z-index: -1;background-color: #ffd55f; height: 100%;display:block;position: absolute;" v-if="bgimg[0].active">
 						<img src="../../assets/image/4-bg.png"  style="width: 100%; z-index: -1;background-color: #ffd55f; height: 100%;display:block;position: absolute;" v-if="bgimg[1].active">
 						<img src="../../assets/image/5-bg.png"  style="width: 100%; z-index: -1;background-color: #ffd55f;height: 100%;display:block;position: absolute;" v-if="bgimg[2].active">
@@ -322,9 +323,11 @@
 						}else{
 							this.questionsize=0;
 						  }
-          if(this.onet === true) {
+          if(this.onef === true) {
             setTimeout(() => {
-              this.onet = false;
+              //this.onet = false;
+              this.onef = false;
+              console.log('onet');
               setTimeout(() => {
                 const canvas = document.getElementById('canvas'); // 初次进来初始化画布
                 let imgBox = document.getElementById('imgBox');
@@ -342,7 +345,7 @@
                 canvas.height = imgBox.clientHeight; // 动态赋值canvas的高度
                 this.context = canvas.getContext('2d');
                 this.setCanvasStyle();
-              }, 1000);
+              }, 800);
             }, 1000);
           }
 					}, res => {
@@ -440,7 +443,7 @@
 
 			// canvas中鼠标移动
 			canvasMove(e) {
-        console.log(e);
+ //       console.log(e);
 				if(this.canvasMoveUse) {
 					// 只有允许移动时调用
 					const t = e.target;
@@ -453,7 +456,7 @@
 					} else {
 						canvasX = e.changedTouches[0].clientX - t.parentNode.offsetLeft;
 						canvasY = e.changedTouches[0].clientY - t.parentNode.offsetTop;
-            console.log("canvasX:"+canvasX+"canvasY:"+canvasY);
+//            console.log("canvasX:"+canvasX+"canvasY:"+canvasY);
 					};
 					// 连接到移动的位置并上色
 					this.context.lineTo(canvasX, canvasY);
@@ -488,16 +491,20 @@
 					this.setCanvasStyle();
 					console.log("miss");
 				} else {
+          console.log('选中');
 					if (anwserList.length === 1) { // 答题时只有圈中一个选项才能进行判断
 					     this.zhezhao=true;
+            console.log('选中1');
 						// console.log(anwserIndex);
 						if (this.question === this.list1[anwserIndex].value) {
 							/*回答正确在这里写效果*/
+              console.log('选中2');
 							this.soundscorrect=true;
 							setTimeout(() => {
 								this.soundscorrect=false;
 							},2000);
 							setTimeout(() => {
+                console.log('选中3');
 								this.canvasObj.height = this.canvasH; // 清空画布
 								this.issuccess1=true;
 								this.score="1";
@@ -522,6 +529,7 @@
 											imgsty[successIndex].children[0].style.display = "block";
 											setTimeout(() => {
 												if(this.countpage<=this.allquestion){
+                          console.log('选中4');
 												this.onef = true;
 												}else{
 													// this.$axios.post(this.url, qs.stringify({
@@ -750,7 +758,6 @@
 								}else{
 									this.questionsize=0;
 								  }
-
 							   }, 2000);
                   console.log('true');
 						  }else{

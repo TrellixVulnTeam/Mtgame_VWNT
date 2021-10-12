@@ -66,8 +66,8 @@
           <div class="logoutsty">
             <button class="buttonsty" @click="logout">LOG OUT</button>
           </div>
-<!--          <h3 class="title1"><span class="title" @click="PrivacyPolicy('service')">服务协议</span>和<span class="title" @click="PrivacyPolicy('Privacy')">隐私政策</span></h3>-->
-          <h3 class="title1"><a class="title" href="https://www.monkeytree.com.cn/privacyStatement.jsp?lctHref=11">隐私政策</a></h3>
+<!--          <h3 class="title1"><span class="title" @click="PrivacyPolicy('service')">用户协议</span>和<span class="title" @click="PrivacyPolicy('Privacy')">隐私声明</span></h3>-->
+<!--          <h3 class="title1"><a class="title" target="_blank" href="http://103.218.241.33/monkeytreeApp/www2/privacyhk.html">隱私政策</a></h3>-->
         </div>
         <div class="rightmenu">
           <div class="topmemu">
@@ -138,7 +138,6 @@
                     </li>
                   </ul>
                 </div>
-
               </div>
               <div class="choseRW" v-if="opciay6">
                 <!--<ul>-->
