@@ -28,7 +28,7 @@
       <img src="../assets/image/1-1bg.png"  style="width: 100%;background-color: #f3c700; height: 100%;display:block;position: absolute;" v-if="bgimg[22].active">
       <img src="../assets/image/2-2bg.png"  style="width: 100%;background-color: #f3c700; height: 100%;display:block;position: absolute;" v-if="bgimg[23].active">
 
-      <img src="../assets/image/rightback.png"  @click="back" class="backbutton"/>
+<!--      <img src="../assets/image/rightback.png"  @click="back" class="backbutton"/>-->
 	  <div>
 		<h2 class="jump" @click="jump()" v-if="this.part!=='part3'">Flashcards</h2>
 	  </div>
@@ -521,19 +521,33 @@
 					<img src="../assets/image/icon_coin.png" class="coinstyle">
 					<span class="fontsize leftmar2">{{sum}}</span>
 				</div>
-				<!-- <div @click="back">
+        <div @click="back">
 					<img src="../assets/image/season-back.png"  class="settingb" v-if="bgimg[0].active">
 					<img src="../assets/image/4-back.png"  class="settingb" v-if="bgimg[1].active">
-					<img src="../assets/image/game-course03.png"  class="settingb" v-if="bgimg[2].active">
-					<img src="../assets/image/game-course03.png"  class="settingb" v-if="bgimg[3].active">
-					<img src="../assets/image/game-course03.png"  class="settingb" v-if="bgimg[4].active">
-					<img src="../assets/image/game-course03.png"  class="settingb" v-if="bgimg[5].active">
-					<img src="../assets/image/game-course03.png"  class="settingb" v-if="bgimg[6].active">
-					<img src="../assets/image/game-course03.png"  class="settingb" v-if="bgimg[7].active">
-					<img src="../assets/image/game-course03.png"  class="settingb" v-if="bgimg[8].active">
-					<img src="../assets/image/game-course03.png"  class="settingb" v-if="bgimg[9].active"> -->
-				<!-- 	<img src="../assets/image/game-course03.png"  class=" pause" v-if="!action"> -->
-				<!-- </div> -->
+          <img src="../assets/image/5-back.png"  class="settingb" v-if="bgimg[2].active">
+          <img src="../assets/image/6-back.png"  class="settingb" v-if="bgimg[3].active">
+          <img src="../assets/image/7-back.png"  class="settingb" v-if="bgimg[4].active">
+          <img src="../assets/image/8-back.png"  class="settingb" v-if="bgimg[5].active">
+          <img src="../assets/image/9-back.png"  class="settingb" v-if="bgimg[6].active">
+          <img src="../assets/image/10-back.png"  class="settingb" v-if="bgimg[7].active">
+          <img src="../assets/image/11-back.png"  class="settingb" v-if="bgimg[8].active">
+          <img src="../assets/image/12-back.png"  class="settingb" v-if="bgimg[9].active">
+          <img src="../assets/image/1-back.png"  class="settingb" v-if="bgimg[10].active">
+          <img src="../assets/image/2-back.png"  class="settingb" v-if="bgimg[11].active">
+          <img src="../assets/image/3-3back.png"  class="settingb" v-if="bgimg[12].active">
+          <img src="../assets/image/4-4back.png"  class="settingb" v-if="bgimg[13].active">
+          <img src="../assets/image/5-5back.png"  class="settingb" v-if="bgimg[14].active">
+          <img src="../assets/image/6-6back.png"  class="settingb" v-if="bgimg[15].active">
+          <img src="../assets/image/7-7back.png"  class="settingb" v-if="bgimg[16].active">
+          <img src="../assets/image/8-8back.png"  class="settingb" v-if="bgimg[17].active">
+          <img src="../assets/image/9-9back.png"  class="settingb" v-if="bgimg[18].active">
+          <img src="../assets/image/10-10back.png"  class="settingb" v-if="bgimg[19].active">
+          <img src="../assets/image/11-11back.png"  class="settingb" v-if="bgimg[20].active">
+          <img src="../assets/image/12-12back.png"  class="settingb" v-if="bgimg[21].active">
+          <img src="../assets/image/1-1back.png"  class="settingb" v-if="bgimg[22].active">
+          <img src="../assets/image/2-2back.png"  class="settingb" v-if="bgimg[23].active">
+          <!-- 	<img src="../assets/image/game-course03.png"  class=" pause" v-if="!action"> -->
+				</div>
 				<div  @click="routerabout" >
 					<img src="../assets/image/season-home.png" class="repeat" v-if="bgimg[0].active">
 					<img src="../assets/image/4-home.png" class="repeat" v-if="bgimg[1].active">
@@ -1116,6 +1130,7 @@
 					}, 300);
 				}else if(this.game=='9'){
 					setTimeout(() => {
+            console.log(this.UnitsList[8]);
             if(this.part==='part1'){
               this.menuId=this.UnitsList[8].menu_detail_id_1;
             }else if(this.part==='part2'){
@@ -1130,7 +1145,7 @@
 								unitsId:this.unitsId,
 								unit:this.unit,
 								spring:this.spring,
-                name:this.UnitsList[8].name,
+                name:this.UnitsList[8].NAME,
                 part:this.part
 							}
 						})
@@ -1803,7 +1818,7 @@
 		margin-top: 5%;
 		display: block;
 		width: 30%;
-		margin-right: 10px;
+		margin-right: 25px;
 		position: relative;
 		height: 100%;
 
@@ -1833,9 +1848,9 @@
 		bottom: 0%;
 	}
     .settingb {
-    	width: 12%;
+    	width: 11%;
     	position: absolute;
-    	right: 20%;
+    	right: 17%;
     	bottom: 0%;
     }
 	.fade-enter-active {
@@ -1974,10 +1989,10 @@
 			bottom: 0%;
 		}
 		.settingb {
-			width: 14%;
+			width: 13%;
 			position: absolute;
-			right:20%;
-			bottom: 0%;
+			right:18%;
+			bottom: 11%;
 		}
         .styletit{
         	 font-size: 1.5rem;
@@ -2097,10 +2112,10 @@
 			bottom: 0%;
 		}
 		.settingb {
-			width: 14%;
+			width: 13%;
 			position: absolute;
 			right:20%;
-			bottom: 0%;
+			bottom: 12%;
 		}
 	    .styletit{
 	    	 font-size: 1.5rem;
@@ -2191,7 +2206,6 @@
 		}
 	}
 
-
 	@media screen and (min-width: 736px) and (max-width:811px){
 		.roleimg{
 			// height: 45%;
@@ -2213,7 +2227,7 @@
 		.settingb {
 			width: 10%;
 			position: absolute;
-			right: 20%;
+			right: 17%;
 			bottom: 0%;
 		}
 		.animapng7{
@@ -2252,7 +2266,7 @@
 		.settingb {
 			width: 10%;
 			position: absolute;
-			right:20%;
+			right:17%;
 			bottom: 0%;
 		}
 		.animapng7{
@@ -2304,7 +2318,7 @@
       bottom: 0%;
     }
     .settingb {
-      width: 14%;
+      width: 11%;
       position: absolute;
       right:20%;
       bottom: 0%;
@@ -2403,6 +2417,7 @@
       border-radius: 80px;
     }
   }
+
   @media only screen and (min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 1024px) and (max-width: 1600px){
@@ -2425,10 +2440,13 @@
     }
     .listimg {
       width: 40%;
-      margin-left: -8%;
+      margin-left: -10%;
       -webkit-transform: scale(0.7);
       transform: scale(0.7);
-      margin-top: 6%;
+      margin-top: -5%;
+    }
+    .menulist[data-v-469af010] {
+      height: 123%;
     }
   }
 </style>

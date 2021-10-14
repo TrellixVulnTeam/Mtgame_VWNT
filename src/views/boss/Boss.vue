@@ -812,7 +812,7 @@
      window.removeEventListener('popstate',this.gomemu,false);
     },
 		created() { //生命周期里接收参数
-		  console.log(this.$route.query.unit);
+		  console.log(this.$route.query);
 		this.pic=this.$axios.defaults.baseURL2;
 		this.unit = this.$route.query.unit;
 		this.part = this.$route.query.part;
@@ -822,7 +822,7 @@
         this.url1=this.url+'partBoss1';
         this.partName = 'partBoss1';
       }else if(this.part==='part2'){
-        this.url1=this.url+'partBoss1';
+        this.url1=this.url+'partBoss2';
         this.partName = 'partBoss2';
       }else if(this.part==='part3'){
 

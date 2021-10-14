@@ -587,7 +587,7 @@
 			// transform: scale(1.2);
 		}
 		.pause {
-			bottom: 16%;width: 13%;    right: 17%;
+			bottom: 11%;width: 13%;    right: 17%;
 		}
 
 		.repeat {

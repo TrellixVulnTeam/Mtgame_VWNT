@@ -488,6 +488,7 @@
 
       },
 			back() {
+        console.log('fanhui ');
 				if(this.chartroom==true){
 					this.action=true;
 					    setTimeout(() => {
@@ -506,7 +507,7 @@
 						this.url2=this.url+"Levels";
 						this.$axios.post(this.url2,qs.stringify({
 						studentId:localStorage.getItem('studentId'),
-						courseId:this.courseId
+						courseId:1,
 						})).then(res=>{
 							this.levelsList=res.data.levelsList;
 						}, res => {

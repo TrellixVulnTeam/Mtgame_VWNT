@@ -66,7 +66,7 @@
           <div class="logoutsty">
             <button class="buttonsty" @click="logout">LOG OUT</button>
           </div>
-<!--          <h3 class="title1"><span class="title" @click="PrivacyPolicy('service')">用户协议</span>和<span class="title" @click="PrivacyPolicy('Privacy')">隐私声明</span></h3>-->
+          <h3 class="title1"><span class="title" v-if="local === 'cn'" @click="PrivacyPolicy('service')">用户协议</span>和<span class="title" @click="PrivacyPolicy('Privacy')">隐私声明</span></h3>
 <!--          <h3 class="title1"><a class="title" target="_blank" href="http://103.218.241.33/monkeytreeApp/www2/privacyhk.html">隱私政策</a></h3>-->
         </div>
         <div class="rightmenu">
@@ -517,6 +517,7 @@
     name: "info",
     data() {
       return {
+        local:'',
         action: false,
         action1: false,
         level: " ",
@@ -1370,6 +1371,7 @@
     // 	});
     // },
     created() { //生命周期里接收参数
+      this.local = localStorage.getItem('local');
       this.pic = this.$axios.defaults.baseURL2;
       var heigth = $('body')[0].clientHeight;
       var width = $('body')[0].clientWidth;
