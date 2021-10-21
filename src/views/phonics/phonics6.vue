@@ -614,6 +614,7 @@
 		},
 		watch: {
 			'onef': function(newVal) {
+        console.log(this.onef);
 				if(this.onef == true) {
 								setTimeout(() => {
 								this.onef = false;
@@ -631,7 +632,7 @@
 			},
       'video': function(newVal) {
         console.log(this.video);
-        if (this.video == true) {
+        if (this.video === true) {
           this.$refs.videos.play();
           setTimeout(() => {
             this.$refs.videos.pause();

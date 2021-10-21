@@ -1221,6 +1221,125 @@
              :style="{zIndex: !tiger ? 100 : 1}" @click="showGif('tiger')">
       </div>
     </div>
+    <div v-else-if="this.unit === 'Family Time' && this.part === 'part2'">
+      <img src="../../assets/image/201911 H5 Happy birthday_MT/Wallker_BG/bg_00000.png"
+           style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;"/>
+      <div class="balloons">
+        <img src="../../assets/image/201911 H5 Happy birthday_MT/GIF_PNG/png/balloons00.png" v-if="balloons" @click="showGif('balloons')">
+        <img src="../../assets/image/201911 H5 Happy birthday_MT/GIF_PNG/gif/balloons00.gif" style="z-index: 100" v-if="!balloons"
+             @click="showGif('balloons')">
+      </div>
+      <div class="blowClick" @click="showGif('blow1')"/>
+      <div class="blow1">
+        <img src="../../assets/image/201911 H5 Happy birthday_MT/GIF_PNG/png/blow.png" v-if="blow1">
+        <img src="../../assets/image/201911 H5 Happy birthday_MT/GIF_PNG/gif/blow00.gif" style="z-index: 100" v-if="!blow1"
+             @click="showGif('blow1')">
+      </div>
+      <div class="cakeClick" @click="showGif('cake')"/>
+      <div class="cake">
+<!--        <img src="../../assets/image/201911 H5 Happy birthday_MT/GIF_PNG/png/cake.png" v-if="cake&&walkers" >-->
+        <img src="../../assets/image/201911 H5 Happy birthday_MT/GIF_PNG/gif/cake.gif" style="z-index: 100" v-if="!cake"
+             @click="showGif('cake')">
+      </div>
+      <div class="candlesClick"  @click="showGif('candles')"/>
+      <div class="candles">
+        <img src="../../assets/image/201911 H5 Happy birthday_MT/GIF_PNG/png/candles.png" v-if="candles">
+        <img src="../../assets/image/201911 H5 Happy birthday_MT/GIF_PNG/gif/candles.gif" style="z-index: 100" v-if="!candles"
+             @click="showGif('candles')">
+      </div>
+      <div class="card">
+        <img src="../../assets/image/201911 H5 Happy birthday_MT/GIF_PNG/png/card.png" v-if="card" @click="walkers&&showGif('card')">
+        <img src="../../assets/image/201911 H5 Happy birthday_MT/GIF_PNG/gif/card.gif" style="z-index: 100" v-if="!card"
+             @click="showGif('card')">
+      </div>
+      <div class="cutClick"  @click="showGif('cut')"/>
+      <div class="cut">
+        <img src="../../assets/image/201911 H5 Happy birthday_MT/GIF_PNG/png/cut00.png" v-if="cut">
+        <img src="../../assets/image/201911 H5 Happy birthday_MT/GIF_PNG/gif/cut00.gif" style="z-index: 100" v-if="!cut"
+             @click="showGif('cut')">
+      </div>
+      <div class="friends">
+<!--        <img src="../../assets/image/201911 H5 Happy birthday_MT/GIF_PNG/png/friends.png" v-if="friends&&walkers" @click="showGif('friends')">-->
+        <img src="../../assets/image/201911 H5 Happy birthday_MT/GIF_PNG/gif/friends.gif" style="z-index: 100" v-if="!friends"
+             @click="showGif('friends')">
+      </div>
+      <div class="happy">
+        <img src="../../assets/image/201911 H5 Happy birthday_MT/GIF_PNG/png/happy00.png" v-if="happy" @click="walkers&&showGif('happy')">
+        <img src="../../assets/image/201911 H5 Happy birthday_MT/GIF_PNG/gif/happy00.gif" style="z-index: 100" v-if="!happy"
+             @click="showGif('happy')">
+      </div>
+      <div class="partyHatClick" @click="showGif('partyHat')"/>
+      <div class="partyHat">
+        <img src="../../assets/image/201911 H5 Happy birthday_MT/GIF_PNG/png/party hat.png" v-if="partyHat" >
+        <img src="../../assets/image/201911 H5 Happy birthday_MT/GIF_PNG/gif/party hat00.gif" style="z-index: 100" v-if="!partyHat"
+             @click="showGif('partyHat')">
+      </div>
+      <div class="play">
+        <img src="../../assets/image/201911 H5 Happy birthday_MT/GIF_PNG/png/play.png" v-if="play" @click="walkers&&showGif('play')">
+        <img src="../../assets/image/201911 H5 Happy birthday_MT/GIF_PNG/gif/play00.gif" style="z-index: 100" v-if="!play"
+             @click="showGif('play')">
+      </div>
+      <div class="presentsClick" @click="showGif('presents')"/>
+      <div class="presents">
+        <img src="../../assets/image/201911 H5 Happy birthday_MT/GIF_PNG/png/presents.png" v-if="presents" >
+        <img src="../../assets/image/201911 H5 Happy birthday_MT/GIF_PNG/gif/presents.gif" style="z-index: 100" v-if="!presents"
+             @click="showGif('presents')">
+      </div>
+      <div class="singClick" @click="showGif('sing')"/>
+      <div class="sing">
+        <img src="../../assets/image/201911 H5 Happy birthday_MT/GIF_PNG/png/sing00.png" v-if="sing" >
+        <img src="../../assets/image/201911 H5 Happy birthday_MT/GIF_PNG/gif/sing00.gif" style="z-index: 100" v-if="!sing"
+             @click="showGif('sing')">
+      </div>
+      <div class="singButton">
+        <img src="../../assets/image/201911 H5 Happy birthday_MT/words/word_sing Comp 1_00000.png"
+             :style="{zIndex: !sing ? 100 : 3}" @click="showGif('sing')">
+      </div>
+      <div class="balloonsButton">
+        <img src="../../assets/image/201911 H5 Happy birthday_MT/words/ballons Comp 1_00000.png"
+             :style="{zIndex: !balloons ? 100 : 3}" @click="showGif('balloons')">
+      </div>
+      <div class="blow1Button">
+        <img src="../../assets/image/201911 H5 Happy birthday_MT/words/blow Comp 1_00000.png"
+             :style="{zIndex: !blow1 ? 100 : 3}" @click="showGif('blow1')">
+      </div>
+      <div class="cakeButton">
+        <img src="../../assets/image/201911 H5 Happy birthday_MT/words/cake Comp 1_00000.png"
+             :style="{zIndex: !cake ? 100 : 3}" @click="showGif('cake')">
+      </div>
+      <div class="candlesButton">
+        <img src="../../assets/image/201911 H5 Happy birthday_MT/words/candles Comp 1_00000.png"
+             :style="{zIndex: !candles ? 100 : 3}" @click="showGif('candles')">
+      </div>
+      <div class="cardButton">
+        <img src="../../assets/image/201911 H5 Happy birthday_MT/words/card Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !card ? 100 : 3}" @click="showGif('card')">
+      </div>
+      <div class="friendsButton">
+        <img src="../../assets/image/201911 H5 Happy birthday_MT/words/friends Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !friends ? 100 : 3}" @click="showGif('friends')">
+      </div>
+      <div class="happyButton">
+        <img src="../../assets/image/201911 H5 Happy birthday_MT/words/happy Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !happy ? 100 : 3}" @click="showGif('happy')">
+      </div>
+      <div class="partyHatButton">
+        <img src="../../assets/image/201911 H5 Happy birthday_MT/words/party hat Comp 1_00000.png"
+             :style="{zIndex: !partyHat ? 100 : 3}" @click="showGif('partyHat')">
+      </div>
+      <div class="playButton">
+        <img src="../../assets/image/201911 H5 Happy birthday_MT/words/play Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !play ? 100 : 3}" @click="showGif('play')">
+      </div>
+      <div class="presentsButton">
+        <img src="../../assets/image/201911 H5 Happy birthday_MT/words/presents Comp 1_00000.png"
+             :style="{zIndex: !presents ? 100 : 3}" @click="showGif('presents')">
+      </div>
+      <div class="cutButton">
+        <img src="../../assets/image/201911 H5 Happy birthday_MT/words/word_cut Comp 1_00000.png"
+             :style="{zIndex: !cut ? 100 : 3}" @click="showGif('cut')">
+      </div>
+    </div>
     <div v-else>
     <img src="../../assets/image/H5 Thing/Walker_BG/bg_0.png"
          style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;">
@@ -1509,6 +1628,30 @@ export default {
           zookeeper:require('../../assets/Flashcard Audio/october/zookeeper.mp3'),
         },
         cardType:'default',
+        baby:true,
+        brother:true,
+        caring:true,
+        father:true,
+        grandma:true,
+        grandpa:true,
+        hug:true,
+        mother:true,
+        old:true,
+        share:true,
+        sister:true,
+        young:true,
+        balloons:true,
+        blow1:true,
+        cake:true,
+        candles:true,
+        card:true,
+        friends:true,
+        happy:true,
+        partyHat:true,
+        play:true,
+        presents:true,
+        cut:true,
+        sing:true,
         crocodile:true,
         elephant:true,
         giraffe:true,
@@ -1915,6 +2058,252 @@ export default {
     position: fixed;
     background-color: #44ccc2;
     z-index: 201;
+  }
+
+  .balloonsButton img {
+    width: 9%;
+    left: 79%;
+    top: 12%;
+    position: absolute;
+  }
+
+  .blow1Button img {
+    width: 7%;
+    left: 89%;
+    top: 71%;
+    position: absolute;
+  }
+
+  .cakeButton img {
+    width: 7%;
+    left: 65%;
+    top: 75%;
+    position: absolute;
+  }
+
+  .candlesButton img {
+    width: 9%;
+    left: 86%;
+    top: 89%;
+    position: absolute;
+  }
+
+  .cardButton img {
+    width: 8%;
+    left: 17%;
+    top: 90%;
+    position: absolute;
+  }
+
+  .friendsButton img {
+    width: 9%;
+    left: 88%;
+    top: 33%;
+    position: absolute;
+  }
+
+  .happyButton img {
+    width: 8%;
+    left: 15%;
+    top: 28%;
+    position: absolute;
+  }
+
+  .partyHatButton img {
+    width: 11%;
+    left: 65%;
+    top: 27%;
+    position: absolute;
+  }
+
+  .playButton img {
+    width: 7%;
+    left: 3%;
+    top: 75%;
+    position: absolute;
+  }
+
+  .presentsButton img {
+    width: 11%;
+    left: 41%;
+    top: 85%;
+    position: absolute;
+  }
+
+  .cutButton img {
+    width: 6%;
+    left: 76%;
+    top: 63%;
+    position: absolute;
+  }
+
+  .singButton img {
+    width: 8%;
+    left: 33%;
+    top: 20%;
+    position: absolute;
+  }
+
+  .balloons img {
+    width: 23%;
+    left: 81%;
+    top: -4%;
+    position: absolute;
+  }
+
+  .balloons img {
+    width: 23%;
+    left: 81%;
+    top: -4%;
+    position: absolute;
+  }
+
+  .blow1 img {
+    width: 14%;
+    left: 86%;
+    top: 42.6%;
+    position: absolute;
+  }
+
+  .blowClick {
+    height: 35%;
+    width: 12%;
+    left: 88%;
+    top: 44.6%;
+    position: absolute;
+    z-index: 3;
+  }
+
+  .cakeClick {
+    width: 13%;
+    height: 14%;
+    left: 57%;
+    top: 66%;
+    position: absolute;
+    z-index: 3;
+  }
+
+  .cake img {
+    width: 37%;
+    left: 45%;
+    top: 46%;
+    position: absolute;
+  }
+
+  .candlesClick {
+    width: 11%;
+    height: 12%;
+    left: 87%;
+    top: 79%;
+    position: absolute;
+    z-index: 3;
+  }
+
+  .candles img {
+    width: 15%;
+    left: 84%;
+    top: 75%;
+    position: absolute;
+  }
+
+  .card img {
+    width: 32%;
+    left: 11%;
+    top: 65%;
+    position: absolute;
+    z-index: 2;
+  }
+
+  .cut img {
+    width: 58%;
+    left: 41%;
+    height: 58%;
+    top: 30%;
+    position: absolute;
+    z-index: 2;
+  }
+
+  .cutClick {
+    width: 15%;
+    left: 72%;
+    height: 40%;
+    top: 32%;
+    position: absolute;
+    z-index: 3;
+  }
+
+  .friends img{
+    width: 40%;
+    left: 61%;
+    height: 59%;
+    top: 26%;
+    position: absolute;
+  }
+
+  .happy img {
+    width: 40%;
+    height: 62%;
+    left: 8%;
+    top: 23%;
+    position: absolute;
+    z-index: 2;
+  }
+
+  .partyHatClick {
+    width: 15%;
+    height: 43%;
+    left: 57%;
+    top: 19%;
+    position: absolute;
+    z-index: 2;
+  }
+
+  .partyHat img {
+    width: 20%;
+    left: 54%;
+    top: 17%;
+    position: absolute;
+  }
+
+  .play img {
+    width: 14%;
+    left: 0%;
+    top: 43%;
+    position: absolute;
+    z-index: 3;
+  }
+
+  .presentsClick{
+    width: 19%;
+    height: 30%;
+    left: 36%;
+    top: 62%;
+    position: absolute;
+    z-index: 2;
+  }
+
+  .presents img {
+    width: 42%;
+    left: 25%;
+    top: 50%;
+    position: absolute;
+    z-index:1;
+  }
+
+  .singClick {
+    width: 17%;
+    height: 33%;
+    left: 39%;
+    top: 26.8%;
+    position: absolute;
+    z-index: 3;
+  }
+
+  .sing img {
+    width: 23%;
+    left: 35%;
+    top: 18.8%;
+    position: absolute;
   }
 
   .crocodile img {
@@ -5142,6 +5531,72 @@ export default {
   @media only screen and (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 812px) and (max-width: 1023px){
+    .friends img {
+      width: 38%;
+      left: 62%;
+      height: 58%;
+      top: 26%;
+      position: absolute;
+    }
+    .cake img {
+      width: 36%;
+      left: 45%;
+      top: 42%;
+      position: absolute;
+    }
+    .balloons img {
+      width: 20%;
+      left: 84%;
+      top: -5%;
+      position: absolute;
+    }
+    .presents img {
+      width: 39%;
+      height: 50%;
+      left: 26%;
+      top: 52%;
+      position: absolute;
+      z-index: 1;
+    }
+    .card img {
+      width: 29%;
+      left: 13%;
+      top: 63%;
+      position: absolute;
+      z-index: 2;
+    }
+    .candles img {
+      width: 14%;
+      left: 85%;
+      top: 74%;
+      position: absolute;
+    }
+    .blow1 img {
+      width: 12%;
+      left: 87%;
+      top: 40.6%;
+      position: absolute;
+    }
+    .partyHat img {
+      width: 17%;
+      left: 56%;
+      top: 17%;
+      position: absolute;
+    }
+    .sing img {
+      width: 21%;
+      left: 38%;
+      top: 13.8%;
+      position: absolute;
+    }
+    .play img {
+      width: 13%;
+      left: 1%;
+      top: 39%;
+      transform: rotate(5deg);
+      position: absolute;
+      z-index: 3;
+    }
     .elephantButton img {
       width: 9%;
       left: 71%;
@@ -6641,6 +7096,144 @@ export default {
   @media only screen and (min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 1024px) and (max-width: 1600px){
+    .friends img {
+      width: 40%;
+      left: 61%;
+      height: 52%;
+      top: 31%;
+      position: absolute;
+    }
+    .friendsButton img {
+      width: 10%;
+      left: 87%;
+      top: 34%;
+      position: absolute;
+    }
+    .cutButton img {
+      width: 7%;
+      left: 76%;
+      top: 66%;
+      position: absolute;
+    }
+    .cakeClick {
+      width: 15%;
+      height: 16%;
+      left: 56%;
+      top: 66%;
+      position: absolute;
+      z-index: 3;
+    }
+    .partyHatClick {
+      width: 15%;
+      height: 38%;
+      left: 57%;
+      top: 26%;
+      position: absolute;
+      z-index: 2;
+    }
+    .presentsClick {
+      width: 19%;
+      height: 28%;
+      left: 36%;
+      top: 65%;
+      position: absolute;
+      z-index: 2;
+    }
+    .singClick {
+      width: 17%;
+      height: 33%;
+      left: 39%;
+      top: 32.8%;
+      position: absolute;
+      z-index: 3;
+    }
+    .balloonsButton img {
+      width: 10%;
+      left: 79%;
+      top: 12%;
+      position: absolute;
+    }
+    .balloons img {
+      width: 22%;
+      left: 81%;
+      top: -2%;
+      position: absolute;
+    }
+    .singButton img {
+      width: 10%;
+      left: 37%;
+      top: 21%;
+      position: absolute;
+    }
+    .happyButton img {
+      width: 10%;
+      left: 14%;
+      top: 28%;
+      position: absolute;
+    }
+    .card img {
+      width: 33%;
+      left: 10%;
+      top: 72%;
+      position: absolute;
+      z-index: 2;
+    }
+    .presents img {
+      width: 43%;
+      left: 25%;
+      top: 59%;
+      position: absolute;
+      z-index: 1;
+    }
+    .presentsButton img {
+      width: 12%;
+      left: 39%;
+      top: 88%;
+      position: absolute;
+    }
+    .candles img {
+      width: 15%;
+      height: 19%;
+      left: 84%;
+      top: 74%;
+      position: absolute;
+    }
+    .cake img {
+      width: 37%;
+      height: 48%;
+      left: 45%;
+      top: 45%;
+      position: absolute;
+    }
+    .blow1 img {
+      width: 15%;
+      height: 41%;
+      left: 86%;
+      top: 43.6%;
+      position: absolute;
+    }
+    .partyHat img {
+      width: 22%;
+      left: 54%;
+      top: 27%;
+      position: absolute;
+    }
+    .sing img {
+      width: 25%;
+      left: 35%;
+      top: 27.8%;
+      position: absolute;
+    }
+    .playButton img {
+      width: 8%;
+    }
+    .play img {
+      width: 16%;
+      left: 0%;
+      top: 48%;
+      position: absolute;
+      z-index: 3;
+    }
     .elephantButton img {
       width: 10%;
       left: 65%;

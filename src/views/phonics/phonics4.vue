@@ -61,7 +61,7 @@
                     <img src="../../assets/image/StarOrange.png" class="answerSucc"/>
                     <img class="spanlist " :src="this.list1[2].bg" v-bind:class="{changetranform:this.list1[2].successful}">
                     <audio id="show3" ref="show3" :src="this.list1[2].audio2">
-
+b'c
                     </audio>
                   </div>
                 </div>

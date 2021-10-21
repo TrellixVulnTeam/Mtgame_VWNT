@@ -9,7 +9,10 @@
     <div style="padding-left: 3%;padding-bottom: 140px;" v-if="privacy&&local==='cn'">
       <h4 class="title">隐私声明</h4>
       <p class="p1">
-        本条例自2014年10月23日起生效
+        本条例自2019年10月1日起生效
+      </p>
+      <p class="p1">
+        此隐私保护条例的中文版本是基于英文条例之翻译版本，如条例中出现解释模糊或定义不清情况最终以英文条例为参考。
       </p>
       <h5 class="mt-4">个人资料收集</h5>
       <p class="p1">
@@ -81,7 +84,7 @@
       </p>
       <h5 class="mt-4">影像声明</h5>
       <p class="p1">
-        蒙奇千里儿童俱乐部 会在不影响课堂的情况下拍摄一些学生或老师的照片或录像。这些照片或影像会出现在公共场所及网络。如果您拒绝这些照片或影像出现在公共场所及网络，请以邮件的方式告知我们<span><a target="_blank" style="color:#8a999e;" href="mailto:personaldata@monkeytree.com.hk">personaldata@monkeytree.com.hk</a></span>邮件内容包括：
+        蒙奇千里儿童俱乐部会在不影响课堂的情况下拍摄一些学生或老师的照片或录像。这些照片或影像会出现在公共场所及网络。如果您拒绝这些照片或影像出现在公共场所及网络，请以邮件的方式告知我们<span><a target="_blank" style="color:#8a999e;" href="mailto:personaldata@monkeytree.com.hk">personaldata@monkeytree.com.hk</a></span>邮件内容包括：
       </p>
       <ul>
         <li>1、您和您孩子的姓名</li>
@@ -127,7 +130,7 @@
       </p>
       <h5 class="mt-4">隐私声明变更</h5>
       <p class="p1">
-        我们会不定时对隐私声明进行更新，更新前亦不会做出通知。您可以经常登录本网站已查询最新条款。
+        我们会不定时对隐私声明进行更新，更新前亦不会做出通知。您可以经常登录本app已查询最新条款。
       </p>
       <div class="col-lg-5 col-xs-12 col-md-12">
         <p>总部:</p>
@@ -156,13 +159,13 @@
     <div style="padding-left: 3%;padding-bottom: 140px;" v-if="service&&local==='cn'">
       <h4 class="title">用户协议</h4>
 
-      <p class="p1">本声明自2014年10月23日起生效</p>
+      <p class="p1">本声明自2019年10月1日起生效</p>
 
       <p class="p1">蒙奇千里儿童俱乐部声明，本APP下的中文内容是根据英文之翻译版本，如若出现解释模糊，定义不清的情况，内容以英文为准。</p>
 
       <h5 class="mt-4">免责声明</h5>
 
-      <p class="p1">我们会对载于本APP的内容进行即时更新以便管理，但APP上内容因更新而做出的修改恕不另行通知</p>
+      <p class="p1">我们会对载于本APP的内容进行即时更新以便管理，但APP上内容因更新而做出的修改恕不另行通知。</p>
 
       <p class="p1">我们不会因为载于APP上的信息错误而导致的损失承担任何责任。</p>
 

@@ -4,15 +4,21 @@
 			<!-- 登录页面 -->
 			<div class="about">
 				<div class="menu">
-					<form style="color: #44ccc2;">
+					<form style="color: #44ccc2;width: 92%;display: block;margin: 0 4%;height: 100%;position: relative;">
 						<span class="warnspan" v-if="warn">The phone number / email and password that you've entered doesn't match any
 							account.</span>
-						<div style="position: relative; width: 30%;float: left;padding-left: 7%;">
+						<div class="selectsty"> <span class="d3"></span>
+							<select class="selectsize2"  v-model="selectItem" @change="selectFn($event)">
+								<option style="background: white!important;" value="852">+852</option>
+								<option style="background: white!important;" value="853">+853</option>
+							</select>
+						</div>
+						<div style="position: absolute; width: 28%;float: left;left: 19%;display: block;">
 							<img src="../../assets/image/phone.png" class="phone" />
 							<input type="text" v-model="username" name="username" class="inputu" placeholder="Phone or Email" />
 							<img src="../../assets/image/error.png" class="error" v-if="warn4" />
 						</div>
-						<div style="position: relative; width: 30%;float: left;padding-left: 7%;">
+						<div style="position: absolute; width: 28%;float: left;left: 53%;display: block;">
 							<img src="../../assets/image/password.png" class="phone" />
 							<input type="password" class="inputp" placeholder="Password" v-model="password" name="password" autocomplete />
 							<img src="../../assets/image/error.png" class="error" v-if="warn5" />
@@ -27,13 +33,13 @@
 							<div class="item1" v-if="checkbox">
 								<input id="item1" type="radio" name="item" value="pick" v-model="picked" @click="checkboxs" />
 								<label for="item1"></label>
-								<button type="button" @click="checkboxs" class="remesty">remenber me</button>
+								<button  type="button" class="remesty" @click="checkboxs">remenber me</button>
 								<button type="button" class="forgsty" @click="forget">forget password ?</button>
 							</div>
 							<div class="item1" v-if="!checkbox">
 								<input id="item2" type="radio" name="item" value="pick2" v-model="picked" @click="checkboxs" />
 								<label for="item2"></label>
-								<button type="button" @click="checkboxs" class="remesty">remenber me</button>
+								<button type="button"  class="remesty" @click="checkboxs">remenber me</button>
 								<button type="button" class="forgsty" @click="forget">forget password ?</button>
 							</div>
 						</div>
@@ -46,22 +52,29 @@
 			<!-- 注册页面 -->
 			<div class="about">
 				<div class="menu" style="color: #44ccc2;">
-					<div v-if="getphone">
-						<div style="position: relative; width:13%;float: left;padding-left: 3%;">
+					<div v-if="getphone" style="position: relative;margin: 0 4%;width: 92%;">
+						<div style="position: absolute; width:13%;float: left;z-index: 2;">
 							<img src="../../assets/image/leftred.png" class="leftRsty" @click="backlogin">
 						</div>
-						<div style="position: relative; width: 30%;float: left;text-align: left;">
+						<div style="position: absolute; width: 30%;float: left;left: 13%;text-align: left;">
 							<span class="warnstyle" v-if="warn1">Enter the phone number or email you've registered at Monkey Tree.</span>
 							<span class="warnstyle" v-if="warn2">
-							There is no active student matching the telephone number /email that you have provided. Please make sure the information is correct and try again.</span>
+								There is no active student matching the telephone number /email that you have provided. Please make sure the information is correct and try again.</span>
 							<span class="warnstyle" v-if="againregister">Your phone number or email has been registered.</span>
 						</div>
-						<div style="position: relative; width: 30%;float: left;padding-left: 4%;">
-							<img src="../../assets/image/phone.png" class="phone2" />
+						<div class="selectsty2">
+							<span class="d3"></span>
+							<select class="selectsize"  v-model="selectItem2">
+								<option style="background: white;" value="852">+852</option>
+								<option style="background: white;" value="853">+853</option>
+							</select>
+						</div>
+						<div style="position: absolute; width: 27%;float: left;padding-left: 60%;">
+							<img src="../../assets/image/phone.png" class="phone9" />
 							<input type="text" v-model="telephone" name="phone" class="inputu" placeholder="Phone / Email" />
 							<img src="../../assets/image/error.png" class="error1" v-if="warn2" />
 						</div>
-						<div style="position: relative; width: 13%;float: right;padding-right: 3%;">
+						<div style="position: absolute; width: 13%;right: 0;text-align: center;display: block;">
 							<img src="../../assets/image/rightblue.png" class="rightBsty" @click="checkcode">
 						</div>
 					</div>
@@ -76,7 +89,7 @@
 						</div>
 						<div style="position: relative; width: 30%;float: left;padding-left: 4%;">
 							<img src="../../assets/image/key.png" class="phone2" />
-							<input type="text" placeholder="Verification Code" v-model="code" name="code" class="inputu" />
+							<input type="text" placeholder="Verification Code" v-model="code" name="code" class="inputu1" />
 							<img src="../../assets/image/error.png" class="error1" v-if="warn7" />
 							<div style="width: 100%; display: inline-flex; padding-left: 15px;">
 								<button type="button" class="receive">Don't receive code?</button>
@@ -102,7 +115,7 @@
 							<img src="../../assets/image/password.png" class="phone3" />
 							<input type="text" placeholder="Confirm Password" v-model="setpassword1" name="setpassword1" class="inputsetpa" />
 							<img src="../../assets/image/error.png" class="error1" v-if="warn8" />
-							<div style="width: 100%; display: inline-flex; padding-left: 15px;">
+							<div style="width: 100%;display: inline-flex; padding-left: 15px;">
 								<span class="warn8sty" v-if="warn8">Please make sure your password must be at least 8 characters with a combination of at least 1 uppercase, 1 lowercase, 1 number and 1 punctuation character.</span>
 							</div>
 						</div>
@@ -145,6 +158,8 @@
 				warn2: false,
 				warn3: false,
 				warn8:false,
+				selectItem:852,
+				selectItem2:852,
 				// warn9:false,
 				againregister:false,
 				regifor: true,
@@ -184,6 +199,9 @@
 			};
 		},
 		methods: {
+			selectFn(e) {
+				// console.log(e.target.value) // 选择项的value
+			},
 			login() {
 				this.warn = false;
 				this.warn4 = false;
@@ -194,7 +212,7 @@
 					// this.url1 = this.url + "login";
 					if(myReg.test(this.username)) {
 						this.$axios
-								.post('/user/login', qs.stringify({
+								.post('/user/loginLimit', qs.stringify({
 									email: this.username,
 									password: this.password
 								}))
@@ -210,7 +228,6 @@
 													localStorage.setItem("password", res.data.password);
 													localStorage.setItem("checkbox", this.checkbox);
 													localStorage.setItem("userId", res.data.guardianId);
-													localStorage.setItem('verifyCode',res.data.verifyCode);
 													if(this.studentId){
 														this.guardianId = res.data.guardianId;
 														this.$axios
@@ -287,12 +304,13 @@
 								);
 					}else if(this.username.length > 7){
 						this.$axios
-								.post('/user/login', qs.stringify({
-									telephone: this.username,
+								.post('/user/loginLimit', qs.stringify({
+									telephone: this.selectItem+this.username,
 									password: this.password
 								}))
 								.then(
 										res => {
+											//  console.log(this.selectItem);
 											if (res.data.success == "true") {
 												if (res.data.msg == "loginError") {
 													this.warn = true;
@@ -303,7 +321,6 @@
 													localStorage.setItem("password", res.data.password);
 													localStorage.setItem("checkbox", this.checkbox);
 													localStorage.setItem("userId", res.data.guardianId);
-													localStorage.setItem('verifyCode',res.data.verifyCode);
 													if(this.studentId){
 														this.guardianId = res.data.guardianId;
 														this.$axios
@@ -312,12 +329,12 @@
 																		})
 																).then(res => {
 																	this.sonList=res.data.sonList;
+																	console.log(this.sonList.length);
 																	for(var i=0;i<this.sonList.length;i++){
 																		if(this.sonList[i].studentId==this.studentId){
 																			this.sonList[i].gameImage=this.pic+this.sonList[i].gameImage;
 																			localStorage.setItem("firstName", this.sonList[i].firstName);
 																			localStorage.setItem("gameImage", this.sonList[i].gameImage);
-
 																			if(this.level=='Intermediate'){
 																				this.$router.push({
 																					path: '/intermenu',
@@ -410,7 +427,6 @@
 										this.sonList[i].gameImage=this.pic+this.sonList[i].gameImage;
 										localStorage.setItem("firstName", this.sonList[i].firstName);
 										localStorage.setItem("gameImage", this.sonList[i].gameImage);
-
 										if(this.level=='Intermediate'){
 											this.$router.push({
 												path: '/intermenu',
@@ -460,37 +476,8 @@
 						path: '/select'
 					})
 				}
-			},
-			login2(){//注册后再登录一次获取识别码
-				if(myReg.test(this.username)) {
-					this.$axios
-							.post('/user/login', qs.stringify({
-								email: this.username,
-								password: this.password
-							}))
-							.then(
-									res => {
-										if (res.data.success == "true") {
-											localStorage.setItem('verifyCode',res.data.verifyCode);
-										}
-									},
-									res => {
-										alertMsg("You must be connected to the internet.<br>Please connect and try again.");
-									});
-				}else if(this.username.length > 7){
-					this.$axios.post('/user/login', qs.stringify({
-						telephone: this.selectItem+this.username,
-						password: this.password
-					})).then(
-							res => {
-								if (res.data.success == "true") {
-									localStorage.setItem('verifyCode',res.data.verifyCode);
-								}
-							},
-							res => {
-								alertMsg("You must be connected to the internet.<br>Please connect and try again.");
-							});
-				}
+
+
 			},
 			checkboxs() {
 				this.checkbox = !this.checkbox;
@@ -521,7 +508,6 @@
 					}else if(this.forgetorregester==true){
 						this.url2 =  '/user/CheckCodeRegister';
 					}
-
 					if (this.telephone == '' || this.telephone == null) {
 						this.warn2 = true;this.sent=true;
 						this.warn1 = false;this.againregister=false;
@@ -537,7 +523,6 @@
 									.then(
 											res => {
 												if (res.data.false == "errorEmail") {
-
 													if(res.data.success==true){
 														this.getcodes = true;
 														this.getphone = false;
@@ -559,12 +544,12 @@
 														this.warn2 = true;
 														this.warn1 = false;this.againregister=false;this.sent=true;
 													}
+
 												}else if(res.data.false == "RegisterAgain"){
 													this.againregister=true;this.sent=true;
 													this.warn1 = false;
 													this.warn2 = false;
 												} else {
-													console.log('s');
 													this.getcodes = true;
 													this.getphone = false;
 													const TIME_COUNT = 120;
@@ -591,10 +576,11 @@
 							this.email=false;
 							this.$axios
 									.post(this.url2, qs.stringify({
-										telephone: this.telephone,
+										telephone: this.selectItem2+this.telephone,
 									}))
 									.then(
 											res => {
+												// console.log(this.selectItem2);
 												if (res.data.false == "errorphone") {
 													if(res.data.success==true){
 														this.getcodes = true;
@@ -690,7 +676,7 @@
 						this.$axios
 								.post(this.url3, qs.stringify({
 									code:this.code,
-									telephone: this.telephone,
+									telephone: this.selectItem2+this.telephone,
 								}))
 								.then(
 										res => {
@@ -738,7 +724,6 @@
 												localStorage.setItem("username",this.telephone);
 												localStorage.setItem("password", this.setpassword);
 												localStorage.setItem("userId", res.data.guardianId);
-												this.login2();
 											}
 										},
 										res => {
@@ -749,7 +734,7 @@
 						this.$axios
 								.post(this.url4, qs.stringify({
 									code:this.code,
-									telephone: this.telephone,
+									telephone: this.selectItem2+this.telephone,
 									password: this.setpassword,
 								}))
 								.then(
@@ -765,7 +750,6 @@
 												localStorage.setItem("username",this.telephone);
 												localStorage.setItem("password", this.setpassword);
 												localStorage.setItem("userId", res.data.guardianId);
-												this.login2();
 											}
 										},
 										res => {
@@ -829,22 +813,58 @@
 		color: white;
 		font-family: pepper;
 	}
-
+	.d3{
+		margin-right: 10%;
+		width: 0px;
+		right: 0;
+		margin-top: 22px;
+		position: absolute;
+		height: 0px;
+		border-width: 6px;
+		border-style: solid;
+		border-color: #057bb8 transparent transparent transparent;
+	}
 	.forgsty {
 		border-style: none;
 		background: none;
 		color: white;
 		font-family: pepper;
-		margin-left: 20%;
+		margin-left: 15%;
 	}
 
 	.phone {
 		position: absolute;
 		display: inline-block;
 		margin-top: 10px;
-		left: 21%;
+		left: 2%;
 	}
-
+	.selectsty{
+		position: absolute; width: 15%;float: left;z-index: 2; display: block;
+	}
+	.selectsize{
+		padding: 15px 0;
+		padding-left: 15px;
+		font-size: large;
+		font-family: pepper;
+		color: #057bb8 !important;
+		border: none;
+		border-radius: 30px;
+		background: white;width: 100%;
+	}
+	.selectsize2{
+		width: 100%;
+		padding: 15px 0 ;
+		padding-left: 20px;
+		font-size: large;
+		color: #057bb8 ;
+		border: none ;
+		border-radius: 30px ;
+		background: white ;
+		font-family: pepper;
+	}
+	.selectsty2{
+		position: absolute; width:13%;float: left;z-index: 2;left: 45%;
+	}
 	.phone1 {
 		position: absolute;
 		display: inline-block;
@@ -858,6 +878,12 @@
 		margin-top: 11px;
 		left: 14%;
 	}
+	.phone9{
+		position: absolute;
+		display: inline-block;
+		margin-top: 11px;
+		left: 70%;
+	}
 	.phone3 {
 		position: absolute;
 		display: inline-block;
@@ -869,14 +895,14 @@
 		position: absolute;
 		display: inline-block;
 		top: 18px;
-		right: -6%;
+		right: -2%;
 	}
 
 	.error1 {
 		position: absolute;
 		display: inline-block;
 		top: 17px;
-		right: -5%;
+		right: -1%;
 	}
 
 	.fontsize {
@@ -896,10 +922,9 @@
 		font-family: pepper;
 		font-size: 12px;
 		width: 100%;
-		float: left;
 		position: relative;
 		display: inline-block;
-		left: 7%;
+		left: 3%;
 		margin-bottom: 10px;
 		text-align: left;
 	}
@@ -935,6 +960,17 @@
 		background-color: white !important;
 		border: none;
 		display: list-item;
+		padding: 15px 10% 15px 20%;
+		width: 75%;
+		font-size: large;
+		color: #057bb8 !important;
+		border-radius: 40px;
+		font-family: pepper;
+	}
+	.inputu1 {
+		background-color: white !important;
+		border: none;
+		display: list-item;
 		padding: 15px 15% 15px 17%;
 		width: 80%;
 		font-size: large;
@@ -947,22 +983,24 @@
 		background-color: white !important;
 		border: none;
 		color: #057bb8 !important;
-		padding: 15px 15% 15px 17%;
-		width: 80%;
+		padding: 15px 10% 15px 20%;
+		width: 75%;
 		font-size: large;
 		border-radius: 40px;
 	}
 
 	.inputc {
-		margin-top: -20px;
-		padding-left: 7%;
+		padding-left: 20%;
 		font-size: 12px;
 		color: white;
+		position: relative;
 		width: 100%;
 		float: left;
 		font-family: pepper;
+		display: block;
 		text-align: left;
 		line-height: 100%;
+		margin-top: 10%;
 	}
 
 	input:-internal-autofill-selected {
@@ -970,15 +1008,14 @@
 	}
 
 	.inputc1 {
-		padding: 10px;
 		font-size: 12px;
 		font-weight: bold;
 		color: white;
 		width: 20%;
-		float: right;
-		position: relative;
-		text-align: left;
-		display: inline-grid;
+		right: 0%;
+		position: absolute;
+		text-align: right;
+		display: grid;
 	}
 
 	input::-webkit-input-placeholder {
@@ -1048,7 +1085,6 @@
 
 	.rightBsty {
 		width: 60%;
-		/*position: absolute;*/
 	}
 
 	.receive {
@@ -1110,6 +1146,7 @@
 		font-family: KG;
 		width: 75%;
 		margin-top: -20px;
+		margin-left: 25%;
 	}
 
 	.visitor {
@@ -1122,6 +1159,7 @@
 		float: right;
 		width: 75%;
 		margin-top: 10px;
+		margin-left: 25%;
 	}
 
 	.resend {
@@ -1176,70 +1214,30 @@
 		font-size: 1.2rem;
 		margin-top: 10px;
 	}
-	// 	@media screen and (max-width: 481px) {
-	// 		.menu {
-	// 			//padding-top: 18%;
-	// 		}
-	//
-	// 		.inputu {
-	// 			width: 40%;
-	// 			padding: 15px 0 15px 10%;
-	// 		}
-	//
-	// 		.inputp {
-	// 			width: 40%;
-	// 			padding: 15px 0 15px 10%;
-	// 		}
-	//
-	// 		.inputc {
-	// 			width: 50%;
-	// 		}
-	//
-	// 		.inputc1 {
-	// 			width: 50%;
-	// 		}
-	//
-	// 		.phone {
-	// 			left: 28%;
-	// 		}
-	//
-	// 		.warnspan {
-	// 			width: 50%;
-	// 		}
-	//
-	// 		.fontsize {
-	// 			font-family: pepper;
-	// 			color: white;
-	// 			bottom: 11%;
-	// 			left: 3%;
-	// 			position: absolute;
-	// 			font-size: large;
-	// 			max-height: 100%;
-	// 			min-height: 60%;
-	// 			margin-left: 2%;
-	// 		}
-	// 	}
 
 	@media screen and (min-width: 482px) and (max-width: 569px) {
 		.menu {
 			padding-top: 5%;
 		}
 
-		.inputu {
+		.selectsty2{
+			position: absolute;
+			width: 15%;
+			float: left;
+			z-index: 2;
+			left: 43%;
+		}
+
+		.d3{
+			margin-top: 22px;
+		}
+		.inputu1 {
 			padding: 15px 15% 15px 19%;
 		}
 		.inputsetpa{
-			padding: 15px 13% 15px 19%;
+			padding: 15px 13% 15px 23%;
 		}
-		.inputp {
-			padding: 15px 15% 15px 20%;
-		}
-		.error1{
-			right: -9%;
-		}
-		.login{
-			padding: 10px 0px;
-		}
+
 		.fontsize {
 			font-family: pepper;
 			color: white;
@@ -1255,37 +1253,16 @@
 			margin-top:8%;
 		}
 
-		// 	.inputc {
-		// 		width: 40%;
-		// 	}
-		//
-		// 	.inputc1 {
-		// 		width: 40%;
-		// 	}
-		//
-		// 	.phone {
-		// 		left: 31%;
-		// 	}
-		//
-		// 	.warnspan {
-		// 		width: 41%;
-		// 	}
 	}
 
-	@media screen and (min-width: 1024px) and (max-width: 1600px){
-
-
+	@media screen and (min-width: 1024px)and (max-width: 1600px) {
 
 		.error {
 			//right: 39%;
 			top: 20px;
 		}
 
-		.inputp {
-			// padding: 16px 0 16px 5%;
-			// width: 20%;
-			// margin-top: 15px;
-		}
+
 		.warn8sty{
 			padding-top:10px;
 		}
@@ -1302,21 +1279,12 @@
 			// transform: scale(1.2);
 		}
 
-		.inputu {
-			// padding: 16px 0 16px 5%;
-			// width: 20%;
-		}
-
-		.inputc {
-			// width: 25%;
-		}
-
-		.inputc1 {
-			// width: 25%;
+		.inputc{
+			margin-top: 7%;
 		}
 
 		.forgsty {
-			margin-left: 26%;
+			margin-left: 22%;
 		}
 
 		.pause {
@@ -1340,9 +1308,6 @@
 	}
 
 	@media screen and (min-width: 812px) and (max-width: 1023px) {
-
-
-
 		.fontsizes {
 			margin-top: 18%;
 		}
@@ -1361,13 +1326,18 @@
 			bottom: 0%;
 		}
 
+		.inputc{
+			margin-top: 8%;
+		}
+
 		.forgsty {
-			margin-left: 25%;
+			margin-left: 20%;
 		}
 		.resultsty{
 			margin-top:7%;
 		}
 	}
+
 	@media screen and (min-width: 1600px){
 		.error {
 			//right: 39%;
@@ -1392,11 +1362,11 @@
 		}
 
 		.inputc{
-			margin-top: 0%;
+			margin-top: 3%;
 		}
 
 		.forgsty {
-			margin-left: 33%;
+			margin-left: 28%;
 		}
 
 		.pause {

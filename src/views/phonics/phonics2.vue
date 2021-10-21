@@ -661,7 +661,6 @@
         this.show = true;
       }
 
-
       this.$axios.post(this.url, qs.stringify({
         menuId: this.menuId,
         num: 3
@@ -675,6 +674,7 @@
           this.listF[i] = this.listF[currentRandom];
           this.listF[currentRandom] = current;
         }
+        console.log(this.listF);
         this.question = this.listF.length;
         this.list1 = this.listF[this.countpage - 1];
         this.name = this.list1[this.countpage - 1].name;

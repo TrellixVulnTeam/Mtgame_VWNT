@@ -428,7 +428,7 @@
         starts:"0/30",
         start:0,
 				walkers:false,
-        phonics:0,
+        phonics:'',
 				runners:false,
 				activitiesmenu:false,
 			}
@@ -573,9 +573,9 @@
 				})
 			},
       chartroom2(li) {
-              if(this.phonics==0){
+              if(this.phonics===0){
                 alertMsg3("Active Phonics Student Only");
-              }else {
+              }else if (this.phonics===1){
                 this.courseId=li.course_id;
                 this.cources=li.name;
                 this.$router.push({
@@ -587,7 +587,7 @@
                   }
                 })
               }
-            },
+      },
 			walkers1(li) {
 				this.chartroom =false;
 				this.walkers=true;
