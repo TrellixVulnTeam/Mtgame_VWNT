@@ -19,7 +19,7 @@
 						<div class="m_btn_start">
 							<img src="../../assets/image/start-01.png" @click="alreadylogin" />
 						</div>
-            <div class="secretBackground" v-if="secretBackground" @click="cancel">
+            <div class="secretBackground" v-if="secretBackground&&local==='cn'" @click="cancel">
               <div class="secret" v-if="secretBackground">
                 <h3 class="title">服务协议</h3>
                 <p class="text">请你务必审慎阅读、充分理解”隐私政策”各条款，我们需要你的手机信息。</p>
@@ -95,9 +95,11 @@
         })
       },
 			alreadylogin() {
-        if (this.secret === true) {
+        console.log(this.local);
+        if (this.secret === true&&this.local==='cn') {
           this.secretBackground = true;
-        } else {
+          console.log('1');
+        } else{
           var audio = document.getElementById('music');
           if (localStorage.getItem('audiomusic') === "false") {
             audio.pause();

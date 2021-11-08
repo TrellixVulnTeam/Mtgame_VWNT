@@ -274,8 +274,10 @@
       </div>
     </div>
      <footer :class="service&&local==='cn' ? 'bottom4':'bottom'">
-       <div class="bottom1">Copyright © 2020 深圳蒙奇千里教育咨询有限公司
+       <div class="bottom1" v-if="local==='cn'">Copyright © 2020 深圳蒙奇千里教育咨询有限公司
          <a  style="color: white" data-savepage-href="https://www.beian.miit.gov.cn" href="http://www.beian.miit.gov.cn/" target="_blank"><span>粤ICP备20063293号</span></a>
+       </div>
+       <div class="bottom1" v-if="local==='hk'">© Monkey Tree English Learning Center .All rights reserved.
        </div>
        <div  class="bottom3">
          <a target="_blank" href="https://www.monkeytree.com.cn/privacyStatement.jsp" style="text-decoration: none; color: white;"><span>Privacy Statement</span></a>

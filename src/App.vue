@@ -37,12 +37,10 @@
 		<!-- 所有关卡页面 -->
 		<!-- <transition name="fade"> -->
 			<!-- <transition name="fade"> -->
-
 			 <audio id="music" autoplay="autoplay" loop="loop"><source  v-if="!loading01" src="./assets/video/appmusic.mp3"></audio>
 				<router-view></router-view>
 			<!-- </transition>	 -->
 	<!-- 	</transition> -->
-
 	</div>
 </template>
 
@@ -92,7 +90,6 @@
 
 		  numberpercent(){
 			  	//this.closemusic=true;
-
 			setTimeout(() => {
 				this.loading01=false;
 				 var audio = document.getElementById('music');
@@ -143,24 +140,7 @@
 
 		},
 		created() {
-      // var startY,endY;
-      // //记录手指触摸的起点坐标
-      // $('body').on('touchstart',function (e) {
-      //      startY = e.touches[0].pageY;
-      // });
-      // $('body').on('touchmove',function (e) {
-      //      endY = e.touches[0].pageY;  //记录手指触摸的移动中的坐标
-      //      //手指下滑，页面到达顶端不能继续下滑
-      //      if(endY>startY&& $(window).scrollTop()<=0){
-      //          e.preventDefault();
-      //      }
-      //    //手指上滑，页面到达底部能继续上滑
-      //      if(endY<startY&& $(window).scrollTop()+
-      //          $(window).height()>=$('body')[0].scrollHeight){
-      //          e.preventDefault();
-      //      }
-      // });
-			if (localStorage.getItem('checkbox') == true || localStorage.getItem('checkbox') == "true") {
+			if (localStorage.getItem('checkbox') === true || localStorage.getItem('checkbox') === "true") {
 				this.username = localStorage.getItem('username');
 				this.password = localStorage.getItem('password');
 			}
@@ -173,9 +153,9 @@
             // 测试版本20
       		})).then(
       		res => {
-            if(res.data.success=="success"){
+            if(res.data.success==="success"){
               this.zhezhao=false;
-            }else if(res.data.success=="false"){
+            }else if(res.data.success==="false"){
               this.zhezhao=true;
               alertMsg2("Please update your app to new version to continue.");
             }
@@ -185,7 +165,6 @@
       		}
       	);
 			this.numberpercent();
-      this.verifyCode();
 
 //       document.addEventListener("pause", function(){
 //       	//从前台切换到后台

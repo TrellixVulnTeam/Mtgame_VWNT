@@ -2320,7 +2320,7 @@
     .settingb {
       width: 11%;
       position: absolute;
-      right:20%;
+      right:17%;
       bottom: 0%;
     }
     .styletit{
@@ -2424,7 +2424,7 @@
     .imgposit{
       margin-left: 3%;
     }
-    .listimg[data-v-469af010] {
+    .listimg {
       width: 40%;
       margin-left: -8%;
       -webkit-transform: scale(0.7);
@@ -2445,7 +2445,7 @@
       transform: scale(0.7);
       margin-top: -5%;
     }
-    .menulist[data-v-469af010] {
+    .menulist {
       height: 123%;
     }
   }

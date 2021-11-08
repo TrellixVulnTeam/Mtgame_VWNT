@@ -95,7 +95,7 @@
                 <img src="../../assets/image/speat.png" @click="change()"><p>{{this.list1[0].name2}}</p>
               </button> -->
               </div>
-              <canvas id='canvas' class=""  @mousedown="canvasDown($event)" @mouseup="canvasUp($event)"
+              <canvas id='canvas' @mousedown="canvasDown($event)" @mouseup="canvasUp($event)"
                 @mousemove="canvasMove($event)" @touchstart="canvasDown($event)" @touchend="canvasUp($event)"
                 @touchmove="canvasMove($event)"></canvas>
               <img src="../../assets/image/StarOrange.png" v-show="showstart" style="position: absolute;width: 60%;top: 10%;left: 20%;height: 80%;">
@@ -166,7 +166,7 @@
 
     watch: {
       'onef': function(newVal) {
-        if (this.onef == true) {
+        if (this.onef === true) {
           this.countpage += 1;
           this.list1 = this.listF[this.countpage - 1];
           this.name = this.list1[0].name;
@@ -178,8 +178,8 @@
           this.list1[0].image = this.pic + this.list1[0].image;
           // this.list1[0].image2 = this.pic + this.list1[0].image2;
           // }
-
-          if (this.onef == true) {
+          console.log(this.list1[0].image);
+          if (this.onef === true) {
             setTimeout(() => {
               this.onef = false;
               this.showimg1 = true;
@@ -295,11 +295,12 @@
         }
       },
       resize() {
+        console.log('resize');
         setTimeout(() => {
           if (this.list1.length > 0) {
             const canvas = document.getElementById('canvas'); // 初次进来初始化画布
-            var box= document.getElementById('Box');
-            var imgBox = document.getElementById('imgBox');
+            const box = document.getElementById('Box');
+            const imgBox = document.getElementById('imgBox');
             document.getElementById('imgBox').style.width=box.clientWidth+"px";
             document.getElementById('imgBox').style.height=box.clientHeight+"px";
             let imgsty = document.getElementsByClassName('imgsty');
@@ -313,9 +314,9 @@
             this.setCanvasStyle();
             this.zhezhao = false; this.video = true;
 
-            var c = document.getElementById('canvas');
-            var o = c.getContext('2d');
-            var bgImg2 = document.getElementById('img1');
+            const c = document.getElementById('canvas');
+            const o = c.getContext('2d');
+            const bgImg2 = document.getElementById('img1');
             o.drawImage(bgImg2, c.width * 0.2, c.height * 0.1, c.width * 0.6, c.height * 0.8);
 
 //             let image = new Image();
@@ -331,31 +332,30 @@
 //             console.log(this.yuantu);
 //              o.clearRect(0, 0, c.width, c.height);
 
-            var reg2 = new Image();
+            const reg2 = new Image();
             reg2.src = c.toDataURL("image/png");
+            console.log(reg2.src);
             this.yuantu = reg2.src;
             o.clearRect(0, 0, c.width, c.height);
           }
-
-        }, 1000);
+        }, 2000);
 
       },
 //
       clear(){
         this.pngimg='';
-        var c = document.getElementById('canvas');
-        var o = c.getContext('2d');
-         o.clearRect(0, 0, c.width, c.height);
+        const c = document.getElementById('canvas');
+        const o = c.getContext('2d');
+        o.clearRect(0, 0, c.width, c.height);
       },
       recognizeimage() {
-        if(this.pngimg != ''){
+        if(this.pngimg !== ''){
         this.zhezhao=true;
         // document.getElementById('transcription').innerText = "(Recognizing...)"
-        var c = document.getElementById('canvas');
-        var o = c.getContext('2d');
-
-        var bgImg2 = document.getElementById('img1');
-        o.drawImage(bgImg2, c.width * 0.2, c.height * 0.1, c.width * 0.6, c.height * 0.8);
+          const c = document.getElementById('canvas');
+          //var o = c.getContext('2d');注释
+        //var bgImg2 = document.getElementById('img1');注释
+        //o.drawImage(bgImg2, c.width * 0.2, c.height * 0.1, c.width * 0.6, c.height * 0.8);注释
 
         // let image = new Image();
         // var timestamp = new Date().getTime();
@@ -367,19 +367,20 @@
         //      o.drawImage(image, c.width * 0.2, c.height * 0.1, c.width * 0.6, c.height * 0.8);
         // };
 
-        var bgImg = document.getElementById('png');
-        o.drawImage(bgImg, 0, 0, c.width, c.height);
-        var reg = new Image();
-         // reg.setAttribute("crossOrigin",'Anonymous');
+        //var bgImg = document.getElementById('png');注释
+        //o.drawImage(bgImg, 0, 0, c.width, c.height);注释
+          const reg = new Image();
+          // reg.setAttribute("crossOrigin",'Anonymous');
         reg.src = c.toDataURL("image/png");
                    // this.pngimg2=reg.src;
+          console.log(reg.src);
 
         this.$axios.post(this.url2, qs.stringify({
           imageFile: reg.src,
           image: this.yuantu,
         })).then(res => {
           // console.log(res.data);
-          if (res.data.success == true) {
+          if (res.data.success === true) {
             // that.video = true;
             this.account += 1;
             this.soundscorrect = true;
@@ -393,7 +394,6 @@
                 this.onef = true;
                 this.pngimg = '';
                 // this.showimg2=true;
-
               } else {
                 this.$router.push({
                   //核心语句
@@ -413,7 +413,6 @@
                   }
                 });
               }
-
             }, 1500)
 
             // console.log(that.zhezhao);
@@ -455,11 +454,11 @@
 
       },
       convertCanvasToImage(canvas) {
-        if (this.canvasmove == false) {
-          var c = document.getElementById('canvas');
-          var o = c.getContext('2d');
-          var image = new Image();
-          image.src = canvas.toDataURL("image/png");
+        if (this.canvasmove === false) {
+          const c = document.getElementById('canvas');
+          const o = c.getContext('2d');
+          const image = new Image();
+          image.src = c.toDataURL("image/png");
           // image.style.backgroundColor="white";
           // var b64 = imagesrc.substring(22);
           // console.log(b64);
@@ -467,9 +466,7 @@
           // setTimeout(() => {
           // this.recognizeimage();
           //  }, 2000)
-
         }
-
       },
 
       pop() {
@@ -502,8 +499,6 @@
       },
       // 在canvas中鼠标按下
       canvasDown(e) {
-        //console.log(e);
-
         this.canvasmove = true;
         if (e.touches && e.touches.length == 1) {
           this.canvasMoveUse = true;
@@ -526,14 +521,13 @@
           this.context.stroke();
         } else {
           this.canvasMoveUse = false;
-          return;
+
         }
 
       },
 
       // canvas中鼠标移动
       canvasMove(e) {
-        //console.log(e);
         this.canvasmove = true;
         if (this.canvasMoveUse) {
           // 只有允许移动时调用
@@ -563,18 +557,15 @@
         // this.canvasObj.height = this.canvasH; // 动态赋值canvas的高度
         // this.setCanvasStyle();
         // setTimeout(() => {
-        if (this.canvasmove == false) {
+        if (this.canvasmove === false) {
           const canvas = document.getElementById('canvas');
-          // var string = OCRAD(canvas);
-          // console.log(string);
           this.convertCanvasToImage(canvas)
         }
         // }, 3000)
       },
       gomemu() {
         var audio = document.getElementById('music');
-        if (localStorage.getItem('audiomusic') == "false") {
-
+        if (localStorage.getItem('audiomusic') === "false") {
         } else {
           audio.play();
         }
@@ -601,7 +592,7 @@
       },
       sound() {
         this.show = !this.show;
-        if (this.show == false) {
+        if (this.show === false) {
           // this.$refs.MusicPlay.pause();
           localStorage.setItem("gamemusic", "false");
         } else {
@@ -611,25 +602,31 @@
       },
       // 设置绘画配置
       setCanvasStyle() {
+        console.log('setCanvasStyle');
         if(997<document.body.offsetWidth&&document.body.offsetWidth<1025){
+          console.log('55');
          this.context.lineWidth =55;
         // this.context.shadowBlur = this.config.shadowBlur;
         this.context.shadowColor = this.config.lineColor;
         this.context.strokeStyle = this.config.lineColor;
         }else if(1024<document.body.offsetWidth&&document.body.offsetWidth<1356){
+          console.log('65');
           this.context.lineWidth = 65;
         // this.context.shadowBlur = this.config.shadowBlur;
         this.context.shadowColor = this.config.lineColor;
         this.context.strokeStyle = this.config.lineColor;
         }else if(997>document.body.offsetWidth&&document.body.offsetWidth>895){
+          console.log('35');
           this.context.lineWidth = 38;
         this.context.shadowColor = this.config.lineColor;
         this.context.strokeStyle = this.config.lineColor;
         }else if(document.body.offsetWidth>1355){
+          console.log('85');
           this.context.lineWidth = 85;
         this.context.shadowColor = this.config.lineColor;
         this.context.strokeStyle = this.config.lineColor;
         }else{
+          console.log('else');
           this.context.lineWidth = this.config.lineWidth;
         // this.context.shadowBlur = this.config.shadowBlur;
         this.context.shadowColor = this.config.lineColor;
@@ -653,9 +650,9 @@
       this.menuId = this.$route.query.menuId; //接受参数关键代码
       localStorage.setItem('gamename', this.gamename);
       this.gamename = this.$route.query.name;
-      var timestamp = (new Date()).getTime();
+      const timestamp = (new Date()).getTime();
       localStorage.setItem('startTimeid', timestamp);
-      if (localStorage.getItem('gamemusic') == "false") {
+      if (localStorage.getItem('gamemusic') === "false") {
         this.show = false;
       } else {
         this.show = true;
@@ -686,7 +683,7 @@
         this.list1[0].image2 = this.pic + this.list1[0].image2;
         // }
 
-        if (this.onef == true) {
+        if (this.onef === true) {
           setTimeout(() => {
             this.video = true;
             this.onef = false;

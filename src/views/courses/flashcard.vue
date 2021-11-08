@@ -803,128 +803,128 @@
         FamilyTimePart1:[
           {
             id:1,
-            cardName:'baby',
-            audio:require('../../assets/Flashcard Audio/september/Kick.mp3'),
-            img:require('../../assets/image/Family/Baby.png')
+            cardName:'young',
+            audio:require('../../assets/Flashcard Audio/november/Young.mp3'),
+            img:require('../../assets/image/Family/Young.png')
           },{
             id:2,
-            cardName:'brother',
-            audio:require('../../assets/Flashcard Audio/september/ball.mp3'),
-            img:require('../../assets/image/Family/Brother.png')
-          },{
-            id:3,
-            cardName:'caring',
-            audio:require('../../assets/Flashcard Audio/september/Snack.mp3'),
-            img:require('../../assets/image/Family/Caring.png')
-          },{
-            id:4,
-            cardName:'share',
-            audio:require('../../assets/Flashcard Audio/september/swing.mp3'),
-            img:require('../../assets/image/Family/Share.png')
-          },{
-            id:5,
-            cardName:'father',
-            audio:require('../../assets/Flashcard Audio/september/run.mp3'),
-            img:require('../../assets/image/Family/Father.png')
-          },{
-            id:6,
-            cardName:'grandma',
-            audio:require('../../assets/Flashcard Audio/september/slide.mp3'),
-            img:require('../../assets/image/Family/Grandma.png')
-          },{
-            id:7,
-            cardName:'grandpa',
-            audio:require('../../assets/Flashcard Audio/september/playground.mp3'),
-            img:require('../../assets/image/Family/Grandpa.png')
-          },{
-            id:8,
-            cardName:'hug',
-            audio:require('../../assets/Flashcard Audio/september/climb.mp3'),
-            img:require('../../assets/image/Family/Hug.png')
-          },{
-            id:9,
-            cardName:'mother',
-            audio:require('../../assets/Flashcard Audio/september/Toys.mp3'),
-            img:require('../../assets/image/Family/Mother.png')
-          },{
-            id:10,
             cardName:'old',
-            audio:require('../../assets/Flashcard Audio/september/Ring.mp3'),
+            audio:require('../../assets/Flashcard Audio/november/old.mp3'),
             img:require('../../assets/image/Family/Old.png')
           },{
-            id:11,
+            id:3,
             cardName:'sister',
-            audio:require('../../assets/Flashcard Audio/september/seesaw.mp3'),
+            audio:require('../../assets/Flashcard Audio/november/sister.mp3'),
             img:require('../../assets/image/Family/Sister.png')
           },{
+            id:4,
+            cardName:'brother',
+            audio:require('../../assets/Flashcard Audio/november/brother.mp3'),
+            img:require('../../assets/image/Family/Brother.png')
+          },{
+            id:5,
+            cardName:'mother',
+            audio:require('../../assets/Flashcard Audio/november/Mother.mp3'),
+            img:require('../../assets/image/Family/Mother.png')
+          },{
+            id:6,
+            cardName:'father',
+            audio:require('../../assets/Flashcard Audio/november/Father.mp3'),
+            img:require('../../assets/image/Family/Father.png')
+          },{
+            id:7,
+            cardName:'grandma',
+            audio:require('../../assets/Flashcard Audio/november/grandma.mp3'),
+            img:require('../../assets/image/Family/Grandma.png')
+          },{
+            id:8,
+            cardName:'grandpa',
+            audio:require('../../assets/Flashcard Audio/november/grandpa.mp3'),
+            img:require('../../assets/image/Family/Grandpa.png')
+          },{
+            id:9,
+            cardName:'caring',
+            audio:require('../../assets/Flashcard Audio/november/caring.mp3'),
+            img:require('../../assets/image/Family/Caring.png')
+          },{
+            id:10,
+            cardName:'share',
+            audio:require('../../assets/Flashcard Audio/november/share.mp3'),
+            img:require('../../assets/image/Family/Share.png')
+          },{
+            id:11,
+            cardName:'hug',
+            audio:require('../../assets/Flashcard Audio/november/Hug.mp3'),
+            img:require('../../assets/image/Family/Hug.png')
+          },{
             id:12,
-            cardName:'young',
-            audio:require('../../assets/Flashcard Audio/september/Bell.mp3'),
-            img:require('../../assets/image/Family/Young.png')
+            cardName:'baby',
+            audio:require('../../assets/Flashcard Audio/november/Baby.mp3'),
+            img:require('../../assets/image/Family/Baby.png')
           }
         ],
         FamilyTimePart2:[
           {
             id:1,
             cardName:'balloons',
-            audio:require('../../assets/Flashcard Audio/september/Kick.mp3'),
+            audio:require('../../assets/Flashcard Audio/november/Balloons.mp3'),
             img:require('../../assets/image/Happybirthday/Balloons.png')
           },{
             id:2,
             cardName:'blow',
-            audio:require('../../assets/Flashcard Audio/september/ball.mp3'),
+            audio:require('../../assets/Flashcard Audio/november/blow.mp3'),
             img:require('../../assets/image/Happybirthday/Blow.png')
           },{
             id:3,
             cardName:'cake',
-            audio:require('../../assets/Flashcard Audio/september/Snack.mp3'),
+            audio:require('../../assets/Flashcard Audio/november/Cake.mp3'),
             img:require('../../assets/image/Happybirthday/Cake.png')
           },{
             id:4,
             cardName:'candles',
-            audio:require('../../assets/Flashcard Audio/september/swing.mp3'),
+            audio:require('../../assets/Flashcard Audio/november/Candles.mp3'),
             img:require('../../assets/image/Happybirthday/Candles.png')
           },{
             id:5,
-            cardName:'card',
-            audio:require('../../assets/Flashcard Audio/september/run.mp3'),
-            img:require('../../assets/image/Happybirthday/Card.png')
+            cardName:'sing',
+            audio:require('../../assets/Flashcard Audio/november/Sing.mp3'),
+            img:require('../../assets/image/Happybirthday/Sing.png')
           },{
             id:6,
             cardName:'cut',
-            audio:require('../../assets/Flashcard Audio/september/slide.mp3'),
+            audio:require('../../assets/Flashcard Audio/november/Cut.mp3'),
             img:require('../../assets/image/Happybirthday/Cut.png')
           },{
             id:7,
-            cardName:'friends',
-            audio:require('../../assets/Flashcard Audio/september/playground.mp3'),
-            img:require('../../assets/image/Happybirthday/Friends.png')
+            cardName:'party hat',
+            audio:require('../../assets/Flashcard Audio/november/party hat.mp3'),
+            img:require('../../assets/image/Happybirthday/Party Hat.png')
           },{
             id:8,
-            cardName:'happy',
-            audio:require('../../assets/Flashcard Audio/september/climb.mp3'),
-            img:require('../../assets/image/Happybirthday/Happy.png')
+            cardName:'presents',
+            audio:require('../../assets/Flashcard Audio/november/presents.mp3'),
+            img:require('../../assets/image/Happybirthday/Presents.png')
           },{
             id:9,
-            cardName:'party hat',
-            audio:require('../../assets/Flashcard Audio/september/Toys.mp3'),
-            img:require('../../assets/image/Happybirthday/Party Hat.png')
+            cardName:'happy',
+            audio:require('../../assets/Flashcard Audio/november/Happy.mp3'),
+            img:require('../../assets/image/Happybirthday/Happy.png')
           },{
             id:10,
             cardName:'play',
-            audio:require('../../assets/Flashcard Audio/september/Ring.mp3'),
+            audio:require('../../assets/Flashcard Audio/november/Play.mp3'),
             img:require('../../assets/image/Happybirthday/Play.png')
           },{
             id:11,
-            cardName:'presents',
-            audio:require('../../assets/Flashcard Audio/september/seesaw.mp3'),
-            img:require('../../assets/image/Happybirthday/Presents.png')
+            cardName:'card',
+            audio:require('../../assets/Flashcard Audio/november/card.mp3'),
+            img:require('../../assets/image/Happybirthday/Card.png')
           },{
             id:12,
-            cardName:'sing',
-            audio:require('../../assets/Flashcard Audio/september/Bell.mp3'),
-            img:require('../../assets/image/Happybirthday/Sing.png')
-          }
+            cardName:'friends',
+            audio:require('../../assets/Flashcard Audio/november/friends.mp3'),
+            img:require('../../assets/image/Happybirthday/Friends.png')
+          },
         ],
         list:[],
         titleUrl:{
@@ -953,6 +953,8 @@
           SchoolTimePart2:require('../../assets/image/9-9logo2.png'),
           AnimalsPart1:require('../../assets/image/10-10logo1.png'),
           AnimalsPart2:require('../../assets/image/10-10logo2.png'),
+          FamilyTimePart1:require('../../assets/image/11-11logo1.png'),
+          FamilyTimePart2:require('../../assets/image/11-11logo2.png'),
         },
         title:'../../assets/image/6-6logo.png',
         flashCardUrl:'http://107.150.121.34/monkeytownHK/image/img/9315e4a9-e1ec-4f49-8db5-5b3a9b6ae083.png',

@@ -852,12 +852,12 @@
 				 this.popp = !this.popp;
 			},
 			help(){
-				if(this.onef==false){
+				if(this.onef===false){
 					this.spanp="Listen and circle the correct picture.";
 				this.popp = !this.popp;
-				if( this.list1[0].rank==0){
+				if( this.list1[0].rank===0){
 					this.ruleimg8=true;this.ruleimg10=false;
-				}else if( this.list1[0].rank==1){
+				}else if( this.list1[0].rank===1){
 					this.ruleimg8=false;this.ruleimg10=true;
 				}
 				}
@@ -912,7 +912,7 @@
       }else if(this.part==='part3'){
         this.url1=this.url+'exerciseB';
       }
-      if(this.gamename==''||this.gamename==undefined){
+      if(this.gamename===''||this.gamename===undefined){
         this.gamename=localStorage.getItem('gamename')
       }else {
         localStorage.setItem('gamename',this.gamename);
@@ -920,17 +920,9 @@
         var timestamp = (new Date()).getTime();
         localStorage.setItem('startTimeid',timestamp);
 				for(var i=0;i<this.bgimg.length;i++){
-					if(this.unit===this.bgimg[i].spring){
-						this.bgimg[i].active=true;
-					}else{
-						this.bgimg[i].active=false;
-					}
+					this.bgimg[i].active = this.unit === this.bgimg[i].spring;
 				}
-				if(localStorage.getItem('gamemusic')=="false"){
-				    this.show=false;
-				}else{
-					 this.show=true;
-				}
+				this.show = localStorage.getItem('gamemusic') !== "false";
 
 				this.$axios.post(this.url1, qs.stringify({
 				   menuDetailId: this.menuId,
@@ -954,11 +946,11 @@
 
 					for(var i=0;i<this.list1.length;i++){
 						this.list1[i].bg=this.pic+this.list1[i].bg
-						if(this.list1[i].score==1){
+						if(this.list1[i].score===1){
 							this.audio=this.pic+this.list1[i].audio;
 						}
 					}
-					if (this.onef == true && this.shownumb==true) {
+					if (this.onef === true && this.shownumb===true) {
 
 					if (this.list1.length > 4 && this.list1.length < 7) {
 						for (var i = 0; i < this.list1.length; i++) {
@@ -971,7 +963,7 @@
 							this.list1[i].margin = 1;
 						}
 					}
-					if (this.list1.length == 2) {
+					if (this.list1.length === 2) {
 						for (var i = 0; i < this.list1.length; i++) {
 							this.list1[i].width1 = 1;
 							this.list1[i].width2 = 1;

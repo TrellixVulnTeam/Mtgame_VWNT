@@ -2017,7 +2017,7 @@
       top: 90%;
 		}
 
-    .itemsGt6 #answer-box li[data-v-bc0331f8] {
+    .itemsGt6 #answer-box li {
       width: 40px;
       height: 40px;
     }

@@ -296,11 +296,12 @@
     z-index: 1;
     color: white;
     font-size: 14px;
-    top: 91.5%;
-    left: 80%;
+    top: 90.5%;
+    left: 74%;
+    -webkit-transform: translateY(-85%);
     transform: translateY(-85%);
-    padding-bottom:2px;
-    border-bottom:2px solid white;
+    padding-bottom: 2px;
+    border-bottom: 2px solid white;
   }
   .Privacy:hover{
     cursor: pointer;

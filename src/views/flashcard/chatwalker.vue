@@ -1221,6 +1221,116 @@
              :style="{zIndex: !tiger ? 100 : 1}" @click="showGif('tiger')">
       </div>
     </div>
+    <div v-else-if="this.unit === 'Family Time' && this.part === 'part1'">
+      <img src="../../assets/image/201911H5 Family_MT/Walker_BG/BG_00000.png">
+      <img src="../../assets/image/201911H5 Family_MT/Walker_BG/BG_00000.png"
+           style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;"/>
+      <div class="baby">
+        <img src="../../assets/image/201911H5 Family_MT/GIF_PNG/png/baby.png" v-if="baby&&young" @click="walkers&&showGif('baby')">
+        <img src="../../assets/image/201911H5 Family_MT/GIF_PNG/Gif/baby.gif" style="z-index: 100" v-if="!baby"
+             @click="showGif('baby')">
+      </div>
+      <div class="brother">
+        <img src="../../assets/image/201911H5 Family_MT/GIF_PNG/png/brother.png" v-if="brother&&hug" @click="showGif('brother')">
+        <img src="../../assets/image/201911H5 Family_MT/GIF_PNG/Gif/brother.gif" style="z-index: 100" v-if="!brother"
+             @click="showGif('brother')">
+        <img src="../../assets/image/201911H5 Family_MT/GIF_PNG/Gif/hug.gif" style="z-index: 100" v-if="!hug"
+             @click="showGif('hug')">
+      </div>
+      <div class="caring">
+<!--        <img src="../../assets/image/201911H5 Family_MT/GIF_PNG/png/caring.png" v-if="caring" @click="showGif('caring')">-->
+        <img src="../../assets/image/201911H5 Family_MT/GIF_PNG/Gif/caring.gif" style="z-index: 100" v-if="!caring"
+             @click="showGif('caring')">
+      </div>
+      <div class="father">
+        <img src="../../assets/image/201911H5 Family_MT/GIF_PNG/png/father.png" v-if="father&&caring" @click="showGif('father')">
+        <img src="../../assets/image/201911H5 Family_MT/GIF_PNG/Gif/father.gif" style="z-index: 100" v-if="!father"
+             @click="showGif('father')">
+      </div>
+      <div class="grandma">
+        <img src="../../assets/image/201911H5 Family_MT/GIF_PNG/png/grandma.png" v-if="grandma&&old&&share" @click="showGif('grandma')">
+        <img src="../../assets/image/201911H5 Family_MT/GIF_PNG/Gif/grandma.gif" style="z-index: 100" v-if="!grandma"
+             @click="showGif('grandma')">
+      </div>
+      <div class="grandpa">
+        <img src="../../assets/image/201911H5 Family_MT/GIF_PNG/png/grandpa.png" v-if="grandpa&&old&&share" @click="showGif('grandpa')">
+        <img src="../../assets/image/201911H5 Family_MT/GIF_PNG/Gif/grandpa.gif" style="z-index: 100" v-if="!grandpa"
+             @click="showGif('grandpa')">
+      </div>
+      <div class="mother">
+        <img src="../../assets/image/201911H5 Family_MT/GIF_PNG/png/mother.png" v-if="mother" @click="showGif('mother')">
+        <img src="../../assets/image/201911H5 Family_MT/GIF_PNG/Gif/mother.gif" style="z-index: 100" v-if="!mother"
+             @click="showGif('mother')">
+      </div>
+      <div class="old">
+<!--        <img src="../../assets/image/201911H5 Family_MT/GIF_PNG/png/old.png" v-if="old" @click="showGif('old')">-->
+        <img src="../../assets/image/201911H5 Family_MT/GIF_PNG/Gif/old.gif" style="z-index: 100" v-if="!old"
+             @click="showGif('old')">
+      </div>
+      <div class="share">
+<!--        <img src="../../assets/image/201911H5 Family_MT/GIF_PNG/png/share.png" v-if="share" @click="showGif('share')">-->
+        <img src="../../assets/image/201911H5 Family_MT/GIF_PNG/Gif/share.gif" style="z-index: 100" v-if="!share"
+             @click="showGif('share')">
+      </div>
+      <div class="sister">
+        <img src="../../assets/image/201911H5 Family_MT/GIF_PNG/png/sister.png" v-if="sister&&caring" @click="showGif('sister')">
+        <img src="../../assets/image/201911H5 Family_MT/GIF_PNG/Gif/sister.gif" style="z-index: 100" v-if="!sister"
+             @click="showGif('sister')">
+      </div>
+      <div class="baby">
+<!--        <img src="../../assets/image/201911H5 Family_MT/GIF_PNG/png/young.png" v-if="young" @click="showGif('young')">-->
+        <img src="../../assets/image/201911H5 Family_MT/GIF_PNG/Gif/baby.gif" style="z-index: 100" v-if="!young"
+             @click="showGif('young')">
+      </div>
+      <div class="youngButton">
+        <img src="../../assets/image/201911H5 Family_MT/Word/word_young.png"
+             :style="{zIndex: !young ? 100 : 1}" @click="showGif('young')">
+      </div>
+      <div class="brotherButton">
+        <img src="../../assets/image/201911H5 Family_MT/Word/word_brother.png"
+             :style="{zIndex: !brother ? 100 : 1}" @click="showGif('brother')">
+      </div>
+      <div class="fatherButton">
+        <img src="../../assets/image/201911H5 Family_MT/Word/word_father.png"
+             :style="{zIndex: !father ? 100 : 1}" @click="showGif('father')">
+      </div>
+      <div class="sisterButton">
+        <img src="../../assets/image/201911H5 Family_MT/Word/word_sister.png"
+             :style="{zIndex: !sister ? 100 : 1}" @click="showGif('sister')">
+      </div>
+      <div class="grandmaButton">
+        <img src="../../assets/image/201911H5 Family_MT/Word/word_grandma.png"
+             :style="{zIndex: !grandma ? 100 : 1}" @click="showGif('grandma')">
+      </div>
+      <div class="grandpaButton">
+        <img src="../../assets/image/201911H5 Family_MT/Word/word_grandpa.png"
+             :style="{zIndex: !grandpa ? 100 : 1}" @click="showGif('grandpa')">
+      </div>
+      <div class="oldButton">
+        <img src="../../assets/image/201911H5 Family_MT/Word/word_old.png"
+             :style="{zIndex: !old ? 100 : 1}" @click="showGif('old')">
+      </div>
+      <div class="motherButton">
+        <img src="../../assets/image/201911H5 Family_MT/Word/word_mother.png"
+             :style="{zIndex: !mother ? 100 : 1}" @click="showGif('mother')">
+      </div>
+      <div class="hugButton">
+        <img src="../../assets/image/201911H5 Family_MT/Word/word_hug.png" v-if="walkers"
+             :style="{zIndex: !hug ? 100 : 1}" @click="showGif('hug')">
+      </div>
+      <div class="caringButton">
+        <img src="../../assets/image/201911H5 Family_MT/Word/word_caring .png" v-if="walkers"
+             :style="{zIndex: !caring ? 100 : 1}" @click="showGif('caring')">
+      </div>
+      <div class="shareButton">
+        <img src="../../assets/image/201911H5 Family_MT/Word/word_share.png" v-if="walkers"
+             :style="{zIndex: !share ? 100 : 1}" @click="showGif('share')">
+      </div>
+      <div class="babyButton">
+        <img src="../../assets/image/201911H5 Family_MT/Word/word_baby.png" v-if="walkers"
+             :style="{zIndex: !baby ? 100 : 1}" @click="showGif('baby')">
+      </div>
+    </div>
     <div v-else-if="this.unit === 'Family Time' && this.part === 'part2'">
       <img src="../../assets/image/201911 H5 Happy birthday_MT/Wallker_BG/bg_00000.png"
            style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;"/>
@@ -1626,6 +1736,31 @@ export default {
           tiger:require('../../assets/Flashcard Audio/october/Tiger.mp3'),
           turtle:require('../../assets/Flashcard Audio/october/turtle.mp3'),
           zookeeper:require('../../assets/Flashcard Audio/october/zookeeper.mp3'),
+          //november
+          baby:require('../../assets/Flashcard Audio/november/Baby.mp3'),
+          balloons:require('../../assets/Flashcard Audio/november/Balloons.mp3'),
+          blow1:require('../../assets/Flashcard Audio/november/blow.mp3'),
+          brother:require('../../assets/Flashcard Audio/november/brother.mp3'),
+          cake:require('../../assets/Flashcard Audio/november/Cake.mp3'),
+          candles:require('../../assets/Flashcard Audio/november/Candles.mp3'),
+          card:require('../../assets/Flashcard Audio/november/card.mp3'),
+          caring:require('../../assets/Flashcard Audio/november/caring.mp3'),
+          cut:require('../../assets/Flashcard Audio/november/Cut.mp3'),
+          father:require('../../assets/Flashcard Audio/november/Father.mp3'),
+          friends:require('../../assets/Flashcard Audio/november/friends.mp3'),
+          grandma:require('../../assets/Flashcard Audio/november/grandma.mp3'),
+          grandpa:require('../../assets/Flashcard Audio/november/grandpa.mp3'),
+          happy:require('../../assets/Flashcard Audio/november/Happy.mp3'),
+          hug:require('../../assets/Flashcard Audio/november/Hug.mp3'),
+          mother:require('../../assets/Flashcard Audio/november/Mother.mp3'),
+          old:require('../../assets/Flashcard Audio/november/old.mp3'),
+          partyHat:require('../../assets/Flashcard Audio/november/party hat.mp3'),
+          play:require('../../assets/Flashcard Audio/november/Play.mp3'),
+          presents:require('../../assets/Flashcard Audio/november/presents.mp3'),
+          share:require('../../assets/Flashcard Audio/november/share.mp3'),
+          sing:require('../../assets/Flashcard Audio/november/Sing.mp3'),
+          sister:require('../../assets/Flashcard Audio/november/sister.mp3'),
+          young:require('../../assets/Flashcard Audio/november/Young.mp3'),
         },
         cardType:'default',
         baby:true,
@@ -2058,6 +2193,179 @@ export default {
     position: fixed;
     background-color: #44ccc2;
     z-index: 201;
+  }
+
+  .babyButton img {
+    width: 6%;
+    left: 10%;
+    top: 56%;
+    position: absolute;
+  }
+
+  .hugButton img {
+    width: 6%;
+    left: 42%;
+    top: 92%;
+    position: absolute;
+  }
+
+  .caringButton img {
+    width: 9%;
+    left: 76%;
+    top: 69%;
+    position: absolute;
+  }
+
+  .shareButton img {
+    width: 7%;
+    left: 64%;
+    top: 23%;
+    position: absolute;
+  }
+
+
+  .youngButton img {
+    width: 9%;
+    left: 21%;
+    top: 83%;
+    position: absolute;
+  }
+
+  .brotherButton img {
+    width: 10%;
+    left: 31%;
+    top: 62%;
+    position: absolute;
+  }
+
+  .fatherButton img {
+    width: 8%;
+    left: 55%;
+    top: 51%;
+    position: absolute;
+  }
+
+  .sisterButton img {
+    width: 8%;
+    left: 87%;
+    top: 36%;
+    position: absolute;
+  }
+
+  .grandmaButton img {
+    width: 10%;
+    left: 62%;
+    top: 16%;
+    position: absolute;
+  }
+
+  .grandpaButton img {
+    width: 10%;
+    left: 23%;
+    top: 9%;
+    position: absolute;
+  }
+
+  .oldButton img {
+    width: 6%;
+    left: 27%;
+    top: 19%;
+    position: absolute;
+  }
+
+  .motherButton img {
+    width: 10%;
+    left: 7%;
+    top: 20%;
+    position: absolute;
+  }
+
+  .baby img {
+    width: 10%;
+    left: 7%;
+    top: 62%;
+    position: absolute;
+  }
+
+  .brother img {
+    width: 22%;
+    left: 35%;
+    top: 56%;
+    position: absolute;
+  }
+
+  .caring img {
+    width: 50%;
+    height: 55%;
+    left: 52%;
+    top: 22%;
+    position: absolute;
+  }
+
+  .father img {
+    width: 30%;
+    left: 57%;
+    top: 19%;
+    position: absolute;
+  }
+
+  .grandma img {
+    width: 17%;
+    left: 48%;
+    top: 13%;
+    position: absolute;
+  }
+
+  .grandpa img {
+    width: 17%;
+    left: 29%;
+    top: 7%;
+    position: absolute;
+  }
+
+  .hug img {
+    width: 9%;
+    left: 79%;
+    top: 12%;
+    position: absolute;
+  }
+
+  .mother img {
+    width: 11%;
+    left: 17%;
+    top: 17%;
+    position: absolute;
+  }
+
+  .old img {
+    width: 37%;
+    height: 38%;
+    left: 29%;
+    top: 8%;
+    position: absolute;
+  }
+
+  .share img {
+    width: 36%;
+    height: 40%;
+    left: 30%;
+    top: 7%;
+    position: absolute;
+  }
+
+  .sister img {
+    width: 22%;
+    left: 78%;
+    top: 31%;
+    position: absolute;
+  }
+
+  .young img {
+    width: 22%;
+    height: 68%;
+    left: 6%;
+    top: 15%;
+    position: absolute;
   }
 
   .balloonsButton img {
@@ -5531,6 +5839,82 @@ export default {
   @media only screen and (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 812px) and (max-width: 1023px){
+    .babyButton img {
+      width: 7%;
+      left: 8%;
+      top: 55%;
+      position: absolute;
+    }
+    .caring img {
+      width: 48%;
+      height: 53%;
+      left: 53%;
+      top: 24%;
+      position: absolute;
+    }
+    .old img {
+      width: 34%;
+      height: 38%;
+      left: 31%;
+      top: 8%;
+      position: absolute;
+    }
+    .young img {
+      width: 19%;
+      height: 65%;
+      left: 9%;
+      top: 18%;
+      position: absolute;
+    }
+    .brother img {
+      width: 22%;
+      left: 35%;
+      top: 49%;
+      position: absolute;
+    }
+    .sisterButton img {
+      width: 8%;
+      left: 87%;
+      top: 32%;
+      position: absolute;
+    }
+    .sister img {
+      width: 20%;
+      left: 79%;
+      top: 27%;
+      position: absolute;
+    }
+    .father img {
+      width: 26%;
+      left: 59%;
+      top: 17%;
+      position: absolute;
+    }
+    .grandma img {
+      width: 18%;
+      left: 48%;
+      height: 34%;
+      top: 12%;
+      position: absolute;
+    }
+    .grandpa img {
+      width: 14%;
+      left: 31%;
+      top: 8%;
+      position: absolute;
+    }
+    .mother img {
+      width: 8%;
+      left: 18%;
+      top: 24%;
+      position: absolute;
+    }
+    .baby img {
+      width: 8%;
+      left: 8%;
+      top: 63%;
+      position: absolute;
+    }
     .friends img {
       width: 38%;
       left: 62%;
@@ -7096,6 +7480,100 @@ export default {
   @media only screen and (min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 1024px) and (max-width: 1600px){
+    .sisterButton img {
+      width: 8%;
+      left: 87%;
+      top: 44%;
+      position: absolute;
+    }
+    .young img {
+      width: 24%;
+      height: 58%;
+      left: 6%;
+      top: 24%;
+      position: absolute;
+    }
+    .caring img {
+      width: 48%;
+      height: 40%;
+      left: 53%;
+      top: 35%;
+      position: absolute;
+    }
+    .share img {
+      width: 37%;
+      height: 29%;
+      left: 29%;
+      top: 17%;
+      position: absolute;
+    }
+    .grandpaButton img {
+      width: 10%;
+      left: 25%;
+      top: 14%;
+      position: absolute;
+    }
+    .old img {
+      width: 37%;
+      height: 29%;
+      left: 29%;
+      top: 17%;
+      position: absolute;
+    }
+    .motherButton img {
+      width: 10%;
+      left: 6%;
+      top: 27%;
+      position: absolute;
+    }
+    .babyButton img {
+      width: 8%;
+      left: 7%;
+      top: 56%;
+      position: absolute;
+    }
+    .sister img {
+      width: 22%;
+      left: 78%;
+      top: 41%;
+      position: absolute;
+    }
+    .father img {
+      width: 30%;
+      left: 57%;
+      top: 32%;
+      position: absolute;
+    }
+    .brother img {
+      width: 22%;
+      left: 35%;
+      top: 65%;
+      position: absolute;
+    }
+    .grandma img {
+      width: 18%;
+      left: 48%;
+      top: 20%;
+      position: absolute;
+    }
+    .grandpa img {
+      width: 17%;
+      left: 29%;
+      top: 17%;
+      position: absolute;
+    }
+    .mother img {
+      width: 13%;
+      left: 17%;
+      top: 24%;
+      position: absolute;
+    }
+    .baby img {
+      width: 12%;
+      left: 6%;
+      top: 65%;
+      position: absolute;
+    }
     .friends img {
       width: 40%;
       left: 61%;

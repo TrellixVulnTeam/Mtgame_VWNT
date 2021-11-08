@@ -635,7 +635,7 @@
         if (this.video === true) {
           this.$refs.videos.play();
           setTimeout(() => {
-            this.$refs.videos.pause();
+            //this.$refs.videos.pause();
             this.video =false;
           }, this.duration*1000);
         }

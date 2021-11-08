@@ -24,14 +24,14 @@ Vue.config.productionTip = false;
 Vue.prototype.$axios = axios;
 
 // axios.defaults.baseURL = 'http://dodosurvey.com/monkeytownHK'  // api 即上面 vue.config.js 中配置的地址
-//axios.defaults.baseURL = 'http://localhost:8080/monkeytownHK';
+//axios.defaults.baseURL = 'http://localhost:8080/monkeytownCN';
 axios.defaults.baseURL = 'http://107.150.121.34/monkeytownHK';
 axios.defaults.baseURL2 = 'http://107.150.121.34/monkeytownHK';
-//axios.defaults.baseURL = 'http://localhost:8080/monkeytownHK';
-//axios.defaults.baseURL2 = 'http://localhost:8080/monkeytownHK';
+//axios.defaults.baseURL = 'http://localhost:8080/monkeytownCN';
+//axios.defaults.baseURL2 = 'http://localhost:8080/monkeytownCN';
 // axios.defaults.baseURL3 = 'http://localhost:8080/monkeytownHK';
 localStorage.setItem('localurl',axios.defaults.baseURL);
-localStorage.setItem('local','cn');
+localStorage.setItem('local','hk');
 Vue.use(Bounce)
 // or
 Vue.use(Bounce, {
