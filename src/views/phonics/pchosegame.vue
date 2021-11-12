@@ -31,8 +31,8 @@
                 </a>
               </div>
               <div class="left-walkers">
-                 <a>
-<!--                <a @click="walkers2(phonicsList[1])">-->
+<!--                 <a>-->
+<a @click="walkers2(phonicsList[1])">
                   <img src="../../assets/image/intermediate.png" style="width: 100%; ">
                   <img src="../../assets/image/coming-soon1.png" style="width: 80%;margin: 0 10%;z-index: 2;bottom:-6%;position: absolute;display: inline;float: left;left: 0;">
                   <div class="progress" v-if="!phonicsList[1].compelte">
@@ -48,8 +48,8 @@
                 </a>
               </div>
               <div class="left-walkers">
-                 <a>
-<!--                <a @click="walkers3(phonicsList[2])">  -->
+<!--                 <a>-->
+                <a @click="walkers3(phonicsList[2])">
                   <img src="../../assets/image/advance.png" style="width: 100%; ">
                   <img src="../../assets/image/coming-soon1.png" style="width: 80%;margin: 0 10%;z-index: 2;bottom:-6%;position: absolute;display: inline;float: left;left: 0;">
                   <div class="progress" v-if="!phonicsList[2].compelte">

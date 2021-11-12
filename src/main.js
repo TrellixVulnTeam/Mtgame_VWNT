@@ -5,6 +5,7 @@ import router from "./router";
 import store from "./store";
 import quit from "./quit";
 import axios from 'axios';
+
 // import cookies from 'vue-cookies';
 // import qs from 'qs';
 // import {createWorker} from 'tesseract.js';
@@ -31,7 +32,12 @@ axios.defaults.baseURL2 = 'http://107.150.121.34/monkeytownHK';
 //axios.defaults.baseURL2 = 'http://localhost:8080/monkeytownCN';
 // axios.defaults.baseURL3 = 'http://localhost:8080/monkeytownHK';
 localStorage.setItem('localurl',axios.defaults.baseURL);
+//版本号，更新需要+1
+localStorage.setItem('version',25);
+//发布到hk版还是cn版
 localStorage.setItem('local','hk');
+//是否发布到应用宝
+localStorage.setItem('yingyongbao','true');
 Vue.use(Bounce)
 // or
 Vue.use(Bounce, {

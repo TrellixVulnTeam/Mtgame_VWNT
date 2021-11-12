@@ -10,9 +10,12 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "ajv": "^8.7.1",
     "animate.css": "^4.1.1",
     "axios": "^0.21.1",
     "babel-polyfill": "^6.26.0",
+    "cordova-plugin-inappbrowser": "^5.0.0",
+    "imagemin": "^5.0.0",
     "less-loader": "^5.0.0",
     "myscript": "^4.3.0",
     "node-sass": "^5.0.0",

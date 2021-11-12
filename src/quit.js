@@ -124,6 +124,25 @@ window.alertMsg2 = function (txt) {
         //     alertFram.style.display = "none";
         // }), 2000)
 };
+// 弹出版本提示
+window.alertMsgNew = function (txt,txt2) {
+  var strHtml='';
+      alertFram.id = "alertFram";
+      alertFram.style.position = "absolute";
+      alertFram.style.width = "100%";
+      alertFram.style.height = "100%";
+      alertFram.style.display = "block";
+      alertFram.style.textAlign = "center";
+      alertFram.style.top = 0;
+      // alertFram.style.background = "blank";
+  // alertFram.style.color = "white";
+      alertFram.style.zIndex = "10001";
+      strHtml =  "<div style='width:50%;height:50%;margin:0 auto;margin-top:15%;position: relative;background-color:white;border-radius:20px;color:black;'><h3 style='width:100%;font-family: pepper;padding:10px 0;'>Monkey Town 又有更新了!</h3><p style='width:90%;font-family: pepper;height:40%;margin:5%;top:20%;position:absolute;text-align: left;'>"
+  +txt+"</p><p style='width:90%;font-family: pepper;height:40%;margin:5%;top:45%;position:absolute;text-align: left;'>"+txt2+"</p><div style='width: 100%;height: 1px;background-color: #ddd;bottom: 20%;position: absolute;'></div><p style='width:100%;padding:10px 0;position: absolute;top: 78%;'>更新</p></div>" ;
+      alertFram.innerHTML = strHtml;
+      document.body.appendChild(alertFram);
+};
+
 window.alertMsg3 = function (txt) {
 
   var strHtml='';

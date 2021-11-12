@@ -45,7 +45,7 @@
 </template>
 
 <script>
-	import $ from "jquery";
+import $ from "jquery";
   var qs = require('qs');
   // import { createWorker } from 'tesseract.js';
   import * as MyScriptJS from 'myscript';
@@ -87,7 +87,6 @@
 			};
 		},
 		methods: {
-
 		  numberpercent(){
 			  	//this.closemusic=true;
 			setTimeout(() => {
@@ -147,7 +146,7 @@
       this.url1=this.url+"version";
       this.$axios
       	.post(this.url1,qs.stringify({
-      			version:24,
+      			version:localStorage.getItem('version'),
             // 等待发布版本是
             // 发布出去的版本是16,17,19,21
             // 测试版本20
@@ -155,9 +154,12 @@
       		res => {
             if(res.data.success==="success"){
               this.zhezhao=false;
+			  localStorage.setItem('update',false);
             }else if(res.data.success==="false"){
               this.zhezhao=true;
-              alertMsg2("Please update your app to new version to continue.");
+              //alertMsgNew("Please update your app to new version to continue.");
+			  //alertMsgNew2("请马上到应用商店更新最新的版本以体验全新的功能及内容！","方法：开启 App Store 或 应用宝 搜索Monkey Town 及点击更新");
+			  localStorage.setItem('update',true);
             }
       		},
       		res => {

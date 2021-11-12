@@ -46,6 +46,12 @@
 	-webkit-animation: cloudMass 30s linear 0s infinite normal;
 	-o-animation: cloudMass 30s linear 0s infinite normal;
 }
+@media screen and (min-width: 1600px) {
+  .secret{
+    width: 20%;
+    height: 40%;
+  }
+}
 
 .secret{
   background-color: white;
