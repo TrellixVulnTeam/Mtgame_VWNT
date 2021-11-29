@@ -25,21 +25,17 @@
               <source src="../../assets/video/Wrong.mp3" ></audio>
             <audio v-if="soundscorrect" autoplay="autoplay">
               <source src="../../assets/video/correct.mp3" ></audio>
-
             <div class="rightbox">
               <div id="box2" class="yes">
                 <button class="yesbutton" @click="change">
-
                <img :src="bg" />
                 </button>
 
               </div>
               <div class="buttons">
-
                 <button v-for="li in list1" :key="li.id" class="item listitems" v-bind:class="{changeopcily:li.fail,changetranform:li.successful}" style="display: flex;position: relative;"  @click="answer(li)">
                   <span class="listgroup" v-bind:class="{ bluefont:li.bluesuccess,pinkfont:li.redsuccess}">{{li.question}}</span>
                 </button>
-
               </div>
 
 

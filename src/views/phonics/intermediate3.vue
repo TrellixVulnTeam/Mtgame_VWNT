@@ -126,7 +126,7 @@
               this.list1[l].fail=0;
               this.list1[l].audio=this.pic + this.list1[l].audio;
 
-              if(this.list1[l].score=="1"){
+              if(this.list1[l].score==="1"){
                 this.audio = this.list1[l].audio;
               }
             }
@@ -340,6 +340,7 @@
         if (this.onef == false) {
           this.video = true;
         }
+        console.log('点击重新播放');
       },
       xy($event){
         for(var i=0;i<this.centerP.length;i++){
@@ -456,7 +457,7 @@
               this.account += 1;
               this.soundscorrect=true;
               //console.log(this.listB.length);
-              if (this.countpage == this.listF.length) {
+              if (this.countpage === this.listF.length) {
                 setTimeout(() => {
                   this.showstart = false;
                   this.soundscorrect = false;
@@ -508,7 +509,7 @@
                     this.list1[l].fail=1;
                   }
                 }
-                if (this.countpage == this.listF.length) {
+                if (this.countpage === this.listF.length) {
                   setTimeout(() => {
                     this.$router.push({
                       //核心语句
@@ -522,7 +523,6 @@
                         unit: this.unit
                       }
                     });
-
                   },2000);
                 } else {
                   setTimeout(() => {
@@ -535,7 +535,6 @@
 
               }, 2000);
             }
-
           } else {
             this.canvasObj.height = this.canvasH;
             this.setCanvasStyle();
@@ -550,7 +549,7 @@
         this.context.strokeStyle = this.config.lineColor;
       },
       changesett() {
-        if(this.onef==false){
+        if(this.onef===false){
           // this.action=true;
           // setTimeout(() => {
             // this.action=false;
@@ -576,7 +575,7 @@
         this.popp = !this.popp;
       },
       help() {
-        if (this.onef == false) {
+        if (this.onef === false) {
          this.spanp = "Look at the picture. Then, listen and circle the correct blend.";
          this.popp = !this.popp;
 
@@ -586,7 +585,7 @@
       },
       gomemu() {
         var audio = document.getElementById('music');
-        if (localStorage.getItem('audiomusic') == "false") {
+        if (localStorage.getItem('audiomusic') === "false") {
 
         } else {
           audio.play();
@@ -614,7 +613,7 @@
       },
       sound() {
         this.show = !this.show;
-        if (this.show == false) {
+        if (this.show === false) {
           // this.$refs.MusicPlay.pause();
           localStorage.setItem("gamemusic", "false");
         } else {
@@ -630,7 +629,6 @@
        window.removeEventListener('popstate',this.gomemu,false);
     },
     created() { //生命周期里接收参数
-      console.log(this.$route.query.menuId);
       this.pic = this.$axios.defaults.baseURL2;
       this.unit = this.$route.query.unit;
       this.unitsId = this.$route.query.unitsId;
@@ -638,8 +636,7 @@
       this.gamename=this.$route.query.name;
       localStorage.setItem('gamename',this.gamename);
       var timestamp = (new Date()).getTime();
-      // localStorage.setItem('startTimeid',timestamp);
-      if(localStorage.getItem('gamemusic')=="false"){
+      if(localStorage.getItem('gamemusic')==="false"){
           this.show=false;
       }else{
       	 this.show=true;
@@ -651,26 +648,35 @@
         for (let i in res.data.maps) {
           this.listF.push(res.data.maps[i]); //属性
         }
+        console.log(this.listF);
+        //随机打乱题目顺序
         for(let i = 0,len = this.listF.length; i < len; i++){
           let currentRandom = parseInt(Math.random() * (len - 1));
           let current = this.listF[i];
           this.listF[i] = this.listF[currentRandom];
           this.listF[currentRandom] = current;
         }
-        this.question = this.listF.length;
-        this.list1 = this.listF[this.countpage - 1];
 
+        this.question = this.listF.length;
+        //把当前页的题目传给list1
+        this.list1 = this.listF[this.countpage - 1];
+        console.log('1');
+        console.log(this.list1);
+        //题目文字提示部分
         this.titlequesion=this.list1[0].question;
+        //题目的音频
         this.bg = this.pic +this.list1[0].bg;
         for(var l=0;l<this.list1.length;l++){
           this.list1[l].successful=0;
           this.list1[l].fail=0;
           this.list1[l].audio=this.pic + this.list1[l].audio;
-          if(this.list1[l].score=="1"){
+          if(this.list1[l].score==="1"){
             this.audio =  this.list1[l].audio;
           }
         }
-        if (this.onef == true) {
+        console.log('2');
+        console.log(this.list1);
+        if (this.onef === true) {
          setTimeout(() => {
           this.onef = false;
           // this.video = true;
@@ -834,6 +840,7 @@
     margin-top: -1rem;
     position: absolute;
     box-sizing: border-box;
+    z-index: 100;
     img{
       height: 69%;
       width: auto;

@@ -53,7 +53,7 @@ import $ from "jquery";
 		name: "App",
 		watch: {
 			username: function(newVal) {
-				if (this.username == "") {
+				if (this.username === "") {
 					this.warn = false;
 				}
 			},
@@ -154,12 +154,11 @@ import $ from "jquery";
       		res => {
             if(res.data.success==="success"){
               this.zhezhao=false;
-			  localStorage.setItem('update',false);
+			        localStorage.setItem('update',false);
             }else if(res.data.success==="false"){
               this.zhezhao=true;
               //alertMsgNew("Please update your app to new version to continue.");
-			  //alertMsgNew2("请马上到应用商店更新最新的版本以体验全新的功能及内容！","方法：开启 App Store 或 应用宝 搜索Monkey Town 及点击更新");
-			  localStorage.setItem('update',true);
+			        localStorage.setItem('update',true);
             }
       		},
       		res => {

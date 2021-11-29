@@ -2,10 +2,7 @@
 	margin: 0;
 	padding: 0;
 }
-/*html,body{*/
-	/*width: 100%;*/
-	/*height: 100%;*/
-/*}*/
+
 
 .start01 .container{
 	width: 100%;
@@ -46,12 +43,7 @@
 	-webkit-animation: cloudMass 30s linear 0s infinite normal;
 	-o-animation: cloudMass 30s linear 0s infinite normal;
 }
-@media screen and (min-width: 1600px) {
-  .secret{
-    width: 20%;
-    height: 40%;
-  }
-}
+
 
 .secret{
   background-color: white;
@@ -237,26 +229,6 @@
 	margin: auto;
 	cursor: pointer;
 }
-@media screen and (min-width: 812px) and (max-width:1023px) {
-	.start01 .rotate {
-		    width: 80%;
-	}
-	.start01 .rotate .plane {
-	    top: -11%;
-	}
-	.start01 .rotate .m_town {
-	    bottom: 23%;
-	}
-	.start01 .rotate .m_btn_start {
-	    bottom:0%;
-	}
-}
-@media screen and (min-width: 1600px){
-  .start01 .rotate .m_btn_start {
-    bottom:-1%;
-    left: 50%;
-  }
-}
 .Privacy {
   position: absolute;
   z-index: 1;
@@ -270,33 +242,31 @@
 .Privacy:hover{
   cursor: pointer;
 }
-@media only screen and (min-device-width: 812px) and (max-device-width: 1023px) and (-webkit-device-pixel-ratio: 3){
-  .Privacy {
-    font-size: 14px;
-    transform: translateY(-85%);
-    top: 90%;
-    left: 85%;
-  }
-}
-@media screen and (min-width: 812px) and (max-width: 1023px){
-  .Privacy {
-    font-size: 14px;
-    transform: translateY(-85%);
-    top: 90%;
-    left: 85%;
-  }
-}
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1600px) and (-webkit-device-pixel-ratio: 2) {
-  .Privacy {
-    font-size: 25px;
-    top: 85%;
-  }
 
+@media screen and (min-width: 1600px){
+  .secret{
+    width: 20%;
+    height: 40%;
+  }
+  .start01 .rotate .m_btn_start {
+    bottom:-1%;
+    left: 50%;
+  }
 }
 /*手机*/
-@media only screen and (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 3),
-(min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 2),
-(min-width: 812px) and (max-width: 1023px){
+@media only screen and (min-width: 812px) and (max-width: 1023px){
+  .start01 .rotate {
+    width: 80%;
+  }
+  .start01 .rotate .plane {
+    top: -11%;
+  }
+  .start01 .rotate .m_town {
+    bottom: 23%;
+  }
+  .start01 .rotate .m_btn_start {
+    bottom:0%;
+  }
   .Privacy {
     position: absolute;
     z-index: 1;
@@ -384,9 +354,7 @@
   }
 }
 /*平板*/
-@media only screen and (min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 3),
-(min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 2),
-(min-width: 1024px) and (max-width: 1600px){
+@media only screen and (min-width: 1024px) and (max-width: 1600px){
   .Privacy {
     position: absolute;
     z-index: 1;
@@ -473,17 +441,15 @@
     z-index: 1;
   }
 }
-
-@media only screen and (min-device-height: 375px) and (max-device-height: 811px) and (-webkit-device-pixel-ratio: 3),
-(min-device-height: 375px) and (max-device-height: 811px) and (-webkit-device-pixel-ratio: 2),
-(min-width: 375px) and (max-width: 811px){
+/*手机*/
+@media only screen and (min-width: 375px) and (max-width: 811px){
   .Privacy {
     position: absolute;
     z-index: 1;
     color: white;
     font-size: 10px;
     top: 90.5%;
-    left: 74%;
+    left: 72%;
     -webkit-transform: translateY(-85%);
     transform: translateY(-85%);
     padding-bottom: 2px;

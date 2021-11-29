@@ -37,7 +37,7 @@ localStorage.setItem('version',25);
 //发布到hk版还是cn版
 localStorage.setItem('local','hk');
 //是否发布到应用宝
-localStorage.setItem('yingyongbao','true');
+localStorage.setItem('yingyongbao','false');
 Vue.use(Bounce)
 // or
 Vue.use(Bounce, {

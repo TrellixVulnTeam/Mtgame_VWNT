@@ -1450,6 +1450,188 @@
              :style="{zIndex: !cut ? 100 : 3}" @click="showGif('cut')">
       </div>
     </div>
+    <div v-else-if="this.unit === 'Holidays' && this.part === 'part1'">
+      <img src="../../assets/image/201912H5 Christmas magic_MT/Walker_BG/BG_00000.png"
+           style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;"/>
+      <div class="stocking">
+        <img src="../../assets/image/201912H5 Christmas magic_MT/GIF_PNG/png/stocking.png" v-if="stocking" @click="showGif('stocking')">
+        <img src="../../assets/image/201912H5 Christmas magic_MT/GIF_PNG/gif/stocking.gif" style="z-index: 100" v-if="!stocking"
+             @click="showGif('stocking')">
+      </div>
+      <div class="sleigh">
+        <img src="../../assets/image/201912H5 Christmas magic_MT/GIF_PNG/png/sleigh.png" v-if="sleigh" @click="showGif('sleigh')">
+        <img src="../../assets/image/201912H5 Christmas magic_MT/GIF_PNG/gif/sleigh.gif" style="z-index: 100" v-if="!sleigh"
+             @click="showGif('sleigh')">
+      </div>
+      <div class="santaClaus">
+        <img src="../../assets/image/201912H5 Christmas magic_MT/GIF_PNG/png/Santa Claus.png" v-if="santaClaus" @click="showGif('santaClaus')">
+        <img src="../../assets/image/201912H5 Christmas magic_MT/GIF_PNG/gif/Santa claus.gif" style="z-index: 100" v-if="!santaClaus"
+             @click="showGif('santaClaus')">
+      </div>
+      <div class="reindeer">
+        <img src="../../assets/image/201912H5 Christmas magic_MT/GIF_PNG/png/Reindeer.png" v-if="reindeer" @click="showGif('reindeer')">
+        <img src="../../assets/image/201912H5 Christmas magic_MT/GIF_PNG/gif/reindeer.gif" style="z-index: 100" v-if="!reindeer"
+             @click="showGif('reindeer')">
+      </div>
+      <div class="bells">
+        <img src="../../assets/image/201912H5 Christmas magic_MT/GIF_PNG/png/bells.png" v-if="bells" @click="showGif('bells')">
+        <img src="../../assets/image/201912H5 Christmas magic_MT/GIF_PNG/gif/bells.gif" style="z-index: 100" v-if="!bells"
+             @click="showGif('bells')">
+      </div>
+      <div class="elf1">
+        <img src="../../assets/image/201912H5 Christmas magic_MT/GIF_PNG/gif/elf.gif" style="z-index: 100" v-if="!elf1"
+             @click="showGif('elf1')">
+      </div>
+      <div class="cracker">
+        <img src="../../assets/image/201912H5 Christmas magic_MT/GIF_PNG/png/cracker.png" v-if="cracker && pull" @click="walkers&&showGif('cracker') ">
+        <img src="../../assets/image/201912H5 Christmas magic_MT/GIF_PNG/gif/cracker.gif" style="z-index: 100" v-if="!cracker"
+             @click="showGif('cracker')">
+      </div>
+      <div class="pull">
+        <img src="../../assets/image/201912H5 Christmas magic_MT/GIF_PNG/gif/pull.gif" style="z-index: 100" v-if="!pull"
+             @click="showGif('pull')">
+      </div>
+      <div class="stockingButton">
+        <img src="../../assets/image/201912H5 Christmas magic_MT/words/shocking Comp 1_00000.png"
+             :style="{zIndex: !stocking ? 100 : 1}" @click="showGif('stocking')">
+      </div>
+      <div class="sleighButton">
+        <img src="../../assets/image/201912H5 Christmas magic_MT/words/sleigh Comp 1_00000.png"
+             :style="{zIndex: !sleigh ? 100 : 1}" @click="showGif('sleigh')">
+      </div>
+      <div class="reindeerButton">
+        <img src="../../assets/image/201912H5 Christmas magic_MT/words/reindeer Comp 1_00000.png"
+             :style="{zIndex: !reindeer ? 100 : 1}" @click="showGif('reindeer')">
+      </div>
+      <div class="bellsButton">
+        <img src="../../assets/image/201912H5 Christmas magic_MT/words/bells Comp 1_00000.png"
+             :style="{zIndex: !bells ? 100 : 1}" @click="showGif('bells')">
+      </div>
+      <div class="elf1Button">
+        <img src="../../assets/image/201912H5 Christmas magic_MT/words/elf Comp 1_00000.png"
+             :style="{zIndex: !elf1 ? 100 : 1}" @click="showGif('elf1')">
+      </div>
+      <div class="crackerButton">
+        <img src="../../assets/image/201912H5 Christmas magic_MT/words/cracker Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !cracker ? 100 : 1}" @click="showGif('cracker')">
+      </div>
+      <div class="pullButton">
+        <img src="../../assets/image/201912H5 Christmas magic_MT/words/pull Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !pull ? 100 : 1}" @click="showGif('pull')">
+      </div>
+      <div class="santaClausButton">
+        <img src="../../assets/image/201912H5 Christmas magic_MT/words/santa claus Comp 1_00000.png"
+             :style="{zIndex: !santaClaus ? 100 : 1}" @click="showGif('santaClaus')">
+      </div>
+    </div>
+    <div v-else-if="this.unit === 'Holidays' && this.part === 'part2'">
+      <img src="../../assets/image/202112H5 Winter_MT/Walker_BG/BG_00000.png"
+           style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;"/>
+      <div class="warm">
+        <img src="../../assets/image/202112H5 Winter_MT/GIF_PNG/png/warm.png" v-if="warm || fireplace" @click="showGif('warm')">
+        <img src="../../assets/image/202112H5 Winter_MT/GIF_PNG/gif/warm.gif" style="z-index: 100" v-if="!warm && walkers"
+             @click="showGif('warm')">
+      </div>
+      <div class="fireplace">
+        <img src="../../assets/image/202112H5 Winter_MT/GIF_PNG/gif/fireplace.gif" style="z-index: 100" v-if="!fireplace || !warm"
+             @click="showGif('fireplace')">
+      </div>
+      <div class="animals">
+        <img src="../../assets/image/202112H5 Winter_MT/GIF_PNG/png/animals.png" v-if="animals" @click="walkers&&showGif('animals')">
+        <img src="../../assets/image/202112H5 Winter_MT/GIF_PNG/gif/animals.gif" style="z-index: 100" v-if="!animals"
+             @click="showGif('animals')">
+      </div>
+      <div class="hibernate">
+        <img src="../../assets/image/202112H5 Winter_MT/GIF_PNG/gif/hibernate.gif" style="z-index: 100" v-if="!hibernate"
+             @click="showGif('hibernate')">
+      </div>
+      <div class="coat">
+        <img src="../../assets/image/202112H5 Winter_MT/GIF_PNG/gif/coat.gif" style="z-index: 100" v-if="!coat"
+             @click="showGif('coat')">
+      </div>
+      <div class="cold1">
+        <img src="../../assets/image/202112H5 Winter_MT/GIF_PNG/png/cold.png" v-if="cold1 && coat" @click="showGif('cold1')">
+        <img src="../../assets/image/202112H5 Winter_MT/GIF_PNG/gif/cold.gif" style="z-index: 100" v-if="!cold1"
+             @click="showGif('cold1')">
+      </div>
+      <div class="skates">
+        <img src="../../assets/image/202112H5 Winter_MT/GIF_PNG/png/skates.png" v-if="skates" @click="showGif('skates')">
+        <img src="../../assets/image/202112H5 Winter_MT/GIF_PNG/gif/skates.gif" style="z-index: 100" v-if="!skates"
+             @click="showGif('skates')">
+      </div>
+      <div class="snowman">
+        <img src="../../assets/image/202112H5 Winter_MT/GIF_PNG/png/snowman.png" v-if="snowman" @click="showGif('snowman')">
+        <img src="../../assets/image/202112H5 Winter_MT/GIF_PNG/gif/snowman.gif" style="z-index: 100" v-if="!snowman"
+             @click="showGif('snowman')">
+      </div>
+      <div class="snow1">
+        <img src="../../assets/image/202112H5 Winter_MT/GIF_PNG/png/snow.png" v-if="snow1">
+        <img src="../../assets/image/202112H5 Winter_MT/GIF_PNG/gif/snow.gif" style="z-index: 100" v-if="!snow1"
+             @click="showGif('snow1')">
+      </div>
+      <div class="fall">
+        <img src="../../assets/image/202112H5 Winter_MT/GIF_PNG/png/fall.png" v-if="fall" @click="showGif('fall')">
+        <img src="../../assets/image/202112H5 Winter_MT/GIF_PNG/gif/fall.gif" style="z-index: 100" v-if="!fall"
+             @click="showGif('fall')">
+      </div>
+      <div class="scarf">
+        <img src="../../assets/image/202112H5 Winter_MT/GIF_PNG/gif/scarf.gif" style="z-index: 100" v-if="!scarf"
+             @click="showGif('scarf')">
+      </div>
+      <div class="sled1">
+        <img src="../../assets/image/202112H5 Winter_MT/GIF_PNG/png/sled.png" v-if="sled1 && scarf" @click="showGif('sled1')">
+        <img src="../../assets/image/202112H5 Winter_MT/GIF_PNG/gif/sled.gif" style="z-index: 100" v-if="!sled1"
+             @click="showGif('sled1')">
+      </div>
+      <div class="warmButton">
+        <img src="../../assets/image/202112H5 Winter_MT/words/word_warm Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !warm ? 100 : 1}" @click="showGif('warm')">
+      </div>
+      <div class="fireplaceButton">
+        <img src="../../assets/image/202112H5 Winter_MT/words/word_fireplace Comp 1_00000.png"
+             :style="{zIndex: !fireplace ? 100 : 1}" @click="showGif('fireplace')">
+      </div>
+      <div class="coatButton">
+        <img src="../../assets/image/202112H5 Winter_MT/words/word_coat Comp 1_00000.png"
+             :style="{zIndex: !coat ? 100 : 1}" @click="showGif('coat')">
+      </div>
+      <div class="hibernateButton">
+        <img src="../../assets/image/202112H5 Winter_MT/words/word_hibernate Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !hibernate ? 100 : 1}" @click="showGif('hibernate')">
+      </div>
+      <div class="animalsButton">
+        <img src="../../assets/image/202112H5 Winter_MT/words/word_animals Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !animals ? 100 : 1}" @click="showGif('animals')">
+      </div>
+      <div class="cold1Button">
+        <img src="../../assets/image/202112H5 Winter_MT/words/word_cold Comp 1_00000.png"
+             :style="{zIndex: !cold1 ? 100 : 1}" @click="showGif('cold1')">
+      </div>
+      <div class="skatesButton">
+        <img src="../../assets/image/202112H5 Winter_MT/words/word_skates Comp 1_00000.png"
+             :style="{zIndex: !skates ? 100 : 1}" @click="showGif('skates')">
+      </div>
+      <div class="snow1Button">
+        <img src="../../assets/image/202112H5 Winter_MT/words/word_snow Comp 1_00000.png"
+             :style="{zIndex: !snow1 ? 100 : 1}" @click="showGif('snow1')">
+      </div>
+      <div class="snowmanButton">
+        <img src="../../assets/image/202112H5 Winter_MT/words/word_snowman Comp 1_00000.png"
+             :style="{zIndex: !snowman ? 100 : 1}" @click="showGif('snowman')">
+      </div>
+      <div class="fallButton">
+        <img src="../../assets/image/202112H5 Winter_MT/words/word_fall Comp 1_00000.png"
+             :style="{zIndex: !fall ? 100 : 1}" @click="showGif('fall')">
+      </div>
+      <div class="scarfButton">
+        <img src="../../assets/image/202112H5 Winter_MT/words/word_scarf Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !scarf ? 100 : 1}" @click="showGif('scarf')">
+      </div>
+      <div class="sled1Button">
+        <img src="../../assets/image/202112H5 Winter_MT/words/word_sled Comp 1_00000.png"
+             :style="{zIndex: !sled1 ? 100 : 1}" @click="showGif('sled1')">
+      </div>
+    </div>
     <div v-else>
     <img src="../../assets/image/H5 Thing/Walker_BG/bg_0.png"
          style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;">
@@ -1562,29 +1744,6 @@
            :style="{zIndex: !cupboard ? 100 : 1}" @click="showGif('cupboard')">
     </div>
     </div>
-    <!--<transition name="fades">-->
-    <!--<div class="contain" v-if="!resume3">-->
-    <!--<img src="../../assets/image/prightback.png"  @click="gomemu" class="backbutton"/>-->
-    <!--<img src="../../assets/image/phelp.png"  @click="help" class="helpbutton"/>-->
-    <!--&lt;!&ndash;<transition name="fade1">&ndash;&gt;-->
-    <!--&lt;!&ndash;<div v-if="onef" style="width: 100%; height: 90%;display:block;position: absolute;">&ndash;&gt;-->
-
-    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-    <!--&lt;!&ndash;</transition>&ndash;&gt;-->
-    <!--&lt;!&ndash;<transition name="fade1">&ndash;&gt;-->
-    <!--&lt;!&ndash;<div v-show="!onef" style="width: 100%; height: 90%;display:block;position: absolute;">&ndash;&gt;-->
-
-    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-    <!--&lt;!&ndash;</transition>&ndash;&gt;-->
-
-    <!--</div>-->
-    <!--</transition>-->
-
-    <!--<transition name="fades">-->
-    <!--<div class="about" v-if="resume3">-->
-
-    <!--</div>-->
-    <!--</transition>-->
   </div>
 </template>
 
@@ -1761,8 +1920,56 @@ export default {
           sing:require('../../assets/Flashcard Audio/november/Sing.mp3'),
           sister:require('../../assets/Flashcard Audio/november/sister.mp3'),
           young:require('../../assets/Flashcard Audio/november/Young.mp3'),
+          //december
+          animals:require('../../assets/Flashcard Audio/december/Animals.mp3'),
+          bells:require('../../assets/Flashcard Audio/december/bells.mp3'),
+          christmasTree:require('../../assets/Flashcard Audio/december/Christmas tree.mp3'),
+          coat:require('../../assets/Flashcard Audio/december/Coat.mp3'),
+          cold1:require('../../assets/Flashcard Audio/december/cold.mp3'),
+          elf1:require('../../assets/Flashcard Audio/december/elf.mp3'),
+          fall:require('../../assets/Flashcard Audio/december/fall.mp3'),
+          fireplace:require('../../assets/Flashcard Audio/december/fireplace.mp3'),
+          hang:require('../../assets/Flashcard Audio/december/Hang.mp3'),
+          list:require('../../assets/Flashcard Audio/december/List.mp3'),
+          ornament:require('../../assets/Flashcard Audio/december/ornament.mp3'),
+          present:require('../../assets/Flashcard Audio/december/presents.mp3'),
+          pull:require('../../assets/Flashcard Audio/december/Pull.mp3'),
+          reindeer:require('../../assets/Flashcard Audio/december/reindeer.mp3'),
+          santaClaus:require('../../assets/Flashcard Audio/december/Santa claus.mp3'),
+          scarf:require('../../assets/Flashcard Audio/december/scarf.mp3'),
+          send:require('../../assets/Flashcard Audio/december/Send.mp3'),
+          sled1:require('../../assets/Flashcard Audio/december/Sled.mp3'),
+          sleigh:require('../../assets/Flashcard Audio/december/sleigh.mp3'),
+          snow1:require('../../assets/Flashcard Audio/december/snow.mp3'),
+          snowman:require('../../assets/Flashcard Audio/december/snowman.mp3'),
+          stocking:require('../../assets/Flashcard Audio/december/stocking.mp3'),
+          warm:require('../../assets/Flashcard Audio/december/warm.mp3'),
+          skates:require('../../assets/Flashcard Audio/december/skates.mp3'),
+          cracker:require('../../assets/Flashcard Audio/december/cracker.mp3'),
+          hibernate:require('../../assets/Flashcard Audio/december/hibernate.mp3'),
         },
         cardType:'default',
+        animals:true,
+        coat:true,
+        cold1:true,
+        fall:true,
+        fireplace:true,
+        hibernate:true,
+        scarf:true,
+        skates:true,
+        sled1:true,
+        snowman:true,
+        warm:true,
+        bells:true,
+        cracker:true,
+        elf1:true,
+        pull:true,
+        reindeer:true,
+        santaClaus:true,
+        sleigh:true,
+        snow1:true,
+        stocking:true,
+        gift:true,
         baby:true,
         brother:true,
         caring:true,
@@ -2193,6 +2400,294 @@ export default {
     position: fixed;
     background-color: #44ccc2;
     z-index: 201;
+  }
+
+  .sled1 img {
+    width: 51%;
+    left: 45%;
+    top: 1%;
+    position: absolute;
+  }
+
+  .scarf img {
+    width: 50%;
+    left: 46.5%;
+    top: 0%;
+    position: absolute;
+  }
+
+  .fall img {
+    width: 15%;
+    left: 50%;
+    top: -5%;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .snow1 img {
+    width: 73%;
+    left: 27%;
+    height: 50%;
+    top: 0%;
+    position: absolute;
+  }
+
+  .cold1 img {
+    width: 18%;
+    left: 29%;
+    top: 32%;
+    position: absolute;
+  }
+
+  .skates img {
+    width: 14%;
+    left: 53%;
+    top: 33%;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .snowman img {
+    width: 27%;
+    left: 71%;
+    top: 38%;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .animals img {
+    width: 31%;
+    left: 3%;
+    top: 70%;
+    position: absolute;
+  }
+
+  .hibernate img {
+    width: 18%;
+    left: 2%;
+    top: 72%;
+    position: absolute;
+  }
+
+  .coat img {
+    width: 18%;
+    left: 29%;
+    top: 32%;
+    position: absolute;
+  }
+
+  .fireplace img {
+    width: 26%;
+    left: 3%;
+    top: 24%;
+    position: absolute;
+  }
+
+  .warm img {
+    width: 26%;
+    left: 3%;
+    top: 24%;
+    position: absolute;
+  }
+
+  .sled1Button img {
+    width: 5%;
+    left: 85%;
+    top: 28%;
+    position: absolute;
+  }
+
+  .scarfButton img {
+    width: 5%;
+    left: 72%;
+    top: 14%;
+    position: absolute;
+  }
+
+  .fallButton img {
+    width: 5%;
+    left: 60%;
+    top: 27%;
+    position: absolute;
+  }
+
+  .snow1Button img {
+    width: 5%;
+    left: 76%;
+    top: 36%;
+    position: absolute;
+  }
+
+  .cold1Button img {
+    width: 6%;
+    left: 44%;
+    top: 47%;
+    position: absolute;
+  }
+
+  .skatesButton img {
+    width: 8%;
+    left: 59%;
+    top: 70%;
+    position: absolute;
+  }
+
+  .snowmanButton img {
+    width: 9%;
+    left: 78%;
+    top: 88%;
+    position: absolute;
+  }
+
+  .animalsButton img {
+    width: 8%;
+    left: 14%;
+    top: 91%;
+    position: absolute;
+  }
+
+  .hibernateButton img {
+    width: 9%;
+    left: 2%;
+    top: 69%;
+    position: absolute;
+  }
+
+  .coatButton img {
+    width: 5%;
+    left: 27%;
+    top: 60%;
+    position: absolute;
+  }
+
+  .fireplaceButton img {
+    width: 8%;
+    left: 16%;
+    top: 53%;
+    position: absolute;
+  }
+
+  .warmButton img {
+    width: 5%;
+    left: 6%;
+    top: 29%;
+    position: absolute;
+  }
+
+  .stockingButton img {
+    width: 8%;
+    left: 5%;
+    top: 53%;
+    position: absolute;
+  }
+
+  .sleighButton img {
+    width: 7%;
+    left: 20%;
+    top: 82%;
+    position: absolute;
+  }
+
+  .reindeerButton img {
+    width: 8%;
+    left: 42%;
+    top: 86%;
+    position: absolute;
+  }
+
+  .bellsButton img {
+    width: 6%;
+    left: 63%;
+    top: 79%;
+    position: absolute;
+  }
+
+  .elf1Button img {
+    width: 4%;
+    left: 88%;
+    /* height: 30%; */
+    top: 71%;
+    position: absolute;
+  }
+
+  .crackerButton img {
+    width: 7%;
+    left: 75%;
+    top: 58%;
+    position: absolute;
+  }
+
+  .pullButton img {
+    width: 5%;
+    left: 70%;
+    top: 38%;
+    position: absolute;
+  }
+
+  .santaClausButton img {
+    width: 10%;
+    left: 51%;
+    top: 22%;
+    position: absolute;
+  }
+
+  .cracker img {
+    width: 40%;
+    left: 57%;
+    height: 30%;
+    top: 40%;
+    position: absolute;
+  }
+
+  .pull img {
+    width: 40%;
+    left: 57%;
+    height: 30%;
+    top: 40%;
+    position: absolute;
+  }
+
+  .elf1 img {
+    width: 17.5%;
+    left: 80%;
+    top: 33%;
+    position: absolute;
+  }
+
+  .bells img {
+    width: 15%;
+    left: 55%;
+    top: 65%;
+    position: absolute;
+  }
+
+  .reindeer img {
+    width: 11%;
+    left: 43%;
+    top: 55%;
+    position: absolute;
+  }
+
+  .sleigh img {
+    width: 40%;
+    left: 1%;
+    top: 20%;
+    position: absolute;
+  }
+
+  .stocking img {
+    width: 13%;
+    left: 2%;
+    top: 58%;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .santaClaus img {
+    width: 21%;
+    left: 34%;
+    top: 24%;
+    position: absolute;
   }
 
   .babyButton img {
@@ -5839,6 +6334,180 @@ export default {
   @media only screen and (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 812px) and (max-width: 1023px){
+    .scarf img {
+      width: 47%;
+      left: 48.5%;
+      top: -4%;
+      position: absolute;
+    }
+    .coat img {
+      width: 16%;
+      left: 30%;
+      top: 29%;
+      position: absolute;
+    }
+    .hibernate img {
+      width: 17%;
+      left: 2%;
+      top: 69%;
+      position: absolute;
+    }
+    .sled1Button img {
+      width: 5%;
+      left: 85%;
+      top: 27%;
+      position: absolute;
+    }
+    .sled1 img {
+      width: 48%;
+      left: 47%;
+      top: -2%;
+      position: absolute;
+    }
+    .snowman img {
+      width: 23%;
+      left: 72%;
+      top: 37%;
+      position: absolute;
+      z-index: 1;
+    }
+    .fall img {
+      width: 15%;
+      left: 50%;
+      top: -11%;
+      position: absolute;
+      z-index: 1;
+    }
+    .cold1Button img {
+      width: 6%;
+      left: 46%;
+      top: 47%;
+      position: absolute;
+    }
+    .skates img {
+      width: 11%;
+      left: 54%;
+      top: 35%;
+      position: absolute;
+      z-index: 1;
+    }
+    .coatButton img {
+      width: 6%;
+      left: 27%;
+      top: 60%;
+      position: absolute;
+    }
+    .cold1 img {
+      width: 16%;
+      left: 30%;
+      top: 29%;
+      position: absolute;
+    }
+    .hibernateButton img {
+      width: 8%;
+      left: 3%;
+      top: 70%;
+      position: absolute;
+    }
+    .animals img {
+      width: 31%;
+      left: 2%;
+      top: 66%;
+      position: absolute;
+    }
+    .fireplace img {
+      width: 26%;
+      left: 3%;
+      top: 18%;
+      position: absolute;
+    }
+    .fireplace img {
+      width: 24%;
+      left: 4%;
+      top: 21%;
+      position: absolute;
+    }
+    .warmButton img {
+      width: 5%;
+      left: 7%;
+      top: 25%;
+      position: absolute;
+    }
+    .warm img {
+      width: 24%;
+      left: 4%;
+      top: 21%;
+      position: absolute;
+    }
+    .elf1 img {
+      width: 17.5%;
+      height: 41%;
+      left: 79%;
+      top: 33%;
+      position: absolute;
+    }
+    .stockingButton img {
+      width: 8%;
+      left: 5%;
+      top: 51%;
+      position: absolute;
+    }
+    .stockingButton img {
+      width: 8%;
+      left: 5%;
+      top: 51%;
+      position: absolute;
+    }
+    .stocking img {
+      width: 11%;
+      left: 2%;
+      top: 57%;
+      position: absolute;
+      z-index: 1;
+    }
+    .sleighButton img {
+      width: 7%;
+      left: 17%;
+      top: 82%;
+      position: absolute;
+    }
+    .sleigh img {
+      width: 38%;
+      left: 1%;
+      top: 10%;
+      position: absolute;
+    }
+    .reindeer img {
+      width: 9%;
+      left: 43%;
+      top: 54%;
+      position: absolute;
+    }
+    .santaClausButton img {
+      width: 10%;
+      left: 53%;
+      top: 22%;
+      position: absolute;
+    }
+    .santaClaus img {
+      width: 21%;
+      left: 34%;
+      top: 17%;
+      position: absolute;
+    }
+    .bells img {
+      width: 14%;
+      left: 56%;
+      top: 60%;
+      position: absolute;
+    }
+    .cracker img {
+      width: 40%;
+      left: 56%;
+      height: 29%;
+      top: 40%;
+      position: absolute;
+    }
     .babyButton img {
       width: 7%;
       left: 8%;
@@ -7480,6 +8149,244 @@ export default {
   @media only screen and (min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 1024px) and (max-width: 1600px){
+    .scarf img {
+      width: 52%;
+      left: 45.5%;
+      top: 7%;
+      position: absolute;
+    }
+    .scarfButton img {
+      width: 7%;
+      left: 70%;
+      top: 14%;
+      position: absolute;
+    }
+    .warmButton img {
+      width: 7%;
+      left: 5%;
+      top: 30%;
+      position: absolute;
+    }
+    .hibernate img {
+      width: 20%;
+      left: 0%;
+      top: 74%;
+      position: absolute;
+    }
+    .hibernateButton img {
+      width: 11%;
+      left: 2%;
+      top: 69%;
+      position: absolute;
+    }
+    .animalsButton img {
+      width: 9%;
+      left: 14%;
+      top: 91%;
+      position: absolute;
+    }
+    .coat img {
+      width: 20%;
+      left: 28%;
+      top: 40%;
+      position: absolute;
+    }
+    .snow1 img {
+      width: 77%;
+      left: 24%;
+      height: 50%;
+      top: 0%;
+      position: absolute;
+    }
+    .fall img {
+      width: 18%;
+      left: 50%;
+      top: -2%;
+      position: absolute;
+      z-index: 1;
+    }
+    .fallButton img {
+      width: 7%;
+      left: 59%;
+      top: 29%;
+      position: absolute;
+    }
+    .snow1Button img {
+      width: 7%;
+      left: 76%;
+      top: 36%;
+      position: absolute;
+    }
+    .sled1Button img {
+      width: 7%;
+      left: 86%;
+      top: 27%;
+      position: absolute;
+    }
+    .sled1 img {
+      width: 53%;
+      left: 44%;
+      top: 8%;
+      position: absolute;
+    }
+    .snowmanButton img {
+      width: 11%;
+      left: 78%;
+      top: 88%;
+      position: absolute;
+    }
+    .snowman img {
+      width: 29%;
+      left: 71%;
+      top: 47%;
+      position: absolute;
+      z-index: 1;
+    }
+    .cold1Button img {
+      width: 7%;
+      left: 44%;
+      top: 50%;
+      position: absolute;
+    }
+    .skates img {
+      width: 16%;
+      left: 53%;
+      top: 38%;
+      position: absolute;
+      z-index: 1;
+    }
+    .coatButton img {
+      width: 7%;
+      left: 25%;
+      top: 60%;
+      position: absolute;
+    }
+    .cold1 img {
+      width: 20%;
+      left: 28%;
+      top: 40%;
+      position: absolute;
+    }
+    .animals img {
+      width: 33%;
+      left: 1%;
+      top: 74%;
+      position: absolute;
+    }
+    .fireplaceButton img {
+      width: 10%;
+      left: 15%;
+      top: 51%;
+      position: absolute;
+    }
+    .fireplace img {
+      width: 28%;
+      left: 2%;
+      top: 29%;
+      position: absolute;
+    }
+    .warm img {
+      width: 28%;
+      left: 2%;
+      top: 29%;
+      position: absolute;
+    }
+    .elf1 img {
+      width: 21%;
+      left: 79.5%;
+      top: 36.5%;
+      position: absolute;
+    }
+    .pull img {
+      width: 44%;
+      left: 55%;
+      height: 27%;
+      top: 43%;
+      position: absolute;
+    }
+    .santaClausButton img {
+      width: 11%;
+      left: 51%;
+      top: 27%;
+      position: absolute;
+    }
+    .reindeerButton img {
+      width: 9%;
+      left: 42%;
+      top: 84%;
+      position: absolute;
+    }
+    .bellsButton img {
+      width: 7%;
+      left: 63%;
+      top: 81%;
+      position: absolute;
+    }
+    .sleighButton img {
+      width: 8%;
+      left: 19%;
+      top: 83%;
+      position: absolute;
+    }
+    .stockingButton img {
+      width: 10%;
+      left: 4%;
+      top: 59%;
+      position: absolute;
+    }
+    .stocking img {
+      width: 13%;
+      left: 2%;
+      top: 64%;
+      position: absolute;
+      z-index: 1;
+    }
+    .sleigh img {
+      width: 42%;
+      left: 1%;
+      top: 34%;
+      position: absolute;
+    }
+    .santaClaus img {
+      width: 23%;
+      left: 33%;
+      top: 31%;
+      position: absolute;
+    }
+    .reindeer img {
+      width: 12%;
+      left: 43%;
+      top: 60%;
+      position: absolute;
+    }
+    .bells img {
+      width: 17%;
+      left: 55%;
+      top: 68%;
+      position: absolute;
+    }
+    .elf1Button img {
+      width: 5%;
+    }
+    .crackerButton img {
+      width: 9%;
+      left: 75%;
+      top: 58%;
+      position: absolute;
+    }
+    .pullButton img {
+      width: 6%;
+      left: 72%;
+      top: 42%;
+      position: absolute;
+    }
+    .cracker img {
+      width: 44%;
+      left: 55%;
+      height: 27%;
+      top: 43%;
+      position: absolute;
+    }
     .sisterButton img {
       width: 8%;
       left: 87%;
@@ -9238,7 +10145,5 @@ export default {
     }
 
   }
-
-
 
 </style>

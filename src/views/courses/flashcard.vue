@@ -926,6 +926,132 @@
             img:require('../../assets/image/Happybirthday/Friends.png')
           },
         ],
+        HolidaysPart1:[
+          {
+            id:1,
+            cardName:'stocking',
+            audio:require('../../assets/Flashcard Audio/december/stocking.mp3'),
+            img:require('../../assets/image/ChristmasMagic/Stocking.png')
+          },{
+            id:2,
+            cardName:'sleigh',
+            audio:require('../../assets/Flashcard Audio/december/sleigh.mp3'),
+            img:require('../../assets/image/ChristmasMagic/Sleigh.png')
+          },{
+            id:3,
+            cardName:'reindeer',
+            audio:require('../../assets/Flashcard Audio/december/reindeer.mp3'),
+            img:require('../../assets/image/ChristmasMagic/Reindeer.png')
+          },{
+            id:4,
+            cardName:'bells',
+            audio:require('../../assets/Flashcard Audio/december/bells.mp3'),
+            img:require('../../assets/image/ChristmasMagic/Bells.png')
+          },{
+            id:5,
+            cardName:'santa Claus',
+            audio:require('../../assets/Flashcard Audio/december/Santa claus.mp3'),
+            img:require('../../assets/image/ChristmasMagic/Santa Claus.png')
+          },{
+            id:6,
+            cardName:'elf',
+            audio:require('../../assets/Flashcard Audio/december/elf.mp3'),
+            img:require('../../assets/image/ChristmasMagic/Elf.png')
+          },{
+            id:7,
+            cardName:'pull',
+            audio:require('../../assets/Flashcard Audio/december/Pull.mp3'),
+            img:require('../../assets/image/ChristmasMagic/Pull.png')
+          },{
+            id:8,
+            cardName:'cracker',
+            audio:require('../../assets/Flashcard Audio/december/cracker.mp3'),
+            img:require('../../assets/image/ChristmasMagic/Cracker.png')
+          },{
+            id:9,
+            cardName:' ',
+            audio:'',
+            img:''
+          },{
+            id:10,
+            cardName:' ',
+            audio:'',
+            img:''
+          },{
+            id:11,
+            cardName:' ',
+            audio:'',
+            img:''
+          },{
+            id:12,
+            cardName:' ',
+            audio:'',
+            img:''
+          },
+        ],
+        HolidaysPart2:[
+          {
+            id:1,
+            cardName:'fireplace',
+            audio:require('../../assets/Flashcard Audio/december/fireplace.mp3'),
+            img:require('../../assets/image/Winter/fireplace.png')
+          },{
+            id:2,
+            cardName:'coat',
+            audio:require('../../assets/Flashcard Audio/december/Coat.mp3'),
+            img:require('../../assets/image/Winter/coat.png')
+          },{
+            id:3,
+            cardName:'cold',
+            audio:require('../../assets/Flashcard Audio/december/cold.mp3'),
+            img:require('../../assets/image/Winter/cold.png')
+          },{
+            id:4,
+            cardName:'skates',
+            audio:require('../../assets/Flashcard Audio/december/skates.mp3'),
+            img:require('../../assets/image/Winter/skates.png')
+          },{
+            id:5,
+            cardName:'snowman',
+            audio:require('../../assets/Flashcard Audio/december/snowman.mp3'),
+            img:require('../../assets/image/Winter/snowman.png')
+          },{
+            id:6,
+            cardName:'fall',
+            audio:require('../../assets/Flashcard Audio/december/fall.mp3'),
+            img:require('../../assets/image/Winter/fall.png')
+          },{
+            id:7,
+            cardName:'snow',
+            audio:require('../../assets/Flashcard Audio/december/snow.mp3'),
+            img:require('../../assets/image/Winter/snow.png')
+          },{
+            id:8,
+            cardName:'sled',
+            audio:require('../../assets/Flashcard Audio/december/Sled.mp3'),
+            img:require('../../assets/image/Winter/sled.png')
+          },{
+            id:9,
+            cardName:'warm',
+            audio:require('../../assets/Flashcard Audio/december/warm.mp3'),
+            img:require('../../assets/image/Winter/warm.png')
+          },{
+            id:10,
+            cardName:'hibernate',
+            audio:require('../../assets/Flashcard Audio/december/hibernate.mp3'),
+            img:require('../../assets/image/Winter/hibernate.png')
+          },{
+            id:11,
+            cardName:'animals',
+            audio:require('../../assets/Flashcard Audio/december/Animals.mp3'),
+            img:require('../../assets/image/Winter/animals.png')
+          },{
+            id:12,
+            cardName:'scarf',
+            audio:require('../../assets/Flashcard Audio/december/scarf.mp3'),
+            img:require('../../assets/image/Winter/scarf.png')
+          },
+        ],
         list:[],
         titleUrl:{
           MyCommunity:require('../../assets/image/2-logo.png'),
@@ -955,6 +1081,8 @@
           AnimalsPart2:require('../../assets/image/10-10logo2.png'),
           FamilyTimePart1:require('../../assets/image/11-11logo1.png'),
           FamilyTimePart2:require('../../assets/image/11-11logo2.png'),
+          HolidaysPart1:require('../../assets/image/12-logo1.png'),
+          HolidaysPart2:require('../../assets/image/12-logo2.png'),
         },
         title:'../../assets/image/6-6logo.png',
         flashCardUrl:'http://107.150.121.34/monkeytownHK/image/img/9315e4a9-e1ec-4f49-8db5-5b3a9b6ae083.png',
@@ -1119,19 +1247,6 @@
       this.studentId = localStorage.getItem('studentId');
       this.createdpop();
       this.flashCardCount = this.level === 'WALKERS'?8:12;
-      // this.url1 = this.url + "course";
-      // this.$axios.post(this.url1, qs.stringify({
-      //   studentId: localStorage.getItem('studentId')
-      // })).then(res => {
-      //   this.courseList = res.data.courseList;
-      //   for (var i = 0; i < this.courseList.length; i++) {
-      //     this.courseList[i].bg = this.pic + this.courseList[i].bg
-      //   }
-      //
-      //
-      // }, res => {
-      //   alertMsg("You must be connected to the internet.<br>Please connect and try again.");
-      // })
     }
   };
 </script>

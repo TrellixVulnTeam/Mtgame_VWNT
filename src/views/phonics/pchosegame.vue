@@ -427,9 +427,6 @@
       this.pic = this.$axios.defaults.baseURL2;
       this.cources = this.$route.query.cources;
       this.style = this.$route.query.style; //接受参数关键代码
-      // if(this.style==='courses'){
-      //   this.url='/games/';
-      // }
       if (this.$route.query.phonicsId) {
         this.level = this.$route.query.level;
         this.phonicsId = this.$route.query.phonicsId;

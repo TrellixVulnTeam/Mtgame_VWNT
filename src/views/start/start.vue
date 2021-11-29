@@ -1,18 +1,26 @@
 <template xmlns="http://www.w3.org/1999/html">
 	<div class="startpage">
       <div class='update' v-if="local==='cn' && this.update==='true'">
-        <h3 style='width:100%;font-family: pepper;padding:10px 0;'>Monkey Town 又有更新了!</h3>
+        <h3 style='width:100%;font-family: pepper,serif;padding:10px 0;'>Monkey Town 又有更新了!</h3>
         <p class="p1">请马上到应用商店更新最新的版本以体验全新的功能及内容！</p>
         <p class="p2" >{{this.yingyongbao}}</p>
-        <div class="fenge"></div>
-        <p class="p3" @click="updateURL">更新</p>
+        <div class="style"/>
+        <p class="p3">
+          <span>
+            <a target="_blank" style="color: rgb(138, 153, 158);font-size: 24px;text-decoration: none;" href="https://apps.apple.com/us/app/id1489150921">更新</a>
+          </span>
+        </p>
       </div>
       <div class='update' v-if="local==='hk'&&this.update==='true'">
-        <h3 style='width:100%;font-family: pepper;padding:10px 0;'>New Version Available!</h3>
+        <h3 style='width:100%;font-family: pepper,serif;padding:10px 0;'>New Version Available!</h3>
         <p class="p1">There is a new version of Monkey Town available for download! Please update the Monkey Town app by visiting the Apple Store/Play Store. </p>
         <p class="p2" >To update: Launch App Store/Play Store, search Monkey Town (HK) and then click 'Update'.</p>
-        <div class="fenge"></div>
-        <p class="p3" @click="updateURL">Update</p>
+        <div class="style"/>
+        <p class="p3">
+          <span>
+            <a target="_blank" style="color: rgb(138, 153, 158);font-size: 24px;text-decoration: none;" href="https://apps.apple.com/us/app/id1500380592">Update</a>
+          </span>
+        </p>
       </div>
 	<div class="start01">
 		<div class="container">
@@ -33,7 +41,7 @@
 						<div class="m_btn_start">
 							<img src="../../assets/image/start-01.png" @click="alreadylogin" />
 						</div>
-            <div class="secretBackground" v-if="secretBackground&&local==='cn'&&!this.update" @click="cancel">
+            <div class="secretBackground" v-if="secretBackground&&local==='cn'" @click="cancel">
               <div class="secret" v-if="secretBackground">
                 <h3 class="title">服务协议</h3>
                 <p class="text">请你务必审慎阅读、充分理解”隐私政策”各条款，我们需要你的手机信息。</p>
@@ -124,10 +132,8 @@
         })
       },
 			alreadylogin() {
-        console.log(this.local);
         if (this.secret === true&&this.local==='cn') {
           this.secretBackground = true;
-          console.log('1');
         } else{
           var audio = document.getElementById('music');
           if (localStorage.getItem('audiomusic') === "false") {
@@ -164,21 +170,17 @@
     },
 		created() {
       this.update = localStorage.getItem('update');
-      console.log(localStorage.getItem('yingyongbao'));
       if(localStorage.getItem('yingyongbao')==='true'){
         this.yingyongbao='方法：开启 App Store 或 应用宝 搜索Monkey Town(CN)及点击更新'
       }else{
         this.yingyongbao='方法：开启 App Store 或 Google 搜索Monkey Town(CN)及点击更新'
-      };
-
+      }
 		  this.local = localStorage.getItem('local');
-      console.log(this.yingyongbao);
       if (localStorage.getItem('secret')==='false'){
         this.secretBackground=false;
         this.secret=false;
-        console.log('fa');
       }
-			if (localStorage.getItem('checkbox') == true || localStorage.getItem('checkbox') == "true") {
+			if (localStorage.getItem('checkbox') === true || localStorage.getItem('checkbox') === "true") {
 				this.username = localStorage.getItem('username');
 				this.password = localStorage.getItem('password');
 				 this.guardianId = localStorage.getItem('userId');
@@ -214,14 +216,14 @@
   .p1{
     width:90%;
     height:40%;
-    margin:5%;
+    margin:0 5%;
     position:absolute;
     text-align: left;
   }
   .p2{
     width:90%;
     height:40%;
-    margin:5%;
+    margin:3% 5%;
     top:45%;
     position:absolute;
     text-align: left;
@@ -232,17 +234,98 @@
     position: absolute;
     top: 85%;
   }
-  .fenge{
+  .style{
     width: 100%;
     height: 1px;
     background-color: #ddd;
     bottom: 15%;
     position: absolute;
   }
-    @media only screen and (min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 3),
-  (min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 2),
-  (min-width: 1024px) and (max-width: 1600px){
-    .update[data-v-c1b5cc6a] {
+  @media only screen and (min-width: 375px) and (max-width: 811px){
+    .p2 {
+      width: 90%;
+      height: 40%;
+      margin: 5% 5%;
+      top: 47%;
+      position: absolute;
+      text-align: left;
+    }
+    .test {
+      position: absolute;
+      top: 90%;
+      left: 90%;
+    }
+    .p1 {
+      width: 90%;
+      height: 40%;
+      margin: 0% 5%;
+      position: absolute;
+      text-align: left;
+    }
+    .update {
+      width: 60%;
+      height: 65%;
+      position: absolute;
+      background-color: white;
+      border-radius: 20px;
+      color: black;
+      -webkit-transform: translate(50%, 50%);
+      transform: translate(-50%, -50%);
+      z-index: 1000;
+      text-align: center;
+      top: 50%;
+      left: 50%;
+    }
+    .p3 {
+      width: 100%;
+      padding: 10px 0;
+      position: absolute;
+      top: 82%;
+    }
+  }
+
+  @media only screen and (min-width: 812px) and (max-width: 1023px){
+    .test {
+      position: absolute;
+      top: 90%;
+      left: 0;
+    }
+    .style {
+      width: 100%;
+      height: 1px;
+      background-color: #ddd;
+      bottom: 16%;
+      position: absolute;
+    }
+    .update {
+      width: 55%;
+      height: 65%;
+      position: absolute;
+      background-color: white;
+      border-radius: 20px;
+      color: black;
+      -webkit-transform: translate(50%, 50%);
+      transform: translate(-50%, -50%);
+      z-index: 1000;
+      text-align: center;
+      top: 50%;
+      left: 50%;
+    }
+    .p3 {
+      width: 100%;
+      padding: 10px 0;
+      position: absolute;
+      top: 82%;
+    }
+  }
+
+  @media only screen and (min-width: 1024px) and (max-width: 1600px){
+    .test {
+      position: absolute;
+      top: 0;
+      left: 90%;
+    }
+    .update {
     width: 45%;
     height: 35%;
     position: absolute;
@@ -256,14 +339,14 @@
     top: 55%;
     left: 50%;
 }
-.p1[data-v-c1b5cc6a] {
+.p1 {
     width: 90%;
     height: 30%;
     margin: 0% 5%;
     position: absolute;
     text-align: left;
 }
-.p2[data-v-c1b5cc6a] {
+.p2 {
     width: 90%;
     height: 40%;
     margin: 5%;
@@ -271,74 +354,14 @@
     position: absolute;
     text-align: left;
 }
-.p3[data-v-c1b5cc6a] {
-    width: 100%;
-    padding: 10px 0;
-    position: absolute;
-    top: 85%;
-}
-  }
-
-  @media only screen and (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 3),
-  (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 2),
-  (min-width: 812px) and (max-width: 1023px){
-    .fenge {
-    width: 100%;
-    height: 1px;
-    background-color: #ddd;
-    bottom: 16%;
-    position: absolute;
-}
-  .update {
-    width: 45%;
-    height: 55%;
-    position: absolute;
-    background-color: white;
-    border-radius: 20px;
-    color: black;
-    -webkit-transform: translate(50%, 50%);
-    transform: translate(-50%, -50%);
-    z-index: 1000;
-    text-align: center;
-    top: 50%;
-    left: 50%;
-  }
     .p3 {
-    width: 100%;
-    padding: 10px 0;
-    position: absolute;
-    top: 82%;
-   }
-  }
-       @media only screen and (min-device-height: 375px) and (max-device-height: 811px) and (-webkit-device-pixel-ratio: 3),
-  (min-device-height: 375px) and (max-device-height: 811px) and (-webkit-device-pixel-ratio: 2),
-  (min-width: 375px) and (max-width: 811px){
-    .p1 {
-    width: 90%;
-    height: 40%;
-    margin: 0% 5%;
-    position: absolute;
-    text-align: left;
-  }
-    .update {
-    width: 55%;
-    height: 60%;
-    position: absolute;
-    background-color: white;
-    border-radius: 20px;
-    color: black;
-    -webkit-transform: translate(50%, 50%);
-    transform: translate(-50%, -50%);
-    z-index: 1000;
-    text-align: center;
-    top: 55%;
-    left: 50%;
-  }
-  .p3 {
       width: 100%;
       padding: 10px 0;
       position: absolute;
-      top: 82%;
+      top: 92%;
+      transform: translateY(-50%);
+    }
   }
-  }
+
+
 </style>

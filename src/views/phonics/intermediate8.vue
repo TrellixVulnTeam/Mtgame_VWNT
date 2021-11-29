@@ -165,66 +165,51 @@
     name: "intermediate8",
     watch: {
       'onef': function(newVal) {
+        console.log('watch'+new Date().toLocaleTimeString());
         if(this.onef === true) {
           setTimeout(() => {
             this.onef = false;
             this.zhezhao=false;
-
             this.list1 =this.listG[this.countpage-1];
-
             for(var i=0;i<this.list1.length;i++){
               this.list1[i].bg=this.pic+this.list1[i].bg;
               this.list1[i].audio=this.pic+this.list1[i].audio;
               this.list1[i].successful=0;
               this.list1[i].fail=0;
-              // if(this.list1[i].score==="1"){
-              //   this.truesound=this.list1[i].audio;
-              // }
             }
-
             this.video=true;
-          }, 2000);
-        };
+          }, 10000);
+        }
       },
       'video': function(newVal) {
-
         if (this.video === true) {
               setTimeout(() => {
                 this.video=false;
               },8000);
-
         }
       },
       'show1': function(newVal) {
         if (this.show1 === true) {
           this.$refs.show1.play();
-          // setTimeout(() => {
             this.show1 = false;
-          // }, 4000);
         }
       },
       'show2': function(newVal) {
         if (this.show2 === true) {
           this.$refs.show2.play();
-          // setTimeout(() => {
             this.show2 = false;
-          // }, 4000);
         }
       },
       'show3': function(newVal) {
         if (this.show3 === true) {
           this.$refs.show3.play();
-          // setTimeout(() => {
             this.show3 = false;
-          // }, 4000);
         }
       },
       'show4': function(newVal) {
         if (this.show4 === true) {
           this.$refs.show4.play();
-          // setTimeout(() => {
             this.show4 = false;
-          // }, 4000);
         }
       },
     },
@@ -308,6 +293,7 @@
       }
     },
     created() { //生命周期里接收参数
+      console.log('created开头'+new Date().toLocaleTimeString());
       this.pic=this.$axios.defaults.baseURL2;
       this.unit = this.$route.query.unit;
       this.unitsId=this.$route.query.unitsId;
@@ -316,11 +302,7 @@
       localStorage.setItem('gamename',this.gamename);
       var timestamp = (new Date()).getTime();
       localStorage.setItem('startTimeid',timestamp);
-      if(localStorage.getItem('gamemusic')==="false"){
-        this.show=false;
-      }else{
-        this.show=true;
-      }
+      this.show = localStorage.getItem('gamemusic') !== "false";
       this.$axios.post(this.url, qs.stringify({
         menuId: this.menuId,
         num:18
@@ -344,23 +326,14 @@
           this.list1[i].successful=0;
           this.list1[i].sound=0;
           this.list1[i].fail=0;
-          // if(this.list1[i].score==="1"){
-          //   this.truesound=this.list1[i].audio;
-          // }
         }
-        if(this.onef == true) {
+        console.log('created的onef前面'+new Date().toLocaleTimeString());
+        if(this.onef === true) {
           setTimeout(() => {
             this.onef = false;
             this.video=true;
           }, 2000);
         }
-        // if(this.question.length>10){
-        // 	this.questionsize=1;
-        // }else{
-        // 	this.questionsize=0;
-        //   }
-        //    this.list1=res.data.Maplist;
-        // this.question=res.data.question;
       }, res => {
         alertMsg("You must be connected to the internet.<br>Please connect and try again.");
       });
@@ -390,7 +363,9 @@
           const canvas = document.getElementById('canvas'); // 初次进来初始化画布
           let imgBox = document.getElementById('imgBox');
           let imgsty = document.getElementsByClassName('imgsty');
+          console.log('mounted'+new Date().toLocaleTimeString());
           for (let i=0; i<imgsty.length; i++) {
+            //这里会报错，是因为图片没有加载出来就获取图片的中心位置，适当延长setTimeout的时间，等待图片加载完毕再获取中心位置
             let coreP = { // 获取图片中心点位置
               corePx: imgsty[i].offsetParent.offsetLeft + imgsty[i].offsetParent.offsetWidth/2,
               corePy: imgsty[i].offsetParent.offsetTop + imgsty[i].offsetParent.offsetHeight*0.75
@@ -406,7 +381,7 @@
           this.setCanvasStyle();
           this.zhezhao=false;
         }
-      }, 3000);
+      }, 5000);
     },
     destroyed() {
       document.body.removeEventListener('touchmove',this.bodyScroll,{passive: false});
@@ -481,7 +456,7 @@
       // 在canvas中鼠标按下
       canvasDown(e) {
         //console.log(e);
-        if(e.touches && e.touches.length==1){
+        if(e.touches && e.touches.length===1){
           this.canvasMoveUse = true;
           const t = e.target;
           let canvasX;
@@ -502,7 +477,6 @@
           this.context.stroke();
         }else{
           this.canvasMoveUse = false;
-          return;
         }
 
       },
@@ -541,7 +515,7 @@
           if (this.context.isPointInPath(item.corePx, item.corePy)) { // 获取答题选项下标
             anwserIndex = index;
           }
-          if (this.list1[index].score=='1') { // 获取正确选项下标
+          if (this.list1[index].score==='1') { // 获取正确选项下标
             successIndex = index;
           }
           if (this.context.isPointInPath(item.corePx, item.corePy)) {
@@ -558,7 +532,7 @@
           if (anwserList.length === 1) { // 答题时只有圈中一个选项才能进行判断
             this.zhezhao=true;
             // console.log(anwserIndex);
-            if (this.list1[anwserIndex].score=='1') {
+            if (this.list1[anwserIndex].score==='1') {
               /*回答正确在这里写效果*/
               this.soundscorrect=true;
               setTimeout(() => {

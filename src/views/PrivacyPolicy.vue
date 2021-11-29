@@ -204,7 +204,7 @@
       </div>
 
     </div>
-    <div style="padding-left: 3%;padding-bottom: 140px; padding-right:9%;" v-if="local==='hk'">
+    <div style="padding: 6% 9% 100px 3%;" v-if="local==='hk'">
         <h4 class="title">Privacy Statement</h4>
         <p class="p1">Effective Date: from 23rd October, 2014</p>
         <p class="p1">This Privacy Statement has been translated into Chinese. In case of inconsistency or ambiguity between the English and Chinese versions, the English version shall prevail.</p>
@@ -274,19 +274,18 @@
       </div>
     </div>
      <footer :class="service&&local==='cn' ? 'bottom4':'bottom'">
-       <div class="bottom1" v-if="local==='cn'">Copyright © 2020 深圳蒙奇千里教育咨询有限公司
+       <div class="bottom1cn" v-if="local==='cn'">Copyright © 2020 深圳蒙奇千里教育咨询有限公司
          <a  style="color: white" data-savepage-href="https://www.beian.miit.gov.cn" href="http://www.beian.miit.gov.cn/" target="_blank"><span>粤ICP备20063293号</span></a>
        </div>
        <div class="bottom1" v-if="local==='hk'">© Monkey Tree English Learning Center .All rights reserved.
        </div>
-       <div  class="bottom3">
+       <div  :class="service&&local==='cn' ? 'bottom3':'bottom3cn'">
          <a target="_blank" href="https://www.monkeytree.com.cn/privacyStatement.jsp" style="text-decoration: none; color: white;"><span>Privacy Statement</span></a>
          <span>丨</span>
          <a target="_blank" href="https://www.monkeytree.com.cn/termsOfUse.jsp" style="text-decoration: none; color: white"><span>Terms of Use</span></a>
        </div>
      </footer>
   </div>
-  <!--  </html>-->
 </template>
 
 <script>
@@ -329,44 +328,60 @@ export default {
 
 <style scoped lang="less">
 .bottom3 {
-  left: 70%;
+  left: 65%;
   position: absolute;
   top: 20%;
+  font-size: 14px;
 }
 .bottom1 {
   left: 3%;
-  top: 20%;
+  top: 25%;
   position: absolute;
   color: white;
+  font-size: 14px;
+}
+.bottom3cn {
+  left: 65%;
+  position: absolute;
+  top: 25%;
+  font-size: 12px;
+}
+.bottom1cn {
+  left: 3%;
+  top: 25%;
+  position: absolute;
+  color: white;
+  font-size: 12px;
 }
 .bottom {
   width: 100%;
-  height: 6%;
   background-color: green;
-  bottom: 9%;
+  bottom: 0;
   position: relative;
+  padding: 20px 0;
 }
 .bottom4 {
   width: 100%;
-  height: 6%;
   background-color: green;
-  bottom: 10%;
+  bottom: 0;
+  padding: 15px 0;
   position: relative;
 }
 .logo{
-  width: 10%;
+  width: 80px;
   position: absolute;
-  left: 70%;
+  left: 80%;
+  top:5%;
 }
 .header {
   background-color: green;
   position: absolute;
-  top: 0%;
+  top: 0;
   width: 100%;
-  height: 10%;
+  height: 50px;
 }
 .col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
-  position: relative;
+  //position: relative;
   width: 100%;
   min-height: 1px;
   padding-right: 15px;
@@ -434,9 +449,10 @@ h5 {
   }
 .body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
   height: 100%;
-  margin-top: 6%;
+  margin-top: 0;
 }
 
 .body p {
@@ -444,153 +460,10 @@ h5 {
 }
 
 .backButton {
-  width: 5%;
+  width: 45px;
   position: absolute;
   left: 2%;
-}
-@media (min-width: 812px) and (max-width: 1023px),
-only screen and (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 3),
-only screen and (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 2) {
-  .bottom4 {
-    width: 100%;
-    height: 14%;
-    background-color: green;
-    bottom: 10%;
-    position: relative;
-  }
-  .bottom3 {
-    left: 70%;
-    position: absolute;
-    top: 20%;
-    font-size: 13px;
-  }
-  .bottom1 {
-    left: 3%;
-    top: 27%;
-    position: relative;
-    color: white;
-    font-size: 12px;
-  }
-  .header {
-    background-color: green;
-    position: absolute;
-    top: 0%;
-    width: 100%;
-    height: 14%;
-  }
-  .backButton {
-    width: 6%;
-    position: absolute;
-    left: 2%;
-  }
-  .bottom {
-    width: 100%;
-    height: 10%;
-    background-color: green;
-    bottom: 13%;
-    position: relative;
-  }
+  top:5%;
 }
 
-@media  (min-width: 375px) and (max-width: 811px),
-only screen and (min-device-height: 375px) and (max-device-height: 811px) and (-webkit-device-pixel-ratio: 3),
-only screen and (min-device-height: 375px) and (max-device-height: 811px) and (-webkit-device-pixel-ratio: 2){
-  .bottom4 {
-    width: 100%;
-    height: 10%;
-    background-color: green;
-    bottom: 10%;
-    position: relative;
-  }
-  .bottom1 {
-    left: 3%;
-    top: 27%;
-    position: absolute;
-    color: white;
-    font-size: 12px;
-  }
-  .bottom3 {
-    left: 70%;
-    position: absolute;
-    top: 27%;
-    font-size: 12px;
-  }
-  .header {
-    background-color: green;
-    position: absolute;
-    top: 0%;
-    width: 100%;
-    height: 12%;
-  }
-  .bottom {
-    width: 100%;
-    height: 10%;
-    background-color: green;
-    bottom: 11%;
-    position: relative;
-  }
-  .backButton {
-    width: 6%;
-    position: absolute;
-    top: 5%;
-    left: 2%;
-  }
-  .logo {
-    width: 12%;
-    position: absolute;
-    left: 70%;
-  }
-}
-
-
-@media (min-width: 1024px) and (max-width: 1600px),
-only screen and (min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 3),
-only screen and (min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 2) {
-  .bottom4 {
-    width: 100%;
-    height: 8%;
-    background-color: green;
-    bottom: 6%;
-    position: relative;
-  }
-  .bottom1 {
-    left: 3%;
-    top: 20%;
-    position: absolute;
-    color: white;
-    font-size: 1rem;
-  }
-  .header {
-    height: 12%;
-  }
-  .backButton {
-    width: 7%;
-    top: 7%;
-    position: relative;
-    left: 2%;
-  }
-  .logo {
-    width: 12%;
-    top: 7%;
-    position: relative;
-    left: 70%;
-  }
-  .bottom {
-    width: 100%;
-    height: 6%;
-    background-color: green;
-    bottom: 8%;
-    position: relative;
-  }
-  .bottom3 {
-    left: 70%;
-    position: absolute;
-    top: 20%;
-    font-size: 1rem;
-  }
-  h4.title {
-    font-size: 1.5rem;
-    margin: 50px 0 45px 0;
-  }
-}
 </style>

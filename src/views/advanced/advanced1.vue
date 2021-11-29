@@ -296,7 +296,7 @@
             this.titlequesion[i].name=li.letter_name;
           }
         }
-        if (li.score == '1') {
+        if (li.score === '1') {
           this.soundscorrect = true;
           li.bluesuccess = 1;
           this.changecolor = true;
@@ -405,7 +405,7 @@
       },
       gomemu() {
         var audio = document.getElementById('music');
-        if (localStorage.getItem('audiomusic') == "false") {
+        if (localStorage.getItem('audiomusic') === "false") {
 
         } else {
           audio.play();
@@ -433,7 +433,7 @@
       },
       sound() {
         this.show = !this.show;
-        if (this.show == false) {
+        if (this.show === false) {
           // this.$refs.MusicPlay.pause();
           localStorage.setItem("gamemusic", "false");
         } else {
@@ -486,7 +486,6 @@
             id:'i'+(u+1),
             name:data2[u]
           });
-
         }
         var data3=this.list1[0].name.split('');
         this.truequesion=[];
@@ -504,11 +503,11 @@
           this.list1[l].successful = 0;
           this.list1[l].fail = 0;
           this.list1[l].audio = this.pic + this.list1[l].audio;
-          if (this.list1[l].score == "1") {
+          if (this.list1[l].score === "1") {
             this.audio = this.list1[l].audio;
           }
         }
-        if (this.onef == true) {
+        if (this.onef === true) {
           setTimeout(() => {
             this.onef = false;
             // this.video = true;

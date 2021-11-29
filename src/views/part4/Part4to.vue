@@ -212,8 +212,6 @@
 </template>
 
 <script>
-  import Vue from "vue";
-  import $ from 'jquery';
   var qs = require('qs');
   import {
     jsPlumb
@@ -223,14 +221,13 @@
     name: "part4to",
     watch: {
       'loaded': function(newVal) {
-        console.log('标记3');
         if (this.onef === true) {
           console.log('标记1');
           if (this.list1.length > 2 || this.list2.length > 2) {
             this.changwidth = true;
           }
           for (var i = 0; i < this.list2.length; i++) {
-            if (this.list2[i].name.length > 10) {c
+            if (this.list2[i].name.length > 10) {
               this.list2[i].size = 1;
             }
           }
@@ -250,15 +247,6 @@
                   // zIndex: 2000
                 },
                 PaintStyle: {
-                  //stroke: "#057bb8"
-                },
-                // EndpointHoverStyle: {
-                // 	fill: "#f3c70f"
-                // },
-                // HoverPaintStyle: {
-                // 	stroke: "#057bb8"
-                // },
-                // ReattachConnections : false,
                 ConnectionsDetachable: false,
                 EndpointStyle: {
                   width: 20,
@@ -268,7 +256,8 @@
                 },
                 Endpoint: "Image",
                 // Anchors: ["TopCenter", "TopCenter"],
-                Container: "canvas"
+                Container: "canvas",
+                }
               });
               // suspend drawing and initialise.
               instance.batch(function() {
@@ -340,7 +329,7 @@
                 }
                 console.log('标记11');
                 for (var i = 0; i < that.list1.length; i++) {
-                  if(that.loaded==true){
+                  if(that.loaded===true){
                     instance.addEndpoint(
                     that.list1[i].id, {
                       anchor: [1, 0.5, 0, 0, 25, 0],
@@ -349,10 +338,9 @@
                   )
                     console.log('标记14');
                   }
-
                 }
                 for (var j = 0; j < that.list2.length; j++) {
-                  if(that.loaded==true){
+                  if(that.loaded===true){
                   instance.addEndpoint(
                     that.list2[j].id, {
                       anchor: [0, 0.5, 0, 0, -20, 0],
@@ -363,85 +351,79 @@
                 }
                 console.log('标记6');
                 console.log(instance);
-                // 请单点击一下连接线,
-                instance.bind('click', function (conn, originalEvent) {
-                  alert('点击了线')
-                })
                 instance.bind("connectionDragStop", function(connection) {
                   that.zhezhao = true;
                   console.log(connection);
+                  console.log(that.list1);
+                  console.log(that.truelist);
                   var truetime = that.list1.length;
                   for (var i = 0; i < that.list1.length; i++) {
-                    if (connection.sourceId == that.list1[i].id) {
-                      if (connection.targetId == that.list1[i].targetId) {
-                        if (connection.target != null) {
-                          if (that.truelist.length <= 0) {
+                    //只要两边数量一致就不需要判断
+                    // if (connection.sourceId === that.list1[i].id) {
+                    //connection.targetId值右边命中的id，that.list1[i].targetId指右边本身的id
+                      if (connection.targetId === that.list1[i].targetId) {
+                        //貌似不存在为空的情况
+                        // if (connection.target != null) {
+                          // if (that.truelist.length <= 0) {
                             that.truelist.push(connection.targetId);
                             for (var f = 0; f < that.falselist.length; f++) {
-                              if (that.falselist[f] == connection.suspendedElementId) {
+                              if (that.falselist[f] === connection.suspendedElementId) {
                                 that.falselist.splice(f, 1);
                               }
                             }
-                          } else {
-                            // for(var f=0;f<that.truelist.length;f++){
-                            // 	if(that.truelist[f] != connection.targetId){
-                            that.truelist.push(connection.targetId);
-                            // 	}
-                            // }
-                            for (var f = 0; f < that.falselist.length; f++) {
-                              if (that.falselist[f] == connection.suspendedElementId) {
-                                that.falselist.splice(f, 1);
-                              }
-                            }
-                          }
-                        } else {
-                          for (var t = 0; t < that.truelist.length; t++) {
-                            if (that.truelist[t] == connection.suspendedElementId) {
-                              that.truelist.splice(t, 1);
-                            }
-                          }
-                          for (var f = 0; f < that.falselist.length; f++) {
-                            if (that.falselist[f] == connection.suspendedElementId) {
-                              that.falselist.splice(f, 1);
-                            }
-                          }
-                        }
+                          // } else {
+                          //   that.truelist.push(connection.targetId);
+                          //   for (var f = 0; f < that.falselist.length; f++) {
+                          //     if (that.falselist[f] === connection.suspendedElementId) {
+                          //       that.falselist.splice(f, 1);
+                          //     }
+                          //   }
+                          // }
+                        // } else {
+                        //   for (var t = 0; t < that.truelist.length; t++) {
+                        //     if (that.truelist[t] === connection.suspendedElementId) {
+                        //       that.truelist.splice(t, 1);
+                        //     }
+                        //   }
+                        //   for (var f = 0; f < that.falselist.length; f++) {
+                        //     if (that.falselist[f] === connection.suspendedElementId) {
+                        //       that.falselist.splice(f, 1);
+                        //     }
+                        //   }
+                        // }
                       } else {
+                        console.log('!=');
                         for (var g = 0; g < that.list1.length; g++) {
-                          if (connection.targetId == that.list1[g].targetId) {
-                            if (connection.target != null) {
+                          if (connection.targetId === that.list1[g].targetId) {
+                            // if (connection.target != null) {
                               if (that.falselist.length <= 0) {
                                 that.falselist.push(connection.targetId);
                                 for (var t = 0; t < that.truelist.length; t++) {
-                                  if (that.truelist[t] == connection.suspendedElementId) {
+                                  if (that.truelist[t] === connection.suspendedElementId) {
                                     that.truelist.splice(t, 1);
                                   }
                                 }
                               } else {
-                                // for(var f=0;f<that.falselist.length;f++){
-                                // 	if(that.falselist[f] != connection.targetId){
                                 that.falselist.push(connection.targetId);
-                                // 	}
-                                // }
                               }
-                            } else {
-                              for (var f = 0; f < that.falselist.length; f++) {
-                                if (that.falselist[f] == connection.suspendedElementId) {
-                                  that.falselist.splice(f, 1);
-                                }
-                              }
-                            }
+                            // } else {
+                            //   console.log('不为空');
+                            //   for (var f = 0; f < that.falselist.length; f++) {
+                            //     if (that.falselist[f] === connection.suspendedElementId) {
+                            //       that.falselist.splice(f, 1);
+                            //     }
+                            //   }
+                            // }
                           }
                         }
                       }
-                    }
+                    // }
                   }
                   console.log('标记5');
                   setTimeout(() => {
                     console.log('标记4');
                     that.nowtime = document.getElementsByTagName("svg").length;
                     console.log(that.nowtime);
-                    console.log(this.list2);
                     if (that.nowtime === truetime) { //连接的数量
                       that.zhezhao = true;
                       that.countpage += 1;
@@ -453,8 +435,6 @@
                           that.account += 1;
                           that.list2[i].changecolor = 1;
                         }
-                        //console.log( that.account);
-                        // that.account += 1;
                         setTimeout(() => {
                           // for (var i = 0; i < that.list2.length; i++) {
                           that.showbg = 0;
@@ -485,30 +465,15 @@
                                 targetId: that.list[u].targetId2,
                                 units_id: that.list[u].units_id,
                               })
-
                             }
-                            // var leng=that.list.length/2-1;
-                            //   that.list2=[];that.list1=[];
-                            // for(var i=leng+1;i<that.list.length;i++){
-                            // 	that.list2.push(that.list[i]);
-                            // }
-                            // for(var i=0;i<leng+1;i++){
-                            // 	that.list1.push(that.list[i]);
-                            // }
                             that.zhezhao = false;
                           } else {
-
                             setTimeout(() => {
                               that.zhezhao = false;
                               that.$router.push({
                                 //核心语句
                                 path: "/result", //跳转的路径
                                 query: {
-                                  //路由传参时push和query搭配使用 ，作用时传递参数
-                                  // id: that.id,
-                                  // account: that.account,
-                                  // type: that.type,
-                                  // sum: that.sum,
                                   type: that.type,
                                   partName: 'partNameD',
                                   account: that.account,
@@ -519,13 +484,10 @@
                                   num:that.num
                                 }
                               });
-
                             }, 2000);
                           }
                           that.truelist = [];
                           that.falselist = [];
-
-
                         }, 2000);
                       } else {
                         var svgLine = document.getElementsByTagName("svg");
@@ -552,7 +514,6 @@
                           setTimeout(() => {
                             var lineW;
                             instance.deleteEveryConnection();
-
                             for (var i = 0; i < that.list1.length; i++) {
                               that.list2[i].changecolor = 1;
                               instance.connect({
@@ -589,7 +550,6 @@
                                   that.list2[i].issuccess = 0;
                                 }
                                 that.nowtime = 0;
-
                                 if (that.countpage <= that.question) {
                                   that.onef = true; that.loaded=false;
                                   that.list = that.listD[that.countpage - 1];
@@ -598,7 +558,6 @@
                                   that.list1 = [];
                                   for (var i = 0; i < that.list.length; i++) {
                                     that.list1.push(that.list[i]);
-                                    // that.list2.push(that.list[i]);
                                   }
                                   for (var u = 0; u < that.list.length; u++) {
                                     that.list2.push({
@@ -615,10 +574,7 @@
                                       units_id: that.list[u].units_id,
                                       size: 0,
                                     })
-
-
                                   }
-
                                   that.zhezhao = false;
                                 } else {
                                   setTimeout(() => {
@@ -628,10 +584,6 @@
                                       path: "/result", //跳转的路径
                                       query: {
                                         //路由传参时push和query搭配使用 ，作用时传递参数
-                                        // id: that.id,
-                                        // account: that.account,
-                                        // type: that.type,
-                                        // sum: that.sum,
                                         type: that.type,
                                         partName: 'partNameD',
                                         account: that.account,
@@ -642,12 +594,10 @@
                                         num:that.num
                                       }
                                     });
-
                                   }, 2000);
                                 }
                                 that.truelist = [];
                                 that.falselist = [];
-
                               }, 1000);
                             }, 100);
                           }, 300);
@@ -659,15 +609,13 @@
                   }, 400);
                 });
                 console.log('标记7');
-                // make .window divs draggable
-                //instance.draggable(jsPlumb.getSelector(".drag-drop-demo .window"));
               });
-              // jsPlumb.fire("jsPlumbDemoLoaded", instance);
             });
           }, 500);
         }
       },
     },
+
     data() {
       return {
         num:0,
@@ -751,7 +699,7 @@
     methods: {
       makesound(li){
         // console.log(li);
-        if(li.showbg==0){
+        if(li.showbg===0){
           li.showbg = 1;
           setTimeout(() => {
             li.showbg = 0;
@@ -761,8 +709,7 @@
       },
       gomemu() {
         var audio = document.getElementById('music');
-        if (localStorage.getItem('audiomusic') == "false") {
-
+        if (localStorage.getItem('audiomusic') === "false") {
         } else {
           audio.play();
         }
@@ -790,7 +737,6 @@
       },
       loadimg(){
         this.loaded=true;
-        // console.log(this.loaded);
       },
       pop() {
         this.popp = !this.popp;
@@ -808,23 +754,8 @@
           }
         }
       },
-      // change() {
-      // 	this.action1=true;
-      // 	setTimeout(() => {
-      // 	this.action1=false;
-      // 	this.$router.push({
-      // 		//核心语句
-      // 		path: "/result", //跳转的路径
-      // 		query: {
-      // 			//路由传参时push和query搭配使用 ，作用时传递参数
-      // 			id: this.id,
-      // 			type: this.type
-      // 		}
-      // 	});
-      // 	}, 1000);
-      // },
       changesett() {
-        if (this.action == false && this.onef == false) {
+        if (this.action === false && this.onef === false) {
           this.action = true;
           setTimeout(() => {
             this.action = false;
@@ -834,7 +765,7 @@
       },
       sound() {
         this.show = !this.show;
-        if (this.show == false) {
+        if (this.show === false) {
           // this.$refs.MusicPlay.pause();
           localStorage.setItem("gamemusic", "false");
         } else {
@@ -845,7 +776,6 @@
       bodyScroll(event) {
         event.preventDefault();
       },
-
     },
     destroyed() {
       document.body.removeEventListener('touchmove', this.bodyScroll, {
@@ -882,12 +812,7 @@
           this.bgimg[i].active = false;
         }
       }
-      if (localStorage.getItem('gamemusic') === "false") {
-        this.show = false;
-      } else {
-        this.show = true;
-      }
-
+      this.show = localStorage.getItem('gamemusic') !== "false";
       this.$axios.post(this.url1, qs.stringify({
         menuDetailId: this.menuId,
       })).then(res => {
@@ -941,7 +866,7 @@
             this.list2[i].size = 1;
           }
         }
-        if (this.onef == true && this.shownumb == true) {
+        if (this.onef === true && this.shownumb === true) {
           setTimeout(() => {
             this.onef = false;
             if (this.list1.length > 2 || this.list2.length > 2) {
@@ -972,8 +897,8 @@
         passive: false
       });
     },
+    }
 
-  };
 </script>
 
 <style scoped lang="less">
