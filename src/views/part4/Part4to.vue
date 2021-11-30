@@ -349,19 +349,18 @@
                   )
                   }
                 }
-                console.log('标记6');
-                console.log(instance);
+
                 instance.bind("connectionDragStop", function(connection) {
                   that.zhezhao = true;
                   console.log(connection);
                   console.log(that.list1);
-                  console.log(that.truelist);
                   var truetime = that.list1.length;
                   for (var i = 0; i < that.list1.length; i++) {
                     //只要两边数量一致就不需要判断
-                    // if (connection.sourceId === that.list1[i].id) {
+                    if (connection.sourceId === that.list1[i].id) {
                     //connection.targetId值右边命中的id，that.list1[i].targetId指右边本身的id
                       if (connection.targetId === that.list1[i].targetId) {
+                        console.log(connection.suspendedElementId);
                         //貌似不存在为空的情况
                         // if (connection.target != null) {
                           // if (that.truelist.length <= 0) {
@@ -369,6 +368,7 @@
                             for (var f = 0; f < that.falselist.length; f++) {
                               if (that.falselist[f] === connection.suspendedElementId) {
                                 that.falselist.splice(f, 1);
+                                console.log(that.falselist);
                               }
                             }
                           // } else {
@@ -392,15 +392,17 @@
                         //   }
                         // }
                       } else {
-                        console.log('!=');
+                        console.log('395h');
                         for (var g = 0; g < that.list1.length; g++) {
                           if (connection.targetId === that.list1[g].targetId) {
                             // if (connection.target != null) {
                               if (that.falselist.length <= 0) {
                                 that.falselist.push(connection.targetId);
+                                console.log(that.falselist);
                                 for (var t = 0; t < that.truelist.length; t++) {
                                   if (that.truelist[t] === connection.suspendedElementId) {
                                     that.truelist.splice(t, 1);
+                                    console.log('405h');
                                   }
                                 }
                               } else {
@@ -417,16 +419,18 @@
                           }
                         }
                       }
-                    // }
+                    }
                   }
-                  console.log('标记5');
                   setTimeout(() => {
-                    console.log('标记4');
                     that.nowtime = document.getElementsByTagName("svg").length;
                     console.log(that.nowtime);
-                    if (that.nowtime === truetime) { //连接的数量
+                    console.log(truetime);
+                    //连接的数量,指连接满
+                    if (that.nowtime === truetime) {
+                      console.log('这这');
                       that.zhezhao = true;
                       that.countpage += 1;
+                      console.log(that.falselist.length);
                       if (that.falselist.length <= 0) { //错误list的长度
                         that.showbg = 1;
                         that.soundscorrect = true;
