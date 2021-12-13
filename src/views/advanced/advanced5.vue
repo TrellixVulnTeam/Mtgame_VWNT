@@ -12,7 +12,7 @@
         <img src="../../assets/image/ahelp.png" @click="help" class="helpbutton" />
         <transition name="fade1">
           <div v-if="onef" style="width: 100%; height: 100%;display:block;position: absolute; ">
-            <p class="fontsizes">{{this.countpage}}/{{ this.question}}</p>
+            <p class="fontsizes" v-if="showNum">{{this.countpage}}/{{ this.question}}</p>
           </div>
         </transition>
         <transition name="fade1">
@@ -275,6 +275,7 @@
     },
     data() {
       return {
+        showNum: false,
         popp: false,
         items:'items',
         spanp:'',
@@ -669,7 +670,6 @@
       localStorage.setItem('gamename',this.gamename);
       var timestamp = (new Date()).getTime();
       localStorage.setItem('startTimeid',timestamp);
-
       if(localStorage.getItem('gamemusic')=="false"){
         this.show=false;
       }else{
@@ -705,10 +705,9 @@
             this.items1=this.listH[0][0].listA;
             this.itemsall=this.listH[0][0].itemsall;
             // this.trueanswer=this.listH[0][0].trueanswer;
-
+          this.showNum = true;
           setTimeout(() => {
             this.onef = false;
-
           }, 1000);
         }, res => {
           alertMsg("You must be connected to the internet.<br>Please connect and try again.");

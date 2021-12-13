@@ -105,6 +105,7 @@
 		name: "advanced3",
 		data() {
 			return {
+			  showNum: false,
 				popp: false,
 				spanp:'',
 				ruleimg8:false,
@@ -197,7 +198,8 @@
             // for(var i=0;i<this.list1.length;i++){
             //   this.list1[i].bg=this.pic+this.list1[i].bg
             // }
-          if(this.onef == true) {
+          if(this.onef === true) {
+            this.showNum = true;
             setTimeout(() => {
               this.onef = false;
               this.zhezhao=false;

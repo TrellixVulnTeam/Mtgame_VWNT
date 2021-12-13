@@ -11,8 +11,7 @@
         <img src="../../assets/image/ihelp.png" @click="help" class="helpbutton" />
         <transition name="fade1">
           <div v-if="onef" style="width: 100%; height: 100%;display:block;position: absolute; ">
-
-            <p class="fontsizes">{{this.countpage}}/{{ this.question}}</p>
+            <p class="fontsizes" v-if="showNum">{{this.countpage}}/{{ this.question}}</p>
           </div>
         </transition>
         <transition name="fade1">
@@ -183,6 +182,7 @@
     },
     data() {
       return {
+        showNum: false,
         popp: false,
         spanp:'',
         ruleimg8:false,
@@ -199,7 +199,7 @@
         onef: true,
         reload: true,
         over:false,
-        question: 5,
+        question: 10,
         soundsWrong:false,
         soundscorrect:false,
         video: [
@@ -868,7 +868,7 @@
       }else{
         this.show=true;
       }
-      if (this.onef == true) {
+      if (this.onef === true) {
         this.$axios.post(this.url, qs.stringify({
           menuId: this.menuId,
          num:17
@@ -877,6 +877,7 @@
             this.listH.push(res.data.maps[i]); //属性
           }
           this.question = this.listH.length;
+          console.log(this.question);
           this.items1 = this.listH[this.countpage - 1];
           for(var a=0;a<this.items1.length;a++){
             this.items1[a].imgop=0;
@@ -890,6 +891,8 @@
         }, res => {
           alertMsg("You must be connected to the internet.<br>Please connect and try again.");
         });
+        this.showNum = true;
+        console.log(this.showNum);
         setTimeout(() => {
           this.onef = false;
           setTimeout(() => {

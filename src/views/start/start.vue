@@ -1,28 +1,32 @@
 <template xmlns="http://www.w3.org/1999/html">
 	<div class="startpage">
-      <div class='update' v-if="local==='cn' && this.update==='true'">
-        <h3 style='width:100%;font-family: pepper,serif;padding:10px 0;'>Monkey Town 又有更新了!</h3>
-        <p class="p1">请马上到应用商店更新最新的版本以体验全新的功能及内容！</p>
-        <p class="p2" >{{this.yingyongbao}}</p>
-        <div class="style"/>
-        <p class="p3">
-          <span>
-            <a target="_blank" style="color: rgb(138, 153, 158);font-size: 24px;text-decoration: none;" href="https://apps.apple.com/us/app/id1489150921">更新</a>
-          </span>
-        </p>
-      </div>
-      <div class='update' v-if="local==='hk'&&this.update==='true'">
-        <h3 style='width:100%;font-family: pepper,serif;padding:10px 0;'>New Version Available!</h3>
-        <p class="p1">There is a new version of Monkey Town available for download! Please update the Monkey Town app by visiting the Apple Store/Play Store. </p>
-        <p class="p2" >To update: Launch App Store/Play Store, search Monkey Town (HK) and then click 'Update'.</p>
-        <div class="style"/>
-        <p class="p3">
-          <span>
-            <a target="_blank" style="color: rgb(138, 153, 158);font-size: 24px;text-decoration: none;" href="https://apps.apple.com/us/app/id1500380592">Update</a>
-          </span>
-        </p>
-      </div>
-	<div class="start01">
+<!--    <div class='update' v-if="local==='cn' && this.update==='true'">-->
+<!--        <h3 style='width:100%;font-family: pepper,serif;padding:10px 0;'>Monkey Town 又有更新了!</h3>-->
+<!--        <p class="p1">请马上到应用商店更新最新的版本以体验全新的功能及内容！</p>-->
+<!--        <p class="p2" v-if="yingyongbao === 'false'">方法：开启 App Store 或 Google 搜索Monkey Town(CN)及点击更新</p>-->
+<!--        <p class="p2" v-if="yingyongbao === 'true'">方法：开启 App Store 或 应用宝 搜索Monkey Town(CN)及点击更新</p>-->
+<!--        <div class="style"/>-->
+<!--        <p class="p3">-->
+<!--          <span>-->
+<!--            <a v-if="system==='ios'" target="_blank" style="color: rgb(138, 153, 158);font-size: 24px;text-decoration: none;" href="https://apps.apple.com/us/app/id1489150921">更新</a>-->
+<!--            <a v-if="system==='android' && yingyongbao ==='false'" target="_blank" style="color: rgb(138, 153, 158);font-size: 24px;text-decoration: none;" href="market://details?id=io.embraiz.mtgame">更新</a>-->
+<!--            <a v-if="system==='android' && yingyongbao ==='true'" target="_blank" style="color: rgb(138, 153, 158);font-size: 24px;text-decoration: none;" href="https://a.app.qq.com/o/simple.jsp?pkgname=io.embraiz.mtgame&channel=0002160650432d595942&fromcase=60001">更新</a>-->
+<!--          </span>-->
+<!--        </p>-->
+<!--      </div>-->
+<!--    <div class='update' v-if="local==='hk'&&this.update==='true'">-->
+<!--        <h3 style='width:100%;font-family: pepper,serif;padding:10px 0;'>New Version Available!</h3>-->
+<!--        <p class="p1">There is a new version of Monkey Town available for download! Please update the Monkey Town app by visiting the Apple Store/Play Store. </p>-->
+<!--        <p class="p2" >To update: Launch App Store/Play Store, search Monkey Town (HK) and then click 'Update'.</p>-->
+<!--        <div class="style"/>-->
+<!--        <p class="p3">-->
+<!--          <span>-->
+<!--            <a v-if="system==='ios'" target="_blank" style="color: rgb(138, 153, 158);font-size: 24px;text-decoration: none;" href="https://apps.apple.com/us/app/id1500380592">Update</a>-->
+<!--            <a v-if="system==='android'" target="_blank" style="color: rgb(138, 153, 158);font-size: 24px;text-decoration: none;" href="market://details?id=io.embraiz.mtgame">Update</a>-->
+<!--          </span>-->
+<!--        </p>-->
+<!--      </div>-->
+	  <div class="start01">
 		<div class="container">
             		<img src="../../assets/image/home_yun.png" style="position: absolute;width: 90%;margin: 5%;"/>
 
@@ -41,7 +45,8 @@
 						<div class="m_btn_start">
 							<img src="../../assets/image/start-01.png" @click="alreadylogin" />
 						</div>
-            <div class="secretBackground" v-if="secretBackground&&local==='cn'" @click="cancel">
+            <div>
+              <div class="secretBackground" v-if="secretBackground&&local==='cn'" @click="cancel">
               <div class="secret" v-if="secretBackground">
                 <h3 class="title">服务协议</h3>
                 <p class="text">请你务必审慎阅读、充分理解”隐私政策”各条款，我们需要你的手机信息。</p>
@@ -52,6 +57,7 @@
                 <h3 class="cancel" @click.stop="cancel">暂不使用</h3>
                 <h3 class="agree" @click.stop="agree">同意</h3>
               </div>
+            </div>
             </div>
 					</div>
 				</a>
@@ -74,10 +80,15 @@
 	export default {
 		name: "start",
 		watch: {
+      update: function(newVal) {
+        console.log(this.update);
+      },
 		},
 		data() {
 			return {
         update:false,
+        //手机系统
+        system:'',
         yingyongbao:'',
 			  //false是应用宝的隐私，true是谷歌的隐私
 			  privacy:false,
@@ -88,14 +99,9 @@
 				username:'',
 				password:'',
 				guardianId:'',
-				//pic: "http://demo11.embraiz.com/mtGame",
-				// url: "http://demo11.embraiz.com/mtGame/user/getSon",
-				// pic: "http://demo11.embraiz.com/mtGameHK",
 				url: "/user/",
         url1:'',
         url2:''
-				//url: 'http://localhost:8080/mtGame/user/',
-				// userId:'',
 			};
 		},
 		methods: {
@@ -169,17 +175,22 @@
     document.body.removeEventListener('touchmove',this.bodyScroll,{passive: false});
     },
 		created() {
-      this.update = localStorage.getItem('update');
-      if(localStorage.getItem('yingyongbao')==='true'){
-        this.yingyongbao='方法：开启 App Store 或 应用宝 搜索Monkey Town(CN)及点击更新'
-      }else{
-        this.yingyongbao='方法：开启 App Store 或 Google 搜索Monkey Town(CN)及点击更新'
-      }
-		  this.local = localStorage.getItem('local');
-      if (localStorage.getItem('secret')==='false'){
-        this.secretBackground=false;
-        this.secret=false;
-      }
+		  setTimeout(()=>{
+        console.log(new Date());
+        this.system = localStorage.getItem('system');
+        this.update = localStorage.getItem('update');
+        this.yingyongbao = localStorage.getItem('yingyongbao');
+        // if(localStorage.getItem('yingyongbao')==='true'){
+        //   this.yingyongbao='方法：开启 App Store 或 应用宝 搜索Monkey Town(CN)及点击更新'
+        // }else{
+        //   this.yingyongbao='方法：开启 App Store 或 Google 搜索Monkey Town(CN)及点击更新'
+        // }
+        this.local = localStorage.getItem('local');
+        if (localStorage.getItem('secret')==='false'){
+          this.secretBackground=false;
+          this.secret=false;
+        }
+      },1000);
 			if (localStorage.getItem('checkbox') === true || localStorage.getItem('checkbox') === "true") {
 				this.username = localStorage.getItem('username');
 				this.password = localStorage.getItem('password');
@@ -232,7 +243,7 @@
     width:100%;
     padding:10px 0;
     position: absolute;
-    top: 85%;
+    top: 83%;
   }
   .style{
     width: 100%;

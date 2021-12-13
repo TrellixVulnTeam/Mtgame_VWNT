@@ -2,7 +2,7 @@
   <div class="pchosegame">
     <div class="contain" id="container">
       <!--<img src="../../assets/image/phonicsbg.png" style="width: 100%; height: 100%;display:block;position: absolute;background-color: #204900;">-->
-      <img src="../../assets/image/prightback.png" @click="back" class="backbutton" />
+<!--      <img src="../../assets/image/prightback.png" @click="back" class="backbutton" />-->
       <img v-if="phonics" src="../../assets/image/phonicsbg5.png" style="width: 100%; height: 100%;top:0;display:block;position: absolute;">
       <img v-if="runners" src="../../assets/image/phonicsIntbg.png" style="width: 100%; height: 100%;top:0;display:block;position: absolute;">
       <img v-if="advanced" src="../../assets/image/phonicsAdvbg.png" style="width: 100%; height: 100%;top:0;display:block;position: absolute;">
@@ -186,14 +186,14 @@
           <img src="../../assets/image/icon_coin.png" class="coinstyle">
           <span class="fontsize leftmar2">{{sum}}</span>
         </div>
-        <!-- <div @click="back">
-						<img src="../../assets/image/game-course03.png"  class="pause">
-						<img src="../../assets/image/game-course03.png"  class=" pause" v-if="!action"> -->
-        <!-- </div> -->
+        <div @click="back">
+						<img src="../../assets/image/pback.png"  class="pause" v-if="phonics||walkers||advanced">
+            <img src="../../assets/image/7-back.png"  class="pause" v-if="runners">
+        </div>
         <div @click="home">
           <!-- <img src="../../assets/image/Icon_home0.png" class="repeat" v-if="action1"> -->
           <img src="../../assets/image/phome.png" class="repeat" v-if="phonics||walkers||advanced">
-          <img src="../../assets/image/interhome.png" class="repeat" v-if="runners">
+          <img src="../../assets/image/7-home.png" class="repeat" v-if="runners">
         </div>
       </div>
     </div>

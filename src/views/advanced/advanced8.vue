@@ -13,7 +13,7 @@
         <transition name="fade1">
           <div v-if="onef" style="width: 100%; height: 100%;display:block;position: absolute; ">
 
-            <p class="fontsizes">{{this.countpage}}/{{ this.question}}</p>
+            <p class="fontsizes" v-if="showNum">{{this.countpage}}/{{ this.question}}</p>
           </div>
         </transition>
         <transition name="fade1">
@@ -203,10 +203,10 @@
           }, 3000);
         }
       }
-
     },
     data() {
       return {
+        showNum:false,
         popp: false,
         spanp:'',
         ruleimg8:false,
@@ -222,7 +222,7 @@
         onef: true,
         reload: true,
         over:false,
-        question: 5,
+        question: 10,
         soundsWrong:false,
         soundscorrect:false,
         short1:false,
@@ -892,6 +892,7 @@
           this.sort2=this.items1[1].value;
           this.sort3=this.items1[2].value;
           setTimeout(() => {
+            this.showNum = false;
             this.onef = false;
             setTimeout(() => {
               this.reload = false;

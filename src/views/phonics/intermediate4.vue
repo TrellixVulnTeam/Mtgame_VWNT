@@ -13,7 +13,7 @@
         <transition name="fade1">
           <div v-if="onef" style="width: 100%; height: 100%;display:block;position: absolute; ">
 
-            <p class="fontsizes">{{this.countpage}}/{{ this.question}}</p>
+            <p class="fontsizes" v-if="showNum">{{this.countpage}}/{{ this.question}}</p>
           </div>
         </transition>
         <transition name="fade1">
@@ -176,7 +176,6 @@
               // items5=[];
             }, 500);
           }, 2000);
-
         }
       },
       'short1':function (newVal) {
@@ -207,6 +206,7 @@
     },
     data() {
       return {
+        showNum:false,
         popp: false,
         spanp:'',
         ruleimg8:false,
@@ -933,7 +933,7 @@
           this.sort1=this.items1[0].value;
           this.sort2=this.items1[1].value;
           this.sort3=this.items1[2].value;
-
+          this.showNum = true;
           setTimeout(() => {
             this.onef = false;
             setTimeout(() => {

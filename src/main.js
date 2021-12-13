@@ -26,16 +26,18 @@ Vue.prototype.$axios = axios;
 
 // axios.defaults.baseURL = 'http://dodosurvey.com/monkeytownHK'  // api 即上面 vue.config.js 中配置的地址
 //axios.defaults.baseURL = 'http://localhost:8080/monkeytownCN';
-axios.defaults.baseURL = 'http://107.150.121.34/monkeytownHK';
-axios.defaults.baseURL2 = 'http://107.150.121.34/monkeytownHK';
+axios.defaults.baseURL = 'http://107.150.121.34/monkeytownCN';
+axios.defaults.baseURL2 = 'http://107.150.121.34/monkeytownCN';
 //axios.defaults.baseURL = 'http://localhost:8080/monkeytownCN';
 //axios.defaults.baseURL2 = 'http://localhost:8080/monkeytownCN';
 // axios.defaults.baseURL3 = 'http://localhost:8080/monkeytownHK';
 localStorage.setItem('localurl',axios.defaults.baseURL);
 //版本号，更新需要+1
-localStorage.setItem('version',25);
+localStorage.setItem('version',26);
+//发布 ios OR android
+localStorage.setItem('system','android');
 //发布到hk版还是cn版
-localStorage.setItem('local','hk');
+localStorage.setItem('local','cn');
 //是否发布到应用宝
 localStorage.setItem('yingyongbao','false');
 Vue.use(Bounce)

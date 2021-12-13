@@ -117,10 +117,8 @@
           <img src="../assets/image/icon_coin.png" class="coinstyle">
           <span class="fontsize leftmar2">{{sum}}</span>
         </div>
-
         <div @click="routerabout">
           <img src="../assets/image/ahome.png" class="repeat">
-
         </div>
       </div>
     </div>

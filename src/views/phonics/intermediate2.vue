@@ -157,9 +157,6 @@
             this.list1 =this.listG[this.countpage-1];
             this.truesound=this.pic+this.list1[0].audio;
             this.question=this.list1[0].question;
-            console.log(this.list1);
-            console.log(this.truesound);
-            console.log(this.question);
             for(var i=0;i<this.list1.length;i++){
               this.list1[i].bg=this.pic+this.list1[i].bg;
               this.list1[i].audio2=this.pic+this.list1[i].audio2;
@@ -168,28 +165,11 @@
             }
             this.video=true;
           }, 2000);
-        };
+        }
       },
       'video': function(newVal) {
         console.log('播放');
         if (this.video === true) {
-          // var myVid = document.getElementById("titlemp3");
-          // if (myVid != null) {
-          //   var duration;
-          //   myVid.load();
-          //   myVid.oncanplay = function() {
-          //     //      console.log("myVid.duration",myVid.duration);
-          //     this.playtime = myVid.duration;
-          //     console.log(this.playtime);
-          //   }
-          // }
-          // var audio = document.getElementById('titlemp3');
-          // audio.currentTime = 0;
-          //   audio.play();
-          // setTimeout(() => {
-          //   this.video=false;
-          // },4000);
-
               setTimeout(() => {
                 this.video=false;
               },8000);
@@ -338,13 +318,6 @@
           this.list1[i].fail=0;
         }
 
-        // if(this.question.length>10){
-        // 	this.questionsize=1;
-        // }else{
-        // 	this.questionsize=0;
-        //   }
-        //    this.list1=res.data.Maplist;
-        // this.question=res.data.question;
       }, res => {
         alertMsg("You must be connected to the internet.<br>Please connect and try again.");
       });
@@ -360,21 +333,12 @@
       }, res => {
         alertMsg("You must be connected to the internet.<br>Please connect and try again.");
       });
-      if(this.onef == true) {
+      if(this.onef === true) {
         setTimeout(() => {
           this.onef = false;
           this.video=true;
-        }, 4000);
+        }, 1000);
       }
-
-
-      if(window.history && window.history.pushState){
-        history.pushState(null,null, document.URL);
-        window.addEventListener('popstate', this.gomemu,false);
-      }
-      document.body.addEventListener('touchmove',this.bodyScroll,{passive: false});
-    },
-    mounted() {
       setTimeout(() => {
         if(this.list1.length>0){
           const canvas = document.getElementById('canvas'); // 初次进来初始化画布
@@ -396,7 +360,37 @@
           this.setCanvasStyle();
           this.zhezhao=false;
         }
-      }, 4000);
+      }, 1000);
+
+      if(window.history && window.history.pushState){
+        history.pushState(null,null, document.URL);
+        window.addEventListener('popstate', this.gomemu,false);
+      }
+      document.body.addEventListener('touchmove',this.bodyScroll,{passive: false});
+    },
+    mounted() {
+/*      setTimeout(() => {
+        if(this.list1.length>0){
+          const canvas = document.getElementById('canvas'); // 初次进来初始化画布
+          let imgBox = document.getElementById('imgBox');
+          let imgsty = document.getElementsByClassName('imgsty');
+          for (let i=0; i<imgsty.length; i++) {
+            let coreP = { // 获取图片中心点位置
+              corePx: imgsty[i].offsetParent.offsetLeft + imgsty[i].offsetParent.offsetWidth/2,
+              corePy: imgsty[i].offsetParent.offsetTop + imgsty[i].offsetParent.offsetHeight/2
+            }
+            this.centerP.push(coreP);
+          }
+          console.log(this.centerP);
+          this.canvasObj = canvas;
+          this.canvasH = imgBox.clientHeight; // 存储canvas的高度，用于清空画布
+          canvas.width = imgBox.clientWidth; // 动态赋值canvas的宽度
+          canvas.height = imgBox.clientHeight; // 动态赋值canvas的高度
+          this.context = canvas.getContext('2d');
+          this.setCanvasStyle();
+          this.zhezhao=false;
+        }
+      }, 4000);*/
     },
     destroyed() {
       document.body.removeEventListener('touchmove',this.bodyScroll,{passive: false});
@@ -423,7 +417,6 @@
             }else if(i===3){
               this.show4=true;
             }
-            // console.log(i);
           }
         }
       },
@@ -495,7 +488,7 @@
           } else {
             canvasX = e.changedTouches[0].clientX - t.parentNode.offsetLeft;
             canvasY = e.changedTouches[0].clientY - t.parentNode.offsetTop;
-          };
+          }
           // 连接到移动的位置并上色
           this.context.lineTo(canvasX, canvasY);
           this.context.stroke();

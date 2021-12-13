@@ -139,6 +139,7 @@ import $ from "jquery";
 
 		},
 		created() {
+      console.log(new Date());
 			if (localStorage.getItem('checkbox') === true || localStorage.getItem('checkbox') === "true") {
 				this.username = localStorage.getItem('username');
 				this.password = localStorage.getItem('password');
@@ -154,11 +155,12 @@ import $ from "jquery";
       		res => {
             if(res.data.success==="success"){
               this.zhezhao=false;
-			        localStorage.setItem('update',false);
+			        //localStorage.setItem('update',false);
             }else if(res.data.success==="false"){
               this.zhezhao=true;
-              //alertMsgNew("Please update your app to new version to continue.");
-			        localStorage.setItem('update',true);
+              alertMsg2("Please update your app to new version to continue.");
+              console.log(new Date());
+			        //localStorage.setItem('update',true);
             }
       		},
       		res => {
@@ -318,9 +320,8 @@ import $ from "jquery";
  /*@import url('myscript/dist/myscript.min.css');*/
 
 	body {
-		/*display: flex;*/
-		padding: 0px;
-		margin: 0px;
+		padding: 0;
+		margin: 0;
 		width: 100%;
 		height: 100%;
 		display: block;
@@ -332,9 +333,8 @@ import $ from "jquery";
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
 		color: #2c3e50;
-		//display: flex;
-		padding: 0px;
-		margin: 0px;
+		padding: 0;
+		margin: 0;
 		width: 100%;
 		height: 100%;
 		display: block;
@@ -350,8 +350,8 @@ import $ from "jquery";
 	}
 	input,textarea {
 	    -webkit-user-select:auto; /*webkit浏览器*/
-	    margin: 0px;
-	    padding: 0px;
+	    margin: 0;
+	    padding: 0;
 	    outline: none;
 	}
 	*{
@@ -397,7 +397,7 @@ import $ from "jquery";
 
 	//pubilc
 	.fontsize {
-		font-family: pepper;
+		font-family: pepper,serif;
 		color: white;
 		bottom: 12%;
 		left: 6%;
@@ -408,18 +408,12 @@ import $ from "jquery";
 		//margin-left: 2%;
 	}
 
-  @media screen and (min-width: 375px) and (max-width: 811px){
-    .text2{
-      font-size: 22px !important;
-    }
-  }
+
 
   .text2{
        width: 100%;
-       // height: 150px;
-       // line-height: 78px;
        font-size: 2rem;
-       font-family: cboard;
+       font-family: cboard,serif;
        position: relative;
        font-weight: bold;
        -webkit-background-clip: text;
@@ -440,7 +434,7 @@ import $ from "jquery";
        100%{background-position: 0px 0;}
   }
 	.fontsizes {
-		font-family: kg;
+		font-family: kg,serif;
 		font-weight: bolder;
 		color: #cc6453;
 		text-align: center;
@@ -575,29 +569,13 @@ import $ from "jquery";
 			width: 13%;
 		}
 	}
-    @media screen and (min-width: 700px) and (max-width: 812px) {
-		// .start01 .rotate .plane{
-		// 	    // width: 35%;
-		// 	    // position: absolute;
-		// 	    // top: -45%;
-		// 	    left: 50%;
-		// 		    width: 12rem;
-		// 		    position: absolute;
-		// 		    top: -7rem;
-		// }
-		// .start01 .rotate .m_town{
-		// 	// width: 80%;
-		// 	width: 20rem;
-		// 	    top: 0rem;
-		// 		bottom: 0;
-		// }
 
-		}
 	@media screen and (min-width: 812px) and (max-width: 1023px) {
 
 		.fontsizes {
 			margin-top: 18%;
 		}
+
 
 		.pause {
 			width: 10%;
@@ -613,7 +591,8 @@ import $ from "jquery";
 			bottom: 0%;
 		}
 	}
-    @media screen and (min-width: 1200px) and (max-width: 1600px){
+
+  @media screen and (min-width: 1200px) and (max-width: 1600px){
 		.fontsize {
 			font-family: pepper;
 			color: white;
@@ -635,10 +614,16 @@ import $ from "jquery";
 			width: 13%;
 		}
 	}
+
   @media screen and (min-width: 1600px)  {
     .repeat {
       bottom: 0%;
       width: 11%;
+    }
+    @media screen and (min-width: 375px) and (max-width: 811px){
+      .text2{
+        font-size: 22px !important;
+      }
     }
   }
 </style>

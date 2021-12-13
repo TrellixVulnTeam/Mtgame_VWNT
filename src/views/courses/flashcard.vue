@@ -926,8 +926,48 @@
             img:require('../../assets/image/Happybirthday/Friends.png')
           },
         ],
-        HolidaysPart1:[
+        HolidaysPart2:[
           {
+            id:1,
+            cardName:'stocking',
+            audio:require('../../assets/Flashcard Audio/december/stocking.mp3'),
+            img:require('../../assets/image/ChristmasMagic/Stocking.png')
+          },{
+            id:2,
+            cardName:'sleigh',
+            audio:require('../../assets/Flashcard Audio/december/sleigh.mp3'),
+            img:require('../../assets/image/ChristmasMagic/Sleigh.png')
+          },{
+            id:3,
+            cardName:'reindeer',
+            audio:require('../../assets/Flashcard Audio/december/reindeer.mp3'),
+            img:require('../../assets/image/ChristmasMagic/Reindeer.png')
+          },{
+            id:4,
+            cardName:'bells',
+            audio:require('../../assets/Flashcard Audio/december/bells.mp3'),
+            img:require('../../assets/image/ChristmasMagic/Bells.png')
+          },{
+            id:5,
+            cardName:'santa Claus',
+            audio:require('../../assets/Flashcard Audio/december/Santa claus.mp3'),
+            img:require('../../assets/image/ChristmasMagic/Santa Claus.png')
+          },{
+            id:6,
+            cardName:'elf',
+            audio:require('../../assets/Flashcard Audio/december/elf.mp3'),
+            img:require('../../assets/image/ChristmasMagic/Elf.png')
+          },{
+            id:7,
+            cardName:' ',
+            audio:'',
+            img:''
+          },{
+            id:8,
+            cardName:' ',
+            audio:'',
+            img:''
+          },{
             id:1,
             cardName:'stocking',
             audio:require('../../assets/Flashcard Audio/december/stocking.mp3'),
@@ -987,9 +1027,9 @@
             cardName:' ',
             audio:'',
             img:''
-          },
+          }
         ],
-        HolidaysPart2:[
+        HolidaysPart1:[
           {
             id:1,
             cardName:'fireplace',
@@ -1170,13 +1210,11 @@
       //初始化pop
       //单元数组 单元名+part12，前八个为walker，后四个runner
       createdpop(){
-        if (this.unit==='Animals'){
-          if (this.level === 'WALKERS') {
-            this.list = this.$data[this.unit.replace(" ", "") + this.part.replace("p", "P")].slice(0, 8);
-          } else {
+        if (this.unit==='Animals' && this.level === 'RUNNERS'){
             this.list = this.$data[this.unit.replace(" ", "") + this.part.replace("p", "P")].slice(8,20);
-          }
-        }else {
+        }else if(this.unit==='Holidays' && this.part === 'part2' && this.level === 'RUNNERS'){
+            this.list = this.$data[this.unit.replace(" ", "") + this.part.replace("p", "P")].slice(8,20);
+        }else{
           if (this.level === 'WALKERS') {
             this.list = this.$data[this.unit.replace(" ", "") + this.part.replace("p", "P")].slice(0, 8);
           } else {
@@ -1185,7 +1223,7 @@
         }
         this.title = this.$data.titleUrl[this.unit.replace(" ", "") + this.part.replace("p", "P")];
       },
-      //pop向左右切换卡牌http://103.218.241.33/assets/image/6-6logo.png
+      //pop向左右切换卡牌
       turnpop(turn){
         if (turn==='left'&&this.flashCardId!==1) {
           this.flashCardId=this.flashCardId-2;
@@ -1350,38 +1388,7 @@
     margin: 0 1.6% 0 1.6%;
   }
 
-  //@media only screen and (min-device-height:  : 768px) and (max-device-height : 1366px)  and (orientation : landscape) {
-  //  .cardlist {
-  //    width: 80%;
-  //    height: 90%;
-  //    left: 10%;
-  //    top: 10%;
-  //    position: absolute;
-  //  }
-  //
-  //}
-  //
-  //
-  //@media only screen and (min-device-height:  : 812px) and (max-device-height : 375px)  and (orientation : landscape) {
-  //  .cardlist {
-  //    width: 80%;
-  //    height: 90%;
-  //    left: 10%;
-  //    top: -5%;
-  //    position: absolute;
-  //  }
-  //
-  //  .jump{
-  //  color: white;
-  //  font-size: 25px;
-  //  font-family: kg;
-  //  display: inline-block;
-  //  padding: 5px 35px;
-  //  background-color: #43BE76;
-  //  border-radius: 30px;
-  //  margin-top: -5px;
-  //  }
-  //}
+
   .cardright {
     width: 15%;
     right: 0;
@@ -1557,233 +1564,20 @@
     max-width: 100%;
   }
 
-  //@media screen and (max-width: 481px) {
-  //  .fontsize {
-  //    bottom: 16%;
-  //    position: absolute;
-  //    font-size: 1.2rem;
-  //    margin-left: 2%;
-  //  }
-  //}
-  //
-  //@media screen and (min-width: 482px) and (max-width: 569px) {
-  //  .fontsize {
-  //    bottom: 16%;
-  //    position: absolute;
-  //    font-size: 1.2rem;
-  //    margin-left: 2%;
-  //  }
-  //}
-  //
-  //
-  //@media screen and (min-width: 812px) and (max-width:895px) {
-  //  .animapng7 {
-  //    font-size: 3rem;
-  //  }
-  //}
-  //@media screen and (min-width: 896px) and (max-width:1023px) {
-  //  .animapng7 {
-  //    font-size: 3rem;
-  //  }
-  //}
-  //
-  //@media screen and (min-width: 1024px) and (max-width: 1199px) {
-  //  .fontsize {
-  //    bottom: 13%;
-  //    position: absolute;
-  //    font-size: 2.5rem;
-  //    margin-left: 2%;
-  //  }
-  //
-  //  .acstyle {
-  //    height: 70%;
-  //    position: absolute;
-  //    left: 5%;
-  //    bottom: 9%;
-  //  }
-  //
-  //  .setting {
-  //    width: 14%;
-  //    position: absolute;
-  //    right: 8%;
-  //    bottom: 0%;
-  //  }
-  //
-  //  .leftmar2 {
-  //    left: 43%;
-  //  }
-  //
-  //  .coinstyle {
-  //    height: 70%;
-  //    position: absolute;
-  //    left: 35%;
-  //    bottom: 9%;
-  //  }
-  //
-  //
-  //  .close {
-  //    width: 60px;
-  //    height: 60px;
-  //    margin: -25px;
-  //  }
-  //
-  //  .close img {
-  //    height: 60px;
-  //    width: 60px;
-  //  }
-  //  .animapng7 {
-  //    font-size: 3rem;
-  //  }
-  //  .pstyle{
-  //    font-size: 2rem;
-  //  }
-  //  .backbutton{
-  //    top: 5%;
-  //    left: 5%;
-  //  }
-  //  .toptitle{
-  //    top: 5%;
-  //  }
-  //  .list{
-  //    top: 0%;
-  //  }
-  //}
-  //
-  //@media screen and (min-width: 1200px) and (max-width: 1600px) {
-  //  .fontsize {
-  //    bottom: 13%;
-  //    position: absolute;
-  //    font-size: 3rem;
-  //    margin-left: 2%;
-  //  }
-  //
-  //  .acstyle {
-  //    height: 70%;
-  //    position: absolute;
-  //    left: 5%;
-  //    bottom: 9%;
-  //  }
-  //
-  //  .setting {
-  //    width: 14%;
-  //    position: absolute;
-  //    right: 8%;
-  //    bottom: 0%;
-  //  }
-  //
-  //  .leftmar2 {
-  //    left: 43%;
-  //  }
-  //
-  //  .coinstyle {
-  //    height: 70%;
-  //    position: absolute;
-  //    left: 35%;
-  //    bottom: 9%;
-  //  }
-  //
-  //
-  //  .close {
-  //    width: 60px;
-  //    height: 60px;
-  //    margin: -25px;
-  //  }
-  //
-  //  .close img {
-  //    height: 60px;
-  //    width: 60px;
-  //  }
-  //  .animapng7 {
-  //    font-size: 4rem;
-  //  }
-  //  .pstyle{
-  //    font-size: 2rem;
-  //  }
-  //  .backbutton{
-  //    top: 5%;
-  //    left: 5%;
-  //  }
-  //  .toptitle{
-  //    top: 5%;
-  //  }
-  //  .list{
-  //    top: 0%;
-  //  }
-  //}
-  //
-  //@media screen and (min-width: 823px) and (max-width: 824px) {
-  //  .cardlist{
-  //    top:0%;
-  //  }
-  //  .jump{
-  //    margin-top: 5px;
-  //    padding: 5px 20px;
-  //  }
-  //}
-  //
-  //@media screen and (min-width: 1600px) {
-  //
-  //  .fontsize {
-  //    bottom: 13%;
-  //    position: absolute;
-  //    font-size: 3rem;
-  //    margin-left: 2%;
-  //  }
-  //
-  //  .acstyle {
-  //    height: 70%;
-  //    position: absolute;
-  //    left: 5%;
-  //    bottom: 9%;
-  //  }
-  //
-  //  .setting {
-  //    width: 14%;
-  //    position: absolute;
-  //    right: 8%;
-  //    bottom: 0%;
-  //  }
-  //
-  //  .leftmar2 {
-  //    left: 43%;
-  //  }
-  //
-  //  .coinstyle {
-  //    height: 70%;
-  //    position: absolute;
-  //    left: 35%;
-  //    bottom: 9%;
-  //  }
-  //
-  //  .close {
-  //    width: 80px;
-  //    height: 80px;
-  //    margin: -35px;
-  //  }
-  //
-  //  .close img {
-  //    height: 80px;
-  //    width: 80px;
-  //  }
-  //  .animapng7 {
-  //    font-size: 6rem;
-  //  }
-  //  .pstyle{
-  //    font-size:3rem;
-  //  }
-  //  .backbutton{
-  //    top: 5%;
-  //    left: 5%;
-  //  }
-  //  .toptitle{
-  //    top: 5%;
-  //  }
-  //}
+
+  @media screen and (min-width: 1600px) {
+
+    .fontsize {
+      bottom: 13%;
+      position: absolute;
+      font-size: 3rem;
+      margin-left: 2%;
+    }
+  }
+
 
   //手机分辨率
-  @media only screen and (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 3),
-  (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 2),
-  (min-width: 812px) and (max-width: 1023px){
+  @media only screen and (min-width: 812px) and (max-width: 1023px){
     .eightCard div:first-child:nth-last-child(8),
     .eightCard div:nth-last-child(8):first-child ~div{
       width: 14%;
@@ -1808,9 +1602,7 @@
   }
 
   //手机分辨率
-  @media only screen and (min-device-height: 375px) and (max-device-height: 811px) and (-webkit-device-pixel-ratio: 3),
-  (min-device-height: 375px) and (max-device-height: 811px) and (-webkit-device-pixel-ratio: 2),
-  (min-width: 375px) and (max-width: 811px){
+  @media only screen and (min-width: 375px) and (max-width: 811px){
     .jump {
       font-size: 25px;
       padding: 5px 20px ;
@@ -1819,9 +1611,7 @@
   }
 
   //平板分辨率
-  @media only screen and (min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 3),
-  (min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 2),
-  (min-width: 1024px) and (max-width: 1600px){
+  @media only screen and (min-width: 1024px) and (max-width: 1600px){
     .eightCard div:first-child:nth-last-child(8),
     .eightCard div:nth-last-child(8):first-child ~ div {
       width: 18%;

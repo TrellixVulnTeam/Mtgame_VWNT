@@ -593,40 +593,32 @@
       sound() {
         this.show = !this.show;
         if (this.show === false) {
-          // this.$refs.MusicPlay.pause();
           localStorage.setItem("gamemusic", "false");
         } else {
-          // this.$refs.MusicPlay.play();
           localStorage.setItem("gamemusic", "true");
         }
       },
       // 设置绘画配置
       setCanvasStyle() {
-        console.log('setCanvasStyle');
         if(997<document.body.offsetWidth&&document.body.offsetWidth<1025){
-          console.log('55');
          this.context.lineWidth =55;
         // this.context.shadowBlur = this.config.shadowBlur;
         this.context.shadowColor = this.config.lineColor;
         this.context.strokeStyle = this.config.lineColor;
         }else if(1024<document.body.offsetWidth&&document.body.offsetWidth<1356){
-          console.log('65');
           this.context.lineWidth = 65;
         // this.context.shadowBlur = this.config.shadowBlur;
         this.context.shadowColor = this.config.lineColor;
         this.context.strokeStyle = this.config.lineColor;
         }else if(997>document.body.offsetWidth&&document.body.offsetWidth>895){
-          console.log('35');
           this.context.lineWidth = 38;
         this.context.shadowColor = this.config.lineColor;
         this.context.strokeStyle = this.config.lineColor;
         }else if(document.body.offsetWidth>1355){
-          console.log('85');
           this.context.lineWidth = 85;
         this.context.shadowColor = this.config.lineColor;
         this.context.strokeStyle = this.config.lineColor;
         }else{
-          console.log('else');
           this.context.lineWidth = this.config.lineWidth;
         // this.context.shadowBlur = this.config.shadowBlur;
         this.context.shadowColor = this.config.lineColor;
@@ -671,7 +663,7 @@
           this.listF[i] = this.listF[currentRandom];
           this.listF[currentRandom] = current;
         }
-        console.log(this.listF);
+
         this.question = this.listF.length;
         this.list1 = this.listF[this.countpage - 1];
         this.name = this.list1[this.countpage - 1].name;
@@ -687,9 +679,8 @@
           setTimeout(() => {
             this.video = true;
             this.onef = false;
-            this.resize();
-
-          }, 1500);
+          }, 1000);
+          this.resize();
         }
 
       }, res => {

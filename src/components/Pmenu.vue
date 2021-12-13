@@ -5,7 +5,7 @@
     <div class="contain" id="container">
       <!--<img src="../assets/image/phonicsbg.png" style="width: 100%;background-color: #204900; height: 100%;display:block;position: absolute;">-->
 
-      <img src="../assets/image/prightback.png" @click="back" class="backbutton" />
+<!--      <img src="../assets/image/prightback.png" @click="back" class="backbutton" />-->
       <h2 class="styletit">
         <img src="../assets/image/ptop.png">
         <button :style="{fontFamily: unit==='Ii' ? 'OldR' : 'pepper'}">{{unit}}</button>
@@ -117,10 +117,11 @@
           <img src="../assets/image/icon_coin.png" class="coinstyle">
           <span class="fontsize leftmar2">{{sum}}</span>
         </div>
-
+        <div @click="back">
+          <img src="../assets/image/pback.png"  class="pause">
+        </div>
         <div @click="routerabout">
           <img src="../assets/image/phome.png" class="repeat">
-
         </div>
       </div>
     </div>
@@ -1133,9 +1134,9 @@
     overflow-y: hidden;
   }
 
-  /*.menulist::-webkit-scrollbar {*/
-    /*display: none;*/
-  /*}*/
+/*  .menulist::-webkit-scrollbar {
+    display: none;
+  }*/
 
   .listimg {
     margin-top: 4%;

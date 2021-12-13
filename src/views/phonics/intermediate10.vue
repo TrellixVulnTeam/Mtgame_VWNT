@@ -127,7 +127,7 @@
     name: "intermediate10",
     watch: {
       'onef': function(newVal) {
-        if (this.onef == true) {
+        if (this.onef === true) {
           this.truelist=[];
           setTimeout(() => {
             this.wordname = this.listBoss[this.countpage - 1][0].question;
@@ -142,7 +142,7 @@
         }
       },
       'video': function(newVal) {
-        if (this.video == true) {
+        if (this.video === true) {
           setTimeout(() => {
             this.video = false;
             // this.zhezhao = false;
@@ -494,7 +494,7 @@
                     path: "/presult", //跳转的路径
                     query: {
                       type: this.type,
-                      partName: 'intermediate9',
+                      partName: 'intermediate10',
                       account: this.account,
                       menuId: this.menuId,
                       unitsId: this.unitsId,
@@ -521,7 +521,7 @@
                     path: "/presult", //跳转的路径
                     query: {
                       type: this.type,
-                      partName: 'intermediate9',
+                      partName: 'intermediate10',
                       account: this.account,
                       menuId: this.menuId,
                       unitsId: this.unitsId,
@@ -576,7 +576,7 @@
                   path: "/presult", //跳转的路径
                   query: {
                     type: this.type,
-                    partName: 'intermediate9',
+                    partName: 'intermediate10',
                     account: this.account,
                     menuId: this.menuId,
                     unitsId: this.unitsId,
@@ -586,10 +586,8 @@
                 });
               }, 2000);
             }, 2000);
-
           }
         }
-
       },
       bodyScroll(event) {
         event.preventDefault();
@@ -643,7 +641,7 @@
         this.audios = this.pic + this.listBoss[this.countpage - 1][0].audio;
         this.question = this.listBoss.length;
         this.shownumb = true;
-        if (this.onef == true && this.shownumb == true) {
+        if (this.onef === true && this.shownumb == true) {
           setTimeout(() => {
             this.onef = false;
             this.video = true;

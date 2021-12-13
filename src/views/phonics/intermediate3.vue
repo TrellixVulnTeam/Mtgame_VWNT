@@ -14,7 +14,7 @@
         <transition name="fade1">
           <div v-if="onef" style="width: 100%; height: 90%;display:block;position: absolute;">
             <!--<img src="../../assets/image/phonicsbg.png" style="width: 100%; z-index: -1;background-color: #204900; height: 100%;display:block;position: absolute;">-->
-            <p class="fontsizes">{{this.countpage}}/{{this.question}}</p>
+            <p class="fontsizes" v-if="showNum">{{this.countpage}}/{{this.question}}</p>
           </div>
         </transition>
         <transition name="fade1">
@@ -196,6 +196,7 @@
     },
     data() {
       return {
+        showNum:false,
         popp: false,
         ruleimg8: false,
         ruleimg10: false,
@@ -227,7 +228,7 @@
         unitsId: '',
         unit: '',
         menuId: '',
-        question: 10,
+        question: 5,
         listF: [],
         countpage: 1,
         account: 0,
@@ -660,8 +661,6 @@
         this.question = this.listF.length;
         //把当前页的题目传给list1
         this.list1 = this.listF[this.countpage - 1];
-        console.log('1');
-        console.log(this.list1);
         //题目文字提示部分
         this.titlequesion=this.list1[0].question;
         //题目的音频
@@ -674,9 +673,8 @@
             this.audio =  this.list1[l].audio;
           }
         }
-        console.log('2');
-        console.log(this.list1);
         if (this.onef === true) {
+          this.showNum = true;
          setTimeout(() => {
           this.onef = false;
           // this.video = true;
@@ -686,17 +684,6 @@
       }, res => {
         alertMsg("You must be connected to the internet.<br>Please connect and try again.");
       });
-      // 统计时间
-      // this.$axios.post(this.timeurl, qs.stringify({
-      //   id: timestamp,
-      //   time: timestamp,
-      //   name:this.gamename,
-      //   studentId:localStorage.getItem('studentId')
-      // })).then(res => {
-      //   // console.log(res.data);
-      // }, res => {
-      //   alertMsg("You must be connected to the internet.<br>Please connect and try again.");
-      // });
       if(window.history && window.history.pushState){
          history.pushState(null,null, document.URL);
          window.addEventListener('popstate', this.gomemu,false);

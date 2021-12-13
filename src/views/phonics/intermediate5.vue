@@ -13,7 +13,7 @@
         <transition name="fade1">
           <div v-if="onef" style="width: 100%; height: 90%;display:block;position: absolute;">
             <!--<img src="../../assets/image/phonicsbg.png" style="width: 100%; z-index: -1;background-color: #204900; height: 100%;display:block;position: absolute;">-->
-            <p class="fontsizes">{{this.countpage}}/{{this.question}}</p>
+            <p class="fontsizes" v-if="showNum">{{this.countpage}}/{{this.question}}</p>
           </div>
         </transition>
         <transition name="fade1">
@@ -142,6 +142,7 @@
     },
     data() {
       return {
+        showNum: false,
         popp: false,
         ruleimg8: false,
         ruleimg10: false,
@@ -364,6 +365,7 @@
           }
         }
         if (this.onef == true) {
+          this.showNum = true;
           setTimeout(() => {
             this.onef = false;
             this.video = true;

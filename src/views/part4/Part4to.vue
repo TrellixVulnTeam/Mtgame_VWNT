@@ -266,7 +266,6 @@
                   console.log('标记9');
                   jsPlumb.detach(component);
                 });
-                console.log('标记10');
                 // configure some drop options for use by all endpoints.
                 var exampleDropOptions = {
                   tolerance: "touch",
@@ -297,8 +296,6 @@
                   isTarget: false,
                   dropOptions: exampleDropOptions
                 };
-                console.log('标记12');
-                console.log(exampleEndpoint2);
                 var exampleEndpoint3 = {
                   endpoint: ["Image", {
                     src: "http://103.218.241.33/monkeytreeApp/www/assets/image/star.png"
@@ -322,12 +319,9 @@
                   isTarget: true,
                   dropOptions: exampleDropOptions
                 };
-                console.log(exampleEndpoint3);
                 if (that.list1.length > 2 || that.list2.length > 2) {
                   that.changwidth = true;
-                  console.log('标记13');
                 }
-                console.log('标记11');
                 for (var i = 0; i < that.list1.length; i++) {
                   if(that.loaded===true){
                     instance.addEndpoint(
@@ -336,7 +330,6 @@
                     },
                     exampleEndpoint2
                   )
-                    console.log('标记14');
                   }
                 }
                 for (var j = 0; j < that.list2.length; j++) {
@@ -352,70 +345,31 @@
 
                 instance.bind("connectionDragStop", function(connection) {
                   that.zhezhao = true;
-                  console.log(connection);
-                  console.log(that.list1);
                   var truetime = that.list1.length;
                   for (var i = 0; i < that.list1.length; i++) {
-                    //只要两边数量一致就不需要判断
                     if (connection.sourceId === that.list1[i].id) {
                     //connection.targetId值右边命中的id，that.list1[i].targetId指右边本身的id
                       if (connection.targetId === that.list1[i].targetId) {
-                        console.log(connection.suspendedElementId);
-                        //貌似不存在为空的情况
-                        // if (connection.target != null) {
-                          // if (that.truelist.length <= 0) {
                             that.truelist.push(connection.targetId);
-                            for (var f = 0; f < that.falselist.length; f++) {
-                              if (that.falselist[f] === connection.suspendedElementId) {
-                                that.falselist.splice(f, 1);
-                                console.log(that.falselist);
-                              }
-                            }
-                          // } else {
-                          //   that.truelist.push(connection.targetId);
-                          //   for (var f = 0; f < that.falselist.length; f++) {
-                          //     if (that.falselist[f] === connection.suspendedElementId) {
-                          //       that.falselist.splice(f, 1);
-                          //     }
-                          //   }
-                          // }
-                        // } else {
-                        //   for (var t = 0; t < that.truelist.length; t++) {
-                        //     if (that.truelist[t] === connection.suspendedElementId) {
-                        //       that.truelist.splice(t, 1);
-                        //     }
-                        //   }
-                        //   for (var f = 0; f < that.falselist.length; f++) {
-                        //     if (that.falselist[f] === connection.suspendedElementId) {
-                        //       that.falselist.splice(f, 1);
-                        //     }
-                        //   }
-                        // }
+                            // for (var f = 0; f < that.falselist.length; f++) {
+                            //   if (that.falselist[f] === connection.suspendedElementId) {
+                            //     that.falselist.splice(f, 1);
+                            //   }
+                            // }
                       } else {
-                        console.log('395h');
+                        console.log(361);
                         for (var g = 0; g < that.list1.length; g++) {
                           if (connection.targetId === that.list1[g].targetId) {
-                            // if (connection.target != null) {
                               if (that.falselist.length <= 0) {
                                 that.falselist.push(connection.targetId);
-                                console.log(that.falselist);
-                                for (var t = 0; t < that.truelist.length; t++) {
-                                  if (that.truelist[t] === connection.suspendedElementId) {
-                                    that.truelist.splice(t, 1);
-                                    console.log('405h');
-                                  }
-                                }
+                                // for (var t = 0; t < that.truelist.length; t++) {
+                                //   if (that.truelist[t] === connection.suspendedElementId) {
+                                //     that.truelist.splice(t, 1);
+                                //   }
+                                // }
                               } else {
                                 that.falselist.push(connection.targetId);
                               }
-                            // } else {
-                            //   console.log('不为空');
-                            //   for (var f = 0; f < that.falselist.length; f++) {
-                            //     if (that.falselist[f] === connection.suspendedElementId) {
-                            //       that.falselist.splice(f, 1);
-                            //     }
-                            //   }
-                            // }
                           }
                         }
                       }
@@ -423,17 +377,14 @@
                   }
                   setTimeout(() => {
                     that.nowtime = document.getElementsByTagName("svg").length;
-                    console.log(that.nowtime);
-                    console.log(truetime);
                     //连接的数量,指连接满
                     if (that.nowtime === truetime) {
-                      console.log('这这');
                       that.zhezhao = true;
                       that.countpage += 1;
-                      console.log(that.falselist.length);
                       if (that.falselist.length <= 0) { //错误list的长度
                         that.showbg = 1;
                         that.soundscorrect = true;
+                        that.right +=1;
                         for (var i = 0; i < that.list2.length; i++) {
                           //展示星星
                           that.account += 1;
@@ -453,7 +404,6 @@
                             that.list1 = [];
                             for (var i = 0; i < that.list.length; i++) {
                               that.list1.push(that.list[i]);
-                              // that.list2.push(that.list[i]);
                             }
                             for (var u = 0; u < that.list.length; u++) {
                               that.list2.push({
@@ -473,6 +423,7 @@
                             that.zhezhao = false;
                           } else {
                             setTimeout(() => {
+                              console.log(that.right);
                               that.zhezhao = false;
                               that.$router.push({
                                 //核心语句
@@ -480,7 +431,7 @@
                                 query: {
                                   type: that.type,
                                   partName: 'partNameD',
-                                  account: that.account,
+                                  account: that.right,
                                   menuId: that.menuId,
                                   unitsId: that.unitsId,
                                   unit: that.unit,
@@ -507,7 +458,6 @@
                           }
                         }
                         that.account = that.account + that.list2.length - that.falselist.length;
-                        //console.log( that.account);
                         setTimeout(() => {
                           that.soundsWrong = false;
                           for (var i = 0; i < svgLine.length; i++) {
@@ -612,7 +562,6 @@
                     }
                   }, 400);
                 });
-                console.log('标记7');
               });
             });
           }, 500);
@@ -622,6 +571,7 @@
 
     data() {
       return {
+        right:0,
         num:0,
         popp: false,
         ruleimg8: false,
@@ -746,13 +696,13 @@
         this.popp = !this.popp;
       },
       help() {
-        if (this.onef == false) {
+        if (this.onef === false) {
           this.spanp = "Match the pictures with the correct words.";
           this.popp = !this.popp;
-          if (this.list1[0].rank == 0) {
+          if (this.list1[0].rank === 0) {
             this.ruleimg8 = true;
             this.ruleimg12 = false;
-          } else if (this.list1[0].rank == 1) {
+          } else if (this.list1[0].rank === 1) {
             this.ruleimg8 = false;
             this.ruleimg12 = true;
           }
@@ -826,7 +776,6 @@
             this.question = this.listD.length;
           }
           this.num = this.question * this.listD[0].length;
-          console.log(this.question * this.listD[0].length);
         }else if(this.part==='part2'){
           for (let i in res.data.ListPart2) {
             this.listD.push(res.data.ListPart2[i]); //属性
@@ -846,7 +795,6 @@
         this.list = this.listD[this.countpage - 1];
         for (var i = 0; i < this.list.length; i++) {
           this.list1.push(this.list[i]);
-          // this.list2.push(this.list[i]);
         }
         for (var u = 0; u < this.list.length; u++) {
           this.list2.push({

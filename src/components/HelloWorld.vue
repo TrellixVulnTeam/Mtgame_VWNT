@@ -57,7 +57,7 @@
             <img src="../assets/image/9-9logo1.png" style="width: 50%;" v-if="bgimg[18].active&&part=='part1'">
 						<img src="../assets/image/10-10logo1.png" style="width: 50%;" v-if="bgimg[19].active&&part=='part1'">
 						<img src="../assets/image/11-11logo1.png" style="width: 50%;" v-if="bgimg[20].active&&part=='part1'">
-						<img src="../assets/image/12-12logo1.png" style="width: 50%;" v-if="bgimg[21].active&&part=='part1'">
+						<img src="../assets/image/12-logo1.png" style="width: 50%;" v-if="bgimg[21].active&&part=='part1'">
             <img src="../assets/image/1-1logo1.png" style="width: 50%;" v-if="bgimg[22].active&&part=='part1'">
 						<img src="../assets/image/2-2logo1.png" style="width: 50%;" v-if="bgimg[23].active&&part=='part1'">
             <!--part2-->
@@ -82,7 +82,7 @@
             <img src="../assets/image/9-9logo2.png" style="width: 50%;" v-if="bgimg[18].active&&part=='part2'">
 						<img src="../assets/image/10-10logo2.png" style="width: 50%;" v-if="bgimg[19].active&&part=='part2'">
 						<img src="../assets/image/11-11logo2.png" style="width: 50%;" v-if="bgimg[20].active&&part=='part2'">
-						<img src="../assets/image/12-12logo2.png" style="width: 50%;" v-if="bgimg[21].active&&part=='part2'">
+						<img src="../assets/image/12-logo2.png" style="width: 50%;" v-if="bgimg[21].active&&part=='part2'">
             <img src="../assets/image/1-1logo2.png" style="width: 50%;" v-if="bgimg[22].active&&part=='part2'">
 						<img src="../assets/image/2-2logo2.png" style="width: 50%;" v-if="bgimg[23].active&&part=='part2'">
             <!--part3-->
@@ -2207,14 +2207,9 @@
 	}
 
 	@media screen and (min-width: 736px) and (max-width:811px){
-		.roleimg{
-			// height: 45%;
-			// margin-top: -5px;
-		}
 		.twomenu{
 			padding-top: 15%;
 		}
-
 	}
 
 	@media screen and (min-width: 812px) and (max-width:895px) {

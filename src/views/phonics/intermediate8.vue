@@ -178,7 +178,7 @@
               this.list1[i].fail=0;
             }
             this.video=true;
-          }, 10000);
+          }, 1000);
         }
       },
       'video': function(newVal) {
@@ -329,11 +329,32 @@
         }
         console.log('created的onef前面'+new Date().toLocaleTimeString());
         if(this.onef === true) {
-          setTimeout(() => {
             this.onef = false;
             this.video=true;
-          }, 2000);
         }
+        setTimeout(() => {
+          if(this.list1.length>0){
+            const canvas = document.getElementById('canvas'); // 初次进来初始化画布
+            let imgBox = document.getElementById('imgBox');
+            let imgsty = document.getElementsByClassName('imgsty');
+            console.log('mounted'+new Date().toLocaleTimeString());
+            for (let i=0; i<imgsty.length; i++) {
+              //这里会报错，是因为图片没有加载出来就获取图片的中心位置，适当延长setTimeout的时间，等待图片加载完毕再获取中心位置
+              let coreP = { // 获取图片中心点位置
+                corePx: imgsty[i].offsetParent.offsetLeft + imgsty[i].offsetParent.offsetWidth/2,
+                corePy: imgsty[i].offsetParent.offsetTop + imgsty[i].offsetParent.offsetHeight*0.75
+              }
+              this.centerP.push(coreP);
+            }
+            this.canvasObj = canvas;
+            this.canvasH = imgBox.clientHeight; // 存储canvas的高度，用于清空画布;
+            canvas.width = imgBox.clientWidth; // 动态赋值canvas的宽度
+            canvas.height = imgBox.clientHeight; // 动态赋值canvas的高度
+            this.context = canvas.getContext('2d');
+            this.setCanvasStyle();
+            this.zhezhao=false;
+          }
+        }, 1000);
       }, res => {
         alertMsg("You must be connected to the internet.<br>Please connect and try again.");
       });
@@ -358,30 +379,6 @@
       document.body.addEventListener('touchmove',this.bodyScroll,{passive: false});
     },
     mounted() {
-      setTimeout(() => {
-        if(this.list1.length>0){
-          const canvas = document.getElementById('canvas'); // 初次进来初始化画布
-          let imgBox = document.getElementById('imgBox');
-          let imgsty = document.getElementsByClassName('imgsty');
-          console.log('mounted'+new Date().toLocaleTimeString());
-          for (let i=0; i<imgsty.length; i++) {
-            //这里会报错，是因为图片没有加载出来就获取图片的中心位置，适当延长setTimeout的时间，等待图片加载完毕再获取中心位置
-            let coreP = { // 获取图片中心点位置
-              corePx: imgsty[i].offsetParent.offsetLeft + imgsty[i].offsetParent.offsetWidth/2,
-              corePy: imgsty[i].offsetParent.offsetTop + imgsty[i].offsetParent.offsetHeight*0.75
-            }
-            this.centerP.push(coreP);
-          }
-          console.log(this.centerP);
-          this.canvasObj = canvas;
-          this.canvasH = imgBox.clientHeight; // 存储canvas的高度，用于清空画布;
-          canvas.width = imgBox.clientWidth; // 动态赋值canvas的宽度
-          canvas.height = imgBox.clientHeight; // 动态赋值canvas的高度
-          this.context = canvas.getContext('2d');
-          this.setCanvasStyle();
-          this.zhezhao=false;
-        }
-      }, 5000);
     },
     destroyed() {
       document.body.removeEventListener('touchmove',this.bodyScroll,{passive: false});

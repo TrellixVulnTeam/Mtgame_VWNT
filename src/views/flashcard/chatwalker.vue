@@ -1450,7 +1450,7 @@
              :style="{zIndex: !cut ? 100 : 3}" @click="showGif('cut')">
       </div>
     </div>
-    <div v-else-if="this.unit === 'Holidays' && this.part === 'part1'">
+    <div v-else-if="this.unit === 'Holidays' && this.part === 'part2'">
       <img src="../../assets/image/201912H5 Christmas magic_MT/Walker_BG/BG_00000.png"
            style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;"/>
       <div class="stocking">
@@ -1524,7 +1524,7 @@
              :style="{zIndex: !santaClaus ? 100 : 1}" @click="showGif('santaClaus')">
       </div>
     </div>
-    <div v-else-if="this.unit === 'Holidays' && this.part === 'part2'">
+    <div v-else-if="this.unit === 'Holidays' && this.part === 'part1'">
       <img src="../../assets/image/202112H5 Winter_MT/Walker_BG/BG_00000.png"
            style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;"/>
       <div class="warm">
@@ -1630,6 +1630,82 @@
       <div class="sled1Button">
         <img src="../../assets/image/202112H5 Winter_MT/words/word_sled Comp 1_00000.png"
              :style="{zIndex: !sled1 ? 100 : 1}" @click="showGif('sled1')">
+      </div>
+    </div>
+    <div v-else-if="this.unit === 'Meal Time' && this.part === 'part1'">
+      <img src="../../assets/image/202001H5 At home_MT/Walker_BG/BG__00000.png"
+           style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;"/>
+      <div class="bowl">
+        <img src="../../assets/image/202001H5 At home_MT/GIF_PNG/png/bowl.png" v-if="bowl" @click="showGif('bowl')">
+        <img src="../../assets/image/202001H5 At home_MT/GIF_PNG/gif/bowl.gif" style="z-index: 100" v-if="!bowl && walkers"
+             @click="showGif('bowl')">
+      </div>
+      <div class="fish">
+        <img src="../../assets/image/202001H5 At home_MT/GIF_PNG/png/fish.png" v-if="fish" @click="showGif('fish')">
+        <img src="../../assets/image/202001H5 At home_MT/GIF_PNG/gif/fish.gif" style="z-index: 100" v-if="!fish && walkers"
+             @click="showGif('fish')">
+      </div>
+      <div class="cup">
+        <img src="../../assets/image/202001H5 At home_MT/GIF_PNG/png/cup.png" v-if="cup" @click="showGif('cup')">
+        <img src="../../assets/image/202001H5 At home_MT/GIF_PNG/gif/cup.gif" style="z-index: 100" v-if="!cup && walkers"
+             @click="showGif('cup')">
+      </div>
+      <div class="chopsticks">
+        <img src="../../assets/image/202001H5 At home_MT/GIF_PNG/png/chopsticks.png" v-if="chopsticks" @click="showGif('chopsticks')">
+        <img src="../../assets/image/202001H5 At home_MT/GIF_PNG/gif/chopsticks.gif" style="z-index: 100" v-if="!chopsticks && walkers"
+             @click="showGif('chopsticks')">
+      </div>
+      <div class="rice">
+        <img src="../../assets/image/202001H5 At home_MT/GIF_PNG/png/rice.png" v-if="rice" @click="showGif('rice')">
+        <img src="../../assets/image/202001H5 At home_MT/GIF_PNG/gif/rice.gif" style="z-index: 100" v-if="!rice && walkers"
+             @click="showGif('rice')">
+      </div>
+      <div class="eat">
+        <img src="../../assets/image/202001H5 At home_MT/GIF_PNG/png/eat.png" v-if="eat" @click="showGif('eat')">
+        <img src="../../assets/image/202001H5 At home_MT/GIF_PNG/gif/eat.gif" style="z-index: 100" v-if="!eat && walkers"
+             @click="showGif('eat')">
+      </div>
+      <div class="chicken">
+        <img src="../../assets/image/202001H5 At home_MT/GIF_PNG/png/chicken.png" v-if="chicken" @click="showGif('chicken')">
+        <img src="../../assets/image/202001H5 At home_MT/GIF_PNG/gif/chicken.gif" style="z-index: 100" v-if="!chicken && walkers"
+             @click="showGif('chicken')">
+      </div>
+      <div class="drink">
+        <img src="../../assets/image/202001H5 At home_MT/GIF_PNG/png/drink.png" v-if="drink" @click="showGif('drink')">
+        <img src="../../assets/image/202001H5 At home_MT/GIF_PNG/gif/drink.gif" style="z-index: 100" v-if="!drink && walkers"
+             @click="showGif('drink')">
+      </div>
+      <div class="bowlButton">
+        <img src="../../assets/image/202001H5 At home_MT/Word/word_bowl Comp 1_00000.png"
+             :style="{zIndex: !bowl ? 100 : 1}" @click="showGif('bowl')">
+      </div>
+      <div class="cupButton">
+        <img src="../../assets/image/202001H5 At home_MT/Word/word_cup Comp 1_00000.png"
+             :style="{zIndex: !cup ? 100 : 1}" @click="showGif('cup')">
+      </div>
+      <div class="fishButton">
+        <img src="../../assets/image/202001H5 At home_MT/Word/word_fish Comp 1_00000.png"
+             :style="{zIndex: !fish ? 100 : 1}" @click="showGif('fish')">
+      </div>
+      <div class="chopsticksButton">
+        <img src="../../assets/image/202001H5 At home_MT/Word/word_chopsticks Comp 1_00000.png"
+             :style="{zIndex: !chopsticks ? 100 : 1}" @click="showGif('chopsticks')">
+      </div>
+      <div class="eatButton">
+        <img src="../../assets/image/202001H5 At home_MT/Word/word_eat Comp 1_00000.png"
+             :style="{zIndex: !eat ? 100 : 1}" @click="showGif('eat')">
+      </div>
+      <div class="riceButton">
+        <img src="../../assets/image/202001H5 At home_MT/Word/word_rice Comp 1_00000.png"
+             :style="{zIndex: !rice ? 100 : 1}" @click="showGif('rice')">
+      </div>
+      <div class="chickenButton">
+        <img src="../../assets/image/202001H5 At home_MT/Word/word_chicken Comp 1_00000.png"
+             :style="{zIndex: !chicken ? 100 : 1}" @click="showGif('chicken')">
+      </div>
+      <div class="drinkButton">
+        <img src="../../assets/image/202001H5 At home_MT/Word/word_drink Comp 1_00000.png"
+             :style="{zIndex: !drink ? 100 : 1}" @click="showGif('drink')">
       </div>
     </div>
     <div v-else>
@@ -1949,6 +2025,18 @@ export default {
           hibernate:require('../../assets/Flashcard Audio/december/hibernate.mp3'),
         },
         cardType:'default',
+        bowl:true,
+        chicken:true,
+        chopsticks:true,
+        cup:true,
+        drink:true,
+        eat:true,
+        fish1:true,
+        milk:true,
+        rice:true,
+        spoon:true,
+        tea:true,
+        vegetables:true,
         animals:true,
         coat:true,
         cold1:true,
@@ -2402,6 +2490,65 @@ export default {
     z-index: 201;
   }
 
+  .bowl img[data-v-580a76d2] {
+    width: 14%;
+    left: 3.5%;
+    top: 19.5%;
+    position: absolute;
+  }
+
+  .cup img[data-v-580a76d2] {
+    width: 13%;
+    left: 2%;
+    top: 72%;
+    position: absolute;
+  }
+
+  .fish img[data-v-580a76d2] {
+    width: 28%;
+    left: 10.5%;
+    top: 45%;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .chopsticks img[data-v-580a76d2] {
+    width: 22%;
+    left: 14%;
+    top: 60%;
+    position: absolute;
+  }
+
+  .rice img[data-v-580a76d2] {
+    width: 13%;
+    left: 62%;
+    top: 57%;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .chicken img[data-v-580a76d2] {
+    width: 32%;
+    left: 63%;
+    top: 52%;
+    position: absolute;
+  }
+
+  .eat img[data-v-580a76d2] {
+    width: 30%;
+    left: 19%;
+    top: 9%;
+    position: absolute;
+  }
+
+  .drink img[data-v-580a76d2] {
+    width: 23%;
+    left: 76%;
+    top: 13%;
+    position: absolute;
+  }
+
+
   .sled1 img {
     width: 51%;
     left: 45%;
@@ -2526,7 +2673,7 @@ export default {
   }
 
   .skatesButton img {
-    width: 8%;
+    width: 7%;
     left: 59%;
     top: 70%;
     position: absolute;
@@ -5891,9 +6038,7 @@ export default {
     }
   }
 
-  /*@media screen and (max-width: 481px) {*/
 
-  /*}*/
 
   @media screen and (min-width: 1600px) {
     .tower{
@@ -6331,9 +6476,7 @@ export default {
     }
   }
   //手机
-  @media only screen and (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 3),
-  (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 2),
-  (min-width: 812px) and (max-width: 1023px){
+  @media only screen and (min-width: 812px) and (max-width: 1023px){
     .scarf img {
       width: 47%;
       left: 48.5%;
@@ -8146,9 +8289,7 @@ export default {
   }
 
   //平板
-  @media only screen and (min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 3),
-  (min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 2),
-  (min-width: 1024px) and (max-width: 1600px){
+  @media only screen and (min-width: 1024px) and (max-width: 1600px){
     .scarf img {
       width: 52%;
       left: 45.5%;
