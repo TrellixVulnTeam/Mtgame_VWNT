@@ -61,7 +61,7 @@
           <img src="../../assets/image/abar.png" style="width: 100%;bottom: 0;height: 100%;">
           <span class="fontsize">Select the correct blend.</span>
           <div @click="changesett">
-            <img src="../../assets/image/advpause.png" class=" repeat">
+            <img src="../../assets/image/adPause.png" class=" repeat">
           </div>
 
         </div>

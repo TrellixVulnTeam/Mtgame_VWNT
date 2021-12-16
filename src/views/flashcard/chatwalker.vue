@@ -1637,43 +1637,69 @@
            style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;"/>
       <div class="bowl">
         <img src="../../assets/image/202001H5 At home_MT/GIF_PNG/png/bowl.png" v-if="bowl" @click="showGif('bowl')">
-        <img src="../../assets/image/202001H5 At home_MT/GIF_PNG/gif/bowl.gif" style="z-index: 100" v-if="!bowl && walkers"
+        <img src="../../assets/image/202001H5 At home_MT/GIF_PNG/gif/bowl.gif" style="z-index: 100" v-if="!bowl"
              @click="showGif('bowl')">
       </div>
-      <div class="fish">
-        <img src="../../assets/image/202001H5 At home_MT/GIF_PNG/png/fish.png" v-if="fish" @click="showGif('fish')">
-        <img src="../../assets/image/202001H5 At home_MT/GIF_PNG/gif/fish.gif" style="z-index: 100" v-if="!fish && walkers"
-             @click="showGif('fish')">
+      <div class="fishClick" @click="showGif('fish1')" />
+      <div class="fish1">
+        <img src="../../assets/image/202001H5 At home_MT/GIF_PNG/png/fish.png" v-if="fish1" >
+        <img src="../../assets/image/202001H5 At home_MT/GIF_PNG/gif/fish.gif" style="z-index: 100" v-if="!fish1"
+             @click="showGif('fish1')">
       </div>
       <div class="cup">
         <img src="../../assets/image/202001H5 At home_MT/GIF_PNG/png/cup.png" v-if="cup" @click="showGif('cup')">
-        <img src="../../assets/image/202001H5 At home_MT/GIF_PNG/gif/cup.gif" style="z-index: 100" v-if="!cup && walkers"
+        <img src="../../assets/image/202001H5 At home_MT/GIF_PNG/gif/cup.gif" style="z-index: 100" v-if="!cup"
              @click="showGif('cup')">
       </div>
       <div class="chopsticks">
         <img src="../../assets/image/202001H5 At home_MT/GIF_PNG/png/chopsticks.png" v-if="chopsticks" @click="showGif('chopsticks')">
-        <img src="../../assets/image/202001H5 At home_MT/GIF_PNG/gif/chopsticks.gif" style="z-index: 100" v-if="!chopsticks && walkers"
+        <img src="../../assets/image/202001H5 At home_MT/GIF_PNG/gif/chopsticks.gif" style="z-index: 100" v-if="!chopsticks"
              @click="showGif('chopsticks')">
       </div>
       <div class="rice">
         <img src="../../assets/image/202001H5 At home_MT/GIF_PNG/png/rice.png" v-if="rice" @click="showGif('rice')">
-        <img src="../../assets/image/202001H5 At home_MT/GIF_PNG/gif/rice.gif" style="z-index: 100" v-if="!rice && walkers"
+        <img src="../../assets/image/202001H5 At home_MT/GIF_PNG/gif/rice.gif" style="z-index: 100" v-if="!rice"
              @click="showGif('rice')">
       </div>
+      <div class="eatClick" @click="showGif('eat')" />
       <div class="eat">
-        <img src="../../assets/image/202001H5 At home_MT/GIF_PNG/png/eat.png" v-if="eat" @click="showGif('eat')">
-        <img src="../../assets/image/202001H5 At home_MT/GIF_PNG/gif/eat.gif" style="z-index: 100" v-if="!eat && walkers"
+        <img src="../../assets/image/202001H5 At home_MT/GIF_PNG/png/eat.png" v-if="eat" >
+        <img src="../../assets/image/202001H5 At home_MT/GIF_PNG/gif/eat.gif" style="z-index: 100" v-if="!eat"
              @click="showGif('eat')">
       </div>
       <div class="chicken">
         <img src="../../assets/image/202001H5 At home_MT/GIF_PNG/png/chicken.png" v-if="chicken" @click="showGif('chicken')">
-        <img src="../../assets/image/202001H5 At home_MT/GIF_PNG/gif/chicken.gif" style="z-index: 100" v-if="!chicken && walkers"
+        <img src="../../assets/image/202001H5 At home_MT/GIF_PNG/gif/chicken.gif" style="z-index: 100" v-if="!chicken"
              @click="showGif('chicken')">
       </div>
       <div class="drink">
         <img src="../../assets/image/202001H5 At home_MT/GIF_PNG/png/drink.png" v-if="drink" @click="showGif('drink')">
-        <img src="../../assets/image/202001H5 At home_MT/GIF_PNG/gif/drink.gif" style="z-index: 100" v-if="!drink && walkers"
+        <img src="../../assets/image/202001H5 At home_MT/GIF_PNG/gif/drink.gif" style="z-index: 100" v-if="!drink"
              @click="showGif('drink')">
+      </div>
+      <div class="tea">
+        <img src="../../assets/image/202001H5 At home_MT/GIF_PNG/png/tea.png" v-if="tea" @click="walkers&&showGif('tea')">
+        <img src="../../assets/image/202001H5 At home_MT/GIF_PNG/gif/tea.gif" style="z-index: 100" v-if="!tea"
+             @click="showGif('tea')">
+      </div>
+      <div class="spoon">
+        <img src="../../assets/image/202001H5 At home_MT/GIF_PNG/png/spoon.png" v-if="spoon" @click="walkers&&showGif('spoon')">
+        <img src="../../assets/image/202001H5 At home_MT/GIF_PNG/gif/spoon.gif" style="z-index: 100" v-if="!spoon"
+             @click="showGif('spoon')">
+      </div>
+      <div class="milk">
+        <img src="../../assets/image/202001H5 At home_MT/GIF_PNG/png/milk.png" v-if="milk" @click="walkers&&showGif('milk')">
+        <img src="../../assets/image/202001H5 At home_MT/GIF_PNG/gif/milk.gif" style="z-index: 100" v-if="!milk"
+             @click="showGif('milk')">
+      </div>
+      <div class="vegetables">
+        <img src="../../assets/image/202001H5 At home_MT/GIF_PNG/png/vegetables.png" v-if="vegetables" @click="walkers&&showGif('vegetables')">
+        <img src="../../assets/image/202001H5 At home_MT/GIF_PNG/gif/vegetables.gif" style="z-index: 100" v-if="!vegetables"
+             @click="showGif('vegetables')">
+      </div>
+      <div class="vegetablesButton">
+        <img src="../../assets/image/202001H5 At home_MT/Word/word_vegetables Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !vegetables ? 100 : 1}" @click="showGif('vegetables')">
       </div>
       <div class="bowlButton">
         <img src="../../assets/image/202001H5 At home_MT/Word/word_bowl Comp 1_00000.png"
@@ -1683,9 +1709,9 @@
         <img src="../../assets/image/202001H5 At home_MT/Word/word_cup Comp 1_00000.png"
              :style="{zIndex: !cup ? 100 : 1}" @click="showGif('cup')">
       </div>
-      <div class="fishButton">
+      <div class="fish1Button">
         <img src="../../assets/image/202001H5 At home_MT/Word/word_fish Comp 1_00000.png"
-             :style="{zIndex: !fish ? 100 : 1}" @click="showGif('fish')">
+             :style="{zIndex: !fish1 ? 100 : 1}" @click="showGif('fish1')">
       </div>
       <div class="chopsticksButton">
         <img src="../../assets/image/202001H5 At home_MT/Word/word_chopsticks Comp 1_00000.png"
@@ -1706,6 +1732,132 @@
       <div class="drinkButton">
         <img src="../../assets/image/202001H5 At home_MT/Word/word_drink Comp 1_00000.png"
              :style="{zIndex: !drink ? 100 : 1}" @click="showGif('drink')">
+      </div>
+      <div class="teaButton">
+        <img src="../../assets/image/202001H5 At home_MT/Word/word_tea Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !tea ? 100 : 1}" @click="showGif('tea')">
+      </div>
+      <div class="spoonButton">
+        <img src="../../assets/image/202001H5 At home_MT/Word/word_spoon Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !spoon ? 100 : 1}" @click="showGif('spoon')">
+      </div>
+      <div class="milkButton">
+        <img src="../../assets/image/202001H5 At home_MT/Word/word_milk Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !milk ? 100 : 1}" @click="showGif('milk')">
+      </div>
+    </div>
+    <div v-else-if="this.unit === 'Meal Time' && this.part === 'part2'">
+      <img src="../../assets/image/202001H5 At the Restaurant_MT/Walker_BG/BG__00000.png"
+           style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;"/>
+      <div class="order">
+        <img src="../../assets/image/202001H5 At the Restaurant_MT/GIF_PNG/png/order.png" v-if="order" @click="walkers&&showGif('order')">
+        <img src="../../assets/image/202001H5 At the Restaurant_MT/GIF_PNG/gif/order.gif" style="z-index: 100" v-if="!order"
+             @click="showGif('order')">
+      </div>
+      <div class="napkin">
+        <img src="../../assets/image/202001H5 At the Restaurant_MT/GIF_PNG/png/napkin.png" v-if="napkin" @click="showGif('napkin')">
+        <img src="../../assets/image/202001H5 At the Restaurant_MT/GIF_PNG/gif/napkin.gif" style="z-index: 100" v-if="!napkin"
+             @click="showGif('napkin')">
+      </div>
+      <div class="juice">
+        <img src="../../assets/image/202001H5 At the Restaurant_MT/GIF_PNG/png/juice.png" v-if="juice" @click="walkers&&showGif('juice')">
+        <img src="../../assets/image/202001H5 At the Restaurant_MT/GIF_PNG/gif/juice.gif" style="z-index: 100" v-if="!juice"
+             @click="showGif('juice')">
+      </div>
+      <div class="noodles">
+        <img src="../../assets/image/202001H5 At the Restaurant_MT/GIF_PNG/png/noodles.png" v-if="noodles" @click="walkers&&showGif('noodles')">
+        <img src="../../assets/image/202001H5 At the Restaurant_MT/GIF_PNG/gif/noodles.gif" style="z-index: 100" v-if="!noodles"
+             @click="showGif('noodles')">
+      </div>
+      <div class="pizza">
+        <img src="../../assets/image/202001H5 At the Restaurant_MT/GIF_PNG/png/pizza.png" v-if="pizza" @click="showGif('pizza')">
+        <img src="../../assets/image/202001H5 At the Restaurant_MT/GIF_PNG/gif/pizza.gif" style="z-index: 100" v-if="!pizza"
+             @click="showGif('pizza')">
+      </div>
+      <div class="iceCream">
+        <img src="../../assets/image/202001H5 At the Restaurant_MT/GIF_PNG/png/ice cream.png" v-if="iceCream" @click="showGif('iceCream')">
+        <img src="../../assets/image/202001H5 At the Restaurant_MT/GIF_PNG/gif/ice cream.gif" style="z-index: 100" v-if="!iceCream"
+             @click="showGif('iceCream')">
+      </div>
+      <div class="forkClick" @click="showGif('fork')"/>
+      <div class="fork">
+        <img src="../../assets/image/202001H5 At the Restaurant_MT/GIF_PNG/png/fork.png" v-if="fork" >
+        <img src="../../assets/image/202001H5 At the Restaurant_MT/GIF_PNG/gif/fork.gif" style="z-index: 100" v-if="!fork"
+             @click="showGif('fork')">
+      </div>
+      <div class="knifeClick" @click="showGif('knife')"/>
+      <div class="knife">
+        <img src="../../assets/image/202001H5 At the Restaurant_MT/GIF_PNG/png/knife.png" v-if="knife">
+        <img src="../../assets/image/202001H5 At the Restaurant_MT/GIF_PNG/gif/knife.gif" style="z-index: 100" v-if="!knife"
+             @click="showGif('knife')">
+      </div>
+      <div class="burger">
+        <img src="../../assets/image/202001H5 At the Restaurant_MT/GIF_PNG/png/burger.png" v-if="burger" @click="walkers&&showGif('burger')">
+        <img src="../../assets/image/202001H5 At the Restaurant_MT/GIF_PNG/gif/burger.gif" style="z-index: 100" v-if="!burger"
+             @click="showGif('burger')">
+      </div>
+      <div class="plate">
+        <img src="../../assets/image/202001H5 At the Restaurant_MT/GIF_PNG/png/plate.png" v-if="plate" @click="showGif('plate')">
+        <img src="../../assets/image/202001H5 At the Restaurant_MT/GIF_PNG/gif/plate.gif" style="z-index: 100" v-if="!plate"
+             @click="showGif('plate')">
+      </div>
+      <div class="waiter">
+        <img src="../../assets/image/202001H5 At the Restaurant_MT/GIF_PNG/png/waiter.png" v-if="waiter" @click="showGif('waiter')">
+        <img src="../../assets/image/202001H5 At the Restaurant_MT/GIF_PNG/gif/waiter.gif" style="z-index: 100" v-if="!waiter"
+             @click="showGif('waiter')">
+      </div>
+      <div class="menu">
+        <img src="../../assets/image/202001H5 At the Restaurant_MT/GIF_PNG/png/menu.png" v-if="menu" @click="showGif('menu')">
+        <img src="../../assets/image/202001H5 At the Restaurant_MT/GIF_PNG/gif/menu.gif" style="z-index: 100" v-if="!menu"
+             @click="showGif('menu')">
+      </div>
+      <div class="orderButton">
+        <img src="../../assets/image/202001H5 At the Restaurant_MT/Word/word_order Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !order ? 100 : 1}" @click="showGif('order')">
+      </div>
+      <div class="juiceButton">
+        <img src="../../assets/image/202001H5 At the Restaurant_MT/Word/word_juice Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !juice ? 100 : 1}" @click="showGif('juice')">
+      </div>
+      <div class="napkinButton">
+        <img src="../../assets/image/202001H5 At the Restaurant_MT/Word/word_napkin Comp 1_00000.png"
+             :style="{zIndex: !napkin ? 100 : 1}" @click="showGif('napkin')">
+      </div>
+      <div class="noodlesButton">
+        <img src="../../assets/image/202001H5 At the Restaurant_MT/Word/word_noodles Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !noodles ? 100 : 1}" @click="showGif('noodles')">
+      </div>
+      <div class="forkButton">
+        <img src="../../assets/image/202001H5 At the Restaurant_MT/Word/word_fork Comp 1_00000.png"
+             :style="{zIndex: !fork ? 100 : 1}" @click="showGif('fork')">
+      </div>
+      <div class="knifeButton">
+        <img src="../../assets/image/202001H5 At the Restaurant_MT/Word/word_knife Comp 1_00000.png"
+             :style="{zIndex: !knife ? 100 : 1}" @click="showGif('knife')">
+      </div>
+      <div class="pizzaButton">
+        <img src="../../assets/image/202001H5 At the Restaurant_MT/Word/word_pizza Comp 1_00000.png"
+             :style="{zIndex: !pizza ? 100 : 1}" @click="showGif('pizza')">
+      </div>
+      <div class="iceCreamButton">
+        <img src="../../assets/image/202001H5 At the Restaurant_MT/Word/word_ice cream Comp 1_00000.png"
+             :style="{zIndex: !iceCream ? 100 : 1}" @click="showGif('iceCream')">
+      </div>
+      <div class="burgerButton">
+        <img src="../../assets/image/202001H5 At the Restaurant_MT/Word/word_burger Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !burger ? 100 : 1}" @click="showGif('burger')">
+      </div>
+      <div class="waiterButton">
+        <img src="../../assets/image/202001H5 At the Restaurant_MT/Word/word_waiter Comp 1_00000.png"
+             :style="{zIndex: !waiter ? 100 : 1}" @click="showGif('waiter')">
+      </div>
+      <div class="menuButton">
+        <img src="../../assets/image/202001H5 At the Restaurant_MT/Word/word_menu Comp 1_00000.png"
+             :style="{zIndex: !menu ? 100 : 1}" @click="showGif('menu')">
+      </div>
+      <div class="plateButton">
+        <img src="../../assets/image/202001H5 At the Restaurant_MT/Word/word_plate Comp 1_00000.png"
+             :style="{zIndex: !plate ? 100 : 1}" @click="showGif('plate')">
       </div>
     </div>
     <div v-else>
@@ -2025,6 +2177,18 @@ export default {
           hibernate:require('../../assets/Flashcard Audio/december/hibernate.mp3'),
         },
         cardType:'default',
+        order:true,
+        juice:true,
+        napkin:true,
+        noodles:true,
+        pizza:true,
+        iceCream:true,
+        fork:true,
+        knife:true,
+        burger:true,
+        plate:true,
+        menu:true,
+        waiter:true,
         bowl:true,
         chicken:true,
         chopsticks:true,
@@ -2341,15 +2505,11 @@ export default {
       }
       document.body.addEventListener('touchmove', this.bodyScroll, {passive: false});
     },
-    mounted() {
-
-    },
     destroyed() {
       document.body.removeEventListener('touchmove', this.bodyScroll, {passive: false});
       window.removeEventListener('popstate', this.gomemu, false);
     },
     methods: {
-
       //点击播放动画
       async showGif(name){
         if (name===undefined || this.word){
@@ -2481,7 +2641,7 @@ export default {
 
   .about {
     display: flex;
-    margin: 0px;
+    margin: 0;
     width: 100%;
     height: 100%;
     display: block;
@@ -2489,22 +2649,340 @@ export default {
     background-color: #44ccc2;
     z-index: 201;
   }
+  .eatClick {
+    width: 24%;
+    height: 53%;
+    position: absolute;
+    top: 16%;
+    left: 22%;
+    z-index: 1;
+  }
+  .fishClick {
+    width: 24%;
+    height: 16%;
+    position: absolute;
+    top: 68%;
+    left: 12%;
+    z-index: 2;
+  }
+  .knifeClick {
+    width: 4%;
+    height: 22%;
+    position: absolute;
+    top: 74%;
+    left: 45%;
+    transform: rotate(21deg);
+    z-index: 1;
+  }
+  .forkClick {
+    width: 4%;
+    height: 22%;
+    position: absolute;
+    top: 74%;
+    left: 38%;
+    transform: rotate(21deg);
+    z-index: 1;
+  }
+  .orderButton img {
+    width: 6%;
+    left: 20%;
+    top: 13%;
+    position: absolute;
+  }
 
-  .bowl img[data-v-580a76d2] {
+  .juiceButton img {
+    width: 6%;
+    left: 14%;
+    top: 62%;
+    position: absolute;
+  }
+
+  .napkinButton img {
+    width: 7%;
+    left: 6%;
+    top: 84%;
+    position: absolute;
+  }
+
+  .noodlesButton img {
+    width: 7%;
+    left: 26%;
+    top: 60%;
+    position: absolute;
+  }
+
+  .pizzaButton img {
+    width: 7%;
+    left: 31%;
+    top: 33%;
+    position: absolute;
+  }
+
+  .iceCreamButton img {
+    width: 9%;
+    left: 41%;
+    top: 13%;
+    position: absolute;
+  }
+
+  .forkButton img {
+    width: 5%;
+    left: 40%;
+    top: 65%;
+    position: absolute;
+  }
+
+  .knifeButton img {
+    width: 5%;
+    left: 47%;
+    top: 65%;
+    position: absolute;
+  }
+
+  .burgerButton img {
+    width: 7%;
+    left: 64%;
+    top: 72%;
+    position: absolute;
+  }
+
+  .plateButton img {
+    width: 6%;
+    left: 77%;
+    top: 92%;
+    position: absolute;
+  }
+
+  .menuButton img {
+    width: 6%;
+    left: 89%;
+    top: 39%;
+    position: absolute;
+  }
+
+  .waiterButton img {
+    width: 6%;
+    left: 85%;
+    top: 4%;
+    position: absolute;
+  }
+
+  .order img {
+    width: 31.7%;
+    left: -1%;
+    top: 9.7%;
+    height: 65.8%;
+    position: absolute;
+  }
+
+  .juice img {
+    width: 14%;
+    left: 3.5%;
+    top: 54.5%;
+    position: absolute;
+  }
+
+  .napkin img {
+    width: 26%;
+    left: 7.5%;
+    top: 67.5%;
+    position: absolute;
+  }
+
+  .noodles img {
+    width: 19%;
+    left: 18%;
+    top: 47.5%;
+    position: absolute;
+  }
+
+  .pizza img {
+    width: 23%;
+    left: 23%;
+    top: 32%;
+    position: absolute;
+  }
+
+  .iceCream img {
+    width: 13%;
+    left: 39.5%;
+    top: 14.5%;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .fork img {
+    width: 11%;
+    left: 34.5%;
+    top: 65.5%;
+    position: absolute;
+  }
+
+  .knife img {
+    width: 10%;
+    left: 41.5%;
+    top: 67.5%;
+    position: absolute;
+  }
+
+  .burger img {
+    width: 18%;
+    left: 67.5%;
+    top: 64.5%;
+    position: absolute;
+  }
+
+  .plate img {
+    width: 19%;
+    left: 81%;
+    top: 80%;
+    position: absolute;
+  }
+
+  .menu img {
+    width: 17%;
+    left: 82%;
+    top: 34%;
+    position: absolute;
+  }
+
+  .waiter img {
+    width: 30%;
+    left: 66%;
+    top: -8%;
+    height: 80%;
+    position: absolute;
+  }
+
+  .bowlButton img {
+    width: 7%;
+    left: 7.5%;
+    top: 18.5%;
+    position: absolute;
+  }
+
+  .cupButton img {
+    width: 5%;
+    left: 6%;
+    top: 71%;
+    position: absolute;
+  }
+
+  .fish1Button img {
+    width: 5%;
+    left: 22%;
+    top: 59%;
+    position: absolute;
+  }
+
+  .chopsticksButton img {
+    width: 11%;
+    left: 22%;
+    top: 92%;
+    position: absolute;
+  }
+
+  .eatButton img {
+    width: 5%;
+    left: 42.5%;
+    top: 16.5%;
+    position: absolute;
+  }
+
+  .riceButton img {
+    width: 5%;
+    left: 66%;
+    top: 55.5%;
+    position: absolute;
+  }
+
+  .drinkButton img {
+    width: 5%;
+    left: 81.5%;
+    top: 42.5%;
+    position: absolute;
+  }
+
+  .chickenButton img {
+    width: 8%;
+    left: 74.5%;
+    top: 65.5%;
+    position: absolute;
+  }
+
+  .teaButton img {
+    width: 5%;
+    left: 57.5%;
+    top: 73.5%;
+    position: absolute;
+  }
+
+  .spoonButton img {
+    width: 6%;
+    left: 41.5%;
+    top: 83.5%;
+    position: absolute;
+  }
+
+  .vegetablesButton img {
+    width: 9%;
+    left: 47.5%;
+    top: 47.5%;
+    position: absolute;
+  }
+
+  .milkButton img {
+    width: 5%;
+    left: 62.5%;
+    top: 30.5%;
+    position: absolute;
+  }
+
+  .vegetables img {
+    width: 21%;
+    left: 41%;
+    top: 45.5%;
+    position: absolute;
+  }
+
+  .tea img {
+    width: 15%;
+    left: 49%;
+    top: 64%;
+    position: absolute;
+  }
+
+  .spoon img {
+    width: 13.4%;
+    left: 33%;
+    top: 64%;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .milk img {
+    width: 15%;
+    left: 64%;
+    top: 14.5%;
+    position: absolute;
+  }
+
+  .bowl img {
     width: 14%;
     left: 3.5%;
     top: 19.5%;
     position: absolute;
   }
 
-  .cup img[data-v-580a76d2] {
+  .cup img {
     width: 13%;
     left: 2%;
     top: 72%;
     position: absolute;
+    z-index: 1;
   }
 
-  .fish img[data-v-580a76d2] {
+  .fish1 img {
     width: 28%;
     left: 10.5%;
     top: 45%;
@@ -2512,14 +2990,14 @@ export default {
     z-index: 1;
   }
 
-  .chopsticks img[data-v-580a76d2] {
+  .chopsticks img {
     width: 22%;
     left: 14%;
     top: 60%;
     position: absolute;
   }
 
-  .rice img[data-v-580a76d2] {
+  .rice img {
     width: 13%;
     left: 62%;
     top: 57%;
@@ -2527,21 +3005,21 @@ export default {
     z-index: 1;
   }
 
-  .chicken img[data-v-580a76d2] {
+  .chicken img {
     width: 32%;
     left: 63%;
     top: 52%;
     position: absolute;
   }
 
-  .eat img[data-v-580a76d2] {
+  .eat img {
     width: 30%;
     left: 19%;
     top: 9%;
     position: absolute;
   }
 
-  .drink img[data-v-580a76d2] {
+  .drink img {
     width: 23%;
     left: 76%;
     top: 13%;
@@ -6039,7 +6517,6 @@ export default {
   }
 
 
-
   @media screen and (min-width: 1600px) {
     .tower{
     width: 18%;
@@ -6477,6 +6954,236 @@ export default {
   }
   //手机
   @media only screen and (min-width: 812px) and (max-width: 1023px){
+    .iceCreamButton img {
+      width: 9%;
+      left: 41%;
+      top: 11%;
+      position: absolute;
+    }
+    .menuButton img {
+      width: 6%;
+      left: 89%;
+      top: 36%;
+      position: absolute;
+    }
+    .napkinButton img {
+      width: 6%;
+      left: 6%;
+      top: 82%;
+      position: absolute;
+    }
+    .juiceButton img {
+      width: 5%;
+      left: 15%;
+      top: 62%;
+      position: absolute;
+    }
+    .waiterButton img {
+      width: 6%;
+      left: 86%;
+      top: 3%;
+      position: absolute;
+    }
+    .pizzaButton img {
+      width: 6%;
+      left: 32%;
+      top: 32%;
+    }
+    .noodlesButton img {
+      top: 58%;
+    }
+    .forkButton img {
+      top: 64%;
+    }
+    .knifeButton img {
+      top: 66%;
+    }
+    .burger img {
+      width: 16%;
+      left: 68.5%;
+      top: 62.5%;
+      position: absolute;
+    }
+    .iceCream img {
+      width: 12%;
+      left: 40%;
+      top: 10.5%;
+      position: absolute;
+      z-index: 1;
+    }
+    .menu img {
+      width: 15.5%;
+      left: 82%;
+      top: 30%;
+      position: absolute;
+    }
+    .plate img {
+      width: 16%;
+      left: 82%;
+      top: 80%;
+      position: absolute;
+    }
+    .napkin img {
+      width: 24%;
+      left: 8.5%;
+      top: 64.5%;
+      position: absolute;
+    }
+    .fork img {
+      width: 10%;
+      left: 35.5%;
+      top: 63.5%;
+      position: absolute;
+    }
+    .knife img {
+      width: 9%;
+      left: 41.5%;
+      top: 67.5%;
+      position: absolute;
+    }
+    .pizza img {
+      width: 21%;
+      left: 24%;
+      top: 29%;
+      position: absolute;
+    }
+    .noodles img {
+      width: 17%;
+      left: 20%;
+      top: 44.5%;
+      position: absolute;
+    }
+    .juice img {
+      width: 13%;
+      left: 4.5%;
+      top: 50.5%;
+      position: absolute;
+    }
+    .tea img {
+      width: 14%;
+      left: 50%;
+      top: 59%;
+      position: absolute;
+    }
+    .chicken img {
+      width: 30%;
+      left: 64%;
+      top: 46%;
+      position: absolute;
+    }
+    .riceButton img {
+      width: 5%;
+      left: 66%;
+      top: 52.5%;
+      position: absolute;
+    }
+    .rice img {
+      width: 12%;
+      left: 62%;
+      top: 55%;
+      position: absolute;
+      z-index: 1;
+    }
+    .teaButton img {
+      width: 5%;
+      left: 58%;
+      top: 71%;
+      position: absolute;
+    }
+    .vegetablesButton img {
+      width: 9%;
+      left: 47.5%;
+      top: 43.5%;
+      position: absolute;
+    }
+    .vegetables img {
+      width: 20%;
+      left: 41%;
+      top: 40.5%;
+      position: absolute;
+    }
+    .spoon img {
+      width: 13.3%;
+      left: 33%;
+      top: 60%;
+      position: absolute;
+      z-index: 1;
+    }
+    .chopsticksButton img {
+      width: 10%;
+      left: 22%;
+      top: 92%;
+      position: absolute;
+    }
+    .chopsticks img {
+      width: 22%;
+      left: 14%;
+      top: 54%;
+      position: absolute;
+    }
+    .fish1 img {
+      width: 26%;
+      left: 11.5%;
+      top: 41%;
+      position: absolute;
+      z-index: 1;
+    }
+    .cup img {
+      width: 12%;
+      left: 2%;
+      top: 70%;
+      position: absolute;
+    }
+    .cupButton img {
+      width: 5%;
+      left: 6%;
+      top: 68%;
+      position: absolute;
+    }
+    .bowlButton img {
+      width: 6%;
+      left: 8%;
+      top: 17.5%;
+      position: absolute;
+    }
+    .bowl img {
+      width: 12%;
+      left: 4.5%;
+      top: 18.5%;
+      position: absolute;
+    }
+    .drinkButton img {
+      width: 5%;
+      left: 80.5%;
+      top: 42.5%;
+      position: absolute;
+    }
+    .drink img {
+      width: 20%;
+      left: 78%;
+      top: 10%;
+    }
+    .eatButton img {
+      top: 14.5%;
+    }
+    .eat img {
+      width: 28%;
+      left: 20%;
+      top: 2%;
+      position: absolute;
+    }
+    .milkButton img {
+      width: 6%;
+      left: 61.5%;
+      top: 28.5%;
+      position: absolute;
+    }
+    .milk img {
+      width: 14%;
+      left: 64.5%;
+      top: 11%;
+      position: absolute;
+    }
     .scarf img {
       width: 47%;
       left: 48.5%;
@@ -8290,6 +8997,276 @@ export default {
 
   //平板
   @media only screen and (min-width: 1024px) and (max-width: 1600px){
+    .forkButton img {
+      width: 5%;
+      left: 40%;
+      top: 66%;
+      position: absolute;
+    }
+    .orderButton img {
+      width: 7%;
+      left: 20%;
+      top: 19%;
+      position: absolute;
+    }
+    .pizzaButton img {
+      width: 7%;
+      left: 32%;
+      top: 37%;
+      position: absolute;
+    }
+    .noodlesButton img {
+      width: 9%;
+      left: 25%;
+      top: 64%;
+      position: absolute;
+    }
+    .juiceButton img {
+      width: 6%;
+      left: 14%;
+      top: 64%;
+      position: absolute;
+    }
+    .knifeButton img {
+      width: 5%;
+      left: 48%;
+      top: 69%;
+      position: absolute;
+    }
+    .iceCreamButton img {
+      width: 10%;
+      left: 41%;
+      top: 19%;
+      position: absolute;
+    }
+    .waiterButton img {
+      width: 7%;
+      left: 85%;
+      top: 5%;
+      position: absolute;
+    }
+    .burgerButton img {
+      width: 8%;
+      left: 64%;
+      top: 72%;
+      position: absolute;
+    }
+    .plateButton img {
+      width: 7%;
+      left: 76%;
+      top: 92%;
+      position: absolute;
+    }
+    .napkin img {
+      width: 27%;
+      left: 6.5%;
+      top: 72.5%;
+      position: absolute;
+    }
+    .juice img {
+      width: 16%;
+      left: 2.5%;
+      top: 57.5%;
+      position: absolute;
+    }
+    .noodles img {
+      width: 20%;
+      left: 18%;
+      top: 55.5%;
+      position: absolute;
+    }
+    .fork img {
+      width: 14%;
+      left: 33.5%;
+      top: 66.5%;
+      transform: rotate(-6deg);
+      position: absolute;
+    }
+    .knife img {
+      width: 12%;
+      left: 40.5%;
+      top: 69.5%;
+      transform: rotate(-5deg);
+      position: absolute;
+    }
+    .iceCream img {
+      width: 14%;
+      left: 38.5%;
+      top: 20.5%;
+    }
+    .pizza img {
+      top: 37%;
+    }
+    .waiter img {
+      width: 30%;
+      left: 66%;
+      top: -6%;
+      height: 78%;
+      position: absolute;
+    }
+    .menuButton img {
+      width: 7%;
+      left: 89%;
+      top: 48%;
+      position: absolute;
+    }
+    .menu img {
+      width: 17%;
+      left: 82%;
+      top: 45%;
+      position: absolute;
+    }
+    .burger img {
+      width: 19%;
+      left: 66.5%;
+      top: 69.5%;
+      position: absolute;
+    }
+    .plate img {
+      width: 19%;
+      left: 81%;
+      top: 84%;
+      position: absolute;
+    }
+    .vegetablesButton img {
+      width: 11%;
+      left: 46.5%;
+      top: 52.5%;
+      position: absolute;
+    }
+    .drinkButton img {
+      width: 6%;
+      left: 77.5%;
+      top: 42.5%;
+      position: absolute;
+    }
+    .milkButton img {
+      width: 6%;
+      left: 61.5%;
+      top: 31.5%;
+      position: absolute;
+    }
+    .milk img {
+      width: 17%;
+      left: 63%;
+      top: 18.5%;
+      position: absolute;
+    }
+    .chickenButton img {
+      width: 9%;
+      left: 75.5%;
+      top: 70.5%;
+      position: absolute;
+    }
+    .riceButton img {
+      width: 6%;
+      left: 65%;
+      top: 58.5%;
+      position: absolute;
+    }
+    .teaButton img {
+      width: 6%;
+      left: 57.5%;
+      top: 76.5%;
+      position: absolute;
+    }
+    .fish1Button img {
+      width: 6%;
+      left: 21%;
+      top: 60%;
+      position: absolute;
+    }
+    .eatButton img {
+      width: 6%;
+      left: 43.5%;
+      top: 16.5%;
+      position: absolute;
+    }
+    .spoonButton img {
+      width: 7%;
+    }
+    .drink img {
+      width: 31%;
+      left: 71%;
+      top: 12%;
+      position: absolute;
+    }
+    .rice img {
+      width: 14%;
+      left: 61%;
+      top: 61%;
+      position: absolute;
+      z-index: 1;
+    }
+    .chicken img {
+      width: 33%;
+      left: 63%;
+      top: 62%;
+      position: absolute;
+    }
+    .eat img {
+      width: 38%;
+      left: 15%;
+      top: 13%;
+      position: absolute;
+    }
+    .vegetables img {
+      width: 23%;
+      left: 39%;
+      top: 51.5%;
+      position: absolute;
+    }
+    .tea img {
+      width: 16%;
+      left: 49%;
+      top: 70%;
+      position: absolute;
+    }
+    .spoon img {
+      width: 16.4%;
+      left: 31%;
+      top: 66%;
+      transform: rotate(-7deg);
+      position: absolute;
+      z-index: 1;
+    }
+    .fish1 img {
+      width: 30%;
+      left: 9.5%;
+      top: 52%;
+      position: absolute;
+      z-index: 1;
+    }
+    .chopsticks img {
+      width: 22%;
+      left: 14%;
+      top: 68%;
+      position: absolute;
+    }
+    .cupButton img {
+      width: 6%;
+      left: 6%;
+      top: 73%;
+      position: absolute;
+    }
+    .cup img {
+      width: 13%;
+      left: 2%;
+      top: 76%;
+      position: absolute;
+    }
+    .bowlButton img {
+      width: 8%;
+      left: 7.5%;
+      top: 21.5%;
+      position: absolute;
+    }
+    .bowl img {
+      width: 15%;
+      left: 3.5%;
+      top: 24%;
+      position: absolute;
+    }
     .scarf img {
       width: 52%;
       left: 45.5%;

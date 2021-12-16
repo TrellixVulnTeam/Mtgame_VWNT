@@ -150,6 +150,7 @@
 		},
 		data() {
 			return {
+			  level:'',
 				show: Boolean,
 				id: '',
 				get1:false,
@@ -254,6 +255,7 @@
 						unitsId:this.unitsId,
 						unit:this.unit,
             part:this.part,
+            level:this.level,
 					}
 				})
 				// }
@@ -300,6 +302,7 @@
 							unitsId:this.unitsId,
 							unit:this.unit,
               part:this.part,
+              level:this.level,
 						}
 					})
 				} else if (this.type == 'part2to') {
@@ -313,6 +316,7 @@
 							unitsId:this.unitsId,
 							unit:this.unit,
               part:this.part,
+              level:this.level,
 						}
 					})
 				} else if (this.type == 'part3to') {
@@ -326,6 +330,7 @@
 							unitsId:this.unitsId,
 							unit:this.unit,
               part:this.part,
+              level:this.level,
 						}
 					})
 				}else if (this.type == 'part4to') {
@@ -339,6 +344,7 @@
 							unitsId:this.unitsId,
 							unit:this.unit,
               part:this.part,
+              level:this.level,
 						}
 					})
 				}else if (this.type == 'part5to') {
@@ -352,6 +358,7 @@
 							unitsId:this.unitsId,
 							unit:this.unit,
               part:this.part,
+              level:this.level,
 						}
 					})
 				}else if (this.type == 'part6to') {
@@ -365,6 +372,7 @@
 							unitsId:this.unitsId,
 							unit:this.unit,
               part:this.part,
+              level:this.level,
 						}
 					})
 				}else if (this.type == 'part7to') {
@@ -378,6 +386,7 @@
 							unitsId:this.unitsId,
 							unit:this.unit,
               part:this.part,
+              level:this.level,
 						}
 					})
 				}else if (this.type == 'part8to') {
@@ -391,6 +400,7 @@
 							unitsId:this.unitsId,
 							unit:this.unit,
               part:this.part,
+              level:this.level,
 						}
 					})
 				}else if (this.type == 'partBoss1') {
@@ -404,6 +414,7 @@
 							unitsId:this.unitsId,
 							unit:this.unit,
               part:this.part,
+              level:this.level,
 						}
 					})
 				}else if (this.type == 'partBoss2') {
@@ -417,6 +428,7 @@
 							unitsId:this.unitsId,
 							unit:this.unit,
               part:this.part,
+              level:this.level,
 						}
 					})
 				}
@@ -482,6 +494,7 @@
 			this.unitsId=this.$route.query.unitsId;
 			this.unit=this.$route.query.unit;
       this.num=this.$route.query.num;
+      this.level = this.$route.query.level;
       if(this.part==='part1'){
         this.url1=this.url+'accountSumPart1';
       }else if(this.part==='part2'){

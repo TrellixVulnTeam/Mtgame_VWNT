@@ -187,13 +187,14 @@
           <span class="fontsize leftmar2">{{sum}}</span>
         </div>
         <div @click="back">
-						<img src="../../assets/image/pback.png"  class="pause" v-if="phonics||walkers||advanced">
+						<img src="../../assets/image/pback.png"  class="pause" v-if="phonics||walkers">
             <img src="../../assets/image/7-back.png"  class="pause" v-if="runners">
+          <img src="../../assets/image/adBack.png"  class="pause" v-if="advanced">
         </div>
         <div @click="home">
-          <!-- <img src="../../assets/image/Icon_home0.png" class="repeat" v-if="action1"> -->
-          <img src="../../assets/image/phome.png" class="repeat" v-if="phonics||walkers||advanced">
+          <img src="../../assets/image/phome.png" class="repeat" v-if="phonics||walkers">
           <img src="../../assets/image/7-home.png" class="repeat" v-if="runners">
+          <img src="../../assets/image/adHome.png" class="repeat" v-if="advanced">
         </div>
       </div>
     </div>

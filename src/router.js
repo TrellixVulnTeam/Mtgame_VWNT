@@ -5,7 +5,6 @@ import Phonicsmenu from "./views/phonics/Phonicsmenu.vue";
 import Intermenu from "./views/phonics/Intermenu.vue";
 import Advmenu from "./views/advanced/Advmenu.vue";
 import About from "./views/About.vue";
-// import Pagea from "./views/Pagea.vue";
 import Pageto from "./views/Pageto.vue";
 import Result from "./views/Result.vue";
 import Settingto from "./views/settingto.vue";
@@ -44,7 +43,6 @@ import Intermediate7 from "./views/phonics/intermediate7.vue";
 import Intermediate8 from "./views/phonics/intermediate8.vue";
 import Intermediate9 from "./views/phonics/intermediate9.vue";
 import Intermediate10 from "./views/phonics/intermediate10.vue";
-
 import Advanced1 from "./views/advanced/advanced1.vue";
 import Advanced2 from "./views/advanced/advanced2.vue";
 import Advanced3 from "./views/advanced/advanced3.vue";
@@ -55,12 +53,8 @@ import Advanced7 from "./views/advanced/advanced7.vue";
 import Advanced8 from "./views/advanced/advanced8.vue";
 import Advanced9 from "./views/advanced/advanced9.vue";
 import Advanced10 from "./views/advanced/advanced10.vue";
-
 import Chatwalker from "./views/flashcard/chatwalker.vue";
 import Flashcard from "./views/courses/flashcard.vue";
-// import Home01 from "./views/home01/Home01.vue";
-// import Learn from "./views/learn/Learn.vue";
-// import Game from "./views/game/Game.vue";
 import Start from "./views/start/start.vue";
 import PrivacyPolicy from "./views/PrivacyPolicy.vue"
 import Info from "./views/info/info.vue";
@@ -133,8 +127,6 @@ export default new Router({
 			path: "/settingto",
 			name: "settingto",
 			component: Settingto
-			// 	 component: () =>
-			// 	  import(/* webpackChunkName: "about" */ "./views/settingto.vue")
 		},
 		{
 			path: "/about",

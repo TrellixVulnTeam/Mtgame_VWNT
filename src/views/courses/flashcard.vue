@@ -1092,6 +1092,132 @@
             img:require('../../assets/image/Winter/scarf.png')
           },
         ],
+        MealTimePart2:[
+          {
+            id:1,
+            cardName:'napkin',
+            audio:require('../../assets/Flashcard Audio/december/stocking.mp3'),
+            img:require('../../assets/image/At the Restaurant/napkin.png')
+          },{
+            id:2,
+            cardName:'pizza',
+            audio:require('../../assets/Flashcard Audio/december/sleigh.mp3'),
+            img:require('../../assets/image/At the Restaurant/pizza.png')
+          },{
+            id:3,
+            cardName:'fork',
+            audio:require('../../assets/Flashcard Audio/december/reindeer.mp3'),
+            img:require('../../assets/image/At the Restaurant/fork.png')
+          },{
+            id:4,
+            cardName:'knife',
+            audio:require('../../assets/Flashcard Audio/december/bells.mp3'),
+            img:require('../../assets/image/At the Restaurant/knife.png')
+          },{
+            id:5,
+            cardName:'ice cream',
+            audio:require('../../assets/Flashcard Audio/december/Santa claus.mp3'),
+            img:require('../../assets/image/At the Restaurant/ice cream.png')
+          },{
+            id:6,
+            cardName:'waiter',
+            audio:require('../../assets/Flashcard Audio/december/elf.mp3'),
+            img:require('../../assets/image/At the Restaurant/waiter.png')
+          },{
+            id:7,
+            cardName:'menu',
+            audio:require('../../assets/Flashcard Audio/december/elf.mp3'),
+            img:require('../../assets/image/At the Restaurant/menu.png')
+          },{
+            id:8,
+            cardName:'plate',
+            audio:require('../../assets/Flashcard Audio/december/elf.mp3'),
+            img:require('../../assets/image/At the Restaurant/plate.png')
+          },{
+            id:9,
+            cardName:'order',
+            audio:require('../../assets/Flashcard Audio/december/stocking.mp3'),
+            img:require('../../assets/image/At the Restaurant/order.png')
+          },{
+            id:10,
+            cardName:'juice',
+            audio:require('../../assets/Flashcard Audio/december/sleigh.mp3'),
+            img:require('../../assets/image/At the Restaurant/juice.png')
+          },{
+            id:11,
+            cardName:'noodles',
+            audio:require('../../assets/Flashcard Audio/december/reindeer.mp3'),
+            img:require('../../assets/image/At the Restaurant/noodles.png')
+          },{
+            id:12,
+            cardName:'burger',
+            audio:require('../../assets/Flashcard Audio/december/bells.mp3'),
+            img:require('../../assets/image/At the Restaurant/burger.png')
+          }
+        ],
+        MealTimePart1:[
+          {
+            id:1,
+            cardName:'bowl',
+            audio:require('../../assets/Flashcard Audio/december/stocking.mp3'),
+            img:require('../../assets/image/At Home/bowl.png')
+          },{
+            id:2,
+            cardName:'cup',
+            audio:require('../../assets/Flashcard Audio/december/sleigh.mp3'),
+            img:require('../../assets/image/At Home/cup.png')
+          },{
+            id:3,
+            cardName:'fish',
+            audio:require('../../assets/Flashcard Audio/december/reindeer.mp3'),
+            img:require('../../assets/image/At Home/fish.png')
+          },{
+            id:4,
+            cardName:'chopsticks',
+            audio:require('../../assets/Flashcard Audio/december/bells.mp3'),
+            img:require('../../assets/image/At Home/chopsticks.png')
+          },{
+            id:5,
+            cardName:'eat',
+            audio:require('../../assets/Flashcard Audio/december/Santa claus.mp3'),
+            img:require('../../assets/image/At Home/eat.png')
+          },{
+            id:6,
+            cardName:'rice',
+            audio:require('../../assets/Flashcard Audio/december/elf.mp3'),
+            img:require('../../assets/image/At Home/rice.png')
+          },{
+            id:7,
+            cardName:'chickens',
+            audio:require('../../assets/Flashcard Audio/december/elf.mp3'),
+            img:require('../../assets/image/At Home/chicken.png')
+          },{
+            id:8,
+            cardName:'drink',
+            audio:require('../../assets/Flashcard Audio/december/elf.mp3'),
+            img:require('../../assets/image/At Home/drink.png')
+          },{
+            id:9,
+            cardName:'milk',
+            audio:require('../../assets/Flashcard Audio/december/stocking.mp3'),
+            img:require('../../assets/image/At Home/milk.png')
+          },{
+            id:10,
+            cardName:'spoon',
+            audio:require('../../assets/Flashcard Audio/december/sleigh.mp3'),
+            img:require('../../assets/image/At Home/spoon.png')
+          },{
+            id:11,
+            cardName:'tea',
+            audio:require('../../assets/Flashcard Audio/december/reindeer.mp3'),
+            img:require('../../assets/image/At Home/tea.png')
+          },{
+            id:12,
+            cardName:'vegetables',
+            audio:require('../../assets/Flashcard Audio/december/bells.mp3'),
+            img:require('../../assets/image/At Home/vegetables.png')
+          }
+        ],
         list:[],
         titleUrl:{
           MyCommunity:require('../../assets/image/2-logo.png'),
@@ -1123,6 +1249,8 @@
           FamilyTimePart2:require('../../assets/image/11-11logo2.png'),
           HolidaysPart1:require('../../assets/image/12-logo1.png'),
           HolidaysPart2:require('../../assets/image/12-logo2.png'),
+          MealTimePart1:require('../../assets/image/1-1logo1.png'),
+          MealTimePart2:require('../../assets/image/1-1logo2.png'),
         },
         title:'../../assets/image/6-6logo.png',
         flashCardUrl:'http://107.150.121.34/monkeytownHK/image/img/9315e4a9-e1ec-4f49-8db5-5b3a9b6ae083.png',

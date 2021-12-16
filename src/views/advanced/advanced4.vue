@@ -91,7 +91,7 @@
           <span class="fontsize">Listen to the sentence and look at the picture.
              Then‚ select “Yes” or “No”.</span>
           <div @click="changesett">
-            <img src="../../assets/image/advpause.png" class="repeat">
+            <img src="../../assets/image/adPause.png" class=" repeat">
           </div>
           <!--<div @click="repeattitle">-->
 						<!--<img src="../../assets/image/inter-repeat.png" class="repeat">-->

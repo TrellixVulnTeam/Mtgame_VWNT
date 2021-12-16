@@ -74,7 +74,7 @@
           <img src="../../assets/image/advancedbar.png" style="width: 100%;bottom: 0;height: 100%;">
           <span class="fontsize">Look at the picture and listen to the word.Then,select the missing sound.</span>
           <div @click="changesett">
-            <img src="../../assets/image/advpause.png" class=" repeat">
+            <img src="../../assets/image/adPause.png" class=" repeat">
           </div>
         </div>
       </div>

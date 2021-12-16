@@ -60,7 +60,7 @@
 					<img src="../../assets/image/abar.png" style="width: 100%;bottom: 0;height: 100%;">
 					<span class="fontsize">Listen to the word and select the correct sound.</span>
 					<div @click="changesett">
-						<img src="../../assets/image/advpause.png" class=" repeat">
+            <img src="../../assets/image/adPause.png" class=" repeat">
 					</div>
 				</div>
 			</div>

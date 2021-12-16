@@ -209,7 +209,7 @@
                 <!--</div>-->
 								<div class="box1" v-for="(li,index) in unitsList" :key="index">
 									<a  style="min-height: 100px;">
-										<img src="../../assets/image/moon/mealtime.png" v-if="li.name==='MEAL TIME'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">
+										<img src="../../assets/image/moon/mealtime.png" v-if="li.name==='Meal Time'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">
                     <img src="../../assets/image/moon/onthefarm.png" v-if="li.name==='ON THE FARM'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">
                     <img src="../../assets/image/moon/s1.png" v-if="li.name==='Seasons'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">
                     <img src="../../assets/image/moon/s2.png" v-if="li.name==='Transportation'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">
@@ -283,7 +283,7 @@
           </div>
           <button class="animapng7" @click="tohome(1)">
             <!--<img  src="../../assets/image/4-4p1.png" class="imgpart" >-->
-            <img src="../../assets/image/moon/mealtime1.png" v-if="this.unitname==='MEAL TIME'"  class="imgpart">
+            <img src="../../assets/image/moon/mealtime1.png" v-if="this.unitname==='Meal Time'"  class="imgpart">
             <img src="../../assets/image/moon/onthefarm1.png" v-if="this.unitname==='ON THE FARM'" class="imgpart">
             <img src="../../assets/image/moon/seasons1.png" v-if="this.unitname==='Seasons'" class="imgpart">
             <img src="../../assets/image/moon/transportation1.png" v-if="this.unitname==='Transportation'" class="imgpart">
@@ -311,7 +311,7 @@
             <img src="../../assets/image/moon/summerfun1.png" v-if="this.unitname==='Summer Fun'" class="imgpart">
           </button>
           <button class="animapng7" @click="tohome(2)">
-            <img src="../../assets/image/moon/mealtime2.png" v-if="this.unitname==='MEAL TIME'"  class="imgpart">
+            <img src="../../assets/image/moon/mealtime2.png" v-if="this.unitname==='Meal Time'"  class="imgpart">
             <img src="../../assets/image/moon/onthefarm2.png" v-if="this.unitname==='ON THE FARM'" class="imgpart">
             <img src="../../assets/image/moon/seasons2.png" v-if="this.unitname==='Seasons'" class="imgpart">
             <img src="../../assets/image/moon/transportation2.png" v-if="this.unitname==='Transportation'" class="imgpart">
@@ -339,7 +339,7 @@
             <img src="../../assets/image/moon/summerfun2.png" v-if="this.unitname==='Summer Fun'" class="imgpart">
           </button>
           <button class="animapng7" @click="tohome(3)">
-            <img src="../../assets/image/moon/mealtime3.png" v-if="this.unitname==='MEAL TIME'"  class="imgpart">
+            <img src="../../assets/image/moon/mealtime3.png" v-if="this.unitname==='Meal Time'"  class="imgpart">
             <img src="../../assets/image/moon/onthefarm3.png" v-if="this.unitname==='ON THE FARM'" class="imgpart">
             <img src="../../assets/image/moon/seasons3.png" v-if="this.unitname==='Seasons'" class="imgpart">
             <img src="../../assets/image/moon/transportation3.png" v-if="this.unitname==='Transportation'" class="imgpart">

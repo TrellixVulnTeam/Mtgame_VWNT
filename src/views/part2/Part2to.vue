@@ -378,7 +378,7 @@
         part:'',
 				//url: 'http://localhost:8080/mtGame/exercise/exerciseB',
 				onef: true,
-
+        level:'',
 				fade: 'fade',
 				levels:0,
 				zhezhao:true,
@@ -602,7 +602,8 @@
 											menuId: this.menuId,
 											unitsId:this.unitsId,
 											unit:this.unit,
-                      part:this.part
+                      part:this.part,
+                      level:this.level,
 										}
 									});
 
@@ -657,7 +658,8 @@
 												menuId: this.menuId,
 												unitsId:this.unitsId,
 												unit:this.unit,
-                        part:this.part
+                        part:this.part,
+                        level:this.level,
 											}
 										});
 
@@ -886,7 +888,8 @@
 				query: {
 					unitsId: this.unitsId,
 					unit:this.unit,
-          part:this.part
+          part:this.part,
+          level:this.level,
 				}
 			})
 			},
@@ -899,12 +902,14 @@
      window.removeEventListener('popstate',this.gomemu,false);
 		},
 		created() { //生命周期里接收参数
+      console.log(this.$route.query);
         this.pic=this.$axios.defaults.baseURL2;
 				this.unit = this.$route.query.unit;
 				this.part = this.$route.query.part;
 				this.unitsId=this.$route.query.unitsId;
 				this.menuId = this.$route.query.menuId; //接受参数关键代码
         this.gamename=this.$route.query.name;
+        this.level = this.$route.query.level;
       if(this.part==='part1'){
         this.url1=this.url+'exerciseBPart1';
       }else if(this.part==='part2'){

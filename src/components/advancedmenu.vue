@@ -3,9 +3,9 @@
   <div id="hello">
     <!-- <h1>{{ msg }}</h1> -->
     <div class="contain" id="container">
-      <img src="../assets/image/advancebg9.png" style="width: 100%;top:0;height: 100%;display:block;position: absolute;">
+<!--      <img src="../assets/image/advancebg9.png" style="width: 100%;top:0;height: 100%;display:block;position: absolute;">-->
 
-      <img src="../assets/image/aback.png" @click="back" class="backbutton" />
+<!--      <img src="../assets/image/aback.png" @click="back" class="backbutton" />-->
       <h2 class="styletit">
         <img src="../assets/image/ptop3.png">
         <button :style="{fontFamily: unit==='Ii' ? 'OldR' : 'pepper'}">{{unit}}</button>
@@ -118,7 +118,10 @@
           <span class="fontsize leftmar2">{{sum}}</span>
         </div>
         <div @click="routerabout">
-          <img src="../assets/image/ahome.png" class="repeat">
+          <img src="../assets/image/adHome.png" class="repeat">
+        </div>
+        <div @click="back">
+          <img src="../assets/image/adBack.png"  class="pause" >
         </div>
       </div>
     </div>
@@ -867,11 +870,11 @@
     padding: 0px;
     margin: 0px;
     width: 100%;
-    /*background-image: url("http://107.150.121.34/monkeytownHK/image/img/phonicsIntbg.png");*/
-    /*background-color: #204900;*/
-    /*background-position: center;*/
-    /*background-repeat: no-repeat;*/
-    /*background-size: cover;*/
+    background-image: url("../assets/image/advancebg9.png");
+    background-color: #204900;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 100%;
     z-index: 999;
     position: fixed;

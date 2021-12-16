@@ -123,14 +123,17 @@ html,body{
 .itemWarp2 .item2.active{
 	z-index: 200;
 }
-   @media screen and (min-width: 900px) and (max-width: 1024px){
-    	.itemWarp2 .item2 .monkey{
-    	    top: 9%;
-    		height: 100%;
-
-    	}
-    }
-@media screen and (min-width: 1025px)and (max-width: 1600px){
+   /*@media screen and (min-width: 900px) and (max-width: 1024px){*/
+   /* 	.itemWarp2 .item2 .monkey{*/
+   /* 	    top: 9%;*/
+   /* 		height: 100%;*/
+   /* 	}*/
+   /* }*/
+@media screen and (min-width: 1024px)and (max-width: 1600px){
+  .item2 .monkey{
+    top: 9%;
+    height: 100%;
+  }
 	.itemWarp2 {
 		top: 26%;
 	}

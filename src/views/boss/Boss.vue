@@ -284,6 +284,7 @@
 		},
 		data() {
 			return {
+			  level:'',
 				popp: false,
 				spanp:'',
         duration:0,
@@ -533,7 +534,8 @@
             	query: {
             		unitsId: this.unitsId,
             		unit:this.unit,
-                part:this.part
+                part:this.part,
+                level:this.level,
             	}
             })
       },
@@ -698,7 +700,8 @@
 										menuId: this.menuId,
 										unitsId:this.unitsId,
 										unit:this.unit,
-                    part:this.part
+                    part:this.part,
+                    level:this.level,
 									}
 								});
 								}, 2000);
@@ -737,7 +740,8 @@
 										menuId: this.menuId,
 										unitsId:this.unitsId,
 										unit:this.unit,
-                    part:this.part
+                    part:this.part,
+                    level:this.level,
 									}
 								});
 								}, 2000);
@@ -794,7 +798,8 @@
 									menuId: this.menuId,
 									unitsId:this.unitsId,
 									unit:this.unit,
-                  part:this.part
+                  part:this.part,
+                  level:this.level,
 								}
 							});
 							}, 2000);
@@ -818,6 +823,7 @@
 		this.part = this.$route.query.part;
 		this.unitsId=this.$route.query.unitsId;
     this.gamename=this.$route.query.name;
+    this.level=this.$route.query.level;
       if(this.part==='part1'){
         this.url1=this.url+'partBoss1';
         this.partName = 'partBoss1';

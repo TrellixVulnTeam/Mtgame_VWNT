@@ -181,6 +181,7 @@
 		name: "part7to",
 		data() {
 			return {
+			  level:'',
 				popp: false,
 				spanp:'',
 				ruleimg8:false,
@@ -278,6 +279,7 @@
 			this.unitsId=this.$route.query.unitsId;
 			this.menuId = this.$route.query.menuId; //接受参数关键代码
       this.gamename=this.$route.query.name;
+      this.level = this.$route.query.level;
       if(this.part==='part1'){
         this.url1=this.url+'exerciseGPart1';
       }else if(this.part==='part2'){
@@ -556,7 +558,8 @@
 																		menuId: this.menuId,
 																		unitsId:this.unitsId,
 																		unit:this.unit,
-                                    part:this.part
+                                    part:this.part,
+                                    level:this.level,
 																	}
 																});
 
@@ -722,7 +725,8 @@
 				query: {
 					unitsId: this.unitsId,
 					unit:this.unit,
-          part:this.part
+          part:this.part,
+          level:this.level,
 				}
 			})
 			},

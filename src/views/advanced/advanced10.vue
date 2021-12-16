@@ -80,7 +80,7 @@
           <img src="../../assets/image/abar.png" style="width: 100%;bottom: 0;height: 100%;">
           <button class="fontsize">{{warn}}</button>
           <div @click="changesett">
-            <img src="../../assets/image/advpause.png" class=" repeat">
+            <img src="../../assets/image/adPause.png" class=" repeat">
           </div>
           <!-- <div @click="change">
 						<img src="../../assets/image/season-repeat.png" class=" repeat">

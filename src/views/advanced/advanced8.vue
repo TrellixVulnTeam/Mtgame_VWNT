@@ -100,7 +100,7 @@
 
           <span class="fontsize">Listen and match the words to the sound. </span>
           <div @click="changesett">
-            <img src="../../assets/image/advpause.png" class=" repeat"  >
+            <img src="../../assets/image/adPause.png" class=" repeat">
 
           </div>
           <!-- <div @click="change">

@@ -46,8 +46,8 @@
 							<img src="../../assets/image/start-01.png" @click="alreadylogin" />
 						</div>
             <div>
-              <div class="secretBackground" v-if="secretBackground&&local==='cn'" @click="cancel">
-              <div class="secret" v-if="secretBackground">
+              <div class="secretBackground" v-if="update&&secretBackground&&local==='cn'" @click="cancel">
+                <div class="secret" v-if="secretBackground">
                 <h3 class="title">服务协议</h3>
                 <p class="text">请你务必审慎阅读、充分理解”隐私政策”各条款，我们需要你的手机信息。</p>
                 <p class="text">你可阅读《<span class="under" @click.stop="PrivacyPolicy('service')">用户协议</span>》和《<span class="under" @click="PrivacyPolicy('Privacy')">隐私协议</span>》了解详细信息。如你同意，请点击”同意“开始接受我们的服务</p>
@@ -57,7 +57,7 @@
                 <h3 class="cancel" @click.stop="cancel">暂不使用</h3>
                 <h3 class="agree" @click.stop="agree">同意</h3>
               </div>
-            </div>
+              </div>
             </div>
 					</div>
 				</a>
@@ -194,7 +194,7 @@
 			if (localStorage.getItem('checkbox') === true || localStorage.getItem('checkbox') === "true") {
 				this.username = localStorage.getItem('username');
 				this.password = localStorage.getItem('password');
-				 this.guardianId = localStorage.getItem('userId');
+        this.guardianId = localStorage.getItem('userId');
 			}
        document.body.addEventListener('touchmove',this.bodyScroll,{passive: false});
 		}

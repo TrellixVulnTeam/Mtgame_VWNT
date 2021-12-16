@@ -981,8 +981,8 @@
 							unitsId:this.unitsId,
 							unit:this.unit,
               name:this.UnitsList[7].name,
-              part:this.part
-							//partName:this.UnitsList[0].name,
+              part:this.part,
+              level:this.level,
 						}
 					})
 				}, 300);
@@ -1004,7 +1004,8 @@
 								unitsId:this.unitsId,
 								unit:this.unit,
                 name:this.UnitsList[0].name,
-                part:this.part
+                part:this.part,
+                level:this.level,
 							}
 						})
 					}, 300);
@@ -1024,7 +1025,8 @@
 								unitsId:this.unitsId,
 								unit:this.unit,
                 name:this.UnitsList[2].name,
-                part:this.part
+                part:this.part,
+                level:this.level,
 							}
 						})
 					}, 300);
@@ -1044,7 +1046,8 @@
 								unitsId:this.unitsId,
 								unit:this.unit,
                 name:this.UnitsList[1].name,
-                part:this.part
+                part:this.part,
+                level:this.level,
 							}
 						})
 					}, 300);
@@ -1064,7 +1067,8 @@
 								unitsId:this.unitsId,
 								unit:this.unit,
                 name:this.UnitsList[5].name,
-                part:this.part
+                part:this.part,
+                level:this.level,
 							}
 						})
 					}, 300);
@@ -1084,7 +1088,8 @@
 								unitsId:this.unitsId,
 								unit:this.unit,
                 name:this.UnitsList[3].name,
-                part:this.part
+                part:this.part,
+                level:this.level,
 							}
 						})
 					}, 300);
@@ -1104,7 +1109,8 @@
 								unitsId:this.unitsId,
 								unit:this.unit,
                 name:this.UnitsList[4].name,
-                part:this.part
+                part:this.part,
+                level:this.level,
 							}
 						})
 					}, 300);
@@ -1124,7 +1130,8 @@
 								unitsId:this.unitsId,
 								unit:this.unit,
                 name:this.UnitsList[6].name,
-                part:this.part
+                part:this.part,
+                level:this.level,
 							 }
 						})
 					}, 300);
@@ -1146,7 +1153,8 @@
 								unit:this.unit,
 								spring:this.spring,
                 name:this.UnitsList[8].NAME,
-                part:this.part
+                part:this.part,
+                level:this.level,
 							}
 						})
 					}, 300);
@@ -1196,9 +1204,6 @@
 
       },
 		},
-    // destroyed() {
-    // document.body.removeEventListener('touchmove',this.bodyScroll,{passive: false});
-    // },
 	  created() {
 		  console.log(this.$route.query);
 		  this.cources=this.$route.query.cources;
@@ -1222,7 +1227,7 @@
         })).then(res=>{
           this.courseList=res.data.courseList;
           for(var i=0;i<this.courseList.length;i++){
-            if(this.courseList[i].name==this.$route.query.cources){
+            if(this.courseList[i].name===this.$route.query.cources){
               this.courseId=this.courseList[i].course_id;
               this.sum=res.data.sumCoins.sumCoins;
               localStorage.setItem('sumCoins',this.sum);

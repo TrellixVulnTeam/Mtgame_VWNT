@@ -242,6 +242,7 @@
 		},
 		data() {
 			return {
+			  level:'',
 				show: true,
 				popp: false,
 				spanp:'',
@@ -608,7 +609,8 @@
 										menuId: this.menuId,
 										unitsId:this.unitsId,
 										unit:this.unit,
-                    part:this.part
+                    part:this.part,
+                    level:this.level,
 									}
 								});
 							}, 2000);
@@ -676,7 +678,8 @@
 										            	menuId: this.menuId,
 										            	unitsId:this.unitsId,
 										            	unit:this.unit,
-                                   part:this.part
+                                   part:this.part,
+                                   level:this.level,
 										             }
 									                });
 									         },3000);
@@ -822,7 +825,8 @@
 				query: {
 					unitsId: this.unitsId,
 					unit:this.unit,
-          part:this.part
+          part:this.part,
+          level:this.level,
 				}
 			})
 			},
@@ -866,6 +870,7 @@
 			this.unitsId=this.$route.query.unitsId;
       this.part = this.$route.query.part;
        this.gamename=this.$route.query.name;
+       this.level = this.$route.query.level;
       if(this.gamename==''||this.gamename==undefined){
         this.gamename=localStorage.getItem('gamename')
       }else {
@@ -1872,10 +1877,10 @@
 			top: 80%;
 		}
 
-		.dndList-list2.itemsGt6 {
-			width: 70%;
-			margin-top: 18%
-		}
+    .dndList-list2.itemsGt6 {
+      width: 70%;
+      margin-top: 7%;
+    }
 
 		.radiubox.itemsGt6 {
 			width: 21%;
@@ -1934,19 +1939,19 @@
 		.fontsizes {
 			margin-top: 17%;
 		}
-        .dndList-list1.itemsGt9{
-          left: 65%;
-          top: 22%;
-        }
+    .dndList-list1.itemsGt9 {
+      left: 62%;
+      top: 22%;
+    }
         .itemsGt9 #answer-box ul{
            padding: 0 10px;
         }
-        .itemsGt9 #answer-box li{
-              width: 45px;
-              height: 45px;
-              line-height: 45px;
-        	  font-size: 18px;
-        }
+    .itemsGt9 #answer-box li {
+      width: 40px;
+      height: 40px;
+      line-height: 45px;
+      font-size: 18px;
+    }
         .dndList-list2.itemsGt9{
         	width: 100%;
         	right: -5%;
@@ -1964,10 +1969,10 @@
         	top:50%;
           left: 20%;
         }
-		.itemsGt9.radiubox .question-img{
-			bottom: 10%;
-      top: 55%;
-		}
+    .itemsGt9.radiubox .question-img {
+      bottom: 10%;
+      top: 60%;
+    }
 		.withcolor {
 			height: 70%;
 		}

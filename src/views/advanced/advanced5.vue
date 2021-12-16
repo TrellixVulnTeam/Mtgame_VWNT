@@ -169,7 +169,7 @@
 
           <span class="fontsize">Listen to the word. Then, put the letters in the correct order.</span>
           <div @click="changesett">
-            <img src="../../assets/image/advpause.png" class=" repeat"  >
+            <img src="../../assets/image/adPause.png" class=" repeat">
           </div>
           <!-- <div @click="change">
                         <img src="../../assets/image/Icon_Repeat.png" class="repeat" v-if="!levels" v-show="action1">

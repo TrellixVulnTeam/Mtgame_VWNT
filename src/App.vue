@@ -155,12 +155,11 @@ import $ from "jquery";
       		res => {
             if(res.data.success==="success"){
               this.zhezhao=false;
-			        //localStorage.setItem('update',false);
+			        localStorage.setItem('update',false);
             }else if(res.data.success==="false"){
               this.zhezhao=true;
               alertMsg2("Please update your app to new version to continue.");
-              console.log(new Date());
-			        //localStorage.setItem('update',true);
+			        localStorage.setItem('update',true);
             }
       		},
       		res => {

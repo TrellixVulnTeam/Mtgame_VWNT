@@ -436,7 +436,8 @@
                                   unitsId: that.unitsId,
                                   unit: that.unit,
                                   part:that.part,
-                                  num:that.num
+                                  num:that.num,
+                                  level:that.level,
                                 }
                               });
                             }, 2000);
@@ -545,7 +546,8 @@
                                         unitsId: that.unitsId,
                                         unit: that.unit,
                                         part:that.part,
-                                        num:that.num
+                                        num:that.num,
+                                        level:that.level,
                                       }
                                     });
                                   }, 2000);
@@ -571,6 +573,7 @@
 
     data() {
       return {
+        level:'',
         right:0,
         num:0,
         popp: false,
@@ -685,7 +688,8 @@
           query: {
             unitsId: this.unitsId,
             unit: this.unit,
-            part:this.part
+            part:this.part,
+            level:this.level,
           }
         })
       },
@@ -745,6 +749,7 @@
       this.unitsId = this.$route.query.unitsId;
       this.menuId = this.$route.query.menuId; //接受参数关键代码
       this.gamename=this.$route.query.name;
+      this.level = this.$route.query.level;
       if(this.part==='part1'){
         this.url1=this.url+'exerciseDPart1';
       }else if(this.part==='part2'){
