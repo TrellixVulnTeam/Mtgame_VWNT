@@ -1,6 +1,6 @@
 <template xmlns="http://www.w3.org/1999/html">
 	<div class="startpage">
-<!--    <div class='update' v-if="local==='cn' && this.update==='true'">-->
+<!--    <div class='update' v-if="local==='cn'&&update==='true'">-->
 <!--        <h3 style='width:100%;font-family: pepper,serif;padding:10px 0;'>Monkey Town 又有更新了!</h3>-->
 <!--        <p class="p1">请马上到应用商店更新最新的版本以体验全新的功能及内容！</p>-->
 <!--        <p class="p2" v-if="yingyongbao === 'false'">方法：开启 App Store 或 Google 搜索Monkey Town(CN)及点击更新</p>-->
@@ -14,7 +14,7 @@
 <!--          </span>-->
 <!--        </p>-->
 <!--      </div>-->
-<!--    <div class='update' v-if="local==='hk'&&this.update==='true'">-->
+<!--    <div class='update' v-if="local==='hk'&&update==='true'">-->
 <!--        <h3 style='width:100%;font-family: pepper,serif;padding:10px 0;'>New Version Available!</h3>-->
 <!--        <p class="p1">There is a new version of Monkey Town available for download! Please update the Monkey Town app by visiting the Apple Store/Play Store. </p>-->
 <!--        <p class="p2" >To update: Launch App Store/Play Store, search Monkey Town (HK) and then click 'Update'.</p>-->
@@ -45,18 +45,17 @@
 						<div class="m_btn_start">
 							<img src="../../assets/image/start-01.png" @click="alreadylogin" />
 						</div>
-            <div>
-              <div class="secretBackground" v-if="update&&secretBackground&&local==='cn'" @click="cancel">
+            <div v-if="update==='false'">
+              <div class="secretBackground" v-if="secretBackground&&local==='cn'" @click="cancel">
                 <div class="secret" v-if="secretBackground">
-                <h3 class="title">服务协议</h3>
-                <p class="text">请你务必审慎阅读、充分理解”隐私政策”各条款，我们需要你的手机信息。</p>
-                <p class="text">你可阅读《<span class="under" @click.stop="PrivacyPolicy('service')">用户协议</span>》和《<span class="under" @click="PrivacyPolicy('Privacy')">隐私协议</span>》了解详细信息。如你同意，请点击”同意“开始接受我们的服务</p>
-<!--                <p class="text">你可阅读《<a class="under" href="https://www.monkeytree.com.cn/privacyStatement.jsp?lctHref=11">隐私协议</a>》了解详细信息。如你同意，请点击”同意“开始接受我们的服务</p>-->
-                <div class="line"/>
-                <div class="line_01"/>
-                <h3 class="cancel" @click.stop="cancel">暂不使用</h3>
-                <h3 class="agree" @click.stop="agree">同意</h3>
-              </div>
+                  <h3 class="title">服务协议</h3>
+                  <p class="text">请你务必审慎阅读、充分理解”隐私政策”各条款，我们需要你的手机信息。</p>
+                  <p class="text">你可阅读《<span class="under" @click.stop="PrivacyPolicy('service')">用户协议</span>》和《<span class="under" @click="PrivacyPolicy('Privacy')">隐私协议</span>》了解详细信息。如你同意，请点击”同意“开始接受我们的服务</p>
+                  <div class="line"/>
+                  <div class="line_01"/>
+                  <h3 class="cancel" @click.stop="cancel">暂不使用</h3>
+                  <h3 class="agree" @click.stop="agree">同意</h3>
+                </div>
               </div>
             </div>
 					</div>
@@ -86,7 +85,7 @@
 		},
 		data() {
 			return {
-        update:false,
+        update:'false',
         //手机系统
         system:'',
         yingyongbao:'',
@@ -180,11 +179,6 @@
         this.system = localStorage.getItem('system');
         this.update = localStorage.getItem('update');
         this.yingyongbao = localStorage.getItem('yingyongbao');
-        // if(localStorage.getItem('yingyongbao')==='true'){
-        //   this.yingyongbao='方法：开启 App Store 或 应用宝 搜索Monkey Town(CN)及点击更新'
-        // }else{
-        //   this.yingyongbao='方法：开启 App Store 或 Google 搜索Monkey Town(CN)及点击更新'
-        // }
         this.local = localStorage.getItem('local');
         if (localStorage.getItem('secret')==='false'){
           this.secretBackground=false;

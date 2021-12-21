@@ -155,6 +155,7 @@ import $ from "jquery";
       		res => {
             if(res.data.success==="success"){
               this.zhezhao=false;
+              console.log(new Date());
 			        localStorage.setItem('update',false);
             }else if(res.data.success==="false"){
               this.zhezhao=true;
@@ -605,7 +606,7 @@ import $ from "jquery";
 			// transform: scale(1.2);
 		}
 		.pause {
-			bottom: 16%;width: 13%;    right: 17%;
+			bottom: 14%;width: 13%;    right: 17%;
 		}
 
 		.repeat {

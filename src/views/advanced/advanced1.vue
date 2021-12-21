@@ -49,7 +49,7 @@
               </div>
               <div class="buttons" id="imgBox">
                 <button v-for="(li,index) in list1" :key="li.id" class="item listitems imgsty"
-                        v-bind:class="{changeopcily:li.fail,changetranform:li.successful,marginl:index==0}"
+                        v-bind:class="{changeopcily:li.fail,changetranform:li.successful,marginl:index===0}"
                         @click="answer(li)">
                   <span class="listgroup"
                         v-bind:class="{ bluefont:li.bluesuccess,pinkfont:li.redsuccess}">{{li.letter_name}}</span>
@@ -571,6 +571,7 @@
     margin: 0;
     font-family: pepper;
     color: white;
+    width: 100%;
     letter-spacing: 1px;
   }
 
@@ -679,7 +680,7 @@
     font-family: pepper;
     color: white;
     font-size: 3.5rem;
-    width: 70%;
+    width: 100%;
     height: 100%;
     float: right;
     text-align: center;
@@ -970,6 +971,11 @@
 
   @media screen and (min-width: 482px) and (max-width: 569px) {
 
+    .listitems {
+      height: 8rem;
+      margin-right: 1%;
+    }
+
     .fontsize {
       font-family: pepper;
       color: white;
@@ -986,9 +992,25 @@
       padding-top: 18%;
     }
 
+    .listgroup {
+      font-size: 2rem;
+    }
+
+    .yes {
+      margin-top: 5%;
+    }
+
+    .wordstyle {
+      font-size: 2rem;
+      margin-left: 10%;
+    }
   }
 
   @media screen and (min-width: 1024px)and (max-width: 1365px) {
+
+    .listitems {
+      height: 30%;
+    }
 
     .fontsizes {
       margin-top: 30%;
@@ -1031,17 +1053,9 @@
     }
 
     .buttons {
-      margin-top: 35%;
+      margin-top: 38%;
     }
 
-    /*.listitems{*/
-    /*height: 140px;*/
-    /*}*/
-    /*.listgroup{*/
-    /*font-size: 3rem;*/
-    /*font-family: pepper;*/
-    /*margin: 2.5rem 5%;*/
-    /*}*/
     .start2 {
       top: 5%;
 
@@ -1080,13 +1094,16 @@
     }
 
     .listgroup {
-      margin-top: 32%;
+      margin-top: 45%;
     }
 
+    .wordstyle {
+      font-size: 4rem;
+      margin-left: 10%;
+    }
   }
 
   @media screen and (min-width: 1366px)and (max-width: 1600px) {
-
     .fontsizes {
       margin-top: 30%;
     }
@@ -1137,13 +1154,15 @@
     }
 
     .listitems {
-      height: 15rem;
+      height: 35%;
+      margin-right: 2%;
     }
 
     .listgroup {
       height: 15rem;
       line-height: 15rem;
       font-size: 3rem;
+      margin-top: 35%;
     }
 
     .start2 {
@@ -1183,14 +1202,23 @@
       top: 20%;
     }
 
-    .listgroup {
-      margin-top: 12%;
+    .wordstyle {
+      margin-left: 10%;
+      font-size: 4rem;
     }
-
   }
 
   @media screen and (min-width: 736px) and (max-width: 811px) {
+    .wordstyle {
+      margin-left: 10%;
+    }
+    .listitems {
+      margin-right: 1%;
+    }
 
+    .buttons {
+      margin-top: 22%;
+    }
 
     .fontsizes {
       margin-top: 17%;
@@ -1207,7 +1235,13 @@
   }
 
   @media screen and (min-width: 812px) and (max-width: 895px) {
-
+    .wordstyle {
+      font-size: 3.5rem;
+      margin-left: 10%;
+    }
+    .yes {
+      margin-top: 6%;
+    }
     .twomenu {
       padding-top: 14%;
     }
@@ -1241,7 +1275,27 @@
     }
   }
 
+  @media screen and (min-width: 570px) and (max-width: 735px){
+    .buttons {
+      margin-top: 21%;
+      width: 95%;
+    }
+    .wordstyle {
+      margin-left: 10%;
+    }
+    .listitems {
+      margin-right: 3%;
+    }
+  }
+
   @media screen and (min-width: 895px) and (max-width: 1023px) {
+    .wordstyle {
+      font-size: 3.5rem;
+      margin-left: 10%;
+    }
+    .yes {
+      margin-top: 6%;
+    }
     .twomenu {
       padding-top: 14%;
     }
@@ -1268,7 +1322,7 @@
     }
 
     .buttons {
-      margin-top: 19%;
+      margin-top: 18%;
     }
 
     .listgroup {
@@ -1301,6 +1355,7 @@
 
     .wordstyle {
       font-size: 6rem;
+      margin-left: 16%;
     }
 
     .yes {
@@ -1308,6 +1363,7 @@
       -webkit-border-radius: 8rem;
       -moz-border-radius: 8rem;
       border-radius: 8rem;
+      margin-top: 6%;
     }
 
     .yesbutton {
@@ -1322,15 +1378,16 @@
     }
 
     .centermain {
-      font-size: 7.5rem;
+      height: 95%;
     }
 
     .buttons {
-      margin-top: 20%;
+      margin-top: 23%;
     }
 
     .listitems {
       height: 23rem;
+      margin-right: 38px;
     }
 
     .listgroup {

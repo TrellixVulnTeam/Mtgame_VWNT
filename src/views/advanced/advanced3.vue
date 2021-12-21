@@ -733,7 +733,7 @@
     top: 15%;
 		text-align: center;
 		display: inline-block;
-    background-image: url('../../assets/image/shu1.png');
+    background-image: url('http://gamephp.monkeytree.com.hk/monkeytreeApp/www3/img/shu1.png');
     -ms-flex-line-pack: center;
         align-content: center;
         background-size: cover;
@@ -757,7 +757,7 @@
     top: 2%;
   	text-align: center;
   	display: inline-block;
-    background-image: url('../../assets/image/shu2.png');
+    background-image: url('http://gamephp.monkeytree.com.hk/monkeytreeApp/www3/img/shu2.png');
     -ms-flex-line-pack: center;
         align-content: center;
         background-size: cover;

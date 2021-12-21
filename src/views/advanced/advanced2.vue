@@ -806,7 +806,7 @@
     font-size: 3rem;
     font-weight: bold;
     vertical-align: middle;
-    font-family: pepper;
+    font-family: pepper,serif;
     color:#8f532e;
   }
 
@@ -816,7 +816,7 @@
     display: flex;
     position: relative;
     background: none;
-    background-image: url('../../assets/image/advmirror1.png');
+    background-image: url('http://gamephp.monkeytree.com.hk/monkeytreeApp/www3/img/advmirror1.png');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -830,7 +830,7 @@
     display: flex;
     position: relative;
     background: none;
-    background-image: url('../../assets/image/advmirror2.png');
+    background-image: url('http://gamephp.monkeytree.com.hk/monkeytreeApp/www3/img/advmirror2.png');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -843,8 +843,7 @@
     height: 10rem;
     display: flex;
     position: relative;
-    background: none;
-    background-image: url('../../assets/image/advmirror3.png');
+    background-image: url('http://gamephp.monkeytree.com.hk/monkeytreeApp/www3/img/advmirror3.png');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;

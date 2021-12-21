@@ -32,9 +32,9 @@
               </div>
               <div class="left-walkers">
 <!--                 <a>-->
-<a @click="walkers2(phonicsList[1])">
+                  <a @click="walkers2(phonicsList[1])">
                   <img src="../../assets/image/intermediate.png" style="width: 100%; ">
-                  <img src="../../assets/image/coming-soon1.png" style="width: 80%;margin: 0 10%;z-index: 2;bottom:-6%;position: absolute;display: inline;float: left;left: 0;">
+<!--                  <img src="../../assets/image/coming-soon1.png" style="width: 80%;margin: 0 10%;z-index: 2;bottom:-6%;position: absolute;display: inline;float: left;left: 0;">-->
                   <div class="progress" v-if="!phonicsList[1].compelte">
                     <div class="goldBG03">
                       <img src="../../assets/image/champanp2.png" v-bind:style="{width:phonicsList[1].percent}">
@@ -233,13 +233,16 @@
           }
         ],
         phonicsList: [{
-            compelte: 0
+            compelte: 0,
+            percent:'0%',
           },
           {
             compelte: 0,
+            percent:'0%',
           },
           {
             compelte: 0,
+            percent:'0%',
           },
         ],
         phonicsDetailList: [],
@@ -428,12 +431,14 @@
       this.pic = this.$axios.defaults.baseURL2;
       this.cources = this.$route.query.cources;
       this.style = this.$route.query.style; //接受参数关键代码
+      //无用if
       if (this.$route.query.phonicsId) {
         this.level = this.$route.query.level;
         this.phonicsId = this.$route.query.phonicsId;
         // this.courseId = this.$route.query.courseId;
         this.unitname = this.$route.query.unit;
         this.cources = this.$route.query.cources;
+        console.log(this.level);
         if (this.level === "Beginner") {
           this.phonics = false;
           this.walkers = true;
@@ -443,7 +448,7 @@
             phonicsId: this.phonicsId
           })).then(res => {
             this.phonicsDetailList = res.data.phonicsDetailList;
-
+            console.log('1');
           }, res => {
             alertMsg("You must be connected to the internet.<br>Please connect and try again.");
           })
@@ -470,7 +475,6 @@
       this.url2 = this.url + "phonics";
       this.$axios.post(this.url2, qs.stringify({
         studentId: localStorage.getItem('studentId'),
-        // courseId:this.courseId
       })).then(res => {
         this.phonicsList = res.data.phonicsList;
       }, res => {
@@ -1906,8 +1910,8 @@
     }
 
     .aspan {
-      font-size: 10rem;
-      height: 100%;
+      font-size: 9rem;
+      height: 110%;
     }
     .aspan2 {
       font-size: 5rem;

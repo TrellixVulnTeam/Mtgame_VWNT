@@ -241,7 +241,12 @@
 .Privacy:hover{
   cursor: pointer;
 }
-
+.cancel:hover{
+  cursor: pointer;
+}
+.agree:hover{
+  cursor: pointer;
+}
 @media screen and (min-width: 1600px){
   .secret{
     width: 20%;

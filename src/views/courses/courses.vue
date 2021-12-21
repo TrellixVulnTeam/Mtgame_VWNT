@@ -52,7 +52,7 @@
         <div v-if="chartroom" style="width: 100%;height: 100%;">
 
           <div class="chart-room-out">
-            <h2 class="chartroom-title"><span>{{cources}}</span></h2>
+            <h2 class="chartroom-title"><span>CHAT ROOM</span></h2>
             <div class="chart-room">
               <div class="left-walkers"  v-for="(li,i) in levelsList">
                 <a @click="walkers1(li)">

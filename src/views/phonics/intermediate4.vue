@@ -222,7 +222,7 @@
         onef: true,
         reload: true,
         over:false,
-        question: 5,
+        question: 10,
         soundsWrong:false,
         soundscorrect:false,
         short1:false,

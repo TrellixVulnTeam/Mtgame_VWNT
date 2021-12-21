@@ -48,12 +48,15 @@
             <div class="dndList" v-if="!reload">
 
               <div class="allansw">
-                <img src="../../assets/image/StarYellow.png" class="start" v-show="!ended1" style="position: absolute; margin-top: 0%;left: 0%;width: 100%;z-index: 2;">
+                <img src="../../assets/image/StarYellow.png" class="start1" v-show="ended1" >
                 <div class="bordercolor" id="answer-box">
 
                   <div id="box2" class="yes dragArea list-group" @click="blue">
-                    <div v-bind:class="{ answer: issuccess1 ,listimg:fangda1}" class="yes1" id="yes1">
-                      <img src="../../assets/image/yesflower.png" style="width: 100%;" />
+                    <img src="../../assets/image/yesflower2.png" class="yesflower3" />
+                    <div v-bind:class="{answer:issuccess1,listimg:fangda1}" class="yes1" id="yes1">
+<!--                      <img src="../../assets/image/yesflower.png" style="width: 100%;" />-->
+                      <img src="../../assets/image/yesflower1.png"  class="yesflower1"/>
+<!--                      <img src="../../assets/image/yesflower2.png" class="yesflower2" />-->
                       <div class="list-group-item" v-for="(element,index) in items2" :key="index">
                         <!-- {{ element.name }} -->
                       </div>
@@ -70,12 +73,15 @@
                 <!--</button>-->
               </div>
               <div class="allansw2">
-                <img src="../../assets/image/StarYellow.png" class="start" v-show="!ended2" style="position: absolute; margin-top: 0%;left: 0%;width: 100%;z-index: 2;">
+                <img src="../../assets/image/StarYellow.png" class="start2" v-show="ended2">
                 <div class="bordercolor" id="answer-box1">
 
                   <div id="box4" class="no dragArea list-group" @click="red">
-                    <div v-bind:class="{ answer: issuccess2 ,listimg:fangda2}" class="no1" id="no1">
-                      <img src="../../assets/image/noflower.png" style="width: 100%;" />
+                    <img src="../../assets/image/noflower2.png" class="noflower3" />
+                    <div v-bind:class="{listimg:fangda2}" class="no1" id="no1">
+<!--                      <img src="../../assets/image/noflower.png" style="width: 100%;" />-->
+                      <img src="../../assets/image/noflower1.png" v-bind:class="{ answer: issuccess2}" class="noflower1"/>
+<!--                      <img src="../../assets/image/noflower2.png" class="noflower2" />-->
                       <div class="list-group-item" v-for="(element,index) in items4" :key="index">
                         <!--  {{ element.name }} -->
                       </div>
@@ -304,17 +310,15 @@
         //console.log('end');
       },
       blue() {
-
-        if (this.zhezhao == false) {
+        if (this.zhezhao === false) {
           this.countpage += 1;
         }
         this.zhezhao = true;
-        //console.log(this.items1[0].score);
-        if (this.items1[0].score == '1') {
+        console.log(this.items1[0].score);
+        if (this.items1[0].score === '1') {
           this.ended1 = false;
           this.soundscorrect = true;
           this.account += 1;
-          // console.log(this.account);
           setTimeout(() => {
             if (this.countpage <= this.listE.length) {
               setTimeout(() => {
@@ -400,15 +404,14 @@
             }
           }, 2000);
         }
-
       },
       red() {
-
-        if (this.zhezhao == false) {
+        if (this.zhezhao === false) {
           this.countpage += 1;
         }
         this.zhezhao = true;
-        if (this.items1[0].score == '1') {
+        console.log(this.items1[0].score);
+        if (this.items1[0].score === '1') {
           this.issuccess2 = true;
           this.soundsWrong = true;
           setTimeout(() => {
@@ -416,6 +419,7 @@
             if (this.countpage <= this.listE.length) {
               setTimeout(() => {
                 this.onef = true;
+                //晃动
                 this.issuccess2 = false;
                 this.items4 = [];
                 this.fangda2 = false;
@@ -428,7 +432,6 @@
                 this.audio2=this.pic+this.items1[0].audio2;
               }, 1000);
             } else {
-
               setTimeout(() => {
                 this.$router.push({
                   //核心语句
@@ -451,7 +454,7 @@
               }, 1000);
             }
           }, 2000);
-        } else {
+        }else {
           this.ended2 = false;
           this.soundscorrect = true;
           this.account += 1;
@@ -707,7 +710,48 @@
     position: absolute;
     display: flex;
   }
-
+  .start1{
+    position: absolute;
+    margin-top: 0%;
+    left: 0%;
+    width: 100%;
+    z-index: 2;
+  }
+  .start2{
+    position: absolute;
+    margin-top: 0%;
+    left: 0%;
+    width: 100%;
+    z-index: 2;
+  }
+  .yesflower1 {
+    width: 100%;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+  }
+  .yesflower2{
+    width: 100%;
+  }
+  .yesflower3{
+    width: 60%;
+    left: 12%;
+    position: absolute;
+  }
+  .noflower1{
+    width: 100%;
+    position: absolute;
+    top: 20%;
+    left: 0;
+  }
+  .noflower2{
+    width: 100%;
+  }
+  .noflower3 {
+    width: 60%;
+    left: 12%;
+    position: absolute;
+  }
   .touming {
     opacity: 0;
   }
@@ -1127,8 +1171,6 @@
     -o-animation: myPlay 0.6s infinite alternate;
     -o-animation-timing-function: linear;
     -o-animation-iteration-count: 3;
-    //display: block;
-    //margin: 50px auto;
   }
 
   @keyframes myPlay {
@@ -1207,13 +1249,66 @@
   }
 
   @media screen and (min-width: 482px) and (max-width: 569px) {
-    .allansw {
-      height: 7.5rem;
+    .start1 {
+      margin-top: 15%;
     }
-
+    .start2 {
+      margin-top: 15%;
+    }
+    .noflower1 {
+      left: 0;
+    }
+    .allansw {
+      height: 16.5rem;
+    }
+    .yesflower1 {
+      width: 100%;
+      position: absolute;
+      top: 23%;
+      left: 5%;
+    }
+    .noflower1 {
+      width: 100%;
+      position: absolute;
+      top: 23%;
+    }
+    .yesflower3 {
+      width: 65%;
+      left: 18%;
+      top: 12%;
+      position: absolute;
+    }
+    .noflower3 {
+      width: 65%;
+      left: 18%;
+      top: 11%;
+      position: absolute;
+    }
   }
 
   @media screen and (min-width: 1024px)and (max-width:1365px) {
+    .noflower3 {
+      width: 75%;
+      left: 12%;
+      position: absolute;
+    }
+    .yesflower3 {
+      width: 75%;
+      left: 12%;
+      position: absolute;
+    }
+    .yesflower1 {
+      width: 100%;
+      position: absolute;
+      top: 20%;
+      left: 0;
+    }
+    .noflower1 {
+      width: 100%;
+      position: absolute;
+      top: 20%;
+      left: 0;
+    }
     .allansw {
       height: 26rem;
     }
@@ -1314,7 +1409,57 @@
 
   }
 
-  @media screen and (min-width: 700px) and (max-width: 812px) {
+  @media screen and (min-width: 570px) and (max-width: 699px){
+    .yesflower1 {
+      left: 5%;
+    }
+    .start1 {
+      margin-top: 15%;
+    }
+    .start2 {
+      margin-top: 15%;
+    }
+    .allansw {
+      width: 35%;
+    }
+    .allansw2 {
+      width: 35%;
+    }
+    .yesflower3 {
+      width: 75%;
+      left: 12%;
+      position: absolute;
+    }
+    .noflower3 {
+      width: 75%;
+      left: 12%;
+      position: absolute;
+    }
+    .noflower1 {
+      left: 0;
+    }
+  }
+
+  @media screen and (min-width: 700px) and (max-width: 811px) {
+    .yesflower3 {
+      width: 76%;
+      left: 12%;
+      position: absolute;
+    }
+    .yesflower1 {
+      width: 100%;
+      position: absolute;
+      top: 20%;
+      left: 5%;
+    }
+    .noflower1 {
+      left: 0;
+    }
+    .noflower3 {
+      width: 75%;
+      left: 13%;
+      position: absolute;
+    }
     .fontsizes {
       margin-top: 17%;
     }
@@ -1332,11 +1477,46 @@
   }
 
   @media screen and (min-width: 812px) and (max-width:1023px) {
+    .start2 {
+      margin-top: -10%;
+    }
+    .start1 {
+      margin-top: -10%;
+    }
+    .yesflower1 {
+      width: 100%;
+      position: absolute;
+      top: 20%;
+    }
+    .yesflower2{
+      width: 100%;
+      position: absolute;
+      left: 10%;
+    }
+    .yesflower3 {
+      width: 60%;
+      position: absolute;
+      left: 18%;
+    }
+    .noflower1{
+      width: 100%;
+      position: absolute;
+      top: 20%;
+      left: 10%;
+    }
+    .noflower2{
+      width: 100%;
+      position: absolute;
+      left: 10%;
+    }
+    .noflower3{
+      width: 60%;
+      position: absolute;
+      left: 18%;
+    }
     .twomenu {
       padding-top: 14%;
     }
-
-
 
     .fontsizes {
       margin-top: 17%;
@@ -1366,6 +1546,25 @@
   }
 
   @media screen and (min-width: 1366px) and (max-width: 1600px){
+    .yesflower1 {
+      width: 100%;
+      position: absolute;
+      top: 20%;
+      left: 0%;
+    }
+    .noflower1 {
+      left: 0;
+    }
+    .yesflower3 {
+      width: 76%;
+      left: 12%;
+      position: absolute;
+    }
+    .noflower3 {
+      width: 76%;
+      left: 12%;
+      position: absolute;
+    }
     .allansw {
       height: 37rem;
     }
@@ -1461,6 +1660,23 @@
   }
 
   @media screen and (min-width: 1600px){
+    .start2 {
+      margin-top: 10%;
+      left: -5%;
+    }
+    .start1 {
+      margin-top: 10%;
+      left: -5%;
+    }
+    .allansw2 {
+      display: inline-block;
+      width: 40%;
+      float: right;
+      position: relative;
+      height: 45rem;
+      text-align: center;
+      left: 5%;
+    }
     .allansw {
       height: 45rem;
     }
@@ -1499,7 +1715,7 @@
       margin-top: 2%;
     }
     .bordercolor {
-      top: 0%;
+      top: 25%;
     }
     .centersound{
       bottom:45%;

@@ -2119,7 +2119,7 @@
 		.settingb {
 			width: 13%;
 			position: absolute;
-			right:20%;
+			right:17%;
 			bottom: 12%;
 		}
 	    .styletit{

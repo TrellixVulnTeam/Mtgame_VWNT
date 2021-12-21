@@ -361,10 +361,10 @@
                        v-if="index==1">
                   <img src="../../assets/image/advance.png" style="width: 100%;" v-if="index==2">
                   <!--<div class="progress" >-->
-                  <img src="../../assets/image/completed.png" v-if="li.complete&&index!=2"
+                  <img src="../../assets/image/completed.png" v-if="li.complete"
                        style="width: 80%;margin: 0 10%;z-index: 2;bottom:-6%;position: absolute;left:0;">
                   <!--</div>-->
-                  <div class="progress2" v-if="!li.complete&&index!=2">
+                  <div class="progress2" v-if="!li.complete">
                     <div class="goldBG01">
                       <img src="../../assets/image/champanp.png" v-bind:style="{width:li.percent}">
                     </div>
@@ -372,8 +372,7 @@
                     <button class="percent2">{{li.percent}}</button>
                   </div>
                   <img v-if="index==2" src="../../assets/image/coming-soon1.png"
-                       style="width: 80%;margin: 0 10%;z-index: 2;bottom:-6%;position: absolute;display: inline;float: left;left: 0;">
-
+<!--                       style="width: 80%;margin: 0 10%;z-index: 2;bottom:-6%;position: absolute;display: inline;float: left;left: 0;">-->
                 </div>
               </div>
               <div class="choseRW" v-if="opciay2">
@@ -775,9 +774,9 @@
           this.chatorphonics = false;
           // this.opciay5=true;
           // this.courseId=this.courseList[1].course_id;
-          if (this.courseList[1].name == "CHAT ROOM") {
+          if (this.courseList[1].name === "CHAT ROOM") {
             this.course = "Chat Room";
-          } else if (this.courseList[1].name == "PHONICS") {
+          } else if (this.courseList[1].name === "PHONICS") {
             this.course = "Phonics";
           }
           this.purl1 = this.url + "phonics";
@@ -785,6 +784,7 @@
             studentId: localStorage.getItem('studentId'),
           })).then(res => {
             this.phonicsList = res.data.phonicsList;
+            console.log(this.phonicsList);
           }, res => {
             alertMsg("You must be connected to the internet.<br>Please connect and try again.");
           })
@@ -1329,7 +1329,7 @@
         this.menuname = li.name;
         this.detailList = [];
         this.menuId = li.id;
-
+        console.log('1');
         if (this.level === "Beginner") {
           this.purl4 = this.url + "phonicsDetails";
         } else if (this.level === "Intermediate") {
@@ -1748,6 +1748,7 @@
     font-family: pepper;
     color: #5C3400;
     font-size: 0.7rem;
+    height: 32px;
   }
 
   .unitcoin {
@@ -2999,6 +3000,7 @@
 
     .unitname {
       font-size: 2.5rem;
+      height:108px;
     }
     .choicephonics{
       margin-top: 0px;
