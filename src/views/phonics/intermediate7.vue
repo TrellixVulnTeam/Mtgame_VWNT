@@ -1435,11 +1435,17 @@
   }
 
   @media screen and (min-width: 482px) and (max-width: 569px) {
+    .classimg {
+      width: 160px;
+      height: 100px;
+      text-align: center;
+      margin: 0 4px;
+    }
     .allansw {
-      height:6rem;
+      height:7rem;
     }
     .alldrag{
-      top: -125%;
+      top: 55%;
     }
 
     .fast {

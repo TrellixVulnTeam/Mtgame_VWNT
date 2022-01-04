@@ -48,7 +48,7 @@
             <div class="dndList" v-if="!reload">
 
               <div class="allansw">
-                <img src="../../assets/image/StarYellow.png" class="start1" v-show="ended1" >
+                <img src="../../assets/image/StarYellow.png" class="start1" v-show="!ended1" >
                 <div class="bordercolor" id="answer-box">
 
                   <div id="box2" class="yes dragArea list-group" @click="blue">
@@ -73,7 +73,7 @@
                 <!--</button>-->
               </div>
               <div class="allansw2">
-                <img src="../../assets/image/StarYellow.png" class="start2" v-show="ended2">
+                <img src="../../assets/image/StarYellow.png" class="start2" v-show="!ended2">
                 <div class="bordercolor" id="answer-box1">
 
                   <div id="box4" class="no dragArea list-group" @click="red">
@@ -735,7 +735,7 @@
   }
   .yesflower3{
     width: 60%;
-    left: 12%;
+    left: 16%;
     position: absolute;
   }
   .noflower1{
@@ -1248,7 +1248,12 @@
 
   }
 
-  @media screen and (min-width: 482px) and (max-width: 569px) {
+  @media screen and (min-width: 482px) and (max-width: 569px),
+  (min-device-height: 482px) and (max-device-height: 569px) and (-webkit-device-pixel-ratio: 2) ,
+  (min-device-height: 482px) and (max-device-height: 569px) and (-webkit-device-pixel-ratio: 3){
+    .centersound {
+      bottom: 15%;
+    }
     .start1 {
       margin-top: 15%;
     }
@@ -1286,7 +1291,151 @@
     }
   }
 
-  @media screen and (min-width: 1024px)and (max-width:1365px) {
+  @media screen and (min-width: 570px) and (max-width: 699px),
+  (min-device-height: 570px) and (max-device-height: 699px) and (-webkit-device-pixel-ratio: 2) ,
+  (min-device-height: 570px) and (max-device-height: 699px) and (-webkit-device-pixel-ratio: 3){
+    .yesflower1 {
+      left: 5%;
+    }
+    .start1 {
+      margin-top: 15%;
+    }
+    .start2 {
+      margin-top: 15%;
+    }
+    .allansw {
+      width: 35%;
+    }
+    .allansw2 {
+      width: 35%;
+    }
+    .yesflower3 {
+      width: 75%;
+      left: 12%;
+      position: absolute;
+    }
+    .noflower3 {
+      width: 75%;
+      left: 12%;
+      position: absolute;
+    }
+    .noflower1 {
+      left: 0;
+    }
+  }
+
+  @media screen and (min-width: 700px) and (max-width: 811px),
+  (min-device-height: 700px) and (max-device-height: 811px) and (-webkit-device-pixel-ratio: 2) ,
+  (min-device-height: 700px) and (max-device-height: 811px) and (-webkit-device-pixel-ratio: 3){
+    .yesflower3 {
+      width: 76%;
+      left: 12%;
+      position: absolute;
+    }
+    .yesflower1 {
+      width: 100%;
+      position: absolute;
+      top: 20%;
+      left: 5%;
+    }
+    .noflower1 {
+      left: 0;
+    }
+    .noflower3 {
+      width: 75%;
+      left: 13%;
+      position: absolute;
+    }
+    .fontsizes {
+      margin-top: 17%;
+    }
+
+    .twomenu {
+      padding-top: 18%;
+    }
+
+    .bordercolor {
+      top: 8%;
+    }
+    .centersound{
+      height: 7rem;
+    }
+  }
+
+  @media screen and (min-width: 812px) and (max-width:1023px),
+  (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 2),
+  (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 3){
+    .start2 {
+      margin-top: -10%;
+    }
+    .start1 {
+      margin-top: -10%;
+    }
+    .yesflower1 {
+      width: 100%;
+      position: absolute;
+      top: 20%;
+    }
+    .yesflower2{
+      width: 100%;
+      position: absolute;
+      left: 10%;
+    }
+    .yesflower3 {
+      width: 60%;
+      position: absolute;
+      left: 18%;
+    }
+    .noflower1{
+      width: 100%;
+      position: absolute;
+      top: 20%;
+      left: 10%;
+    }
+    .noflower2{
+      width: 100%;
+      position: absolute;
+      left: 10%;
+    }
+    .noflower3{
+      width: 60%;
+      position: absolute;
+      left: 18%;
+    }
+    .twomenu {
+      padding-top: 14%;
+    }
+
+    .fontsizes {
+      margin-top: 17%;
+    }
+
+    .bordercolor {
+      top: 12%;
+    }
+
+    .withcolor {
+      height: 70%;
+    }
+    .centersound{
+      height: 8rem;
+    }
+    .classimgbg{
+      height:4rem;
+      margin-top: 20%;
+    }
+    .yes1{
+      width: 60%;
+    }
+    .no1{
+      width: 60%;
+    }
+
+  }
+
+  @media screen and (min-width: 1024px)and (max-width:1365px),
+  (min-device-height: 1024px) and (max-device-height: 1365px) and (-webkit-device-pixel-ratio: 2) ,
+  (min-device-height: 1024px) and (max-device-height: 1365px) and (-webkit-device-pixel-ratio: 3){
     .noflower3 {
       width: 75%;
       left: 12%;
@@ -1409,148 +1558,14 @@
 
   }
 
-  @media screen and (min-width: 570px) and (max-width: 699px){
+  @media screen and (min-width: 1366px) and (max-width: 1600px),
+  (min-device-height: 1366px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 2) ,
+  (min-device-height: 1366px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 3){
     .yesflower1 {
-      left: 5%;
-    }
-    .start1 {
-      margin-top: 15%;
-    }
-    .start2 {
-      margin-top: 15%;
-    }
-    .allansw {
-      width: 35%;
-    }
-    .allansw2 {
-      width: 35%;
-    }
-    .yesflower3 {
-      width: 75%;
-      left: 12%;
+      width: 100%;
       position: absolute;
-    }
-    .noflower3 {
-      width: 75%;
-      left: 12%;
-      position: absolute;
-    }
-    .noflower1 {
+      top: 20%;
       left: 0;
-    }
-  }
-
-  @media screen and (min-width: 700px) and (max-width: 811px) {
-    .yesflower3 {
-      width: 76%;
-      left: 12%;
-      position: absolute;
-    }
-    .yesflower1 {
-      width: 100%;
-      position: absolute;
-      top: 20%;
-      left: 5%;
-    }
-    .noflower1 {
-      left: 0;
-    }
-    .noflower3 {
-      width: 75%;
-      left: 13%;
-      position: absolute;
-    }
-    .fontsizes {
-      margin-top: 17%;
-    }
-
-    .twomenu {
-      padding-top: 18%;
-    }
-
-    .bordercolor {
-      top: 8%;
-    }
-    .centersound{
-      height: 7rem;
-    }
-  }
-
-  @media screen and (min-width: 812px) and (max-width:1023px) {
-    .start2 {
-      margin-top: -10%;
-    }
-    .start1 {
-      margin-top: -10%;
-    }
-    .yesflower1 {
-      width: 100%;
-      position: absolute;
-      top: 20%;
-    }
-    .yesflower2{
-      width: 100%;
-      position: absolute;
-      left: 10%;
-    }
-    .yesflower3 {
-      width: 60%;
-      position: absolute;
-      left: 18%;
-    }
-    .noflower1{
-      width: 100%;
-      position: absolute;
-      top: 20%;
-      left: 10%;
-    }
-    .noflower2{
-      width: 100%;
-      position: absolute;
-      left: 10%;
-    }
-    .noflower3{
-      width: 60%;
-      position: absolute;
-      left: 18%;
-    }
-    .twomenu {
-      padding-top: 14%;
-    }
-
-    .fontsizes {
-      margin-top: 17%;
-    }
-
-    .bordercolor {
-      top: 12%;
-    }
-
-    .withcolor {
-      height: 70%;
-    }
-    .centersound{
-      height: 8rem;
-    }
-    .classimgbg{
-      height:4rem;
-      margin-top: 20%;
-    }
-    .yes1{
-      width: 60%;
-    }
-    .no1{
-      width: 60%;
-    }
-
-  }
-
-  @media screen and (min-width: 1366px) and (max-width: 1600px){
-    .yesflower1 {
-      width: 100%;
-      position: absolute;
-      top: 20%;
-      left: 0%;
     }
     .noflower1 {
       left: 0;
@@ -1718,7 +1733,7 @@
       top: 25%;
     }
     .centersound{
-      bottom:45%;
+      bottom:32%;
       height: 6rem;
       transform: scale(2.2);
     }

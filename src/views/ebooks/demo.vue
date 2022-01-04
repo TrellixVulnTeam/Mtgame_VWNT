@@ -1328,26 +1328,18 @@
 
 
   @media screen and (min-width: 736px) and (max-width:768px) {
+    .buttonsimg2{
+      right: 15%;
+    }
+    .buttonsimg {
+      left: 20%;
+    }
     body {
       overflow: visible
     }
     .helpbutton {
       left: 60%;
     }
-
-    //     .album {
-    //       // margin-top: 200px;
-    //       transform: translate(0px, 5px) rotateX(40deg) rotateY(0deg) rotateZ(0deg) scale(0.9);
-    //     }
-    //
-    //     .album--open {
-    //       // margin-top: 200px;
-    //       transform: translate(152px, 5px) rotateX(40deg) rotateY(0deg) rotateZ(0deg) scale(0.9);
-    //     }
-    //     .album--close {
-    //       -webkit-transform: translate(304px, 5px) rotateX(40deg) rotateY(0deg) rotateZ(0deg) scale(0.9);
-    //       transform: translate(304px, 5px) rotateX(40deg) rotateY(0deg) rotateZ(0deg) scale(0.9)
-    //     }
   }
 
   @media screen and (min-width: 1024px) and (max-width: 1354px) {
@@ -1428,6 +1420,42 @@
       bottom: 26%;
     }
 
+  }
+
+  @media screen and (min-width: 375px) and (max-width: 639px){
+    .buttonsimg2{
+      right: 10%;
+    }
+    .buttonsimg {
+      left: 30%;
+    }
+    .album__paper {
+      width: 45%;
+      height: 90%;
+      bottom: 3%;
+    }
+
+    .helpbutton{
+      left: 60%;
+    }
+  }
+
+  @media screen and (min-width: 640px) and (max-width: 735px){
+    .buttonsimg2{
+      right: 10%;
+    }
+    .buttonsimg {
+      left: 25%;
+    }
+    .album__paper {
+      width: 45%;
+      height: 90%;
+      bottom: 3%;
+    }
+
+    .helpbutton{
+      left: 60%;
+    }
   }
 
   @media screen and (min-width: 375px) and (max-width: 811px){

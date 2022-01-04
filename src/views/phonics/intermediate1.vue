@@ -52,8 +52,10 @@
                 <div class="bordercolor" id="answer-box">
 
                   <div id="box2" class="yes dragArea list-group" @click="blue">
+                    <img src="../../assets/image/yeslong3.png" class="yeslong3"/>
                     <div v-bind:class="{ answer: issuccess1 ,listimg:fangda1}" class="yes1" id="yes1">
-                      <img src="../../assets/image/yeslong.png" style="width: 100%;" />
+<!--                      <img src="../../assets/image/yeslong.png" style="width: 100%;" />-->
+                      <img src="../../assets/image/yeslong2.png" class="yeslong2"/>
                       <div class="list-group-item" v-for="element in items2" :key="element.id">
                         <!-- {{ element.name }} -->
                       </div>
@@ -74,8 +76,10 @@
                 <div class="bordercolor" id="answer-box1">
 
                   <div id="box4" class="no dragArea list-group" @click="red">
+                    <img src="../../assets/image/nolong3.png" class="nolong3"/>
                     <div v-bind:class="{ answer: issuccess2 ,listimg:fangda2}" class="no1" id="no1">
-                      <img src="../../assets/image/nolong.png" style="width: 100%;" />
+<!--                      <img src="../../assets/image/nolong.png" style="width: 100%;" />-->
+                      <img src="../../assets/image/nolong2.png" class="nolong2"/>
                       <div class="list-group-item" v-for="element in items4" :key="element.id">
                         <!--  {{ element.name }} -->
                       </div>
@@ -708,6 +712,24 @@
     display: flex;
   }
 
+  .yeslong2 {
+    width: 100%;
+    /* position: absolute; */
+    margin-top: 35%;
+  }
+  .yeslong3 {
+    margin-left: -25%;
+    width: 100%;
+  }
+  .nolong2{
+    width: 100%;
+    margin-top: 35%;
+  }
+  .nolong3 {
+    width: 100%;
+    margin-left: -15%;
+    margin-top: 3%;
+  }
   .touming {
     opacity: 0;
   }
@@ -1089,7 +1111,6 @@
   }
 
   .fade1-leave-to {
-    //transform: translate3d(100%, 0, 0);
     transform: translate3d(-99%, 0, 0);
   }
 
@@ -1207,13 +1228,64 @@
   }
 
   @media screen and (min-width: 482px) and (max-width: 569px) {
+    .nolong3 {
+      width: 80%;
+      margin-left: -15%;
+      margin-top: 19%;
+    }
+    .nolong2 {
+      width: 90%;
+      margin-top: 36%;
+    }
+    .yeslong3 {
+      margin-left: -1%;
+      width: 80%;
+      margin-top: 40%;
+    }
+    .yeslong2 {
+      width: 90%;
+      margin-top: 60%;
+    }
     .allansw {
       height: 7.5rem;
     }
 
   }
-
+  @media screen and (min-width: 570px) and (max-width: 699px){
+    .nolong3 {
+      width: 100%;
+      margin-left: -15%;
+      margin-top: -7%;
+    }
+    .yeslong3 {
+      margin-left: -1%;
+      width: 100%;
+      margin-top: -6%;
+    }
+    .yeslong2 {
+      width: 100%;
+      margin-top: 23%;
+    }
+    .nolong2 {
+      width: 100%;
+      margin-top: 20%;
+    }
+  }
   @media screen and (min-width: 1024px)and (max-width:1365px) {
+    .nolong3 {
+      width: 100%;
+      margin-left: -15%;
+      margin-top: 10%;
+    }
+    .yeslong3 {
+      margin-left: -3%;
+      width: 100%;
+      margin-top: -14%;
+    }
+    .yeslong2 {
+      width: 100%;
+      margin-top: 14%;
+    }
     .allansw {
       height: 26rem;
     }
@@ -1249,12 +1321,6 @@
 
     }
 
-    //       .yes{
-    // 	width: 68%;
-    // }
-    // .no{
-    // 	width: 68%;
-    // }
     .imgbutton{
       margin-top: 8%;
     }
@@ -1311,7 +1377,21 @@
 
   }
 
-  @media screen and (min-width: 700px) and (max-width: 812px) {
+  @media screen and (min-width: 700px) and (max-width: 811px) {
+    .nolong3 {
+      width: 100%;
+      margin-left: -15%;
+      margin-top: 5%;
+    }
+    .yeslong3 {
+      margin-left: 0%;
+      margin-top: -11%;
+      width: 100%;
+    }
+    .yeslong2 {
+      width: 100%;
+      margin-top: 23%;
+    }
     .fontsizes {
       margin-top: 17%;
     }
@@ -1329,6 +1409,25 @@
   }
 
   @media screen and (min-width: 812px) and (max-width:1023px) {
+
+    .nolong3 {
+      width: 100%;
+      margin-left: -5%;
+      margin-top: 8%;
+    }
+    .nolong2 {
+      width: 85%;
+      margin-top: 31%;
+    }
+    .yeslong3 {
+      margin-left: -3%;
+      margin-top: -12%;
+      width: 100%;
+    }
+    .yeslong2 {
+      width: 85%;
+      margin-top: 12%;
+    }
     .twomenu {
       padding-top: 14%;
     }
@@ -1358,6 +1457,16 @@
   }
 
   @media screen and (min-width: 1366px) and (max-width: 1600px){
+    .nolong3 {
+      width: 100%;
+      margin-left: -15%;
+      margin-top: 10%;
+    }
+    .yeslong3 {
+      margin-left: -3%;
+      width: 100%;
+      margin-top: -17%;
+    }
     .allansw {
       height: 37rem;
     }

@@ -10,7 +10,6 @@
         <button :style="{fontFamily: unit==='Ii' ? 'OldR' : 'pepper'}">{{unit}}</button>
       </h2>
       <div class="menulist" id="scrollbody">
-
         <div class="listimg listfirst">
           <img :src=lightstar class="imgposit" v-if="stars[0].onestart">
           <img :src=star class="imgposit" v-if="!stars[0].onestart">
@@ -18,7 +17,7 @@
           <img :src=star style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="!stars[0].twostart">
           <img :src=lightstar class="imgposit1" v-if="stars[0].threestart">
           <img :src=star class="imgposit1" v-if="!stars[0].threestart">
-          <img @click="change" src="../assets/image/inter1.png" style="position: sticky;height: 65%">
+          <img @click="change" src="../assets/image/inter11.png" style="position: sticky;height: 50%;margin-top: 30%;margin-left: 3%">
         </div>
         <div class="listimg">
           <img :src=lightstar class="imgposit" v-if="stars[1].onestart">
@@ -27,7 +26,7 @@
           <img :src=star style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="!stars[1].twostart">
           <img :src=lightstar class="imgposit1" v-if="stars[1].threestart">
           <img :src=star class="imgposit1" v-if="!stars[1].threestart">
-          <img @click="change2" src="../assets/image/inter2.png" style="position: sticky;height: 65%">
+          <img @click="change2" src="../assets/image/inter21.png" style="position: sticky;height: 49%;margin-top: 28%;margin-left: 3%">
         </div>
         <div class="listimg">
           <img :src=lightstar class="imgposit" v-if="stars[2].onestart">
@@ -36,7 +35,7 @@
           <img :src=star style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="!stars[2].twostart">
           <img :src=lightstar class="imgposit1" v-if="stars[2].threestart">
           <img :src=star class="imgposit1" v-if="!stars[2].threestart">
-          <img @click="change3" src="../assets/image/inter3.png" style="position: sticky;height: 65%">
+          <img @click="change3" src="../assets/image/inter31.png" style="position: sticky;height: 50%;margin-top: 30%;margin-left: 3%">
         </div>
         <div class="listimg">
           <img :src=lightstar class="imgposit" v-if="stars[3].onestart">
@@ -45,7 +44,7 @@
           <img :src=star style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="!stars[3].twostart">
           <img :src=lightstar class="imgposit1" v-if="stars[3].threestart">
           <img :src=star class="imgposit1" v-if="!stars[3].threestart">
-          <img @click="change4" src="../assets/image/inter4.png" style="position: sticky;height: 65%">
+          <img @click="change4" src="../assets/image/inter41.png" style="position: sticky;height: 50%;margin-top: 30%;margin-left: 4%">
         </div>
         <div class="listimg">
           <img :src=lightstar class="imgposit" v-if="stars[4].onestart">
@@ -54,7 +53,7 @@
           <img :src=star style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="!stars[4].twostart">
           <img :src=lightstar class="imgposit1" v-if="stars[4].threestart">
           <img :src=star class="imgposit1" v-if="!stars[4].threestart">
-          <img @click="change5" src="../assets/image/inter5.png" style="position: sticky;height: 65%">
+          <img @click="change5" src="../assets/image/inter51.png" style="position: sticky;height: 50%;margin-top: 30%;margin-left: 3%">
         </div>
         <div class="listimg">
           <img :src=lightstar class="imgposit" v-if="stars[5].onestart">
@@ -63,7 +62,7 @@
           <img :src=star style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="!stars[5].twostart">
           <img :src=lightstar class="imgposit1" v-if="stars[5].threestart">
           <img :src=star class="imgposit1" v-if="!stars[5].threestart">
-          <img @click="change6" src="../assets/image/inter6.png" style="position: sticky;height: 65%">
+          <img @click="change6" src="../assets/image/inter61.png" style="position: sticky;height: 50%;margin-top: 30%;margin-left: 3%">
         </div>
         <div class="listimg">
           <img :src=lightstar class="imgposit" v-if="stars[6].onestart">
@@ -72,7 +71,7 @@
           <img :src=star style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="!stars[6].twostart">
           <img :src=lightstar class="imgposit1" v-if="stars[6].threestart">
           <img :src=star class="imgposit1" v-if="!stars[6].threestart">
-          <img @click="change7" src="../assets/image/inter7.png" style="position: sticky;height: 65%">
+          <img @click="change7" src="../assets/image/inter71.png" style="position: sticky;height: 50%;margin-top: 30%;margin-left: 3%">
         </div>
         <div class="listimg">
           <img :src=lightstar class="imgposit" v-if="stars[7].onestart">
@@ -81,7 +80,7 @@
           <img :src=star style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="!stars[7].twostart">
           <img :src=lightstar class="imgposit1" v-if="stars[7].threestart">
           <img :src=star class="imgposit1" v-if="!stars[7].threestart">
-          <img @click="change8" src="../assets/image/inter8.png" style="position: sticky;height: 65%">
+          <img @click="change8" src="../assets/image/inter81.png" style="position: sticky;height: 50%;margin-top: 30%;margin-left: 3%">
         </div>
         <div class="listimg">
           <img :src=lightstar class="imgposit" v-if="stars[8].onestart">
@@ -90,7 +89,7 @@
           <img :src=star style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="!stars[8].twostart">
           <img :src=lightstar class="imgposit1" v-if="stars[8].threestart">
           <img :src=star class="imgposit1" v-if="!stars[8].threestart">
-          <img @click="change9" src="../assets/image/inter9.png" style="position: sticky;height: 65%">
+          <img @click="change9" src="../assets/image/inter91.png" style="position: sticky;height: 50%;margin-top: 30%;margin-left: 3%">
         </div>
         <div class="listimg bosimg">
           <img :src=lightstar class="imgposit" v-if="stars[9].onestart">
@@ -99,7 +98,7 @@
           <img :src=star style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="!stars[9].twostart">
           <img :src=lightstar class="imgposit1" v-if="stars[9].threestart">
           <img :src=star class="imgposit1" v-if="!stars[9].threestart">
-          <img @click="change10" src="../assets/image/inter10.png" style="position: sticky;height: 65%">
+          <img @click="change10" src="../assets/image/inter101.png" style="position: sticky;height: 50%;margin-top: 30%;margin-left: 3%">
         </div>
 
 
@@ -152,7 +151,6 @@
           <img src="http://103.218.241.33/mtgameweb/assets/img/advanced9.gif" v-if="changei9">
           <img src="http://103.218.241.33/mtgameweb/assets/img/advanced10.gif" v-if="changei10">
         </button>
-
 
         <button class="start" @click="starpop"><span class="startspan">START</span></button>
       </div>
@@ -1253,6 +1251,11 @@
   }
 
   @media screen and (min-width: 482px) and (max-width: 569px) {
+
+    .listimg {
+      margin-left: 7%;
+    }
+
     .fontsize {
       bottom: 16%;
       position: absolute;
@@ -1304,7 +1307,7 @@
 
     .listimg {
       width: 40%;
-      margin-left: -8%;
+      margin-left: -2%;
       -webkit-transform: scale(0.7);
       transform: scale(0.7);
     }
@@ -1415,7 +1418,7 @@
 
     .listimg {
       width: 40%;
-      margin-left: -8%;
+      margin-left: -3%;
       -webkit-transform: scale(0.7);
       transform: scale(0.7);
     }
@@ -1494,18 +1497,22 @@
       top: 20%;
     }
 
-    // .spanicon{
-    //        top: -3.6rem;
-    // 	   font-size: 1.6rem;
-    // }
     .fonstart {
       top: -22%;
       font-size: 2rem;
     }
   }
 
-
+  @media screen and (min-width: 570px) and (max-width: 735px) {
+    .listimg {
+      margin-left: 7%;
+    }
+  }
   @media screen and (min-width: 736px) and (max-width:811px) {
+    .listimg {
+      margin-left: 7%;
+    }
+
     .roleimg {
       // height: 45%;
       // margin-top: -5px;
@@ -1517,6 +1524,12 @@
   }
 
   @media screen and (min-width: 812px) and (max-width:895px) {
+    .listimg {
+      margin-left: 7%;
+    }
+    .listfirst {
+      margin-left: 5%;
+    }
     .setting {
       width: 10%;
       position: absolute;
@@ -1575,10 +1588,9 @@
       bottom: 0%;
     }
 
-
-
     .listimg {
       width: 26%;
+      margin-left: 7%;
     }
 
     .startspan {
@@ -1631,6 +1643,7 @@
 
     .listimg {
       width: 26%;
+      margin-left: 7%;
     }
 
     .fonstart {
@@ -1648,7 +1661,7 @@
     }
   }
 
-  @media screen and (min-width: 1600px){
+  @media screen and (min-width: 1600px) {
     .imgposit {
       margin-left: 2%;
     }
@@ -1678,7 +1691,7 @@
 
     .listimg {
       width: 40%;
-      margin-left: -8%;
+      margin-left: 0;
       -webkit-transform: scale(0.7);
       transform: scale(0.7);
       margin-top: 3%;
@@ -1734,13 +1747,16 @@
       height: 100px;
       margin: -36px;
     }
+
     .startspan {
       padding: 9%;
       font-size: 3rem;
     }
-    .animapng7{
+
+    .animapng7 {
       width: auto;
     }
+
     .close img {
       height: 100px;
       width: 100px;
@@ -1756,9 +1772,11 @@
       top: -22%;
       font-size: 2rem;
     }
-    .start{
+
+    .start {
       border-radius: 80px;
 
     }
   }
+
 </style>

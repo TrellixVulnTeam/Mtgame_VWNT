@@ -1218,6 +1218,132 @@
             img:require('../../assets/image/At Home/vegetables.png')
           }
         ],
+        OntheFarmPart1:[
+          {
+            id:1,
+            cardName:'napkin',
+            audio:require('../../assets/Flashcard Audio/december/stocking.mp3'),
+            img:require('../../assets/image/At the Restaurant/napkin.png')
+          },{
+            id:2,
+            cardName:'pizza',
+            audio:require('../../assets/Flashcard Audio/december/sleigh.mp3'),
+            img:require('../../assets/image/At the Restaurant/pizza.png')
+          },{
+            id:3,
+            cardName:'fork',
+            audio:require('../../assets/Flashcard Audio/december/reindeer.mp3'),
+            img:require('../../assets/image/At the Restaurant/fork.png')
+          },{
+            id:4,
+            cardName:'knife',
+            audio:require('../../assets/Flashcard Audio/december/bells.mp3'),
+            img:require('../../assets/image/At the Restaurant/knife.png')
+          },{
+            id:5,
+            cardName:'ice cream',
+            audio:require('../../assets/Flashcard Audio/december/Santa claus.mp3'),
+            img:require('../../assets/image/At the Restaurant/ice cream.png')
+          },{
+            id:6,
+            cardName:'waiter',
+            audio:require('../../assets/Flashcard Audio/december/elf.mp3'),
+            img:require('../../assets/image/At the Restaurant/waiter.png')
+          },{
+            id:7,
+            cardName:'menu',
+            audio:require('../../assets/Flashcard Audio/december/elf.mp3'),
+            img:require('../../assets/image/At the Restaurant/menu.png')
+          },{
+            id:8,
+            cardName:'plate',
+            audio:require('../../assets/Flashcard Audio/december/elf.mp3'),
+            img:require('../../assets/image/At the Restaurant/plate.png')
+          },{
+            id:9,
+            cardName:'order',
+            audio:require('../../assets/Flashcard Audio/december/stocking.mp3'),
+            img:require('../../assets/image/At the Restaurant/order.png')
+          },{
+            id:10,
+            cardName:'juice',
+            audio:require('../../assets/Flashcard Audio/december/sleigh.mp3'),
+            img:require('../../assets/image/At the Restaurant/juice.png')
+          },{
+            id:11,
+            cardName:'noodles',
+            audio:require('../../assets/Flashcard Audio/december/reindeer.mp3'),
+            img:require('../../assets/image/At the Restaurant/noodles.png')
+          },{
+            id:12,
+            cardName:'burger',
+            audio:require('../../assets/Flashcard Audio/december/bells.mp3'),
+            img:require('../../assets/image/At the Restaurant/burger.png')
+          }
+        ],
+        OntheFarmPart2:[
+          {
+            id:1,
+            cardName:'bowl',
+            audio:require('../../assets/Flashcard Audio/december/stocking.mp3'),
+            img:require('../../assets/image/At Home/bowl.png')
+          },{
+            id:2,
+            cardName:'cup',
+            audio:require('../../assets/Flashcard Audio/december/sleigh.mp3'),
+            img:require('../../assets/image/At Home/cup.png')
+          },{
+            id:3,
+            cardName:'fish',
+            audio:require('../../assets/Flashcard Audio/december/reindeer.mp3'),
+            img:require('../../assets/image/At Home/fish.png')
+          },{
+            id:4,
+            cardName:'chopsticks',
+            audio:require('../../assets/Flashcard Audio/december/bells.mp3'),
+            img:require('../../assets/image/At Home/chopsticks.png')
+          },{
+            id:5,
+            cardName:'eat',
+            audio:require('../../assets/Flashcard Audio/december/Santa claus.mp3'),
+            img:require('../../assets/image/At Home/eat.png')
+          },{
+            id:6,
+            cardName:'rice',
+            audio:require('../../assets/Flashcard Audio/december/elf.mp3'),
+            img:require('../../assets/image/At Home/rice.png')
+          },{
+            id:7,
+            cardName:'chickens',
+            audio:require('../../assets/Flashcard Audio/december/elf.mp3'),
+            img:require('../../assets/image/At Home/chicken.png')
+          },{
+            id:8,
+            cardName:'drink',
+            audio:require('../../assets/Flashcard Audio/december/elf.mp3'),
+            img:require('../../assets/image/At Home/drink.png')
+          },{
+            id:9,
+            cardName:'milk',
+            audio:require('../../assets/Flashcard Audio/december/stocking.mp3'),
+            img:require('../../assets/image/At Home/milk.png')
+          },{
+            id:10,
+            cardName:'spoon',
+            audio:require('../../assets/Flashcard Audio/december/sleigh.mp3'),
+            img:require('../../assets/image/At Home/spoon.png')
+          },{
+            id:11,
+            cardName:'tea',
+            audio:require('../../assets/Flashcard Audio/december/reindeer.mp3'),
+            img:require('../../assets/image/At Home/tea.png')
+          },{
+            id:12,
+            cardName:'vegetables',
+            audio:require('../../assets/Flashcard Audio/december/bells.mp3'),
+            img:require('../../assets/image/At Home/vegetables.png')
+          }
+        ],
         list:[],
         titleUrl:{
           MyCommunity:require('../../assets/image/2-logo.png'),
@@ -1251,6 +1377,8 @@
           HolidaysPart2:require('../../assets/image/12-logo2.png'),
           MealTimePart1:require('../../assets/image/1-1logo1.png'),
           MealTimePart2:require('../../assets/image/1-1logo2.png'),
+          OntheFarmPart1:require('../../assets/image/2-2logo2.png'),
+          OntheFarmPart2:require('../../assets/image/2-2logo.png'),
         },
         title:'../../assets/image/6-6logo.png',
         flashCardUrl:'http://107.150.121.34/monkeytownHK/image/img/9315e4a9-e1ec-4f49-8db5-5b3a9b6ae083.png',
@@ -1339,17 +1467,17 @@
       //单元数组 单元名+part12，前八个为walker，后四个runner
       createdpop(){
         if (this.unit==='Animals' && this.level === 'RUNNERS'){
-            this.list = this.$data[this.unit.replace(" ", "") + this.part.replace("p", "P")].slice(8,20);
+            this.list = this.$data[this.unit.replaceAll(" ", "") + this.part.replaceAll("p", "P")].slice(8,20);
         }else if(this.unit==='Holidays' && this.part === 'part2' && this.level === 'RUNNERS'){
-            this.list = this.$data[this.unit.replace(" ", "") + this.part.replace("p", "P")].slice(8,20);
+            this.list = this.$data[this.unit.replaceAll(" ", "") + this.part.replaceAll("p", "P")].slice(8,20);
         }else{
           if (this.level === 'WALKERS') {
-            this.list = this.$data[this.unit.replace(" ", "") + this.part.replace("p", "P")].slice(0, 8);
+            this.list = this.$data[this.unit.replaceAll(" ", "") + this.part.replaceAll("p", "P")].slice(0, 8);
           } else {
-            this.list = this.$data[this.unit.replace(" ", "") + this.part.replace("p", "P")];
+            this.list = this.$data[this.unit.replaceAll(" ", "") + this.part.replaceAll("p", "P")];
           }
         }
-        this.title = this.$data.titleUrl[this.unit.replace(" ", "") + this.part.replace("p", "P")];
+        this.title = this.$data.titleUrl[this.unit.replaceAll(" ", "") + this.part.replaceAll("p", "P")];
       },
       //pop向左右切换卡牌
       turnpop(turn){
@@ -1702,10 +1830,21 @@
       margin-left: 2%;
     }
   }
-
+  //手机分辨率
+  @media only screen and (min-width: 375px) and (max-width: 811px),
+  (min-device-height: 375px) and (max-device-height: 811px) and (-webkit-device-pixel-ratio: 3) ,
+  (min-device-height: 375px) and (max-device-height: 811px) and (-webkit-device-pixel-ratio: 2){
+    .jump {
+      font-size: 25px;
+      padding: 5px 20px ;
+      border-radius: 25px;
+    }
+  }
 
   //手机分辨率
-  @media only screen and (min-width: 812px) and (max-width: 1023px){
+  @media only screen and (min-width: 812px) and (max-width: 1023px),
+  (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 3) ,
+  (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 2) {
     .eightCard div:first-child:nth-last-child(8),
     .eightCard div:nth-last-child(8):first-child ~div{
       width: 14%;
@@ -1729,17 +1868,10 @@
     }
   }
 
-  //手机分辨率
-  @media only screen and (min-width: 375px) and (max-width: 811px){
-    .jump {
-      font-size: 25px;
-      padding: 5px 20px ;
-      border-radius: 25px;
-    }
-  }
-
   //平板分辨率
-  @media only screen and (min-width: 1024px) and (max-width: 1600px){
+  @media only screen and (min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 3),
+  (min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 2),
+  (min-width: 1024px) and (max-width: 1600px){
     .eightCard div:first-child:nth-last-child(8),
     .eightCard div:nth-last-child(8):first-child ~ div {
       width: 18%;

@@ -843,6 +843,7 @@
     height: 10rem;
     display: flex;
     position: relative;
+    background: none;
     background-image: url('http://gamephp.monkeytree.com.hk/monkeytreeApp/www3/img/advmirror3.png');
     background-repeat: no-repeat;
     background-size: contain;
@@ -1074,8 +1075,6 @@
 
   }
 
-
-
   @media screen and (max-width:481px) {
     .fontsize {
       font-family: pepper;
@@ -1096,8 +1095,24 @@
       /*right: 5%;*/
     /*}*/
   }
-
-  @media screen and (min-width: 482px) and (max-width: 569px) {
+  @media screen and (min-width: 482px) and (max-width: 569px),
+  (min-device-height: 1366px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 2) ,
+  (min-device-height: 1366px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 3){
+    .buttons {
+      top: -10%;
+    }
+    .title {
+      bottom: 6%;
+      position: absolute;
+      font-size: 3rem;
+      color: white;
+      left: 15%;
+    }
+    .bgstyle {
+      width: 60%;
+      margin: 28% 26%;
+      border-radius: 30px;
+    }
 
     .fontsize {
       font-family: pepper;
@@ -1117,7 +1132,22 @@
 
   }
 
-  @media screen and (min-width: 1024px)and (max-width: 1365px) {
+  @media screen and (min-width: 570px) and (max-width: 736px),
+  (min-device-height: 1366px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 2) ,
+  (min-device-height: 1366px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 3){
+    .buttons{
+      top: -5%;
+    }
+    .bgstyle {
+      width: 60%;
+      margin: 20% 26%;
+      border-radius: 30px;
+    }
+  }
+
+  @media screen and (min-width: 1024px)and (max-width: 1365px),
+  (min-device-height: 1366px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 2) ,
+  (min-device-height: 1366px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 3){
 
     .fontsizes {
       margin-top: 30%;
@@ -1157,7 +1187,7 @@
       }
     }
     .buttons{
-      margin-top: 25%;
+      margin-top: 15%;
     }
     .listitems1{
       height: 15rem;
@@ -1215,7 +1245,10 @@
 
 
   }
-  @media screen and (min-width: 1366px)and (max-width: 1600px) {
+
+  @media screen and (min-width: 1366px)and (max-width: 1600px),
+  (min-device-height: 1366px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 2) ,
+  (min-device-height: 1366px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 3){
 
     .fontsizes {
       margin-top: 30%;
@@ -1259,7 +1292,7 @@
       font-size: 4.5rem;
     }
     .buttons{
-      margin-top: 25%;
+      margin-top: 15%;
     }
     .listitems1{
       height: 20rem;
@@ -1319,7 +1352,9 @@
 
   }
 
-  @media screen and (min-width: 737px) and (max-width:811px) {
+  @media screen and (min-width: 737px) and (max-width:811px),
+  (min-device-height: 1366px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 2) ,
+  (min-device-height: 1366px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 3){
 
 
     .fontsizes {
@@ -1333,7 +1368,9 @@
 
   }
 
-  @media screen and (min-width: 812px) and (max-width:895px) {
+  @media screen and (min-width: 812px) and (max-width:895px),
+  (min-device-height: 1366px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 2) ,
+  (min-device-height: 1366px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 3){
 
     .twomenu {
       padding-top: 14%;
@@ -1360,13 +1397,15 @@
     .buttons{
       margin-top: 8%;
     }
-    .bgstyle{
+    .bgstyle {
       width: 50%;
-      margin: 20% 24%;
+      margin: 20% 28%;
     }
   }
 
-  @media screen and (min-width: 895px) and (max-width:1023px) {
+  @media screen and (min-width: 895px) and (max-width:1023px),
+  (min-device-height: 1366px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 2) ,
+  (min-device-height: 1366px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 3){
     .twomenu {
       padding-top: 14%;
     }
@@ -1393,13 +1432,18 @@
     .buttons{
       margin-top: 9%;
     }
-    .bgstyle{
+    .bgstyle {
       width: 50%;
-      margin: 16% 24%;
+      margin: 16% 28%;
     }
   }
 
   @media screen and (min-width: 1600px){
+    .bgstyle {
+      width: 60%;
+      margin: 51% 26%;
+      border-radius: 30px;
+    }
     .fontsizes {
       margin-top: 20%;
       font-size: 3rem;
@@ -1446,7 +1490,7 @@
       font-size: 7.5rem;
     }
     .buttons{
-      margin-top: 9%;
+      margin-top: 0;
     }
     .listitems1{
       height: 40rem;

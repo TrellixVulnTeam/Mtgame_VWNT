@@ -1067,7 +1067,7 @@
   .walkers-room-out {
     position: relative;
     top: 3%;
-    height: 80%;
+    height: 82%;
     //height: 85%;
     overflow: hidden;
     overflow-y: scroll;

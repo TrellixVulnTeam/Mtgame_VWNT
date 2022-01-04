@@ -1441,12 +1441,27 @@
 
   }
 
-  @media screen and (min-width: 482px) and (max-width: 569px) {
+  @media screen and (min-width: 482px) and (max-width: 569px),
+  (min-device-height: 482px) and (max-device-height: 569px) and (-webkit-device-pixel-ratio: 2) ,
+  (min-device-height: 482px) and (max-device-height: 569px) and (-webkit-device-pixel-ratio: 3){
     .allansw {
-      height:6rem;
+      height: 8rem;
+      top: 16%;
+    }
+    .sort {
+      bottom: 43%;
+    }
+    .classimg {
+      width: 166px;
+      height: 88px;
+      text-align: center;
+      margin: 101px 9px;
+    }
+    .allansw {
+      height:8rem;
     }
     .alldrag{
-      top: -125%;
+      top: 28%;
     }
 
     .fast {
@@ -1460,7 +1475,60 @@
 
   }
 
-  @media screen and (min-width: 1024px) and (max-width: 1199px){
+  @media screen and (min-width: 570px) and (max-width: 699px),
+  (min-device-height: 482px) and (max-device-height: 569px) and (-webkit-device-pixel-ratio: 2) ,
+  (min-device-height: 482px) and (max-device-height: 569px) and (-webkit-device-pixel-ratio: 3){
+    .classimg {
+      margin: 0 21px;
+    }
+  }
+
+  @media screen and (min-width: 700px) and (max-width: 812px),
+  (min-device-height: 482px) and (max-device-height: 569px) and (-webkit-device-pixel-ratio: 2) ,
+  (min-device-height: 482px) and (max-device-height: 569px) and (-webkit-device-pixel-ratio: 3){
+    .fontsizes {
+      margin-top: 17%;
+    }
+
+    .twomenu {
+      padding-top: 18%;
+    }
+
+    .classimg {
+      margin: 0 21px;
+    }
+  }
+
+  @media screen and (min-width: 813px) and (max-width:1023px),
+  (min-device-height: 482px) and (max-device-height: 569px) and (-webkit-device-pixel-ratio: 2) ,
+  (min-device-height: 482px) and (max-device-height: 569px) and (-webkit-device-pixel-ratio: 3){
+    .twomenu {
+      padding-top: 14%;
+    }
+
+    .classimg {
+      width: 200px;
+      height: 90px;
+      margin: 0 40px;
+    }
+
+    .fontsizes {
+      margin-top: 17%;
+    }
+
+
+    .withcolor {
+      height: 70%;
+    }
+    .bgimage{
+      top: 20%;
+      max-height: 60%;
+    }
+  }
+
+  @media screen and (min-width: 1024px) and (max-width: 1199px),
+  (min-device-height: 482px) and (max-device-height: 569px) and (-webkit-device-pixel-ratio: 2) ,
+  (min-device-height: 482px) and (max-device-height: 569px) and (-webkit-device-pixel-ratio: 3){
 
 
 
@@ -1533,7 +1601,10 @@
     }
 
   }
-  @media screen and (min-width: 1200px)and (max-width: 1365px) {
+
+  @media screen and (min-width: 1200px)and (max-width: 1365px),
+  (min-device-height: 482px) and (max-device-height: 569px) and (-webkit-device-pixel-ratio: 2) ,
+  (min-device-height: 482px) and (max-device-height: 569px) and (-webkit-device-pixel-ratio: 3){
 
 
 
@@ -1601,39 +1672,10 @@
       top: 20%;
     }
   }
-  @media screen and (min-width: 700px) and (max-width: 812px) {
-    .fontsizes {
-      margin-top: 17%;
-    }
 
-    .twomenu {
-      padding-top: 18%;
-    }
-
-  }
-
-  @media screen and (min-width: 812px) and (max-width:1023px) {
-    .twomenu {
-      padding-top: 14%;
-    }
-
-
-
-    .fontsizes {
-      margin-top: 17%;
-    }
-
-
-    .withcolor {
-      height: 70%;
-    }
-    .bgimage{
-      top: 20%;
-      max-height: 60%;
-    }
-  }
-
-  @media screen and (min-width: 1366px) and (max-width: 1600px){
+  @media screen and (min-width: 1366px) and (max-width: 1600px),
+  (min-device-height: 482px) and (max-device-height: 569px) and (-webkit-device-pixel-ratio: 2) ,
+  (min-device-height: 482px) and (max-device-height: 569px) and (-webkit-device-pixel-ratio: 3){
 
 
 
@@ -1737,7 +1779,7 @@
       bottom: 3%;
     }
     .sort{
-      font-size: 6rem;
+      font-size: 4rem;
     }
     .bgimage{
       top: 20%;

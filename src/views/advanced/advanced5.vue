@@ -139,7 +139,7 @@
                   </draggable>
                 </div>
                 <button class="fast3"  >
-                  <img style="position: absolute;height: auto;width:100%;display: block;bottom: 0;" src="../../assets/image/box1-1.png">
+                  <img style="position: absolute;height: auto;width:100%;display: block;bottom: 0;" src="../../assets/image/box6-1.png">
                   <!--<img style="position: absolute;height: auto;width:100%;display: block;bottom: 0;" src="../../assets/image/box1-2.png"  v-if="items7.length">-->
                 </button>
               </div>
@@ -156,7 +156,7 @@
                   </draggable>
                 </div>
                 <button class="fast3"  >
-                  <img style="position: absolute;height: auto;width:100%;display: block;bottom: 0;" src="../../assets/image/box2-1.png"  >
+                  <img style="position: absolute;height: auto;width:100%;display: block;bottom: 0;" src="../../assets/image/box7-1.png"  >
                   <!--<img style="position: absolute;height: auto;width:100%;display: block;bottom: 0;" src="../../assets/image/box2-2.png"  v-if="items8.length">-->
                 </button>
               </div>
@@ -1286,12 +1286,18 @@
 
   }
 
-  @media screen and (min-width: 482px) and (max-width: 569px) {
-    .allansw {
-      height:6rem;
+  @media screen and (min-width: 482px) and (max-width: 569px),
+  (min-device-height: 482px) and (max-device-height: 569px) and (-webkit-device-pixel-ratio: 2) ,
+  (min-device-height: 482px) and (max-device-height: 569px) and (-webkit-device-pixel-ratio: 3){
+    .classimg2 {
+      width: 55px;
+      height: 56px;
     }
-    .alldrag{
-      top: -125%;
+    .allansw {
+      height:5rem;
+    }
+    .alldrag {
+      top: 35%;
     }
 
     .fast {
@@ -1300,191 +1306,36 @@
     .fontsize{
       font-size: 0.8rem;
     }
-
-
-
   }
 
-  @media screen and (min-width: 1024px) and (max-width: 1199px){
-    .twomenu {
-      padding-top: 26%;
+  @media screen and (min-width: 570px) and (max-width: 699px),
+  (min-device-height: 570px) and (max-device-height: 699px) and (-webkit-device-pixel-ratio: 2) ,
+  (min-device-height: 570px) and (max-device-height: 699px) and (-webkit-device-pixel-ratio: 3){
+    .leftfonk img {
+      width: 100%;
+      margin-left: -10%;
+      bottom: 0;
+      margin-top: 35%;
     }
-    .fontsize {
-      font-family: pepper;
-      color: white;
-      bottom: 8%;
-      left: 8%;
-      position: absolute;
-      // font-size: x-large;
-      max-height: 80%;
-      min-height: 47%;
-      margin-left: 2%;
-      transform: scale(1.2);
-    }
-
-    .fontsizes {
-      margin-top: 30%;
-    }
-    .dndList{
-      right: 30px;
-    }
-    .allansw{
-      top: 58%;
-    }
-    .leftfonk img{
-      width: 30%;
-      margin-left: -7%;
-      bottom: 9%;
-      /* margin-top: 30px; */
-      position: absolute;
-    }
-
-    .list-group-item{
-      bottom: 30px;
-    }
-    .classimg{
-      width: 80px;
-      height: 85px;
-    }
-    .classimg2{
-      width: 100px;
-      height: 85px;
-    }
-    .alldrag{
-      bottom: 5%;
-    }
-    .sort{
-      font-size: 2rem;
-      bottom: 18%;
-    }
-    .sort2{
-      font-size: 2rem;
-      bottom: 18%;
-    }
-    .spanp{
-      top:22%;
-      font-size:1.5rem;
-    }
-    .spanp1{
-      font-size:1.3rem;
-    }
-    .withcolor{
-      height:50%;
-      top:20%;
-      border-radius: 75px;
-    }
-    .close {
-      width: 70px;
-      height:70px;
-
-    }
-
-    .close img {
-      height: 70px;
-      width: 70px;
-
-    }
-    .roleimg{
-      height: 53%;
-      top: 20%;
-    }
-    .bgimage{
-      top: 49%;
-      max-height: 40%;
-    }
-
-  }
-  @media screen and (min-width: 1200px)and (max-width: 1365px) {
-    .twomenu {
-      padding-top: 26%;
-    }
-
-    .fontsize {
-      font-family: pepper;
-      color: white;
-      bottom: 15%;
-      left: 8%;
-      position: absolute;
-      font-size: 1.8rem;
-      max-height: 80%;
-      min-height: 47%;
-      margin-left: 2%;
-      transform: scale(1.2);
-    }
-
-    .fontsizes {
-      margin-top: 30%;
-    }
-    .dndList{
-      right: 30px;
-    }
-    .allansw{
-      top: 58%;
-    }
-    .leftfonk img{
-      width: 30%;
-      margin-left: -7%;
-      bottom: 9%;
-      /* margin-top: 30px; */
-      position: absolute;
-    }
-
-    .list-group-item{
-      bottom: 30px;
-    }
-    .classimg{
-      width: 80px;
-      height: 85px;
-    }
-    .classimg2{
-      width: 100px;
-      height: 85px;
-    }
-    .alldrag{
-      bottom: 5%;
-    }
-    .sort{
-      font-size: 2rem;
-      bottom: 18%;
-    }
-    .sort2{
-      font-size: 2rem;
-      bottom: 18%;
-    }
-
-    .bgimage{
-      top: 49%;
-      max-height: 40%;
-    }
-    .spanp{
-      top:22%;
-      font-size:1.5rem;
-    }
-    .spanp1{
-      font-size:1.3rem;
-    }
-    .withcolor{
-      height:50%;
-      top:20%;
-      border-radius: 75px;
-    }
-    .close {
-      width: 70px;
-      height:70px;
-
-    }
-
-    .close img {
-      height: 70px;
-      width: 70px;
-
-    }
-    .roleimg{
-      height: 53%;
-      top: 20%;
+    .classimg {
+      width: 65px;
+      height: 65px;
     }
   }
-  @media screen and (min-width: 700px) and (max-width: 811px) {
+
+  @media screen and (min-width: 700px) and (max-width: 811px),
+  (min-device-height: 700px) and (max-device-height: 811px) and (-webkit-device-pixel-ratio: 2) ,
+  (min-device-height: 700px) and (max-device-height: 811px) and (-webkit-device-pixel-ratio: 3){
+    .leftfonk img {
+      width: 100%;
+      margin-left: -10%;
+      bottom: 0%;
+      margin-top: 31%;
+    }
+    .classimg {
+      width: 65px;
+      height: 65px;
+    }
     .fontsizes {
       margin-top: 17%;
     }
@@ -1498,7 +1349,14 @@
       bottom: 23px;
     }
   }
-  @media screen and (min-width: 812px) and (max-width:895px) {
+
+  @media screen and (min-width: 812px) and (max-width:895px),
+  (min-device-height: 811px) and (max-device-height: 895px) and (-webkit-device-pixel-ratio: 2) ,
+  (min-device-height: 811px) and (max-device-height: 895px) and (-webkit-device-pixel-ratio: 3){
+    .classimg {
+      width: 70px;
+      height: 70px;
+    }
     .twomenu {
       padding-top: 14%;
     }
@@ -1526,7 +1384,20 @@
       max-height: 60%;
     }
   }
-  @media screen and (min-width: 896px) and (max-width:1023px) {
+
+  @media screen and (min-width: 896px) and (max-width:1023px),
+  (min-device-height: 896px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 2) ,
+  (min-device-height: 896px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 3){
+    .leftfonk img {
+      width: 100%;
+      margin-left: -10%;
+      bottom: 0;
+      margin-top: 10%;
+    }
+    .classimg {
+      width: 70px;
+      height: 70px;
+    }
     .twomenu {
       padding-top: 14%;
     }
@@ -1557,7 +1428,200 @@
     }
   }
 
-  @media screen and (min-width: 1366px) and (max-width: 1600px){
+  @media screen and (min-width: 1024px) and (max-width: 1199px),
+  (min-device-height: 1024px) and (max-device-height: 1199px) and (-webkit-device-pixel-ratio: 2) ,
+  (min-device-height: 1024px) and (max-device-height: 1199px) and (-webkit-device-pixel-ratio: 3){
+    .alldrag {
+      top: 40%;
+    }
+    .twomenu {
+      padding-top: 26%;
+    }
+    .fontsize {
+      font-family: pepper;
+      color: white;
+      bottom: 8%;
+      left: 8%;
+      position: absolute;
+      // font-size: x-large;
+      max-height: 80%;
+      min-height: 47%;
+      margin-left: 2%;
+      transform: scale(1.2);
+    }
+
+    .fontsizes {
+      margin-top: 30%;
+    }
+    .dndList{
+      right: 30px;
+    }
+    .allansw{
+      top: 58%;
+    }
+    .leftfonk img {
+      width: 30%;
+      margin-left: -7%;
+      bottom: 3%;
+      /* margin-top: 30px; */
+      position: absolute;
+    }
+
+    .list-group-item{
+      bottom: 30px;
+    }
+    .classimg{
+      width: 80px;
+      height: 85px;
+    }
+    .classimg2{
+      width: 100px;
+      height: 85px;
+    }
+    .alldrag{
+      bottom: 5%;
+    }
+    .sort{
+      font-size: 2rem;
+      bottom: 18%;
+    }
+    .sort2{
+      font-size: 2rem;
+      bottom: 18%;
+    }
+    .spanp{
+      top:22%;
+      font-size:1.5rem;
+    }
+    .spanp1{
+      font-size:1.3rem;
+    }
+    .withcolor{
+      height:50%;
+      top:20%;
+      border-radius: 75px;
+    }
+    .close {
+      width: 70px;
+      height:70px;
+
+    }
+
+    .close img {
+      height: 70px;
+      width: 70px;
+
+    }
+    .roleimg{
+      height: 53%;
+      top: 20%;
+    }
+    .bgimage{
+      top: 49%;
+      max-height: 40%;
+    }
+
+  }
+
+  @media screen and (min-width: 1200px)and (max-width: 1365px),
+  (min-device-height: 1200px) and (max-device-height: 1365px) and (-webkit-device-pixel-ratio: 2) ,
+  (min-device-height: 1200px) and (max-device-height: 1365px) and (-webkit-device-pixel-ratio: 3){
+    .twomenu {
+      padding-top: 26%;
+    }
+
+    .fontsize {
+      font-family: pepper;
+      color: white;
+      bottom: 15%;
+      left: 8%;
+      position: absolute;
+      font-size: 1.8rem;
+      max-height: 80%;
+      min-height: 47%;
+      margin-left: 2%;
+      transform: scale(1.2);
+    }
+
+    .fontsizes {
+      margin-top: 30%;
+    }
+    .dndList{
+      right: 30px;
+    }
+    .allansw{
+      top: 58%;
+    }
+    .leftfonk img{
+      width: 30%;
+      margin-left: -7%;
+      bottom: 9%;
+      /* margin-top: 30px; */
+      position: absolute;
+    }
+
+    .list-group-item{
+      bottom: 30px;
+    }
+    .classimg{
+      width: 80px;
+      height: 85px;
+    }
+    .classimg2{
+      width: 100px;
+      height: 85px;
+    }
+    .alldrag{
+      bottom: 5%;
+    }
+    .sort{
+      font-size: 2rem;
+      bottom: 18%;
+    }
+    .sort2{
+      font-size: 2rem;
+      bottom: 18%;
+    }
+
+    .bgimage{
+      top: 49%;
+      max-height: 40%;
+    }
+    .spanp{
+      top:22%;
+      font-size:1.5rem;
+    }
+    .spanp1{
+      font-size:1.3rem;
+    }
+    .withcolor{
+      height:50%;
+      top:20%;
+      border-radius: 75px;
+    }
+    .close {
+      width: 70px;
+      height:70px;
+
+    }
+
+    .close img {
+      height: 70px;
+      width: 70px;
+
+    }
+    .roleimg{
+      height: 53%;
+      top: 20%;
+    }
+  }
+
+  @media screen and (min-width: 1366px) and (max-width: 1600px),
+  (min-device-height: 1366px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 2) ,
+  (min-device-height: 1366px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 3){
+    .alldrag {
+      top: 40%;
+    }
     .twomenu {
       padding-top: 26%;
     }
@@ -1583,10 +1647,10 @@
     .allansw{
       top: 58%;
     }
-    .leftfonk img{
+    .leftfonk img {
       width: 30%;
       margin-left: -7%;
-      bottom: 9%;
+      bottom: 3%;
       /* margin-top: 30px; */
       position: absolute;
     }
@@ -1598,6 +1662,10 @@
       width: 120px;
       height: 105px;
     }
+    //.classimg{
+    //  width: 300px;
+    //  height: 300px;
+    //}
     .classimg2{
       width: 135px;
       height: 120px;
@@ -1647,7 +1715,14 @@
     }
   }
 
+
   @media screen and (min-width: 1600px){
+    .leftfonk img {
+      width: 100%;
+      margin-left: -16%;
+      bottom: 0px;
+      margin-top: 27%;
+    }
     .fontsizes {
       margin-top: 20%;
       font-size: 3rem;
@@ -1671,18 +1746,19 @@
       right: 30px;
     }
     .classimg{
-      width:200px;
+      width:180px;
       height: 180px;
     }
-    .classimg2{
-      width: 250px;
-      height: 200px;
+    .classimg2 {
+      width: 160px;
+      height: 160px;
     }
     .alldrag{
       bottom: 5%;
     }
-    .list-group-item{
-      bottom:60px;
+    .list-group-item {
+      bottom: 22px;
+      left: -5px;
     }
     .sort{
       font-size:4rem;

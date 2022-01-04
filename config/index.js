@@ -3,6 +3,7 @@
 // see http://vuejs-templates.github.io/webpack for documentation.
 
 const path = require('path')
+const {f} = require("vuedraggable/dist/vuedraggable.common");
 
 module.exports = {
   dev: {
@@ -44,12 +45,12 @@ module.exports = {
     assetsRoot: path.resolve(__dirname, '../www'),
     assetsSubDirectory: '',
     assetsPublicPath: '',
-
+    productionSourceMap:false,
     /**
      * Source Maps
      */
 
-    productionSourceMap: true,
+
     // https://webpack.js.org/configuration/devtool/#production
     devtool: '#source-map',
 

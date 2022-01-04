@@ -855,7 +855,7 @@
       width: 50%;
     }
     .listgroup{
-      font-size: 3rem;
+      font-size: 4rem;
       font-family: pepper;
       margin: 2.5rem 5%;
     }

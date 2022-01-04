@@ -371,7 +371,7 @@
                     <img src="../../assets/image/golden.png" class="chamgold"/>
                     <button class="percent2">{{li.percent}}</button>
                   </div>
-                  <img v-if="index==2" src="../../assets/image/coming-soon1.png"
+                  <img v-if="index==2" src="../../assets/image/coming-soon1.png">
 <!--                       style="width: 80%;margin: 0 10%;z-index: 2;bottom:-6%;position: absolute;display: inline;float: left;left: 0;">-->
                 </div>
               </div>

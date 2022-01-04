@@ -1206,7 +1206,16 @@
       padding-top: 18%;
     }
   }
-
+  @media screen and (min-width: 482px) and (max-width: 569px){
+    .word{
+      bottom: 0;
+      left: 7%;
+    }
+    .imgsty {
+      width: 100%;
+      height: 85%;
+    }
+  }
   @media screen and (min-width: 1024px) and (max-width: 1354px)  {
     .start {
       transform: scale(2);
