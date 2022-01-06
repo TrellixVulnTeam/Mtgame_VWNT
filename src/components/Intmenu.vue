@@ -142,16 +142,16 @@
           <img src="../assets/image/pcloce.png">
         </div>
         <button class="animapng7">
-          <img src="http://103.218.241.33/mtgameweb/assets/img/intermediate1.gif" v-if="changei1">
-          <img src="http://103.218.241.33/mtgameweb/assets/img/intermediate2.gif" v-if="changei2">
-          <img style="margin-top: 5%;" src="http://103.218.241.33/mtgameweb/assets/img/intermediate3.gif" v-if="changei3">
-          <img src="http://103.218.241.33/mtgameweb/assets/img/intermediate4.gif" v-if="changei4">
-          <img src="http://103.218.241.33/mtgameweb/assets/img/intermediate5.gif" v-if="changei5">
-          <img src="http://103.218.241.33/mtgameweb/assets/img/intermediate6.gif" v-if="changei6">
-          <img src="http://103.218.241.33/mtgameweb/assets/img/intermediate7.gif" v-if="changei7">
-          <img src="http://103.218.241.33/mtgameweb/assets/img/intermediate8.gif" v-if="changei8">
-          <img src="http://103.218.241.33/mtgameweb/assets/img/intermediate9.gif" v-if="changei9">
-          <img src="http://103.218.241.33/mtgameweb/assets/img/intermediate10.gif" v-if="changei10">
+          <img src="http://monkeytown.monkeytree.com.hk/image/intermediate1.gif" v-if="changei1">
+          <img src="http://monkeytown.monkeytree.com.hk/image/intermediate2.gif" v-if="changei2">
+          <img style="margin-top: 5%;" src="http://monkeytown.monkeytree.com.hk/image/intermediate3.gif" v-if="changei3">
+          <img src="http://monkeytown.monkeytree.com.hk/image/intermediate4.gif" v-if="changei4">
+          <img src="http://monkeytown.monkeytree.com.hk/image/intermediate5.gif" v-if="changei5">
+          <img src="http://monkeytown.monkeytree.com.hk/image/intermediate6.gif" v-if="changei6">
+          <img src="http://monkeytown.monkeytree.com.hk/image/intermediate7.gif" v-if="changei7">
+          <img src="http://monkeytown.monkeytree.com.hk/image/intermediate8.gif" v-if="changei8">
+          <img src="http://monkeytown.monkeytree.com.hk/image/intermediate9.gif" v-if="changei9">
+          <img src="http://monkeytown.monkeytree.com.hk/image/intermediate10.gif" v-if="changei10">
         </button>
 
 
@@ -210,8 +210,8 @@
         changei9: false,
         changei10: false,
         key: false,
-        star: 'http://103.218.241.33/mtgameweb/assets/img/Little_Star_frame.png',
-        lightstar: 'http://103.218.241.33/mtgameweb/assets/img/star_frame.png',
+        star: 'http://monkeytown.monkeytree.com.hk/image/Little_Star_frame.png',
+        lightstar: 'http://monkeytown.monkeytree.com.hk/image/star_frame.png',
         stars: [
           {
             onestart: false,
@@ -704,8 +704,8 @@
     // document.body.removeEventListener('touchmove',this.bodyScroll,{passive: false});
     // },
     created() {
-      this.star = "http://103.218.241.33/mtgameweb/assets/img/season-star2.png";
-      this.lightstar = "http://103.218.241.33/mtgameweb/assets/img/season-star.png";
+      this.star = "http://monkeytown.monkeytree.com.hk/image/season-star2.png";
+      this.lightstar = "http://monkeytown.monkeytree.com.hk/image/season-star.png";
       if (this.$route.query.studentId) {
         if(localStorage.getItem('userId')){
           this.studentId=this.$route.query.studentId;

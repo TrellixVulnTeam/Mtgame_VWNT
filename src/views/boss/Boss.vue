@@ -79,7 +79,7 @@
 								<audio @canplay="getDuration"   ref="videos" id="videos" autoplay="autoplay" :src="audio"></audio>
 								<div v-bind:class="{'answer':answer}" class="leftimg" @click="change">
 								<img :src=this.image   style="width:80%; height:80%; position: absolute;left: 9%;top: 10%;">
-							    <img src="http://103.218.241.33/mtgameweb/assets/img/front.png"  style="width: 100%; float: left;">
+							    <img src="http://monkeytown.monkeytree.com.hk/image/front.png"  style="width: 100%; float: left;">
 							  </div>
 							   <div class="listbar2">
 								<div>
@@ -201,7 +201,7 @@
 				<div class="close"  @click="pop">
 					<img src="../../assets/image/cloce.png">
 				</div>
-				<img class="animapng7" src="http://103.218.241.33/mtgameweb/assets/img/boss.gif">
+				<img class="animapng7" src="http://monkeytown.monkeytree.com.hk/image/boss.gif">
 
 			</div>
 		</div>

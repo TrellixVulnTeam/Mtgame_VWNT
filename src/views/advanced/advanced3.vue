@@ -74,7 +74,7 @@
 				<div class="close"  @click="pop">
 					<img src="../../assets/image/pcloce.png">
 				</div>
-				<img class="animapng7" src="http://103.218.241.33/mtgameweb/assets/img/advanced3.gif">
+				<img class="animapng7" src="http://monkeytown.monkeytree.com.hk/image/advanced3.gif">
 
 
 			</div>
@@ -733,7 +733,8 @@
     top: 15%;
 		text-align: center;
 		display: inline-block;
-    background-image: url('http://gamephp.monkeytree.com.hk/monkeytreeApp/www3/img/shu1.png');
+    background-image: url("http://monkeytown.monkeytree.com.hk/image/shu1.png");
+    //background-image: url('http://gamephp.monkeytree.com.hk/monkeytreeApp/www3/img/shu1.png');
     -ms-flex-line-pack: center;
         align-content: center;
         background-size: cover;
@@ -757,7 +758,8 @@
     top: 2%;
   	text-align: center;
   	display: inline-block;
-    background-image: url('http://gamephp.monkeytree.com.hk/monkeytreeApp/www3/img/shu2.png');
+    background-image: url("http://monkeytown.monkeytree.com.hk/image/shu2.png");
+    //background-image: url('http://gamephp.monkeytree.com.hk/monkeytreeApp/www3/img/shu2.png');
     -ms-flex-line-pack: center;
         align-content: center;
         background-size: cover;

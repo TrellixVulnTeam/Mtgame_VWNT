@@ -83,7 +83,7 @@
         <div class="close" @click="pop">
           <img src="../../assets/image/pcloce.png">
         </div>
-        <img class="animapng7" style="margin-top: 10%;" src="http://103.218.241.33/mtgameweb/assets/img/intermediate3.gif">
+        <img class="animapng7" style="margin-top: 10%;" src="http://monkeytown.monkeytree.com.hk/image/intermediate3.gif">
 
       </div>
     </div>
@@ -115,7 +115,7 @@
     name: "intermediate3",
     watch: {
       'onef': function(newVal) {
-        if (this.onef == true) {
+        if (this.onef === true) {
           setTimeout(() => {
             this.list1 = this.listF[this.countpage - 1];
             // this.audio = this.pic + this.list1[0].audio;
@@ -125,14 +125,14 @@
               this.list1[l].successful=0;
               this.list1[l].fail=0;
               this.list1[l].audio=this.pic + this.list1[l].audio;
-
+              this.list1[l].audio2=this.pic + this.list1[l].audio2;
               if(this.list1[l].score==="1"){
-                this.audio = this.list1[l].audio;
+                this.audio = this.list1[l].audio2;
               }
             }
             this.onef = false;
             this.zhezhao=false;
-            // this.video = true;
+             this.video = true;
           }, 2000);
 
         }else {
@@ -147,7 +147,6 @@
               };
               this.centerP.push(coreP);
             }
-            console.log(this.centerP);
             this.canvasObj = canvas;
             this.canvasH = imgBox.clientHeight; // 存储canvas的高度，用于清空画布
             canvas.width = imgBox.clientWidth; // 动态赋值canvas的宽度
@@ -158,10 +157,7 @@
         }
       },
       'video': function(newVal) {
-        if (this.video == true) {
-          // setTimeout(() => {
-          //   this.video = false;
-          // },4000);
+        if (this.video === true) {
           this.$refs.videos.play();
           this.video =false;
         }
@@ -261,84 +257,9 @@
     },
 
     methods: {
-      // answer(li){
-      //      this.zhezhao=true;
-      //      this.space=li.name;
-      //      if(li.score=='1'){
-      //         this.soundscorrect = true;
-      //         li.bluesuccess=1;
-      //         this.changecolor=true;
-      //         this.showstart = true;
-      //         this.countpage += 1;
-      //         this.account+=1;
-      //         setTimeout(() => {
-      //           this.showstart = false;
-      //           this.soundscorrect = false;
-      //           this.changecolor=false;
-      //           if (this.countpage <= this.listF.length) {
-      //             this.onef = true;
-      //             li.bluesuccess=0;
-      //             this.space="__";
-      //           } else {
-      //             setTimeout(() => {
-      //
-      //               this.$router.push({
-      //                 //核心语句
-      //                 path: "/presult", //跳转的路径
-      //                 query: {
-      //                   type: this.type,
-      //                   partName: 'intermediate3',
-      //                   account: this.account,
-      //                   menuId: this.menuId,
-      //                   unitsId: this.unitsId,
-      //                   unit: this.unit
-      //                 }
-      //               });
-      //
-      //             }, 1000);
-      //           }
-      //          }, 2000);
-      //    }else{
-      //      this.soundsWrong = true;
-      //      this.countpage += 1;
-      //      li.redsuccess=1;
-      //      this.changecolor2=true;
-      //      setTimeout(() => {
-      //        this.soundsWrong = false; li.redsuccess=0;this.changecolor2=false;
-      //
-      //        for(var l=0;l<this.list1.length;l++){
-      //          if(this.list1[l].score==='1'){
-      //            this.list1[l].successful=1;
-      //            this.space=this.list1[l].name;
-      //          }else {
-      //            this.list1[l].fail=1;
-      //          }
-      //        }
-      //        setTimeout(() => {
-      //        if (this.countpage <= this.listF.length) {
-      //          this.onef = true;
-      //          this.space="__";
-      //        } else {
-      //            this.$router.push({
-      //              //核心语句
-      //              path: "/presult", //跳转的路径
-      //              query: {
-      //
-      //                type: this.type,
-      //                partName: 'intermediate3',
-      //                account: this.account,
-      //                menuId: this.menuId,
-      //                unitsId: this.unitsId,
-      //                unit: this.unit
-      //              }
-      //            });
-      //        }
-      //       }, 1500);
-      //       }, 2000);
-      //    }
-      // },
+
       change() {
-        if (this.onef == false) {
+        if (this.onef === false) {
           this.video = true;
         }
         console.log('点击重新播放');
@@ -454,10 +375,8 @@
               this.list1[anwserIndex].bluesuccess=1;
               this.changecolor=true;
               this.showstart = true;
-
               this.account += 1;
               this.soundscorrect=true;
-              //console.log(this.listB.length);
               if (this.countpage === this.listF.length) {
                 setTimeout(() => {
                   this.showstart = false;
@@ -482,7 +401,6 @@
                   this.showstart = false;
                   this.soundscorrect = false;
                   this.changecolor=false;
-
                   this.onef = true;
                   this.list1[anwserIndex].bluesuccess=0;
                   this.space="__";
@@ -669,8 +587,9 @@
           this.list1[l].successful=0;
           this.list1[l].fail=0;
           this.list1[l].audio=this.pic + this.list1[l].audio;
+          this.list1[l].audio2=this.pic + this.list1[l].audio2;
           if(this.list1[l].score==="1"){
-            this.audio =  this.list1[l].audio;
+            this.audio =  this.list1[l].audio2;
           }
         }
         if (this.onef === true) {
@@ -710,14 +629,9 @@
   .rightbox {
     width: 100%;
     height: 100%;
-    /*float: left;*/
     position: relative;
     display: inline-block;
   }
-
-  /*.rightbox1 {*/
-    /*// margin-left: -5%;*/
-  /*}*/
 
 
   .wordstyle {

@@ -81,7 +81,7 @@
         <div class="close" @click="pop">
           <img src="../../assets/image/pcloce.png">
         </div>
-        <img class="animapng7" style="margin-top: 10%;" src="http://103.218.241.33/mtgameweb/assets/img/advanced2.gif">
+        <img class="animapng7" style="margin-top: 10%;" src="http://monkeytown.monkeytree.com.hk/image/advanced2.gif">
 
       </div>
     </div>
@@ -816,7 +816,7 @@
     display: flex;
     position: relative;
     background: none;
-    background-image: url('http://gamephp.monkeytree.com.hk/monkeytreeApp/www3/img/advmirror1.png');
+    background-image: url("http://monkeytown.monkeytree.com.hk/image/advmirror1.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -830,7 +830,7 @@
     display: flex;
     position: relative;
     background: none;
-    background-image: url('http://gamephp.monkeytree.com.hk/monkeytreeApp/www3/img/advmirror2.png');
+    background-image: url("http://monkeytown.monkeytree.com.hk/image/advmirror2.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -844,7 +844,7 @@
     display: flex;
     position: relative;
     background: none;
-    background-image: url('http://gamephp.monkeytree.com.hk/monkeytreeApp/www3/img/advmirror3.png');
+    background-image: url("http://monkeytown.monkeytree.com.hk/image/advmirror3.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;

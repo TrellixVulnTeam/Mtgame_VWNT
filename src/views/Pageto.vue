@@ -206,7 +206,7 @@
 				<div class="close"  @click="pop">
 					<img src="../assets/image/cloce.png">
 				</div>
-				<img class="animapng7" src="http://103.218.241.33/mtgameweb/assets/img/a.gif">
+				<img class="animapng7" src="http://monkeytown.monkeytree.com.hk/image/a.gif">
 
 
 			</div>
@@ -1545,11 +1545,9 @@
 		opacity: 0.6;
 	}
 
-
-
-
-
-	@media screen and (min-width: 1024px){
+  @media only screen and (min-device-height: 1024px)  and (-webkit-device-pixel-ratio: 3),
+  (min-device-height: 1024px)  and (-webkit-device-pixel-ratio: 2),
+  (min-width: 1024px){
 		.radiubox{
 		    width: 30%;
 		    //height: calc(100% - 100px);
@@ -1581,7 +1579,7 @@
 		}
 		.itemsGt6.dndList-list1 {
 			top: 25%;
-      left: 65%;
+      left: 60%;
 		}
         //  .dndList{
 	       // width: 38%;
@@ -1653,6 +1651,7 @@
 		.dndList-list2.itemsGt7 {
 			width: 100%;
 			right: 0%;
+      top:85%;
 		}
 
 		.fontsizes {
@@ -1703,7 +1702,10 @@
 // 			top: -20%;
 // 		}
 	}
-  @media screen and (min-width: 1200px){
+
+  @media only screen and (min-device-height: 1200px)  and (-webkit-device-pixel-ratio: 3),
+  (min-device-height: 1200px)  and (-webkit-device-pixel-ratio: 2),
+  (min-width: 1200px){
     .question-box > div{
       margin: 0 20px !important;
     }
@@ -1711,7 +1713,10 @@
       margin: 10px 22px !important;
     }
   }
-  @media screen and (min-width: 1600px){
+
+  @media only screen and (min-device-height: 1600px)  and (-webkit-device-pixel-ratio: 3),
+  (min-device-height: 1600px)  and (-webkit-device-pixel-ratio: 2),
+  (min-width: 1600px) {
     .fontsizes {
       margin-top: 20%;
       font-size: 3rem;
@@ -1853,7 +1858,10 @@
       top: 20%;
     }
   }
-	@media screen and (min-width: 812px) and (max-width: 1023px) {
+
+  @media only screen and (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 3),
+  (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 2),
+  (min-width: 812px) and (max-width: 1023px){
 		.radiubox {
 			margin-left: 0;
 			height: 70%;
@@ -1965,13 +1973,13 @@
         	    line-height: 60px;
 
         }
-        .itemsGt9 .dndList-list2{
-        	top:50%;
-          left: 20%;
-        }
-    .itemsGt9.radiubox .question-img {
-      bottom: 10%;
-      top: 60%;
+    .itemsGt9 .dndList-list2{
+      top: 65%;
+      left: 5%;
+    }
+    .itemsGt9.radiubox .question-img{
+      top: 55%;
+      left: -25%;
     }
 		.withcolor {
 			height: 70%;
@@ -1982,7 +1990,9 @@
 		}
 	}
 
-	@media screen and (min-width: 736px) and (max-width: 811px) {
+  @media only screen and (min-device-height: 736px) and (max-device-height: 811px) and (-webkit-device-pixel-ratio: 3),
+  (min-device-height: 736px) and (max-device-height: 811px) and (-webkit-device-pixel-ratio: 2),
+  (min-width: 736px) and (max-width: 811px){
 		.radiubox.itemsGt6 {
 			    height: calc(100% - 60px);
 		}
@@ -1993,7 +2003,7 @@
       top: 18%;
     }
 		.radiubox.itemsGt6 .question-img{
-			top: 37%;
+			top: 45%;
 			bottom: 0;
 		}
 		.dndList-list2 {
@@ -2054,7 +2064,7 @@
 		}
 
         .dndList-list1.itemsGt9{
-          left: 63%;
+          left: 55%;
         }
         .itemsGt9 #answer-box ul{
            padding: 0 10px;
@@ -2084,7 +2094,9 @@
         }
 	}
 
- 	@media screen and (min-width: 667px) and (max-width: 735px) {
+  @media only screen and (min-device-height: 667px) and (max-device-height: 735px) and (-webkit-device-pixel-ratio: 3),
+  (min-device-height: 667px) and (max-device-height: 735px) and (-webkit-device-pixel-ratio: 2),
+  (min-width: 667px) and (max-width: 735px){
 		.radiubox.itemsGt5{
 			right: 4%;
 		}
@@ -2150,14 +2162,14 @@
 			top:80%;
 		}
         .radiubox.itemsGt6 .question-img{
-			top: 40%;
+			top: 42%;
 			bottom: 0;
 		}
 		.twomenu {
 			padding-top: 18%;
 		}
         .dndList-list1.itemsGt9{
-          left: 62%;
+          left: 58%;
           top: 20%;
         }
         .itemsGt9 #answer-box ul{
@@ -2183,12 +2195,15 @@
 
         }
         .itemsGt9 .dndList-list2{
-        	top: 95%;
+        	top: 90%;
+          left: 5%;
         }
 
 	}
 
-	@media screen and (min-width: 568px) and (max-width: 666px) {
+  @media only screen and (min-device-height: 568px) and (max-device-height: 666px) and (-webkit-device-pixel-ratio: 3),
+  (min-device-height: 568px) and (max-device-height: 666px) and (-webkit-device-pixel-ratio: 2),
+  (min-width: 568px) and (max-width: 666px){
 		.dndList-list1 {
       top: 75%;
 			// transform: scale(0.9);
@@ -2208,7 +2223,7 @@
 			right: 0%;
 		}
         .radiubox.itemsGt6 {
-        	height: calc(100% - 30px);
+        	height: calc(100% - 25px);
         }
 		.itemsGt6.dndList {
 			width: 52%;
@@ -2282,7 +2297,7 @@
 			    top: 55px;
 		}
         .dndList-list1.itemsGt9{
-		  left: 23%;
+		  left: 33%;
 		}
 		.itemsGt9 #answer-box ul{
 		   padding: 0 10px;
@@ -2307,11 +2322,13 @@
 
 		}
 		.itemsGt9 .dndList-list2{
-			top: 23%;
+			top: 45%;
 		}
 	}
 
-	@media screen and (min-width: 480px) and (max-width: 567px) {
+  @media only screen and (min-device-height: 480px) and (max-device-height: 567px) and (-webkit-device-pixel-ratio: 3),
+  (min-device-height: 480px) and (max-device-height: 567px) and (-webkit-device-pixel-ratio: 2),
+  (min-width: 480px) and (max-width: 567px){
 		.fontsizes {
 			margin-top: 23%;
 		}

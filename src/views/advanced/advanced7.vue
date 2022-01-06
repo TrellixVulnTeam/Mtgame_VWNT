@@ -84,7 +84,7 @@
           <img src="../../assets/image/pcloce.png">
         </div>
         <img class="animapng7" style="margin-top: 10%;"
-             src="http://103.218.241.33/mtgameweb/assets/img/advanced7.gif">
+             src="http://monkeytown.monkeytree.com.hk/image/advanced7.gif">
 
       </div>
     </div>

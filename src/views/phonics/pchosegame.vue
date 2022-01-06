@@ -51,7 +51,7 @@
 <!--                 <a>-->
                 <a @click="walkers3(phonicsList[2])">
                   <img src="../../assets/image/advance.png" style="width: 100%; ">
-                  <img src="../../assets/image/coming-soon1.png" style="width: 80%;margin: 0 10%;z-index: 2;bottom:-6%;position: absolute;display: inline;float: left;left: 0;">
+<!--                  <img src="../../assets/image/coming-soon1.png" style="width: 80%;margin: 0 10%;z-index: 2;bottom:-6%;position: absolute;display: inline;float: left;left: 0;">-->
                   <div class="progress" v-if="!phonicsList[2].compelte">
                     <div class="goldBG02">
                       <img src="../../assets/image/champanp3.png" v-bind:style="{width:phonicsList[2].percent}">
@@ -96,7 +96,7 @@
                     <!--<img src="../../assets/image/nogold.png" v-if="li.hui==0||li.hui ==1">-->
                     <!--<img src="../../assets/image/gold3.png" v-if="li.hui ==3">-->
                     <!--<img src="../../assets/image/nogold.png" v-if="li.hui==0||li.hui ==1||li.hui ==2">-->
-                    <img src="http://103.218.241.33/mtgameweb/assets/img/season-star.png">
+                    <img src="http://monkeytown.monkeytree.com.hk/image/season-star.png">
                      <span class="foncolor1" v-if="index%2==0">{{li.stars}}</span>
                      <span class="foncolor2" v-if="index%2!=0">{{li.stars}}</span>
                   </button>
@@ -130,7 +130,7 @@
                     <!--<img src="../../assets/image/nogold.png" v-if="li.hui==0||li.hui ==1">-->
                     <!--<img src="../../assets/image/gold3.png" v-if="li.hui ==3">-->
                     <!--<img src="../../assets/image/nogold.png" v-if="li.hui==0||li.hui ==1||li.hui ==2">-->
-                    <img src="http://103.218.241.33/mtgameweb/assets/img/season-star.png">
+                    <img src="http://monkeytown.monkeytree.com.hk/image/season-star.png">
                     <span class="foncolor2">{{li.stars}}</span>
                   </button>
                 </li>
@@ -163,7 +163,7 @@
                     <!--<img src="../../assets/image/nogold.png" v-if="li.hui==0||li.hui ==1">-->
                     <!--<img src="../../assets/image/gold3.png" v-if="li.hui ==3">-->
                     <!--<img src="../../assets/image/nogold.png" v-if="li.hui==0||li.hui ==1||li.hui ==2">-->
-                    <img src="http://103.218.241.33/mtgameweb/assets/img/season-star.png">
+                    <img src="http://monkeytown.monkeytree.com.hk/image/season-star.png">
                     <span class="foncolor2">{{li.stars}}</span>
                   </button>
                 </li>

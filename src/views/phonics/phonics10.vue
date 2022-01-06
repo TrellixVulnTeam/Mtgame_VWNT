@@ -105,7 +105,7 @@
         <div class="close" @click="pop">
           <img src="../../assets/image/pcloce.png">
         </div>
-        <img class="animapng7" src="http://103.218.241.33/mtgameweb/assets/img/excercise10.gif">
+        <img class="animapng7" src="http://monkeytown.monkeytree.com.hk/image/excercise10.gif">
 
       </div>
     </div>
@@ -815,7 +815,7 @@
     background-size: cover;
     border-radius: 15px;
     margin-left: -20px;
-    background-image: url(http://103.218.241.33/mtgameweb/assets/img/deletebg2.png);
+    background-image: url(http://monkeytown.monkeytree.com.hk/image/deletebg2.png);
     color: white;
     line-height: 100%;
     font-size: 1.2rem;
@@ -837,7 +837,7 @@
 
   .enter {
     background: none;
-    background-image: url(http://103.218.241.33/mtgameweb/assets/img/enterbg.png);
+    background-image: url(http://monkeytown.monkeytree.com.hk/image/enterbg.png);
     background-size: contain;
     background-repeat: no-repeat;
     border-style: none;

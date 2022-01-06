@@ -246,7 +246,10 @@
     bottom: 15%;
     position: absolute;
   }
-  @media only screen and (min-width: 375px) and (max-width: 811px){
+
+  @media only screen and (min-device-height: 375px) and (max-device-height: 811px) and (-webkit-device-pixel-ratio: 3) ,
+  (min-device-height: 375px) and (max-device-height: 811px) and (-webkit-device-pixel-ratio: 2),
+  (min-width: 375px) and (max-width: 811px){
     .p2 {
       width: 90%;
       height: 40%;
@@ -289,7 +292,9 @@
     }
   }
 
-  @media only screen and (min-width: 812px) and (max-width: 1023px){
+  @media only screen and (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 3) ,
+  (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 2),
+  (min-width: 812px) and (max-width: 1023px){
     .test {
       position: absolute;
       top: 90%;
@@ -324,7 +329,9 @@
     }
   }
 
-  @media only screen and (min-width: 1024px) and (max-width: 1600px){
+  @media only screen and (min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 3),
+  (min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 2),
+  (min-width: 1024px) and (max-width: 1600px){
     .test {
       position: absolute;
       top: 0;

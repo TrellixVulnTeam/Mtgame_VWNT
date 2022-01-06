@@ -65,7 +65,7 @@
         <div class="close" @click="pop">
           <img src="../../assets/image/pcloce.png">
         </div>
-        <img class="animapng7" src="http://103.218.241.33/mtgameweb/assets/img/excercise3.gif">
+        <img class="animapng7" src="http://monkeytown.monkeytree.com.hk/image/excercise3.gif">
 
       </div>
     </div>
@@ -487,7 +487,7 @@
     height: 100%;
     border: none;
     background: none;
-    background-image: url(http://103.218.241.33/mtgameweb/assets/img/answerbg1.png);
+    background-image: url(http://monkeytown.monkeytree.com.hk/image/answerbg1.png);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -530,7 +530,7 @@
     border: none;
     height: 100px;
     background: none;
-    background-image: url(http://103.218.241.33/mtgameweb/assets/img/deepbackgr.png);
+    background-image: url(http://monkeytown.monkeytree.com.hk/image/deepbackgr.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;

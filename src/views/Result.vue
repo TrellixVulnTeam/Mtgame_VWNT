@@ -12,7 +12,7 @@
 					<span style="font-size: x-large;">{{allscore}}</span>
 				</div>
 				<div  style="width: 100%;height: 100%;text-align: center;display:block;position: absolute;top: 10%;">
-					<!-- <img src="http://103.218.241.33/mtgameweb/assets/img/amazing.png" style="height: 95%;" v-if="amazing" v-show="amazing0"> -->
+					<!-- <img src="http://monkeytown.monkeytree.com.hk/image/amazing.png" style="height: 95%;" v-if="amazing" v-show="amazing0"> -->
 					<img src="../assets/image/amazing.png" style="height: 95%;" v-if="amazing" v-show="amazing0">
 					<img src="../assets/image/Great.png" style="height: 95%;" v-if="great" v-show="great0">
 					<img src="../assets/image/nice.png" style="height: 95%;" v-if="nice" v-show="nice0">
@@ -98,7 +98,7 @@
 							</div>
 							<div class="card-back" v-bind:class="{'cardback':li.flag,'cardface':!li.flag,'answer':li.turefalse}">
 								<img :src="li.bg" style="width: 82%;position: absolute;left: 8%;">
-								<img src="http://103.218.241.33/mtgameweb/assets/img/front.png" style="width: 90%;">
+								<img src="http://monkeytown.monkeytree.com.hk/image/front.png" style="width: 90%;">
 							</div>
 						</li>
 					</ul>
@@ -121,7 +121,7 @@
 							<div class="card-back">
 								<img :src="li.bg" style="width: 82%;position: absolute;left: 8%;">
 								<span class="namestyle">pencil</span>
-								<img src="http://103.218.241.33/mtgameweb/assets/img/front.png" style="width: 90%;">
+								<img src="http://monkeytown.monkeytree.com.hk/image/front.png" style="width: 90%;">
 							</div>
 						</li>
 					</ul>
@@ -168,19 +168,19 @@
 					id:1,
 					flag:0,
 					turefalse:0,
-					bg:'http://103.218.241.33/mtgameweb/assets/img/pencil.png'
+					bg:'http://monkeytown.monkeytree.com.hk/image/pencil.png'
 					},
 					{
 					id:2,
 					flag:0,
 					turefalse:0,
-					bg:'http://103.218.241.33/mtgameweb/assets/img/pencil.png'
+					bg:'http://monkeytown.monkeytree.com.hk/image/pencil.png'
 					},
 					{
 					id:3,
 					flag:0,
 					turefalse:0,
-					bg:'http://103.218.241.33/mtgameweb/assets/img/pencil.png'
+					bg:'http://monkeytown.monkeytree.com.hk/image/pencil.png'
 					},
 				],
 				bigchoujiang:false,

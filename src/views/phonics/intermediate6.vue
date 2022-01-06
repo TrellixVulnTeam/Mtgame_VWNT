@@ -74,7 +74,7 @@
         <div class="close"  @click="pop">
           <img src="../../assets/image/pcloce.png">
         </div>
-        <img class="animapng7" src="http://103.218.241.33/mtgameweb/assets/img/intermediate6.gif">
+        <img class="animapng7" src="http://monkeytown.monkeytree.com.hk/image/intermediate6.gif">
 
 
       </div>
@@ -1650,13 +1650,13 @@
     .fontsize {
       font-family: pepper;
       color: white;
-      bottom: 0%;
+      bottom: 0;
       left: 8%;
       position: absolute;
       font-size: x-large;
       max-height: 80%;
       min-height: 50%;
-      margin-left: 2%;
+      margin-left: 5%;
       transform: scale(1.6);
     }
 

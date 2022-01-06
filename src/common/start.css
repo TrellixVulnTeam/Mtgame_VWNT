@@ -258,7 +258,9 @@
   }
 }
 /*手机*/
-@media only screen and (min-width: 812px) and (max-width: 1023px){
+@media only screen and (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 3) ,
+(min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 2),
+(min-width: 812px) and (max-width: 1023px) {
   .start01 .rotate {
     width: 80%;
   }
@@ -358,7 +360,9 @@
   }
 }
 /*平板*/
-@media only screen and (min-width: 1024px) and (max-width: 1600px){
+@media only screen and (min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 3),
+(min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 2),
+(min-width: 1024px) and (max-width: 1600px){
   .Privacy {
     position: absolute;
     z-index: 1;
@@ -446,7 +450,9 @@
   }
 }
 /*手机*/
-@media only screen and (min-width: 375px) and (max-width: 811px){
+@media only screen and (min-device-height: 375px) and (max-device-height: 811px) and (-webkit-device-pixel-ratio: 3) ,
+(min-device-height: 375px) and (max-device-height: 811px) and (-webkit-device-pixel-ratio: 2),
+(min-width: 375px) and (max-width: 811px){
   .Privacy {
     position: absolute;
     z-index: 1;

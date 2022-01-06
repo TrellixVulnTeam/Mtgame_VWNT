@@ -73,7 +73,7 @@
         <div class="close" @click="pop">
           <img src="../../assets/image/pcloce.png">
         </div>
-        <img class="animapng7" src="http://103.218.241.33/mtgameweb/assets/img/excercise8.gif">
+        <img class="animapng7" src="http://monkeytown.monkeytree.com.hk/image/excercise8.gif">
 
 
       </div>

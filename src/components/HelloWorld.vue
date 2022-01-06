@@ -593,15 +593,15 @@
 					<img src="../assets/image/cloce.png">
 				</div>
 				<button class="animapng7">
-          <img  src="http://103.218.241.33/mtgameweb/assets/img/a.gif" v-if="changei1">
-          <img  src="http://103.218.241.33/mtgameweb/assets/img/b.gif" v-if="changei2">
-				  <img  src="http://103.218.241.33/mtgameweb/assets/img/c.gif" v-if="changei3">
-				  <img  src="http://103.218.241.33/mtgameweb/assets/img/d.gif" v-if="changei4">
-				  <img  src="http://103.218.241.33/mtgameweb/assets/img/e.gif" v-if="changei5">
-				  <img  src="http://103.218.241.33/mtgameweb/assets/img/f.gif" v-if="changei6">
-				  <img  src="http://103.218.241.33/mtgameweb/assets/img/g.gif" v-if="changei7">
-				  <img  src="http://103.218.241.33/mtgameweb/assets/img/h.gif" v-if="changei8">
-				  <img  src="http://103.218.241.33/mtgameweb/assets/img/boss.gif" v-if="changei9">
+          <img  src="http://monkeytown.monkeytree.com.hk/image/a.gif" v-if="changei1">
+          <img  src="http://monkeytown.monkeytree.com.hk/image/b.gif" v-if="changei2">
+				  <img  src="http://monkeytown.monkeytree.com.hk/image/c.gif" v-if="changei3">
+				  <img  src="http://monkeytown.monkeytree.com.hk/image/d.gif" v-if="changei4">
+				  <img  src="http://monkeytown.monkeytree.com.hk/image/e.gif" v-if="changei5">
+				  <img  src="http://monkeytown.monkeytree.com.hk/image/f.gif" v-if="changei6">
+				  <img  src="http://monkeytown.monkeytree.com.hk/image/g.gif" v-if="changei7">
+				  <img  src="http://monkeytown.monkeytree.com.hk/image/h.gif" v-if="changei8">
+				  <img  src="http://monkeytown.monkeytree.com.hk/image/boss.gif" v-if="changei9">
 				</button>
 				<button class="start" @click="starpop"><span class="startspan">START</span></button>
 			</div>
@@ -683,8 +683,8 @@
 				changei8:false,
 				changei9:false,
 				key:false,
-				star:'http://103.218.241.33/mtgameweb/assets/img/Little_Star_frame.png',
-				lightstar:'http://103.218.241.33/mtgameweb/assets/img/star_frame.png',
+				star:'http://monkeytown.monkeytree.com.hk/image/Little_Star_frame.png',
+				lightstar:'http://monkeytown.monkeytree.com.hk/image/star_frame.png',
 				stars:[
 				{
 				    onestart:false,

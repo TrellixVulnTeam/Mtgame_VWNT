@@ -393,7 +393,7 @@
                         <!--<img src="../../assets/image/nogold.png" v-if="li.hui==0||li.hui ==1">-->
                         <!--<img src="../../assets/image/gold3.png" v-if="li.hui ==3">-->
                         <!--<img src="../../assets/image/nogold.png" v-if="li.hui==0||li.hui ==1||li.hui ==2">-->
-                        <img src="http://103.218.241.33/mtgameweb/assets/img/season-star.png">
+                        <img src="http://monkeytown.monkeytree.com.hk/image/season-star.png">
                         <span class="foncolor1">{{li.stars}}</span>
                         <!--<span class="foncolor2" v-if="index%2!=0">10/30</span>-->
                       </button>
@@ -564,7 +564,7 @@
         pmenu: [],
         menuboss: [],
         detailList: [],
-        icon: "http://103.218.241.33/mtgameweb/assets/img/star_frame.png",
+        icon: "http://monkeytown.monkeytree.com.hk/image/star_frame.png",
         imglists: [],
         stars1: [
           {

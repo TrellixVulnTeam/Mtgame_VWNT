@@ -1096,62 +1096,62 @@
           {
             id:1,
             cardName:'napkin',
-            audio:require('../../assets/Flashcard Audio/december/stocking.mp3'),
+            audio:require('../../assets/Flashcard Audio/january/Napkin.mp3'),
             img:require('../../assets/image/At the Restaurant/napkin.png')
           },{
             id:2,
             cardName:'pizza',
-            audio:require('../../assets/Flashcard Audio/december/sleigh.mp3'),
+            audio:require('../../assets/Flashcard Audio/january/Pizza.mp3'),
             img:require('../../assets/image/At the Restaurant/pizza.png')
           },{
             id:3,
             cardName:'fork',
-            audio:require('../../assets/Flashcard Audio/december/reindeer.mp3'),
+            audio:require('../../assets/Flashcard Audio/january/Fork.mp3'),
             img:require('../../assets/image/At the Restaurant/fork.png')
           },{
             id:4,
             cardName:'knife',
-            audio:require('../../assets/Flashcard Audio/december/bells.mp3'),
+            audio:require('../../assets/Flashcard Audio/january/Knife.mp3'),
             img:require('../../assets/image/At the Restaurant/knife.png')
           },{
             id:5,
             cardName:'ice cream',
-            audio:require('../../assets/Flashcard Audio/december/Santa claus.mp3'),
+            audio:require('../../assets/Flashcard Audio/january/Ice Cream.mp3'),
             img:require('../../assets/image/At the Restaurant/ice cream.png')
           },{
             id:6,
             cardName:'waiter',
-            audio:require('../../assets/Flashcard Audio/december/elf.mp3'),
+            audio:require('../../assets/Flashcard Audio/january/Waiter.mp3'),
             img:require('../../assets/image/At the Restaurant/waiter.png')
           },{
             id:7,
             cardName:'menu',
-            audio:require('../../assets/Flashcard Audio/december/elf.mp3'),
+            audio:require('../../assets/Flashcard Audio/january/Menu.mp3'),
             img:require('../../assets/image/At the Restaurant/menu.png')
           },{
             id:8,
             cardName:'plate',
-            audio:require('../../assets/Flashcard Audio/december/elf.mp3'),
+            audio:require('../../assets/Flashcard Audio/january/Plate.mp3'),
             img:require('../../assets/image/At the Restaurant/plate.png')
           },{
             id:9,
             cardName:'order',
-            audio:require('../../assets/Flashcard Audio/december/stocking.mp3'),
+            audio:require('../../assets/Flashcard Audio/january/Order (runners).mp3'),
             img:require('../../assets/image/At the Restaurant/order.png')
           },{
             id:10,
             cardName:'juice',
-            audio:require('../../assets/Flashcard Audio/december/sleigh.mp3'),
+            audio:require('../../assets/Flashcard Audio/january/Juice (runners).mp3'),
             img:require('../../assets/image/At the Restaurant/juice.png')
           },{
             id:11,
             cardName:'noodles',
-            audio:require('../../assets/Flashcard Audio/december/reindeer.mp3'),
+            audio:require('../../assets/Flashcard Audio/january/Noodles (runners).mp3'),
             img:require('../../assets/image/At the Restaurant/noodles.png')
           },{
             id:12,
             cardName:'burger',
-            audio:require('../../assets/Flashcard Audio/december/bells.mp3'),
+            audio:require('../../assets/Flashcard Audio/january/Burger (runners).mp3'),
             img:require('../../assets/image/At the Restaurant/burger.png')
           }
         ],
@@ -1159,62 +1159,62 @@
           {
             id:1,
             cardName:'bowl',
-            audio:require('../../assets/Flashcard Audio/december/stocking.mp3'),
+            audio:require('../../assets/Flashcard Audio/january/Bowl.mp3'),
             img:require('../../assets/image/At Home/bowl.png')
           },{
             id:2,
             cardName:'cup',
-            audio:require('../../assets/Flashcard Audio/december/sleigh.mp3'),
+            audio:require('../../assets/Flashcard Audio/january/Cup.mp3'),
             img:require('../../assets/image/At Home/cup.png')
           },{
             id:3,
             cardName:'fish',
-            audio:require('../../assets/Flashcard Audio/december/reindeer.mp3'),
+            audio:require('../../assets/Flashcard Audio/january/Fish.mp3'),
             img:require('../../assets/image/At Home/fish.png')
           },{
             id:4,
             cardName:'chopsticks',
-            audio:require('../../assets/Flashcard Audio/december/bells.mp3'),
+            audio:require('../../assets/Flashcard Audio/january/Chopsticks.mp3'),
             img:require('../../assets/image/At Home/chopsticks.png')
           },{
             id:5,
             cardName:'eat',
-            audio:require('../../assets/Flashcard Audio/december/Santa claus.mp3'),
+            audio:require('../../assets/Flashcard Audio/january/Eat.mp3'),
             img:require('../../assets/image/At Home/eat.png')
           },{
             id:6,
             cardName:'rice',
-            audio:require('../../assets/Flashcard Audio/december/elf.mp3'),
+            audio:require('../../assets/Flashcard Audio/january/Rice.mp3'),
             img:require('../../assets/image/At Home/rice.png')
           },{
             id:7,
             cardName:'chickens',
-            audio:require('../../assets/Flashcard Audio/december/elf.mp3'),
+            audio:require('../../assets/Flashcard Audio/january/Chicken.mp3'),
             img:require('../../assets/image/At Home/chicken.png')
           },{
             id:8,
             cardName:'drink',
-            audio:require('../../assets/Flashcard Audio/december/elf.mp3'),
+            audio:require('../../assets/Flashcard Audio/january/Drink.mp3'),
             img:require('../../assets/image/At Home/drink.png')
           },{
             id:9,
             cardName:'milk',
-            audio:require('../../assets/Flashcard Audio/december/stocking.mp3'),
+            audio:require('../../assets/Flashcard Audio/january/Milk (runners).mp3'),
             img:require('../../assets/image/At Home/milk.png')
           },{
             id:10,
             cardName:'spoon',
-            audio:require('../../assets/Flashcard Audio/december/sleigh.mp3'),
+            audio:require('../../assets/Flashcard Audio/january/Spoon (runners).mp3'),
             img:require('../../assets/image/At Home/spoon.png')
           },{
             id:11,
             cardName:'tea',
-            audio:require('../../assets/Flashcard Audio/december/reindeer.mp3'),
+            audio:require('../../assets/Flashcard Audio/january/Tea (runners).mp3'),
             img:require('../../assets/image/At Home/tea.png')
           },{
             id:12,
             cardName:'vegetables',
-            audio:require('../../assets/Flashcard Audio/december/bells.mp3'),
+            audio:require('../../assets/Flashcard Audio/january/Vegetables (runners).mp3'),
             img:require('../../assets/image/At Home/vegetables.png')
           }
         ],
@@ -1831,9 +1831,9 @@
     }
   }
   //手机分辨率
-  @media only screen and (min-width: 375px) and (max-width: 811px),
-  (min-device-height: 375px) and (max-device-height: 811px) and (-webkit-device-pixel-ratio: 3) ,
-  (min-device-height: 375px) and (max-device-height: 811px) and (-webkit-device-pixel-ratio: 2){
+  @media only screen and (min-device-height: 375px) and (max-device-height: 811px) and (-webkit-device-pixel-ratio: 3) ,
+  (min-device-height: 375px) and (max-device-height: 811px) and (-webkit-device-pixel-ratio: 2),
+  (min-width: 375px) and (max-width: 811px){
     .jump {
       font-size: 25px;
       padding: 5px 20px ;
@@ -1842,9 +1842,9 @@
   }
 
   //手机分辨率
-  @media only screen and (min-width: 812px) and (max-width: 1023px),
-  (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 3) ,
-  (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 2) {
+  @media only screen and (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 3) ,
+  (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 2),
+  (min-width: 812px) and (max-width: 1023px) {
     .eightCard div:first-child:nth-last-child(8),
     .eightCard div:nth-last-child(8):first-child ~div{
       width: 14%;

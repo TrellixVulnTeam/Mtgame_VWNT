@@ -358,7 +358,7 @@ export default {
   background-color: green;
   bottom: 0;
   position: relative;
-  padding: 20px 0;
+  padding: 15px 0;
 }
 .bottom4 {
   width: 100%;
@@ -444,7 +444,7 @@ h5 {
 }
   h4.title {
     font-size: 1.5rem;
-    margin: 20px 0 50px 0;
+    margin: 60px 0 20px 0;
     color: #333333;
   }
 .body {

@@ -138,8 +138,8 @@
         url2: '/games/part',
 				//url: 'http://localhost:8080/mtGame/exercise/exerciseBoss',
 				resume: false,
-				star:'http://103.218.241.33/mtgameweb/assets/img/Little_Star_frame.png',
-				lightstar:'http://103.218.241.33/mtgameweb/assets/img/star_frame.png',
+				star:'http://monkeytown.monkeytree.com.hk/image/Little_Star_frame.png',
+				lightstar:'http://monkeytown.monkeytree.com.hk/image/star_frame.png',
 
 				id: '',
 				chosegame:'',
