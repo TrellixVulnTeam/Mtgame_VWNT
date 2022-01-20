@@ -96,7 +96,7 @@
         <div class="settinglist">
           <img src="../../assets/image/interbar.png" style="width: 100%;bottom: 0;height: 100%;"  >
 
-          <span class="fontsize">Listen and match the words. </span>
+          <span class="fontsize">Listen and match the pictures to the correct words.  </span>
           <div @click="changesett">
             <img src="../../assets/image/interpause.png" class=" repeat"  >
 
@@ -930,7 +930,7 @@
   .intermediate7 {
     width: 100%;
     height: 100%;
-    /*background-image: url("http://107.150.121.34/monkeytownHK/image/img/interbg8.png");*/
+    /*background-image: url("http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/interbg8.png");*/
     /*background-color: #204900;*/
     /*background-position: center;*/
     /*background-repeat: no-repeat;*/
@@ -1731,7 +1731,7 @@
       font-size: x-large;
       max-height: 80%;
       min-height: 50%;
-      margin-left: 2%;
+      margin-left: 4%;
       transform: scale(1.6);
     }
     .classimg{

@@ -447,7 +447,7 @@
   .intermediate5 {
     width: 100%;
     height: 100%;
-    /*background-image: url("http://107.150.121.34/monkeytownHK/image/img/interbg3.png");*/
+    /*background-image: url("http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/interbg3.png");*/
     /*background-color: #204900;*/
     /*background-position: center;*/
     /*background-repeat: no-repeat;*/
@@ -540,7 +540,7 @@
     border: none;
     height: 130px;
     background: none;
-    background-image: url("http://107.150.121.34/monkeytownHK/image/img/yun.png");
+    background-image: url("http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/yun.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;

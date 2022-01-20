@@ -38,11 +38,11 @@
         // this.href=window.location.href;
         // localStorage.setItem("origins", this.origins);
         // localStorage.setItem("href", this.href);
-        // window.open('http://103.218.241.33/mtgameweb/Game-flow/index.html', '_blank')
+        // window.open('http://monkeytown.monkeytree.com.hk/Game-flow/index.html', '_blank')
         //alert(this.origins);
         //console.log(this.origins);
         //console.log(this.origins);http://127.0.0.1:8848/game-flow/index.html
-        //window.location.href="http://103.218.241.33/mtgameweb/Game-flow/index.html?origins="+this.origins;
+        //window.location.href="http://monkeytown.monkeytree.com.hk/Game-flow/index.html?origins="+this.origins;
         //window.location.href=this.href+"/AngryMonkey/index.html";
       },
       back() {

@@ -128,7 +128,7 @@
 			  // this.$router.push({
 			  // 	path: '/otherstart',
 			  // })
-			//window.location.href="http://103.218.241.33/mtgameweb/Game-flow/angry-monkey/index.html";
+			//window.location.href="http://monkeytown.monkeytree.com.hk/Game-flow/angry-monkey/index.html";
 	      },
 		  jumpexercise(){
 		    this.$router.push({

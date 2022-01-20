@@ -206,11 +206,16 @@
   var qs = require('qs');
   export default {
     name: "pchosegame",
-    watch: {},
+    watch: {
+      'loading': function(newVal) {
+        if (this.loading === true) {
+            alertMsg3("Loading...Please Wait");
+        }
+      },
+    },
     data() {
       return {
-        // action: false,
-        // action1: false,
+        loading:false,
         audio: '',
         sum: 0,
         firstName: '',
@@ -317,6 +322,9 @@
       },
 
       walkers1(li) {
+        if (this.loading === true) {
+            alertMsg3("Loading...Please Wait");
+        }
         this.phonics = false;
         this.walkers = true;
         this.level = li.name;
@@ -337,6 +345,9 @@
         })
       },
       walkers2(li){
+        if (this.loading === true) {
+            alertMsg3("Loading...Please Wait");
+        }
         this.phonics = false;
         this.runners = true;
         this.level =li.name;
@@ -355,6 +366,9 @@
         });
       },
       walkers3(li){
+        if (this.loading === true) {
+            alertMsg3("Loading...Please Wait");
+        }
         this.phonics = false;
         this.advanced = true;
         this.level =li.name;
@@ -467,7 +481,7 @@
           })
         }
       }
-
+      this.loading = true;
       this.firstName = localStorage.getItem('firstName');
       this.gameImage = localStorage.getItem('gameImage');
       this.sum = localStorage.getItem('sumCoins');
@@ -477,6 +491,7 @@
         studentId: localStorage.getItem('studentId'),
       })).then(res => {
         this.phonicsList = res.data.phonicsList;
+        this.loading = false;
       }, res => {
         alertMsg("You must be connected to the internet.<br>Please connect and try again.");
       })
@@ -493,7 +508,7 @@
   .pchosegame {
     width: 100%;
     height: 100%;
-    background-image: url("http://107.150.121.34/monkeytownHK/image/img/phonicsbg.png");
+    background-image: url("http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/phonicsbg.png");
     background-color: #204900;
     background-position: center;
     background-repeat: no-repeat;
@@ -1507,30 +1522,18 @@
     width: 48% !important;
     z-index: 99;
   }
-
-  @media screen and (max-width: 1200px) and (max-width: 1600px){
-    .personer-box .alistimg>div p {
-      border-bottom-left-radius: 37px;
-      border-bottom-right-radius: 37px;
-      padding: 16px 0;
-      bottom: 9px;
-    }
-
-    .t-gray {
-      border-radius: 37px;
-    }
-
-    .personer-box .alistimg>div .p-monkey {
-      width: 310px;
-    }
-
-    .comingsoon {
-      top: -32px;
-      right: -50px;
+  @media screen and (min-device-height: 568px) and (max-device-height: 810px) and (-webkit-device-pixel-ratio: 2) ,
+  (min-device-height: 568px) and (max-device-height: 810px) and (-webkit-device-pixel-ratio: 3),
+  (min-width: 568px) and (max-width: 810px){
+    .aspan2 {
+      bottom: -5%;
+      font-size: 0.9rem;
     }
   }
 
-  @media screen and (max-width: 811px) {
+  @media screen and (min-device-height: 811px)  and (-webkit-device-pixel-ratio: 2) ,
+  (min-device-height: 811px)  and (-webkit-device-pixel-ratio: 3),
+  (max-width: 811px){
     .personer-box {
       width: 90%;
       padding-right: 5%;
@@ -1573,7 +1576,9 @@
     // }
   }
 
-  @media screen and (min-width: 812px) and (max-width: 900px) {
+  @media screen and (min-device-height: 812px) and (max-device-height: 899px) and (-webkit-device-pixel-ratio: 2) ,
+  (min-device-height: 812px) and (max-device-height: 899px) and (-webkit-device-pixel-ratio: 3),
+  (min-width: 812px) and (max-width: 899px){
     .personer-box {
       width: 90%;
       padding-right: 5%;
@@ -1633,13 +1638,15 @@
     .aspan {
       font-size: 3.5rem;
     }
-    .aspan2 {
-      font-size: 2rem;
-      bottom: 5%;
+    .aspan2{
+      font-size: 1rem;
+      bottom: -5%;
     }
   }
 
-  @media screen and (min-width: 900px) and (max-width:1023px) {
+  @media screen and (min-device-height: 900px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 2) ,
+  (min-device-height: 900px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 3),
+  (min-width: 900px) and (max-width:1023px){
     .styleunit {
       margin-top: 20px;
       // height: 10%;
@@ -1680,12 +1687,15 @@
     .aspan {
       font-size: 3.5rem;
     }
-    .aspan2 {
-      font-size: 2rem;
+    .aspan2{
+      font-size: 1rem;
+      bottom: -25%;
     }
   }
 
-  @media screen and (min-width: 1024px) and (max-width: 1199px) {
+  @media screen and (min-device-height: 1024px) and (max-device-height: 1199px) and (-webkit-device-pixel-ratio: 2) ,
+  (min-device-height: 1024px) and (max-device-height: 1199px) and (-webkit-device-pixel-ratio: 3),
+  (min-width: 1024px) and (max-width: 1199px){
     .fontsize {
       bottom: 13%;
       position: absolute;
@@ -1753,7 +1763,8 @@
       font-size: 4rem;
     }
     .aspan2 {
-      font-size: 2rem;
+      font-size: 1.4rem;
+      bottom: -5%;
     }
     .progress{
       height: 28px;
@@ -1780,7 +1791,28 @@
     }
   }
 
-  @media screen and (min-width: 1200px)and (max-width: 1600px) {
+  @media screen and (min-device-height: 1200px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 2) ,
+  (min-device-height: 1200px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 3),
+  (min-width: 1200px)and (max-width: 1600px){
+    .personer-box .alistimg>div p {
+      border-bottom-left-radius: 37px;
+      border-bottom-right-radius: 37px;
+      padding: 16px 0;
+      bottom: 9px;
+    }
+
+    .t-gray {
+      border-radius: 37px;
+    }
+
+    .personer-box .alistimg>div .p-monkey {
+      width: 310px;
+    }
+
+    .comingsoon {
+      top: -32px;
+      right: -50px;
+    }
     .fontsize {
       bottom: 13%;
       position: absolute;
@@ -1810,7 +1842,8 @@
       font-size: 5rem;
     }
     .aspan2 {
-      font-size: 2.5rem;
+      font-size: 1.8rem;
+      bottom: -5%;
     }
 
     .coinstyle {
@@ -1914,7 +1947,10 @@
       height: 110%;
     }
     .aspan2 {
-      font-size: 5rem;
+      font-size: 2.5rem;
+      width: 72%;
+      bottom: 5%;
+      left: 14%;
     }
     .coinstyle {
       height: 70%;

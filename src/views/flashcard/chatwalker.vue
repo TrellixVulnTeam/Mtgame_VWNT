@@ -100,7 +100,7 @@
            :style="{zIndex: !wizard ? 100 : 1}" @click="showGif('wizard')">
       </div>
       <div class="princess">
-        <img src="../../assets/image/201906H5 Fairy Tales_In_the_castle_MT/PNG/princess_00.png" v-if="princess&&scream" @click="showGif('princess')">
+        <img src="../../assets/image/201906H5 Fairy Tales_In_the_castle_MT/Png/princess_00.png" v-if="princess&&scream" @click="showGif('princess')">
         <img src="../../assets/image/201906H5 Fairy Tales_In_the_castle_MT/GIF/princess.gif" style="z-index: 100" v-if="!princess"
            @click="showGif('princess')">
         <img src="../../assets/image/201906H5 Fairy Tales_In_the_castle_MT/GIF/scream.gif" style="z-index: 100" v-if="!scream"
@@ -1860,7 +1860,7 @@
              :style="{zIndex: !plate ? 100 : 1}" @click="showGif('plate')">
       </div>
     </div>
-    <div v-else-if="this.unit === 'On the Farm' && this.part === 'part2'">
+    <div v-else-if="this.unit === 'On the Farm' && this.part === 'part1'">
       <img src="../../assets/image/202002H5 In the barn_MT/Walker_BG/BG_00000.png"
            style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;"/>
       <div class="barn">
@@ -1869,17 +1869,17 @@
              @click="showGif('barn')">
       </div>
       <div class="bucket">
-        <img src="../../assets/image/202002H5 In the barn_MT/GIF_PNG/png/bucket.png" v-if="bucket" @click="showGif('bucket')">
+        <img src="../../assets/image/202002H5 In the barn_MT/GIF_PNG/png/bucket.png" v-if="bucket" @click="walkers&&showGif('bucket')">
         <img src="../../assets/image/202002H5 In the barn_MT/GIF_PNG/gif/bucket.gif" style="z-index: 100" v-if="!bucket"
              @click="showGif('bucket')">
       </div>
       <div class="chick">
-        <img src="../../assets/image/202002H5 In the barn_MT/GIF_PNG/png/chick.png" v-if="barn" @click="showGif('barn')">
-        <img src="../../assets/image/202002H5 In the barn_MT/GIF_PNG/gif/chick.gif" style="z-index: 100" v-if="!barn"
-             @click="showGif('barn')">
+        <img src="../../assets/image/202002H5 In the barn_MT/GIF_PNG/png/chick.png" v-if="chick" @click="walkers&&showGif('chick')">
+        <img src="../../assets/image/202002H5 In the barn_MT/GIF_PNG/gif/chick.gif" style="z-index: 100" v-if="!chick"
+             @click="showGif('chick')">
       </div>
       <div class="cow">
-        <img src="../../assets/image/202002H5 In the barn_MT/GIF_PNG/png/cow.png" v-if="cow" @click="showGif('cow')">
+        <img src="../../assets/image/202002H5 In the barn_MT/GIF_PNG/png/cow.png" v-if="cow" @click="walkers&&showGif('cow')">
         <img src="../../assets/image/202002H5 In the barn_MT/GIF_PNG/gif/cow.gif" style="z-index: 100" v-if="!cow"
              @click="showGif('cow')">
       </div>
@@ -1898,23 +1898,23 @@
         <img src="../../assets/image/202002H5 In the barn_MT/GIF_PNG/gif/egg.gif" style="z-index: 100" v-if="!egg"
              @click="showGif('egg')">
       </div>
-      <div class="feed">
-        <img src="../../assets/image/202002H5 In the barn_MT/GIF_PNG/png/feed.png" v-if="feed" @click="showGif('feed')">
-        <img src="../../assets/image/202002H5 In the barn_MT/GIF_PNG/gif/feed.gif" style="z-index: 100" v-if="!feed"
-             @click="showGif('feed')">
+      <div class="feed1">
+        <img src="../../assets/image/202002H5 In the barn_MT/GIF_PNG/png/feed.png" v-if="feed1" @click="showGif('feed1')">
+        <img src="../../assets/image/202002H5 In the barn_MT/GIF_PNG/gif/feed.gif" style="z-index: 100" v-if="!feed1"
+             @click="showGif('feed1')">
       </div>
       <div class="hay">
         <img src="../../assets/image/202002H5 In the barn_MT/GIF_PNG/png/hay.png" v-if="hay" @click="showGif('hay')">
         <img src="../../assets/image/202002H5 In the barn_MT/GIF_PNG/gif/hay.gif" style="z-index: 100" v-if="!hay"
              @click="showGif('hay')">
       </div>
-      <div class="hen">
-        <img src="../../assets/image/202002H5 In the barn_MT/GIF_PNG/png/hen.png" v-if="hen" @click="showGif('hen')">
-        <img src="../../assets/image/202002H5 In the barn_MT/GIF_PNG/gif/hen.gif" style="z-index: 100" v-if="!hen"
-             @click="showGif('hen')">
-      </div>
+<!--      <div class="hen">-->
+<!--        <img src="../../assets/image/202002H5 In the barn_MT/GIF_PNG/png/hen.png" v-if="hen" @click="showGif('hen')">-->
+<!--        <img src="../../assets/image/202002H5 In the barn_MT/GIF_PNG/gif/hen.gif" style="z-index: 100" v-if="!hen"-->
+<!--             @click="showGif('hen')">-->
+<!--      </div>-->
       <div class="rooster">
-        <img src="../../assets/image/202002H5 In the barn_MT/GIF_PNG/png/rooster.png" v-if="rooster" @click="showGif('rooster')">
+        <img src="../../assets/image/202002H5 In the barn_MT/GIF_PNG/png/rooster.png" v-if="rooster" @click="walkers&&showGif('rooster')">
         <img src="../../assets/image/202002H5 In the barn_MT/GIF_PNG/gif/rooster.gif" style="z-index: 100" v-if="!rooster"
              @click="showGif('rooster')">
       </div>
@@ -1922,6 +1922,54 @@
         <img src="../../assets/image/202002H5 In the barn_MT/GIF_PNG/png/sheep.png" v-if="sheep" @click="showGif('sheep')">
         <img src="../../assets/image/202002H5 In the barn_MT/GIF_PNG/gif/sheep.gif" style="z-index: 100" v-if="!sheep"
              @click="showGif('sheep')">
+      </div>
+      <div class="barnButton">
+        <img src="../../assets/image/202002H5 In the barn_MT/words/word_barn Comp 1_00000.png"
+             :style="{zIndex: !barn ? 100 : 1}" @click="showGif('barn')">
+      </div>
+      <div class="hayButton">
+        <img src="../../assets/image/202002H5 In the barn_MT/words/word_hay Comp 1_00000.png"
+             :style="{zIndex: !hay ? 100 : 1}" @click="showGif('hay')">
+      </div>
+      <div class="bucketButton">
+        <img src="../../assets/image/202002H5 In the barn_MT/words/word_bucket Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !bucket ? 100 : 1}" @click="showGif('bucket')">
+      </div>
+      <div class="eggButton">
+        <img src="../../assets/image/202002H5 In the barn_MT/words/word_egg Comp 1_00000.png"
+             :style="{zIndex: !egg ? 100 : 1}" @click="showGif('egg')">
+      </div>
+      <div class="duckButton">
+        <img src="../../assets/image/202002H5 In the barn_MT/words/word_duck Comp 1_00000.png"
+             :style="{zIndex: !duck ? 100 : 1}" @click="showGif('duck')">
+      </div>
+      <div class="henButton">
+        <img src="../../assets/image/202002H5 In the barn_MT/words/word_hen Comp 1_00000.png"
+             :style="{zIndex: !hen ? 100 : 1}" @click="showGif('hen')">
+      </div>
+      <div class="chickButton">
+        <img src="../../assets/image/202002H5 In the barn_MT/words/word_chick Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !chick ? 100 : 1}" @click="showGif('chick')">
+      </div>
+      <div class="roosterButton">
+        <img src="../../assets/image/202002H5 In the barn_MT/words/word_rooster Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !rooster ? 100 : 1}" @click="showGif('rooster')">
+      </div>
+      <div class="feed1Button">
+        <img src="../../assets/image/202002H5 In the barn_MT/words/word_feed Comp 1_00000.png"
+             :style="{zIndex: !feed1 ? 100 : 1}" @click="showGif('feed1')">
+      </div>
+      <div class="cowButton">
+        <img src="../../assets/image/202002H5 In the barn_MT/words/word_cow Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !cow ? 100 : 1}" @click="showGif('cow')">
+      </div>
+      <div class="crowButton">
+        <img src="../../assets/image/202002H5 In the barn_MT/words/word_crow Comp 1_00000.png"
+             :style="{zIndex: !crow ? 100 : 1}" @click="showGif('crow')">
+      </div>
+      <div class="sheepButton">
+        <img src="../../assets/image/202002H5 In the barn_MT/words/word_sheep Comp 1_00000.png"
+             :style="{zIndex: !sheep ? 100 : 1}" @click="showGif('sheep')">
       </div>
     </div>
     <div v-else-if="this.unit === 'On the Farm' && this.part === 'part2'">
@@ -2851,7 +2899,7 @@ export default {
   .chatwalker {
     width: 100%;
     height: 100%;
-    /*background-image: url("http://107.150.121.34/monkeytowerHK/image/img/phonicsbg.png");*/
+    /*background-image: url("http://gamejava.monkeytree.com.hk/monkeytowerHK/image/img/phonicsbg.png");*/
     /*background-color: #204900;*/
     /*background-position: center;*/
     /*background-repeat: no-repeat;*/
@@ -2870,6 +2918,157 @@ export default {
     background-color: #44ccc2;
     z-index: 201;
   }
+
+  .barnButton img {
+    width: 6%;
+    left: 19%;
+    top: 20%;
+    position: absolute;
+  }
+  .bucketButton img {
+    width: 6%;
+    left: 17%;
+    top: 47%;
+    position: absolute;
+  }
+  .chickButton img {
+    width: 6%;
+    left: 42%;
+    top: 89%;
+    position: absolute;
+  }
+  .cowButton img {
+    width: 5%;
+    left: 69%;
+    top: 61%;
+    position: absolute;
+  }
+  .duckButton img {
+    width: 6%;
+    left: 7%;
+    top: 87%;
+    position: absolute;
+  }
+  .eggButton img {
+    width: 6%;
+    left: 20%;
+    top: 66%;
+    position: absolute;
+  }
+  .feed1Button img {
+    width: 6%;
+    left: 54%;
+    top: 66%;
+    position: absolute;
+  }
+  .hayButton img {
+    width: 5%;
+    left: 8%;
+    top: 40%;
+    position: absolute;
+  }
+  .henButton img {
+    width: 6%;
+    left: 23%;
+    top: 88%;
+    position: absolute;
+  }
+  .roosterButton img {
+    width: 6%;
+    left: 39%;
+    top: 50%;
+    position: absolute;
+  }
+  .sheepButton img {
+    width: 6%;
+    left: 83%;
+    top: 42%;
+    position: absolute;
+  }
+  .crowButton img {
+    width: 6%;
+    left: 53%;
+    top: 21%;
+    position: absolute;
+  }
+
+  .barn img {
+    width: 48%;
+    left: 7%;
+    top: 6%;
+    position: absolute;
+  }
+  .bucket img {
+    width: 14%;
+    left: 13%;
+    top: 45%;
+    position: absolute;
+    z-index: 1;
+  }
+  .chick img {
+    width: 9%;
+    left: 37%;
+    top: 77%;
+    position: absolute;
+    z-index: 1;
+  }
+  .cow img {
+    width: 30%;
+    left: 65%;
+    top: 58%;
+    position: absolute;
+  }
+  .duck img {
+    width: 15%;
+    left: 2%;
+    top: 58%;
+    position: absolute;
+  }
+  .egg img {
+    width: 17%;
+    left: 20%;
+    top: 58%;
+    position: absolute;
+    z-index: 1;
+  }
+  .feed1 img {
+    width: 42%;
+    left: 21%;
+    top: 26%;
+    position: absolute;
+  }
+  .hay img {
+    width: 21%;
+    left: 0%;
+    top: 33%;
+    position: absolute;
+  }
+  .hen img {
+    width: 26%;
+    left: 46%;
+    top: -12%;
+    position: absolute;
+  }
+  .rooster img {
+    width: 16%;
+    left: 33%;
+    top: 48%;
+    position: absolute;
+  }
+  .sheep img {
+    width: 26%;
+    left: 65%;
+    top: 24%;
+    position: absolute;
+  }
+  .crow img {
+    width: 14%;
+    left: 49%;
+    top: 21%;
+    position: absolute;
+    z-index: 1;
+  }
+
   .roll img {
     width: 26%;
     left: 46%;
@@ -5631,7 +5830,7 @@ export default {
   .lizard {
     height: 40%;
     width: 10%;
-    top: 0%;
+    top: 0;
     position: absolute;
 
     img {
@@ -5653,7 +5852,7 @@ export default {
   .lost {
     height: 40%;
     width: 10%;
-    top: 0%;
+    top: 0;
     position: absolute;
 
     img {
@@ -7351,6 +7550,88 @@ export default {
   @media only screen and (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 3) ,
   (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 812px) and (max-width: 1023px){
+    .hayButton img {
+      top: 35%;
+    }
+    .bucketButton img {
+      top: 41%;
+    }
+    .barnButton img {
+      top: 15%;
+    }
+    .roosterButton img {
+      top: 46%;
+    }
+    .cowButton img {
+      top: 54%;
+    }
+    .crowButton img {
+      top: 16%;
+    }
+    .sheepButton img {
+      top: 37%;
+    }
+    .duck img {
+      width: 14%;
+      left: 2%;
+      top: 54%;
+      position: absolute;
+    }
+    .hay img {
+      width: 21%;
+      left: 0%;
+      top: 26%;
+      position: absolute;
+    }
+    .bucket img {
+      top: 41%;
+    }
+    .egg img {
+      width: 15%;
+      left: 21%;
+      top: 56%;
+    }
+    .chick img {
+      top: 74%;
+    }
+    .rooster img {
+      width: 15%;
+      left: 33%;
+      top: 44%;
+      position: absolute;
+    }
+    .barn img {
+      width: 48%;
+      left: 7%;
+      top: -5%;
+      position: absolute;
+    }
+    .feed1 img {
+      width: 43%;
+      height: 70%;
+      left: 21%;
+      top: 30%;
+      position: absolute;
+    }
+    .crow img {
+      width: 14%;
+      left: 49%;
+      top: 17%;
+      position: absolute;
+      z-index: 1;
+    }
+    .sheep img {
+      width: 26%;
+      left: 65%;
+      top: 17%;
+      position: absolute;
+    }
+    .cow img {
+      width: 30%;
+      left: 66%;
+      top: 50%;
+      position: absolute;
+    }
     .roll img {
       width: 32%;
       left: 1%;
@@ -9480,6 +9761,83 @@ export default {
   @media only screen and (min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 1024px) and (max-width: 1600px){
+    .roosterButton img {
+      width: 6%;
+      left: 38%;
+      top: 55%;
+    }
+    .barnButton img {
+      width: 6%;
+      left: 15%;
+      top: 24%;
+    }
+    .hayButton img {
+      top: 43%;
+    }
+    .bucketButton img {
+      top: 49%;
+    }
+    .crowButton img {
+      top: 25%;
+    }
+    .feed1Button img {
+      top: 74%;
+    }
+    .hay img {
+      width: 22%;
+      left: 0;
+      top: 39%;
+    }
+    .bucket img {
+      top: 50%;
+    }
+    .barn img {
+      width: 56%;
+      left: 0;
+      top: 13%;
+    }
+    .duck img {
+      top: 65%;
+    }
+    .crow img {
+      top: 26%;
+    }
+    .egg img{
+      top: 62%;
+    }
+    .rooster img {
+      top: 55%;
+    }
+    .chick img {
+      top: 80%;
+    }
+    .feed1 img {
+      top: 43%;
+    }
+    .sheepButton img {
+      width: 7%;
+      left: 83%;
+      top: 41%;
+      position: absolute;
+    }
+    .sheep img {
+      width: 27%;
+      left: 64%;
+      top: 30%;
+      position: absolute;
+    }
+    .cowButton img {
+      width: 6%;
+      left: 68%;
+      top: 65%;
+      position: absolute;
+    }
+    .cow img {
+      width: 33%;
+      left: 64%;
+      top: 64%;
+      position: absolute;
+    }
     .tractor img {
       width: 57%;
       height: 33%;

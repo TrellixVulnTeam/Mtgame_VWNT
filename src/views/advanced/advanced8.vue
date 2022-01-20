@@ -98,7 +98,7 @@
         <div class="settinglist">
           <img src="../../assets/image/abar.png" style="width: 100%;bottom: 0;height: 100%;"  >
 
-          <span class="fontsize">Listen and match the words to the sound. </span>
+          <span class="fontsize">Listen and match the words. </span>
           <div @click="changesett">
             <img src="../../assets/image/adPause.png" class=" repeat">
 
@@ -867,13 +867,8 @@
       localStorage.setItem('gamename',this.gamename);
       var timestamp = (new Date()).getTime();
       localStorage.setItem('startTimeid',timestamp);
-
-      if(localStorage.getItem('gamemusic')=="false"){
-        this.show=false;
-      }else{
-        this.show=true;
-      }
-      if (this.onef == true) {
+      this.show = localStorage.getItem('gamemusic') !== "false";
+      if (this.onef === true) {
         this.$axios.post(this.url, qs.stringify({
           menuId: this.menuId,
           num:23
@@ -891,8 +886,8 @@
           this.sort1=this.items1[0].value;
           this.sort2=this.items1[1].value;
           this.sort3=this.items1[2].value;
+          this.showNum = true;
           setTimeout(() => {
-            this.showNum = false;
             this.onef = false;
             setTimeout(() => {
               this.reload = false;
@@ -933,7 +928,7 @@
   .advanced8 {
     width: 100%;
     height: 100%;
-    /*background-image: url("http://107.150.121.34/monkeytownHK/image/img/interbg10.png");*/
+    /*background-image: url("http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/interbg10.png");*/
     /*background-color: #204900;*/
     /*background-position: center;*/
     /*background-repeat: no-repeat;*/

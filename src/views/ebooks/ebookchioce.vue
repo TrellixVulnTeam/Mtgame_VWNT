@@ -12,12 +12,12 @@
             <div class="box1">
               <div style="padding:  0px 2% 0px 2%; width: 20%;" v-for="(li,l) in listBookName">
               <img class="imglist"  :src='li.head_img'  @click="godemo(li,l)"  @load="loaded">
-             <!-- <img src="http://107.150.121.34/monkeytownHK/image/img/get-the-mud-off.png"  @click="godemo()">
-              <img src="http://107.150.121.34/monkeytownHK/image/img/glen-the-slug.png">
-              <img src="http://107.150.121.34/monkeytownHK/image/img/helen-hen's-eggs.png">
-              <img src="http://107.150.121.34/monkeytownHK/image/img/i-can-color.png">
-              <img src="http://107.150.121.34/monkeytownHK/image/img/kit's-red-pin.png">
-              <img src="http://107.150.121.34/monkeytownHK/image/img/let's-get-healthy.png"> -->
+             <!-- <img src="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/get-the-mud-off.png"  @click="godemo()">
+              <img src="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/glen-the-slug.png">
+              <img src="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/helen-hen's-eggs.png">
+              <img src="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/i-can-color.png">
+              <img src="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/kit's-red-pin.png">
+              <img src="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/let's-get-healthy.png"> -->
               <!--<div>-->
 
                 <img v-if="li.completes=='100%'&&loadimg" style="display: block;width: 20%;margin-left: 40%;" src="../../assets/image/truest.png">

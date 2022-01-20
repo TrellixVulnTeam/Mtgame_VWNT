@@ -98,7 +98,7 @@
         <div class="settinglist">
           <img src="../../assets/image/interbar.png" style="width: 100%;bottom: 0;height: 100%;"  >
 
-          <span class="fontsize">Listen to the words. Then, match the blends to the correct pictures. </span>
+          <span class="fontsize">Listen and match the pictures to the correct blends. </span>
           <div @click="changesett">
             <img src="../../assets/image/interpause.png" class=" repeat"  >
 
@@ -975,7 +975,7 @@
   .intermediate4 {
     width: 100%;
     height: 100%;
-    /*background-image: url("http://107.150.121.34/monkeytownHK/image/img/interbg10.png");*/
+    /*background-image: url("http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/interbg10.png");*/
     /*background-color: #204900;*/
     /*background-position: center;*/
     /*background-repeat: no-repeat;*/

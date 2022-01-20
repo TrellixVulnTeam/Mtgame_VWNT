@@ -278,7 +278,7 @@
                 var color2 = "#057bb8";
                 var exampleEndpoint2 = {
                   endpoint: ["Image", {
-                    src: "http://103.218.241.33/monkeytreeApp/www/assets/image/star.png"
+                    src: "http://monkeytown.monkeytree.com.hk/image2/star.png"
                   }],
                   paintStyle: {
                     fill: "#057bb8"
@@ -298,7 +298,7 @@
                 };
                 var exampleEndpoint3 = {
                   endpoint: ["Image", {
-                    src: "http://103.218.241.33/monkeytreeApp/www/assets/image/star.png"
+                    src: "http://monkeytown.monkeytree.com.hk/image2/star.png"
                   }],
                   EndpointStyle: {
                     margin: 20,
@@ -475,7 +475,7 @@
                                 source: that.list1[i].id,
                                 target: that.list1[i].targetId,
                                 endpoint: ["Image", {
-                                  src: "http://103.218.241.33/monkeytreeApp/www/assets/image/star.png"
+                                  src: "http://monkeytown.monkeytree.com.hk/image2/star.png"
                                 }],
                                 connector: ['Straight', {
                                   gap: 15,

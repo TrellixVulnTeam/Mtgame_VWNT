@@ -63,7 +63,7 @@
         </transition>
         <div class="settinglist">
           <img src="../../assets/image/abar.png" style="width: 100%;bottom: 0;height: 100%;">
-          <span class="fontsize">Listen and circle the correct picture.</span>
+          <span class="fontsize">Circle the picture that uses the correct sound.</span>
           <div @click="changesett">
             <img src="../../assets/image/adPause.png" class=" repeat">
           </div>
@@ -167,7 +167,7 @@
       'show1': function(newVal) {
         // console.log(this.$refs.show1s.duration);
         if (this.show1 === true) {
-          this.$refs.show1s[0].play();
+          this.$refs.show1s.play();
           // setTimeout(() => {
           this.show1 = false;
           // },this.$refs.show1s.duration*1000);
@@ -176,7 +176,7 @@
       'show2': function(newVal) {
         // console.log(this.$refs.show2s.duration);
         if (this.show2 === true) {
-          this.$refs.show2s[0].play();
+          this.$refs.show2s.play();
           // setTimeout(() => {
           this.show2 = false;
           // }, this.$refs.show2s.duration*1000);
@@ -185,7 +185,7 @@
       'show3': function(newVal) {
         // console.log(this.$refs.show3s.duration);
         if (this.show3 === true) {
-          this.$refs.show3s[0].play();
+          this.$refs.show3s.play();
           // setTimeout(() => {
           this.show3 = false;
           // }, this.$refs.show3s.duration*1000);
@@ -299,7 +299,6 @@
         const userAgentInfo = navigator.userAgent;
         const Agents = ['Android', 'iPhone','iPhoneX', 'iPhoneXR','SymbianOS', 'Windows Phone', 'iPad', 'iPod'];
         let flag = false;
-
         return flag;
       },
 
@@ -694,7 +693,7 @@
   .advanced2 {
     width: 100%;
     height: 100%;
-    /*background-image: url("http://107.150.121.34/monkeytownHK/image/img/interbg.png");*/
+    /*background-image: url("http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/interbg.png");*/
     /*background-color: #204900;*/
     /*background-position: center;*/
     /*background-repeat: no-repeat;*/
@@ -1440,8 +1439,8 @@
 
   @media screen and (min-width: 1600px){
     .bgstyle {
-      width: 60%;
-      margin: 51% 26%;
+      width: 53%;
+      margin: 60% 23%;
       border-radius: 30px;
     }
     .fontsizes {

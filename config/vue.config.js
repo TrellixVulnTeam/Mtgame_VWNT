@@ -61,7 +61,7 @@ publicPath:'./',
     // 配置多个代理
     proxy: {
       "/api": {
-        target: "http://107.150.121.34/mtGame",  //写地址
+        target: "http://gamejava.monkeytree.com.hk/mtGame",  //写地址
         ws: true,  // 允许跨域
         changeOrigin: true,  //允许跨域
         pathRewrite: {

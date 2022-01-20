@@ -144,7 +144,6 @@ window.alertMsgNew = function (txt,txt2) {
 };
 
 window.alertMsg3 = function (txt) {
-
   var strHtml='';
   alertFram.id = "alertFram";
   alertFram.style.position = "absolute";
@@ -156,16 +155,15 @@ window.alertMsg3 = function (txt) {
   // alertFram.style.background = "blank";
   // alertFram.style.color = "white";
   alertFram.style.zIndex = "10001";
-  strHtml =  "<div style='width:24%;padding:10px 0;margin:0 38%;bottom: 15%;position: absolute;background-color:white;border-radius:10px;color:black;'> <button style='width:100%;font-family: pepper;font-size: 0.7rem;height:100%;color: red; border: none;background: none;'>"
-    +txt+"</button></div>" ;
+   strHtml =  "<div style='width:24%;padding:10px 0;left: 50%;transform: translateX(-50%);bottom: 15%;position: absolute;background-color:white;border-radius:10px;color:black;'> <button style='width:100%;font-family: pepper;font-size: 0.8rem;height:100%;color: red; border: none;background: none;'>"
+     +txt+"</button></div>" ;
   alertFram.innerHTML = strHtml;
   document.body.appendChild(alertFram);
   setTimeout((function () {
       alertFram.style.display = "none";
-  }), 2000)
+  }), 1500)
 };
 window.alertMsg4 = function (txt) {
-
   var strHtml='';
   alertFram.id = "alertFram";
   alertFram.style.position = "absolute";
@@ -217,7 +215,7 @@ window.alertiframe2=function(){
         alertiframe.style.zIndex = "3";
          alertiframe.style.background = "#48A723";
        alertFram.style.top = 0;
-      var strHtml =  "<img src='http://103.218.241.33/mtgameweb/Game-flow/img/home2.png' style='width: 5%;margin-top: 3%;position: absolute;z-index: 3;margin-left: 0.5%;' onclick='backgo()'><img src='http://103.218.241.33/mtgameweb/Game-flow/img/backgo2.png' style='width: 5%;margin-top: 10%;position: absolute;z-index: 3;margin-left: 0.5%;' onclick='backgo2()'><iframe name='ifr1' style='width: 94%; height: 100%; position: absolute;right: 0; background-color: #48A723;z-index: 2;' src='http://103.218.241.33/mtgameweb/Game-flow/fruit-link-up/index.html' scrolling='auto'></iframe>" ;
+      var strHtml =  "<img src='http://monkeytown.monkeytree.com.hk/Game-flow/img/home2.png' style='width: 5%;margin-top: 3%;position: absolute;z-index: 3;margin-left: 0.5%;' onclick='backgo()'><img src='http://monkeytown.monkeytree.com.hk/Game-flow/img/backgo2.png' style='width: 5%;margin-top: 10%;position: absolute;z-index: 3;margin-left: 0.5%;' onclick='backgo2()'><iframe name='ifr1' style='width: 94%; height: 100%; position: absolute;right: 0; background-color: #48A723;z-index: 2;' src='http://monkeytown.monkeytree.com.hk/Game-flow/fruit-link-up/index.html' scrolling='auto'></iframe>" ;
        alertiframe.innerHTML = strHtml;
        console.log(document.getElementById("ifameid"));
        	document.getElementById("ifameid").appendChild(alertiframe);
@@ -234,7 +232,7 @@ window.alertiframe1=function(){
         alertiframe.style.zIndex = "3";
         alertiframe.style.background = "#0CADD0";
         alertFram.style.top = 0;
-      var strHtml =  "<img src='http://103.218.241.33/mtgameweb/Game-flow/img/home.png' style='width: 5%;margin-top: 3%;position: absolute;z-index: 3;margin-left: 0.5%;' onclick='backgo()'><img src='http://103.218.241.33/mtgameweb/Game-flow/img/backgo1.png' style='width: 5%;margin-top: 10%;position: absolute;z-index: 3;margin-left: 0.5%;' onclick='backgo2()'><iframe name='ifr1' style='width: 94%; height: 100%; position: absolute; right: 0;background-color: #0CADD0;z-index: 2;' src='http://103.218.241.33/mtgameweb/Game-flow/fishgame/index.html' scrolling='auto'></iframe>" ;
+      var strHtml =  "<img src='http://monkeytown.monkeytree.com.hk/Game-flow/img/home.png' style='width: 5%;margin-top: 3%;position: absolute;z-index: 3;margin-left: 0.5%;' onclick='backgo()'><img src='http://monkeytown.monkeytree.com.hk/Game-flow/img/backgo1.png' style='width: 5%;margin-top: 10%;position: absolute;z-index: 3;margin-left: 0.5%;' onclick='backgo2()'><iframe name='ifr1' style='width: 94%; height: 100%; position: absolute; right: 0;background-color: #0CADD0;z-index: 2;' src='http://monkeytown.monkeytree.com.hk/Game-flow/fishgame/index.html' scrolling='auto'></iframe>" ;
        alertiframe.innerHTML = strHtml;
        console.log(document.getElementById("ifameid"));
        	document.getElementById("ifameid").appendChild(alertiframe);
@@ -250,7 +248,7 @@ window.alertiframe3=function(){
         alertiframe.style.zIndex = "3";
         alertiframe.style.background = "#052060";
         alertFram.style.top = 0;
-      var strHtml =  "<img src='http://103.218.241.33/mtgameweb/Game-flow/img/home3.png' style='width: 5%;margin-top: 3%;position: absolute;z-index: 3;margin-left: 0.5%;' onclick='backgo()'><img src='http://103.218.241.33/mtgameweb/Game-flow/img/backgo3.png' style='width: 5%;margin-top: 10%;position: absolute;z-index: 3;margin-left: 0.5%;' onclick='backgo2()'><iframe name='ifr1' style='width: 94%; height: 100%; position: absolute; right: 0;background-color: #052060;z-index: 2;'  src='http://103.218.241.33/mtgameweb/Game-flow/Find-Toys/index.html' scrolling='auto'></iframe>" ;
+      var strHtml =  "<img src='http://monkeytown.monkeytree.com.hk/Game-flow/img/home3.png' style='width: 5%;margin-top: 3%;position: absolute;z-index: 3;margin-left: 0.5%;' onclick='backgo()'><img src='http://monkeytown.monkeytree.com.hk/Game-flow/img/backgo3.png' style='width: 5%;margin-top: 10%;position: absolute;z-index: 3;margin-left: 0.5%;' onclick='backgo2()'><iframe name='ifr1' style='width: 94%; height: 100%; position: absolute; right: 0;background-color: #052060;z-index: 2;'  src='http://monkeytown.monkeytree.com.hk/Game-flow/Find-Toys/index.html' scrolling='auto'></iframe>" ;
        alertiframe.innerHTML = strHtml;
        console.log(document.getElementById("ifameid"));
        	document.getElementById("ifameid").appendChild(alertiframe);
@@ -266,7 +264,7 @@ window.alertiframe4=function(){
         alertiframe.style.zIndex = "3";
         alertiframe.style.background = "#FBBA00";
         alertFram.style.top = 0;
-      var strHtml =  "<img src='http://103.218.241.33/mtgameweb/Game-flow/img/home4.png' style='width: 5%;margin-top: 3%;position: absolute;z-index: 3;margin-left: 0.5%;' onclick='backgo()'><img src='http://103.218.241.33/mtgameweb/Game-flow/img/backgo4.png' style='width: 5%;margin-top: 10%;position: absolute;z-index: 3;margin-left: 0.5%;' onclick='backgo2()'><iframe name='ifr1' style='width: 94%; height: 100%; position: absolute; right: 0;background-color: #FBBA00;z-index: 2;'  src='http://103.218.241.33/mtgameweb/Game-flow/Pizza/index.html' scrolling='auto'></iframe>" ;
+      var strHtml =  "<img src='http://monkeytown.monkeytree.com.hk/Game-flow/img/home4.png' style='width: 5%;margin-top: 3%;position: absolute;z-index: 3;margin-left: 0.5%;' onclick='backgo()'><img src='http://monkeytown.monkeytree.com.hk/Game-flow/img/backgo4.png' style='width: 5%;margin-top: 10%;position: absolute;z-index: 3;margin-left: 0.5%;' onclick='backgo2()'><iframe name='ifr1' style='width: 94%; height: 100%; position: absolute; right: 0;background-color: #FBBA00;z-index: 2;'  src='http://monkeytown.monkeytree.com.hk/Game-flow/Pizza/index.html' scrolling='auto'></iframe>" ;
        alertiframe.innerHTML = strHtml;
        console.log(document.getElementById("ifameid"));
        	document.getElementById("ifameid").appendChild(alertiframe);

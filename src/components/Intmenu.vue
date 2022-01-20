@@ -37,7 +37,7 @@
           <img :src=star style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="!stars[2].twostart">
           <img :src=lightstar class="imgposit1" v-if="stars[2].threestart">
           <img :src=star class="imgposit1" v-if="!stars[2].threestart">
-          <img @click="change3" src="../assets/image/inter3.png" style="position: sticky;height: 65%">
+          <img @click="change3" src="../assets/image/inter5.png" style="position: sticky;height: 65%">
         </div>
         <div class="listimg">
           <img :src=lightstar class="imgposit" v-if="stars[3].onestart">
@@ -55,7 +55,7 @@
           <img :src=star style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="!stars[4].twostart">
           <img :src=lightstar class="imgposit1" v-if="stars[4].threestart">
           <img :src=star class="imgposit1" v-if="!stars[4].threestart">
-          <img @click="change5" src="../assets/image/inter5.png" style="position: sticky;height: 65%">
+          <img @click="change5" src="../assets/image/inter3.png" style="position: sticky;height: 65%">
         </div>
         <div class="listimg">
           <img :src=lightstar class="imgposit" v-if="stars[5].onestart">
@@ -873,7 +873,7 @@
     padding: 0;
     margin: 0;
     width: 100%;
-    background-image: url("http://107.150.121.34/monkeytownHK/image/img/phonicsIntbg.png");
+    background-image: url("http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/phonicsIntbg.png");
     background-color: #204900;
     background-position: center;
     background-repeat: no-repeat;

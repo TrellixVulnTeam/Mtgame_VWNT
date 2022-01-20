@@ -684,7 +684,7 @@
   .intermediate10 {
     width: 100%;
     height: 100%;
-    /*background-image: url("http://107.150.121.34/monkeytownHK/image/img/interbg2.png");*/
+    /*background-image: url("http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/interbg2.png");*/
     /*background-color: #204900;*/
     /*background-position: center;*/
     /*background-repeat: no-repeat;*/
@@ -843,7 +843,7 @@
     background-size: cover;
     border-radius: 15px;
     margin-left: -20px;
-    background-image: url(http://107.150.121.34/monkeytownHK/image/img/interdelete.png);
+    background-image: url(http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/interdelete.png);
     color: #ffd940;
     line-height: 100%;
     font-size: 1.2rem;
@@ -865,7 +865,7 @@
 
   .enter {
     background: none;
-    background-image: url(http://107.150.121.34/monkeytownHK/image/img/interenter.png);
+    background-image: url(http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/interenter.png);
     background-size: contain;
     background-repeat: no-repeat;
     border-style: none;

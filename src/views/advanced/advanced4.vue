@@ -26,7 +26,7 @@
               <source src="../../assets/video/correct.mp3" ></audio>
             <div class="topbox" v-if="!reload">
               <button class="textsize">
-                <span>Does the picture make the <span style="color: #f42a64">{{titname}}</span> sound?</span>
+                <span>Does the picture make a <span style="color: #f42a64">{{titname}}</span> sound?</span>
                 <!--<audio   ref="videos"   autoplay="autoplay" :src="audio1">-->
                  <!--</audio>-->
                 <audio  @canplay="getDuration"   ref="videos" id="videos" autoplay="autoplay" :src="audio1"></audio>
@@ -701,7 +701,7 @@
   .advanced4 {
     width: 100%;
     height: 100%;
-    /*background-image: url("http://107.150.121.34/monkeytownHK/image/img/interbg5.png");*/
+    /*background-image: url("http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/interbg5.png");*/
     /*background-color: #204900;*/
     /*background-position: center;*/
     /*background-repeat: no-repeat;*/
@@ -1714,7 +1714,7 @@
       font-size: 1.4rem;
       max-height: 80%;
       min-height: 50%;
-      margin-left: 2%;
+      margin-left: 6%;
       transform: scale(1.6);
     }
     .yes1{

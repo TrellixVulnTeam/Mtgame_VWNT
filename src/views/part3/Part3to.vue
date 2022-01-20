@@ -84,7 +84,7 @@
 								<div class="card-back" v-bind:class="{'cardback':li.flag,'cardface':!li.flag,'answer':li.turefalse}">
 									<img :src="pic+li.bg" style="width: 70%;height: 62%; position: absolute;left: 14%;padding-top: 10px;">
 									<span class="namestyle"  v-bind:class="{'namesize':li.size}">{{li.name}}</span>
-									<img src="http://107.150.121.34/monkeytownHK/image/img/front.png"  class="card-img">
+									<img src="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/front.png"  class="card-img">
 									<img src="../../assets/image/StarOrange.png" class="start2" v-if="li.level" />
 								</div>
 							</li>

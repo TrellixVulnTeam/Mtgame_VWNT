@@ -586,14 +586,16 @@
                     style:this.style,
                   }
                 })
+              }else {
+                alertMsg3("Loading...Please Wait");
               }
       },
 			walkers1(li) {
 				this.chartroom =false;
 				this.walkers=true;
-				if(li.name=="Walkers"){
+				if(li.name==="Walkers"){
 					this.level="WALKERS";
-				}else if(li.name=="Runners"){
+				}else if(li.name==="Runners"){
 					this.level="RUNNERS";
 				}
 				let that=this;

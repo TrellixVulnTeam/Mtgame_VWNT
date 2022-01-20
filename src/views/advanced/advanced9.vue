@@ -190,7 +190,7 @@
         menuId: '',
         listBoss: [],
 
-        warn: "Look at the picture. Then, listen and write the missing letter. ",
+        warn: "Look at the picture. Then, listen and spell the word. ",
 
         pic: "",
 
@@ -340,7 +340,7 @@
       },
       help() {
         if (this.onef == false) {
-          this.spanp = "Look at the picture. Then, listen and write the missing letter. ";
+          this.spanp = "Look at the picture. Then, listen and spell the word.  ";
           this.popp = !this.popp;
 
           this.ruleimg8 = true;
@@ -692,7 +692,7 @@
   .advanced9 {
     width: 100%;
     height: 100%;
-    /*background-image: url("http://107.150.121.34/monkeytownHK/image/img/interbg9.png");*/
+    /*background-image: url("http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/interbg9.png");*/
     /*background-color: #204900;*/
     /*background-position: center;*/
     /*background-repeat: no-repeat;*/
@@ -1605,7 +1605,7 @@
       font-size: x-large;
       max-height: 80%;
       min-height: 50%;
-      margin-left: 2%;
+      margin-left: 6%;
       transform: scale(1.6);
     }
 

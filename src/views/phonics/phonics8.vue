@@ -171,7 +171,7 @@
                 var color2 = "#fcfcfc";
                 var exampleEndpoint2 = {
                   endpoint: ["Image", {
-                    src: "http://103.218.241.33/monkeytreeApp/www/assets/image/star3.png"
+                    src: "http://monkeytown.monkeytree.com.hk/image2/star3.png"
                   }],
                   paintStyle: {
                     fill: "#057bb8"
@@ -194,7 +194,7 @@
                 };
                 var exampleEndpoint3 = {
                   endpoint: ["Image", {
-                    src: "http://103.218.241.33/monkeytreeApp/www/assets/image/star3.png"
+                    src: "http://monkeytown.monkeytree.com.hk/image2/star3.png"
                   }],
                   EndpointStyle: {
                     margin: 20,
@@ -433,7 +433,7 @@
                                 source: that.list1[i].id,
                                 target: that.list1[i].targetId,
                                 endpoint: ["Image", {
-                                  src: "http://103.218.241.33/monkeytreeApp/www/assets/image/star3.png"
+                                  src: "http://monkeytown.monkeytree.com.hk/image2/star3.png"
                                 }],
                                 connector: ['Straight', {
                                   gap: 15,
@@ -824,7 +824,7 @@
     width: 100%;
     height: 100%;
     /*background-image: url("../../assets/image/phonicsbg3.png");*/
-    background-image: url("http://107.150.121.34/monkeytownHK/image/img/phonicsbg3.png");
+    background-image: url("http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/phonicsbg3.png");
     background-color: #204900;
     background-position: center;
     background-repeat: no-repeat;

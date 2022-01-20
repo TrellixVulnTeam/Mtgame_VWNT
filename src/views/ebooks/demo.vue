@@ -172,10 +172,10 @@
         //     audio:"",
         //     },
         // ],
-        // fontimg: "http://107.150.121.34/monkeytownHK/image/img/7de3f48e-8014-4e13-93bd-909df232ea74.png", //封面图片
-        // backimg: "http://107.150.121.34/monkeytownHK/image/img/93599aab-4915-49bd-bc22-f84c1c70ea53.png", //前言图片
-        // insetimg: "http://107.150.121.34/monkeytownHK/image/img/9457c73f-f4b9-4efd-b20c-a6e67feac10d.png", //内容背景
-        // backimg2: 'http://107.150.121.34/monkeytownHK/image/img/ca2973ea-f007-4390-8c7c-d5c3ddf44aaa.png', //前言图片第一页
+        // fontimg: "http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/7de3f48e-8014-4e13-93bd-909df232ea74.png", //封面图片
+        // backimg: "http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/93599aab-4915-49bd-bc22-f84c1c70ea53.png", //前言图片
+        // insetimg: "http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/9457c73f-f4b9-4efd-b20c-a6e67feac10d.png", //内容背景
+        // backimg2: 'http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/ca2973ea-f007-4390-8c7c-d5c3ddf44aaa.png', //前言图片第一页
         fontimg: '', //封面图片
         backimg: '', //前言图片
         insetimg: '', //内容背景
@@ -183,169 +183,169 @@
         wordimg:'',
         items: [
         //   {
-        //   // img1: "http://107.150.121.34/monkeytownHK/image/img/2page.png",
-        //   bg: "http://107.150.121.34/monkeytownHK/image/img/ea026b35-8e9f-4231-a3f5-dfc84c3e4972.png",
-        //   // audio: "http://107.150.121.34/monkeytownHK/image/video/1b7ca3fe-5367-47cb-89c0-7d0cdf81f560.m4a",
+        //   // img1: "http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/2page.png",
+        //   bg: "http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/ea026b35-8e9f-4231-a3f5-dfc84c3e4972.png",
+        //   // audio: "http://gamejava.monkeytree.com.hk/monkeytownHK/image/video/1b7ca3fe-5367-47cb-89c0-7d0cdf81f560.m4a",
         //   word: [{
-        //     audio: "http://107.150.121.34/monkeytownHK/image/video/test2m4a.m4a",
+        //     audio: "http://gamejava.monkeytree.com.hk/monkeytownHK/image/video/test2m4a.m4a",
         //     word: "1Sometimes I feel excited1.",
         //   }, {
-        //     audio: "http://107.150.121.34/monkeytownHK/image/video/testm4a.m4a",
+        //     audio: "http://gamejava.monkeytree.com.hk/monkeytownHK/image/video/testm4a.m4a",
         //     word: "1Sometimes I feel excited2.",
         //   },
         //     {
-        //       audio: "http://107.150.121.34/monkeytownHK/image/video/test2m4a.m4a",
+        //       audio: "http://gamejava.monkeytree.com.hk/monkeytownHK/image/video/test2m4a.m4a",
         //       word: "1Sometimes I feel excited3.",
         //     }
         //   ],
         //   is_open: 0
         // }, //第一页的图片音频和翻过来的背面图
         //   {
-        //     // img1: "http://107.150.121.34/monkeytownHK/image/img/4page.png",
-        //     bg: "http://107.150.121.34/monkeytownHK/image/img/6663bf8d-6942-4fdd-9177-368ef5a6e571.png",
+        //     // img1: "http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/4page.png",
+        //     bg: "http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/6663bf8d-6942-4fdd-9177-368ef5a6e571.png",
         //     // img3: "http://placekitten.com/g/200/100",
-        //     // audio: "http://107.150.121.34/monkeytownHK/image/video/67b831c4-fcd2-46d9-ac6a-a2ec330dd458.mp3",
+        //     // audio: "http://gamejava.monkeytree.com.hk/monkeytownHK/image/video/67b831c4-fcd2-46d9-ac6a-a2ec330dd458.mp3",
         //     word: [{
-        //       audio: "http://107.150.121.34/monkeytownHK/image/video/1b7ca3fe-5367-47cb-89c0-7d0cdf81f560.m4a",
+        //       audio: "http://gamejava.monkeytree.com.hk/monkeytownHK/image/video/1b7ca3fe-5367-47cb-89c0-7d0cdf81f560.m4a",
         //       word: "1Sometimes I feel excited4.",
         //     }, {
-        //       audio: "http://107.150.121.34/monkeytownHK/image/video/testm4a.m4a",
+        //       audio: "http://gamejava.monkeytree.com.hk/monkeytownHK/image/video/testm4a.m4a",
         //       word: "1Sometimes I feel excited5.",
         //     },
         //       {
-        //         audio: "http://107.150.121.34/monkeytownHK/image/video/test2m4a.m4a",
+        //         audio: "http://gamejava.monkeytree.com.hk/monkeytownHK/image/video/test2m4a.m4a",
         //         word: "1Sometimes I feel excited6.",
         //       }
         //     ],
         //     is_open: 0
         //   },
         //   {
-        //     // img1: "http://107.150.121.34/monkeytownHK/image/img/6page.png",
-        //     bg: "http://107.150.121.34/monkeytownHK/image/img/6663bf8d-6942-4fdd-9177-368ef5a6e571.png",
+        //     // img1: "http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/6page.png",
+        //     bg: "http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/6663bf8d-6942-4fdd-9177-368ef5a6e571.png",
         //     // img3: "http://placekitten.com/g/100/100",
-        //     // audio: "http://107.150.121.34/monkeytownHK/image/video/67b831c4-fcd2-46d9-ac6a-a2ec330dd458.mp3",
+        //     // audio: "http://gamejava.monkeytree.com.hk/monkeytownHK/image/video/67b831c4-fcd2-46d9-ac6a-a2ec330dd458.mp3",
         //     word: [{
-        //       audio: "http://107.150.121.34/monkeytownHK/image/video/testm4a.m4a",
+        //       audio: "http://gamejava.monkeytree.com.hk/monkeytownHK/image/video/testm4a.m4a",
         //       word: "1Sometimes I feel excited7.",
         //     }, {
-        //       audio: "http://107.150.121.34/monkeytownHK/image/video/test2m4a.m4a",
+        //       audio: "http://gamejava.monkeytree.com.hk/monkeytownHK/image/video/test2m4a.m4a",
         //       word: "1Sometimes I feel excited8.",
         //     },
         //       {
-        //         audio: "http://107.150.121.34/monkeytownHK/image/video/testm4a.m4a",
+        //         audio: "http://gamejava.monkeytree.com.hk/monkeytownHK/image/video/testm4a.m4a",
         //         word: "1Sometimes I feel excited9.",
         //       }
         //     ],
         //     is_open: 0
         //   },
         //   {
-        //     // img1: "http://107.150.121.34/monkeytownHK/image/img/8page.png",
-        //     bg: "http://107.150.121.34/monkeytownHK/image/img/6663bf8d-6942-4fdd-9177-368ef5a6e571.png",
+        //     // img1: "http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/8page.png",
+        //     bg: "http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/6663bf8d-6942-4fdd-9177-368ef5a6e571.png",
         //     // img3: "http://placekitten.com/g/100/200",
-        //     // audio: "http://107.150.121.34/monkeytownHK/image/video/67b831c4-fcd2-46d9-ac6a-a2ec330dd458.mp3",
+        //     // audio: "http://gamejava.monkeytree.com.hk/monkeytownHK/image/video/67b831c4-fcd2-46d9-ac6a-a2ec330dd458.mp3",
         //     // title: "NYANNYAN",
         //     word: [{
-        //       audio: "http://107.150.121.34/monkeytownHK/image/video/test2m4a.m4a",
+        //       audio: "http://gamejava.monkeytree.com.hk/monkeytownHK/image/video/test2m4a.m4a",
         //       word: "1Sometimes I feel excited10.",
         //     }, {
-        //       audio: "http://107.150.121.34/monkeytownHK/image/video/testm4a.m4a",
+        //       audio: "http://gamejava.monkeytree.com.hk/monkeytownHK/image/video/testm4a.m4a",
         //       word: "1Sometimes I feel excited11.",
         //     },
         //       {
-        //         audio: "http://107.150.121.34/monkeytownHK/image/video/test2m4a.m4a",
+        //         audio: "http://gamejava.monkeytree.com.hk/monkeytownHK/image/video/test2m4a.m4a",
         //         word: "1Sometimes I feel excited12.",
         //       }
         //     ],
         //     is_open: 0
         //   },
         //   {
-        //     // img1: "http://107.150.121.34/monkeytownHK/image/img/10page.png",
-        //     bg: "http://107.150.121.34/monkeytownHK/image/img/6663bf8d-6942-4fdd-9177-368ef5a6e571.png",
+        //     // img1: "http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/10page.png",
+        //     bg: "http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/6663bf8d-6942-4fdd-9177-368ef5a6e571.png",
         //     // img3: "http://placekitten.com/g/100/200",
-        //     // audio: "http://107.150.121.34/monkeytownHK/image/video/67b831c4-fcd2-46d9-ac6a-a2ec330dd458.mp3",
+        //     // audio: "http://gamejava.monkeytree.com.hk/monkeytownHK/image/video/67b831c4-fcd2-46d9-ac6a-a2ec330dd458.mp3",
         //     word: [{
-        //       audio: "http://107.150.121.34/monkeytownHK/image/video/1b7ca3fe-5367-47cb-89c0-7d0cdf81f560.m4a",
+        //       audio: "http://gamejava.monkeytree.com.hk/monkeytownHK/image/video/1b7ca3fe-5367-47cb-89c0-7d0cdf81f560.m4a",
         //       word: "1Sometimes I feel excited13.",
         //     }
         //     ],
         //     is_open: 0
         //   },
         //   {
-        //     // img1: "http://107.150.121.34/monkeytownHK/image/img/12page.png",
-        //     bg: "http://107.150.121.34/monkeytownHK/image/img/6663bf8d-6942-4fdd-9177-368ef5a6e571.png",
+        //     // img1: "http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/12page.png",
+        //     bg: "http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/6663bf8d-6942-4fdd-9177-368ef5a6e571.png",
         //     // img3: "http://placekitten.com/g/100/200",
-        //     // audio: "http://107.150.121.34/monkeytownHK/image/video/67b831c4-fcd2-46d9-ac6a-a2ec330dd458.mp3",
+        //     // audio: "http://gamejava.monkeytree.com.hk/monkeytownHK/image/video/67b831c4-fcd2-46d9-ac6a-a2ec330dd458.mp3",
         //     word: [{
-        //       audio: "http://107.150.121.34/monkeytownHK/image/video/1b7ca3fe-5367-47cb-89c0-7d0cdf81f560.m4a",
+        //       audio: "http://gamejava.monkeytree.com.hk/monkeytownHK/image/video/1b7ca3fe-5367-47cb-89c0-7d0cdf81f560.m4a",
         //       word: "1Sometimes I feel excited16.",
         //     },
         //     ],
         //     is_open: 0
         //   },
         //   {
-        //     // img1: "http://107.150.121.34/monkeytownHK/image/img/12page.png",
-        //     bg: "http://107.150.121.34/monkeytownHK/image/img/6663bf8d-6942-4fdd-9177-368ef5a6e571.png",
+        //     // img1: "http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/12page.png",
+        //     bg: "http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/6663bf8d-6942-4fdd-9177-368ef5a6e571.png",
         //     // img3: "http://placekitten.com/g/100/200",
-        //     // audio: "http://107.150.121.34/monkeytownHK/image/video/67b831c4-fcd2-46d9-ac6a-a2ec330dd458.mp3",
+        //     // audio: "http://gamejava.monkeytree.com.hk/monkeytownHK/image/video/67b831c4-fcd2-46d9-ac6a-a2ec330dd458.mp3",
         //     word: [{
-        //       audio: "http://107.150.121.34/monkeytownHK/image/video/1b7ca3fe-5367-47cb-89c0-7d0cdf81f560.m4a",
+        //       audio: "http://gamejava.monkeytree.com.hk/monkeytownHK/image/video/1b7ca3fe-5367-47cb-89c0-7d0cdf81f560.m4a",
         //       word: "1Sometimes I feel excited19.",
         //     }
         //     ],
         //     is_open: 0
         //   },
         //   {
-        //     // img1: "http://107.150.121.34/monkeytownHK/image/img/12page.png",
-        //     bg: "http://107.150.121.34/monkeytownHK/image/img/6663bf8d-6942-4fdd-9177-368ef5a6e571.png",
+        //     // img1: "http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/12page.png",
+        //     bg: "http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/6663bf8d-6942-4fdd-9177-368ef5a6e571.png",
         //     // img3: "http://placekitten.com/g/100/200",
-        //     // audio: "http://107.150.121.34/monkeytownHK/image/video/67b831c4-fcd2-46d9-ac6a-a2ec330dd458.mp3",
+        //     // audio: "http://gamejava.monkeytree.com.hk/monkeytownHK/image/video/67b831c4-fcd2-46d9-ac6a-a2ec330dd458.mp3",
         //     word: [{
-        //       audio: "http://107.150.121.34/monkeytownHK/image/video/1b7ca3fe-5367-47cb-89c0-7d0cdf81f560.m4a",
+        //       audio: "http://gamejava.monkeytree.com.hk/monkeytownHK/image/video/1b7ca3fe-5367-47cb-89c0-7d0cdf81f560.m4a",
         //       word: "1Sometimes I feel excited22.",
         //     }, {
-        //       audio: "http://107.150.121.34/monkeytownHK/image/video/1b7ca3fe-5367-47cb-89c0-7d0cdf81f560.m4a",
+        //       audio: "http://gamejava.monkeytree.com.hk/monkeytownHK/image/video/1b7ca3fe-5367-47cb-89c0-7d0cdf81f560.m4a",
         //       word: "1Sometimes I feel excited23.",
         //     },
         //       {
-        //         audio: "http://107.150.121.34/monkeytownHK/image/video/1b7ca3fe-5367-47cb-89c0-7d0cdf81f560.m4a",
+        //         audio: "http://gamejava.monkeytree.com.hk/monkeytownHK/image/video/1b7ca3fe-5367-47cb-89c0-7d0cdf81f560.m4a",
         //         word: "1Sometimes I feel excited24.",
         //       }
         //     ],
         //     is_open: 0
         //   },
         //   {
-        //     // img1: "http://107.150.121.34/monkeytownHK/image/img/12page.png",
-        //     bg: "http://107.150.121.34/monkeytownHK/image/img/6663bf8d-6942-4fdd-9177-368ef5a6e571.png",
+        //     // img1: "http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/12page.png",
+        //     bg: "http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/6663bf8d-6942-4fdd-9177-368ef5a6e571.png",
         //     // img3: "http://placekitten.com/g/100/200",
-        //     // audio: "http://107.150.121.34/monkeytownHK/image/video/67b831c4-fcd2-46d9-ac6a-a2ec330dd458.mp3",
+        //     // audio: "http://gamejava.monkeytree.com.hk/monkeytownHK/image/video/67b831c4-fcd2-46d9-ac6a-a2ec330dd458.mp3",
         //     word: [{
-        //       audio: "http://107.150.121.34/monkeytownHK/image/video/1b7ca3fe-5367-47cb-89c0-7d0cdf81f560.m4a",
+        //       audio: "http://gamejava.monkeytree.com.hk/monkeytownHK/image/video/1b7ca3fe-5367-47cb-89c0-7d0cdf81f560.m4a",
         //       word: "1Sometimes I feel excited25.",
         //     }, {
-        //       audio: "http://107.150.121.34/monkeytownHK/image/video/1b7ca3fe-5367-47cb-89c0-7d0cdf81f560.m4a",
+        //       audio: "http://gamejava.monkeytree.com.hk/monkeytownHK/image/video/1b7ca3fe-5367-47cb-89c0-7d0cdf81f560.m4a",
         //       word: "1Sometimes I feel excited26.",
         //     },
         //       {
-        //         audio: "http://107.150.121.34/monkeytownHK/image/video/1b7ca3fe-5367-47cb-89c0-7d0cdf81f560.m4a",
+        //         audio: "http://gamejava.monkeytree.com.hk/monkeytownHK/image/video/1b7ca3fe-5367-47cb-89c0-7d0cdf81f560.m4a",
         //         word: "1Sometimes I feel excited27.",
         //       }
         //     ],
         //     is_open: 0
         //   },
         //   {
-        //     // img1: "http://107.150.121.34/monkeytownHK/image/img/14page.png",
-        //     bg: "http://107.150.121.34/monkeytownHK/image/img/8979ef97-d0a7-4200-b9d6-6f30cec6db05.png", //封面背后
+        //     // img1: "http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/14page.png",
+        //     bg: "http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/8979ef97-d0a7-4200-b9d6-6f30cec6db05.png", //封面背后
         //     // img3: "http://placekitten.com/g/250/300",
-        //     // audio: "http://107.150.121.34/monkeytownHK/image/video/67b831c4-fcd2-46d9-ac6a-a2ec330dd458.mp3",
+        //     // audio: "http://gamejava.monkeytree.com.hk/monkeytownHK/image/video/67b831c4-fcd2-46d9-ac6a-a2ec330dd458.mp3",
         //     word: [{
-        //       audio: "http://107.150.121.34/monkeytownHK/image/video/1b7ca3fe-5367-47cb-89c0-7d0cdf81f560.m4a",
+        //       audio: "http://gamejava.monkeytree.com.hk/monkeytownHK/image/video/1b7ca3fe-5367-47cb-89c0-7d0cdf81f560.m4a",
         //       word: "1Sometimes I feel excited28.",
         //     }, {
-        //       audio: "http://107.150.121.34/monkeytownHK/image/video/1b7ca3fe-5367-47cb-89c0-7d0cdf81f560.m4a",
+        //       audio: "http://gamejava.monkeytree.com.hk/monkeytownHK/image/video/1b7ca3fe-5367-47cb-89c0-7d0cdf81f560.m4a",
         //       word: "1Sometimes I feel excited29.",
         //     },
         //       {
-        //         audio: "http://107.150.121.34/monkeytownHK/image/video/1b7ca3fe-5367-47cb-89c0-7d0cdf81f560.m4a",
+        //         audio: "http://gamejava.monkeytree.com.hk/monkeytownHK/image/video/1b7ca3fe-5367-47cb-89c0-7d0cdf81f560.m4a",
         //         word: "1Sometimes I feel excited30.",
         //       }
         //     ],
@@ -1262,7 +1262,7 @@
   //     -webkit-background-clip: text;
   //     -webkit-text-fill-color: transparent;
   //     background-color: grey;
-  //     background-image: url("http://107.150.121.34/monkeytownHK/image/img/bluebackg.png");
+  //     background-image: url("http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/bluebackg.png");
   //     background-repeat: no-repeat;
   //     background-position: -400px 0;
   //     animation-iteration-count: 1;

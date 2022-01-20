@@ -419,7 +419,7 @@ import $ from "jquery";
        -webkit-background-clip: text;
        -webkit-text-fill-color: transparent;
        background-color: #2c3e50;
-       background-image:url("http://107.150.121.34/monkeytownHK/image/img/bluebackg.png");
+       background-image:url("http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/bluebackg.png");
        background-repeat:no-repeat;
        background-position: -400px 0;
        animation-iteration-count: 1;

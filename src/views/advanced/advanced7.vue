@@ -34,7 +34,7 @@
 
             <div class="rightbox">
               <div id="box2" class="yes">
-                Which sound doesn't belong <span class="red">{{titlequesion}}</span> ?
+                Which word doesn't make the <span class="red">{{titlequesion}}</span>sound ?
 
               </div>
               <div class="buttons" id="imgBox">
@@ -65,7 +65,7 @@
         </transition>
         <div class="settinglist">
           <img src="../../assets/image/abar.png" style="width: 100%;bottom: 0;height: 100%;">
-          <span class="fontsize">Listen and circle the wrong picture.</span>
+          <span class="fontsize">Listen and select the word that does not match the sound.</span>
           <div @click="changesett">
             <img src="../../assets/image/adPause.png" class=" repeat">
           </div>
@@ -189,6 +189,7 @@
       'show3': function (newVal) {
         // console.log(this.$refs.show3s.duration);
         if (this.show3 === true) {
+          console.log(this.$refs.show3s[0]);
           this.$refs.show3s[0].play();
           // setTimeout(() => {
           this.show3 = false;
@@ -769,7 +770,7 @@
   .advanced7 {
     width: 100%;
     height: 100%;
-    /*background-image: url("http://107.150.121.34/monkeytownHK/image/img/interbg.png");*/
+    /*background-image: url("http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/interbg.png");*/
     /*background-color: #204900;*/
     /*background-position: center;*/
     /*background-repeat: no-repeat;*/
@@ -882,7 +883,7 @@
     display: flex;
     position: relative;
     background: none;
-    /*background-image: url(http://107.150.121.34/monkeytownHK/image/img/egg.png);*/
+    /*background-image: url(http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/egg.png);*/
     /*background-repeat: no-repeat;*/
     /*background-size: contain;*/
     /*background-position: center;*/
@@ -1442,14 +1443,10 @@
     }
 
     .listgroup {
-      /*height: 15rem;*/
-      /*line-height: 15rem;*/
-      /*font-size: 3rem;*/
     }
 
     .start2 {
       top: 5%;
-      /*right: 5%;*/
     }
 
     .spanp {
@@ -1476,7 +1473,6 @@
     .close img {
       height: 70px;
       width: 70px;
-
     }
 
     .roleimg {
@@ -1506,7 +1502,7 @@
       font-size: x-large;
       max-height: 80%;
       min-height: 50%;
-      margin-left: 2%;
+      margin-left: 6%;
       transform: scale(1.6);
     }
 

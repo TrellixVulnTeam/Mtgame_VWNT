@@ -35,8 +35,9 @@
           <img :src=star style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="!stars[2].twostart">
           <img :src=lightstar class="imgposit1" v-if="stars[2].threestart">
           <img :src=star class="imgposit1" v-if="!stars[2].threestart">
-          <img @click="change3" src="../assets/image/inter31.png" style="position: sticky;height: 50%;margin-top: 30%;margin-left: 3%">
+          <img @click="change3" src="../assets/image/inter31.png" style="position: sticky;height: 50%;margin-top: 28%;margin-left: 3%">
         </div>
+<!--        yes or no-->
         <div class="listimg">
           <img :src=lightstar class="imgposit" v-if="stars[3].onestart">
           <img :src=star class="imgposit" v-if="!stars[3].onestart">
@@ -46,6 +47,7 @@
           <img :src=star class="imgposit1" v-if="!stars[3].threestart">
           <img @click="change4" src="../assets/image/inter41.png" style="position: sticky;height: 50%;margin-top: 30%;margin-left: 4%">
         </div>
+<!--        letter scrabble-->
         <div class="listimg">
           <img :src=lightstar class="imgposit" v-if="stars[4].onestart">
           <img :src=star class="imgposit" v-if="!stars[4].onestart">
@@ -55,6 +57,7 @@
           <img :src=star class="imgposit1" v-if="!stars[4].threestart">
           <img @click="change5" src="../assets/image/inter51.png" style="position: sticky;height: 50%;margin-top: 30%;margin-left: 3%">
         </div>
+<!--        circle the sound-->
         <div class="listimg">
           <img :src=lightstar class="imgposit" v-if="stars[5].onestart">
           <img :src=star class="imgposit" v-if="!stars[5].onestart">
@@ -64,6 +67,7 @@
           <img :src=star class="imgposit1" v-if="!stars[5].threestart">
           <img @click="change6" src="../assets/image/inter61.png" style="position: sticky;height: 50%;margin-top: 30%;margin-left: 3%">
         </div>
+<!--        odd word out收-->
         <div class="listimg">
           <img :src=lightstar class="imgposit" v-if="stars[6].onestart">
           <img :src=star class="imgposit" v-if="!stars[6].onestart">
@@ -89,7 +93,7 @@
           <img :src=star style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="!stars[8].twostart">
           <img :src=lightstar class="imgposit1" v-if="stars[8].threestart">
           <img :src=star class="imgposit1" v-if="!stars[8].threestart">
-          <img @click="change9" src="../assets/image/inter91.png" style="position: sticky;height: 50%;margin-top: 30%;margin-left: 3%">
+          <img @click="change9" src="../assets/image/inter101.png" style="position: sticky;height: 50%;margin-top: 30%;margin-left: 3%">
         </div>
         <div class="listimg bosimg">
           <img :src=lightstar class="imgposit" v-if="stars[9].onestart">
@@ -98,7 +102,7 @@
           <img :src=star style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="!stars[9].twostart">
           <img :src=lightstar class="imgposit1" v-if="stars[9].threestart">
           <img :src=star class="imgposit1" v-if="!stars[9].threestart">
-          <img @click="change10" src="../assets/image/inter101.png" style="position: sticky;height: 50%;margin-top: 30%;margin-left: 3%">
+          <img @click="change10" src="../assets/image/inter91.png" style="position: sticky;height: 50%;margin-top: 30%;margin-left: 3%">
         </div>
 
 
@@ -281,7 +285,7 @@
     methods: {
       change() {
         if (this.UnitsList.length != 0) {
-          this.spanp = "Listen to the sentence and look at the picture. Then, select “Yes” or “No”.";
+          this.spanp = "Look at the picture and listen to the word. Then, select the missing sound.";
           setTimeout(() => {
             this.changei1 = true;
             this.popp = !this.popp;
@@ -301,7 +305,7 @@
       },
       change2() {
         if (this.key != true && this.UnitsList.length != 0) {
-          this.spanp = "Circle the picture that uses the correct blend.";
+          this.spanp = "Circle the picture that uses the correct sound";
           setTimeout(() => {
             this.changei2 = true;
             this.popp = !this.popp;
@@ -328,7 +332,7 @@
       },
       change3() {
         if (this.key != true && this.UnitsList.length != 0) {
-          this.spanp = "Look at the picture. Then, listen and circle the correct blend.";
+          this.spanp = "Listen to the word and select the correct sound.";
           setTimeout(() => {
             this.changei3 = true;
             this.popp = !this.popp;
@@ -348,7 +352,7 @@
       },
       change4() {
         if (this.key != true && this.UnitsList.length != 0) {
-          this.spanp = "Listen to the words. Then, match the blends to the correct pictures.";
+          this.spanp = "Listen to the sentence and look at the picture. Then, select “Yes” or “No”.";
           setTimeout(() => {
             this.changei4 = true;
             this.popp = !this.popp;
@@ -368,7 +372,7 @@
       },
       change5() {
         if (this.key != true && this.UnitsList.length != 0) {
-          this.spanp = "Listen and select the correct blend.";
+          this.spanp = " Listen to the word. Then, put the letters in the correct order.";
           setTimeout(() => {
             this.changei5 = true;
             this.popp = !this.popp;
@@ -388,7 +392,7 @@
       },
       change6() {
         if (this.key != true && this.UnitsList.length != 0) {
-          this.spanp = "Listen to the word. Then, put the letters in the correct order.";
+          this.spanp = "Listen to the word and circle the correct sound.";
           setTimeout(() => {
             this.changei6 = true;
             this.popp = !this.popp;
@@ -408,7 +412,7 @@
       },
       change7() {
         if (this.key != true && this.UnitsList.length != 0) {
-          this.spanp = "Listen and match the pictures to the correct words. ";
+          this.spanp = "Listen and select the word that does not match the sound. ";
           setTimeout(() => {
             this.changei7 = true;
             this.popp = !this.popp;
@@ -428,7 +432,7 @@
       },
       change8() {
         if (this.key != true && this.UnitsList.length != 0) {
-          this.spanp = "Listen and circle the word that does not match.";
+          this.spanp = "Listen and match the words.";
           setTimeout(() => {
             this.changei8 = true;
             this.popp = !this.popp;

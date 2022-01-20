@@ -29,20 +29,24 @@
 
 						<div class="windows">
 							<div class="imgbox" id="imgBox">
-								<div  v-for="(li,index)  in list1" :key="index" :class="{imgsty1:!index,imgsty2:index}" @click="answer1(li)">
+<!--								<div  v-for="(li,index)  in list1" :key="index" :class="{imgsty1:!index,imgsty2:index,answer5:lRight,answer6:rRight}" @click="answer1(li)">-->
+<!--                  <button class="imgsty">-->
+<!--                    <img src="../../assets/image/StarOrange.png" class="answerSucc" v-show="li.showstart" />-->
+<!--                    <span class="fontstyle">{{li.value}}</span>-->
+<!--                  </button>-->
+<!--								</div>-->
+                <div  class="imgsty1"  @click="answer1(list1[0],0)" :class="{answer6:lRight,changSize:list1[0].showstart}">
                   <button class="imgsty">
-                    <img src="../../assets/image/StarOrange.png" class="answerSucc" v-show="li.showstart" />
-                    <span class="fontstyle">{{li.value}}</span>
-                    <!--<img v-for="(li,index) in list1" :key="index" v-if="!index" :src="li.bg">-->
+                	    <img src="../../assets/image/StarOrange.png" class="answerSucc" v-show="list1[0].showstart"/>
+                      <span class="fontstyle">{{list1[0].value}}</span>
                   </button>
-								</div>
-                <!--<div  class="imgsty2"  @click="answer1(this.list1[1])">-->
-                  <!--<button class="imgsty">-->
-                	    <!--<img src="../../assets/image/StarOrange.png" class="answerSucc"/>-->
-                      <!--<span class="fontstyle">{{this.list1[1].value}}</span>-->
-                	    <!--&lt;!&ndash;<img v-for="(li,index) in list1" :key="index" v-if="index" :src="li.bg">&ndash;&gt;-->
-                  <!--</button>-->
-                <!--</div>-->
+                </div>
+                <div  class="imgsty2"  @click="answer1(list1[1],1)" :class="{answer5:rRight,changSize:list1[1].showstart}">
+                  <button class="imgsty">
+                    <img src="../../assets/image/StarOrange.png" class="answerSucc" v-show="list1[1].showstart"/>
+                    <span class="fontstyle">{{list1[1].value}}</span>
+                  </button>
+                </div>
 							</div>
 							<!--<canvas id="canvas" style="position: absolute;left:0;z-index: 99;width: 100%;height: 100%;"-->
 								<!--@mousedown="canvasDown($event)" @mouseup="canvasUp($event)" @mousemove="canvasMove($event)"-->
@@ -105,6 +109,9 @@
 		name: "advanced3",
 		data() {
 			return {
+			  showStart:false,
+			  lRight:false,
+        rRight:false,
 			  showNum: false,
 				popp: false,
 				spanp:'',
@@ -120,8 +127,7 @@
 				fisrtanswer:false,
 				question: 1,
 				zhezhao:true,
-				list1: [
-				],
+				list1: [],
         truesound:'',
 				onef: true,
 				fade: 'fade',
@@ -264,9 +270,9 @@
 					this.context.stroke();
 				}
 			},
-      answer1(li){
+      answer1(li,num){
         this.zhezhao=true;
-        if(li.score=='1'){
+        if(li.score==='1'){
           this.soundscorrect=true;
           this.countpage += 1;
           this.account += 1;
@@ -300,9 +306,12 @@
             }, 2000);
           }
         }else {
+          num = 0 ? this.lRight=true:this.rRight=true;
           this.soundsWrong=true;
           this.countpage += 1;
           setTimeout(() => {
+            this.lRight=false;
+            this.rRight=false;
             this.soundsWrong=false;
           },2000);
           if(this.countpage<=this.listG.length){
@@ -628,7 +637,7 @@
 	.advanced3 {
 		width: 100%;
 		height: 100%;
-    /*background-image: url("http://107.150.121.34/monkeytownHK/image/img/phonicsbg.png");*/
+    /*background-image: url("http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/phonicsbg.png");*/
     /*background-color: #204900;*/
     /*background-position: center;*/
     /*background-repeat: no-repeat;*/
@@ -657,6 +666,11 @@
 		display: block;
 		position: fixed;
 	}
+
+  .changSize{
+    transform: scale(1.15);
+    z-index: 1;
+  }
 
 	.start {
 		position: absolute;
@@ -994,64 +1008,123 @@
 		transform: translate3d(0, -100%, 0);
 	}
 
-	.answer {
-		animation: myPlay 0.5s infinite alternate;
+	.answer5 {
+		animation: myPlay 0.6s infinite alternate;
 		animation-timing-function: linear;
-		animation-iteration-count: 2;
+		animation-iteration-count: 3;
 
-		-webkit-animation: myPlay 0.5s infinite alternate;
+		-webkit-animation: myPlay 0.6s infinite alternate;
 		-webkit-animation-timing-function: linear;
-		-webkit-animation-iteration-count: 2;
+		-webkit-animation-iteration-count: 3;
 
-		-moz-animation: myPlay 0.5s infinite alternate;
+		-moz-animation: myPlay 0.6s infinite alternate;
 		-moz-animation-timing-function: linear;
-		-moz-animation-iteration-count: 2;
-		-o-animation: myPlay 0.5s infinite alternate;
+		-moz-animation-iteration-count: 3;
+		-o-animation: myPlay 0.6s infinite alternate;
 		-o-animation-timing-function: linear;
-		-o-animation-iteration-count: 2;
+		-o-animation-iteration-count: 3;
 	}
 
 	@keyframes myPlay {
 		0% {
 			position: relative;
-			left: 0px;
+			left: -7%;
 		}
 		50% {
 			position: relative;
-			left: 20px;
+			left: -3%;
 		}
 		100% {
 			position: relative;
-			left: 0px;
+			left: -7%;
 		}
 	}
 
 	@-webkit-keyframes myPlay {
 		0% {
 			position: relative;
-			left: 0px;
+			left: -7%;
 		}
 		50% {
 			position: relative;
-			left: 20px;
+			left: -3%;
 		}
 		100% {
 			position: relative;
-			left: 0px;
+			left: -7%;
 		}
 	}
 
 	@-moz-keyframes myPlay {
 		0% {
-			left: 0px;
+			left: -7%;
 		}
 		50% {
-			left: 20px;
+			left: -3%;
 		}
 		100% {
-			left: 0px;
+			left: -7%;
 		}
 	}
+
+  .answer6 {
+    animation: myPlay1 0.6s infinite alternate;
+    animation-timing-function: linear;
+    animation-iteration-count: 3;
+
+    -webkit-animation: myPlay1 0.6s infinite alternate;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: 3;
+
+    -moz-animation: myPlay1 0.6s infinite alternate;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: 3;
+    -o-animation: myPlay1 0.6s infinite alternate;
+    -o-animation-timing-function: linear;
+    -o-animation-iteration-count: 3;
+  }
+
+  @keyframes myPlay1 {
+    0% {
+      position: relative;
+      left: 3%;
+    }
+    50% {
+      position: relative;
+      left: 7%;
+    }
+    100% {
+      position: relative;
+      left: 3%;
+    }
+  }
+
+  @-webkit-keyframes myPlay1 {
+    0% {
+      position: relative;
+      left: 3%;
+    }
+    50% {
+      position: relative;
+      left: 7%;
+    }
+    100% {
+      position: relative;
+      left: 3%;
+    }
+  }
+
+  @-moz-keyframes myPlay1 {
+    0% {
+      left: 3%;
+    }
+    50% {
+      left: 7%;
+    }
+    100% {
+      left: 3%;
+    }
+  }
 
 	@media screen and (max-width: 481px) {
 		.showbgs1 {
@@ -1072,8 +1145,37 @@
 			padding-top: 18%;
 		}
 	}
-
+	@media screen and (min-width: 482px) and (max-width: 567px){
+		.fontstyle {
+			font-size: 2.5rem;
+			color: white;
+			font-family: 'pepper';
+		}
+		.imgsty{
+		width: 60%;
+		top: 31%;
+		margin: 0 20%;
+	}
+	}
+	@media screen and (min-width: 568px) and (max-width: 699px){
+		.fontstyle {
+			font-size: 2rem;
+		}
+		.imgsty{
+		width: 60%;
+		top: 31%;
+		margin: 0 20%;
+	}
+	}
 	@media screen and (min-width: 1024px) and (max-width: 1354px)  {
+		.imgsty {
+			top: 31%;
+		}
+		.fontstyle {
+			font-size: 3.5rem;
+			color: white;
+			font-family: 'pepper';
+		}
 		.start {
 			transform: scale(2);
 			margin-left: -22%;
@@ -1154,6 +1256,14 @@
     }
 	}
 	@media screen and (min-width: 1355px)and (max-width: 1600px){
+		.imgsty{
+			top: 31%;
+		}
+		.fontstyle {
+			font-size: 4.5rem;
+			color: white;
+			font-family: 'pepper';
+		}
 		.start {
 			transform: scale(2);
 			margin-left: -22%;
@@ -1190,7 +1300,7 @@
       height: 75%;bottom: 0%;position: absolute;
     }
     .fontstyle{
-      font-size: 3rem;
+      font-size: 5rem;
     }
 		.sacle {
 			border: 0.8rem solid #007BB8 !important;
@@ -1259,9 +1369,11 @@
 			height: 70%;
 		}
     .imgsty{
-      top: 43%;
+      top: 36%;
     }
-
+	.fontstyle{
+		font-size: 3rem;
+	}
 	}
   @media screen and (min-width: 1600px){
     .start {
@@ -1291,7 +1403,7 @@
       font-size: 2rem;
       max-height: 80%;
       min-height: 50%;
-      margin-left: 2%;
+      margin-left: 6%;
       transform: scale(1.6);
     }
     .winword {
@@ -1302,11 +1414,11 @@
     }
 
     .imgsty{
-      top: 43%;
+      top: 32%;
     }
-    .fontstyle{
-      font-size: 5rem;
-    }
+	.fontstyle {
+		font-size: 5.5rem;
+	}
     .sacle {
       border: 0.8rem solid #007BB8 !important;
       box-shadow: 0.6rem 0.6rem 0.1rem #085D77 !important;

@@ -651,7 +651,7 @@
   .phonics7 {
     width: 100%;
     height: 100%;
-    background-image: url("http://107.150.121.34/monkeytownHK/image/img/phonicsbg4.png");
+    background-image: url("http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/phonicsbg4.png");
     background-color: #204900;
     background-position: center;
     background-repeat: no-repeat;

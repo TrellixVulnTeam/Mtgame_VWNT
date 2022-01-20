@@ -17,7 +17,7 @@
               <div class="eightCard">
                 <div class="list" v-for="li in list" :key="li.id" @click="startpop(li)" >
                   <img :src=li.img class="card-img1">
-                  <img src="http://107.150.121.34/monkeytownHK/image/img/front.png" class="card-img2">
+                  <img src="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/front.png" class="card-img2">
                 </div>
               </div>
                   <h2 @click="jump()" class="jump">Games</h2>
@@ -1221,127 +1221,127 @@
         OntheFarmPart1:[
           {
             id:1,
-            cardName:'napkin',
+            cardName:'barn',
             audio:require('../../assets/Flashcard Audio/december/stocking.mp3'),
-            img:require('../../assets/image/At the Restaurant/napkin.png')
+            img:require('../../assets/image/In the barn/barn.png')
           },{
             id:2,
-            cardName:'pizza',
+            cardName:'hay',
             audio:require('../../assets/Flashcard Audio/december/sleigh.mp3'),
-            img:require('../../assets/image/At the Restaurant/pizza.png')
+            img:require('../../assets/image/In the barn/hay.png')
           },{
             id:3,
-            cardName:'fork',
+            cardName:'duck',
             audio:require('../../assets/Flashcard Audio/december/reindeer.mp3'),
-            img:require('../../assets/image/At the Restaurant/fork.png')
+            img:require('../../assets/image/In the barn/duck.png')
           },{
             id:4,
-            cardName:'knife',
+            cardName:'egg',
             audio:require('../../assets/Flashcard Audio/december/bells.mp3'),
-            img:require('../../assets/image/At the Restaurant/knife.png')
+            img:require('../../assets/image/In the barn/egg.png')
           },{
             id:5,
-            cardName:'ice cream',
+            cardName:'hen',
             audio:require('../../assets/Flashcard Audio/december/Santa claus.mp3'),
-            img:require('../../assets/image/At the Restaurant/ice cream.png')
+            img:require('../../assets/image/In the barn/hen.png')
           },{
             id:6,
-            cardName:'waiter',
+            cardName:'feed',
             audio:require('../../assets/Flashcard Audio/december/elf.mp3'),
-            img:require('../../assets/image/At the Restaurant/waiter.png')
+            img:require('../../assets/image/In the barn/feed.png')
           },{
             id:7,
-            cardName:'menu',
+            cardName:'crow',
             audio:require('../../assets/Flashcard Audio/december/elf.mp3'),
-            img:require('../../assets/image/At the Restaurant/menu.png')
+            img:require('../../assets/image/In the barn/crow.png')
           },{
             id:8,
-            cardName:'plate',
+            cardName:'sheep',
             audio:require('../../assets/Flashcard Audio/december/elf.mp3'),
-            img:require('../../assets/image/At the Restaurant/plate.png')
+            img:require('../../assets/image/In the barn/sheep.png')
           },{
             id:9,
-            cardName:'order',
+            cardName:'bucket',
             audio:require('../../assets/Flashcard Audio/december/stocking.mp3'),
-            img:require('../../assets/image/At the Restaurant/order.png')
+            img:require('../../assets/image/In the barn/bucket.png')
           },{
             id:10,
-            cardName:'juice',
+            cardName:'rooster',
             audio:require('../../assets/Flashcard Audio/december/sleigh.mp3'),
-            img:require('../../assets/image/At the Restaurant/juice.png')
+            img:require('../../assets/image/In the barn/rooster.png')
           },{
             id:11,
-            cardName:'noodles',
+            cardName:'chick',
             audio:require('../../assets/Flashcard Audio/december/reindeer.mp3'),
-            img:require('../../assets/image/At the Restaurant/noodles.png')
+            img:require('../../assets/image/In the barn/chick.png')
           },{
             id:12,
-            cardName:'burger',
+            cardName:'cow',
             audio:require('../../assets/Flashcard Audio/december/bells.mp3'),
-            img:require('../../assets/image/At the Restaurant/burger.png')
+            img:require('../../assets/image/In the barn/cow.png')
           }
         ],
         OntheFarmPart2:[
           {
             id:1,
-            cardName:'bowl',
+            cardName:'tractor',
             audio:require('../../assets/Flashcard Audio/december/stocking.mp3'),
-            img:require('../../assets/image/At Home/bowl.png')
+            img:require('..'+'/../assets/image/In the field/tractor.png')
           },{
             id:2,
-            cardName:'cup',
+            cardName:'plough',
             audio:require('../../assets/Flashcard Audio/december/sleigh.mp3'),
-            img:require('../../assets/image/At Home/cup.png')
+            img:require('../../assets/image/In the field/plough.png')
           },{
             id:3,
-            cardName:'fish',
+            cardName:'pig',
             audio:require('../../assets/Flashcard Audio/december/reindeer.mp3'),
-            img:require('../../assets/image/At Home/fish.png')
+            img:require('../../assets/image/In the field/pig.png')
           },{
             id:4,
-            cardName:'chopsticks',
+            cardName:'apple',
             audio:require('../../assets/Flashcard Audio/december/bells.mp3'),
-            img:require('../../assets/image/At Home/chopsticks.png')
+            img:require('../../assets/image/In the field/apple.png')
           },{
             id:5,
-            cardName:'eat',
+            cardName:'tree',
             audio:require('../../assets/Flashcard Audio/december/Santa claus.mp3'),
-            img:require('../../assets/image/At Home/eat.png')
+            img:require('../../assets/image/In the field/tree.png')
           },{
             id:6,
-            cardName:'rice',
+            cardName:'farmer',
             audio:require('../../assets/Flashcard Audio/december/elf.mp3'),
-            img:require('../../assets/image/At Home/rice.png')
+            img:require('../../assets/image/In the field/farmer.png')
           },{
             id:7,
-            cardName:'chickens',
+            cardName:'gallop',
             audio:require('../../assets/Flashcard Audio/december/elf.mp3'),
-            img:require('../../assets/image/At Home/chicken.png')
+            img:require('../../assets/image/In the field/gallop.png')
           },{
             id:8,
-            cardName:'drink',
+            cardName:'horse',
             audio:require('../../assets/Flashcard Audio/december/elf.mp3'),
-            img:require('../../assets/image/At Home/drink.png')
+            img:require('../../assets/image/In the field/horse.png')
           },{
             id:9,
-            cardName:'milk',
+            cardName:'plants',
             audio:require('../../assets/Flashcard Audio/december/stocking.mp3'),
-            img:require('../../assets/image/At Home/milk.png')
+            img:require('../../assets/image/In the field/plants.png')
           },{
             id:10,
-            cardName:'spoon',
+            cardName:'roll',
             audio:require('../../assets/Flashcard Audio/december/sleigh.mp3'),
-            img:require('../../assets/image/At Home/spoon.png')
+            img:require('../../assets/image/In the field/roll.png')
           },{
             id:11,
-            cardName:'tea',
+            cardName:'pick',
             audio:require('../../assets/Flashcard Audio/december/reindeer.mp3'),
-            img:require('../../assets/image/At Home/tea.png')
+            img:require('../../assets/image/In the field/pick.png')
           },{
             id:12,
-            cardName:'vegetables',
+            cardName:'fence',
             audio:require('../../assets/Flashcard Audio/december/bells.mp3'),
-            img:require('../../assets/image/At Home/vegetables.png')
+            img:require('../../assets/image/In the field/fence.png')
           }
         ],
         list:[],
@@ -1377,11 +1377,11 @@
           HolidaysPart2:require('../../assets/image/12-logo2.png'),
           MealTimePart1:require('../../assets/image/1-1logo1.png'),
           MealTimePart2:require('../../assets/image/1-1logo2.png'),
-          OntheFarmPart1:require('../../assets/image/2-2logo2.png'),
-          OntheFarmPart2:require('../../assets/image/2-2logo.png'),
+          OntheFarmPart1:require('../../assets/image/2-2logo1.png'),
+          OntheFarmPart2:require('../../assets/image/2-2logo2.png'),
         },
         title:'../../assets/image/6-6logo.png',
-        flashCardUrl:'http://107.150.121.34/monkeytownHK/image/img/9315e4a9-e1ec-4f49-8db5-5b3a9b6ae083.png',
+        flashCardUrl:'http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/9315e4a9-e1ec-4f49-8db5-5b3a9b6ae083.png',
         flashCardName:'ice cream',
         flashCardId:0,
         sum: 0,

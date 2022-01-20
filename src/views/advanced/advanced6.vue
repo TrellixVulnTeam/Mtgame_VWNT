@@ -59,7 +59,7 @@
         </transition>
         <div class="settinglist">
           <img src="../../assets/image/abar.png" style="width: 100%;bottom: 0;height: 100%;">
-          <span class="fontsize">Select the correct blend.</span>
+          <span class="fontsize">Listen to the word and circle the correct sound.</span>
           <div @click="changesett">
             <img src="../../assets/image/adPause.png" class=" repeat">
           </div>
@@ -443,7 +443,7 @@
   .advanced6 {
     width: 100%;
     height: 100%;
-    /*background-image: url("http://107.150.121.34/monkeytownHK/image/img/interbg3.png");*/
+    /*background-image: url("http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/interbg3.png");*/
     /*background-color: #204900;*/
     /*background-position: center;*/
     /*background-repeat: no-repeat;*/
@@ -536,7 +536,7 @@
     border: none;
     height: 130px;
     background: none;
-    /*background-image: url("http://107.150.121.34/monkeytownHK/image/img/yun.png");*/
+    /*background-image: url("http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/yun.png");*/
     /*background-repeat: no-repeat;*/
     /*background-size: contain;*/
     /*background-position: center;*/
@@ -1003,7 +1003,7 @@
       font-size: x-large;
       max-height: 80%;
       min-height: 50%;
-      margin-left: 2%;
+      margin-left: 4%;
       transform: scale(1.6);
     }
     .rightbox {

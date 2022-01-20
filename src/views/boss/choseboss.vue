@@ -222,71 +222,71 @@
 				}
 			}
       if(this.unit==='Seasons'){
-        this.star="http://107.150.121.34/monkeytownHK/image/img/season-star2.png";
-        this.lightstar="http://107.150.121.34/monkeytownHK/image/img/season-star.png";
+        this.star="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/season-star2.png";
+        this.lightstar="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/season-star.png";
       }else if(this.unit==='Transportation'){
-        this.star="http://107.150.121.34/monkeytownHK/image/img/4-star2.png";
-        this.lightstar="http://107.150.121.34/monkeytownHK/image/img/4-star.png";
+        this.star="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/4-star2.png";
+        this.lightstar="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/4-star.png";
       }else if(this.unit==='Bugs'){
-        this.star="http://107.150.121.34/monkeytownHK/image/img/season-star2.png";
-        this.lightstar="http://107.150.121.34/monkeytownHK/image/img/season-star.png";
+        this.star="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/season-star2.png";
+        this.lightstar="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/season-star.png";
       }else if(this.unit==='Clothes'){
-        this.star="http://107.150.121.34/monkeytownHK/image/img/6-star2.png";
-        this.lightstar="http://107.150.121.34/monkeytownHK/image/img/6-star.png";
+        this.star="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/6-star2.png";
+        this.lightstar="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/6-star.png";
       }else if(this.unit==='Theme Park'){
-        this.star="http://107.150.121.34/monkeytownHK/image/img/6-star2.png";
-        this.lightstar="http://107.150.121.34/monkeytownHK/image/img/6-star.png";
+        this.star="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/6-star2.png";
+        this.lightstar="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/6-star.png";
       }else if(this.unit==='Space'){
-        this.star="http://107.150.121.34/monkeytownHK/image/img/8-star2.png";
-        this.lightstar="http://107.150.121.34/monkeytownHK/image/img/8-star.png";
+        this.star="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/8-star2.png";
+        this.lightstar="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/8-star.png";
       }else if(this.unit==='My Body'){
-        this.star="http://107.150.121.34/monkeytownHK/image/img/9-star2.png";
-        this.lightstar="http://107.150.121.34/monkeytownHK/image/img/9-star.png";
+        this.star="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/9-star2.png";
+        this.lightstar="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/9-star.png";
       }else if(this.unit==='My Weekend'){
-        this.star="http://107.150.121.34/monkeytownHK/image/img/10-star2.png";
-        this.lightstar="http://107.150.121.34/monkeytownHK/image/img/10-star.png";
+        this.star="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/10-star2.png";
+        this.lightstar="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/10-star.png";
       }else if(this.unit==='Wild Animals'){
-        this.star="http://107.150.121.34/monkeytownHK/image/img/11-star2.png";
-        this.lightstar="http://107.150.121.34/monkeytownHK/image/img/11-star.png";
+        this.star="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/11-star2.png";
+        this.lightstar="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/11-star.png";
       }else if(this.unit==='Christmas'){
-        this.star="http://107.150.121.34/monkeytownHK/image/img/12-star2.png";
-        this.lightstar="http://107.150.121.34/monkeytownHK/image/img/12-star.png";
+        this.star="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/12-star2.png";
+        this.lightstar="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/12-star.png";
       }else if(this.unit==='Let\'s Go Shopping'){
-        this.star="http://107.150.121.34/monkeytownHK/image/img/1-star2.png";
-        this.lightstar="http://107.150.121.34/monkeytownHK/image/img/1-star.png";
+        this.star="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/1-star2.png";
+        this.lightstar="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/1-star.png";
       }else if(this.unit==='My Community'){
-        this.star="http://107.150.121.34/monkeytownHK/image/img/2-star2.png";
-        this.lightstar="http://107.150.121.34/monkeytownHK/image/img/2-star.png";
+        this.star="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/2-star2.png";
+        this.lightstar="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/2-star.png";
       }else if(this.unit==='Fun Time!'){
-        this.star="http://107.150.121.34/monkeytownHK/image/img/3-3star2.png";
-        this.lightstar="http://107.150.121.34/monkeytownHK/image/img/3-3star.png";
+        this.star="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/3-3star2.png";
+        this.lightstar="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/3-3star.png";
       }else if(this.unit==='My Home'){
-        this.star="http://107.150.121.34/monkeytownHK/image/img/4-4star2.png";
-        this.lightstar="http://107.150.121.34/monkeytownHK/image/img/4-4star.png";
+        this.star="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/4-4star2.png";
+        this.lightstar="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/4-4star.png";
       }else if(this.unit==='Our World'){
-        this.star="http://107.150.121.34/monkeytownHK/image/img/5-5star2.png";
-        this.lightstar="http://107.150.121.34/monkeytownHK/image/img/5-5star.png";
+        this.star="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/5-5star2.png";
+        this.lightstar="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/5-5star.png";
       }else if(this.unit==='Fairy Tales'){
-        this.star="http://107.150.121.34/monkeytownHK/image/img/6-6star2.png";
-        this.lightstar="http://107.150.121.34/monkeytownHK/image/img/6-6star.png";
+        this.star="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/6-6star2.png";
+        this.lightstar="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/6-6star.png";
       }else if(this.unit==='School Life'){
-        this.star="http://107.150.121.34/monkeytownHK/image/img/9-9star2.png";
-        this.lightstar="http://107.150.121.34/monkeytownHK/image/img/9-9star.png";
+        this.star="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/9-9star2.png";
+        this.lightstar="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/9-9star.png";
       }else if(this.unit==='Animals'){
-        this.star="http://107.150.121.34/monkeytownHK/image/img/10-10star2.png";
-        this.lightstar="http://107.150.121.34/monkeytownHK/image/img/10-10star.png";
+        this.star="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/10-10star2.png";
+        this.lightstar="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/10-10star.png";
       }else if(this.unit==='Family Time'){
-        this.star="http://107.150.121.34/monkeytownHK/image/img/11-11star2.png";
-        this.lightstar="http://107.150.121.34/monkeytownHK/image/img/11-11star.png";
+        this.star="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/11-11star2.png";
+        this.lightstar="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/11-11star.png";
       }else if(this.unit==='Holidays'){
-        this.star="http://107.150.121.34/monkeytownHK/image/img/12-12star2.png";
-        this.lightstar="http://107.150.121.34/monkeytownHK/image/img/12-12star.png";
+        this.star="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/12-12star2.png";
+        this.lightstar="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/12-12star.png";
       }else if(this.unit==="Meal Time"){
-        this.star="http://107.150.121.34/monkeytownHK/image/img/1-1star2.png";
-        this.lightstar="http://107.150.121.34/monkeytownHK/image/img/1-1star.png";
+        this.star="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/1-1star2.png";
+        this.lightstar="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/1-1star.png";
       }else if(this.unit==='On the Farm'){
-        this.star="http://107.150.121.34/monkeytownHK/image/img/2-2star2.png";
-        this.lightstar="http://107.150.121.34/monkeytownHK/image/img/2-2star.png";
+        this.star="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/2-2star2.png";
+        this.lightstar="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/2-2star.png";
       }
 
         this.$axios.post(this.url, qs.stringify({

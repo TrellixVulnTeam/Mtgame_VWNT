@@ -12,7 +12,7 @@
     <div  style="width: 100%;height: 100%;">
       <!-- <div  id="ifameid" > -->
       <!-- <img id="backimg" src="http://monkeytown.monkeytree.com.hk/image/redback.png" @click="backmemu()" style="position: absolute; display: block; width: 5%;top: 10px;left: 10px;z-index: 3;"/> -->
-      <!-- <iframe id="iframes" name="ifr1" src="http://103.218.241.33/mtgameweb/Game-flow/fruit-link-up/index.html" height="100%" width="100%" scrolling="auto" ></iframe> -->
+      <!-- <iframe id="iframes" name="ifr1" src="http://monkeytown.monkeytree.com.hk/Game-flow/fruit-link-up/index.html" height="100%" width="100%" scrolling="auto" ></iframe> -->
       <!-- </div> -->
       <div style="width: 100%;height: 100%;position: relative;">
         <img src="../../assets/image/menubg.png" style="width: inherit;height: inherit;" />
@@ -120,7 +120,7 @@
       //              alertiframe.style.width = "100%";
       //             alertiframe.style.height = "100%";
       //               alertiframe.style.zIndex = "3";
-      //             var strHtml =  "<img src='http://103.218.241.33/mtgameweb/Game-flow/img/cloce.png' onclick='closeGame()' style='position: absolute;width: 4%;right: 0'><iframe name='ifr1' id='iframes' src='http://103.218.241.33/mtgameweb/Game-flow/fruit-link-up/index.html' scrolling='auto'></iframe>" ;
+      //             var strHtml =  "<img src='http://monkeytown.monkeytree.com.hk/Game-flow/img/cloce.png' onclick='closeGame()' style='position: absolute;width: 4%;right: 0'><iframe name='ifr1' id='iframes' src='http://monkeytown.monkeytree.com.hk/Game-flow/fruit-link-up/index.html' scrolling='auto'></iframe>" ;
       //              alertiframe.innerHTML = strHtml;
       //              	document.getElementById("ifameid").appendChild(alertiframe);
       //

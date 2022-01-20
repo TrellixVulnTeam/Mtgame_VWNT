@@ -49,7 +49,7 @@
               </div>
               <div class="buttons" id="imgBox">
                 <button v-for="(li,index) in list1" :key="li.id" class="item listitems imgsty"
-                        v-bind:class="{changeopcily:li.fail,changetranform:li.successful,marginl:index===0}"
+                        v-bind:class="{changeopcily:li.fail,changetranform:li.successful,marginl:index===0,shake:li.redsuccess}"
                         @click="answer(li)">
                   <span class="listgroup"
                         v-bind:class="{ bluefont:li.bluesuccess,pinkfont:li.redsuccess}">{{li.letter_name}}</span>
@@ -459,11 +459,7 @@
       localStorage.setItem('gamename', this.gamename);
       var timestamp = (new Date()).getTime();
       // localStorage.setItem('startTimeid',timestamp);
-      if (localStorage.getItem('gamemusic') == "false") {
-        this.show = false;
-      } else {
-        this.show = true;
-      }
+      this.show = localStorage.getItem('gamemusic') !== "false";
       this.$axios.post(this.url, qs.stringify({
         menuId: this.menuId,
         num: 21
@@ -561,10 +557,65 @@
     display: inline-block;
   }
 
-  /*.rightbox1 {*/
-  /*// margin-left: -5%;*/
-  /*}*/
+  .shake {
+    animation: myPlay 0.6s infinite alternate;
+    animation-timing-function: linear;
+    animation-iteration-count: 3;
 
+    -webkit-animation: myPlay 0.6s infinite alternate;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: 3;
+
+    -moz-animation: myPlay 0.6s infinite alternate;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: 3;
+
+    -o-animation: myPlay 0.6s infinite alternate;
+    -o-animation-timing-function: linear;
+    -o-animation-iteration-count: 3;
+  }
+
+  @keyframes myPlay {
+    0% {
+      right: 1.5%;
+    }
+
+    50% {
+      left: 1.5%;
+    }
+
+    100% {
+      right: 1.5%;
+    }
+  }
+
+  @-webkit-keyframes myPlay {
+    0% {
+      right: 1.5%;
+    }
+
+    50% {
+      left: 1.5%;
+    }
+
+    100% {
+      right: 1.5%;
+    }
+  }
+
+  @-moz-keyframes myPlay {
+    0% {
+      right: 1.5%;
+    }
+
+    50% {
+      left: 1.5%;
+    }
+
+    100% {
+      right: 1.5%;
+    }
+  }
 
   .wordstyle {
     font-size: 3rem;
@@ -601,7 +652,7 @@
   .advanced1 {
     width: 100%;
     height: 100%;
-    /*background-image: url("http://107.150.121.34/monkeytownHK/image/img/interbg.png");*/
+    /*background-image: url("http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/interbg.png");*/
     /*background-color: #204900;*/
     /*background-position: center;*/
     /*background-repeat: no-repeat;*/
@@ -719,7 +770,7 @@
     position: relative;
     background: none;
     background-image: url("../../assets/image/advpen.png");
-    /*background-image: url(http://107.150.121.34/monkeytownHK/image/img/egg.png);*/
+    /*background-image: url(http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/egg.png);*/
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -1363,7 +1414,7 @@
       font-size: x-large;
       max-height: 80%;
       min-height: 50%;
-      margin-left: 4%;
+      margin-left: 8%;
       transform: scale(1.6);
     }
 
