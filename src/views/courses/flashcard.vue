@@ -1222,62 +1222,62 @@
           {
             id:1,
             cardName:'barn',
-            audio:require('../../assets/Flashcard Audio/december/stocking.mp3'),
+            audio:require('../../assets/Flashcard Audio/february/Barn.mp3'),
             img:require('../../assets/image/In the barn/barn.png')
           },{
             id:2,
             cardName:'hay',
-            audio:require('../../assets/Flashcard Audio/december/sleigh.mp3'),
+            audio:require('../../assets/Flashcard Audio/february/Hay.mp3'),
             img:require('../../assets/image/In the barn/hay.png')
           },{
             id:3,
             cardName:'duck',
-            audio:require('../../assets/Flashcard Audio/december/reindeer.mp3'),
+            audio:require('../../assets/Flashcard Audio/february/Duck.mp3'),
             img:require('../../assets/image/In the barn/duck.png')
           },{
             id:4,
             cardName:'egg',
-            audio:require('../../assets/Flashcard Audio/december/bells.mp3'),
+            audio:require('../../assets/Flashcard Audio/february/Egg.mp3'),
             img:require('../../assets/image/In the barn/egg.png')
           },{
             id:5,
             cardName:'hen',
-            audio:require('../../assets/Flashcard Audio/december/Santa claus.mp3'),
+            audio:require('../../assets/Flashcard Audio/february/Hen.mp3'),
             img:require('../../assets/image/In the barn/hen.png')
           },{
             id:6,
             cardName:'feed',
-            audio:require('../../assets/Flashcard Audio/december/elf.mp3'),
+            audio:require('../../assets/Flashcard Audio/february/Feed.mp3'),
             img:require('../../assets/image/In the barn/feed.png')
           },{
             id:7,
             cardName:'crow',
-            audio:require('../../assets/Flashcard Audio/december/elf.mp3'),
+            audio:require('../../assets/Flashcard Audio/february/Crow.mp3'),
             img:require('../../assets/image/In the barn/crow.png')
           },{
             id:8,
             cardName:'sheep',
-            audio:require('../../assets/Flashcard Audio/december/elf.mp3'),
+            audio:require('../../assets/Flashcard Audio/february/Sheep.mp3'),
             img:require('../../assets/image/In the barn/sheep.png')
           },{
             id:9,
             cardName:'bucket',
-            audio:require('../../assets/Flashcard Audio/december/stocking.mp3'),
+            audio:require('../../assets/Flashcard Audio/february/Bucket.mp3'),
             img:require('../../assets/image/In the barn/bucket.png')
           },{
             id:10,
             cardName:'rooster',
-            audio:require('../../assets/Flashcard Audio/december/sleigh.mp3'),
+            audio:require('../../assets/Flashcard Audio/february/Rooster.mp3'),
             img:require('../../assets/image/In the barn/rooster.png')
           },{
             id:11,
             cardName:'chick',
-            audio:require('../../assets/Flashcard Audio/december/reindeer.mp3'),
+            audio:require('../../assets/Flashcard Audio/february/Chick.mp3'),
             img:require('../../assets/image/In the barn/chick.png')
           },{
             id:12,
             cardName:'cow',
-            audio:require('../../assets/Flashcard Audio/december/bells.mp3'),
+            audio:require('../../assets/Flashcard Audio/february/Cow.mp3'),
             img:require('../../assets/image/In the barn/cow.png')
           }
         ],
@@ -1285,62 +1285,62 @@
           {
             id:1,
             cardName:'tractor',
-            audio:require('../../assets/Flashcard Audio/december/stocking.mp3'),
+            audio:require('../../assets/Flashcard Audio/february/Tractor.mp3'),
             img:require('..'+'/../assets/image/In the field/tractor.png')
           },{
             id:2,
             cardName:'plough',
-            audio:require('../../assets/Flashcard Audio/december/sleigh.mp3'),
+            audio:require('../../assets/Flashcard Audio/february/Plough.mp3'),
             img:require('../../assets/image/In the field/plough.png')
           },{
             id:3,
             cardName:'pig',
-            audio:require('../../assets/Flashcard Audio/december/reindeer.mp3'),
+            audio:require('../../assets/Flashcard Audio/february/Pig.mp3'),
             img:require('../../assets/image/In the field/pig.png')
           },{
             id:4,
             cardName:'apple',
-            audio:require('../../assets/Flashcard Audio/december/bells.mp3'),
+            audio:require('../../assets/Flashcard Audio/february/Apple.mp3'),
             img:require('../../assets/image/In the field/apple.png')
           },{
             id:5,
             cardName:'tree',
-            audio:require('../../assets/Flashcard Audio/december/Santa claus.mp3'),
+            audio:require('../../assets/Flashcard Audio/february/Tree.mp3'),
             img:require('../../assets/image/In the field/tree.png')
           },{
             id:6,
             cardName:'farmer',
-            audio:require('../../assets/Flashcard Audio/december/elf.mp3'),
+            audio:require('../../assets/Flashcard Audio/february/Farmer.mp3'),
             img:require('../../assets/image/In the field/farmer.png')
           },{
             id:7,
             cardName:'gallop',
-            audio:require('../../assets/Flashcard Audio/december/elf.mp3'),
+            audio:require('../../assets/Flashcard Audio/february/Gallop.mp3'),
             img:require('../../assets/image/In the field/gallop.png')
           },{
             id:8,
             cardName:'horse',
-            audio:require('../../assets/Flashcard Audio/december/elf.mp3'),
+            audio:require('../../assets/Flashcard Audio/february/Horse.mp3'),
             img:require('../../assets/image/In the field/horse.png')
           },{
             id:9,
             cardName:'plants',
-            audio:require('../../assets/Flashcard Audio/december/stocking.mp3'),
+            audio:require('../../assets/Flashcard Audio/february/Plant.mp3'),
             img:require('../../assets/image/In the field/plants.png')
           },{
             id:10,
             cardName:'roll',
-            audio:require('../../assets/Flashcard Audio/december/sleigh.mp3'),
+            audio:require('../../assets/Flashcard Audio/february/Roll.mp3'),
             img:require('../../assets/image/In the field/roll.png')
           },{
             id:11,
             cardName:'pick',
-            audio:require('../../assets/Flashcard Audio/december/reindeer.mp3'),
+            audio:require('../../assets/Flashcard Audio/february/Pick.mp3'),
             img:require('../../assets/image/In the field/pick.png')
           },{
             id:12,
             cardName:'fence',
-            audio:require('../../assets/Flashcard Audio/december/bells.mp3'),
+            audio:require('../../assets/Flashcard Audio/february/Fence.mp3'),
             img:require('../../assets/image/In the field/fence.png')
           }
         ],

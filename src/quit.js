@@ -92,7 +92,7 @@ window.alertMsg = function (txt) {
         alertFram.style.textAlign = "center";
         alertFram.style.top = 0;
         // alertFram.style.background = "blank";
-		// alertFram.style.color = "white";
+		    // alertFram.style.color = "white";
         alertFram.style.zIndex = "10001";
         strHtml =  "<div style='width:50%;height:50%;margin:0 auto;margin-top:15%;position: relative;background-color:white;border-radius:20px;color:black;'><h2 style='width:100%;font-family: pepper;padding:10px 0;'>Network Required</h2><p style='width:90%;font-family: pepper;height:40%;margin:5%;top:20%;position:absolute;'>"
 		+txt+"</p><button style='width:90%;height:40px;margin:5%;border:none;border-radius:10px;bottom: 0; position: absolute;left: 0;color:white;background-color:#48C0F0;' onclick='test()'>OK</button></div>" ;
@@ -149,16 +149,17 @@ window.alertMsg3 = function (txt) {
   alertFram.style.position = "absolute";
   alertFram.style.width = "100%";
   alertFram.style.height = "100%";
+  alertFram.style.top = "0"
   alertFram.style.display = "block";
   alertFram.style.textAlign = "center";
-  alertFram.style.top = 0;
-  // alertFram.style.background = "blank";
-  // alertFram.style.color = "white";
+   //alertFram.style.background = "black";
+   //alertFram.style.color = "white";
   alertFram.style.zIndex = "10001";
    strHtml =  "<div style='width:24%;padding:10px 0;left: 50%;transform: translateX(-50%);bottom: 15%;position: absolute;background-color:white;border-radius:10px;color:black;'> <button style='width:100%;font-family: pepper;font-size: 0.8rem;height:100%;color: red; border: none;background: none;'>"
      +txt+"</button></div>" ;
   alertFram.innerHTML = strHtml;
-  document.body.appendChild(alertFram);
+  let app=document.getElementById('app');
+  app.appendChild(alertFram);
   setTimeout((function () {
       alertFram.style.display = "none";
   }), 1500)
@@ -219,8 +220,6 @@ window.alertiframe2=function(){
        alertiframe.innerHTML = strHtml;
        console.log(document.getElementById("ifameid"));
        	document.getElementById("ifameid").appendChild(alertiframe);
-
-
 }
 window.alertiframe1=function(){
 

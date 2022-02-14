@@ -38,25 +38,25 @@
           <img @click="change3" src="../assets/image/inter31.png" style="position: sticky;height: 50%;margin-top: 28%;margin-left: 3%">
         </div>
 <!--        yes or no-->
-        <div class="listimg">
-          <img :src=lightstar class="imgposit" v-if="stars[3].onestart">
-          <img :src=star class="imgposit" v-if="!stars[3].onestart">
-          <img :src=lightstar style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="stars[3].twostart">
-          <img :src=star style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="!stars[3].twostart">
-          <img :src=lightstar class="imgposit1" v-if="stars[3].threestart">
-          <img :src=star class="imgposit1" v-if="!stars[3].threestart">
-          <img @click="change4" src="../assets/image/inter41.png" style="position: sticky;height: 50%;margin-top: 30%;margin-left: 4%">
-        </div>
+<!--        <div class="listimg">-->
+<!--          <img :src=lightstar class="imgposit" v-if="stars[3].onestart">-->
+<!--          <img :src=star class="imgposit" v-if="!stars[3].onestart">-->
+<!--          <img :src=lightstar style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="stars[3].twostart">-->
+<!--          <img :src=star style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="!stars[3].twostart">-->
+<!--          <img :src=lightstar class="imgposit1" v-if="stars[3].threestart">-->
+<!--          <img :src=star class="imgposit1" v-if="!stars[3].threestart">-->
+<!--          <img @click="change4" src="../assets/image/inter41.png" style="position: sticky;height: 50%;margin-top: 30%;margin-left: 4%">-->
+<!--        </div>-->
 <!--        letter scrabble-->
-        <div class="listimg">
-          <img :src=lightstar class="imgposit" v-if="stars[4].onestart">
-          <img :src=star class="imgposit" v-if="!stars[4].onestart">
-          <img :src=lightstar style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="stars[4].twostart">
-          <img :src=star style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="!stars[4].twostart">
-          <img :src=lightstar class="imgposit1" v-if="stars[4].threestart">
-          <img :src=star class="imgposit1" v-if="!stars[4].threestart">
-          <img @click="change5" src="../assets/image/inter51.png" style="position: sticky;height: 50%;margin-top: 30%;margin-left: 3%">
-        </div>
+<!--        <div class="listimg">-->
+<!--          <img :src=lightstar class="imgposit" v-if="stars[4].onestart">-->
+<!--          <img :src=star class="imgposit" v-if="!stars[4].onestart">-->
+<!--          <img :src=lightstar style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="stars[4].twostart">-->
+<!--          <img :src=star style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="!stars[4].twostart">-->
+<!--          <img :src=lightstar class="imgposit1" v-if="stars[4].threestart">-->
+<!--          <img :src=star class="imgposit1" v-if="!stars[4].threestart">-->
+<!--          <img @click="change5" src="../assets/image/inter51.png" style="position: sticky;height: 50%;margin-top: 30%;margin-left: 3%">-->
+<!--        </div>-->
 <!--        circle the sound-->
         <div class="listimg">
           <img :src=lightstar class="imgposit" v-if="stars[5].onestart">
@@ -68,15 +68,15 @@
           <img @click="change6" src="../assets/image/inter61.png" style="position: sticky;height: 50%;margin-top: 30%;margin-left: 3%">
         </div>
 <!--        odd word out收-->
-        <div class="listimg">
-          <img :src=lightstar class="imgposit" v-if="stars[6].onestart">
-          <img :src=star class="imgposit" v-if="!stars[6].onestart">
-          <img :src=lightstar style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="stars[6].twostart">
-          <img :src=star style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="!stars[6].twostart">
-          <img :src=lightstar class="imgposit1" v-if="stars[6].threestart">
-          <img :src=star class="imgposit1" v-if="!stars[6].threestart">
-          <img @click="change7" src="../assets/image/inter71.png" style="position: sticky;height: 50%;margin-top: 30%;margin-left: 3%">
-        </div>
+<!--        <div class="listimg">-->
+<!--          <img :src=lightstar class="imgposit" v-if="stars[6].onestart">-->
+<!--          <img :src=star class="imgposit" v-if="!stars[6].onestart">-->
+<!--          <img :src=lightstar style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="stars[6].twostart">-->
+<!--          <img :src=star style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="!stars[6].twostart">-->
+<!--          <img :src=lightstar class="imgposit1" v-if="stars[6].threestart">-->
+<!--          <img :src=star class="imgposit1" v-if="!stars[6].threestart">-->
+<!--          <img @click="change7" src="../assets/image/inter71.png" style="position: sticky;height: 50%;margin-top: 30%;margin-left: 3%">-->
+<!--        </div>-->
         <div class="listimg">
           <img :src=lightstar class="imgposit" v-if="stars[7].onestart">
           <img :src=star class="imgposit" v-if="!stars[7].onestart">
@@ -145,12 +145,12 @@
         </div>
         <button class="animapng7">
           <img src="http://monkeytown.monkeytree.com.hk/image/advanced1.gif" v-if="changei1">
-          <img src="http://monkeytown.monkeytree.com.hk/image/advanced2.gif" v-if="changei2">
+          <img src="http://monkeytown.monkeytree.com.hk/image/advanced2s.gif" v-if="changei2">
           <img style="margin-top: 5%;" src="http://monkeytown.monkeytree.com.hk/image/advanced3.gif" v-if="changei3">
-          <img src="http://monkeytown.monkeytree.com.hk/image/advanced4.gif" v-if="changei4">
+          <img src="http://monkeytown.monkeytree.com.hk/image/advanced4s.gif" v-if="changei4">
           <img src="http://monkeytown.monkeytree.com.hk/image/advanced5.gif" v-if="changei5">
           <img src="http://monkeytown.monkeytree.com.hk/image/advanced6.gif" v-if="changei6">
-          <img src="http://monkeytown.monkeytree.com.hk/image/advanced7.gif" v-if="changei7">
+          <img src="http://monkeytown.monkeytree.com.hk/image/advanced7s.gif" v-if="changei7">
           <img src="http://monkeytown.monkeytree.com.hk/image/advanced8.gif" v-if="changei8">
           <img src="http://monkeytown.monkeytree.com.hk/image/advanced9.gif" v-if="changei9">
           <img src="http://monkeytown.monkeytree.com.hk/image/advanced10.gif" v-if="changei10">

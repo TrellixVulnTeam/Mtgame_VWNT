@@ -1908,11 +1908,10 @@
         <img src="../../assets/image/202002H5 In the barn_MT/GIF_PNG/gif/hay.gif" style="z-index: 100" v-if="!hay"
              @click="showGif('hay')">
       </div>
-<!--      <div class="hen">-->
-<!--        <img src="../../assets/image/202002H5 In the barn_MT/GIF_PNG/png/hen.png" v-if="hen" @click="showGif('hen')">-->
-<!--        <img src="../../assets/image/202002H5 In the barn_MT/GIF_PNG/gif/hen.gif" style="z-index: 100" v-if="!hen"-->
-<!--             @click="showGif('hen')">-->
-<!--      </div>-->
+      <div class="hen">
+        <img src="../../assets/image/202002H5 In the barn_MT/GIF_PNG/gif/hen.gif" style="z-index: 100" v-if="!hen"
+             @click="showGif('hen')">
+      </div>
       <div class="rooster">
         <img src="../../assets/image/202002H5 In the barn_MT/GIF_PNG/png/rooster.png" v-if="rooster" @click="walkers&&showGif('rooster')">
         <img src="../../assets/image/202002H5 In the barn_MT/GIF_PNG/gif/rooster.gif" style="z-index: 100" v-if="!rooster"
@@ -2420,6 +2419,31 @@ export default {
           juice:require('../../assets/Flashcard Audio/january/Juice (runners).mp3'),
           noodles:require('../../assets/Flashcard Audio/january/Noodles (runners).mp3'),
           burger:require('../../assets/Flashcard Audio/january/Burger (runners).mp3'),
+          //february
+          apple:require('../../assets/Flashcard Audio/february/Apple.mp3'),
+          barn:require('../../assets/Flashcard Audio/february/Barn.mp3'),
+          bucket:require('../../assets/Flashcard Audio/february/Bucket.mp3'),
+          chick:require('../../assets/Flashcard Audio/february/Chick.mp3'),
+          cow:require('../../assets/Flashcard Audio/february/Cow.mp3'),
+          crow:require('../../assets/Flashcard Audio/february/Crow.mp3'),
+          duck:require('../../assets/Flashcard Audio/february/Duck.mp3'),
+          egg:require('../../assets/Flashcard Audio/february/Egg.mp3'),
+          farmer:require('../../assets/Flashcard Audio/february/Farmer.mp3'),
+          feed1:require('../../assets/Flashcard Audio/february/Feed.mp3'),
+          fence:require('../../assets/Flashcard Audio/february/Fence.mp3'),
+          gallop:require('../../assets/Flashcard Audio/february/Gallop.mp3'),
+          hay:require('../../assets/Flashcard Audio/february/Hay.mp3'),
+          hen:require('../../assets/Flashcard Audio/february/Hen.mp3'),
+          horse1:require('../../assets/Flashcard Audio/february/Horse.mp3'),
+          pick:require('../../assets/Flashcard Audio/february/Pick.mp3'),
+          pig:require('../../assets/Flashcard Audio/february/Pig.mp3'),
+          plants:require('../../assets/Flashcard Audio/february/Plant.mp3'),
+          plough:require('../../assets/Flashcard Audio/february/Plough.mp3'),
+          roll:require('../../assets/Flashcard Audio/february/Roll.mp3'),
+          rooster:require('../../assets/Flashcard Audio/february/Rooster.mp3'),
+          sheep:require('../../assets/Flashcard Audio/february/Sheep.mp3'),
+          tractor:require('../../assets/Flashcard Audio/february/Tractor.mp3'),
+          tree:require('../../assets/Flashcard Audio/february/Tree.mp3'),
         },
         cardType:'default',
         barn:true,
@@ -2992,6 +3016,8 @@ export default {
     position: absolute;
   }
 
+
+
   .barn img {
     width: 48%;
     left: 7%;
@@ -3043,10 +3069,10 @@ export default {
     top: 33%;
     position: absolute;
   }
-  .hen img {
-    width: 26%;
-    left: 46%;
-    top: -12%;
+  .hen img{
+    width: 16%;
+    left: 24%;
+    top: 69%;
     position: absolute;
   }
   .rooster img {
@@ -7550,6 +7576,13 @@ export default {
   @media only screen and (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 3) ,
   (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 812px) and (max-width: 1023px){
+    .hen img {
+      width: 16.5%;
+      height: 30%;
+      left: 24%;
+      top: 69%;
+      position: absolute;
+    }
     .hayButton img {
       top: 35%;
     }
@@ -9761,6 +9794,12 @@ export default {
   @media only screen and (min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 1024px) and (max-width: 1600px){
+    .hen img {
+      width: 16%;
+      left: 24%;
+      top: 75%;
+      position: absolute;
+    }
     .roosterButton img {
       width: 6%;
       left: 38%;

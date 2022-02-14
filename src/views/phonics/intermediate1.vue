@@ -26,7 +26,7 @@
               <source src="../../assets/video/correct.mp3" ></audio>
             <div class="topbox" v-if="!reload">
               <button class="textsize">
-                <span>Does this word make the <span style="color: #f42a64">{{titname}}</span> sound?</span>
+                <span>Does this word make a <span style="color: #f42a64">{{titname}}</span> sound?</span>
                 <!--<audio   ref="videos"   autoplay="autoplay" :src="audio1">-->
                  <!--</audio>-->
                 <audio  @canplay="getDuration"   ref="videos" id="videos" autoplay="autoplay" :src="audio1"></audio>

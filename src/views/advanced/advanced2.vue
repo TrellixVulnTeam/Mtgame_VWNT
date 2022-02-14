@@ -4,7 +4,7 @@
       <audio autoplay="autoplay" loop="loop" ref="MusicPlay" v-if="show" id="partmusic">
         <source src="../../assets/video/gamemusic.mp3"></audio>
     </span>
-    <img src="../../assets/image/advancebg2.png" style="width: 100%; z-index: -1;  height: 100%;display:block;position: absolute;">
+    <img src="../../assets/image/advancebg2s.png" style="width: 100%; z-index: -1;  height: 100%;display:block;position: absolute;">
 
     <transition name="fades">
       <div class="contain" v-show="!resume">
@@ -46,8 +46,6 @@
                   <img :src=list1[2].bg class="bgstyle">
                   <audio id="show3s" ref="show3s" :src="this.list1[2].audio"></audio>
                 </button>
-
-
               </div>
               <canvas id="canvas" style="position: absolute;left:0;top:0%;z-index: 99;width: 100%;height: 100%;"
                       @click="xy($event)"  @mousedown="canvasDown($event)" @mouseup="canvasUp($event)" @mousemove="canvasMove($event)"
@@ -71,7 +69,6 @@
         </div>
       </div>
     </transition>
-
     <div class='popContainer' v-show="popp">
       <p class="spanp spanp1">{{spanp}}</p>
       <button class="roleimg">
@@ -145,7 +142,6 @@
               };
               this.centerP.push(coreP);
             }
-            console.log(this.centerP);
             this.canvasObj = canvas;
             this.canvasH = imgBox.clientHeight; // 存储canvas的高度，用于清空画布
             canvas.width = imgBox.clientWidth; // 动态赋值canvas的宽度
@@ -156,10 +152,9 @@
         }
       },
       'video': function(newVal) {
-        if (this.video == true) {
-          // setTimeout(() => {
-          //   this.video = false;
-          // },4000);
+        console.log('videos');
+        if (this.video === true) {
+          console.log(this.$refs);
           this.$refs.videos.play();
           this.video =false;
         }
@@ -301,10 +296,8 @@
         let flag = false;
         return flag;
       },
-
       // 在canvas中鼠标按下
       canvasDown(e) {
-        //console.log(e);
         if(e.touches && e.touches.length==1){
           this.canvasMoveUse = true;
           const t = e.target;
@@ -314,7 +307,6 @@
           // if(this.isPc()) {
           canvasX = e.clientX - t.parentNode.offsetLeft;
           canvasY = e.clientY - t.parentNode.offsetTop;
-
           this.context.beginPath();
           this.context.moveTo(canvasX, canvasY);
           this.context.stroke();
@@ -322,7 +314,6 @@
           this.canvasMoveUse = false;
           return;
         }
-
       },
       canvasMove(e) {
         //console.log(e);
@@ -338,7 +329,7 @@
           } else {
             canvasX = e.changedTouches[0].clientX - t.parentNode.offsetLeft;
             canvasY = e.changedTouches[0].clientY - t.parentNode.offsetTop;
-          };
+          }
           // 连接到移动的位置并上色
           this.context.lineTo(canvasX, canvasY);
           this.context.stroke();
@@ -351,43 +342,40 @@
         let successIndex;
         let anwserList = []; // 用于判断答题时圈中了几个选项
         let imgsty = document.getElementsByClassName('imgsty');
-
         this.centerP.forEach((item, index) => {
           if (this.context.isPointInPath(item.corePx, item.corePy)) { // 获取答题选项下标
             anwserIndex = index;
-          };
-
+          }
+          //判断是否选中答案
           if (this.context.isPointInPath(item.corePx, item.corePy)) {
             isSelect = true;
             anwserList.push(item);
-          };
+          }
         });
-
         for(var i=0;i<this.list1.length;i++){
-          // var score=this.list1[i].score;
           if (this.list1[i].score==='1') { // 获取正确选项下标
             successIndex = i;
+            console.log(i);
           }
         }
         if (!isSelect) { // 没有选中
           this.canvasObj.height = this.canvasH;
           this.setCanvasStyle();
         } else {
-
           if (anwserList.length === 1) { // 答题时只有圈中一个选项才能进行判断
             this.zhezhao=true;
             this.space=this.list1[anwserIndex].name;
+            console.log(this.list1[anwserIndex].score);
             if (this.list1[anwserIndex].score==='1') {
               /*回答正确在这里写效果*/
               this.canvasObj.height = this.canvasH;
               this.list1[anwserIndex].bluesuccess=1;
               this.changecolor=true;
               this.showstart = true;
-
               this.account += 1;
               this.soundscorrect=true;
               //console.log(this.listB.length);
-              if (this.countpage == this.listF.length) {
+              if (this.countpage === this.listF.length) {
                 setTimeout(() => {
                   this.showstart = false;
                   this.soundscorrect = false;
@@ -411,7 +399,6 @@
                   this.showstart = false;
                   this.soundscorrect = false;
                   this.changecolor=false;
-
                   this.onef = true;
                   this.list1[anwserIndex].bluesuccess=0;
                   this.space="__";
@@ -421,12 +408,12 @@
               }
 
             } else {
+              console.log('bj');
               /*回答错误在这里写效果*/
               this.soundsWrong=true;
               this.list1[anwserIndex].redsuccess=1;
               this.changecolor2=true;
               this.canvasObj.height = this.canvasH;
-
               setTimeout(() => {
                 this.soundsWrong=false;
                 this.list1[anwserIndex].redsuccess=0;
@@ -501,7 +488,6 @@
           }
           // }, 1000);
         }
-
       },
       pop() {
         this.popp = !this.popp;
@@ -561,7 +547,6 @@
       window.removeEventListener('popstate',this.gomemu,false);
     },
     created() { //生命周期里接收参数
-      console.log(this.$route.query.menuId);
       this.pic = this.$axios.defaults.baseURL2;
       this.unit = this.$route.query.unit;
       this.unitsId = this.$route.query.unitsId;
@@ -570,7 +555,7 @@
       localStorage.setItem('gamename',this.gamename);
       var timestamp = (new Date()).getTime();
       // localStorage.setItem('startTimeid',timestamp);
-      if(localStorage.getItem('gamemusic')=="false"){
+      if(localStorage.getItem('gamemusic')==="false"){
         this.show=false;
       }else{
         this.show=true;
@@ -579,6 +564,7 @@
         menuId: this.menuId,
         num:30
       })).then(res => {
+        console.log(res.data.maps);
         for (let i in res.data.maps) {
           this.listF.push(res.data.maps[i]); //属性
         }
@@ -601,6 +587,7 @@
           if(this.list1[l].score=="1"){
             this.audio =  this.list1[l].audio;
           }
+          console.log(this.audio);
         }
         if (this.onef == true) {
           this.showNum = true;
@@ -894,11 +881,12 @@
     top: 15px;
   }
   .title{
-    bottom: 10%;
+    bottom: 75%;
     position: absolute;
     font-size: 4rem;
     color: white;
-    left: 15%;
+    left: 50%;
+    transform:translateX(-50%);
     font-family: 'pepper';
   }
   .bgstyle{
@@ -1098,14 +1086,17 @@
   (min-device-height: 1366px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 2) ,
   (min-device-height: 1366px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 3){
     .buttons {
-      top: -10%;
+      top: 5%;
     }
-    .title {
-      bottom: 6%;
+    .title{
+      bottom: 67%;
       position: absolute;
       font-size: 3rem;
       color: white;
-      left: 15%;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+      font-family: 'pepper';
     }
     .bgstyle {
       width: 60%;
@@ -1135,7 +1126,11 @@
   (min-device-height: 1366px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 2) ,
   (min-device-height: 1366px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 3){
     .buttons{
-      top: -5%;
+      top: 15%;
+    }
+    .title {
+      bottom: 65%;
+      font-size: 4rem;
     }
     .bgstyle {
       width: 60%;
@@ -1185,8 +1180,12 @@
         width: auto;
       }
     }
+    .title {
+      bottom: 65%;
+      font-size: 8rem;
+    }
     .buttons{
-      margin-top: 15%;
+      margin-top: 25%;
     }
     .listitems1{
       height: 15rem;
@@ -1291,7 +1290,11 @@
       font-size: 4.5rem;
     }
     .buttons{
-      margin-top: 15%;
+      margin-top: 25%;
+    }
+    .title {
+      bottom: 65%;
+      font-size: 8rem;
     }
     .listitems1{
       height: 20rem;
@@ -1393,8 +1396,12 @@
     .withcolor {
       height: 70%;
     }
+    .title{
+      bottom: 65%;
+      font-size: 4rem;
+    }
     .buttons{
-      margin-top: 8%;
+      margin-top: 15%;
     }
     .bgstyle {
       width: 50%;
@@ -1420,7 +1427,10 @@
       }
     }
 
-
+    .title {
+      bottom: 65%;
+      font-size: 4rem;
+    }
     .start2 {
       top: -25%;
     }
@@ -1429,7 +1439,7 @@
       height: 70%;
     }
     .buttons{
-      margin-top: 9%;
+      margin-top: 15%;
     }
     .bgstyle {
       width: 50%;
@@ -1489,7 +1499,7 @@
       font-size: 7.5rem;
     }
     .buttons{
-      margin-top: 0;
+      margin-top: 120px;
     }
     .listitems1{
       height: 40rem;

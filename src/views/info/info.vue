@@ -359,7 +359,7 @@
                   <img src="../../assets/image/beginner.png" @click="pnext2(li)" style="width: 100%;" v-if="index==0">
                   <img src="../../assets/image/intermediate.png" @click="pnext21(li)" style="width: 100%;"
                        v-if="index==1">
-                  <img src="../../assets/image/advance.png" style="width: 100%;" v-if="index==2">
+                  <img src="../../assets/image/advance.png" style="width: 100%;" @click="pnext22(li)" v-if="index==2">
                   <!--<div class="progress" >-->
                   <img src="../../assets/image/completed.png" v-if="li.complete"
                        style="width: 80%;margin: 0 10%;z-index: 2;bottom:-6%;position: absolute;left:0;">
@@ -371,7 +371,7 @@
                     <img src="../../assets/image/golden.png" class="chamgold"/>
                     <button class="percent2">{{li.percent}}</button>
                   </div>
-                  <img v-if="index==2" src="../../assets/image/coming-soon1.png">
+<!--                  <img v-if="index==2" src="../../assets/image/coming-soon1.png">-->
 <!--                       style="width: 80%;margin: 0 10%;z-index: 2;bottom:-6%;position: absolute;display: inline;float: left;left: 0;">-->
                 </div>
               </div>
@@ -1258,6 +1258,27 @@
           alertMsg("You must be connected to the internet.<br>Please connect and try again.");
         })
       },
+      pnext22(li) {
+        this.page2 = true;
+        this.opciay2 = true;
+        this.opciay1 = false;
+        this.opciay3 = false;
+        this.opciay4 = false;
+        this.opciay6 = false;
+        this.ifboss1 = false;
+        this.ifboss2 = false;
+        this.purl2 = this.url + "PhonicsDetail3";
+        this.phonicsId = li.id;
+        this.level = li.name;
+        this.$axios.post(this.purl2, qs.stringify({
+          studentId: localStorage.getItem('studentId'),
+          phonicsId: this.phonicsId
+        })).then(res => {
+          this.phonicsDetailList = res.data.phonicsDetailList;
+        }, res => {
+          alertMsg("You must be connected to the internet.<br>Please connect and try again.");
+        })
+      },
       pnext3(li) {
         this.page3 = true;
         this.opciay3 = true;
@@ -1273,6 +1294,8 @@
           this.purl3 = this.url + "PhonicsMenu";
         } else if (this.level === "Intermediate") {
           this.purl3 = this.url + "PhonicsMenu2";
+        }else if (this.level === "Advanced") {
+          this.purl3 = this.url + "PhonicsMenu3";
         }
 
         this.$axios.post(this.purl3, qs.stringify({
@@ -1286,25 +1309,25 @@
 
           for (var i = 0; i < this.pmenu.length; i++) {
             this.pmenu[i].stars = [];
-            if (this.pmenu[i].sta == "0") {
+            if (this.pmenu[i].sta === "0") {
               this.pmenu[i].stars.push({
                 onestart: false,
                 twostart: false,
                 threestart: false,
               });
-            } else if (this.pmenu[i].sta == "1") {
+            } else if (this.pmenu[i].sta === "1") {
               this.pmenu[i].stars.push({
                 onestart: true,
                 twostart: false,
                 threestart: false,
               });
-            } else if (this.pmenu[i].sta == "2") {
+            } else if (this.pmenu[i].sta === "2") {
               this.pmenu[i].stars.push({
                 onestart: true,
                 twostart: true,
                 threestart: false,
               });
-            } else if (this.pmenu[i].sta == "3") {
+            } else if (this.pmenu[i].sta === "3") {
               this.pmenu[i].stars.push({
                 onestart: true,
                 twostart: true,
@@ -1312,7 +1335,6 @@
               });
             }
           }
-          // console.log(this.menu);console.log(this.stars);
         }, res => {
           alertMsg("You must be connected to the internet.<br>Please connect and try again.");
         })
@@ -2027,7 +2049,6 @@
     min-height: 50%;
     border: none;
     background: none;
-    //margin-left: 2%;
   }
 
   .leftmar {
@@ -2068,7 +2089,7 @@
     width: 12%;
     position: absolute;
     right: 8%;
-    bottom: 0%;
+    bottom: 0;
   }
 
   .backgrgreen {
@@ -2153,6 +2174,9 @@
   }
 
   @media screen and (max-width: 569px) {
+    .listimg1 {
+      height: 65px;
+    }
     .fontsize {
       bottom: 16%;
       position: absolute;
@@ -2227,9 +2251,285 @@
     .settinglist {
       height: 11%;
     }
+    .progress2{
+      height: 14px;
+    }
+    .chamgold {
+      margin-top: 0;
+    }
+    .unitnamep {
+      font-size: 0.5rem;
+    }
   }
 
-  @media screen and (min-width: 1024px) and (max-width: 1199px) {
+  @media screen and (min-device-height: 570px) and (max-device-height: 735px) and (-webkit-device-pixel-ratio: 3),
+  (min-device-height: 570px) and (max-device-height: 735px) and (-webkit-device-pixel-ratio: 2),
+  (min-width: 570px) and (max-width: 735px){
+    .progress2{
+      height: 14px;
+    }
+    .unitnamep {
+      font-size: 0.5rem;
+    }
+  }
+
+  @media screen and (min-device-height: 736px) and (max-device-height: 811px) and (-webkit-device-pixel-ratio: 3),
+  (min-device-height: 736px) and (max-device-height: 811px) and (-webkit-device-pixel-ratio: 2),
+  (min-width: 736px) and (max-width: 811px) {
+    .unitnamep {
+      font-size: 0.5rem;
+    }
+    .lefticon {
+      padding-top: 5%;
+    }
+
+    .cicleimg {
+      margin-top: 10%;
+    }
+
+    .cicleimg1 {
+      margin-top: 6%;
+    }
+
+    .levels {
+      width: 44%;
+    }
+
+    .infoimg {
+      margin-top: 7%;
+    }
+
+    .addlevels {
+      margin-top: 9%;
+    }
+
+    .withcolor {
+      top: 10%;
+    }
+    .progress2 {
+      height: 15px;
+    }
+  }
+
+  @media screen and (min-device-height: 812px) and (max-device-height: 895px) and (-webkit-device-pixel-ratio: 3),
+  (min-device-height: 812px) and (max-device-height: 895px) and (-webkit-device-pixel-ratio: 2),
+  (min-width: 812px) and (max-width: 895px) {
+    .infoimg {
+      height: 75%;
+      margin-top: 5%;
+    }
+
+    .chosedisplay {
+      // margin-top: 4%;
+    }
+
+    .addchosecourseL {
+      margin-top: 2%;
+    }
+
+    .chosecourseL {
+      //margin-top:-2%;
+    }
+
+    .cicleimg {
+      margin-top: 10%;
+    }
+
+    .cicleimg1 {
+      margin-top: 6%;
+    }
+
+    .infomesse {
+      margin-top: 9%;
+    }
+
+    .chosegamecord {
+      height: 80%;
+    }
+
+    .lefticon {
+      padding-top: 4%;
+    }
+
+    .topmemu {
+      height: 34%;
+    }
+
+    .levels {
+      width: 44%;
+    }
+
+    .blueBG {
+      width: 165px;
+      height: 50px;
+    }
+
+    .blueBG img {
+      height: 50px;
+    }
+
+    .percent {
+      top: 25%;
+    }
+    .choicephonics{
+      margin-top: 0px;
+    }
+    .infoimg1 ul {
+      height: 100%;
+    }
+
+    .addlevels {
+      margin-top: 10%;
+    }
+
+    .unitnamep {
+      font-size: 0.5rem;
+    }
+    .bluecicle {
+      border: 8px solid #007BB8;
+      height: 150px;
+      width: 150px;
+    }
+
+    .imgstyle {
+      width: 142px;
+      height: 142px;
+      border: 4px solid #0D627C;
+    }
+
+    .progress2 {
+      height: 18px;
+    }
+
+    .goldBG01 {
+      height: 15px;
+    }
+
+    .percent2 {
+      /*top: 3px;*/
+      height: 19px;
+    }
+
+    // .rightmenu{
+    // 	height:75%;
+    // }
+  }
+
+  @media screen and (min-device-height: 895px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 3),
+  (min-device-height: 895px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 2),
+  (min-width: 895px) and (max-width: 1023px) {
+    .unitnamep {
+      font-size: 1rem;
+    }
+    .infoimg {
+      height: 75%;
+      margin-top: 5%;
+    }
+
+    .chosedisplay {
+      // margin-top: 4%;
+    }
+
+    .addchosecourseL {
+      margin-top: 2%;
+    }
+
+    .chosecourseL {
+      //margin-top:-2%;
+    }
+
+    .cicleimg {
+      margin-top: 11%;
+    }
+
+    .cicleimg1 {
+      margin-top: 7%;
+    }
+
+    .infomesse {
+      margin-top: 9%;
+    }
+
+    .chosegamecord {
+      height: 80%;
+    }
+
+    .lefticon {
+      padding-top: 5%;
+    }
+
+    .addimg {
+      left: 165px;
+    }
+
+    .topmemu {
+      height: 34%;
+    }
+
+    .levels {
+      width: 44%;
+    }
+
+    .blueBG {
+      width: 165px;
+      height: 50px;
+    }
+
+    .blueBG img {
+      height: 50px;
+    }
+
+    .percent {
+      top: 25%;
+    }
+
+    .infoimg1 ul {
+      height: 100%;
+    }
+
+    .addlevels {
+      margin-top: 10%;
+    }
+
+    .withcolor {
+      top: 10%;
+    }
+    .choicephonics{
+      margin-top: 0px;
+    }
+    .bluecicle {
+      border: 8px solid #007BB8;
+      height: 150px;
+      width: 150px;
+    }
+
+    .imgstyle {
+      width: 142px;
+      height: 142px;
+      border: 4px solid #0D627C;
+    }
+
+    .progress2 {
+      height: 18px;
+    }
+
+    .goldBG01 {
+      height: 15px;
+    }
+
+    .percent2 {
+      /*top: 3px;*/
+      height: 19px;
+    }
+
+    // .rightmenu{
+    // 	height:85%;
+    // }
+  }
+
+  @media screen and (min-device-height: 1024px) and (max-device-height: 1199px) and (-webkit-device-pixel-ratio: 3),
+  (min-device-height: 1024px) and (max-device-height: 1199px) and (-webkit-device-pixel-ratio: 2),
+  (min-width: 1024px) and (max-width: 1199px) {
     .fontsize {
       bottom: 13%;
       position: absolute;
@@ -2430,11 +2730,11 @@
     }
 
     .unitnamep {
-      font-size: 2rem;
+      font-size: 1rem;
     }
 
     .progress2 {
-      height: 20px;
+      height: 25px;
     }
 
     .goldBG01 {
@@ -2453,7 +2753,9 @@
 
   }
 
-  @media screen and (min-width: 1200px) and (max-width: 1600px) {
+  @media screen and (min-device-height: 1200px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 3),
+  (min-device-height: 1200px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 2),
+  (min-width: 1200px) and (max-width: 1600px) {
     .fontsize {
       bottom: 13%;
       position: absolute;
@@ -2670,7 +2972,7 @@
     }
 
     .unitnamep {
-      font-size: 3rem;
+      font-size: 1rem;
     }
 
     .progress2 {
@@ -2691,246 +2993,6 @@
       font-size: 1.5rem;
     }
 
-  }
-
-  @media screen and (min-width: 736px) and (max-width: 811px) {
-    .lefticon {
-      padding-top: 5%;
-    }
-
-    .cicleimg {
-      margin-top: 10%;
-    }
-
-    .cicleimg1 {
-      margin-top: 6%;
-    }
-
-    .levels {
-      width: 44%;
-    }
-
-    .infoimg {
-      margin-top: 7%;
-    }
-
-    .addlevels {
-      margin-top: 9%;
-    }
-
-    .withcolor {
-      top: 10%;
-    }
-
-    // .rightmenu{
-    // 	height:80%;
-    // }
-  }
-
-  @media screen and (min-width: 812px) and (max-width: 895px) {
-    .infoimg {
-      height: 75%;
-      margin-top: 5%;
-    }
-
-    .chosedisplay {
-      // margin-top: 4%;
-    }
-
-    .addchosecourseL {
-      margin-top: 2%;
-    }
-
-    .chosecourseL {
-      //margin-top:-2%;
-    }
-
-    .cicleimg {
-      margin-top: 10%;
-    }
-
-    .cicleimg1 {
-      margin-top: 6%;
-    }
-
-    .infomesse {
-      margin-top: 9%;
-    }
-
-    .chosegamecord {
-      height: 80%;
-    }
-
-    .lefticon {
-      padding-top: 4%;
-    }
-
-    .topmemu {
-      height: 34%;
-    }
-
-    .levels {
-      width: 44%;
-    }
-
-    .blueBG {
-      width: 165px;
-      height: 50px;
-    }
-
-    .blueBG img {
-      height: 50px;
-    }
-
-    .percent {
-      top: 25%;
-    }
-    .choicephonics{
-      margin-top: 0px;
-    }
-    .infoimg1 ul {
-      height: 100%;
-    }
-
-    .addlevels {
-      margin-top: 10%;
-    }
-
-    .bluecicle {
-      border: 8px solid #007BB8;
-      height: 150px;
-      width: 150px;
-    }
-
-    .imgstyle {
-      width: 142px;
-      height: 142px;
-      border: 4px solid #0D627C;
-    }
-
-    .progress2 {
-      height: 15px;
-    }
-
-    .goldBG01 {
-      height: 15px;
-    }
-
-    .percent2 {
-      /*top: 3px;*/
-      height: 19px;
-    }
-
-    // .rightmenu{
-    // 	height:75%;
-    // }
-  }
-
-  @media screen and (min-width: 895px) and (max-width: 1023px) {
-    .infoimg {
-      height: 75%;
-      margin-top: 5%;
-    }
-
-    .chosedisplay {
-      // margin-top: 4%;
-    }
-
-    .addchosecourseL {
-      margin-top: 2%;
-    }
-
-    .chosecourseL {
-      //margin-top:-2%;
-    }
-
-    .cicleimg {
-      margin-top: 11%;
-    }
-
-    .cicleimg1 {
-      margin-top: 7%;
-    }
-
-    .infomesse {
-      margin-top: 9%;
-    }
-
-    .chosegamecord {
-      height: 80%;
-    }
-
-    .lefticon {
-      padding-top: 5%;
-    }
-
-    .addimg {
-      left: 165px;
-    }
-
-    .topmemu {
-      height: 34%;
-    }
-
-    .levels {
-      width: 44%;
-    }
-
-    .blueBG {
-      width: 165px;
-      height: 50px;
-    }
-
-    .blueBG img {
-      height: 50px;
-    }
-
-    .percent {
-      top: 25%;
-    }
-
-    .infoimg1 ul {
-      height: 100%;
-    }
-
-    .addlevels {
-      margin-top: 10%;
-    }
-
-    .withcolor {
-      top: 10%;
-    }
-    .choicephonics{
-      margin-top: 0px;
-    }
-    .bluecicle {
-      border: 8px solid #007BB8;
-      height: 150px;
-      width: 150px;
-    }
-
-    .imgstyle {
-      width: 142px;
-      height: 142px;
-      border: 4px solid #0D627C;
-    }
-
-    .progress2 {
-      height: 15px;
-    }
-
-    .goldBG01 {
-      height: 15px;
-    }
-
-    .percent2 {
-      /*top: 3px;*/
-      height: 19px;
-    }
-
-    // .rightmenu{
-    // 	height:85%;
-    // }
   }
 
   @media screen and (min-width: 1600px) {

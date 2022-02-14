@@ -35,13 +35,13 @@
 <!--                    <span class="fontstyle">{{li.value}}</span>-->
 <!--                  </button>-->
 <!--								</div>-->
-                <div  class="imgsty1"  @click="answer1(list1[0],0)" :class="{answer6:lRight,changSize:list1[0].showstart}">
+                <div  class="imgsty1"  @click="answer1(list1[0],0)" :class="{answer6:lRight,changSize:list1[0].showstart,changeopcily:lEopcily,changSize2:rEopcily}">
                   <button class="imgsty">
                 	    <img src="../../assets/image/StarOrange.png" class="answerSucc" v-show="list1[0].showstart"/>
                       <span class="fontstyle">{{list1[0].value}}</span>
                   </button>
                 </div>
-                <div  class="imgsty2"  @click="answer1(list1[1],1)" :class="{answer5:rRight,changSize:list1[1].showstart}">
+                <div  class="imgsty2"  @click="answer1(list1[1],1)" :class="{answer5:rRight,changSize:list1[1].showstart,changeopcily:rEopcily,changSize2:lEopcily}">
                   <button class="imgsty">
                     <img src="../../assets/image/StarOrange.png" class="answerSucc" v-show="list1[1].showstart"/>
                     <span class="fontstyle">{{list1[1].value}}</span>
@@ -112,6 +112,8 @@
 			  showStart:false,
 			  lRight:false,
         rRight:false,
+        lEopcily:false,
+        rEopcily:false,
 			  showNum: false,
 				popp: false,
 				spanp:'',
@@ -199,6 +201,7 @@
           }
             this.allquestion=this.listG.length;
 						this.list1 =this.listG[this.countpage-1];
+          console.log(this.list1);
 						this.truesound=this.pic+this.list1[0].audio;
             this.shownumb=true;
             // for(var i=0;i<this.list1.length;i++){
@@ -242,7 +245,6 @@
 		methods: {
 
       getDuration() {
-        console.log(this.$refs.videos.duration); //此时可以获取到duration
         this.duration = this.$refs.videos.duration;
         this.video=true;
       },
@@ -264,7 +266,7 @@
 					} else {
 						canvasX = e.changedTouches[0].clientX - t.parentNode.offsetLeft;
 						canvasY = e.changedTouches[0].clientY - t.parentNode.offsetTop;
-					};
+					}
 					// 连接到移动的位置并上色
 					this.context.lineTo(canvasX, canvasY);
 					this.context.stroke();
@@ -306,18 +308,23 @@
             }, 2000);
           }
         }else {
-          num = 0 ? this.lRight=true:this.rRight=true;
+          num === 0 ? this.lRight=true:this.rRight=true;
+          setTimeout(()=>{
+            num === 0 ? this.lEopcily=true:this.rEopcily=true;
+          },1800)
           this.soundsWrong=true;
           this.countpage += 1;
           setTimeout(() => {
+            this.rEopcily=false;
+            this.lEopcily=false;
             this.lRight=false;
             this.rRight=false;
             this.soundsWrong=false;
-          },2000);
+          },3800);
           if(this.countpage<=this.listG.length){
             setTimeout(() => {
             this.onef = true;
-            },2000);
+            },3800);
           }else{
             setTimeout(() => {
               this.zhezhao=false;
@@ -334,13 +341,12 @@
                 }
               });
 
-            },2000);
+            },2500);
           }
         }
       },
 			// canvas中鼠标放开
 			canvasUp(e) {
-
 				this.context.closePath();
 				let isSelect = false; // 用于判断是否选中了选项
 				let anwserIndex;
@@ -351,14 +357,15 @@
 				this.centerP.forEach((item, index) => {
 					if (this.context.isPointInPath(item.corePx, item.corePy)) { // 获取答题选项下标
 						anwserIndex = index;
-					};
+					}
+          console.log(this.list1[index].score);
 					if (this.list1[index].score==1) { // 获取正确选项下标
 						successIndex = index;
-					};
+					}
 					if (this.context.isPointInPath(item.corePx, item.corePy)) {
 						isSelect = true;
 						anwserList.push(item);
-					};
+					}
 				});
         //  const canvas = document.getElementById('canvas');
         // this.convertCanvasToImage(canvas);
@@ -671,7 +678,10 @@
     transform: scale(1.15);
     z-index: 1;
   }
-
+  .changSize2{
+    transform: scale(1.15);
+    z-index: 1;
+  }
 	.start {
 		position: absolute;
 		transform: scale(1.2);
@@ -714,6 +724,9 @@
 	.changered{
 		background-color: #DB7365 !important;
 	}
+  .changeopcily{
+    opacity: 0.7;
+  }
   .repeatsound{
     width: 10%;
     bottom: 50%;

@@ -36,12 +36,12 @@
                 <button class="fast" @click="sound1()"  v-bind:class="{answer: issuccess1,listimg:fangda1}">
                   <img style="position: absolute;height: auto;width:100%;display: block;bottom: 0;" src="../../assets/image/eggbox2.png">
                   <img :src="this.items3[0].bg" class="bgimage">
-                  <audio v-if="short1" style="display: none;" autoplay="autoplay">
+                  <audio  ref="short1" style="display: none;" >
                     <source :src="this.items3[0].audio"></audio>
                 </button>
               </div>
               <div class="allansw">
-                <img src="../../assets/image/StarYellow.png" class="start" v-show="!ended2" style="position: absolute; margin-top: -25%;left: 0%;width: 100%;z-index: 2;">
+                <img src="../../assets/image/StarYellow.png" class="start" v-show="!ended2" style="position: absolute; margin-top: -25%;left: 0;width: 100%;z-index: 2;">
                 <div class="bordercolor" id="answer-box1">
                   <draggable id="box4" :list="items4" draggable=".item"   class="no dragArea list-group"
                              group="people" @change="log">
@@ -56,12 +56,12 @@
                 <button class="fast2"  @click="sound2()" v-bind:class="{answer: issuccess2,listimg:fangda2}">
                   <img style="position: absolute;height: auto;width:100%;display: block;bottom: 0;" src="../../assets/image/eggbox2.png">
                   <img :src="this.items3[1].bg" class="bgimage">
-                  <audio v-if="short2" style="display: none;" autoplay="autoplay">
+                  <audio ref="short2" style="display: none;" >
                   <source :src="this.items3[1].audio"></audio>
                 </button>
               </div>
               <div class="allansw">
-                <img src="../../assets/image/StarYellow.png" class="start" v-show="!ended3" style="position: absolute; margin-top: -25%;left: 0%;width: 100%;z-index: 2;">
+                <img src="../../assets/image/StarYellow.png" class="start" v-show="!ended3" style="position: absolute; margin-top: -25%;left: 0;width: 100%;z-index: 2;">
                 <div class="bordercolor" id="answer-box2">
                   <draggable id="box5" :list="items5" draggable=".item"   class="no dragArea list-group"
                              group="people" @change="log">
@@ -76,7 +76,7 @@
                 <button class="fast3"  @click="sound3()" v-bind:class="{answer: issuccess3,listimg:fangda3}">
                   <img style="position: absolute;height: auto;width:100%;display: block;bottom: 0;" src="../../assets/image/eggbox2.png">
                   <img :src="this.items3[2].bg" class="bgimage">
-                  <audio v-if="short3" style="display: none;" autoplay="autoplay">
+                  <audio  ref="short3" style="display: none;" >
                     <source :src="this.items3[2].audio"></audio>
                 </button>
               </div>
@@ -179,30 +179,29 @@
         }
       },
       'short1':function (newVal) {
-        if (this.short1 == true) {
+        if (this.short1 === true) {
         setTimeout(() => {
+          this.$refs.short1.play();
           this.short1 = false;
-
-        }, 3000);
+        }, 2000);
         }
       },
       'short2':function (newVal) {
-        if (this.short2 == true) {
+        if (this.short2 === true) {
           setTimeout(() => {
+            this.$refs.short2.play();
             this.short2 = false;
-
-          }, 3000);
+          }, 2000);
         }
       },
       'short3':function (newVal) {
-        if (this.short3 == true) {
+        if (this.short3 === true) {
           setTimeout(() => {
+            this.$refs.short3.play();
             this.short3 = false;
-
-          }, 3000);
+          }, 2000);
         }
       }
-
     },
     data() {
       return {
@@ -217,7 +216,6 @@
         ruleimg12:false,
         controlOnStart: true,
         falgs: 'article',
-
         disabled: false,
         onef: true,
         reload: true,
@@ -251,12 +249,12 @@
         fade: 'fade',
         flag2: true,
 
-        sort2: '',sort3: '',
+        sort2: '',
+        sort3: '',
         sort1: '',
         marginboth: false,
         // disnone:false,
         show: true,
-
         resume: false,
         items2: [
 
@@ -363,7 +361,6 @@
         //     return  this.items1[evt.oldDraggableIndex].sound = 0;
         //   }
         // }, 3500);
-
       },
       end: function(evt){
         // console.log(evt);
@@ -549,7 +546,6 @@
                         this.sort1=this.items1[0].value;
                         this.sort2=this.items1[1].value;
                         this.sort3=this.items1[2].value;
-
                         this.over=false;
                       }, 2000);
                     } else {
@@ -810,7 +806,6 @@
 
           }
         } else if (evt.moved) {
-
           this.zhezhao=false;
           this.fangda1 = false;
           this.fangda2 = false;
@@ -839,6 +834,7 @@
       },
       sound1(){
           this.short1=true;
+
       },
       sound2(){
         this.short2=true;
@@ -900,6 +896,7 @@
       window.removeEventListener('popstate',this.gomemu,false);
     },
     created() { //生命周期里接收参数
+      //this.pic='https://gamejava.monkeytree.com.cn';
       this.pic=this.$axios.defaults.baseURL2;
       this.unit = this.$route.query.unit;
       this.unitsId = this.$route.query.unitsId;
@@ -1486,7 +1483,9 @@
 
   }
 
-  @media screen and (min-width: 482px) and (max-width: 569px) {
+  @media screen and (min-device-height: 482px) and (max-device-height: 569px) and (-webkit-device-pixel-ratio: 3),
+  (min-device-height: 482px) and (max-device-height: 569px) and (-webkit-device-pixel-ratio: 2),
+  (min-width: 482px) and (max-width: 569px) {
     .classimg{
       margin: 0 4px;
     }
@@ -1508,7 +1507,45 @@
 
   }
 
-  @media screen and (min-width: 1024px) and (max-width: 1199px){
+  @media screen and (min-device-height: 700px) and (max-device-height: 812px) and (-webkit-device-pixel-ratio: 3),
+  (min-device-height: 700px) and (max-device-height: 812px) and (-webkit-device-pixel-ratio: 2),
+  (min-width: 700px) and (max-width: 812px) {
+    .fontsizes {
+      margin-top: 17%;
+    }
+
+    .twomenu {
+      padding-top: 18%;
+    }
+
+  }
+
+  @media screen and (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 3),
+  (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 2),
+  (min-width: 812px) and (max-width:1023px) {
+    .twomenu {
+      padding-top: 14%;
+    }
+
+
+
+    .fontsizes {
+      margin-top: 17%;
+    }
+
+
+    .withcolor {
+      height: 70%;
+    }
+    .bgimage{
+      top: 20%;
+      max-height: 60%;
+    }
+  }
+
+  @media screen and (min-device-height: 1024px) and (max-device-height: 1199px) and (-webkit-device-pixel-ratio: 3),
+  (min-device-height: 1024px) and (max-device-height: 1199px) and (-webkit-device-pixel-ratio: 2),
+  (min-width: 1024px) and (max-width: 1199px){
 
 
 
@@ -1581,9 +1618,10 @@
     }
 
   }
-  @media screen and (min-width: 1200px)and (max-width: 1365px) {
 
-
+  @media screen and (min-device-height: 1200px) and (max-device-height: 1365px) and (-webkit-device-pixel-ratio: 3),
+  (min-device-height: 1200px) and (max-device-height: 1365px) and (-webkit-device-pixel-ratio: 2),
+  (min-width: 1200px)and (max-width: 1365px) {
 
     .twomenu {
       padding-top: 26%;
@@ -1649,39 +1687,10 @@
       top: 20%;
     }
   }
-  @media screen and (min-width: 700px) and (max-width: 812px) {
-    .fontsizes {
-      margin-top: 17%;
-    }
 
-    .twomenu {
-      padding-top: 18%;
-    }
-
-  }
-
-  @media screen and (min-width: 812px) and (max-width:1023px) {
-    .twomenu {
-      padding-top: 14%;
-    }
-
-
-
-    .fontsizes {
-      margin-top: 17%;
-    }
-
-
-    .withcolor {
-      height: 70%;
-    }
-    .bgimage{
-      top: 20%;
-      max-height: 60%;
-    }
-  }
-
-  @media screen and (min-width: 1366px) and (max-width: 1600px){
+  @media screen and (min-device-height: 1366px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 3),
+  (min-device-height: 1366px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 2),
+  (min-width: 1366px) and (max-width: 1600px){
 
 
 
@@ -1785,9 +1794,10 @@
     }
     .sort{
       font-size: 6rem;
+      bottom: 25%;
     }
     .bgimage{
-      top: 20%;
+      top: 25%;
       max-height: 60%;
     }
     .item{

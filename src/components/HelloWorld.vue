@@ -783,7 +783,7 @@
 			change() {
 				if(this.UnitsList.length!=0){
 					this.spanp="Put the letter in the correct spot.";
-				setTimeout(() => {
+				  setTimeout(() => {
 					this.changei1=true;
 					this.popp = !this.popp;
 					if(this.UnitsList[7].rank==0){
@@ -798,11 +798,13 @@
 					// this.boss2=false;
 			        this.game = '8'
 				 }, 300);
-				 }
+				 }else{
+          alertMsg3("Loading...Please Wait");
+        }
         [{"checked":true,"product":{"avalilabilityQty":23,"b2bListedStatus":"LISTED","b2bMinimumToOrder":1,"b2cListedStatus":"LISTED","b2cMinimumToOrder":1,"conditionId1":8,"conditionId2":287,"conditionId3":288,"conditionId4":289,"conditionName1":"TERE","conditionName2":"GLOSS BLACK (Tuhua)","conditionName3":"DISC","conditionName4":"M","description":"","masterId":51,"masterPhotos":{"bigPhotoPath":"/images/master/2020/12/51-KhZxcD-big.png","isCheckout":true,"isFanfare":true,"isGallery":false,"isHomeRangeList":true,"isProfile":true,"isRange":false,"isSlide":false,"masterId":51,"mediumPhotoPath":"/images/master/2020/12/51-KhZxcD-medium.png","photoId":329,"photoPath":"/images/master/2020/12/51-KhZxcD.png","photoSorting":7,"smallPhotoPath":"/images/master/2020/12/51-KhZxcD-small.png","status":1,"url":"KhZxcD"},"productId":285,"productNamePo":"CHAPTER2 TERE FRAMESET(DISC BRAKE), COL#27, MEDIUM","productNameWebsite":"CHAPTER2 TERE FRAMESET(DISC BRAKE), C#27(GLOSS BLACK , TUHUA), MEDIUM","remark1":"MODEL","remark2":"COLOR","remark3":"BRAKE","remark4":"SIZE","sku":"117012FSMED27","standardCost":"3618.85","statusId":101,"subTitle":"ESSENTIAL COLLECTION ","totalPiecesMade":"","type":"FRAMESET","typeId":155,"unitOfMeasure":"SET","unitOfMeasureId":158},"productId":285,"quantity":1,"subTotal":296999,"unitPrice":296999}]
 			},
 			change2() {
-				if(this.key!=true&&this.UnitsList.length!=0){
+				if(this.UnitsList.length!=0){
 					this.spanp="Listen and circle the correct picture.";
 					setTimeout(() => {
 					this.changei2=true;
@@ -820,11 +822,13 @@
 					this.game = '1'
 
 				}, 300);
-				}
+				}else{
+          alertMsg3("Loading...Please Wait");
+        }
 
 			},
 			change3() {
-				if(this.key!=true&&this.UnitsList.length!=0){
+				if(this.UnitsList.length!=0){
 					this.spanp="Match the pictures that are the same.";
 				setTimeout(() => {
 					this.changei3=true;
@@ -841,10 +845,12 @@
 					// this.boss2=false;
 					this.game = '3'
 				}, 300);
-				}
+				}else{
+          alertMsg3("Loading...Please Wait");
+        }
 			},
 			change4() {
-				if(this.key!=true&&this.UnitsList.length!=0){
+				if(this.UnitsList.length!=0){
 					this.spanp="Match the pictures with the correct words.";
 				setTimeout(() => {
 					this.changei4=true;
@@ -856,10 +862,12 @@
 					}
 					this.game = '2'
 				}, 300);
-				}
+				}else{
+          alertMsg3("Loading...Please Wait");
+        }
 			},
 			change5() {
-				if(this.key!=true&&this.UnitsList.length!=0){
+				if(this.UnitsList.length!=0){
 					this.spanp="Read the sentence and look at the picture.Then‚ select “Yes” or “No”.";
 				setTimeout(() => {
 					this.changei5=true;
@@ -871,10 +879,12 @@
 					}
 					this.game = '6'
 				}, 300);
-				}
+				}else{
+          alertMsg3("Loading...Please Wait");
+        }
 			},
 			change6() {
-				if(this.key!=true&&this.UnitsList.length!=0){
+				if(this.UnitsList.length!=0){
 					this.spanp="Look at the picture.Then‚ listen and choose the correct answer.";
 				setTimeout(() => {
 					this.changei6=true;
@@ -886,10 +896,12 @@
 					}
 					this.game = '4'
 				}, 300);
-				}
+				}else{
+          alertMsg3("Loading...Please Wait");
+        }
 			},
 			change7() {
-				if(this.key!=true&&this.UnitsList.length!=0){
+				if(this.UnitsList.length!=0){
 					this.spanp="Read the word and circle the correct picture.";
 				setTimeout(() => {
 					this.changei7=true;
@@ -901,10 +913,12 @@
 					}
 					this.game = '5'
 				}, 300);
-				}
+				}else{
+          alertMsg3("Loading...Please Wait");
+        }
 			},
 			change8() {
-				if(this.key!=true&&this.UnitsList.length!=0){
+				if(this.UnitsList.length!=0){
 					this.spanp="Look at the picture and drag it to the correct bucket.";
 				setTimeout(() => {
 					this.changei8=true;
@@ -916,10 +930,12 @@
 					}
 					this.game = '7'
 				}, 300);
-				}
+				}else{
+          alertMsg3("Loading...Please Wait");
+        }
 			},
 			bigboss(){
-				if(this.key!=true&&this.UnitsList.length!=0){
+				if(this.UnitsList.length!=0){
 					this.spanp="Look at the picture.Then‚ listen and spell the correct word.";
 				this.changei9=true;
 				this.popp = !this.popp;
@@ -929,7 +945,9 @@
 					this.ruleimg8=false;this.ruleimg10=false;this.ruleimg12=true;this.ruleimg15=false;this.ruleimg25=false;this.ruleimg4=false;
 				}
 				this.game = '9'
-				}
+				}else{
+          alertMsg3("Loading...Please Wait");
+        }
 			},
 			pop(){
 				 this.popp = !this.popp;
@@ -962,10 +980,9 @@
 			},
 			starpop(){
 				var audio = document.getElementById('music');
-				// if(this.game!='9'){
 					audio.pause();
-				// }
-				if(this.game=='8'){
+        alertMsg3("Loading...Please Wait");
+				if(this.game==='8'){
 				setTimeout(() => {
           if(this.part==='part1'){
             this.menuId=this.UnitsList[7].menu_detail_id_1;
@@ -986,7 +1003,7 @@
 						}
 					})
 				}, 300);
-				}else if(this.game=='1'){
+				}else if(this.game==='1'){
 				  console.log(this.UnitsList);
 					setTimeout(() => {
             if(this.part==='part1'){
@@ -1009,7 +1026,7 @@
 							}
 						})
 					}, 300);
-				}else if(this.game=='3'){
+				}else if(this.game==='3'){
 					setTimeout(() => {
             if(this.part==='part1'){
               this.menuId=this.UnitsList[2].menu_detail_id_1;
@@ -1030,7 +1047,7 @@
 							}
 						})
 					}, 300);
-				}else if(this.game=='2'){
+				}else if(this.game==='2'){
 					setTimeout(() => {
             if(this.part==='part1'){
               this.menuId=this.UnitsList[1].menu_detail_id_1;
@@ -1051,7 +1068,7 @@
 							}
 						})
 					}, 300);
-				}else if(this.game=='6'){
+				}else if(this.game==='6'){
 					setTimeout(() => {
             if(this.part==='part1'){
               this.menuId=this.UnitsList[5].menu_detail_id_1;
@@ -1072,7 +1089,7 @@
 							}
 						})
 					}, 300);
-				}else if(this.game=='4'){
+				}else if(this.game==='4'){
 					setTimeout(() => {
             if(this.part==='part1'){
               this.menuId=this.UnitsList[3].menu_detail_id_1;
@@ -1093,7 +1110,7 @@
 							}
 						})
 					}, 300);
-				}else if(this.game=='5'){
+				}else if(this.game==='5'){
 					setTimeout(() => {
             if(this.part==='part1'){
               this.menuId=this.UnitsList[4].menu_detail_id_1;
@@ -1114,7 +1131,7 @@
 							}
 						})
 					}, 300);
-				}else if(this.game=='7'){
+				}else if(this.game==='7'){
 					setTimeout(() => {
             if(this.part==='part1'){
               this.menuId=this.UnitsList[6].menu_detail_id_1;
@@ -1135,7 +1152,7 @@
 							 }
 						})
 					}, 300);
-				}else if(this.game=='9'){
+				}else if(this.game==='9'){
 					setTimeout(() => {
             console.log(this.UnitsList[8]);
             if(this.part==='part1'){
@@ -1216,9 +1233,9 @@
         this.studentId=this.$route.query.studentId;
         this.unit=this.$route.query.unit;
         localStorage.setItem('studentId',this.studentId);
-        if(this.$route.query.level=="WALKERS"){
+        if(this.$route.query.level==="WALKERS"){
           this.levelname="Walkers";
-        }else if(this.$route.query.level=="RUNNERS"){
+        }else if(this.$route.query.level==="RUNNERS"){
           this.levelname="Runners";
         }
         this.url1=this.url+"course";
@@ -1238,7 +1255,7 @@
               })).then(res=>{
                 this.levelsList=res.data.levelsList;
                 for(var i=0;i<this.levelsList.length;i++){
-                  if(this.levelsList[i].name==this.levelname){
+                  if(this.levelsList[i].name===this.levelname){
                     this.levelsId=this.levelsList[i].levels_detail_id;
                     this.url3=this.url+"Units";
                     this.$axios.post(this.url3,qs.stringify({
@@ -1246,6 +1263,7 @@
                       levelsId:this.levelsId
                     })).then(res=>{
                       this.unitsLists=res.data.unitsList;
+
                       for(var i=0;i<this.unitsLists.length;i++){
                         if(this.unitsLists[i].name==this.$route.query.unit){
                           this.unitsId=this.unitsLists[i].units_detail_id;
@@ -1354,6 +1372,7 @@
                             unitsId:this.unitsId
                           })).then(res=>{
                             this.UnitsList=res.data.UnitsList;
+                            console.log('加载完毕');
                             this.sum=res.data.sumCoins;
                             localStorage.setItem('sumCoins',this.sum);
 
@@ -1413,9 +1432,9 @@
         this.unitsId= this.$route.query.unitsId;
         this.unit= this.$route.query.unit;
         this.part=this.$route.query.part;
-        if(this.$route.query.level=="WALKERS"){
+        if(this.$route.query.level==="WALKERS"){
           this.levelname="Walkers";
-        }else if(this.$route.query.level=="RUNNERS"){
+        }else if(this.$route.query.level==="RUNNERS"){
           this.levelname="Runners";
         }
         //给不同单元添加不同样式的星星

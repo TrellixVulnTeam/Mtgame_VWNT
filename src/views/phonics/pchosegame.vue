@@ -198,6 +198,7 @@
         </div>
       </div>
     </div>
+
   </div>
 
 </template>
@@ -274,7 +275,19 @@
     },
 
     methods: {
-
+      // fullscreen(){
+      //   // 判断是iphoneX及以后的iphone手机（即iphone带全面屏的手机）
+      //   let isNewIphone = window && navigator.userAgent.indexOf('iPhone') > -1 && window.screen.height >= 812 && window.devicePixelRatio >= 2;
+      //   //console.log(document.getElementById('alertFram').offsetLeft);
+      //   //console.log(document.getElementById('alertFram').style.cssText);
+      //   alertMsg3('w:'+window.screen.width+'h:'+window.screen.height+isNewIphone)
+      //   setTimeout(() => {
+      //     alertMsg3(document.getElementById('alertFram').style.cssText)
+      //   }, 5000);
+      //   setTimeout(() => {
+      //     alertMsg3(document.getElementById('body').style.cssText)
+      //   }, 10000);
+      // },
       back() {
         if (this.phonics === true) {
           if(this.style ==='game'){

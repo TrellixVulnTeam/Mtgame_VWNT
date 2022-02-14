@@ -67,20 +67,19 @@
 
             <div  v-if="zhezhao" style="width: 100%; height: 110%;display:block;position: absolute;opacity: 0;z-index: 100;"></div><!-- 遮罩禁止重复点击作用 -->
 						<div class="alllist" id="imgBox">
-							<audio  @canplay="getDuration"   ref="videos" id="videos" autoplay="autoplay" :src="audio"></audio>
+							<audio  @canplay="getDuration"   ref="videos0" id="videos0" autoplay="autoplay" :src="audio"></audio>
 							<audio v-if="soundsWrong" autoplay="autoplay"><source src="../../assets/video/Wrong.mp3" ></audio>
 							<audio v-if="soundscorrect" autoplay="autoplay"><source src="../../assets/video/correct.mp3" ></audio>
-							<div class="imgsty" v-for="(li,index) in list1" :key="index" v-bind:class="{ imgwidth: li.width , imgwidth3: li.margin ,imgwidth2: li.width2,answer: li.issuccess,sacle:li.bigtrue,changewi:li.changwidth,changecolor:li.showbg}"
-							>
+							<div class="imgsty" v-for="(li,index) in list1"  :key="index" v-bind:class="{ imgwidth: li.width , imgwidth3: li.margin ,imgwidth2: li.width2,answer: li.issuccess,sacle:li.bigtrue,changewi:li.changwidth,changecolor:li.showbg}">
 								<div class="aa">
-								<img :src="li.bg" @load="loadsize" class="imgsty1" v-bind:class="{ imgwidth1: li.width1,opciay:li.liopciay }">
+								<img :src="li.bg" @load="loadsize" class="imgsty1" @click.prevent="playAudio(index)"  v-bind:class="{ imgwidth1: li.width1,opciay:li.liopciay }">
 								</div><!-- <span  v-html="list1[index].showbg"></span> li.showbg-->
 								<div  class="bb">
 								<img src="../../assets/image/StarOrange.png" class="start" v-show="li.showbg" />
 							    </div>
 							</div>
 							<canvas id="canvas" style="position: absolute;left:0;top:0;z-index: 99;width: 100%;height: 105%;"
-								@mousedown="canvasDown($event)" @mouseup="canvasUp($event)" @mousemove="canvasMove($event)"
+                @click="xy($event)" @mousedown="canvasDown($event)" @mouseup="canvasUp($event)" @mousemove="canvasMove($event)"
 								@touchstart="canvasDown($event)" @touchend="canvasUp($event)" @touchmove="canvasMove($event)">
 								您的浏览器不支持Canvas
 						</canvas>
@@ -217,13 +216,9 @@
 
 		watch: {
 			'onef': function(newVal) {
-				if (this.onef == true) {
+				if (this.onef === true) {
 					setTimeout(() => {
 						this.onef = false;
-
-							// this.video = true;
-							// this.action1 = true;
-
 						this.list1 =this.listB[this.countpage-1];
 						for(var i=0;i<this.list1.length;i++){
 							this.list1[i].bg=this.pic+this.list1[i].bg
@@ -249,31 +244,8 @@
 
 							}
 						}
-						// setTimeout(() => {
-						// 	const canvas = document.getElementById('canvas'); // 初次进来初始化画布
-						// 	let imgBox = document.getElementById('imgBox');
-						// 	let imgsty = document.getElementsByClassName('imgsty');
-						//  if(imgBox.clientHeight){
-            //    for (let i=0; i<imgsty.length; i++) {
-						// 		let coreP = { // 获取图片中心点位置
-						// 			corePx: imgsty[i].offsetLeft + imgsty[i].offsetWidth/2,
-						// 			corePy: imgsty[i].offsetTop + imgsty[i].offsetHeight/2
-						// 		}
-						// 		this.centerP.push(coreP);
-						// 	}
-						// 	this.canvasObj = canvas;
-						// 	this.canvasH = imgBox.clientHeight; // 存储canvas的高度，用于清空画布
-						// 	canvas.width = imgBox.clientWidth; // 动态赋值canvas的宽度
-						// 	canvas.height = imgBox.clientHeight; // 动态赋值canvas的高度
-						// 	this.context = canvas.getContext('2d');
-						// 	this.setCanvasStyle();
-						// 	this.zhezhao=false;
-            //   }
-						// }, 1000);
 					}, 1000);
-
 				}else {
-          // console.log('11111111');
           setTimeout(() => {
             const canvas = document.getElementById('canvas'); // 初次进来初始化画布
             let imgBox = document.getElementById('imgBox');
@@ -300,7 +272,7 @@
 			'video': function(newVal) {
 				if (this.video == true) {
 				  // console.log('1');
-             this.$refs.videos.play();
+             this.$refs.videos0.play();
              this.video =false;
 			        // setTimeout(() => {
               //   this.$refs.videos.pause();
@@ -367,6 +339,7 @@
 				video:false,
 				soundsWrong:false,
 				soundscorrect:false,
+        playing:false,
 				unitsId:'',
 				unit:'',
 				menuId:'',
@@ -434,6 +407,25 @@
 
 		},
 		methods: {
+		  playAudio(li){
+        console.log(li);
+      },
+      xy($event){
+		    if (this.playing === false){
+		      this.playing=true;
+          let audio = new Audio();
+          for(let i=0; i<this.centerP.length; i++){
+            if(this.centerP[i].corePx-80<=$event.offsetX&&$event.offsetX<=this.centerP[i].corePx+80&&this.centerP[i].corePy-80<=$event.offsetY&&$event.offsetY<=this.centerP[i].corePy+80){
+              audio.src = this.pic+this.list1[i].audio;
+            }
+          }
+          audio.play();
+          setTimeout(() => {
+            this.playing=false;
+          },2000);
+        }
+
+      },
       loadsize(){
         // console.log('11111111');
         // const canvas = document.getElementById('canvas'); // 初次进来初始化画布
@@ -462,7 +454,7 @@
       },
       getDuration() {
         // console.log(this.$refs.videos.duration); //此时可以获取到duration
-        this.duration = this.$refs.videos.duration;
+        this.duration = this.$refs.videos0.duration;
         this.video =true;
       },
       updateTime(e) {
@@ -494,7 +486,6 @@
 				    // if(this.isPc()) {
 					   canvasX = e.clientX - t.parentNode.offsetLeft;
 					   canvasY = e.clientY - t.parentNode.offsetTop;
-
 				    this.context.beginPath();
 				    this.context.moveTo(canvasX, canvasY);
 				    this.context.stroke();
@@ -502,7 +493,6 @@
 					this.canvasMoveUse = false;
 					return;
 				}
-
 			},
 
 			// canvas中鼠标移动
@@ -540,14 +530,14 @@
 				this.centerP.forEach((item, index) => {
 					if (this.context.isPointInPath(item.corePx, item.corePy)) { // 获取答题选项下标
 						anwserIndex = index;
-					};
+					}
 					//var score=this.list1[index].score;
 					//console.log(this.list1[index].score);
 					// console.log(this.list1[0]['score']);
 				    if (this.context.isPointInPath(item.corePx, item.corePy)) {
 						isSelect = true;
 						anwserList.push(item);
-					};
+					}
 				});
 
 					for(var i=0;i<this.list1.length;i++){
@@ -556,9 +546,6 @@
 						successIndex = i;
 					    }
 					}
-
-
-
 
 				if (!isSelect) { // 没有选中
 					this.canvasObj.height = this.canvasH;
@@ -584,7 +571,7 @@
 							this.list1[anwserIndex].showbg = 1;
 							this.soundscorrect=true;
 							//console.log(this.listB.length);
-							if (this.countpage == this.listB.length) {
+							if (this.countpage === this.listB.length) {
 								setTimeout(() => {
 									this.soundscorrect=false;
 									this.$router.push({
@@ -948,13 +935,14 @@
 					 this.question=this.listB.length;
            this.shownumb=true;
 					 this.list1 =this.listB[this.countpage-1];
-
 					for(var i=0;i<this.list1.length;i++){
 						this.list1[i].bg=this.pic+this.list1[i].bg
+            //this.list1[i].audio=this.pic+this.list1[i].audio
 						if(this.list1[i].score===1){
 							this.audio=this.pic+this.list1[i].audio;
 						}
 					}
+          console.log(this.list1);
 					if (this.onef === true && this.shownumb===true) {
 
 					if (this.list1.length > 4 && this.list1.length < 7) {

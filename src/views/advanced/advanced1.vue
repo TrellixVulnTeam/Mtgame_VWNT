@@ -123,7 +123,7 @@
     name: "advanced1",
     watch: {
       'onef': function (newVal) {
-        if (this.onef == true) {
+        if (this.onef === true) {
           setTimeout(() => {
             this.list1 = this.listF[this.countpage - 1];
 

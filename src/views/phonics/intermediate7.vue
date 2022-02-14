@@ -50,7 +50,6 @@
                       <!--  {{ element.name }} -->
                     </div>
                     <!-- <img style="position: absolute;height: 100%;display: -webkit-box;" src="../../assets/image/redball.png" v-bind:class="{listimg:fangda2}"> -->
-
                   </draggable>
 
                 </div>
@@ -68,7 +67,6 @@
                       <!--  {{ element.name }} -->
                     </div>
                     <!-- <img style="position: absolute;height: 100%;display: -webkit-box;" src="../../assets/image/redball.png" v-bind:class="{listimg:fangda2}"> -->
-
                   </draggable>
 
                 </div>
@@ -77,15 +75,14 @@
                   <span class="sort">{{this.sort3}}</span>
                 </button>
               </div>
-              <audio v-if="speaksound" style="display: none" autoplay="autoplay">
-              <source :src="audiosound"></audio>
+              <audio ref="playAudio"  >
+              <source  :src="audiosound"></audio>
               <div class="alldrag">
                 <draggable id="first"
                            data-source="juju" :list="items1" class="list-group" draggable=".item" :disabled="over" style="width:100%; min-height:130px;"
                            :group="{ name: 'people', pull: pullFunction }" @start="start" @end="end" @change="log">
                   <div v-for="(element,index) in items1" :key="element.id" class="item" style="display: inline-block;position: relative;">
                     <img src="../../assets/image/toutors.png" class="classimg" @click="speak(index)" v-bind:class="{ marginboth:marginboth,touming:element.imgop}" >
-
                   </div>
                 </draggable>
 
@@ -292,16 +289,15 @@
       //     );
       // },
       speak(i){
-        console.log(i);
         if(this.speaksound===false){
           this.audiosound=this.items1[i].audio;
           this.speaksound=true;
+          this.$refs.playAudio.load();
+          this.$refs.playAudio.play();
           setTimeout(() => {
             this.speaksound=false;
-
-          }, 4000);
+          }, 1500);
         }
-
       },
       pullFunction: function(evt) {
         if (evt.el.id == "box2") {
@@ -877,7 +873,6 @@
             this.listH.push(res.data.maps[i]); //属性
           }
           this.question = this.listH.length;
-          console.log(this.question);
           this.items1 = this.listH[this.countpage - 1];
           for(var a=0;a<this.items1.length;a++){
             this.items1[a].imgop=0;
@@ -892,7 +887,6 @@
           alertMsg("You must be connected to the internet.<br>Please connect and try again.");
         });
         this.showNum = true;
-        console.log(this.showNum);
         setTimeout(() => {
           this.onef = false;
           setTimeout(() => {
@@ -1401,7 +1395,7 @@
 
     100% {
       position: relative;
-      left: 0px;
+      left: 0;
     }
   }
 
@@ -1434,7 +1428,9 @@
 
   }
 
-  @media screen and (min-width: 482px) and (max-width: 569px) {
+  @media screen and (min-device-height: 482px) and (max-device-height: 569px) and (-webkit-device-pixel-ratio: 3),
+  (min-device-height: 482px) and (max-device-height: 569px) and (-webkit-device-pixel-ratio: 2),
+  (min-width: 482px) and (max-width: 569px) {
     .classimg {
       width: 160px;
       height: 100px;
@@ -1459,7 +1455,43 @@
 
   }
 
-  @media screen and (min-width: 1024px) and (max-width: 1199px){
+  @media screen and (min-device-height: 700px) and (max-device-height: 812px) and (-webkit-device-pixel-ratio: 3),
+  (min-device-height: 700px) and (max-device-height: 812px) and (-webkit-device-pixel-ratio: 2),
+  (min-width: 700px) and (max-width: 812px) {
+    .fontsizes {
+      margin-top: 17%;
+    }
+
+    .twomenu {
+      padding-top: 18%;
+    }
+  }
+
+  @media screen and (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 3),
+  (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 2),
+  (min-width: 812px) and (max-width:1023px) {
+    .twomenu {
+      padding-top: 14%;
+    }
+
+
+
+    .fontsizes {
+      margin-top: 17%;
+    }
+
+
+    .withcolor {
+      height: 70%;
+    }
+    .sort{
+      bottom:12%;
+    }
+  }
+
+  @media screen and (min-device-height: 1024px) and (max-device-height: 1199px) and (-webkit-device-pixel-ratio: 3),
+  (min-device-height: 1024px) and (max-device-height: 1199px) and (-webkit-device-pixel-ratio: 2),
+  (min-width: 1024px) and (max-width: 1199px){
 
 
 
@@ -1535,7 +1567,10 @@
       z-index: 2;
     }
   }
-  @media screen and (min-width: 1200px)and (max-width: 1365px) {
+
+  @media screen and (min-device-height: 1200px) and (max-device-height: 1365px) and (-webkit-device-pixel-ratio: 3),
+  (min-device-height: 1200px) and (max-device-height: 1365px) and (-webkit-device-pixel-ratio: 2),
+  (min-width: 1200px)and (max-width: 1365px) {
 
 
 
@@ -1607,37 +1642,10 @@
       z-index: 2;
     }
   }
-  @media screen and (min-width: 700px) and (max-width: 812px) {
-    .fontsizes {
-      margin-top: 17%;
-    }
 
-    .twomenu {
-      padding-top: 18%;
-    }
-  }
-
-  @media screen and (min-width: 812px) and (max-width:1023px) {
-    .twomenu {
-      padding-top: 14%;
-    }
-
-
-
-    .fontsizes {
-      margin-top: 17%;
-    }
-
-
-    .withcolor {
-      height: 70%;
-    }
-    .sort{
-      bottom:12%;
-    }
-  }
-
-  @media screen and (min-width: 1366px) and (max-width: 1600px){
+  @media screen and (min-device-height: 1366px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 3),
+  (min-device-height: 1366px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 2),
+  (min-width: 1366px) and (max-width: 1600px){
 
 
 
@@ -1725,7 +1733,7 @@
     .fontsize {
       font-family: pepper;
       color: white;
-      bottom: 0%;
+      bottom: 0;
       left: 8%;
       position: absolute;
       font-size: x-large;

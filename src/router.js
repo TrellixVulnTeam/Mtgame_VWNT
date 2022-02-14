@@ -482,6 +482,12 @@ export default new Router({
 	    	//component: Login
         component:resolve => {require(['./views/login/login.vue'],resolve)}
 	    },
+    {
+      path: "/loginhk",
+      name: "loginhk",
+      //component: Login
+      component:resolve => {require(['./views/login/loginhk.vue'],resolve)}
+    },
 		{
 			path: "/select",
 			name: "select",

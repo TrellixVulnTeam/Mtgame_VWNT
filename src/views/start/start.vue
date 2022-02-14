@@ -162,7 +162,12 @@
               }
             );
           } else { //cookie值为空，则进入登录界面
-            this.$router.push({path: '/login'})
+            if (this.local==='cn'){
+              this.$router.push({path: '/login'})
+            }else{
+              this.$router.push({path: '/loginhk'})
+            }
+
           }
          }
       },
