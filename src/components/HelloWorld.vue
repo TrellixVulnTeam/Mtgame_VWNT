@@ -309,10 +309,8 @@
 				<div class="listimg">
 					<img :src=lightstar class="imgposit" v-if="stars[5].onestart">
 					<img :src=star class="imgposit" v-if="!stars[5].onestart">
-
 					<img :src=lightstar style="position: relative;height: 11%;top: 21%; z-index: 2;" v-if="stars[5].twostart">
 					<img :src=star style="position: relative;height: 11%;top: 21%; z-index: 2;" v-if="!stars[5].twostart">
-
 					<img :src=lightstar class="imgposit1"   v-if="stars[5].threestart">
 					<img :src=star class="imgposit1"   v-if="!stars[5].threestart">
 					<img @click="change5" src="../assets/image/3-5.png" style="position: sticky;height: 60%" v-if="bgimg[0].active">
@@ -618,9 +616,23 @@
 		props: {
 			msg: String
 		},
-
+    watch: {
+      'loading': function(newVal) {
+        if (this.loading === true) {
+          alertMsg3("Loading...Please Wait");
+          setTimeout(() => {
+              document.getElementById('alertFram').style.display = 'none'}
+            ,15000)
+        }else{
+          setTimeout(() => {
+              document.getElementById('alertFram').style.display = 'none'}
+            ,1000)
+        }
+      },
+    },
 		data() {
 			return {
+			  loading:false,
 				popp: false,
 				sum:0,
 				spring:'',
@@ -791,17 +803,13 @@
 					}else if(this.UnitsList[7].rank==1){
 						this.ruleimg8=false;this.ruleimg10=true;this.ruleimg12=false;this.ruleimg15=false;this.ruleimg25=false;this.ruleimg4=false;
 					}
-					// this.ruleimg=true;sc-kgoBCf iroQPA
-					// this.ruleimg1=false;
-					// this.ruleimg2=false;
-					// this.boss1=false;
-					// this.boss2=false;
 			        this.game = '8'
 				 }, 300);
 				 }else{
-          alertMsg3("Loading...Please Wait");
+          this.loading = true;
+
         }
-        [{"checked":true,"product":{"avalilabilityQty":23,"b2bListedStatus":"LISTED","b2bMinimumToOrder":1,"b2cListedStatus":"LISTED","b2cMinimumToOrder":1,"conditionId1":8,"conditionId2":287,"conditionId3":288,"conditionId4":289,"conditionName1":"TERE","conditionName2":"GLOSS BLACK (Tuhua)","conditionName3":"DISC","conditionName4":"M","description":"","masterId":51,"masterPhotos":{"bigPhotoPath":"/images/master/2020/12/51-KhZxcD-big.png","isCheckout":true,"isFanfare":true,"isGallery":false,"isHomeRangeList":true,"isProfile":true,"isRange":false,"isSlide":false,"masterId":51,"mediumPhotoPath":"/images/master/2020/12/51-KhZxcD-medium.png","photoId":329,"photoPath":"/images/master/2020/12/51-KhZxcD.png","photoSorting":7,"smallPhotoPath":"/images/master/2020/12/51-KhZxcD-small.png","status":1,"url":"KhZxcD"},"productId":285,"productNamePo":"CHAPTER2 TERE FRAMESET(DISC BRAKE), COL#27, MEDIUM","productNameWebsite":"CHAPTER2 TERE FRAMESET(DISC BRAKE), C#27(GLOSS BLACK , TUHUA), MEDIUM","remark1":"MODEL","remark2":"COLOR","remark3":"BRAKE","remark4":"SIZE","sku":"117012FSMED27","standardCost":"3618.85","statusId":101,"subTitle":"ESSENTIAL COLLECTION ","totalPiecesMade":"","type":"FRAMESET","typeId":155,"unitOfMeasure":"SET","unitOfMeasureId":158},"productId":285,"quantity":1,"subTotal":296999,"unitPrice":296999}]
+        //[{"checked":true,"product":{"avalilabilityQty":23,"b2bListedStatus":"LISTED","b2bMinimumToOrder":1,"b2cListedStatus":"LISTED","b2cMinimumToOrder":1,"conditionId1":8,"conditionId2":287,"conditionId3":288,"conditionId4":289,"conditionName1":"TERE","conditionName2":"GLOSS BLACK (Tuhua)","conditionName3":"DISC","conditionName4":"M","description":"","masterId":51,"masterPhotos":{"bigPhotoPath":"/images/master/2020/12/51-KhZxcD-big.png","isCheckout":true,"isFanfare":true,"isGallery":false,"isHomeRangeList":true,"isProfile":true,"isRange":false,"isSlide":false,"masterId":51,"mediumPhotoPath":"/images/master/2020/12/51-KhZxcD-medium.png","photoId":329,"photoPath":"/images/master/2020/12/51-KhZxcD.png","photoSorting":7,"smallPhotoPath":"/images/master/2020/12/51-KhZxcD-small.png","status":1,"url":"KhZxcD"},"productId":285,"productNamePo":"CHAPTER2 TERE FRAMESET(DISC BRAKE), COL#27, MEDIUM","productNameWebsite":"CHAPTER2 TERE FRAMESET(DISC BRAKE), C#27(GLOSS BLACK , TUHUA), MEDIUM","remark1":"MODEL","remark2":"COLOR","remark3":"BRAKE","remark4":"SIZE","sku":"117012FSMED27","standardCost":"3618.85","statusId":101,"subTitle":"ESSENTIAL COLLECTION ","totalPiecesMade":"","type":"FRAMESET","typeId":155,"unitOfMeasure":"SET","unitOfMeasureId":158},"productId":285,"quantity":1,"subTotal":296999,"unitPrice":296999}]
 			},
 			change2() {
 				if(this.UnitsList.length!=0){
@@ -814,18 +822,11 @@
 					}else if( this.UnitsList[0].rank==1){
 						this.ruleimg8=false;this.ruleimg10=true;this.ruleimg12=false;this.ruleimg15=false;this.ruleimg25=false;this.ruleimg4=false;
 					}
-					// this.ruleimg=true;
-					// this.ruleimg1=false;
-					// this.ruleimg2=false;
-					// this.boss1=false;
-					// this.boss2=false;
 					this.game = '1'
-
 				}, 300);
 				}else{
-          alertMsg3("Loading...Please Wait");
+          this.loading = true;
         }
-
 			},
 			change3() {
 				if(this.UnitsList.length!=0){
@@ -846,7 +847,7 @@
 					this.game = '3'
 				}, 300);
 				}else{
-          alertMsg3("Loading...Please Wait");
+          this.loading = true;
         }
 			},
 			change4() {
@@ -863,7 +864,7 @@
 					this.game = '2'
 				}, 300);
 				}else{
-          alertMsg3("Loading...Please Wait");
+          this.loading = true;
         }
 			},
 			change5() {
@@ -880,7 +881,7 @@
 					this.game = '6'
 				}, 300);
 				}else{
-          alertMsg3("Loading...Please Wait");
+          this.loading = true;
         }
 			},
 			change6() {
@@ -897,7 +898,7 @@
 					this.game = '4'
 				}, 300);
 				}else{
-          alertMsg3("Loading...Please Wait");
+          this.loading = true;
         }
 			},
 			change7() {
@@ -914,7 +915,7 @@
 					this.game = '5'
 				}, 300);
 				}else{
-          alertMsg3("Loading...Please Wait");
+          this.loading = true;
         }
 			},
 			change8() {
@@ -931,7 +932,7 @@
 					this.game = '7'
 				}, 300);
 				}else{
-          alertMsg3("Loading...Please Wait");
+          this.loading = true;
         }
 			},
 			bigboss(){
@@ -946,7 +947,7 @@
 				}
 				this.game = '9'
 				}else{
-          alertMsg3("Loading...Please Wait");
+          this.loading = true;
         }
 			},
 			pop(){
@@ -981,7 +982,7 @@
 			starpop(){
 				var audio = document.getElementById('music');
 					audio.pause();
-        alertMsg3("Loading...Please Wait");
+        this.loading = true;
 				if(this.game==='8'){
 				setTimeout(() => {
           if(this.part==='part1'){
@@ -1004,7 +1005,6 @@
 					})
 				}, 300);
 				}else if(this.game==='1'){
-				  console.log(this.UnitsList);
 					setTimeout(() => {
             if(this.part==='part1'){
               this.menuId=this.UnitsList[0].menu_detail_id_1;
@@ -1154,7 +1154,6 @@
 					}, 300);
 				}else if(this.game==='9'){
 					setTimeout(() => {
-            console.log(this.UnitsList[8]);
             if(this.part==='part1'){
               this.menuId=this.UnitsList[8].menu_detail_id_1;
             }else if(this.part==='part2'){
@@ -1442,8 +1441,6 @@
           if(this.unit===this.bgimg[i].spring){
             this.bgimg[i].active=true;
             this.spring=this.bgimg[i].spring;
-            // this.star="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/9-star2.png";
-            // this.lightstar="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/9-star.png";
             if(this.unit==='Seasons'){
               this.star="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/season-star2.png";
               this.lightstar="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/season-star.png";
@@ -1546,34 +1543,28 @@
           unitsId:this.unitsId
         })).then(res=>{
           this.UnitsList=res.data.UnitsList;
+          this.loading = false;
           this.sum=res.data.sumCoins;
           localStorage.setItem('sumCoins',this.sum);
-          // res.data.UnitsList.splice(8,1);
           for(var i=0;i<res.data.UnitsList.length;i++){
-            if(res.data.UnitsList[i].star=="0"){
+            if(res.data.UnitsList[i].star==="0"){
               this.stars[i].onestart=false;
               this.stars[i].twostart=false;
               this.stars[i].threestart=false;
-            }else if(res.data.UnitsList[i].star=="1"){
+            }else if(res.data.UnitsList[i].star==="1"){
               this.stars[i].onestart=true;
               this.stars[i].twostart=false;
               this.stars[i].threestart=false;
-            }else if(res.data.UnitsList[i].star=="2"){
+            }else if(res.data.UnitsList[i].star==="2"){
               this.stars[i].onestart=true;
               this.stars[i].twostart=true;
               this.stars[i].threestart=false;
-            }else if(res.data.UnitsList[i].star=="3"){
+            }else if(res.data.UnitsList[i].star==="3"){
               this.stars[i].onestart=true;
               this.stars[i].twostart=true;
               this.stars[i].threestart=true;
             }
           }
-          // this.startcoins=this.sum;
-          //
-          // if(this.startcoins>=20){
-          //  this.startcoins=20;
-          //  this.boss=true;
-          // }
         }, res => {
           console.info('false');
         });

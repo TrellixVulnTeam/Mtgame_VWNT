@@ -1344,6 +1344,132 @@
             img:require('../../assets/image/In the field/fence.png')
           }
         ],
+        SeasonsPart1:[
+          {
+            id:1,
+            cardName:'leaves',
+            audio:require('../../assets/Flashcard Audio/february/Barn.mp3'),
+            img:require('../../assets/image/Autumn and winter/Leaves.png')
+          },{
+            id:2,
+            cardName:'rake',
+            audio:require('../../assets/Flashcard Audio/february/Hay.mp3'),
+            img:require('../../assets/image/Autumn and winter/Rake.png')
+          },{
+            id:3,
+            cardName:'rain',
+            audio:require('../../assets/Flashcard Audio/february/Duck.mp3'),
+            img:require('../../assets/image/Autumn and winter/Rain.png')
+          },{
+            id:4,
+            cardName:'squirrel',
+            audio:require('../../assets/Flashcard Audio/february/Egg.mp3'),
+            img:require('../../assets/image/Autumn and winter/Squirrel.png')
+          },{
+            id:5,
+            cardName:'umbrella',
+            audio:require('../../assets/Flashcard Audio/february/Hen.mp3'),
+            img:require('../../assets/image/Autumn and winter/Umbrella.png')
+          },{
+            id:6,
+            cardName:'shiver',
+            audio:require('../../assets/Flashcard Audio/february/Feed.mp3'),
+            img:require('../../assets/image/Autumn and winter/Shiver.png')
+          },{
+            id:7,
+            cardName:'hot chocolate',
+            audio:require('../../assets/Flashcard Audio/february/Crow.mp3'),
+            img:require('../../assets/image/Autumn and winter/Hot Chocolate.png')
+          },{
+            id:8,
+            cardName:'snow',
+            audio:require('../../assets/Flashcard Audio/february/Sheep.mp3'),
+            img:require('../../assets/image/Autumn and winter/Snow.png')
+          },{
+            id:9,
+            cardName:'wind',
+            audio:require('../../assets/Flashcard Audio/february/Bucket.mp3'),
+            img:require('../../assets/image/Autumn and winter/Wind.png')
+          },{
+            id:10,
+            cardName:'icicles',
+            audio:require('../../assets/Flashcard Audio/february/Rooster.mp3'),
+            img:require('../../assets/image/Autumn and winter/Icicles.png')
+          },{
+            id:11,
+            cardName:'ice skating',
+            audio:require('../../assets/Flashcard Audio/february/Chick.mp3'),
+            img:require('../../assets/image/Autumn and winter/Ice Skating.png')
+          },{
+            id:12,
+            cardName:'ski',
+            audio:require('../../assets/Flashcard Audio/february/Cow.mp3'),
+            img:require('../../assets/image/Autumn and winter/Ski.png')
+          }
+        ],
+        SeasonsPart2:[
+          {
+            id:1,
+            cardName:'butterfly',
+            audio:require('../../assets/Flashcard Audio/february/Tractor.mp3'),
+            img:require('..'+'/../assets/image/Spring and summer/Butterfly.png')
+          },{
+            id:2,
+            cardName:'flowers',
+            audio:require('../../assets/Flashcard Audio/february/Plough.mp3'),
+            img:require('../../assets/image/Spring and summer/Flowers.png')
+          },{
+            id:3,
+            cardName:'kite',
+            audio:require('../../assets/Flashcard Audio/february/Pig.mp3'),
+            img:require('../../assets/image/Spring and summer/Kite.png')
+          },{
+            id:4,
+            cardName:'seeds',
+            audio:require('../../assets/Flashcard Audio/february/Apple.mp3'),
+            img:require('../../assets/image/Spring and summer/Seeds.png')
+          },{
+            id:5,
+            cardName:'ice scream',
+            audio:require('../../assets/Flashcard Audio/february/Tree.mp3'),
+            img:require('../../assets/image/Spring and summer/Ice Cream.png')
+          },{
+            id:6,
+            cardName:'picnic',
+            audio:require('../../assets/Flashcard Audio/february/Farmer.mp3'),
+            img:require('../../assets/image/Spring and summer/Picnic.png')
+          },{
+            id:7,
+            cardName:'swim',
+            audio:require('../../assets/Flashcard Audio/february/Gallop.mp3'),
+            img:require('../../assets/image/Spring and summer/Swim.png')
+          },{
+            id:8,
+            cardName:'sunny',
+            audio:require('../../assets/Flashcard Audio/february/Horse.mp3'),
+            img:require('../../assets/image/Spring and summer/Sun.png')
+          },{
+            id:9,
+            cardName:'hike',
+            audio:require('../../assets/Flashcard Audio/february/Plant.mp3'),
+            img:require('../../assets/image/Spring and summer/Hike.png')
+          },{
+            id:10,
+            cardName:'fly',
+            audio:require('../../assets/Flashcard Audio/february/Roll.mp3'),
+            img:require('../../assets/image/Spring and summer/Fly.png')
+          },{
+            id:11,
+            cardName:'plant',
+            audio:require('../../assets/Flashcard Audio/february/Pick.mp3'),
+            img:require('../../assets/image/Spring and summer/Plant.png')
+          },{
+            id:12,
+            cardName:'sunscreen',
+            audio:require('../../assets/Flashcard Audio/february/Fence.mp3'),
+            img:require('../../assets/image/Spring and summer/Sun Cream.png')
+          }
+        ],
         list:[],
         titleUrl:{
           MyCommunity:require('../../assets/image/2-logo.png'),
@@ -1379,6 +1505,8 @@
           MealTimePart2:require('../../assets/image/1-1logo2.png'),
           OntheFarmPart1:require('../../assets/image/2-2logo1.png'),
           OntheFarmPart2:require('../../assets/image/2-2logo2.png'),
+          SeasonsPart1:require('../../assets/image/season-logo1.png'),
+          SeasonsPart2:require('../../assets/image/season-logo2.png'),
         },
         title:'../../assets/image/6-6logo.png',
         flashCardUrl:'http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/9315e4a9-e1ec-4f49-8db5-5b3a9b6ae083.png',
@@ -1663,11 +1791,11 @@
     width: 15%;
     position: relative;
     display: inline-block;
-    //top: 25%;
   }
   .card-img1 {
     width: 95%;
     position: absolute;
+    left: 2%;
   }
 
   .card-img2 {

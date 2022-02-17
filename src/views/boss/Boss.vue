@@ -853,12 +853,6 @@
 		}else{
 			 this.show=true;
 		}
-		// this.part = this.$route.query.type;
-		//    if(this.part=='partBoss1'){
-		// 	   this.url=this.url1;
-		// 	}else if(this.part=='partBoss2'){
-		// 		this.url=this.url2;
-		// 	}
 			   this.$axios.post(this.url1, qs.stringify({
 			   menuDetailId:this.menuId,
 			   })).then(res => {
@@ -890,6 +884,9 @@
 
 				}, 1500);
 		    }
+         setTimeout(() => {
+             document.getElementById('alertFram').style.display = 'none'}
+           ,1000)
 			   }, res => {
 			   	alertMsg("You must be connected to the internet.<br>Please connect and try again.");
 			   });

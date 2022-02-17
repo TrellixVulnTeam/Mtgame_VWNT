@@ -2079,6 +2079,229 @@
              @click="showGif('tree')">
       </div>
     </div>
+    <div v-else-if="this.unit === 'Seasons' && this.part === 'part1'">
+      <img src="../../assets/image/Autumn and winter_MT/Walker_BG/BG__00000.png"
+           style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;"/>
+      <div class="hotChocolate">
+<!--        <img src="../../assets/image/Autumn and winter_MT/GIF_PNG/png/hot chocolate.png" v-if="hotChocolate" @click="showGif('hotChocolate')">-->
+        <img src="../../assets/image/Autumn and winter_MT/GIF_PNG/gif/hot chocolate.gif" style="z-index: 100" v-if="!hotChocolate"
+             @click="showGif('hotChocolate')">
+      </div>
+      <div class="iceSkating">
+        <img src="../../assets/image/Autumn and winter_MT/GIF_PNG/png/ice skating.png" v-if="iceSkating" @click="walkers&&showGif('iceSkating')">
+        <img src="../../assets/image/Autumn and winter_MT/GIF_PNG/gif/ice skating.gif" style="z-index: 100" v-if="!iceSkating"
+             @click="showGif('iceSkating')">
+      </div>
+      <div class="icicles">
+        <img src="../../assets/image/Autumn and winter_MT/GIF_PNG/png/icicles.png" v-if="icicles" @click="walkers&&showGif('icicles')">
+        <img src="../../assets/image/Autumn and winter_MT/GIF_PNG/gif/icicles.gif" style="z-index: 100" v-if="!icicles"
+             @click="showGif('icicles')">
+      </div>
+      <div class="leaves">
+        <img src="../../assets/image/Autumn and winter_MT/GIF_PNG/png/leaves.png" v-if="leaves" @click="showGif('leaves')">
+        <img src="../../assets/image/Autumn and winter_MT/GIF_PNG/gif/leaves.gif" style="z-index: 100" v-if="!leaves"
+             @click="showGif('leaves')">
+      </div>
+      <div class="rain">
+        <img src="../../assets/image/Autumn and winter_MT/GIF_PNG/png/rain.png" v-if="rain" @click="showGif('rain')">
+        <img src="../../assets/image/Autumn and winter_MT/GIF_PNG/gif/rain.gif" style="z-index: 100" v-if="!rain"
+             @click="showGif('rain')">
+      </div>
+      <div class="rake">
+        <img src="../../assets/image/Autumn and winter_MT/GIF_PNG/png/rake.png" v-if="rake" @click="showGif('rake')">
+        <img src="../../assets/image/Autumn and winter_MT/GIF_PNG/gif/rake.gif" style="z-index: 100" v-if="!rake"
+             @click="showGif('rake')">
+      </div>
+      <div class="shiver">
+        <img src="../../assets/image/Autumn and winter_MT/GIF_PNG/png/shiver.png" v-if="shiver&&hotChocolate" @click="showGif('shiver')">
+        <img src="../../assets/image/Autumn and winter_MT/GIF_PNG/gif/shiver.gif" style="z-index: 100" v-if="!shiver"
+             @click="showGif('shiver')">
+      </div>
+      <div class="ski">
+        <img src="../../assets/image/Autumn and winter_MT/GIF_PNG/png/ski.png" v-if="ski" @click="walkers&&showGif('ski')">
+        <img src="../../assets/image/Autumn and winter_MT/GIF_PNG/gif/ski.gif" style="z-index: 100" v-if="!ski"
+             @click="showGif('ski')">
+      </div>
+      <div class="snow2">
+        <img src="../../assets/image/Autumn and winter_MT/GIF_PNG/png/snow.png" v-if="snow2" @click="showGif('snow2')">
+        <img src="../../assets/image/Autumn and winter_MT/GIF_PNG/gif/snow.gif" style="z-index: 100" v-if="!snow2"
+             @click="showGif('snow2')">
+      </div>
+      <div class="squirrel">
+        <img src="../../assets/image/Autumn and winter_MT/GIF_PNG/png/squirrel.png" v-if="squirrel" @click="showGif('squirrel')">
+        <img src="../../assets/image/Autumn and winter_MT/GIF_PNG/gif/squirrel.gif" style="z-index: 100" v-if="!squirrel"
+             @click="showGif('squirrel')">
+      </div>
+      <div class="umbrella">
+        <img src="../../assets/image/Autumn and winter_MT/GIF_PNG/png/umbrella.png" v-if="umbrella" @click="showGif('umbrella')">
+        <img src="../../assets/image/Autumn and winter_MT/GIF_PNG/gif/umbrella.gif" style="z-index: 100" v-if="!umbrella"
+             @click="showGif('umbrella')">
+      </div>
+      <div class="wind1">
+        <img src="../../assets/image/Autumn and winter_MT/GIF_PNG/png/wind.png" v-if="wind1" @click="walkers&&showGif('wind1')">
+        <img src="../../assets/image/Autumn and winter_MT/GIF_PNG/gif/wind.gif" style="z-index: 100" v-if="!wind1"
+             @click="showGif('wind1')">
+      </div>
+      <div class="rakeButton">
+        <img src="../../assets/image/Autumn and winter_MT/words/word_rake Comp 1_00000.png"
+             :style="{zIndex: !rake ? 100 : 1}" @click="showGif('rake')">
+      </div>
+      <div class="leavesButton">
+        <img src="../../assets/image/Autumn and winter_MT/words/word_leaves Comp 1_00000.png"
+             :style="{zIndex: !leaves ? 100 : 1}" @click="showGif('leaves')">
+      </div>
+      <div class="rainButton">
+        <img src="../../assets/image/Autumn and winter_MT/words/word_rain Comp 1_00000.png"
+             :style="{zIndex: !rain ? 100 : 1}" @click="showGif('rain')">
+      </div>
+      <div class="umbrellaButton">
+        <img src="../../assets/image/Autumn and winter_MT/words/word_umbrella Comp 1_00000.png"
+             :style="{zIndex: !umbrella ? 100 : 1}" @click="showGif('umbrella')">
+      </div>
+      <div class="squirrelButton">
+        <img src="../../assets/image/Autumn and winter_MT/words/word_squirrel Comp 1_00000.png"
+             :style="{zIndex: !squirrel ? 100 : 1}" @click="showGif('squirrel')">
+      </div>
+      <div class="shiverButton">
+        <img src="../../assets/image/Autumn and winter_MT/words/word_shiver Comp 1_00000.png"
+             :style="{zIndex: !shiver ? 100 : 1}" @click="showGif('shiver')">
+      </div>
+      <div class="wind1Button">
+        <img src="../../assets/image/Autumn and winter_MT/words/word_wind Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !wind1 ? 100 : 1}" @click="showGif('wind1')">
+      </div>
+      <div class="iciclesButton">
+        <img src="../../assets/image/Autumn and winter_MT/words/word_icicles Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !icicles ? 100 : 1}" @click="showGif('icicles')">
+      </div>
+      <div class="hotChocolateButton">
+        <img src="../../assets/image/Autumn and winter_MT/words/word_hot chocolate Comp 1_00000.png"
+             :style="{zIndex: !hotChocolate ? 100 : 1}" @click="showGif('hotChocolate')">
+      </div>
+      <div class="iceSkatingButton">
+        <img src="../../assets/image/Autumn and winter_MT/words/word_ice skating Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !iceSkating ? 100 : 1}" @click="showGif('iceSkating')">
+      </div>
+      <div class="snow2Button">
+        <img src="../../assets/image/Autumn and winter_MT/words/word_snow Comp 1_00000.png"
+             :style="{zIndex: !snow2 ? 100 : 1}" @click="showGif('snow2')">
+      </div>
+      <div class="skiButton">
+        <img src="../../assets/image/Autumn and winter_MT/words/word_ski Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !ski ? 100 : 1}" @click="showGif('ski')">
+      </div>
+    </div>
+    <div v-else-if="this.unit === 'Seasons' && this.part === 'part2'">
+      <img src="../../assets/image/Spring and summer_MT/Walker_BG/BG__00000.png"
+           style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;"/>
+      <div class="butterfly">
+        <img src="../../assets/image/Spring and summer_MT/GIF_PNG/png/butterfly.png" v-if="butterfly" @click="showGif('butterfly')">
+        <img src="../../assets/image/Spring and summer_MT/GIF_PNG/gif/butterfly.gif" style="z-index: 100" v-if="!butterfly"
+             @click="showGif('butterfly')">
+      </div>
+      <div class="flowers">
+        <img src="../../assets/image/Spring and summer_MT/GIF_PNG/png/flowers.png" v-if="flowers" @click="showGif('flowers')">
+        <img src="../../assets/image/Spring and summer_MT/GIF_PNG/gif/flowers.gif" style="z-index: 100" v-if="!flowers"
+             @click="showGif('flowers')">
+      </div>
+      <div class="fly">
+        <img src="../../assets/image/Spring and summer_MT/GIF_PNG/gif/fly.gif" style="z-index: 100" v-if="!fly"
+             @click="showGif('fly')">
+      </div>
+      <div class="hike">
+        <img src="../../assets/image/Spring and summer_MT/GIF_PNG/png/hike.png" v-if="hike" @click="walkers&&showGif('hike')">
+        <img src="../../assets/image/Spring and summer_MT/GIF_PNG/gif/hike.gif" style="z-index: 100" v-if="!hike"
+             @click="showGif('hike')">
+      </div>
+      <div class="iceCream1">
+        <img src="../../assets/image/Spring and summer_MT/GIF_PNG/png/ice cream.png" v-if="iceCream1" @click="showGif('iceCream1')">
+        <img src="../../assets/image/Spring and summer_MT/GIF_PNG/gif/ice cream.gif" style="z-index: 100" v-if="!iceCream1"
+             @click="showGif('iceCream1')">
+      </div>
+      <div class="kite">
+        <img src="../../assets/image/Spring and summer_MT/GIF_PNG/png/kite.png" v-if="kite&&fly" @click="showGif('kite')">
+        <img src="../../assets/image/Spring and summer_MT/GIF_PNG/gif/kite.gif" style="z-index: 100" v-if="!kite"
+             @click="showGif('kite')">
+      </div>
+      <div class="picnic">
+        <img src="../../assets/image/Spring and summer_MT/GIF_PNG/png/picnic.png" v-if="picnic" @click="showGif('picnic')">
+        <img src="../../assets/image/Spring and summer_MT/GIF_PNG/gif/picnic.gif" style="z-index: 100" v-if="!picnic"
+             @click="showGif('picnic')">
+      </div>
+      <div class="plant">
+        <img src="../../assets/image/Spring and summer_MT/GIF_PNG/png/plant.png" v-if="plant" @click="walkers&&showGif('plant')">
+        <img src="../../assets/image/Spring and summer_MT/GIF_PNG/gif/plant.gif" style="z-index: 100" v-if="!plant"
+             @click="showGif('plant')">
+      </div>
+      <div class="seeds">
+        <img src="../../assets/image/Spring and summer_MT/GIF_PNG/png/seeds.png" v-if="seeds" @click="showGif('seeds')">
+        <img src="../../assets/image/Spring and summer_MT/GIF_PNG/gif/seeds.gif" style="z-index: 100" v-if="!seeds"
+             @click="showGif('seeds')">
+      </div>
+      <div class="sunny">
+        <img src="../../assets/image/Spring and summer_MT/GIF_PNG/png/sunny.png" v-if="sunny" @click="showGif('sunny')">
+        <img src="../../assets/image/Spring and summer_MT/GIF_PNG/gif/sunny.gif" style="z-index: 100" v-if="!sunny"
+             @click="showGif('sunny')">
+      </div>
+      <div class="sunscreen">
+        <img src="../../assets/image/Spring and summer_MT/GIF_PNG/png/sunscreen.png" v-if="sunscreen" @click="walkers&&showGif('sunscreen')">
+        <img src="../../assets/image/Spring and summer_MT/GIF_PNG/gif/sunscreen.gif" style="z-index: 100" v-if="!sunscreen"
+             @click="showGif('sunscreen')">
+      </div>
+      <div class="swim">
+        <img src="../../assets/image/Spring and summer_MT/GIF_PNG/png/swim.png" v-if="swim" @click="showGif('swim')">
+        <img src="../../assets/image/Spring and summer_MT/GIF_PNG/gif/swim.gif" style="z-index: 100" v-if="!swim"
+             @click="showGif('swim')">
+      </div>
+      <div class="butterflyButton">
+        <img src="../../assets/image/Spring and summer_MT/words/word_butterfly Comp 1_00000.png"
+             :style="{zIndex: !butterfly ? 100 : 1}" @click="showGif('butterfly')">
+      </div>
+      <div class="flowersButton">
+        <img src="../../assets/image/Spring and summer_MT/words/word_flowers Comp 1_00000.png"
+             :style="{zIndex: !flowers ? 100 : 1}" @click="showGif('flowers')">
+      </div>
+      <div class="flyButton">
+        <img src="../../assets/image/Spring and summer_MT/words/word_fly Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !fly ? 100 : 1}" @click="showGif('fly')">
+      </div>
+      <div class="hikeButton">
+        <img src="../../assets/image/Spring and summer_MT/words/word_hike Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !hike ? 100 : 1}" @click="showGif('hike')">
+      </div>
+      <div class="iceCream1Button">
+        <img src="../../assets/image/Spring and summer_MT/words/word_ice cream Comp 1_00000.png"
+             :style="{zIndex: !iceCream1 ? 100 : 1}" @click="showGif('iceCream1')">
+      </div>
+      <div class="kiteButton">
+        <img src="../../assets/image/Spring and summer_MT/words/word_kite Comp 1_00000.png"
+             :style="{zIndex: !kite ? 100 : 1}" @click="showGif('kite')">
+      </div>
+      <div class="picnicButton">
+        <img src="../../assets/image/Spring and summer_MT/words/word_picnic Comp 1_00000.png"
+             :style="{zIndex: !picnic ? 100 : 1}" @click="showGif('picnic')">
+      </div>
+      <div class="plantButton">
+        <img src="../../assets/image/Spring and summer_MT/words/word_plant Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !plant ? 100 : 1}" @click="showGif('plant')">
+      </div>
+      <div class="seedsButton">
+        <img src="../../assets/image/Spring and summer_MT/words/seeds.png"
+             :style="{zIndex: !seeds ? 100 : 1}" @click="showGif('seeds')">
+      </div>
+      <div class="sunnyButton">
+        <img src="../../assets/image/Spring and summer_MT/words/word_sunny Comp 1_00000.png"
+             :style="{zIndex: !sunny ? 100 : 1}" @click="showGif('sunny')">
+      </div>
+      <div class="sunscreenButton">
+        <img src="../../assets/image/Spring and summer_MT/words/word_sunscreen Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !sunscreen ? 100 : 1}" @click="showGif('sunscreen')">
+      </div>
+      <div class="swimButton">
+        <img src="../../assets/image/Spring and summer_MT/words/word_swim Comp 1_00000.png"
+             :style="{zIndex: !swim ? 100 : 1}" @click="showGif('swim')">
+      </div>
+    </div>
     <div v-else>
     <img src="../../assets/image/H5 Thing/Walker_BG/bg_0.png"
          style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;">
@@ -2444,8 +2667,57 @@ export default {
           sheep:require('../../assets/Flashcard Audio/february/Sheep.mp3'),
           tractor:require('../../assets/Flashcard Audio/february/Tractor.mp3'),
           tree:require('../../assets/Flashcard Audio/february/Tree.mp3'),
+          //march
+          butterfly:require('../../assets/Flashcard Audio/february/Tree.mp3'),
+          flowers:require('../../assets/Flashcard Audio/february/Tree.mp3'),
+          fly:require('../../assets/Flashcard Audio/february/Tree.mp3'),
+          hike:require('../../assets/Flashcard Audio/february/Tree.mp3'),
+          iceCream1:require('../../assets/Flashcard Audio/february/Tree.mp3'),
+          kite:require('../../assets/Flashcard Audio/february/Tree.mp3'),
+          picnic:require('../../assets/Flashcard Audio/february/Tree.mp3'),
+          plant:require('../../assets/Flashcard Audio/february/Tree.mp3'),
+          seeds:require('../../assets/Flashcard Audio/february/Tree.mp3'),
+          sunny:require('../../assets/Flashcard Audio/february/Tree.mp3'),
+          sunscreen:require('../../assets/Flashcard Audio/february/Tree.mp3'),
+          swim:require('../../assets/Flashcard Audio/february/Tree.mp3'),
+          hotChocolate:require('../../assets/Flashcard Audio/february/Tree.mp3'),
+          iceSkating:require('../../assets/Flashcard Audio/february/Tree.mp3'),
+          icicles:require('../../assets/Flashcard Audio/february/Tree.mp3'),
+          leaves:require('../../assets/Flashcard Audio/february/Tree.mp3'),
+          rain:require('../../assets/Flashcard Audio/february/Tree.mp3'),
+          rake:require('../../assets/Flashcard Audio/february/Tree.mp3'),
+          shiver:require('../../assets/Flashcard Audio/february/Tree.mp3'),
+          ski:require('../../assets/Flashcard Audio/february/Tree.mp3'),
+          snow2:require('../../assets/Flashcard Audio/february/Tree.mp3'),
+          squirrel:require('../../assets/Flashcard Audio/february/Tree.mp3'),
+          umbrella:require('../../assets/Flashcard Audio/february/Tree.mp3'),
+          wind1:require('../../assets/Flashcard Audio/february/Tree.mp3'),
         },
         cardType:'default',
+        butterfly:true,
+        flowers:true,
+        fly:true,
+        hike:true,
+        iceCream1:true,
+        kite:true,
+        picnic:true,
+        plant:true,
+        seeds:true,
+        sunny:true,
+        sunscreen:true,
+        swim:true,
+        hotChocolate:true,
+        iceSkating:true,
+        icicles:true,
+        leaves:true,
+        rain:true,
+        rake:true,
+        shiver:true,
+        ski:true,
+        snow2:true,
+        squirrel:true,
+        umbrella:true,
+        wind1:true,
         barn:true,
         bucket:true,
         chick:true,
@@ -2763,14 +3035,11 @@ export default {
       this.style = this.$route.query.style;
       this.cources = this.$route.query.cources;
       this.part = this.$route.query.part;
-      // localStorage.setItem('gamename', this.gamename);
       if (this.level === "WALKERS") {
         this.walkers = false;
       } else if (this.level === "RUNNERS") {
         this.walkers = true;
       }
-      // var timestamp = (new Date()).getTime();
-      // localStorage.setItem('startTimeid', timestamp);
       if (localStorage.getItem('gamemusic') === "false") {
         this.show = false;
       } else {
@@ -2778,19 +3047,6 @@ export default {
         const audio = document.getElementById('music');
         audio.pause();
       }
-
-      // 统计时间
-      // this.$axios.post(this.timeurl, qs.stringify({
-      //   id: timestamp,
-      //   time: timestamp,
-      //   name: this.gamename,
-      //   studentId: localStorage.getItem('studentId')
-      // })).then(res => {
-      //   // console.log(res.data);
-      // }, res => {
-      //   alertMsg("You must be connected to the internet.<br>Please connect and try again.");
-      // });
-
 
       if (window.history && window.history.pushState) {
         history.pushState(null, null, document.URL);
@@ -2833,33 +3089,7 @@ export default {
         }
       },
 
-      // help() {
-      //   if (this.onef == false) {
-      //     this.spanp = "Listen to the word and circle the correct letter.";
-      //     this.popp = !this.popp;
-      //     if (this.list1[0].rank == 0) {
-      //       this.ruleimg8 = true;
-      //       this.ruleimg10 = false;
-      //     } else if (this.list1[0].rank == 1) {
-      //       this.ruleimg8 = false;
-      //       this.ruleimg10 = true;
-      //     }
-      //   }
-      // },
       gomemu() {
-        // var endtimestamp = (new Date()).getTime();
-        // this.$axios.post(this.timeurl, qs.stringify({
-        //   id: localStorage.getItem('startTimeid'),
-        //   time: endtimestamp,
-        //   name: this.gamename,
-        //   studentId: localStorage.getItem('studentId')
-        // })).then(res => {
-        //   localStorage.setItem('startTimeid', '');
-        //   localStorage.setItem('gamename', '');
-        // }, res => {
-        //   alertMsg("You must be connected to the internet.<br>Please connect and try again.");
-        // });
-
         this.$router.push({ //核心语句
           path: '/flashcard', //跳转的路径
           query: {
@@ -2885,6 +3115,7 @@ export default {
         }
       }
     },
+
     watch: {
       'onef': function (newVal) {
         if (this.onef === true) {
@@ -2893,7 +3124,6 @@ export default {
             this.zhezhao = false;
             // this.video=true;
           }, 2000);
-
         }
       },
       'video': function (newVal) {
@@ -2941,6 +3171,357 @@ export default {
     position: fixed;
     background-color: #44ccc2;
     z-index: 201;
+  }
+
+  .seedsButton img {
+    width: 9%;
+    left: 38%;
+    top: 88%;
+    position: absolute;
+  }
+
+  .butterflyButton img {
+    width: 8%;
+    left: 4%;
+    top: 66%;
+    position: absolute;
+  }
+
+  .flowersButton img {
+    width: 8%;
+    left: 12%;
+    top: 91%;
+    position: absolute;
+  }
+
+  .flyButton img {
+    width: 4%;
+    left: 22%;
+    top: 31%;
+    position: absolute;
+  }
+
+  .hikeButton img {
+    width: 6%;
+    left: 11%;
+    top: 40%;
+    position: absolute;
+  }
+
+  .iceCream1Button img {
+    width: 9%;
+    left: 55%;
+    top: 62%;
+    position: absolute;
+  }
+
+  .kiteButton img {
+    width: 6%;
+    left: 31%;
+    top: 6%;
+    position: absolute;
+  }
+
+  .picnicButton img {
+    width: 8%;
+    left: 66%;
+    top: 87%;
+    position: absolute;
+  }
+
+  .plantButton img {
+    width: 8%;
+    left: 26%;
+    top: 70%;
+    position: absolute;
+  }
+
+  .sunnyButton img {
+    width: 7%;
+    left: 87%;
+    top: 21%;
+    position: absolute;
+  }
+
+  .sunscreenButton img {
+    width: 9%;
+    left: 68%;
+    top: 49%;
+    position: absolute;
+  }
+
+  .swimButton img {
+    width: 6%;
+    left: 60%;
+    top: 17%;
+    position: absolute;
+  }
+
+  .butterfly img {
+    width: 10%;
+    left: 2%;
+    top: 67%;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .flowers img {
+    width: 19%;
+    left: 0%;
+    top: 76%;
+    position: absolute;
+  }
+
+  .fly img {
+    width: 33%;
+    left: 20%;
+    top: 5%;
+    position: absolute;
+  }
+
+  .hike img {
+    width: 15%;
+    left: 2%;
+    top: 16%;
+    position: absolute;
+  }
+
+  .iceCream1 img {
+    width: 8%;
+    left: 55%;
+    top: 48%;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .kite img {
+    width: 33%;
+    left: 21%;
+    top: 5.5%;
+    position: absolute;
+  }
+
+  .picnic img {
+    width: 46%;
+    height: 59%;
+    left: 54%;
+    top: 41%;
+    position: absolute;
+  }
+
+  .plant img {
+    width: 26%;
+    height: 48%;
+    left: 14.5%;
+    top: 41%;
+    position: absolute;
+  }
+
+  .seeds img {
+    width: 15%;
+    left: 39%;
+    top: 73%;
+    position: absolute;
+  }
+
+  .sunny img {
+    width: 17%;
+    left: 83%;
+    top: 0%;
+    position: absolute;
+  }
+
+  .sunscreen img {
+    width: 5%;
+    left: 66%;
+    top: 56%;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .swim img {
+    width: 25%;
+    left: 55%;
+    top: 17%;
+    position: absolute;
+  }
+
+  .rakeButton img {
+    width: 5%;
+    left: 5%;
+    top: 41%;
+    position: absolute;
+  }
+
+  .leavesButton img {
+    width: 6%;
+    left: 7%;
+    top: 84%;
+    position: absolute;
+  }
+
+  .umbrellaButton img {
+    width: 7%;
+    left: 23%;
+    top: 71%;
+    position: absolute;
+  }
+
+  .rainButton img {
+    width: 5%;
+    left: 16%;
+    top: 10%;
+    position: absolute;
+  }
+
+  .squirrelButton img {
+    width: 6%;
+    left: 23%;
+    top: 30%;
+    position: absolute;
+  }
+
+  .shiverButton img {
+    width: 6%;
+    left: 40%;
+    top: 60%;
+    position: absolute;
+  }
+
+  .wind1Button img {
+    width: 5%;
+    left: 45%;
+    top: 13%;
+    position: absolute;
+  }
+
+  .iciclesButton img {
+    width: 6%;
+    left: 58%;
+    top: 40%;
+    position: absolute;
+  }
+
+  .hotChocolateButton img {
+    width: 9%;
+    left: 51%;
+    top: 55%;
+    position: absolute;
+  }
+
+  .iceSkatingButton img {
+    width: 7%;
+    left: 72%;
+    top: 87%;
+    position: absolute;
+  }
+
+  .snow2Button img {
+    width: 6%;
+    left: 69%;
+    top: 11%;
+    position: absolute;
+  }
+
+  .skiButton img {
+    width: 5%;
+    left: 93%;
+    top: 42%;
+    position: absolute;
+  }
+
+  .hotChocolate img {
+    width: 6%;
+    left: 19%;
+    top: 20%;
+    position: absolute;
+  }
+
+  .iceSkating img {
+    width: 22%;
+    left: 65%;
+    top: 45%;
+    position: absolute;
+  }
+
+  .icicles img {
+    width: 21%;
+    left: 54%;
+    top: 10%;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .leaves img {
+    width: 32%;
+    left: 0;
+    top: 76%;
+    position: absolute;
+  }
+
+  .rain img {
+    width: 16%;
+    left: 14%;
+    top: -1%;
+    position: absolute;
+  }
+
+  .rake img {
+    width: 23%;
+    left: 2%;
+    top: 25%;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .shiver img {
+    width: 17%;
+    left: 39%;
+    top: 32%;
+    position: absolute;
+  }
+
+  .hotChocolate img {
+    width: 17%;
+    left: 39%;
+    top: 32%;
+    position: absolute;
+  }
+
+  .ski img {
+    width: 23%;
+    left: 77%;
+    top: -1%;
+    position: absolute;
+  }
+
+  .snow2 img {
+    width: 30%;
+    left: 51%;
+    top: 0%;
+    position: absolute;
+  }
+
+  .squirrel img {
+    width: 7%;
+    left: 23%;
+    top: 32%;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .umbrella img {
+    width: 24%;
+    left: 16%;
+    top: 34%;
+    position: absolute;
+  }
+
+  .wind1 img {
+    width: 20%;
+    left: 29%;
+    top: 0%;
+    position: absolute;
   }
 
   .barnButton img {
@@ -3065,7 +3646,7 @@ export default {
   }
   .hay img {
     width: 21%;
-    left: 0%;
+    left: 0;
     top: 33%;
     position: absolute;
   }
@@ -3178,7 +3759,7 @@ export default {
   }
   .roll img {
     width: 35%;
-    left: 0%;
+    left: 0;
     top: 55%;
     position: absolute;
   }
@@ -3656,7 +4237,7 @@ export default {
   .scarf img {
     width: 50%;
     left: 46.5%;
-    top: 0%;
+    top: 0;
     position: absolute;
   }
 
@@ -3672,7 +4253,7 @@ export default {
     width: 73%;
     left: 27%;
     height: 50%;
-    top: 0%;
+    top: 0;
     position: absolute;
   }
 
@@ -4314,7 +4895,7 @@ export default {
 
   .play img {
     width: 14%;
-    left: 0%;
+    left: 0;
     top: 43%;
     position: absolute;
     z-index: 3;
@@ -4502,13 +5083,13 @@ export default {
   .still_roar img {
     width: 12%;
     left: 16%;
-    top: 0%;
+    top: 0;
     position: absolute;
   }
 
   .giraffe img {
     width: 12%;
-    left: 0%;
+    left: 0;
     top: 47%;
     position: absolute;
     z-index: 1;
@@ -4903,7 +5484,7 @@ export default {
   .playground img {
     width: 100%;
     left: 0.5%;
-    top: 0%;
+    top: 0;
     height: 100%;
     position: absolute;
   }
@@ -5282,7 +5863,7 @@ export default {
 
     img {
       width: 90%;
-      top: 0%;
+      top: 0;
       left: 5%;
       position: absolute;
     }
@@ -5517,7 +6098,7 @@ export default {
   .tent img {
     width: 38%;
     top: -2%;
-    left: 0%;
+    left: 0;
     transform: rotate(-5deg);
     position: absolute;
     z-index: 1;
@@ -5633,7 +6214,7 @@ export default {
   .waves img {
     width: 100%;
     top: -6%;
-    left: 0%;
+    left: 0;
     position: absolute;
   }
 
@@ -5738,13 +6319,13 @@ export default {
   .cactus {
     height: 40%;
     width: 10%;
-    top: 0%;
+    top: 0;
     position: absolute;
 
     img {
       width: 400%;
       top: 131%;
-      left: 0%;
+      left: 0;
       position: absolute;
     }
   }
@@ -5752,7 +6333,7 @@ export default {
   .cactusbutton {
     height: 40%;
     width: 10%;
-    top: 0%;
+    top: 0;
     position: absolute;
 
     img {
@@ -5766,7 +6347,7 @@ export default {
   .camel {
     height: 40%;
     width: 10%;
-    top: 0%;
+    top: 0;
     position: absolute;
 
     img {
@@ -5788,7 +6369,7 @@ export default {
   .compass {
     height: 40%;
     width: 10%;
-    top: 0%;
+    top: 0;
     position: absolute;
 
     img {
@@ -5809,7 +6390,7 @@ export default {
   .dunes {
     height: 40%;
     width: 10%;
-    top: 0%;
+    top: 0;
     position: absolute;
 
     img {
@@ -5834,7 +6415,7 @@ export default {
   .hot {
     height: 40%;
     width: 10%;
-    top: 0%;
+    top: 0;
     position: absolute;
 
     img {
@@ -5900,7 +6481,7 @@ export default {
   .map {
     height: 40%;
     width: 10%;
-    top: 0%;
+    top: 0;
     position: absolute;
 
     img {
@@ -5922,7 +6503,7 @@ export default {
   .sand {
     height: 40%;
     width: 10%;
-    top: 0%;
+    top: 0;
     position: absolute;
 
     img {
@@ -5944,7 +6525,7 @@ export default {
   .sandstorm {
     height: 40%;
     width: 10%;
-    top: 0%;
+    top: 0;
     position: absolute;
 
     img {
@@ -5959,7 +6540,7 @@ export default {
   .thirsty {
     height: 40%;
     width: 10%;
-    top: 0%;
+    top: 0;
     position: absolute;
 
     img {
@@ -5981,7 +6562,7 @@ export default {
   .water {
     height: 40%;
     width: 10%;
-    top: 0%;
+    top: 0;
     position: absolute;
 
     img {
@@ -6003,7 +6584,7 @@ export default {
   .shovel {
     height: 40%;
     width: 10%;
-    top: 0%;
+    top: 0;
     position: absolute;
 
     img {
@@ -6025,7 +6606,7 @@ export default {
   .igloo {
     height: 40%;
     width: 10%;
-    top: 0%;
+    top: 0;
     position: absolute;
 
     img {
@@ -6040,7 +6621,7 @@ export default {
   .igloobutton {
     height: 40%;
     width: 10%;
-    top: 0%;
+    top: 0;
     position: absolute;
 
     img {
@@ -6054,7 +6635,7 @@ export default {
   .cold {
     height: 40%;
     width: 10%;
-    top: 0%;
+    top: 0;
     position: absolute;
 
     img {
@@ -6069,7 +6650,7 @@ export default {
   .coldbutton {
     height: 40%;
     width: 10%;
-    top: 0%;
+    top: 0;
     position: absolute;
 
     img {
@@ -6083,7 +6664,7 @@ export default {
   .tusk {
     height: 40%;
     width: 10%;
-    top: 0%;
+    top: 0;
     position: absolute;
 
     img {
@@ -6098,7 +6679,7 @@ export default {
   .tuskbutton {
     height: 40%;
     width: 10%;
-    top: 0%;
+    top: 0;
     position: absolute;
 
     img {
@@ -6112,7 +6693,7 @@ export default {
   .walrusbutton {
     height: 40%;
     width: 10%;
-    top: 0%;
+    top: 0;
     position: absolute;
 
     img {
@@ -6125,7 +6706,7 @@ export default {
   .orca {
     height: 40%;
     width: 10%;
-    top: 0%;
+    top: 0;
     position: absolute;
 
     img {
@@ -6140,7 +6721,7 @@ export default {
   .orcabutton {
     height: 40%;
     width: 10%;
-    top: 0%;
+    top: 0;
     position: absolute;
 
     img {
@@ -6154,7 +6735,7 @@ export default {
   .ice {
     height: 40%;
     width: 10%;
-    top: 0%;
+    top: 0;
     position: absolute;
 
     img {
@@ -6168,7 +6749,7 @@ export default {
   .icebutton {
     height: 40%;
     width: 10%;
-    top: 0%;
+    top: 0;
     position: absolute;
 
     img {
@@ -6182,7 +6763,7 @@ export default {
   .seal {
     height: 40%;
     width: 10%;
-    top: 0%;
+    top: 0;
     position: absolute;
 
     img {
@@ -6197,7 +6778,7 @@ export default {
   .sealbutton {
     height: 40%;
     width: 10%;
-    top: 0%;
+    top: 0;
     position: absolute;
 
     img {
@@ -6211,7 +6792,7 @@ export default {
   .sled {
     height: 40%;
     width: 10%;
-    top: 0%;
+    top: 0;
     position: absolute;
 
     img {
@@ -6225,7 +6806,7 @@ export default {
   .sledbutton {
     height: 40%;
     width: 10%;
-    top: 0%;
+    top: 0;
     position: absolute;
 
     img {
@@ -6239,7 +6820,7 @@ export default {
   .polarbear {
     height: 40%;
     width: 10%;
-    top: 0%;
+    top: 0;
     position: absolute;
 
     img {
@@ -6253,7 +6834,7 @@ export default {
   .polarbearbutton {
     height: 40%;
     width: 10%;
-    top: 0%;
+    top: 0;
     position: absolute;
 
     img {
@@ -6267,7 +6848,7 @@ export default {
   .snow {
     height: 40%;
     width: 10%;
-    top: 0%;
+    top: 0;
     position: absolute;
 
     img {
@@ -6281,7 +6862,7 @@ export default {
   .snowbutton {
     height: 40%;
     width: 10%;
-    top: 0%;
+    top: 0;
     position: absolute;
 
     img {
@@ -6295,7 +6876,7 @@ export default {
   .iceberg {
     height: 40%;
     width: 10%;
-    top: 0%;
+    top: 0;
     position: absolute;
 
     img {
@@ -6309,7 +6890,7 @@ export default {
   .icebergbutton {
     height: 40%;
     width: 10%;
-    top: 0%;
+    top: 0;
     position: absolute;
     img {
       width: 85%;
@@ -6322,7 +6903,7 @@ export default {
   .blizzard {
     height: 40%;
     width: 10%;
-    top: 0%;
+    top: 0;
     position: absolute;
 
     img {
@@ -6336,7 +6917,7 @@ export default {
   .blizzardbutton {
     height: 40%;
     width: 10%;
-    top: 0%;
+    top: 0;
     position: absolute;
 
     img {
@@ -6350,7 +6931,7 @@ export default {
   .dragon {
     height: 40%;
     width: 10%;
-    top: 0%;
+    top: 0;
     position: absolute;
 
     img {
@@ -6381,7 +6962,7 @@ export default {
   .shield {
     height: 40%;
     width: 10%;
-    top: 0%;
+    top: 0;
     position: absolute;
 
     img {
@@ -6524,7 +7105,7 @@ export default {
   .queen {
     height: 40%;
     width: 10%;
-    top: 0%;
+    top: 0;
     position: absolute;
 
     img {
@@ -6555,7 +7136,7 @@ export default {
   .king {
     height: 40%;
     width: 10%;
-    top: 0%;
+    top: 0;
     position: absolute;
 
     img {
@@ -6586,7 +7167,7 @@ export default {
   .wizard {
     height: 40%;
     width: 10%;
-    top: 0%;
+    top: 0;
     position: absolute;
 
     img {
@@ -6617,7 +7198,7 @@ export default {
   .princess {
     height: 40%;
     width: 10%;
-    top: 0%;
+    top: 0;
     position: absolute;
 
     img {
@@ -6673,7 +7254,7 @@ export default {
     img {
       width: 90%;
       top: 15%;
-      left: 0%;
+      left: 0;
       position: absolute;
     }
   }
@@ -6757,7 +7338,7 @@ export default {
 
     img {
       width: 90%;
-      top: 0%;
+      top: 0;
       left: 5%;
       position: absolute;
     }
@@ -6836,14 +7417,14 @@ export default {
     width: 20%;
     display: block;
     float: left;
-    top: 0%;
+    top: 0;
     right: 15%;
     position: absolute;
 
     img {
       width: 50%;
       top: 70%;
-      left: 0%;
+      left: 0;
       position: absolute;
     }
   }
@@ -6860,7 +7441,7 @@ export default {
     img {
       width: 50%;
       top: 70%;
-      left: 0%;
+      left: 0;
       position: absolute;
     }
   }
@@ -6871,12 +7452,12 @@ export default {
     display: block;
     float: left;
     top: 50%;
-    right: 0%;
+    right: 0;
     position: absolute;
 
     img {
       width: 55%;
-      top: 0%;
+      top: 0;
       left: 40%;
       position: absolute;
     }
@@ -6888,7 +7469,7 @@ export default {
     display: block;
     float: left;
     top: 70%;
-    right: 0%;
+    right: 0;
     position: absolute;
 
     img {
@@ -6919,7 +7500,7 @@ export default {
     display: block;
     float: left;
     top: 40%;
-    left: 0%;
+    left: 0;
     position: absolute;
 
     img {
@@ -6956,7 +7537,7 @@ export default {
     img {
       width: 50%;
       top: 50%;
-      left: 0%;
+      left: 0;
       position: absolute;
     }
   }
@@ -6995,7 +7576,7 @@ export default {
     img {
       width: 50%;
       top: 50%;
-      left: 0%;
+      left: 0;
       position: absolute;
     }
   }
@@ -7096,7 +7677,7 @@ export default {
   @keyframes myPlay {
     0% {
       position: relative;
-      left: 0px;
+      left: 0;
     }
     50% {
       position: relative;
@@ -7104,14 +7685,14 @@ export default {
     }
     100% {
       position: relative;
-      left: 0px;
+      left: 0;
     }
   }
 
   @-webkit-keyframes myPlay {
     0% {
       position: relative;
-      left: 0px;
+      left: 0;
     }
     50% {
       position: relative;
@@ -7119,19 +7700,19 @@ export default {
     }
     100% {
       position: relative;
-      left: 0px;
+      left: 0;
     }
   }
 
   @-moz-keyframes myPlay {
     0% {
-      left: 0px;
+      left: 0;
     }
     50% {
       left: 20px;
     }
     100% {
-      left: 0px;
+      left: 0;
     }
   }
 
@@ -7148,7 +7729,7 @@ export default {
     .dragon {
     height: 40%;
     width: 10%;
-    top: 0%;
+    top: 0;
     position: absolute;
 
     img {
@@ -7179,7 +7760,7 @@ export default {
   .shield {
     height: 40%;
     width: 10%;
-    top: 0%;
+    top: 0;
     position: absolute;
 
     img {
@@ -7322,7 +7903,7 @@ export default {
   .queen {
     height: 40%;
     width: 10%;
-    top: 0%;
+    top: 0;
     position: absolute;
 
     img {
@@ -7353,7 +7934,7 @@ export default {
   .king {
     height: 40%;
     width: 10%;
-    top: 0%;
+    top: 0;
     position: absolute;
 
     img {
@@ -7384,7 +7965,7 @@ export default {
   .wizard {
     height: 40%;
     width: 10%;
-    top: 0%;
+    top: 0;
     position: absolute;
 
     img {
@@ -7415,7 +7996,7 @@ export default {
   .princess {
     height: 40%;
     width: 10%;
-    top: 0%;
+    top: 0;
     position: absolute;
 
     img {
@@ -7576,6 +8157,96 @@ export default {
   @media only screen and (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 3) ,
   (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 812px) and (max-width: 1023px){
+    .kiteButton img {
+      width: 5%;
+      left: 35%;
+      top: 3%;
+    }
+    .hikeButton img {
+      width: 5%;
+    }
+    .plantButton img {
+      width: 7%;
+    }
+    .seedsButton img {
+      width: 8%;
+    }
+    .picnicButton img {
+      width: 7%;
+    }
+    .hike img {
+      top: 9%;
+    }
+    .fly img {
+      width: 31%;
+      left: 22%;
+      top: -2%;
+    }
+    .kite img {
+      width: 31%;
+      left: 22%;
+      top: -2%;
+    }
+    .squirrelButton img {
+      width: 6%;
+      left: 23%;
+      top: 26%;
+      position: absolute;
+    }
+    .squirrel img {
+      width: 7%;
+      left: 23%;
+      top: 29%;
+      position: absolute;
+      z-index: 1;
+    }
+    .rake img {
+      width: 23%;
+      left: 2%;
+      top: 19%;
+      position: absolute;
+      z-index: 1;
+    }
+    .leaves img {
+      width: 32%;
+      left: 0;
+      top: 71%;
+      position: absolute;
+    }
+    .hotChocolateButton img {
+      width: 11%;
+    }
+    .umbrella img {
+      width: 19%;
+      left: 19%;
+      top: 36%;
+      position: absolute;
+    }
+    .hotChocolate img {
+      width: 16%;
+      left: 40%;
+      top: 27%;
+      position: absolute;
+    }
+    .shiver img {
+      width: 16%;
+      left: 40%;
+      top: 27%;
+      position: absolute;
+    }
+    .icicles img {
+      width: 20%;
+      left: 55%;
+      top: 6%;
+      position: absolute;
+      z-index: 1;
+    }
+    .ski img {
+      top: -8%;
+    }
+    .iceSkating img {
+      top: 38%;
+    }
     .hen img {
       width: 16.5%;
       height: 30%;
@@ -7612,7 +8283,7 @@ export default {
     }
     .hay img {
       width: 21%;
-      left: 0%;
+      left: 0;
       top: 26%;
       position: absolute;
     }
@@ -8377,7 +9048,7 @@ export default {
     }
     .giraffe img {
       width: 10%;
-      left: 0%;
+      left: 0;
       top: 47%;
       position: absolute;
       z-index: 1;
@@ -8714,7 +9385,7 @@ export default {
     .tent img {
       width: 38%;
       top: -8%;
-      left: 0%;
+      left: 0;
       -webkit-transform: rotate(-5deg);
       transform: rotate(-5deg);
       z-index: 1;
@@ -8775,8 +9446,8 @@ export default {
     }
     .waves img{
       height: 100%;
-      top: 0% !important;
-      left: 0%;
+      top: 0 !important;
+      left: 0;
     }
     .surf img {
       top: 5%;
@@ -8799,13 +9470,13 @@ export default {
     .cactus {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
         width: 400%;
         top: 131%;
-        left: 0%;
+        left: 0;
         position: absolute;
       }
     }
@@ -8813,7 +9484,7 @@ export default {
     .cactusbutton {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -8835,7 +9506,7 @@ export default {
     .compass {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -8856,7 +9527,7 @@ export default {
     .dunes {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -8881,7 +9552,7 @@ export default {
     .hot {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -8903,7 +9574,7 @@ export default {
     .lizard {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -8925,7 +9596,7 @@ export default {
     .lost {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -8947,7 +9618,7 @@ export default {
     .map {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -8969,7 +9640,7 @@ export default {
     .sand {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -8991,7 +9662,7 @@ export default {
     .sandstorm {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -9006,7 +9677,7 @@ export default {
     .thirsty {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -9028,7 +9699,7 @@ export default {
     .water {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -9050,13 +9721,13 @@ export default {
     .shovel {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
         width: 340%;
         top: -2%;
-        left: 0%;
+        left: 0;
         position: absolute;
         z-index: 1;
       }
@@ -9071,7 +9742,7 @@ export default {
     .igloo {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -9086,7 +9757,7 @@ export default {
     .igloobutton {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -9100,7 +9771,7 @@ export default {
     .cold {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -9115,7 +9786,7 @@ export default {
     .coldbutton {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -9129,7 +9800,7 @@ export default {
     .tusk {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -9144,7 +9815,7 @@ export default {
     .tuskbutton {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -9158,7 +9829,7 @@ export default {
     .walrusbutton {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -9171,7 +9842,7 @@ export default {
     .orca {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -9186,7 +9857,7 @@ export default {
     .orcabutton {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -9200,7 +9871,7 @@ export default {
     .ice {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -9214,7 +9885,7 @@ export default {
     .icebutton {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -9228,7 +9899,7 @@ export default {
     .seal {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -9243,7 +9914,7 @@ export default {
     .sled {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -9257,7 +9928,7 @@ export default {
     .polarbear {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -9271,7 +9942,7 @@ export default {
     .polarbearbutton {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -9285,7 +9956,7 @@ export default {
     .snow {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -9299,7 +9970,7 @@ export default {
     .snowbutton {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -9313,7 +9984,7 @@ export default {
     .iceberg {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -9327,7 +9998,7 @@ export default {
     .blizzard {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -9349,7 +10020,7 @@ export default {
     .dragon {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -9380,7 +10051,7 @@ export default {
     .shield {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -9523,7 +10194,7 @@ export default {
     .queen {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -9554,7 +10225,7 @@ export default {
     .king {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -9585,7 +10256,7 @@ export default {
     .wizard {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -9616,7 +10287,7 @@ export default {
     .princess {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -9729,7 +10400,7 @@ export default {
     }
 
     .deskbutton {
-      top: 0%;
+      top: 0;
       left: 36%;
     }
 
@@ -9794,6 +10465,190 @@ export default {
   @media only screen and (min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 1024px) and (max-width: 1600px){
+    .sunscreenButton img {
+      top: 50%;
+    }
+    .iceCream1 img {
+      left: 56%;
+      top: 51%;
+    }
+    .flyButton img {
+      top: 34%;
+    }
+    .kiteButton img {
+      top: 16%;
+    }
+    .sunnyButton img {
+      top: 17%;
+    }
+    .kite img {
+      width: 37%;
+      left: 17%;
+      top: 16%;
+      position: absolute;
+    }
+    .fly img {
+      width: 37%;
+      left: 17%;
+      top: 16%;
+      position: absolute;
+    }
+    .hike img {
+      top: 26%;
+    }
+    .swim img {
+      top: 19%;
+    }
+    .butterflyButton img {
+      top: 75%;
+    }
+    .butterfly img {
+      top: 76%;
+    }
+    .flowers img {
+      top: 83%;
+    }
+    .seeds img {
+      top: 79%;
+    }
+    .iciclesButton img {
+      width: 8%;
+      left: 58%;
+      top: 44%;
+      position: absolute;
+    }
+    .rainButton img {
+      width: 6%;
+      left: 16%;
+      top: 10%;
+      position: absolute;
+    }
+    .leavesButton img {
+      width: 8%;
+      left: 7%;
+      top: 89%;
+      position: absolute;
+    }
+    .snow2Button img {
+      width: 7%;
+    }
+    .shiverButton img {
+      width: 7%;
+      left: 40%;
+      top: 63%;
+      position: absolute;
+    }
+    .wind1Button img {
+      width: 7%;
+      left: 45%;
+      top: 13%;
+      position: absolute;
+    }
+    .umbrellaButton img {
+      width: 8%;
+      left: 21%;
+      top: 74%;
+      position: absolute;
+    }
+    .squirrelButton img {
+      width: 8%;
+      left: 23%;
+      top: 29%;
+      position: absolute;
+    }
+    .rakeButton img {
+      width: 6%;
+      left: 4%;
+      top: 40%;
+      position: absolute;
+    }
+    .hotChocolateButton img {
+      width: 13%;
+      left: 52%;
+      top: 58%;
+      position: absolute;
+    }
+    .skiButton img {
+      width: 5%;
+      left: 91%;
+      top: 41%;
+      position: absolute;
+    }
+    .iceSkatingButton img {
+      width: 10%;
+      left: 72%;
+      top: 88%;
+      position: absolute;
+    }
+    .wind1 img {
+      width: 24%;
+      left: 30%;
+      top: 0%;
+      position: absolute;
+    }
+    .rain img {
+      width: 20%;
+      left: 12%;
+      top: -2%;
+      position: absolute;
+    }
+    .squirrel img {
+      width: 9%;
+      left: 22%;
+      top: 32%;
+      position: absolute;
+      z-index: 1;
+    }
+    .hotChocolate img {
+      width: 20%;
+      left: 39%;
+      top: 38%;
+      position: absolute;
+    }
+    .shiver img {
+      width: 20%;
+      left: 39%;
+      top: 38%;
+      position: absolute;
+    }
+    .rake img {
+      width: 27%;
+      left: -2%;
+      top: 29%;
+      position: absolute;
+      z-index: 1;
+    }
+    .umbrella img {
+      width: 26%;
+      left: 14%;
+      top: 43%;
+      position: absolute;
+    }
+    .icicles img {
+      width: 30%;
+      left: 50%;
+      top: 9%;
+      position: absolute;
+      z-index: 1;
+    }
+    .ski img {
+      width: 25%;
+      left: 75%;
+      top: 5%;
+      position: absolute;
+    }
+    .leaves img {
+      width: 37%;
+      left: 0;
+      top: 81%;
+      position: absolute;
+    }
+    .iceSkating img {
+      width: 32%;
+      left: 59%;
+      top: 44%;
+      position: absolute;
+    }
     .hen img {
       width: 16%;
       left: 24%;
@@ -10285,7 +11140,7 @@ export default {
     }
     .hibernate img {
       width: 20%;
-      left: 0%;
+      left: 0;
       top: 74%;
       position: absolute;
     }
@@ -10311,7 +11166,7 @@ export default {
       width: 77%;
       left: 24%;
       height: 50%;
-      top: 0%;
+      top: 0;
       position: absolute;
     }
     .fall img {
@@ -10730,7 +11585,7 @@ export default {
     }
     .play img {
       width: 16%;
-      left: 0%;
+      left: 0;
       top: 48%;
       position: absolute;
       z-index: 3;
@@ -11055,7 +11910,7 @@ export default {
     .swing img {
       width: 45%;
       left: 55%;
-      top: 0%;
+      top: 0;
       height: 76%;
     }
     .toys img {
@@ -11547,7 +12402,7 @@ export default {
     .igloo {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -11562,7 +12417,7 @@ export default {
     .igloobutton {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -11576,7 +12431,7 @@ export default {
     .cold {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -11591,7 +12446,7 @@ export default {
     .coldbutton {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -11605,7 +12460,7 @@ export default {
     .tusk {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -11620,7 +12475,7 @@ export default {
     .tuskbutton {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -11634,7 +12489,7 @@ export default {
     .walrusbutton {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -11647,7 +12502,7 @@ export default {
     .orca {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -11662,7 +12517,7 @@ export default {
     .orcabutton {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -11676,7 +12531,7 @@ export default {
     .ice {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -11690,7 +12545,7 @@ export default {
     .icebutton {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -11704,7 +12559,7 @@ export default {
     .seal {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -11719,7 +12574,7 @@ export default {
     .sled {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -11733,7 +12588,7 @@ export default {
     .polarbear {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -11747,7 +12602,7 @@ export default {
     .polarbearbutton {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -11761,7 +12616,7 @@ export default {
     .snow {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -11775,7 +12630,7 @@ export default {
     .snowbutton {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -11789,7 +12644,7 @@ export default {
     .iceberg {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -11803,7 +12658,7 @@ export default {
     .blizzard {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -11824,7 +12679,7 @@ export default {
     .dragon {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -11855,7 +12710,7 @@ export default {
     .shield {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -11998,7 +12853,7 @@ export default {
     .queen {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -12029,7 +12884,7 @@ export default {
     .king {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -12060,7 +12915,7 @@ export default {
     .wizard {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -12091,7 +12946,7 @@ export default {
     .princess {
       height: 40%;
       width: 10%;
-      top: 0%;
+      top: 0;
       position: absolute;
 
       img {
@@ -12190,7 +13045,7 @@ export default {
       img {
         width: 45%;
         top: 58%;
-        left: 0%;
+        left: 0;
       }
     }
 

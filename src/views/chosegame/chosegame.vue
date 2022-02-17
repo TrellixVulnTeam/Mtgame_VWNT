@@ -379,9 +379,25 @@
 	export default {
 		name: "chosegame",
 		watch: {
+      'loading': function(newVal) {
+        if (this.loading === false) {
+          setTimeout(() => {
+          document.getElementById('alertFram').style.display = 'none'}
+            ,1000)
+          this.$router.push({
+            path: '/pchosegame',
+            query: {
+              courseId:this.courseList[1].course_id,
+              cources:this.courseList[1].name,
+              style:this.style,
+            }
+          })
+        }
+      }
 		},
 		data() {
 			return {
+			  loading:false,
 				action:false,
 				action1:false,
         popp:false,
@@ -566,28 +582,28 @@
 				courseId:this.courseId
 				})).then(res=>{
 					this.levelsList=res.data.levelsList;
-
 				}, res => {
 				    alertMsg("You must be connected to the internet.<br>Please connect and try again.");
 				})
 			},
       chartroom2(li) {
-              if(this.phonics===0){
-                alertMsg3("Active Phonics Student Only");
-              }else if (this.phonics===1){
-                this.courseId=li.course_id;
-                this.cources=li.name;
-                this.$router.push({
-                  path: '/pchosegame',
-                  query: {
-                    courseId:this.courseId,
-                    cources:this.cources,
-                    style:this.style,
-                  }
-                })
-              }else {
-                alertMsg3("Loading...Please Wait");
-              }
+        if(this.phonics===0){
+          alertMsg3("Active Phonics Student Only");
+        }else if (this.phonics===1){
+          this.courseId=li.course_id;
+          this.cources=li.name;
+          this.$router.push({
+            path: '/pchosegame',
+            query: {
+              courseId:this.courseId,
+              cources:this.cources,
+              style:this.style,
+            }
+          })
+        }else{
+          this.loading = true;
+          alertMsg3("Loading...Please Wait");
+        }
       },
 			walkers1(li) {
 				this.chartroom =false;
@@ -685,24 +701,23 @@
 
 		created() { //生命周期里接收参数
 				this.pic=this.$axios.defaults.baseURL2;
-      console.log(this.$route.query);
 				if(this.$route.query.levelsId){
 					this.level= this.$route.query.level;
 					this.levelsId= this.$route.query.levelsId;
 					this.courseId= this.$route.query.courseId;
 					this.unitname= this.$route.query.unit;
 					this.cources=this.$route.query.cources;
-						this.chosegame =false;
-						this.walkers=true;
-						this.url3=this.url+"Units";
-						this.$axios.post(this.url3,qs.stringify({
-						studentId:localStorage.getItem('studentId'),
-						levelsId:this.levelsId
-						})).then(res=>{
-						this.unitsList=res.data.unitsList;
-						}, res => {
-						    alertMsg("You must be connected to the internet.<br>Please connect and try again.");
-						})
+          this.chosegame =false;
+          this.walkers=true;
+          this.url3=this.url+"Units";
+          this.$axios.post(this.url3,qs.stringify({
+          studentId:localStorage.getItem('studentId'),
+          levelsId:this.levelsId
+          })).then(res=>{
+            this.unitsList=res.data.unitsList;
+          }, res => {
+            alertMsg("You must be connected to the internet.<br>Please connect and try again.");
+          })
 				}
         this.style= this.$route.query.style; //接受参数关键代码
 				this.firstName=localStorage.getItem('firstName');
@@ -711,21 +726,16 @@
 				this.studentId=localStorage.getItem('studentId');
 				this.url1=this.url+"course";
 				this.$axios.post(this.url1,qs.stringify({
-				studentId:localStorage.getItem('studentId')
+				  studentId:localStorage.getItem('studentId')
 				})).then(res=>{
 					this.courseList=res.data.courseList;
-					for(var i=0;i<this.courseList.length;i++){
+          this.phonics=res.data.phonics;
+					for(let i=0; i<this.courseList.length; i++){
 						this.courseList[i].bg=this.pic+this.courseList[i].bg
 					}
-          this.phonics=res.data.phonics;
-					//console.log(this.courseList);
-					// if(res.data.nologin!=''&&res.data.nologin!=="false"){
-				    //    this.sum=res.data.sumscore["sum(score)"];
-					// }else{
-					//
-					// }
+					this.loading = false;
 				}, res => {
-				    alertMsg("You must be connected to the internet.<br>Please connect and try again.");
+          alertMsg("You must be connected to the internet.<br>Please connect and try again.");
 				})
 
 		}
@@ -744,13 +754,14 @@
 		position: absolute;
 		display: flex;
 	}
-    .acstyle {
-    	height: 70%;
-    	position: absolute;
-    	left: 5%;
-    	bottom: 9%;
-		border-radius: 50px;
-    }
+
+  .acstyle {
+    height: 70%;
+    position: absolute;
+    left: 5%;
+    bottom: 9%;
+  border-radius: 50px;
+  }
 
 	.fontsize {
 		font-family: kg;
@@ -766,6 +777,7 @@
 		min-height: 50%;
 		//margin-left: 2%;
 	}
+
 	.backbutton{
 		// display: block;
 		z-index: 2;

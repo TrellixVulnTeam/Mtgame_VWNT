@@ -350,6 +350,9 @@
               }, 800);
             }, 1000);
           }
+          setTimeout(() => {
+              document.getElementById('alertFram').style.display = 'none'}
+            ,1000)
 					}, res => {
 						alertMsg("You must be connected to the internet.<br>Please connect and try again.");
 					});

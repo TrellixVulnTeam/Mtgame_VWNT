@@ -211,6 +211,10 @@
       'loading': function(newVal) {
         if (this.loading === true) {
             alertMsg3("Loading...Please Wait");
+        }else{
+          setTimeout(() => {
+              document.getElementById('alertFram').style.display = 'none'}
+            ,1000)
         }
       },
     },

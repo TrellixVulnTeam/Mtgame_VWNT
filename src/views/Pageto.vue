@@ -963,6 +963,9 @@
 				}
 				this.picture =  this.pic+this.listA[this.countpage-1].bg;
 				this.audio=  this.pic+this.listA[this.countpage-1].audio;
+        setTimeout(() => {
+            document.getElementById('alertFram').style.display = 'none'}
+          ,1000)
 			}, res => {
 				alertMsg("You must be connected to the internet.<br>Please connect and try again.");
 			});

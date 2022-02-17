@@ -160,9 +160,9 @@ window.alertMsg3 = function (txt) {
   alertFram.innerHTML = strHtml;
   let app=document.getElementById('app');
   app.appendChild(alertFram);
-  setTimeout((function () {
-      alertFram.style.display = "none";
-  }), 1500)
+  // setTimeout((function () {
+  //     alertFram.style.display = "none";
+  // }), 1500)
 };
 window.alertMsg4 = function (txt) {
   var strHtml='';

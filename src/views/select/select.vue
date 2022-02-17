@@ -40,6 +40,7 @@
 			return {
         guardianId:'',
 				sonList:[],
+        local:'',
 				picked: "pick",
 				//pic: "http://localhost:8080/mtGame",
 				pic: "",
@@ -53,18 +54,19 @@
 			};
 		},
 		methods: {
-         logout(){
+      logout(){
 			 localStorage.setItem("userId", '');
-			 this.$router.push({
-			 	path: "/login", //跳转的路径
-			 });
+			 if (this.local==='cn'){
+         this.$router.push({path: "/login",});
+       }else{
+         this.$router.push({path: "/loginhk",});
+       }
 		 },
 		 student(li){
 			   localStorage.setItem("studentId", li.studentId);
 			    localStorage.setItem("firstName", li.gameName);
 				 localStorage.setItem("gameImage", li.gameImage);
 				 localStorage.setItem("sumCoins", li.sumCoins);
-
        this.$router.push({
          path: "/source",
        });
@@ -91,6 +93,7 @@
 		},
 		created() {
             this.pic=this.$axios.defaults.baseURL2;
+            this.local = localStorage.getItem('local');
             this.guardianId = localStorage.getItem('userId');
             this.url1=this.url+'getSon';
             this.$axios
