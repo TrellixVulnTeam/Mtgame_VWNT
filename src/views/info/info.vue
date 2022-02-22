@@ -3115,10 +3115,6 @@
       font-size: 1.5rem;
     }
 
-    .unitnamep {
-      font-size: 3rem;
-    }
-
     .walkerbutton img {
       width: 2rem;
     }

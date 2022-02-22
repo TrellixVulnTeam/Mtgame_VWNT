@@ -452,6 +452,11 @@ export default new Router({
 			//component: Info
       component:resolve => {require(['./views/info/info.vue'],resolve)}
 		},
+    {
+      path: "/infoNew",
+      name: "infoNew",
+      component:resolve => {require(['./views/info/infoNew.vue'],resolve)}
+    },
 		{
 			path: "/chosegame",
 			name: "chosegame",
