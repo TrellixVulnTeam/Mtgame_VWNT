@@ -359,7 +359,7 @@
               <p class="phonicsL">{{ categoriesName }}</p>
               <p class="phonicsText">{{ categoriesText }}</p>
               <img src="../../assets/image/cardleft.png" class="cardLeft" @click="cardLeft" v-if="opciay2 && categoriesName !== 'Performance Report'">
-              <img src="../../assets/image/cardright.png" class="cardRight" v-if="opciay2 && categoriesName !== 'Performance Report'">
+              <img src="../../assets/image/cardright.png" class="cardRight" @click="cardRight" v-if="opciay2 && categoriesName !== 'Performance Report'">
             </div>
 
             <div class="chosedisplay" v-if="!chatorphonics">
@@ -479,7 +479,16 @@
               </div>
 <!--              phonics替代原先opciay1的部分，新更新的内容 v-if="opciayStatistics"-->
               <div  v-if="opciay2" style="width: 100%;height: 100%;">
+
                 <div class="categories" >
+                  <div v-if="categoriesName === 'Overall' || categoriesName === 'Strengths'">
+                    <div class="cRight">
+                      <img src="../../assets/image/LearningReportRight.png" class="LearningReportRight">
+                    </div>
+                    <div class="cLeft">
+                      <img src="../../assets/image/LearningReportLeft.png" class="LearningReportLeft">
+                    </div>
+                  </div>
                   <ul style="height: 100%;">
                     <li class="categoriesLi" @click="categories('Overall')">
                       Overall
@@ -500,6 +509,15 @@
                       Exercise History
                     </li>
                   </ul>
+                </div>
+                <!--下方白点 -->
+                <div class="pointPosition" v-if="categoriesName !== 'Performance Report'">
+                  <span :class="categoriesName === 'Overall' ?'point1':'point2'" >.</span>
+                  <span :class="categoriesName === 'Strengths'?'point1':'point2'">.</span>
+                  <span :class="categoriesName === 'Exercise Completion Intervals'?'point1':'point2'">.</span>
+                  <span :class="categoriesName === 'Improvement'?'point1':'point2'">.</span>
+                  <span :class="categoriesName === 'Scores for Key Areas'?'point1':'point2'">.</span>
+                  <span :class="categoriesName === 'Exercise History'?'point1':'point2'">.</span>
                 </div>
               </div>
             </div>
@@ -604,6 +622,14 @@
             onestart6: false,
           },
         ],
+        category: [
+          'Overall',
+          'Strengths',
+          'Exercise Completion Intervals',
+          'Improvement',
+          'Scores for Key Areas',
+          'Exercise History'
+        ],
         allstar: [],
         stars: [],
         seleinfo: true,
@@ -656,9 +682,27 @@
       }
     },
     methods: {
+      cardRight(){
+        for (let i = 0; i < this.category.length; i++) {
+          if (this.categoriesName === this.category[this.category.length-1]){
+            this.categories(this.category[0]);
+            break;
+          } else if (this.categoriesName === this.category[i]){
+            this.categories(this.category[i+1]);
+            break;
+          }
+        }
+      },
       cardLeft(){
-        let category = ['Overall','Strengths'];
-        console.log(category[0]);
+        for (let i = 0; i < this.category.length; i++) {
+          if (this.categoriesName === this.category[0]){
+            this.categories(this.category[this.category.length-1]);
+            break;
+          } else if (this.categoriesName === this.category[i]){
+            this.categories(this.category[i-1]);
+            break;
+          }
+        }
       },
       categories(str){
         if (str === 'Overall'){
@@ -1507,6 +1551,59 @@
     // overflow-y: scroll;
     position: static;
   }
+  .pointPosition{
+    margin-top: -2%;
+  }
+
+  .point1{
+    font-size: 3rem;
+    color: white;
+    opacity: 1;
+    font-family: pepper,serif;
+  }
+
+  .point2{
+    font-size: 3rem;
+    color: white;
+    opacity: 0.5;
+    font-family: pepper,serif;
+  }
+
+  .LearningReportRight {
+    width: 50%;
+    left: 75%;
+    top: 50%;
+    position: absolute;
+    -webkit-transform: translate(-75%, -50%);
+    transform: translate(-75%, -50%);
+  }
+  .LearningReportLeft {
+    width: 50%;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translate(-75%, -50%);
+  }
+  .cLeft {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    left: -35px;
+    top: 50%;
+    background-color: #eeebc8;
+    transform: translateY(-50%);
+    border-radius: 70px;
+  }
+  .cRight{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    right: -35px;
+    top: 50%;
+    background-color: #eeebc8;
+    transform: translateY(-50%);
+    border-radius: 70px;
+  }
 
   .cardLeft {
     position: absolute;
@@ -1521,6 +1618,7 @@
     left: 90%;
     width: 4%;
   }
+
   .categoriesLi {
     background-color: #f58948;
     display: inline-block;
@@ -2328,6 +2426,12 @@
   }
 
   @media screen and (max-width: 569px) {
+    .cardLeft {
+      top: 25%;
+    }
+    .cardRight {
+      top: 25%;
+    }
     .categoriesLi {
       background-color: #f58948;
       display: inline-block;
@@ -2487,6 +2591,14 @@
   @media screen and (min-device-height: 570px) and (max-device-height: 735px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 570px) and (max-device-height: 735px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 570px) and (max-width: 735px){
+    .cardLeft {
+      top: 22%;
+      width: 5%;
+    }
+    .cardRight {
+      top: 22%;
+      width: 5%;
+    }
     .categories {
       border-radius: 30px;
     }
@@ -2505,7 +2617,7 @@
       line-height: 20px;
     }
     .phonicsLevel {
-      padding-left: 30px;
+      padding-left: 45px;
     }
     .spanimg2 {
       width: 0.7rem;
@@ -2547,6 +2659,14 @@
   @media screen and (min-device-height: 736px) and (max-device-height: 811px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 736px) and (max-device-height: 811px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 736px) and (max-width: 811px) {
+    .cardLeft {
+      top: 26%;
+      width: 5%;
+    }
+    .cardRight {
+      top: 26%;
+      width: 5%;
+    }
     .categories {
       border-radius: 30px;
     }
@@ -2565,7 +2685,7 @@
       line-height: 25px;
     }
     .phonicsLevel {
-      padding-left: 30px;
+      padding-left: 50px;
     }
     .spanimg2 {
       width: 1rem;
@@ -2633,6 +2753,12 @@
   @media screen and (min-device-height: 812px) and (max-device-height: 894px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 812px) and (max-device-height: 894px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 812px) and (max-width: 894px) {
+    .cardRight {
+      top: 26%;
+    }
+    .cardLeft {
+      top: 26%;
+    }
     .categories {
       border-radius: 30px;
     }
@@ -2643,7 +2769,7 @@
       line-height: 23px;
     }
     .phonicsLevel {
-      padding-left: 35px;
+      padding-left: 50px;
     }
     .spanimg2{
       width: 1rem;
@@ -2764,6 +2890,15 @@
   @media screen and (min-device-height: 895px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 895px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 895px) and (max-width: 1023px) {
+    .phonicsLevel {
+      padding-left: 60px;
+    }
+    .cardRight {
+      top: 26%;
+    }
+    .cardLeft {
+      top: 26%;
+    }
     .categories {
       border-radius: 30px;
     }
@@ -2903,6 +3038,15 @@
   @media screen and (min-device-height: 1024px) and (max-device-height: 1199px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 1024px) and (max-device-height: 1199px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 1024px) and (max-width: 1199px) {
+    .phonicsLevel {
+      padding-left: 60px;
+    }
+    .cardRight {
+      top: 26%;
+    }
+    .cardLeft {
+      top: 26%;
+    }
     .categoriesLi {
       font-size: 1rem;
       line-height: 40px;
@@ -2925,7 +3069,7 @@
       width: 1.6rem;
     }
     .phonicsL {
-      font-size: 2rem;
+      font-size: 2.5rem;
     }
     .fontsize {
       bottom: 13%;
@@ -3146,6 +3290,22 @@
   @media screen and (min-device-height: 1200px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 1200px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 1200px) and (max-width: 1600px) {
+    .categoriesLi {
+      font-size: 1.5rem;
+      line-height: 48px;
+      margin: 4% 0 0 5.5%;
+    }
+    .phonicsLevel {
+      padding-left: 95px;
+    }
+    .cardRight {
+      top: 26%;
+      width: 5%;
+    }
+    .cardLeft {
+      top: 26%;
+      width: 5%;
+    }
     .fontsize {
       bottom: 13%;
       position: absolute;
