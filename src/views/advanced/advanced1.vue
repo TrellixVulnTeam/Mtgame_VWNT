@@ -407,7 +407,6 @@
       gomemu() {
         var audio = document.getElementById('music');
         if (localStorage.getItem('audiomusic') === "false") {
-
         } else {
           audio.play();
         }
@@ -417,6 +416,9 @@
           id: localStorage.getItem('startTimeid'),
           time: endtimestamp,
           name: this.gamename,
+          unit:this.unit,
+          level:localStorage.getItem('level'),
+          cources:localStorage.getItem('cources'),
           studentId: localStorage.getItem('studentId')
         })).then(res => {
           localStorage.setItem('startTimeid', '');
@@ -450,7 +452,7 @@
       window.removeEventListener('popstate', this.gomemu, false);
     },
     created() { //生命周期里接收参数
-      // console.log(this.$route.query.menuId);
+      console.log(this.$route.query);
       this.pic = this.$axios.defaults.baseURL2;
       this.unit = this.$route.query.unit;
       this.unitsId = this.$route.query.unitsId;
@@ -458,7 +460,7 @@
       this.gamename = this.$route.query.name;
       localStorage.setItem('gamename', this.gamename);
       var timestamp = (new Date()).getTime();
-      // localStorage.setItem('startTimeid',timestamp);
+      localStorage.setItem('startTimeid',timestamp);
       this.show = localStorage.getItem('gamemusic') !== "false";
       this.$axios.post(this.url, qs.stringify({
         menuId: this.menuId,
@@ -515,17 +517,20 @@
       }, res => {
         alertMsg("You must be connected to the internet.<br>Please connect and try again.");
       });
-      // 统计时间
-      // this.$axios.post(this.timeurl, qs.stringify({
-      //   id: timestamp,
-      //   time: timestamp,
-      //   name:this.gamename,
-      //   studentId:localStorage.getItem('studentId')
-      // })).then(res => {
-      //   // console.log(res.data);
-      // }, res => {
-      //   alertMsg("You must be connected to the internet.<br>Please connect and try again.");
-      // });
+      //统计时间
+      this.$axios.post(this.timeurl, qs.stringify({
+        id: timestamp,
+        time: timestamp,
+        name:this.gamename,
+        unit:this.unit,
+        level:localStorage.getItem('level'),
+        cources:localStorage.getItem('cources'),
+        studentId:localStorage.getItem('studentId')
+      })).then(res => {
+        // console.log(res.data);
+      }, res => {
+        alertMsg("You must be connected to the internet.<br>Please connect and try again.");
+      });
       if (window.history && window.history.pushState) {
         history.pushState(null, null, document.URL);
         window.addEventListener('popstate', this.gomemu, false);

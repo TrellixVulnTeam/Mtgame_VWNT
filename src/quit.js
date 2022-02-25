@@ -97,7 +97,9 @@ window.alertMsg = function (txt) {
         strHtml =  "<div style='width:50%;height:50%;margin:0 auto;margin-top:15%;position: relative;background-color:white;border-radius:20px;color:black;'><h2 style='width:100%;font-family: pepper;padding:10px 0;'>Network Required</h2><p style='width:90%;font-family: pepper;height:40%;margin:5%;top:20%;position:absolute;'>"
 		+txt+"</p><button style='width:90%;height:40px;margin:5%;border:none;border-radius:10px;bottom: 0; position: absolute;left: 0;color:white;background-color:#48C0F0;' onclick='test()'>OK</button></div>" ;
         alertFram.innerHTML = strHtml;
-        document.body.appendChild(alertFram);
+        // document.body.appendChild(alertFram);
+        let app=document.getElementById('app');
+        app.appendChild(alertFram);
         // setTimeout((function () {
         //     alertFram.style.display = "none";
         // }), 2000)
@@ -119,7 +121,9 @@ window.alertMsg2 = function (txt) {
         strHtml =  "<div style='width:50%;height:50%;margin:0 auto;margin-top:15%;position: relative;background-color:white;border-radius:20px;color:black;'><h2 style='width:100%;font-family: pepper;padding:10px 0;'>New version available</h2><p style='width:90%;font-family: pepper;height:40%;margin:5%;top:20%;position:absolute;'>"
 		+txt+"</p></div>" ;
         alertFram.innerHTML = strHtml;
-        document.body.appendChild(alertFram);
+        // document.body.appendChild(alertFram);
+        let app=document.getElementById('app');
+        app.appendChild(alertFram);
         // setTimeout((function () {
         //     alertFram.style.display = "none";
         // }), 2000)

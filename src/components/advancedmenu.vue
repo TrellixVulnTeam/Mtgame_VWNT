@@ -37,7 +37,7 @@
           <img :src=star class="imgposit1" v-if="!stars[2].threestart">
           <img @click="change3" src="../assets/image/inter31.png" style="position: sticky;height: 50%;margin-top: 28%;margin-left: 3%">
         </div>
-<!--        yes or no-->
+<!--        yes or no收-->
 <!--        <div class="listimg">-->
 <!--          <img :src=lightstar class="imgposit" v-if="stars[3].onestart">-->
 <!--          <img :src=star class="imgposit" v-if="!stars[3].onestart">-->
@@ -47,7 +47,7 @@
 <!--          <img :src=star class="imgposit1" v-if="!stars[3].threestart">-->
 <!--          <img @click="change4" src="../assets/image/inter41.png" style="position: sticky;height: 50%;margin-top: 30%;margin-left: 4%">-->
 <!--        </div>-->
-<!--        letter scrabble-->
+<!--        letter scrabble收-->
 <!--        <div class="listimg">-->
 <!--          <img :src=lightstar class="imgposit" v-if="stars[4].onestart">-->
 <!--          <img :src=star class="imgposit" v-if="!stars[4].onestart">-->

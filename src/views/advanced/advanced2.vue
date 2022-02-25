@@ -514,6 +514,9 @@
           id: localStorage.getItem('startTimeid'),
           time: endtimestamp,
           name:this.gamename,
+          unit:this.unit,
+          level:localStorage.getItem('level'),
+          cources:localStorage.getItem('cources'),
           studentId:localStorage.getItem('studentId')
         })).then(res => {
           localStorage.setItem('startTimeid','');
@@ -554,7 +557,7 @@
       this.gamename=this.$route.query.name;
       localStorage.setItem('gamename',this.gamename);
       var timestamp = (new Date()).getTime();
-      // localStorage.setItem('startTimeid',timestamp);
+       localStorage.setItem('startTimeid',timestamp);
       if(localStorage.getItem('gamemusic')==="false"){
         this.show=false;
       }else{
@@ -601,16 +604,19 @@
         alertMsg("You must be connected to the internet.<br>Please connect and try again.");
       });
       // 统计时间
-      // this.$axios.post(this.timeurl, qs.stringify({
-      //   id: timestamp,
-      //   time: timestamp,
-      //   name:this.gamename,
-      //   studentId:localStorage.getItem('studentId')
-      // })).then(res => {
-      //   // console.log(res.data);
-      // }, res => {
-      //   alertMsg("You must be connected to the internet.<br>Please connect and try again.");
-      // });
+      this.$axios.post(this.timeurl, qs.stringify({
+        id: timestamp,
+        time: timestamp,
+        name:this.gamename,
+        unit:this.unit,
+        level:localStorage.getItem('level'),
+        cources:localStorage.getItem('cources'),
+        studentId:localStorage.getItem('studentId')
+      })).then(res => {
+        // console.log(res.data);
+      }, res => {
+        alertMsg("You must be connected to the internet.<br>Please connect and try again.");
+      });
       if(window.history && window.history.pushState){
         history.pushState(null,null, document.URL);
         window.addEventListener('popstate', this.gomemu,false);

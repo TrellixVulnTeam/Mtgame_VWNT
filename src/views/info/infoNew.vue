@@ -1342,6 +1342,10 @@
           phonicsId: this.phonicsId
         })).then(res => {
           this.phonicsDetailList = res.data.phonicsDetailList;
+          for (let i = 0; i < this.phonicsDetailList.length; i++) {
+            this.phonicsDetailList[i].letter = this.phonicsDetailList[i].name.slice(0,1);
+            this.phonicsDetailList[i].percent = parseInt(this.phonicsDetailList[i].star/30*100)+'%';
+          }
         }, res => {
           alertMsg("You must be connected to the internet.<br>Please connect and try again.");
         })
@@ -1365,6 +1369,10 @@
           phonicsId: this.phonicsId
         })).then(res => {
           this.phonicsDetailList = res.data.phonicsDetailList;
+          for (let i = 0; i < this.phonicsDetailList.length; i++) {
+            this.phonicsDetailList[i].letter = this.phonicsDetailList[i].name.slice(0,1);
+            this.phonicsDetailList[i].percent = parseInt(this.phonicsDetailList[i].star/30*100)+'%';
+          }
         }, res => {
           alertMsg("You must be connected to the internet.<br>Please connect and try again.");
         })
@@ -1388,6 +1396,10 @@
           phonicsId: this.phonicsId
         })).then(res => {
           this.phonicsDetailList = res.data.phonicsDetailList;
+          for (let i = 0; i < this.phonicsDetailList.length; i++) {
+            this.phonicsDetailList[i].letter = this.phonicsDetailList[i].name.slice(0,1);
+            this.phonicsDetailList[i].percent = parseInt(this.phonicsDetailList[i].star/30*100)+'%';
+          }
         }, res => {
           alertMsg("You must be connected to the internet.<br>Please connect and try again.");
         })
@@ -2692,7 +2704,7 @@
       margin: -3px 0px;
     }
     .buttonsty {
-      font-size: 0.8rem;
+      font-size: 1rem;
     }
     .progress2{
       height: 20px;
@@ -3038,6 +3050,21 @@
   @media screen and (min-device-height: 1024px) and (max-device-height: 1199px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 1024px) and (max-device-height: 1199px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 1024px) and (max-width: 1199px) {
+    .pointPosition[data-v-2f20336a] {
+      margin-top: -4%;
+    }
+    .cRight[data-v-2f20336a] {
+      width: 50px;
+      height: 50px;
+      right: -25px;
+      border-radius: 50px;
+    }
+    .cLeft[data-v-2f20336a] {
+      width: 50px;
+      height: 50px;
+      left: -25px;
+      border-radius: 50px;
+    }
     .phonicsLevel {
       padding-left: 60px;
     }
@@ -3069,7 +3096,7 @@
       width: 1.6rem;
     }
     .phonicsL {
-      font-size: 2.5rem;
+      font-size: 2rem;
     }
     .fontsize {
       bottom: 13%;

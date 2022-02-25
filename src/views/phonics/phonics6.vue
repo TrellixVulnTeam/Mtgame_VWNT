@@ -230,6 +230,9 @@
             id: timestamp,
             time: timestamp,
             name:this.gamename,
+            unit:this.unit,
+            level:localStorage.getItem('level'),
+            cources:localStorage.getItem('cources'),
             studentId:localStorage.getItem('studentId')
           })).then(res => {
             // console.log(res.data);
@@ -581,6 +584,9 @@
           id: localStorage.getItem('startTimeid'),
           time: endtimestamp,
           name:this.gamename,
+          unit:this.unit,
+          level:localStorage.getItem('level'),
+          cources:localStorage.getItem('cources'),
           studentId:localStorage.getItem('studentId')
         })).then(res => {
          localStorage.setItem('startTimeid','');

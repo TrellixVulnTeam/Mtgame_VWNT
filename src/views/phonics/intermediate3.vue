@@ -515,6 +515,9 @@
           id: localStorage.getItem('startTimeid'),
           time: endtimestamp,
           name:this.gamename,
+          unit:this.unit,
+          level:localStorage.getItem('level'),
+          cources:localStorage.getItem('cources'),
           studentId:localStorage.getItem('studentId')
         })).then(res => {
           localStorage.setItem('startTimeid','');
@@ -600,6 +603,20 @@
           this.zhezhao=false;
          }, 1500);
         }
+      }, res => {
+        alertMsg("You must be connected to the internet.<br>Please connect and try again.");
+      });
+      //统计时间
+      this.$axios.post(this.timeurl, qs.stringify({
+        id: timestamp,
+        time: timestamp,
+        name:this.gamename,
+        unit:this.unit,
+        level:localStorage.getItem('level'),
+        cources:localStorage.getItem('cources'),
+        studentId:localStorage.getItem('studentId')
+      })).then(res => {
+        // console.log(res.data);
       }, res => {
         alertMsg("You must be connected to the internet.<br>Please connect and try again.");
       });
