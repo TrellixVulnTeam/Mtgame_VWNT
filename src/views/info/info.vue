@@ -757,6 +757,9 @@
       changeBcolo2() {
         if (this.phonics == 0) {
           alertMsg3("Active Phonics Student Only");
+          setTimeout((function () {
+            alertFram.style.display = "none";
+          }), 1500)
         } else {
           this.backgrorang = true;
           this.backgrgreen = false;

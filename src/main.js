@@ -26,10 +26,10 @@ Vue.prototype.$axios = axios;
 
 // axios.defaults.baseURL = 'http://dodosurvey.com/monkeytownHK'  // api 即上面 vue.config.js 中配置的地址
 
-//axios.defaults.baseURL = 'http://localhost:8080/monkeytownCN';
+axios.defaults.baseURL = 'http://localhost:8080/monkeytownCN';
 //axios.defaults.baseURL2 = 'http://localhost:8080/monkeytownHK';
 
-axios.defaults.baseURL = 'http://gamejava.monkeytree.com.hk';
+//axios.defaults.baseURL = 'http://gamejava.monkeytree.com.hk';
 axios.defaults.baseURL2 = 'http://gamejava.monkeytree.com.hk';
 //axios.defaults.baseURL = 'https://gamejava.monkeytree.com.cn';
 //axios.defaults.baseURL2 = 'https://gamejava.monkeytree.com.cn';
@@ -40,7 +40,7 @@ localStorage.setItem('version',32);
 //发布 ios OR android
 localStorage.setItem('system','android');
 //发布到hk版还是cn版
-localStorage.setItem('local','hk');
+localStorage.setItem('local','cn');
 //是否发布到应用宝
 localStorage.setItem('yingyongbao','true');
 Vue.use(Bounce)

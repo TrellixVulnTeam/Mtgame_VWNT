@@ -1456,7 +1456,7 @@
     }
 
     .listitems {
-      height: 23rem;
+      height: 21rem;
       margin-right: 38px;
     }
 

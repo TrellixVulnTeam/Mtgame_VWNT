@@ -589,6 +589,9 @@
       chartroom2(li) {
         if(this.phonics===0){
           alertMsg3("Active Phonics Student Only");
+          setTimeout((function () {
+                alertFram.style.display = "none";
+          }), 1500)
         }else if (this.phonics===1){
           this.courseId=li.course_id;
           this.cources=li.name;

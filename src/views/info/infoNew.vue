@@ -479,8 +479,7 @@
               </div>
 <!--              phonics替代原先opciay1的部分，新更新的内容 v-if="opciayStatistics"-->
               <div  v-if="opciay2" style="width: 100%;height: 100%;">
-
-                <div class="categories" >
+                <div class="categories" v-if="categoriesName!=='Exercise Completion Intervals'&&categoryNum!=3">
                   <div v-if="categoriesName === 'Overall' || categoriesName === 'Strengths'">
                     <div class="cRight">
                       <img src="../../assets/image/LearningReportRight.png" class="LearningReportRight">
@@ -489,36 +488,96 @@
                       <img src="../../assets/image/LearningReportLeft.png" class="LearningReportLeft">
                     </div>
                   </div>
-                  <ul style="height: 100%;">
-                    <li class="categoriesLi" @click="categories('Overall')">
+                  <ul style="height: 100%;" v-if="categoriesName === 'Performance Report'">
+                    <li class="categoriesLi" @click="categories(1)">
                       Overall
                     </li>
-                    <li class="categoriesLi" @click="categories('Strengths')">
+                    <li class="categoriesLi" @click="categories(4)">
                       Strengths
                     </li>
-                    <li class="categoriesLi" @click="categories('Exercise Completion Intervals')">
+                    <li class="categoriesLi" @click="categories(2)">
                       Exercise Completion Intervals
                     </li>
-                    <li class="categoriesLi" @click="categories('Improvement')">
+                    <li class="categoriesLi" @click="categories(5)">
                       Improvement
                     </li>
-                    <li class="categoriesLi" @click="categories('Scores for Key Areas')">
+                    <li class="categoriesLi" @click="categories(3)">
                       Scores for Key Areas
                     </li>
-                    <li class="categoriesLi" @click="categories('Exercise History')">
+                    <li class="categoriesLi" @click="categories(6)">
                       Exercise History
                     </li>
                   </ul>
+                  <div v-if="categoriesName === 'Exercise History'">
+                  <div  class="history">
+                    <div class="historyLabel" >Date</div>
+                    <div class="historyLabel" >Letter</div>
+                    <div class="historyLabel" >Exercise</div>
+                    <div class="historyLabel" >Star</div>
+                    <div class="historyLabel" >Score</div>
+                  </div>
+                  <div class="historyList">
+                    <table align="center" width="100%" cellspacing="6" cellpadding="0"
+                           style="color: #007BB8; margin-top: -5px;">
+                    <tr v-for="(li,index) in history" :key="index" >
+                      <td class="historyLi" style="width: 10%;">{{li.date}}</td>
+                      <td class="historyLi" style="width: 10%;">{{li.letter}}</td>
+                      <td class="historyLi" style="width: 10%;">{{li.exercise}}</td>
+                      <td class="historyLi" style="width: 10%;">
+                        <img src="../../assets/image/star_frame.png" v-if="li.star===1 || li.star===2 || li.star===3"
+                             class="littlestar">
+                        <img src="../../assets/image/Little_Star_frame.png" v-if="li.star===0" class="littlestar">
+
+                        <img src="../../assets/image/star_frame.png" v-if="li.star===2 || li.star===3"
+                             class="littlestar">
+                        <img src="../../assets/image/Little_Star_frame.png" v-if="li.star===0 || li.star===1" class="littlestar">
+
+                        <img src="../../assets/image/star_frame.png" v-if="li.star===3"
+                             class="littlestar">
+                        <img src="../../assets/image/Little_Star_frame.png" v-if="li.star===0 || li.star===1 || li.star===2" class="littlestar">
+                      </td>
+                      <td class="historyLi" style="width: 10%;">{{li.score}}</td>
+                    </tr>
+                    </table>
+                  </div>
+                 </div>
                 </div>
-                <!--下方白点 -->
-                <div class="pointPosition" v-if="categoriesName !== 'Performance Report'">
-                  <span :class="categoriesName === 'Overall' ?'point1':'point2'" >.</span>
-                  <span :class="categoriesName === 'Strengths'?'point1':'point2'">.</span>
-                  <span :class="categoriesName === 'Exercise Completion Intervals'?'point1':'point2'">.</span>
-                  <span :class="categoriesName === 'Improvement'?'point1':'point2'">.</span>
-                  <span :class="categoriesName === 'Scores for Key Areas'?'point1':'point2'">.</span>
-                  <span :class="categoriesName === 'Exercise History'?'point1':'point2'">.</span>
+                <!--Exercise Completion Intervals-->
+                <div class="intervals" v-if="categoriesName === 'Exercise Completion Intervals'">
+                  <img src="../../assets/image/iClock.png" class="iClock">
+                  <div class="intervalsPosition">
+                  <p class="intervalsHour">{{ intervalsHour }}</p>
+                  <p class="intervalsHours">hrs</p>
+                  <p class="intervalsMins">{{ intervalsMins }}mins</p>
+                  <p class="intervalsPass">You are better than <span style="color: #6CB0A4">{{pass}}%</span> of players.</p>
+                  </div>
                 </div>
+                <!--Exercise Completion Intervals2-->
+                <div class="intervals" v-if="categoryNum === 3">
+                  <div class="intervalsPass7">
+                    <div :class="{intervalsPassAmazing:evaluate ==='AMAZING',intervalsPassKeepTrying:evaluate ==='KEEP TRYING',intervalsPassGreat:evaluate ==='GREAT',intervalsPassNice:evaluate ==='NICE'}">{{evaluate}}</div>
+                    <p class="intervalsPassText1">{{pass7}}</p>
+                    <p class="intervalsPassText2">EXERCISES</p>
+                    <P class="intervalsPassClass">/past 7 days</P>
+                  </div>
+                  <div class="intervalsPass30">
+                    <div :class="{intervalsPassAmazing:evaluate2 ==='AMAZING',intervalsPassKeepTrying:evaluate2 ==='KEEP TRYING',intervalsPassGreat:evaluate2 ==='GREAT',intervalsPassNice:evaluate2 ==='NICE'}">{{evaluate2}}</div>
+                    <p class="intervalsPassText1">{{pass30}}</p>
+                    <p class="intervalsPassText2">EXERCISES</p>
+                    <P class="intervalsPassClass">/past 30 days</P>
+                  </div>
+                </div>
+              </div>
+              <!--下方白点 -->
+              <div class="pointPosition" v-if="opciay2&&categoriesName !== 'Performance Report'">
+                <span :class="categoriesName === 'Overall' ?'point1':'point2'" >.</span>
+                <span :class="categoriesName === 'Exercise Completion Intervals'?'point1':'point2'">.</span>
+                <span :class="categoriesName === 'Exercise Completion Intervals2'?'point1':'point2'">.</span>
+                <span :class="categoriesName === 'Scores for Key Areas'?'point1':'point2'">.</span>
+                <span :class="categoriesName === 'Strengths'?'point1':'point2'">.</span>
+                <span :class="categoriesName === 'Strengths2'?'point1':'point2'">.</span>
+                <span :class="categoriesName === 'Improvement'?'point1':'point2'">.</span>
+                <span :class="categoriesName === 'Exercise History'?'point1':'point2'">.</span>
               </div>
             </div>
           </div>
@@ -560,7 +619,18 @@
     name: "info",
     data() {
       return {
+        //evaluate:'GREAT',
+        evaluate2:'AMAZING',
+        evaluate:'NICE',
+        //evaluate2:'KEEP TRYING',
+        intervalsHour:'5',
+        intervalsMins:'6',
+        pass7:'',
+        pass30:'',
+        pass:'0',
         local:'',
+        history:[],
+        overall:[],
         action: false,
         action1: false,
         level: " ",
@@ -624,12 +694,15 @@
         ],
         category: [
           'Overall',
-          'Strengths',
           'Exercise Completion Intervals',
-          'Improvement',
+          'Exercise Completion Intervals2',
           'Scores for Key Areas',
+          'Strengths',
+          'Strengths2',
+          'Improvement',
           'Exercise History'
         ],
+        categoryNum: 1,
         allstar: [],
         stars: [],
         seleinfo: true,
@@ -683,46 +756,54 @@
     },
     methods: {
       cardRight(){
-        for (let i = 0; i < this.category.length; i++) {
-          if (this.categoriesName === this.category[this.category.length-1]){
-            this.categories(this.category[0]);
-            break;
-          } else if (this.categoriesName === this.category[i]){
-            this.categories(this.category[i+1]);
-            break;
-          }
+        if(this.categoryNum === 8){
+          this.categoryNum=1
+        }else {
+          this.categoryNum+=1
         }
+        this.categories(this.categoryNum);
       },
       cardLeft(){
-        for (let i = 0; i < this.category.length; i++) {
-          if (this.categoriesName === this.category[0]){
-            this.categories(this.category[this.category.length-1]);
-            break;
-          } else if (this.categoriesName === this.category[i]){
-            this.categories(this.category[i-1]);
-            break;
-          }
+        if(this.categoryNum === 1){
+          this.categoryNum=8
+        }else {
+          this.categoryNum-=1
         }
+        this.categories(this.categoryNum);
       },
       categories(str){
-        if (str === 'Overall'){
+        if (str === 1){
           this.categoriesName='Overall';
           this.categoriesText='Exercises completion for each letters';
-        }else if(str ==='Strengths'){
-          this.categoriesName='Strengths';
-          this.categoriesText='Correctness of the last 10 times of each letter';
-        }else if(str ==='Exercise Completion Intervals'){
+          this.categoryNum=1;
+        }else if(str ===2){
           this.categoriesName='Exercise Completion Intervals';
           this.categoriesText='Time Spent Overall';
-        }else if(str ==='Improvement'){
-          this.categoriesName='Improvement';
-          this.categoriesText='Average scores of each letter exercise';
-        }else if(str ==='Scores for Key Areas'){
+          this.categoryNum=2;
+        }else if(str ===3){
+          this.categoriesName='Exercise Completion Intervals2';
+          this.categoriesText='Time Spent Overall';
+          this.categoryNum=3;
+        }else if(str ===4){
           this.categoriesName='Scores for Key Areas';
           this.categoriesText='Score in last 10 times in different area';
-        }else if(str ==='Exercise History'){
+          this.categoryNum=4;
+        }else if(str ===5){
+          this.categoriesName='Strengths';
+          this.categoriesText='Correctness of the last 10 times of each letter';
+          this.categoryNum=5;
+        }else if(str ===6){
+          this.categoriesName='Strengths2';
+          this.categoriesText='Correctness of the last 10 times of each letter';
+          this.categoryNum=6;
+        }else if(str ===7){
+          this.categoriesName='Improvement';
+          this.categoriesText='Average scores of each letter exercise';
+          this.categoryNum=7;
+        }else if(str ===8){
           this.categoriesName='Exercise History';
           this.categoriesText='Completion history of each letter';
+          this.categoryNum=8;
         }
       },
       PrivacyPolicy(p){
@@ -860,6 +941,9 @@
       changeBcolo2() {
         if (this.phonics == 0) {
           alertMsg3("Active Phonics Student Only");
+          setTimeout((function () {
+            alertFram.style.display = "none";
+          }), 1500)
         } else {
           this.backgrorang = true;
           this.backgrgreen = false;
@@ -894,6 +978,7 @@
           }, res => {
             alertMsg("You must be connected to the internet.<br>Please connect and try again.");
           })
+
         }
       },
       section1() {
@@ -1323,6 +1408,42 @@
         });
         localStorage.setItem("userId", '');
       },
+      //统计
+      Statistics(){
+        this.$axios.post('/user/getTimeLog', qs.stringify({
+          studentId: localStorage.getItem('studentId'),
+          level:'Intermediate'
+        })).then(res => {
+          console.log(res);
+          this.intervalsMins = res.data.time.mins;
+          this.intervalsHour = res.data.time.hours;
+          this.pass = res.data.time.pass;
+          this.history = res.data.History;
+          this.overall = res.data.Overall;
+          this.pass7 = res.data.Intervals.pass7;
+          this.pass30 = res.data.Intervals.pass30;
+          if(this.pass7<=6){
+            this.evaluate = 'KEEP TRYING';
+          }else if(6<this.pass7<=13){
+            this.evaluate = 'NICE';
+          }else if(13<this.pass7<=21){
+            this.evaluate = 'GREAT';
+          }else if(21<this.pass7){
+            this.evaluate = 'AMAZING';
+          }
+          if(this.pass30<=27){
+            this.evaluate = 'KEEP TRYING';
+          }else if(27<this.pass7<=52){
+            this.evaluate = 'NICE';
+          }else if(53<this.pass7<=84){
+            this.evaluate = 'GREAT';
+          }else if(85<this.pass7){
+            this.evaluate = 'AMAZING';
+          }
+        }, res => {
+          alertMsg("You must be connected to the internet.<br>Please connect and try again.");
+        })
+      },
       pnext2(li) {
         this.page2 = true;
         this.opciay2 = true;
@@ -1334,21 +1455,10 @@
         this.ifboss2 = false;
         this.categoriesName = 'Performance Report';
         this.categoriesText = 'Please select categories';
-        this.purl2 = this.url + "PhonicsDetail";
+        //this.purl2 = this.url + "PhonicsDetail";
         this.phonicsId = li.id;
         this.level = li.name;
-        this.$axios.post(this.purl2, qs.stringify({
-          studentId: localStorage.getItem('studentId'),
-          phonicsId: this.phonicsId
-        })).then(res => {
-          this.phonicsDetailList = res.data.phonicsDetailList;
-          for (let i = 0; i < this.phonicsDetailList.length; i++) {
-            this.phonicsDetailList[i].letter = this.phonicsDetailList[i].name.slice(0,1);
-            this.phonicsDetailList[i].percent = parseInt(this.phonicsDetailList[i].star/30*100)+'%';
-          }
-        }, res => {
-          alertMsg("You must be connected to the internet.<br>Please connect and try again.");
-        })
+        this.Statistics();
       },
       pnext21(li) {
         this.page2 = true;
@@ -1361,21 +1471,10 @@
         this.ifboss2 = false;
         this.categoriesName = 'Performance Report';
         this.categoriesText = 'Please select categories';
-        this.purl2 = this.url + "PhonicsDetail2";
+        //this.purl2 = this.url + "PhonicsDetail2";
         this.phonicsId = li.id;
         this.level = li.name;
-        this.$axios.post(this.purl2, qs.stringify({
-          studentId: localStorage.getItem('studentId'),
-          phonicsId: this.phonicsId
-        })).then(res => {
-          this.phonicsDetailList = res.data.phonicsDetailList;
-          for (let i = 0; i < this.phonicsDetailList.length; i++) {
-            this.phonicsDetailList[i].letter = this.phonicsDetailList[i].name.slice(0,1);
-            this.phonicsDetailList[i].percent = parseInt(this.phonicsDetailList[i].star/30*100)+'%';
-          }
-        }, res => {
-          alertMsg("You must be connected to the internet.<br>Please connect and try again.");
-        })
+        this.Statistics();
       },
       pnext22(li) {
         this.page2 = true;
@@ -1388,21 +1487,10 @@
         this.ifboss2 = false;
         this.categoriesName = 'Performance Report';
         this.categoriesText = 'Please select categories';
-        this.purl2 = this.url + "PhonicsDetail3";
+        //this.purl2 = this.url + "PhonicsDetail3";
         this.phonicsId = li.id;
         this.level = li.name;
-        this.$axios.post(this.purl2, qs.stringify({
-          studentId: localStorage.getItem('studentId'),
-          phonicsId: this.phonicsId
-        })).then(res => {
-          this.phonicsDetailList = res.data.phonicsDetailList;
-          for (let i = 0; i < this.phonicsDetailList.length; i++) {
-            this.phonicsDetailList[i].letter = this.phonicsDetailList[i].name.slice(0,1);
-            this.phonicsDetailList[i].percent = parseInt(this.phonicsDetailList[i].star/30*100)+'%';
-          }
-        }, res => {
-          alertMsg("You must be connected to the internet.<br>Please connect and try again.");
-        })
+        this.Statistics();
       },
       pnext3(li) {
         this.page3 = true;
@@ -1521,24 +1609,13 @@
     // },
     created() { //生命周期里接收参数
       this.local = localStorage.getItem('local');
-      this.pic = this.$axios.defaults.baseURL2;
-      var heigth = $('body')[0].clientHeight;
-      var width = $('body')[0].clientWidth;
-      // $('.contain').height($('body')[0].clientHeight);
-      // $('.contain').width($('body')[0].clientWidth);
-      // $('.seleinput').height($('body')[0].clientHeight);
-      // $('.seleinput').width($('body')[0].clientWidth);
-      // console.log($('.contain').width());console.log($('.contain').height());
-      //     $('body').height(heigth);
-      // $('body').width(width);
-      // $("#app").css("min-height", heigth);
-      // $(".seleinput").css("min-height", heigth);
-      this.firstName = localStorage.getItem('firstName');
-      this.firstName1 = this.firstName;
       this.gameImage = localStorage.getItem('gameImage');
-      this.gameImage1 = this.gameImage;
+      this.firstName = localStorage.getItem('firstName');
       this.sum = localStorage.getItem('sumCoins');
       this.studentId = localStorage.getItem('studentId');
+      this.pic = this.$axios.defaults.baseURL2;
+      this.firstName1 = this.firstName;
+      this.gameImage1 = this.gameImage;
       this.url1 = this.url + "course";
       this.$axios.post(this.url1, qs.stringify({
         studentId: localStorage.getItem('studentId')
@@ -1550,7 +1627,6 @@
       }, res => {
         alertMsg("You must be connected to the internet.<br>Please connect and try again.");
       })
-
     },
 
   };
@@ -1560,11 +1636,189 @@
   body {
     width: 100%;
     padding: 0;
+    padding: 0;
     // overflow-y: scroll;
     position: static;
   }
+
+  .historyList {
+    position: absolute;
+    width: 100%;
+    top: 17%;
+    overflow: hidden;
+    height: 80%;
+    overflow-y: auto;
+  }
+
+  .historyList::-webkit-scrollbar{
+    display: none;
+  }
+
+  .historyLi{
+    font-size: 1.3rem;
+  }
+
+  .history {
+    width: 105%;
+    height: 15%;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    padding-top: 2%;
+  }
+
+  .historyLabel {
+    display: inline;
+    width: 5%;
+    margin: 3%;
+    padding: 0.5% 3%;
+    color: white;
+    background: #2279ac;
+    border-radius: 50px;
+    font-family: 'pepper',serif;
+    font-size: 1.5rem;
+  }
+
+  .intervalsPassText1{
+    font-family: kg,serif;
+    color: #735138;
+    font-size: 8rem;
+    position: relative;
+    left: 14%;
+    /* width: -webkit-fit-content; */
+    width: -moz-fit-content;
+    /* width: fit-content; */
+    width: 150px;
+    margin-top: 10%;
+    text-align: right;
+  }
+
+  .intervalsPassAmazing {
+    position: absolute;
+    padding: 1.5% 4%;
+    border-radius: 30px;
+    color: white;
+    font-family: 'kg', serif;
+    top: 35%;
+    left: 66%;
+    background-color: #2999d5;
+  }
+
+  .intervalsPassGreat {
+    position: absolute;
+    padding: 1.5% 4%;
+    border-radius: 30px;
+    color: white;
+    font-family: 'kg', serif;
+    top: 35%;
+    left: 72%;
+    background-color: #f389a4;
+  }
+
+  .intervalsPassNice {
+    position: absolute;
+    padding: 1.5% 4%;
+    border-radius: 30px;
+    color: white;
+    font-family: 'kg', serif;
+    top: 35%;
+    left: 70%;
+    background-color: #f7af42;
+  }
+
+  .intervalsPassKeepTrying {
+    position: absolute;
+    padding: 1.5% 4%;
+    border-radius: 30px;
+    color: white;
+    font-family: 'kg', serif;
+    top: 35%;
+    right: 10%;
+    background-color: #2aba8f;
+  }
+
+  .intervalsPassClass {
+    position: absolute;
+    color: #9c8066;
+    font-family: 'pepper', serif;
+    font-size: 1.2rem;
+    left: 65%;
+    top: 75%;
+  }
+
+  .intervalsPassText2{
+    font-family: kg,serif;
+    color: #735138;
+    font-size: 2.5rem;
+    position: absolute;
+    width: fit-content;
+    left: 45%;
+    top: 55%;
+  }
+
+  .intervalsPass7 {
+    width: 50%;
+    float: left;
+    position: relative;
+  }
+
+  .intervalsPass30{
+    width: 50%;
+    float: left;
+    position: relative;
+    left: -8%;
+  }
+
+  .intervalsPass {
+    color: #77766D;
+    font-family: pepper,serif;
+    font-size: 1.2rem;
+    font-weight: 1000;
+    position: absolute;
+    top: 90%;
+    left: 24%;
+  }
+
+  .intervalsPosition {
+    position: absolute;
+    top: 25%;
+    left: 34%;
+    width: 65%;
+  }
+
   .pointPosition{
-    margin-top: -2%;
+    margin-top: -8%;
+  }
+
+  .intervalsHour {
+    font-family: kg,serif;
+    display: inline;
+    color: #735138;
+    font-size: 7rem;
+  }
+
+  .intervalsHours {
+    font-family: kg,serif;
+    display: inline;
+    color: #735138;
+    font-size: 4rem;
+    margin-left: 3%;
+  }
+
+  .intervalsMins {
+    font-family: kg,serif;
+    display: inline;
+    color: #735138;
+    font-size: 3.5rem;
+    margin-left: 3%;
+  }
+
+  .iClock {
+    width: 25%;
+    left: 6%;
+    top: 10%;
+    position: absolute;
   }
 
   .point1{
@@ -1654,6 +1908,18 @@
     left: 50%;
     transform: translateX(-50%);
     border-radius: 50px;
+  }
+
+  .intervals {
+    background-color: #eeebc8;
+    height: 65%;
+    width: 90%;
+    position: relative;
+    left: 50%;
+    top: 10%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    border-radius: 130px;
   }
 
   .startSize{
@@ -2438,12 +2704,128 @@
   }
 
   @media screen and (max-width: 569px) {
+    .intervalsPassNice {
+      position: absolute;
+      padding: 0.5% 3%;
+      border-radius: 30px;
+      color: white;
+      font-family: 'kg', serif;
+      top: 33%;
+      font-size: 0.7rem;
+      left: 70%;
+      background-color: #f7af42;
+    }
+    .intervalsPassAmazing {
+      position: absolute;
+      padding: 0.5% 3%;
+      border-radius: 30px;
+      color: white;
+      font-family: 'kg', serif;
+      top: 33%;
+      font-size: 0.7rem;
+      left: 57%;
+    }
+    .pointPosition {
+      margin-top: -6.5%;
+    }
+    .point1 {
+      font-size: 1rem;
+    }
+    .point2 {
+      font-size: 1rem;
+    }
+    .intervalsPass30 {
+      left: -3%;
+    }
+    .intervalsPassClass {
+      position: absolute;
+      color: #9c8066;
+      font-family: 'pepper', serif;
+      font-size: 0.7rem;
+      left: 48%;
+      top: 75%;
+    }
+    .intervalsPassText2 {
+      font-family: kg,serif;
+      color: #735138;
+      font-size: 1rem;
+      position: absolute;
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content;
+      left: 45%;
+      top: 55%;
+    }
+    .intervalsPassText1{
+      font-family: kg,serif;
+      color: #735138;
+      font-size: 2.5rem;
+      position: relative;
+      left: -14%;
+      /* width: -webkit-fit-content; */
+      width: -moz-fit-content;
+      /* width: fit-content; */
+      margin-top: 10%;
+      text-align: right;
+      width: 100px;
+    }
+    .intervalsPassKeepTrying {
+      position: absolute;
+      padding: 0.5% 3%;
+      border-radius: 30px;
+      color: white;
+      font-family: 'kg', serif;
+      top: 33%;
+      font-size: 0.7rem;
+      right: 2%;
+      background-color: #2aba8f;
+    }
+    .intervalsPassGreat{
+      position: absolute;
+      padding: 0.5% 3%;
+      border-radius: 30px;
+      color: white;
+      font-family: 'kg', serif;
+      top: 33%;
+      font-size: 0.7rem;
+      right: 0;
+      background-color: #f389a4;
+    }
+    .intervalsPosition {
+      position: absolute;
+      top: 25%;
+      left: 30%;
+      width: 65%;
+    }
+    .intervalsHours {
+      font-size: 1rem;
+      margin-left: 2%;
+    }
+    .intervalsMins {
+      font-size: 1rem;
+    }
+    .intervalsHours {
+      font-size: 1rem;
+    }
+    .intervalsHour {
+      font-size: 2rem;
+    }
+    .intervalsPass {
+      left: 2%;
+      font-size: 0.7rem;
+      width: 98%;
+    }
+    .iClock {
+      width: 23%;
+    }
     .cardLeft {
       top: 25%;
     }
+
     .cardRight {
       top: 25%;
     }
+
     .categoriesLi {
       background-color: #f58948;
       display: inline-block;
@@ -2451,13 +2833,14 @@
       height: 14%;
       border-radius: 30px;
       float: left;
-      margin: 2% 0 0 2%;
+      margin: 3% 0 0 2.8%;
       color: white;
       font-size: 0.6rem;
       font-family: 'pepper', serif;
-      border: 5px solid #ca642b;
+      border: 3px solid #ca642b;
       line-height: 13px;
     }
+
     .categories {
       background-color: #eeebc8;
       height: 85%;
@@ -2603,6 +2986,100 @@
   @media screen and (min-device-height: 570px) and (max-device-height: 735px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 570px) and (max-device-height: 735px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 570px) and (max-width: 735px){
+    .intervalsPassNice {
+      position: absolute;
+      padding: 0.5% 3%;
+      border-radius: 30px;
+      color: white;
+      font-family: 'kg', serif;
+      top: 35%;
+      left: 70%;
+      font-size: 0.7rem;
+      background-color: #f7af42;
+    }
+    .intervalsPassAmazing {
+      padding: 0.5% 3%;
+      top: 35%;
+      left: 54%;
+      font-size: 0.7rem;
+    }
+    .intervalsPassKeepTrying {
+      position: absolute;
+      padding: 0.5% 3%;
+      border-radius: 30px;
+      color: white;
+      font-family: 'kg', serif;
+      top: 35%;
+      font-size: 0.7rem;
+      right: 10%;
+      background-color: #2aba8f;
+    }
+
+    .intervalsPassGreat{
+      position: absolute;
+      padding: 0.5% 3%;
+      border-radius: 30px;
+      color: white;
+      font-family: 'kg', serif;
+      top: 35%;
+      font-size: 0.7rem;
+      left: 63%;
+      background-color: #f389a4;
+    }
+
+    .intervalsPassText1{
+      font-family: kg,serif;
+      color: #735138;
+      font-size: 4rem;
+      position: relative;
+      left: -7%;
+      width: 100px;
+      margin-top: 12%;
+      text-align: right;
+    }
+
+    .intervalsPassText2 {
+      font-size: 1rem;
+      left: 44%;
+      top: 55%;
+    }
+
+    .intervalsPassClass {
+      font-size: 0.7rem;
+      left: 53%;
+      top: 71%;
+    }
+
+    .intervalsPass30 {
+      left: -3%;
+    }
+
+    .point1 {
+      font-size: 2rem;
+    }
+    .point2 {
+      font-size: 2rem;
+    }
+    .pointPosition {
+      margin-top: -11%;
+    }
+    .intervalsPass{
+      font-size: 0.7rem;
+      left: 8%;
+      width: 85%;
+    }
+    .intervalsMins {
+      font-size: 2rem;
+    }
+    .intervalsHours {
+      font-size: 2rem;
+    }
+    .intervalsHour {
+      font-size: 3rem;
+    }
+    .iClock {
+      width: 25%;
+    }
     .cardLeft {
       top: 22%;
       width: 5%;
@@ -2671,17 +3148,131 @@
   @media screen and (min-device-height: 736px) and (max-device-height: 811px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 736px) and (max-device-height: 811px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 736px) and (max-width: 811px) {
+    .pointPosition {
+      margin-top: -10%;
+    }
+    .point2 {
+      font-size: 2rem;
+    }
+    .point1 {
+      font-size: 2rem;
+    }
+    .intervalsPassClass {
+      position: absolute;
+      color: #9c8066;
+      font-family: 'pepper', serif;
+      font-size: 0.7rem;
+      left: 65%;
+      top: 81%;
+    }
+    .intervalsPassText2 {
+      font-family: kg,serif;
+      color: #735138;
+      font-size: 1.5rem;
+      position: absolute;
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content;
+      left: 45%;
+      top: 55%;
+    }
+    .intervalsPassText1 {
+      font-family: kg,serif;
+      color: #735138;
+      font-size: 3rem;
+      position: relative;
+      left: 8%;
+      width: 80px;
+      text-align: right;
+      margin-top: 15%;
+    }
+    .intervalsPassKeepTrying {
+      position: absolute;
+      padding: 0.5% 3%;
+      border-radius: 30px;
+      color: white;
+      font-family: 'kg', serif;
+      top: 35%;
+      right: -5%;
+      font-size: 0.7rem;
+      background-color: #2aba8f;
+    }
+
+    .intervalsPassGreat{
+      position: absolute;
+      padding: 0.5% 3%;
+      border-radius: 30px;
+      color: white;
+      font-family: 'kg', serif;
+      top: 35%;
+      right: -5%;
+      font-size: 0.7rem;
+      background-color: #f389a4;
+    }
+
+    .intervalsPassNice {
+      position: absolute;
+      padding: 0.5% 3%;
+      border-radius: 30px;
+      color: white;
+      font-family: 'kg', serif;
+      top: 35%;
+      left: 85%;
+      font-size: 0.7rem;
+      background-color: #f7af42;
+    }
+
+    .intervalsPassAmazing {
+      position: absolute;
+      padding: 0.5% 3%;
+      border-radius: 30px;
+      color: white;
+      font-family: 'kg', serif;
+      top: 35%;
+      left: 70%;
+      font-size: 0.7rem;
+      background-color: #2999d5;
+    }
+
+    .intervalsPass30 {
+      left: -7%;
+    }
+    .intervalsPass7 {
+      left: -5%;
+    }
+    .intervalsPass {
+      font-size: 0.7rem;
+    }
+    .intervalsMins {
+      font-size: 2rem;
+    }
+    
+    .intervalsHours {
+      font-size: 2rem;
+    }
+
+    .intervalsHour {
+      font-size: 3rem;
+    }
+
+    .iClock {
+      width: 25%;
+    }
+
     .cardLeft {
       top: 26%;
       width: 5%;
     }
+
     .cardRight {
       top: 26%;
       width: 5%;
     }
+
     .categories {
       border-radius: 30px;
     }
+
     .categoriesLi {
       background-color: #f58948;
       display: inline-block;
@@ -2689,11 +3280,11 @@
       height: 15%;
       border-radius: 30px;
       float: left;
-      margin: 3% 0 0 5.5%;
+      margin: 4% 0 0 6.5%;
       color: white;
       font-size: 0.8rem;
       font-family: 'pepper', serif;
-      border: 5px solid #ca642b;
+      border: 3px solid #ca642b;
       line-height: 25px;
     }
     .phonicsLevel {
@@ -2704,7 +3295,7 @@
       margin: -3px 0px;
     }
     .buttonsty {
-      font-size: 1rem;
+      font-size: 0.9rem;
     }
     .progress2{
       height: 20px;
@@ -2765,6 +3356,104 @@
   @media screen and (min-device-height: 812px) and (max-device-height: 894px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 812px) and (max-device-height: 894px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 812px) and (max-width: 894px) {
+    .pointPosition {
+      margin-top: -9%;
+    }
+    .point1 {
+      font-size: 2rem;
+    }
+    .point2 {
+      font-size: 2rem;
+    }
+    .intervalsPassClass {
+      position: absolute;
+      color: #9c8066;
+      font-family: 'pepper', serif;
+      font-size: 0.7rem;
+      left: 65%;
+      top: 81%;
+    }
+
+    .intervalsPassText2 {
+      font-family: kg,serif;
+      color: #735138;
+      font-size: 1.5rem;
+      position: absolute;
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content;
+      left: 42%;
+      top: 50%;
+    }
+
+    .intervalsPassText1{
+      font-family: kg,serif;
+      color: #735138;
+      font-size: 3.5rem;
+      position: relative;
+      left: 1%;
+      text-align: right;
+      width: 100px;
+      margin-top: 10%;
+    }
+
+    .intervalsPassKeepTrying {
+      position: absolute;
+      padding: 0.5% 3%;
+      font-size: 0.7rem;
+      border-radius: 30px;
+      color: white;
+      font-family: 'kg', serif;
+      top: 32%;
+      right: 6%;
+      background-color: #2aba8f;
+    }
+
+    .intervalsPassAmazing {
+      padding: 0.5% 3%;
+      top: 35%;
+      left: 66%;
+      font-size: 0.7rem;
+    }
+
+    .intervalsPassNice {
+      padding: 0.5% 3%;
+      top: 35%;
+      left: 78%;
+      font-size: 0.7rem;
+    }
+
+    .intervalsPassGreat{
+      position: absolute;
+      padding: 0.5% 3%;
+      font-size: 0.7rem;
+      border-radius: 30px;
+      color: white;
+      font-family: 'kg', serif;
+      top: 32%;
+      right: 6%;
+      background-color: #f389a4;
+    }
+
+    .intervalsPass30 {
+      left: -5%;
+    }
+
+    .intervalsPass {
+      font-size: 0.7rem;
+    }
+    .intervalsMins {
+      font-size: 2rem;
+    }
+    .intervalsHours {
+      font-size: 2rem;
+    }
+    .intervalsHour {
+      font-size: 3rem;
+    }
+    .iClock {
+      width: 21%;
+    }
     .cardRight {
       top: 26%;
     }
@@ -2774,12 +3463,15 @@
     .categories {
       border-radius: 30px;
     }
+
     .categoriesLi {
       border-radius: 30px;
-      margin: 2.5% 0 0 6%;
+      margin: 3.5% 0 0 6.6%;
       font-size: 0.8rem;
       line-height: 23px;
+      border: 2px solid #ca642b;
     }
+
     .phonicsLevel {
       padding-left: 50px;
     }
@@ -2902,6 +3594,97 @@
   @media screen and (min-device-height: 895px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 895px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 895px) and (max-width: 1023px) {
+    .intervalsPassAmazing {
+      position: absolute;
+      padding: 1.5% 4%;
+      border-radius: 30px;
+      color: white;
+      font-family: 'kg', serif;
+      top: 31%;
+      left: 60%;
+      font-size: 0.7rem;
+      background-color: #2999d5;
+    }
+    .intervalsPassNice {
+      position: absolute;
+      padding: 1.5% 4%;
+      border-radius: 30px;
+      color: white;
+      font-family: 'kg', serif;
+      top: 31%;
+      left: 68%;
+      font-size: 0.7rem;
+      background-color: #f7af42;
+    }
+
+    .pointPosition {
+      margin-top: -9%;
+    }
+    .point1 {
+      font-size: 2rem;
+    }
+    .point2 {
+      font-size: 2rem;
+    }
+    .intervalsPassClass{
+      position: absolute;
+      color: #9c8066;
+      font-family: 'pepper', serif;
+      font-size: 0.7rem;
+      left: 61%;
+      top: 78%;
+    }
+
+    .intervalsPassText2 {
+      font-family: kg,serif;
+      color: #735138;
+      font-size: 1.5rem;
+      position: absolute;
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content;
+      left: 40%;
+      top: 50%;
+    }
+
+    .intervalsPassText1{
+      font-family: kg,serif;
+      color: #735138;
+      font-size: 4.5rem;
+      position: relative;
+      left: 2%;
+      text-align: right;
+      width: 100px;
+      margin-top: 10%;
+    }
+
+    .intervalsPassKeepTrying {
+      position: absolute;
+      padding: 0.5% 3%;
+      font-size: 0.7rem;
+      border-radius: 30px;
+      color: white;
+      font-family: 'kg', serif;
+      top: 32%;
+      right: 11%;
+      background-color: #2aba8f;
+    }
+
+    .intervalsPassGreat{
+      position: absolute;
+      padding: 0.5% 3%;
+      font-size: 0.7rem;
+      border-radius: 30px;
+      color: white;
+      font-family: 'kg', serif;
+      top: 32%;
+      right: 8%;
+      background-color: #f389a4;
+    }
+
+    .intervalsPass30 {
+      left: -5%;
+    }
     .phonicsLevel {
       padding-left: 60px;
     }
@@ -3050,16 +3833,127 @@
   @media screen and (min-device-height: 1024px) and (max-device-height: 1199px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 1024px) and (max-device-height: 1199px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 1024px) and (max-width: 1199px) {
-    .pointPosition[data-v-2f20336a] {
-      margin-top: -4%;
+    .intervalsPassNice {
+      position: absolute;
+      padding: 1.5% 4%;
+      border-radius: 30px;
+      color: white;
+      font-family: 'kg', serif;
+      top: 43%;
+      left: 73%;
+      font-size: 1rem;
+      background-color: #f7af42;
     }
-    .cRight[data-v-2f20336a] {
+    .intervalsPassAmazing {
+      position: absolute;
+      padding: 1.5% 4%;
+      border-radius: 30px;
+      color: white;
+      font-family: 'kg', serif;
+      top: 43%;
+      left: 61%;
+      font-size: 1rem;
+    }
+
+    .intervalsPassClass {
+      position: absolute;
+      color: #9c8066;
+      font-family: 'pepper', serif;
+      font-size: 1rem;
+      left: 56%;
+      top: 76%;
+    }
+
+    .intervalsPassText2 {
+      font-family: kg,serif;
+      color: #735138;
+      font-size: 2rem;
+      position: absolute;
+      width: fit-content;
+      left: 36%;
+      top: 60%;
+    }
+
+    .intervalsPassText1{
+      font-family: kg,serif;
+      color: #735138;
+      font-size: 4rem;
+      position: relative;
+      left: 3%;
+      margin-top: 21%;
+      width: 100px;
+    }
+
+    .intervalsPassKeepTrying {
+      position: absolute;
+      padding: 1% 3%;
+      border-radius: 30px;
+      color: white;
+      font-family: 'kg', serif;
+      top: 45%;
+      right: 7%;
+      background-color: #2aba8f;
+    }
+
+    .intervalsPassGreat{
+      position: absolute;
+      padding: 1% 3%;
+      border-radius: 30px;
+      color: white;
+      font-family: 'kg', serif;
+      top: 45%;
+      right: 4%;
+      background-color: #f389a4;
+    }
+
+    .iClock {
+      width: 30%;
+    }
+
+    .intervalsHour {
+      font-family: kg,serif;
+      display: inline;
+      color: #735138;
+      font-size: 4.5rem;
+    }
+
+    .intervalsHours {
+      font-family: kg,serif;
+      display: inline;
+      color: #735138;
+      font-size: 2rem;
+      margin-left: 3%;
+    }
+
+    .intervalsMins {
+      font-family: kg,serif;
+      display: inline;
+      color: #735138;
+      font-size: 2rem;
+      margin-left: 3%;
+    }
+    .intervalsPass {
+      color: #77766D;
+      font-family: pepper,serif;
+      font-size: 1rem;
+      font-weight: 1000;
+      position: absolute;
+      top: 90%;
+      left: 17%;
+    }
+
+    .pointPosition{
+      margin-top: -8%;
+    }
+
+    .cRight {
       width: 50px;
       height: 50px;
       right: -25px;
       border-radius: 50px;
     }
-    .cLeft[data-v-2f20336a] {
+
+    .cLeft {
       width: 50px;
       height: 50px;
       left: -25px;
@@ -3317,6 +4211,52 @@
   @media screen and (min-device-height: 1200px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 1200px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 1200px) and (max-width: 1600px) {
+    .intervalsPassNice {
+      top: 44%;
+      left: 61%;
+    }
+    .pointPosition {
+      margin-top: -9%;
+    }
+    .intervalsPass7 {
+      left: 7%;
+    }
+    .intervalsPassText1 {
+      font-family: kg,serif;
+      color: #735138;
+      font-size: 8rem;
+      position: relative;
+      left: -3%;
+      margin-top: 15%;
+      width: 120px;
+    }
+    .intervalsPassKeepTrying {
+      right: 18%;
+      padding: 1.5% 4%;
+      top: 42%;
+    }
+    .intervalsPassGreat {
+      left: 59%;
+      right: unset;
+      padding: 1.5% 4%;
+      top: 42%;
+    }
+    .intervalsPassAmazing {
+      left: 52%;
+      padding: 1.5% 4%;
+      top: 42%;
+    }
+    .intervalsPassAmazing {
+      right: 18%;
+      padding: 1.5% 4%;
+      top: 42%;
+    }
+    .intervalsPass30 {
+      left: 3%;
+    }
+    .iClock {
+      width: 30%;
+    }
     .categoriesLi {
       font-size: 1.5rem;
       line-height: 48px;
