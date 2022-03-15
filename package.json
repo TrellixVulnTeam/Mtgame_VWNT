@@ -15,6 +15,7 @@
     "axios": "^0.21.1",
     "babel-polyfill": "^6.26.0",
     "cordova-plugin-inappbrowser": "^5.0.0",
+    "echarts": "^5.3.1",
     "imagemin": "^5.0.0",
     "less-loader": "^5.0.0",
     "myscript": "^4.3.0",

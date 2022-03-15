@@ -477,22 +477,30 @@
                   </table>
                 </div>
               </div>
-<!--              phonics替代原先opciay1的部分，新更新的内容 v-if="opciayStatistics"-->
+              <!--phonics替代原先opciay1的部分，新更新的内容 v-if="opciayStatistics"-->
               <div  v-if="opciay2" style="width: 100%;height: 100%;">
-                <div class="categories" v-if="categoriesName!=='Exercise Completion Intervals'&&categoryNum!=3">
+                <div class="categories" v-if="categoriesName !== 'Exercise Completion Intervals'&&categoryNum !== 3">
                   <div v-if="categoriesName === 'Overall' || categoriesName === 'Strengths'">
                     <div class="cRight">
-                      <img src="../../assets/image/LearningReportRight.png" class="LearningReportRight">
+                      <img src="../../assets/image/LearningReportRight.png" class="LearningReportRight" @click="cRight">
                     </div>
                     <div class="cLeft">
-                      <img src="../../assets/image/LearningReportLeft.png" class="LearningReportLeft">
+                      <img src="../../assets/image/LearningReportLeft.png" class="LearningReportLeft" @click="cLeft">
                     </div>
                   </div>
+                  <!--overall-->
+                  <div v-if="categoryNum===1" class="overallLetter">
+                    <div class="letters" v-for="(li,index) in overall.slice(sliceMin,sliceMax)" :key='index'>
+                      <img :src="li.imgSrc" style="width: 100%">
+                      <p class="letterPercent">{{li.percent}}%</p>
+                    </div>
+                  </div>
+                  <!--Performance Report-->
                   <ul style="height: 100%;" v-if="categoriesName === 'Performance Report'">
                     <li class="categoriesLi" @click="categories(1)">
                       Overall
                     </li>
-                    <li class="categoriesLi" @click="categories(4)">
+                    <li class="categoriesLi" @click="categories(6)">
                       Strengths
                     </li>
                     <li class="categoriesLi" @click="categories(2)">
@@ -501,13 +509,14 @@
                     <li class="categoriesLi" @click="categories(5)">
                       Improvement
                     </li>
-                    <li class="categoriesLi" @click="categories(3)">
+                    <li class="categoriesLi" @click="categories(4)">
                       Scores for Key Areas
                     </li>
-                    <li class="categoriesLi" @click="categories(6)">
+                    <li class="categoriesLi" @click="categories(7)">
                       Exercise History
                     </li>
                   </ul>
+                  <!--Exercise History-->
                   <div v-if="categoriesName === 'Exercise History'">
                   <div  class="history">
                     <div class="historyLabel" >Date</div>
@@ -541,6 +550,19 @@
                     </table>
                   </div>
                  </div>
+                  <!--Improvement-->
+                  <div v-if="categoryNum === 6" style="height: 100%" >
+                    <div class="improvementList" v-for="(li,index) in improvement" :key='index'>
+                      <div class="improvementId">{{index}}</div>
+                      <div class="improvementLetter">Letter {{li.name}}</div>
+                      <div class="improvementButton">Let's Review</div>
+                      <div class="improvementPercent">{{li.average}}%</div>
+                    </div>
+                  </div>
+                  <!--Scores for key areas-->
+                  <div v-if="categoryNum === 4" style="height: 100%">
+                    123
+                  </div>
                 </div>
                 <!--Exercise Completion Intervals-->
                 <div class="intervals" v-if="categoriesName === 'Exercise Completion Intervals'">
@@ -567,6 +589,7 @@
                     <P class="intervalsPassClass">/past 30 days</P>
                   </div>
                 </div>
+
               </div>
               <!--下方白点 -->
               <div class="pointPosition" v-if="opciay2&&categoriesName !== 'Performance Report'">
@@ -575,7 +598,6 @@
                 <span :class="categoriesName === 'Exercise Completion Intervals2'?'point1':'point2'">.</span>
                 <span :class="categoriesName === 'Scores for Key Areas'?'point1':'point2'">.</span>
                 <span :class="categoriesName === 'Strengths'?'point1':'point2'">.</span>
-                <span :class="categoriesName === 'Strengths2'?'point1':'point2'">.</span>
                 <span :class="categoriesName === 'Improvement'?'point1':'point2'">.</span>
                 <span :class="categoriesName === 'Exercise History'?'point1':'point2'">.</span>
               </div>
@@ -619,10 +641,11 @@
     name: "info",
     data() {
       return {
-        //evaluate:'GREAT',
+        improvement:[],
+        sliceMin:0,
+        sliceMax:6,
         evaluate2:'AMAZING',
         evaluate:'NICE',
-        //evaluate2:'KEEP TRYING',
         intervalsHour:'5',
         intervalsMins:'6',
         pass7:'',
@@ -756,7 +779,7 @@
     },
     methods: {
       cardRight(){
-        if(this.categoryNum === 8){
+        if(this.categoryNum === 7){
           this.categoryNum=1
         }else {
           this.categoryNum+=1
@@ -765,11 +788,40 @@
       },
       cardLeft(){
         if(this.categoryNum === 1){
-          this.categoryNum=8
+          this.categoryNum=7
         }else {
           this.categoryNum-=1
         }
         this.categories(this.categoryNum);
+      },
+      cRight(){
+        if (this.sliceMax - this.overall.length<0){
+          this.sliceMax+=6;
+          this.sliceMin+=6;
+        }else{
+          this.sliceMax=6;
+          this.sliceMin=0;
+        }
+      },
+      cLeft(){
+        if (this.sliceMin>=6){
+          if(this.sliceMax-this.sliceMin<6){
+            this.sliceMax-=this.overall.length%6;
+            this.sliceMin-=6;
+            console.log(this.sliceMin);
+            console.log(this.sliceMax);
+          }else{
+            this.sliceMax-=6;
+            this.sliceMin-=6;
+            console.log(this.sliceMin);
+            console.log(this.sliceMax);
+          }
+        }else {
+          this.sliceMax = this.overall.length;
+          this.sliceMin = this.overall.length-this.overall.length%6;
+          console.log(this.sliceMin);
+          console.log(this.sliceMax);
+        }
       },
       categories(str){
         if (str === 1){
@@ -793,17 +845,13 @@
           this.categoriesText='Correctness of the last 10 times of each letter';
           this.categoryNum=5;
         }else if(str ===6){
-          this.categoriesName='Strengths2';
-          this.categoriesText='Correctness of the last 10 times of each letter';
-          this.categoryNum=6;
-        }else if(str ===7){
           this.categoriesName='Improvement';
           this.categoriesText='Average scores of each letter exercise';
-          this.categoryNum=7;
-        }else if(str ===8){
+          this.categoryNum=6;
+        }else if(str ===7){
           this.categoriesName='Exercise History';
           this.categoriesText='Completion history of each letter';
-          this.categoryNum=8;
+          this.categoryNum=7;
         }
       },
       PrivacyPolicy(p){
@@ -962,8 +1010,7 @@
           this.chatorphonics = false;
           this.categoriesName = 'Level';
           this.categoriesText = 'Please select your level';
-          // this.opciay5=true;
-          // this.courseId=this.courseList[1].course_id;
+          this.categoryNum = '';
           if (this.courseList[1].name === "CHAT ROOM") {
             this.course = "Chat Room";
           } else if (this.courseList[1].name === "PHONICS") {
@@ -1063,7 +1110,6 @@
           this.opciay6 = false;
           this.opciay1 = false;
         }
-
       },
       next1() {
         this.url2 = this.url + "Levels";
@@ -1412,16 +1458,46 @@
       Statistics(){
         this.$axios.post('/user/getTimeLog', qs.stringify({
           studentId: localStorage.getItem('studentId'),
-          level:'Intermediate'
+          level:this.level
         })).then(res => {
           console.log(res);
           this.intervalsMins = res.data.time.mins;
           this.intervalsHour = res.data.time.hours;
           this.pass = res.data.time.pass;
-          this.history = res.data.History;
-          this.overall = res.data.Overall;
-          this.pass7 = res.data.Intervals.pass7;
-          this.pass30 = res.data.Intervals.pass30;
+          this.history = res.data.history;
+          this.overall = res.data.overall;
+          this.pass7 = res.data.intervals.pass7;
+          this.pass30 = res.data.intervals.pass30;
+          this.improvement = res.data.improvement;
+          for (let i = 0; i < this.overall.length; i++) {
+            this.overall[i].name = this.overall[i].name.slice(0,1);
+            let imgSrc = '';
+            if(this.overall[i].percent <= 10){
+              imgSrc = require('../../assets/image/letters/10/'+this.overall[i].name+'.png');
+            }else if(10<this.overall[i].percent <= 20){
+              imgSrc = require('../../assets/image/letters/10/'+this.overall[i].name+'.png');
+            }else if(20<this.overall[i].percent <= 30){
+              imgSrc = require('../../assets/image/letters/10/'+this.overall[i].name+'.png');
+            }else if(30<this.overall[i].percent <= 40){
+              imgSrc = require('../../assets/image/letters/10/'+this.overall[i].name+'.png');
+            }else if(40<this.overall[i].percent <= 50){
+              imgSrc = require('../../assets/image/letters/10/'+this.overall[i].name+'.png');
+            }else if(50<this.overall[i].percent <= 60){
+              imgSrc = require('../../assets/image/letters/10/'+this.overall[i].name+'.png');
+            }else if(60<this.overall[i].percent <= 70){
+              imgSrc = require('../../assets/image/letters/10/'+this.overall[i].name+'.png');
+            }else if(70<this.overall[i].percent <= 80){
+              imgSrc = require('../../assets/image/letters/10/'+this.overall[i].name+'.png');
+            }else if(80<this.overall[i].percent <= 90){
+              imgSrc = require('../../assets/image/letters/10/'+this.overall[i].name+'.png');
+            }else if(90<this.overall[i].percent <= 99){
+              imgSrc = require('../../assets/image/letters/10/'+this.overall[i].name+'.png');
+            }else if(this.overall[i].percent === 100){
+              imgSrc = require('../../assets/image/letters/10/'+this.overall[i].name+'.png');
+            }
+            this.overall[i].imgSrc = imgSrc;
+          }
+
           if(this.pass7<=6){
             this.evaluate = 'KEEP TRYING';
           }else if(6<this.pass7<=13){
@@ -1440,6 +1516,7 @@
           }else if(85<this.pass7){
             this.evaluate = 'AMAZING';
           }
+
         }, res => {
           alertMsg("You must be connected to the internet.<br>Please connect and try again.");
         })
@@ -1641,6 +1718,47 @@
     position: static;
   }
 
+  .improvementList {
+    width: 50%;
+    float: left;
+    display: flex;
+    height: 30%;
+    align-items: center;
+  }
+
+  .improvementId[data-v-2f20336a] {
+    width: 30%;
+    color: #6d513d;
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+
+  .improvementLetter[data-v-2f20336a] {
+    width: 60%;
+    color: #6d513d;
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+
+  .improvementButton[data-v-2f20336a] {
+    width: 60%;
+    background-color: #f58948;
+    display: inline-block;
+    border-radius: 30px;
+    color: white;
+    font-size: 1.2rem;
+    font-family: 'pepper', serif;
+    border: 5px solid #ca642b;
+    line-height: 40px;
+  }
+
+  .improvementPercent{
+    width: 45%;
+    color: #9b9a8c;
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+
   .historyList {
     position: absolute;
     width: 100%;
@@ -1656,6 +1774,31 @@
 
   .historyLi{
     font-size: 1.3rem;
+  }
+
+  .overallLetter {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .letters {
+    width: 15%;
+    float: left;
+  }
+
+  .letterPercent {
+    color: #985f30;
+    font-family: 'kg';
+    font-size: 2rem;
+  }
+
+  .letterPercent2 {
+    color: #f3762f;
+    font-family: 'kg';
+    font-size: 2rem;
   }
 
   .history {
@@ -2704,6 +2847,19 @@
   }
 
   @media screen and (max-width: 569px) {
+    .cRight {
+      width: 30px;
+      height: 30px;
+      right: -15px;
+    }
+    .cLeft {
+      width: 30px;
+      height: 30px;
+      left: -15px;
+    }
+    .letterPercent {
+      font-size: 1.2rem;
+    }
     .intervalsPassNice {
       position: absolute;
       padding: 0.5% 3%;
@@ -2817,6 +2973,7 @@
     }
     .iClock {
       width: 23%;
+      top:7%;
     }
     .cardLeft {
       top: 25%;
@@ -2844,7 +3001,7 @@
     .categories {
       background-color: #eeebc8;
       height: 85%;
-      width: 95%;
+      width: 90%;
       position: relative;
       left: 50%;
       -webkit-transform: translateX(-50%);
@@ -2986,6 +3143,19 @@
   @media screen and (min-device-height: 570px) and (max-device-height: 735px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 570px) and (max-device-height: 735px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 570px) and (max-width: 735px){
+    .letterPercent {
+      font-size: 1.6rem;
+    }
+    .cLeft {
+      width: 36px;
+      height: 36px;
+      left: -18px;
+    }
+    .cRight {
+      width: 36px;
+      height: 36px;
+      right: -16px;
+    }
     .intervalsPassNice {
       position: absolute;
       padding: 0.5% 3%;
@@ -3148,6 +3318,19 @@
   @media screen and (min-device-height: 736px) and (max-device-height: 811px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 736px) and (max-device-height: 811px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 736px) and (max-width: 811px) {
+    .letterPercent {
+      font-size: 1.6rem;
+    }
+    .cLeft {
+      width: 36px;
+      height: 36px;
+      left: -18px;
+    }
+    .cRight {
+      width: 36px;
+      height: 36px;
+      right: -16px;
+    }
     .pointPosition {
       margin-top: -10%;
     }
@@ -3246,7 +3429,7 @@
     .intervalsMins {
       font-size: 2rem;
     }
-    
+
     .intervalsHours {
       font-size: 2rem;
     }
@@ -3356,6 +3539,19 @@
   @media screen and (min-device-height: 812px) and (max-device-height: 894px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 812px) and (max-device-height: 894px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 812px) and (max-width: 894px) {
+    .letterPercent {
+      font-size: 1.6rem;
+    }
+    .cLeft {
+      width: 36px;
+      height: 36px;
+      left: -18px;
+    }
+    .cRight {
+      width: 36px;
+      height: 36px;
+      right: -16px;
+    }
     .pointPosition {
       margin-top: -9%;
     }
@@ -3594,6 +3790,62 @@
   @media screen and (min-device-height: 895px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 895px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 895px) and (max-width: 1023px) {
+    .intervalsPass {
+      color: #77766D;
+      font-family: pepper,serif;
+      font-size: 0.8rem;
+      font-weight: 1000;
+      position: absolute;
+      top: 90%;
+      left: 34%;
+    }
+    .intervalsMins {
+      font-family: kg,serif;
+      display: inline;
+      color: #735138;
+      font-size: 2.5rem;
+      margin-left: 3%;
+    }
+    .intervalsHours {
+      font-family: kg,serif;
+      display: inline;
+      color: #735138;
+      font-size: 2.5rem;
+      margin-left: 3%;
+    }
+    .intervalsHour {
+      font-family: kg,serif;
+      display: inline;
+      color: #735138;
+      font-size: 5rem;
+    }
+    .intervalsPosition {
+      position: absolute;
+      top: 6%;
+      left: 34%;
+      width: 65%;
+    }
+
+    .iClock {
+      width: 21%;
+      left: 7%;
+      top: 4%;
+      position: absolute;
+    }
+
+    .letterPercent {
+      font-size: 1.6rem;
+    }
+    .cLeft {
+      width: 36px;
+      height: 36px;
+      left: -18px;
+    }
+    .cRight {
+      width: 36px;
+      height: 36px;
+      right: -16px;
+    }
     .intervalsPassAmazing {
       position: absolute;
       padding: 1.5% 4%;
@@ -4211,6 +4463,41 @@
   @media screen and (min-device-height: 1200px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 1200px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 1200px) and (max-width: 1600px) {
+    .intervalsPosition {
+      position: absolute;
+      top: 25%;
+      left: 34%;
+      width: 65%;
+    }
+    .intervalsHour {
+      font-family: kg,serif;
+      display: inline;
+      color: #735138;
+      font-size: 7.5rem;
+    }
+    .intervalsHours {
+      font-family: kg,serif;
+      display: inline;
+      color: #735138;
+      font-size: 4rem;
+      margin-left: 3%;
+    }
+    .intervalsMins {
+      font-family: kg,serif;
+      display: inline;
+      color: #735138;
+      font-size: 4rem;
+      margin-left: 3%;
+    }
+    .intervalsPass {
+      color: #77766D;
+      font-family: pepper,serif;
+      font-size: 1.2rem;
+      font-weight: 1000;
+      position: absolute;
+      top: 90%;
+      left: 31%;
+    }
     .intervalsPassNice {
       top: 44%;
       left: 61%;
