@@ -2,7 +2,6 @@
   <div class="info">
     <div class="contain">
       <img src="../../assets/image/main_bg.png" style="width: 100%; height: 100%;display:block;position: absolute;">
-      <!-- 	<transition name="fade1">	 -->
       <div v-if="!onef" style="width: 100%;height: 85%;display: block;">
         <div class="withcolor">
           <div class="close" @click="back">
@@ -479,7 +478,7 @@
               </div>
               <!--phonics替代原先opciay1的部分，新更新的内容 v-if="opciayStatistics"-->
               <div  v-if="opciay2" style="width: 100%;height: 100%;">
-                <div class="categories" v-if="categoriesName !== 'Exercise Completion Intervals'&&categoryNum !== 3">
+                <div class="categories" v-if="categoriesName !== 'Exercise Completion Intervals'&&categoryNum !== 3&&categoryNum !== 4">
                   <div v-if="categoriesName === 'Overall' || categoriesName === 'Strengths'">
                     <div class="cRight">
                       <img src="../../assets/image/LearningReportRight.png" class="LearningReportRight" @click="cRight">
@@ -559,9 +558,24 @@
                       <div class="improvementPercent">{{li.average}}%</div>
                     </div>
                   </div>
-                  <!--Scores for key areas-->
-                  <div v-if="categoryNum === 4" style="height: 100%">
-                    123
+                </div>
+                <!--Scores for key areas-->
+                <div class="areasDiv" v-if="categoryNum === 4">
+                  <div class="areasButton">
+                    <div class="areasButton1" style="background-color: #939498" @click="areas('overall')">Overall</div>
+                    <div class="areasButton2">
+                      <div class="areasButton3" style="background-color: #939498" @click="areas('listening')">Listening</div>
+                      <div class="areasButton3" style="background-color: #939498" @click="areas('vocab')">Vocab</div>
+                    </div>
+                    <div class="areasButton2">
+                      <div class="areasButton3" style="background-color: #939498" @click="areas('spelling')">Spelling</div>
+                      <div class="areasButton3" style="background-color: #939498" @click="areas('writing')">Writing</div>
+                    </div>
+                    <div class="areasButton1" style="background-color: #939498" @click="areas('letter')">Letter Recognition</div>
+                  </div>
+                  <div class="areas" >
+                    <div  id="myChart" ref="m" style="width: 100%;height:100%;" class="echartStyle">
+                    </div>
                   </div>
                 </div>
                 <!--Exercise Completion Intervals-->
@@ -589,7 +603,6 @@
                     <P class="intervalsPassClass">/past 30 days</P>
                   </div>
                 </div>
-
               </div>
               <!--下方白点 -->
               <div class="pointPosition" v-if="opciay2&&categoriesName !== 'Performance Report'">
@@ -634,12 +647,11 @@
 </template>
 
 <script>
-  import $ from 'jquery';
-
   var qs = require('qs');
   export default {
     name: "info",
     data() {
+      let myChart;
       return {
         improvement:[],
         sliceMin:0,
@@ -777,7 +789,105 @@
         return d + '/' + MM + '/' + y;
       }
     },
+    watch:{
+      'categoriesName':function (newVal) {
+        console.log(this.categoriesName);
+        console.log(this.myChart);
+        if(this.categoriesName === 'Scores for Key Areas'&&this.categoriesName !== 'Performance Report'){
+          setTimeout(()=>{
+          this.drawLine();
+          console.log('123');
+          },1000);
+        }else{
+          if (this.myChart != null && this.myChart !== "" && this.myChart !== undefined) {
+            this.myChart.dispose();//销毁
+            console.log('dis');
+          }
+        }
+
+
+
+        }
+
+    },
     methods: {
+      areas(type){
+        console.log(type);
+      },
+      drawLine(){
+        console.log('my'+this.myChart);
+        if (this.myChart != null && this.myChart !== "" && this.myChart !== undefined) {
+          this.myChart.dispose();//销毁
+          console.log('dis2');
+        }
+        // 基于准备好的dom，初始化echarts实例
+        this.myChart = this.$echarts.init(this.$refs.m)
+        // 绘制图表
+        this.myChart.setOption({
+          xAxis: {
+            type: 'category',
+            data: [1,2,3,4,5,6,7,8,9,10],
+            show:false,
+            textStyle: {
+              color: "#0079B8",
+              fontSize: 12,
+            },
+          },
+          yAxis: {
+            type: 'value',
+            min:0,
+            max:10,
+            splitNumber: 2,
+            axisLabel:{
+              //y轴文字样式
+              textStyle: {
+                fontSize: '25',
+                fontFamily: 'kg',
+                color:'#bebfc0'
+              }
+            },
+            //y轴横线的样式
+            splitLine: {
+              lineStyle: {
+                // 使用深浅的间隔色
+                color:['#bebfc0'],
+                width:5
+              }
+            }
+
+          },
+          series: [
+            {
+              data: [0,2,6,3,0,10,5,8,1,4],
+              type: 'line',
+              //拐点大小
+              symbolSize:15,
+              //实心拐点
+              symbol:'circle',
+              //拐点颜色
+              color:'#f26d2f',
+              itemStyle:{
+                normal:{
+                  lineStyle:{
+                    width:7,
+                    type:'solid',  //'dotted'虚线 'solid'实线
+                    //折线颜色
+                    color:'#f26d2f',
+                    //borderColor:'#bebfc0', //拐角点颜色
+                  }
+                }
+              }
+            }
+          ]
+        });
+        this.myChart.on('click', function (params) {
+          // 在用户点击后控制台打印数据的名称
+          console.log(params);
+        });
+        window.onresize = function() {
+          this.myChart.resize();
+        };
+      },
       cardRight(){
         if(this.categoryNum === 7){
           this.categoryNum=1
@@ -1678,12 +1788,8 @@
 
       },
     },
-    // mounted(){
-    // 	$(window).resize(function() {
-    // 	    $('body').height(heigth);
-    // 		alert( $('body').height());
-    // 	});
-    // },
+    mounted(){
+    },
     created() { //生命周期里接收参数
       this.local = localStorage.getItem('local');
       this.gameImage = localStorage.getItem('gameImage');
@@ -1705,8 +1811,7 @@
         alertMsg("You must be connected to the internet.<br>Please connect and try again.");
       })
     },
-
-  };
+  }
 </script>
 
 <style scoped lang="less">
@@ -1718,6 +1823,11 @@
     position: static;
   }
 
+  .echartStyle{
+    width: 50%;
+    height: 80%;
+  }
+
   .improvementList {
     width: 50%;
     float: left;
@@ -1726,21 +1836,21 @@
     align-items: center;
   }
 
-  .improvementId[data-v-2f20336a] {
+  .improvementId {
     width: 30%;
     color: #6d513d;
     font-weight: 600;
     font-size: 1.5rem;
   }
 
-  .improvementLetter[data-v-2f20336a] {
+  .improvementLetter {
     width: 60%;
     color: #6d513d;
     font-weight: 600;
     font-size: 1.5rem;
   }
 
-  .improvementButton[data-v-2f20336a] {
+  .improvementButton {
     width: 60%;
     background-color: #f58948;
     display: inline-block;
@@ -2051,6 +2161,57 @@
     left: 50%;
     transform: translateX(-50%);
     border-radius: 50px;
+  }
+
+  .areasDiv {
+    height: 95%;
+    width: 100%;
+    display: flex;
+  }
+
+  .areas {
+    background-color: #eeebc8;
+    height: 80%;
+    position: relative;
+    border-radius: 50px;
+    width: 60%;
+  }
+
+  .areasButton{
+    width: 35%;
+    height: fit-content;
+  }
+
+  .areasButton1{
+    width: 80%;
+    display: inline-block;
+    height: 40px;
+    border-radius: 30px;
+    color: white;
+    font-size: 1.5rem;
+    font-family: 'pepper', serif;
+    margin-top: 10%;
+  }
+
+  .areasButton2 {
+    width: 80%;
+    display: flex;
+    height: 60%;
+    justify-content: space-between;
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
+  }
+
+  .areasButton3{
+    width: 45%;
+    display: inline-block;
+    height: 40px;
+    border-radius: 30px;
+    color: white;
+    margin-top: 10%;
+    font-size: 1.5rem;
+    font-family: 'pepper', serif;
   }
 
   .intervals {

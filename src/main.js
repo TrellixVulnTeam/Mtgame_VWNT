@@ -6,6 +6,9 @@ import store from "./store";
 import quit from "./quit";
 import axios from 'axios';
 
+import * as echarts from 'echarts';
+
+Vue.prototype.$echarts = echarts;
 // import cookies from 'vue-cookies';
 // import qs from 'qs';
 // import {createWorker} from 'tesseract.js';
@@ -33,7 +36,6 @@ axios.defaults.baseURL = 'http://localhost:8080/monkeytownCN';
 axios.defaults.baseURL2 = 'http://gamejava.monkeytree.com.hk';
 //axios.defaults.baseURL = 'https://gamejava.monkeytree.com.cn';
 //axios.defaults.baseURL2 = 'https://gamejava.monkeytree.com.cn';
-
 localStorage.setItem('localurl',axios.defaults.baseURL);
 //版本号，更新需要+1
 localStorage.setItem('version',32);
