@@ -1430,7 +1430,7 @@
             img:require('../../assets/image/Spring and summer/Seeds.png')
           },{
             id:5,
-            cardName:'ice scream',
+            cardName:'ice cream',
             audio:require('../../assets/Flashcard Audio/march/ice cream.mp3'),
             img:require('../../assets/image/Spring and summer/Ice Cream.png')
           },{

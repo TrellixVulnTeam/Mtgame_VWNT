@@ -559,19 +559,20 @@
                     </div>
                   </div>
                 </div>
+
                 <!--Scores for key areas-->
                 <div class="areasDiv" v-if="categoryNum === 4">
                   <div class="areasButton">
-                    <div class="areasButton1" style="background-color: #939498" @click="areas('overall')">Overall</div>
+                    <div class="areasButton1" :style="symbolNub ==='1' ? symbolColor:symbolDefaultColor" @click="areas('overall')">Overall</div>
                     <div class="areasButton2">
-                      <div class="areasButton3" style="background-color: #939498" @click="areas('listening')">Listening</div>
-                      <div class="areasButton3" style="background-color: #939498" @click="areas('vocab')">Vocab</div>
+                      <div class="areasButton3" :style="symbolNub ==='2' ? symbolColor:symbolDefaultColor" @click="areas('listening')">Listening</div>
+                      <div class="areasButton3" :style="symbolNub ==='3' ? symbolColor:symbolDefaultColor" @click="areas('vocab')">Vocab</div>
                     </div>
                     <div class="areasButton2">
-                      <div class="areasButton3" style="background-color: #939498" @click="areas('spelling')">Spelling</div>
-                      <div class="areasButton3" style="background-color: #939498" @click="areas('writing')">Writing</div>
+                      <div class="areasButton3" :style="symbolNub ==='4' ? symbolColor:symbolDefaultColor" @click="areas('spelling')">Spelling</div>
+                      <div class="areasButton3" :style="symbolNub ==='5' ? symbolColor:symbolDefaultColor" @click="areas('writing')">Writing</div>
                     </div>
-                    <div class="areasButton1" style="background-color: #939498" @click="areas('letter')">Letter Recognition</div>
+                    <div class="areasButton1" :style="symbolNub ==='6' ? symbolColor:symbolDefaultColor" @click="areas('letter')">Letter Recognition</div>
                   </div>
                   <div class="areas" >
                     <div  id="myChart" ref="m" style="width: 100%;height:100%;" class="echartStyle">
@@ -653,6 +654,13 @@
     data() {
       let myChart;
       return {
+        symbolNub:'1',
+        symbolColor:{
+          'background-color' :'#f5aa32'
+        },
+        symbolDefaultColor:{
+          'background-color' :'#939498'
+        },
         improvement:[],
         sliceMin:0,
         sliceMax:6,
@@ -804,15 +812,32 @@
             console.log('dis');
           }
         }
-
-
-
         }
 
     },
     methods: {
       areas(type){
         console.log(type);
+        if (type === 'overall'){
+          this.symbolColor["background-color"] = '#f5aa32';
+          this.symbolNub = '1';
+        }else if(type === 'listening'){
+          this.symbolColor["background-color"] = '#3f8e9e';
+          this.symbolNub = '2';
+        }else if(type === 'vocab'){
+          this.symbolColor["background-color"] = '#53ba6d';
+          this.symbolNub = '3';
+        }else if(type === 'spelling'){
+          this.symbolColor["background-color"] = '#f16d2f';
+          this.symbolNub = '4';
+        }else if(type === 'writing'){
+          this.symbolColor["background-color"] = '#c27db3';
+          this.symbolNub = '5';
+        }else if(type === 'letter'){
+          this.symbolColor["background-color"] = '#ec5d61';
+          this.symbolNub = '6';
+        }
+        this.drawLine();
       },
       drawLine(){
         console.log('my'+this.myChart);
@@ -856,6 +881,12 @@
             }
 
           },
+          //鼠标点击提示详细信息
+          tooltip: {
+            //click:点击;mousemove:鼠标移动显示
+            triggerOn: "click",
+            trigger: 'item'
+          },
           series: [
             {
               data: [0,2,6,3,0,10,5,8,1,4],
@@ -865,18 +896,24 @@
               //实心拐点
               symbol:'circle',
               //拐点颜色
-              color:'#f26d2f',
+              color:this.symbolColor['background-color'],
               itemStyle:{
                 normal:{
                   lineStyle:{
                     width:7,
                     type:'solid',  //'dotted'虚线 'solid'实线
                     //折线颜色
-                    color:'#f26d2f',
+                    color:this.symbolColor['background-color'],
                     //borderColor:'#bebfc0', //拐角点颜色
                   }
                 }
-              }
+              },
+              // markPoint: {
+              //   data: [{
+              //     type: "max"
+              //   }],
+              //   symbolSize: 50
+              // }
             }
           ]
         });
@@ -1233,7 +1270,6 @@
         })
         this.section1();
         this.page1 = true;
-        // this.opciay5=false;
       },
       next2(li) {
         this.page2 = true;
@@ -1585,25 +1621,25 @@
             if(this.overall[i].percent <= 10){
               imgSrc = require('../../assets/image/letters/10/'+this.overall[i].name+'.png');
             }else if(10<this.overall[i].percent <= 20){
-              imgSrc = require('../../assets/image/letters/10/'+this.overall[i].name+'.png');
+              imgSrc = require('../../assets/image/letters/20/'+this.overall[i].name+'.png');
             }else if(20<this.overall[i].percent <= 30){
-              imgSrc = require('../../assets/image/letters/10/'+this.overall[i].name+'.png');
+              imgSrc = require('../../assets/image/letters/30/'+this.overall[i].name+'.png');
             }else if(30<this.overall[i].percent <= 40){
-              imgSrc = require('../../assets/image/letters/10/'+this.overall[i].name+'.png');
+              imgSrc = require('../../assets/image/letters/40/'+this.overall[i].name+'.png');
             }else if(40<this.overall[i].percent <= 50){
-              imgSrc = require('../../assets/image/letters/10/'+this.overall[i].name+'.png');
+              imgSrc = require('../../assets/image/letters/50/'+this.overall[i].name+'.png');
             }else if(50<this.overall[i].percent <= 60){
-              imgSrc = require('../../assets/image/letters/10/'+this.overall[i].name+'.png');
+              imgSrc = require('../../assets/image/letters/60/'+this.overall[i].name+'.png');
             }else if(60<this.overall[i].percent <= 70){
-              imgSrc = require('../../assets/image/letters/10/'+this.overall[i].name+'.png');
+              imgSrc = require('../../assets/image/letters/70/'+this.overall[i].name+'.png');
             }else if(70<this.overall[i].percent <= 80){
-              imgSrc = require('../../assets/image/letters/10/'+this.overall[i].name+'.png');
+              imgSrc = require('../../assets/image/letters/80/'+this.overall[i].name+'.png');
             }else if(80<this.overall[i].percent <= 90){
-              imgSrc = require('../../assets/image/letters/10/'+this.overall[i].name+'.png');
+              imgSrc = require('../../assets/image/letters/90/'+this.overall[i].name+'.png');
             }else if(90<this.overall[i].percent <= 99){
-              imgSrc = require('../../assets/image/letters/10/'+this.overall[i].name+'.png');
+              imgSrc = require('../../assets/image/letters/99/'+this.overall[i].name+'.png');
             }else if(this.overall[i].percent === 100){
-              imgSrc = require('../../assets/image/letters/10/'+this.overall[i].name+'.png');
+              imgSrc = require('../../assets/image/letters/100/'+this.overall[i].name+'.png');
             }
             this.overall[i].imgSrc = imgSrc;
           }
