@@ -2302,6 +2302,215 @@
              :style="{zIndex: !swim ? 100 : 1}" @click="showGif('swim')">
       </div>
     </div>
+    <div v-else-if="this.unit === 'Transportation' && this.part === 'part1'">
+      <img src="../../assets/image/Travelling Near_MT/Runner_BG/BG_00000.png"
+           style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;"/>
+      <div class="bike">
+        <img src="../../assets/image/Travelling Near_MT/GIF_PNG/png/bike.png" v-if="bike" @click="showGif('bike')">
+        <img src="../../assets/image/Travelling Near_MT/GIF_PNG/gif/bike.gif" style="z-index: 100" v-if="!bike"
+             @click="showGif('bike')">
+      </div>
+      <div class="bus">
+        <img src="../../assets/image/Travelling Near_MT/GIF_PNG/gif/bus.gif" style="z-index: 100" v-if="!bus"
+             @click="showGif('bus')">
+      </div>
+      <div class="car">
+        <img src="../../assets/image/Travelling Near_MT/GIF_PNG/png/car.png" v-if="car" @click="showGif('car')">
+        <img src="../../assets/image/Travelling Near_MT/GIF_PNG/gif/car.gif" style="z-index: 100" v-if="!car"
+             @click="showGif('car')">
+      </div>
+      <div class="drive">
+        <img src="../../assets/image/Travelling Near_MT/GIF_PNG/png/drive.png" v-if="drive&&honk" @click="showGif('drive')">
+        <img src="../../assets/image/Travelling Near_MT/GIF_PNG/gif/drive.gif" style="z-index: 100" v-if="!drive"
+             @click="showGif('drive')">
+      </div>
+      <div class="ferry">
+        <img src="../../assets/image/Travelling Near_MT/GIF_PNG/png/ferry.png" v-if="ferry" @click="showGif('ferry')">
+        <img src="../../assets/image/Travelling Near_MT/GIF_PNG/gif/ferry.gif" style="z-index: 100" v-if="!ferry"
+             @click="showGif('ferry')">
+      </div>
+      <div class="honk">
+<!--        <img src="../../assets/image/Travelling Near_MT/GIF_PNG/png/honk.png" v-if="honk&&drive" @click="walkers&&showGif('honk')">-->
+        <img src="../../assets/image/Travelling Near_MT/GIF_PNG/gif/honk.gif" style="z-index: 100" v-if="!honk"
+             @click="showGif('honk')">
+      </div>
+      <div class="motorbike">
+        <img src="../../assets/image/Travelling Near_MT/GIF_PNG/png/motorbike.png" v-if="motorbike" @click="walkers&&showGif('motorbike')">
+        <img src="../../assets/image/Travelling Near_MT/GIF_PNG/gif/motorbike.gif" style="z-index: 100" v-if="!motorbike"
+             @click="showGif('motorbike')">
+      </div>
+      <div class="stop">
+        <img src="../../assets/image/Travelling Near_MT/GIF_PNG/png/stop.png" v-if="stop&&bus" @click="walkers&&showGif('stop')">
+        <img src="../../assets/image/Travelling Near_MT/GIF_PNG/gif/stop.gif" style="z-index: 100" v-if="!stop"
+             @click="showGif('stop')">
+      </div>
+      <div class="trafficLights">
+        <img src="../../assets/image/Travelling Near_MT/GIF_PNG/png/traffic lights.png" v-if="trafficLights" @click="showGif('trafficLights')">
+        <img src="../../assets/image/Travelling Near_MT/GIF_PNG/gif/traffic lights.gif" style="z-index: 100" v-if="!trafficLights"
+             @click="showGif('trafficLights')">
+      </div>
+      <div class="tram">
+        <img src="../../assets/image/Travelling Near_MT/GIF_PNG/png/tram.png" v-if="tram" @click="showGif('tram')">
+        <img src="../../assets/image/Travelling Near_MT/GIF_PNG/gif/tram.gif" style="z-index: 100" v-if="!tram"
+             @click="showGif('tram')">
+      </div>
+      <div class="truck">
+        <img src="../../assets/image/Travelling Near_MT/GIF_PNG/png/truck.png" v-if="truck" @click="walkers&&showGif('truck')">
+        <img src="../../assets/image/Travelling Near_MT/GIF_PNG/gif/truck.gif" style="z-index: 100" v-if="!truck"
+             @click="showGif('truck')">
+      </div>
+      <div class="walk">
+        <img src="../../assets/image/Travelling Near_MT/GIF_PNG/png/walk.png" v-if="walk" @click="showGif('walk')">
+        <img src="../../assets/image/Travelling Near_MT/GIF_PNG/gif/walk.gif" style="z-index: 100" v-if="!walk"
+             @click="showGif('walk')">
+      </div>
+      <div class="stopButton">
+        <img src="../../assets/image/Travelling Near_MT/words/word_stop Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !stop ? 100 : 1}" @click="showGif('stop')">
+      </div>
+      <div class="trafficLightsButton">
+        <img src="../../assets/image/Travelling Near_MT/words/word_traffic lights Comp 1_00000.png"
+             :style="{zIndex: !trafficLights ? 100 : 1}" @click="showGif('trafficLights')">
+      </div>
+      <div class="carButton">
+        <img src="../../assets/image/Travelling Near_MT/words/word_car Comp 1_00000.png"
+             :style="{zIndex: !car ? 100 : 1}" @click="showGif('car')">
+      </div>
+      <div class="bikeButton">
+        <img src="../../assets/image/Travelling Near_MT/words/word_bike Comp 1_00000.png"
+             :style="{zIndex: !bike ? 100 : 1}" @click="showGif('bike')">
+      </div>
+      <div class="truckButton">
+        <img src="../../assets/image/Travelling Near_MT/words/word_truck Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !truck ? 100 : 3}" @click="showGif('truck')">
+      </div>
+      <div class="busButton">
+        <img src="../../assets/image/Travelling Near_MT/words/word_bus Comp 1_00000.png"
+             :style="{zIndex: !bus ? 100 : 3}" @click="showGif('bus')">
+      </div>
+      <div class="honkButton">
+        <img src="../../assets/image/Travelling Near_MT/words/word_honk Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !honk ? 100 : 2}" @click="showGif('honk')">
+      </div>
+      <div class="motorbikeButton">
+        <img src="../../assets/image/Travelling Near_MT/words/word_motorbike Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !motorbike ? 100 : 1}" @click="showGif('motorbike')">
+      </div>
+      <div class="walkButton">
+        <img src="../../assets/image/Travelling Near_MT/words/word_walk Comp 1_00000.png"
+             :style="{zIndex: !walk ? 100 : 1}" @click="showGif('walk')">
+      </div>
+      <div class="ferryButton">
+        <img src="../../assets/image/Travelling Near_MT/words/word_ferry Comp 1_00000.png"
+             :style="{zIndex: !ferry ? 100 : 1}" @click="showGif('ferry')">
+      </div>
+      <div class="driveButton">
+        <img src="../../assets/image/Travelling Near_MT/words/word_drive Comp 1_00000.png"
+             :style="{zIndex: !drive ? 100 : 1}" @click="showGif('drive')">
+      </div>
+      <div class="tramButton">
+        <img src="../../assets/image/Travelling Near_MT/words/word_tram Comp 1_00000.png"
+             :style="{zIndex: !tram ? 100 : 1}" @click="showGif('tram')">
+      </div>
+    </div>
+    <div v-else-if="this.unit === 'Transportation' && this.part === 'part2'">
+      <img src="../../assets/image/Travelling Far_MT/Runner_BG/BG_00000.png"
+           style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;"/>
+      <div class="airplane">
+        <img src="../../assets/image/Travelling Far_MT/GIF_PNG/png/airplane.png" v-if="airplane" @click="showGif('airplane')">
+        <img src="../../assets/image/Travelling Far_MT/GIF_PNG/gif/airplane.gif" style="z-index: 100" v-if="!airplane"
+             @click="showGif('airplane')">
+      </div>
+      <div class="airport">
+        <img src="../../assets/image/Travelling Far_MT/GIF_PNG/png/airport.png" v-if="airport" @click="walkers&&showGif('airport')">
+        <img src="../../assets/image/Travelling Far_MT/GIF_PNG/gif/airport.gif" style="z-index: 100" v-if="!airport"
+             @click="showGif('airport')">
+      </div>
+      <div class="stationB" @click="walkers&&showGif('station')"/>
+      <div class="station">
+        <img src="../../assets/image/Travelling Far_MT/GIF_PNG/png/fast_station_train.png" v-if="station&&fast&&train" >
+        <img src="../../assets/image/Travelling Far_MT/GIF_PNG/gif/fast.gif" style="z-index: 100" v-if="!station"
+             @click="showGif('station')">
+        <img src="../../assets/image/Travelling Far_MT/GIF_PNG/gif/fast.gif" style="z-index: 100" v-if="!fast"
+             @click="showGif('fast')">
+        <img src="../../assets/image/Travelling Far_MT/GIF_PNG/gif/train.gif" style="z-index: 100" v-if="!train"
+             @click="showGif('train')">
+      </div>
+      <div class="helicopter">
+        <img src="../../assets/image/Travelling Far_MT/GIF_PNG/png/fly_helicopter.png" v-if="helicopter&&fly1" @click="showGif('helicopter')">
+        <img src="../../assets/image/Travelling Far_MT/GIF_PNG/gif/helicopter.gif" style="z-index: 100" v-if="!helicopter"
+             @click="showGif('helicopter')">
+        <img src="../../assets/image/Travelling Far_MT/GIF_PNG/gif/fly.gif" style="z-index: 100" v-if="!fly1"
+             @click="showGif('fly1')">
+      </div>
+      <div class="land">
+        <img src="../../assets/image/Travelling Far_MT/GIF_PNG/png/land.png" v-if="land" @click="walkers&&showGif('land')">
+        <img src="../../assets/image/Travelling Far_MT/GIF_PNG/gif/land.gif" style="z-index: 100" v-if="!land"
+             @click="showGif('land')">
+      </div>
+      <div class="slow">
+        <img src="../../assets/image/Travelling Far_MT/GIF_PNG/png/slow_ship.png" v-if="slow&&ship" @click="showGif('slow')">
+        <img src="../../assets/image/Travelling Far_MT/GIF_PNG/gif/slow.gif" style="z-index: 100" v-if="!slow"
+             @click="showGif('slow')">
+        <img src="../../assets/image/Travelling Far_MT/GIF_PNG/gif/ship.gif" style="z-index: 100" v-if="!ship"
+             @click="showGif('ship')">
+      </div>
+      <div class="suitcase">
+        <img src="../../assets/image/Travelling Far_MT/GIF_PNG/png/suitcase_ticket.png" v-if="suitcase&&ticket" @click="showGif('ticket')">
+        <img src="../../assets/image/Travelling Far_MT/GIF_PNG/gif/suitcase.gif" style="z-index: 100" v-if="!suitcase"
+             @click="showGif('suitcase')">
+        <img src="../../assets/image/Travelling Far_MT/GIF_PNG/gif/ticket.gif" style="z-index: 100" v-if="!ticket"
+             @click="showGif('ticket')">
+      </div>
+      <div class="stationButton">
+        <img src="../../assets/image/Travelling Far_MT/words/word_station Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !station ? 100 : 3}" @click="showGif('station')">
+      </div>
+      <div class="airportButton">
+        <img src="../../assets/image/Travelling Far_MT/words/word_airport Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !airport ? 100 : 3}" @click="showGif('airport')">
+      </div>
+      <div class="airplaneButton">
+        <img src="../../assets/image/Travelling Far_MT/words/word_airplane Comp 1_00000.png"
+             :style="{zIndex: !airplane ? 100 : 3}" @click="showGif('airplane')">
+      </div>
+      <div class="fastButton">
+        <img src="../../assets/image/Travelling Far_MT/words/word_fast Comp 1_00000.png"
+             :style="{zIndex: !fast ? 100 : 3}" @click="showGif('fast')">
+      </div>
+      <div class="trainButton">
+        <img src="../../assets/image/Travelling Far_MT/words/word_train Comp 1_00000.png"
+             :style="{zIndex: !train ? 100 : 3}" @click="showGif('train')">
+      </div>
+      <div class="fly1Button">
+        <img src="../../assets/image/Travelling Far_MT/words/word_fly Comp 1_00000.png"
+             :style="{zIndex: !fly1 ? 100 : 3}" @click="showGif('fly1')">
+      </div>
+      <div class="helicopterButton">
+        <img src="../../assets/image/Travelling Far_MT/words/word_helicopter Comp 1_00000.png"
+             :style="{zIndex: !helicopter ? 100 : 3}" @click="showGif('helicopter')">
+      </div>
+      <div class="ticketButton">
+        <img src="../../assets/image/Travelling Far_MT/words/word_ticket Comp 1_00000.png"
+             :style="{zIndex: !ticket ? 100 : 3}" @click="showGif('ticket')">
+      </div>
+      <div class="landButton">
+        <img src="../../assets/image/Travelling Far_MT/words/word_land Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !land ? 100 : 3}" @click="showGif('land')">
+      </div>
+      <div class="suitcaseButton">
+        <img src="../../assets/image/Travelling Far_MT/words/word_suitcase Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !suitcase ? 100 : 3}" @click="showGif('suitcase')">
+      </div>
+      <div class="slowButton">
+        <img src="../../assets/image/Travelling Far_MT/words/word_slow Comp 1_00000.png"
+             :style="{zIndex: !slow ? 100 : 3}" @click="showGif('slow')">
+      </div>
+      <div class="shipButton">
+        <img src="../../assets/image/Travelling Far_MT/words/word_ship Comp 1_00000.png"
+             :style="{zIndex: !ship ? 100 : 3}" @click="showGif('ship')">
+      </div>
+    </div>
     <div v-else>
     <img src="../../assets/image/H5 Thing/Walker_BG/bg_0.png"
          style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;">
@@ -2692,8 +2901,58 @@ export default {
           squirrel:require('../../assets/Flashcard Audio/march/squirrel.mp3'),
           umbrella:require('../../assets/Flashcard Audio/march/umbrella.mp3'),
           wind1:require('../../assets/Flashcard Audio/march/wind.mp3'),
+
+          //april
+          airplane:require('../../assets/Flashcard Audio/april/airplane.mp3'),
+          airport:require('../../assets/Flashcard Audio/april/airport.mp3'),
+          bike:require('../../assets/Flashcard Audio/april/bike.mp3'),
+          bus:require('../../assets/Flashcard Audio/april/bus.mp3'),
+          car:require('../../assets/Flashcard Audio/april/car.mp3'),
+          drive:require('../../assets/Flashcard Audio/april/drive.mp3'),
+          fast:require('../../assets/Flashcard Audio/april/fast.mp3'),
+          ferry:require('../../assets/Flashcard Audio/april/ferry.mp3'),
+          fly1:require('../../assets/Flashcard Audio/april/fly.mp3'),
+          helicopter:require('../../assets/Flashcard Audio/april/helicopter.mp3'),
+          honk:require('../../assets/Flashcard Audio/april/honk.mp3'),
+          land:require('../../assets/Flashcard Audio/april/land.mp3'),
+          motorbike:require('../../assets/Flashcard Audio/april/motorbike.mp3'),
+          ship:require('../../assets/Flashcard Audio/april/ship.mp3'),
+          slow:require('../../assets/Flashcard Audio/april/slow.mp3'),
+          station:require('../../assets/Flashcard Audio/april/station.mp3'),
+          stop:require('../../assets/Flashcard Audio/april/stop.mp3'),
+          suitcase:require('../../assets/Flashcard Audio/april/suitcase.mp3'),
+          ticket:require('../../assets/Flashcard Audio/april/ticket.mp3'),
+          trafficLights:require('../../assets/Flashcard Audio/april/traffic lights.mp3'),
+          train:require('../../assets/Flashcard Audio/april/train.mp3'),
+          tram:require('../../assets/Flashcard Audio/april/tram.mp3'),
+          truck:require('../../assets/Flashcard Audio/april/truck.mp3'),
+          walk:require('../../assets/Flashcard Audio/april/walk.mp3'),
         },
         cardType:'default',
+        fast:true,
+        train:true,
+        ticket:true,
+        ship:true,
+        airplane:true,
+        airport:true,
+        helicopter:true,
+        fly1:true,
+        land:true,
+        station:true,
+        slow:true,
+        suitcase:true,
+        bike:true,
+        bus:true,
+        car:true,
+        drive:true,
+        ferry:true,
+        honk:true,
+        motorbike:true,
+        stop:true,
+        trafficLights:true,
+        tram:true,
+        truck:true,
+        walk:true,
         butterfly:true,
         flowers:true,
         fly:true,
@@ -3171,6 +3430,331 @@ export default {
     position: fixed;
     background-color: #44ccc2;
     z-index: 201;
+  }
+
+  .stationButton img {
+    width: 6%;
+    left: 5%;
+    top: 30%;
+    position: absolute;
+  }
+  .bus img {
+    width: 47%;
+    left: 10%;
+    top: 15%;
+    position: absolute;
+  }
+
+  .airportButton img {
+    width: 6%;
+    left: 15%;
+    top: 55%;
+    position: absolute;
+  }
+
+  .airplaneButton img {
+    width: 7%;
+    left: 20%;
+    top: 90%;
+    position: absolute;
+  }
+
+  .fastButton img {
+    width: 5%;
+    left: 26%;
+    top: 18%;
+    position: absolute;
+  }
+
+  .trainButton img {
+    width: 5%;
+    left: 26%;
+    top: 25%;
+    position: absolute;
+  }
+
+  .fly1Button img {
+    width: 3.5%;
+    left: 49%;
+    top: 31%;
+    position: absolute;
+  }
+
+  .helicopterButton img {
+    width: 8%;
+    left: 49%;
+    top: 37%;
+    position: absolute;
+  }
+
+  .ticketButton img {
+    width: 6%;
+    left: 63%;
+    top: 71%;
+    position: absolute;
+  }
+
+  .landButton img {
+    width: 5%;
+    left: 86%;
+    top: 66%;
+    position: absolute;
+  }
+
+  .suitcaseButton img {
+    width: 6%;
+    left: 86%;
+    top: 71%;
+    position: absolute;
+  }
+
+  .slowButton img {
+    width: 5%;
+    left: 78%;
+    top: 18%;
+    position: absolute;
+  }
+
+  .shipButton img {
+    width: 5%;
+    left: 78%;
+    top: 24%;
+    position: absolute;
+  }
+
+  .airplane img {
+    width: 22%;
+    left: 7%;
+    top: 61%;
+    transform: rotate(5deg);
+    position: absolute;
+    z-index: 2;
+  }
+
+  .airport img {
+    width: 78%;
+    left: 1%;
+    height: 70%;
+    top: 6%;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .station img {
+    width: 100%;
+    left: 0%;
+    top: -4%;
+    position: absolute;
+  }
+
+  .stationB {
+    width: 80%;
+    height: 25%;
+    left: -2%;
+    top: 1%;
+    transform: rotate(-9deg);
+    z-index: 1;
+    position: absolute;
+  }
+
+  .helicopter img {
+    width: 25%;
+    left: 50%;
+    top: 21%;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .land img {
+    width: 100%;
+    left: 0%;
+    top: 30%;
+    -webkit-transform: rotate(1.5deg);
+    transform: rotate(0.5deg);
+    position: absolute;
+  }
+
+  .slow img {
+    width: 16%;
+    left: 80%;
+    top: 14%;
+    position: absolute;
+  }
+
+  .suitcase img {
+    width: 27%;
+    left: 67%;
+    top: 48%;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .stopButton img {
+    width: 5%;
+    left: 3%;
+    top: 37%;
+    position: absolute;
+  }
+
+  .trafficLightsButton img {
+    width: 8%;
+    left: 4%;
+    top: 82%;
+    position: absolute;
+  }
+
+  .carButton img {
+    width: 4.2%;
+    left: 29%;
+    top: 81%;
+    position: absolute;
+  }
+
+  .bikeButton img {
+    width: 5%;
+    left: 51%;
+    top: 88%;
+    position: absolute;
+  }
+
+  .truckButton img {
+    width: 6%;
+    left: 55%;
+    top: 43%;
+    position: absolute;
+  }
+
+  .busButton img {
+    width: 5%;
+    left: 44%;
+    top: 32%;
+    position: absolute;
+  }
+
+  .ferryButton img {
+    width: 5%;
+    left: 28%;
+    top: 8%;
+    position: absolute;
+  }
+
+  .honkButton img {
+    width: 5%;
+    left: 67%;
+    top: 49%;
+    position: absolute;
+  }
+
+  .motorbikeButton img {
+    width: 7%;
+    left: 69%;
+    top: 78%;
+    position: absolute;
+  }
+
+  .walkButton img {
+    width: 5%;
+    left: 75%;
+    top: 90%;
+    position: absolute;
+  }
+
+  .driveButton img {
+    width: 5%;
+    left: 87%;
+    top: 43%;
+    position: absolute;
+  }
+
+  .tramButton img {
+    width: 5%;
+    left: 84%;
+    top: 9%;
+    position: absolute;
+  }
+
+  .bike img {
+    width: 22%;
+    left: 43%;
+    top: 57%;
+    position: absolute;
+    z-index: 3;
+  }
+
+  .car img {
+    width: 30%;
+    left: 11%;
+    top: 54%;
+    position: absolute;
+    z-index: 3;
+  }
+
+  .trafficLights img {
+    width: 12%;
+    left: 2%;
+    top: 42%;
+    position: absolute;
+  }
+
+  .ferry img {
+    width: 23%;
+    left: 6%;
+    top: 6%;
+    position: absolute;
+    z-index: 2;
+  }
+
+  .honk img{
+    width: 24%;
+    left: 74%;
+    top: 40%;
+    position: absolute;
+  }
+
+  .drive img{
+    width: 26%;
+    left: 71%;
+    top: 42%;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .motorbike img {
+    width: 29%;
+    left: 52%;
+    top: 49%;
+    position: absolute;
+    z-index: 2;
+  }
+
+  .stop img {
+    width: 54%;
+    left: 1%;
+    top: 14%;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .tram img {
+    width: 100%;
+    left: 0%;
+    top: 7%;
+    position: absolute;
+  }
+
+  .truck img {
+    width: 45%;
+    left: 19%;
+    top: 33.8%;
+    position: absolute;
+    z-index: 2;
+  }
+
+  .walk img {
+    width: 20%;
+    left: 77%;
+    top: 64%;
+    position: absolute;
   }
 
   .seedsButton img {
@@ -8157,6 +8741,162 @@ export default {
   @media only screen and (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 3) ,
   (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 812px) and (max-width: 1023px){
+    .helicopterButton img {
+      width: 8%;
+      left: 49%;
+      top: 38%;
+      position: absolute;
+    }
+    .landButton img {
+      width: 5%;
+      left: 86%;
+      top: 65%;
+      position: absolute;
+    }
+    .ticketButton img {
+      width: 6%;
+      left: 67%;
+      top: 71%;
+      position: absolute;
+    }
+    .station img {
+      width: 100%;
+      left: 0%;
+      top: -7%;
+      position: absolute;
+    }
+    .slow img {
+      width: 15%;
+      left: 81%;
+      top: 11%;
+      position: absolute;
+    }
+    .airplane img {
+      width: 21%;
+      left: 8%;
+      top: 59%;
+      -webkit-transform: rotate(5deg);
+      transform: rotate(6deg);
+      position: absolute;
+      z-index: 2;
+    }
+    .land img {
+      width: 106%;
+      left: -2%;
+      top: 44%;
+      height: 56%;
+      -webkit-transform: rotate(1.5deg);
+      transform: rotate(-3deg);
+      position: absolute;
+    }
+    .suitcase img {
+      width: 22%;
+      left: 71%;
+      top: 50%;
+      position: absolute;
+      z-index: 1;
+    }
+    .honk img {
+      width: 23%;
+      left: 74.5%;
+      top: 36%;
+      position: absolute;
+    }
+    .bus img {
+      width: 36%;
+      left: 9%;
+      top: 19%;
+      position: absolute;
+    }
+
+    .tramButton img {
+      width: 5%;
+      left: 87%;
+      top: 13%;
+      position: absolute;
+    }
+    .driveButton img {
+      width: 5%;
+      left: 86%;
+      top: 38%;
+      position: absolute;
+    }
+    .busButton img {
+      width: 5%;
+      left: 36%;
+      top: 31%;
+      position: absolute;
+    }
+    .stop img {
+      width: 42%;
+      left: 2%;
+      top: 17.5%;
+      position: absolute;
+      z-index: 1;
+    }
+    .bike img {
+      width: 20%;
+      left: 43%;
+      top: 55%;
+      position: absolute;
+      z-index: 3;
+    }
+    .trafficLightsButton img {
+      width: 9%;
+    }
+    .trafficLights img {
+      width: 10%;
+      left: 3%;
+      top: 41%;
+      position: absolute;
+    }
+    .car img {
+      width: 30%;
+      left: 11%;
+      top: 50%;
+      position: absolute;
+      z-index: 3;
+    }
+    .truck img {
+      width: 44%;
+      left: 19%;
+      top: 28%;
+      position: absolute;
+      z-index: 2;
+    }
+    .motorbike img {
+      width: 29%;
+      left: 52%;
+      top: 45%;
+      position: absolute;
+    }
+    .drive img {
+      width: 26%;
+      left: 71%;
+      top: 38%;
+      position: absolute;
+      z-index: 1;
+    }
+    .walk img {
+      width: 20%;
+      left: 77%;
+      top: 59%;
+      position: absolute;
+      z-index: 1;
+    }
+    .tram img {
+      width: 100%;
+      left: 0%;
+      top: 0%;
+      position: absolute;
+    }
+    .ferry img {
+      width: 21%;
+      left: 6%;
+      top: 8%;
+      position: absolute;
+      z-index: 2;
+    }
     .kiteButton img {
       width: 5%;
       left: 35%;
@@ -10465,6 +11205,246 @@ export default {
   @media only screen and (min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 1024px) and (max-width: 1600px){
+    .slowButton img {
+      width: 5%;
+      left: 78%;
+      top: 20%;
+      position: absolute;
+    }
+    .fastButton img {
+      width: 6%;
+      left: 26%;
+      top: 19%;
+      position: absolute;
+    }
+    .trainButton img {
+      width: 6%;
+      left: 26%;
+      top: 25%;
+      position: absolute;
+    }
+    .stationButton img {
+      width: 8%;
+      left: 5%;
+      top: 28%;
+      position: absolute;
+    }
+
+    .helicopterButton img {
+      width: 9%;
+      left: 48%;
+      top: 34%;
+      position: absolute;
+    }
+
+    .fly1Button img {
+      width: 4%;
+      left: 48%;
+      top: 29%;
+      position: absolute;
+    }
+
+    .landButton img {
+      width: 6%;
+      left: 86%;
+      top: 70%;
+      position: absolute;
+    }
+    .suitcaseButton img {
+      width: 7%;
+      left: 86%;
+      top: 75%;
+      position: absolute;
+    }
+    .ticketButton img {
+      width: 7%;
+      left: 62%;
+      top: 76%;
+      position: absolute;
+    }
+    .airplaneButton img {
+      width: 9%;
+      left: 20%;
+      top: 88%;
+      position: absolute;
+    }
+    .helicopter img {
+      width: 26%;
+      left: 50%;
+      top: 22%;
+      position: absolute;
+      z-index: 1;
+    }
+    .station img {
+      width: 100%;
+      left: 0%;
+      top: 2%;
+      position: absolute;
+    }
+    .slow img {
+      width: 18%;
+      left: 80%;
+      top: 18%;
+      position: absolute;
+    }
+    .airplane img {
+      width: 24%;
+      left: 6%;
+      top: 66%;
+      -webkit-transform: rotate(5deg);
+      transform: rotate(5deg);
+      position: absolute;
+      z-index: 2;
+    }
+    .land img {
+      width: 110%;
+      left: -7%;
+      top: 41%;
+      transform: rotate(-3.5deg);
+      position: absolute;
+    }
+    .suitcase img {
+      width: 30%;
+      left: 66%;
+      top: 57%;
+    }
+    .bus img {
+      width: 48%;
+      left: 10%;
+      top: 26%;
+      position: absolute;
+    }
+    .honk img {
+      top: 46%;
+    }
+    .ferryButton img {
+      width: 7%;
+      left: 28%;
+      top: 9%;
+      position: absolute;
+    }
+    .tramButton img {
+      width: 7%;
+      left: 84%;
+      top: 14%;
+      position: absolute;
+    }
+    .driveButton img {
+      width: 7%;
+      left: 85%;
+      top: 45%;
+      position: absolute;
+    }
+    .honkButton img {
+      width: 7%;
+      left: 69%;
+      top: 51%;
+      position: absolute;
+    }
+    .busButton img {
+      width: 7%;
+      left: 45%;
+      top: 38%;
+      position: absolute;
+    }
+    .truckButton img {
+      width: 8%;
+      left: 54%;
+      top: 49%;
+      position: absolute;
+    }
+    .motorbikeButton img {
+      width: 9%;
+      left: 69%;
+      top: 78%;
+      position: absolute;
+    }
+    .walkButton img {
+      width: 7%;
+      left: 73%;
+      top: 90%;
+      position: absolute;
+    }
+    .bikeButton img {
+      width: 6%;
+    }
+    .carButton img{
+      width: 5%;
+      left: 28%;
+      top: 81%;
+      position: absolute;
+    }
+    .trafficLightsButton img {
+      width: 10%;
+      left: 4%;
+      top: 83%;
+      position: absolute;
+    }
+    .ferry img {
+      width: 25%;
+      left: 6%;
+      top: 12%;
+      position: absolute;
+      z-index: 2;
+    }
+    .stopButton img {
+      width: 6%;
+      left: 3%;
+      top: 38%;
+      position: absolute;
+    }
+    .stop img {
+      width: 56%;
+      left: 1%;
+      top: 23.5%;
+      position: absolute;
+      z-index: 1;
+    }
+    .tram img {
+      width: 100%;
+      left: 0%;
+      top: 18%;
+      position: absolute;
+    }
+    .truck img {
+      width: 50%;
+      left: 15%;
+      top: 40%;
+      position: absolute;
+      z-index: 2;
+    }
+    .motorbike img {
+      width: 31%;
+      left: 51%;
+      top: 55%;
+      position: absolute;
+    }
+    .drive img {
+      width: 28%;
+      left: 70%;
+      top: 47%;
+      position: absolute;
+      z-index: 1;
+    }
+    .trafficLights img {
+      width: 14%;
+      left: 1%;
+      top: 47%;
+    }
+    .car img {
+      width: 32%;
+      left: 9%;
+      top: 59%;
+    }
+    .bike img {
+      width: 23%;
+      left: 42%;
+      top: 64%;
+    }
+    .walk img {
+      left: 77%;
+      top: 72%;
+    }
     .sunscreenButton img {
       top: 50%;
     }

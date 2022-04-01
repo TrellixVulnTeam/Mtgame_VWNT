@@ -7,7 +7,6 @@ import quit from "./quit";
 import axios from 'axios';
 
 import * as echarts from 'echarts';
-
 Vue.prototype.$echarts = echarts;
 // import cookies from 'vue-cookies';
 // import qs from 'qs';
@@ -32,19 +31,19 @@ Vue.prototype.$axios = axios;
 axios.defaults.baseURL = 'http://localhost:8080/monkeytownCN';
 //axios.defaults.baseURL2 = 'http://localhost:8080/monkeytownHK';
 
-//axios.defaults.baseURL = 'http://gamejava.monkeytree.com.hk';
 axios.defaults.baseURL2 = 'http://gamejava.monkeytree.com.hk';
 //axios.defaults.baseURL = 'https://gamejava.monkeytree.com.cn';
-//axios.defaults.baseURL2 = 'https://gamejava.monkeytree.com.cn';
+//axios.defaults.baseURL = 'http://gamejava.monkeytree.com.hk';
+
 localStorage.setItem('localurl',axios.defaults.baseURL);
 //版本号，更新需要+1
-localStorage.setItem('version',32);
+localStorage.setItem('version',34);
 //发布 ios OR android
-localStorage.setItem('system','android');
+localStorage.setItem('system','ios');
 //发布到hk版还是cn版
 localStorage.setItem('local','cn');
 //是否发布到应用宝
-localStorage.setItem('yingyongbao','true');
+localStorage.setItem('yingyongbao','false');
 Vue.use(Bounce)
 // or
 Vue.use(Bounce, {

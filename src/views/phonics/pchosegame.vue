@@ -448,7 +448,12 @@
               }
             });
           }
-
+        console.log(this.unitname);
+        console.log(this.unitsId);
+        console.log(this.phonicsId);
+        console.log(this.style);
+        console.log(this.level);
+        console.log(this.cources);
       },
 
       goinfo() {
@@ -1172,6 +1177,7 @@
        text-align: center;
        width: 100%;
        left: 0;
+        font-weight: 700;
        font-size: 3rem;
   }
   .aspan2{
@@ -1542,6 +1548,9 @@
   @media screen and (min-device-height: 568px) and (max-device-height: 810px) and (-webkit-device-pixel-ratio: 2) ,
   (min-device-height: 568px) and (max-device-height: 810px) and (-webkit-device-pixel-ratio: 3),
   (min-width: 568px) and (max-width: 810px){
+    .aspan {
+      font-size: 2.5rem;
+    }
     .aspan2 {
       bottom: -5%;
       font-size: 0.9rem;
@@ -1653,7 +1662,7 @@
       padding-right: 0% !important;
     }
     .aspan {
-      font-size: 3.5rem;
+      font-size: 2.5rem;
     }
     .aspan2{
       font-size: 1rem;
@@ -1777,7 +1786,7 @@
       width: 50%;
     }
     .aspan {
-      font-size: 4rem;
+      font-size: 3rem;
     }
     .aspan2 {
       font-size: 1.4rem;
@@ -1856,7 +1865,7 @@
     }
 
     .aspan {
-      font-size: 5rem;
+      font-size: 4rem;
     }
     .aspan2 {
       font-size: 1.8rem;
@@ -1960,8 +1969,8 @@
     }
 
     .aspan {
-      font-size: 9rem;
-      height: 110%;
+      font-size: 5rem;
+      height: 80%;
     }
     .aspan2 {
       font-size: 2.5rem;

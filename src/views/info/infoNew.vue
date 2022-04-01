@@ -56,7 +56,7 @@
           </div>
           <img src="../../assets/image/bluebottom.png" class="imgBstyle">
           <div class="userName">
-            <p style="width: 100px;overflow: hidden;white-space: nowrap; display: block;margin: 0 auto;">
+            <p style="width: 160px;overflow: hidden;white-space: nowrap; display: block;margin: 0 auto;">
               {{firstName}}</p>
           </div>
           <div class="logoutsty1">
@@ -362,12 +362,12 @@
             </div>
 
             <div class="chosedisplay" v-if="!chatorphonics">
-              <div  v-if="opciay1" >
+              <div  v-if="opciay1" style="width: 95%;display: inline-block">
                 <div class="choicephonics" v-for="(li,index) in phonicsList" :key='index'>
-                  <img src="../../assets/image/beginner.png" @click="pnext2(li)" style="width: 100%;" v-if="index==0">
-                  <img src="../../assets/image/intermediate.png" @click="pnext21(li)" style="width: 100%;"
+                  <img src="../../assets/image/beginner.png" @click="pnext2(li)" style="width: 90%;" v-if="index==0">
+                  <img src="../../assets/image/intermediate.png" @click="pnext21(li)" style="width: 90%;"
                        v-if="index==1">
-                  <img src="../../assets/image/advance.png" style="width: 100%;" @click="pnext22(li)" v-if="index==2">
+                  <img src="../../assets/image/advance.png" style="width: 90%;" @click="pnext22(li)" v-if="index==2">
                   <!--<div class="progress" >-->
                   <img src="../../assets/image/completed.png" v-if="li.complete"
                        style="width: 80%;margin: 0 10%;z-index: 2;bottom:-6%;position: absolute;left:0;">
@@ -499,13 +499,13 @@
                     <li class="categoriesLi" @click="categories(1)">
                       Overall
                     </li>
-                    <li class="categoriesLi" @click="categories(6)">
+                    <li class="categoriesLi" @click="categories(5)">
                       Strengths
                     </li>
                     <li class="categoriesLi" @click="categories(2)">
                       Exercise Completion Intervals
                     </li>
-                    <li class="categoriesLi" @click="categories(5)">
+                    <li class="categoriesLi" @click="categories(6)">
                       Improvement
                     </li>
                     <li class="categoriesLi" @click="categories(4)">
@@ -550,16 +550,15 @@
                   </div>
                  </div>
                   <!--Improvement-->
-                  <div v-if="categoryNum === 6" style="height: 100%" >
+                  <div v-if="categoryNum === 6" style="height: 100%;padding-top: 2%;" >
                     <div class="improvementList" v-for="(li,index) in improvement" :key='index'>
                       <div class="improvementId">{{index}}</div>
-                      <div class="improvementLetter">Letter {{li.name}}</div>
-                      <div class="improvementButton">Let's Review</div>
+                      <div class="improvementLetter">{{li.name}}</div>
+                      <div class="improvementButton" @click="review(li)">Let's Review</div>
                       <div class="improvementPercent">{{li.average}}%</div>
                     </div>
                   </div>
                 </div>
-
                 <!--Scores for key areas-->
                 <div class="areasDiv" v-if="categoryNum === 4">
                   <div class="areasButton">
@@ -575,7 +574,10 @@
                     <div class="areasButton1" :style="symbolNub ==='6' ? symbolColor:symbolDefaultColor" @click="areas('letter')">Letter Recognition</div>
                   </div>
                   <div class="areas" >
-                    <div  id="myChart" ref="m" style="width: 100%;height:100%;" class="echartStyle">
+                    <div  id="myChart" ref="m" style="width: 100%;height:100%;" class="echartStyle" />
+                    <div class="AreasDiv">
+                      <p class="AreasP">Average  Score: 75%</p>
+                      <p class="AreasP2">EXCELLENT</p>
                     </div>
                   </div>
                 </div>
@@ -801,7 +803,7 @@
       'categoriesName':function (newVal) {
         console.log(this.categoriesName);
         console.log(this.myChart);
-        if(this.categoriesName === 'Scores for Key Areas'&&this.categoriesName !== 'Performance Report'){
+        if(this.categoriesName === 'Scores for Key Areas'){
           setTimeout(()=>{
           this.drawLine();
           console.log('123');
@@ -809,6 +811,7 @@
         }else{
           if (this.myChart != null && this.myChart !== "" && this.myChart !== undefined) {
             this.myChart.dispose();//销毁
+            document.getElementById("myChart").style='';
             console.log('dis');
           }
         }
@@ -816,6 +819,45 @@
 
     },
     methods: {
+      review(li){
+        if(this.level==="Intermediate"){
+          this.$router.push({
+            path: '/intermenu',
+            query: {
+              unit: li.Name,
+              unitsId: li.id,
+              phonicsId: li.phonics_detail_id,
+              style: 'game',
+              level: this.level,
+              cources: 'PHONICS',
+            }
+          });
+        }else if(this.level==="Advanced"){
+          this.$router.push({
+            path: '/advmenu',
+            query: {
+              unit: li.Name,
+              unitsId: li.id,
+              phonicsId: li.phonics_detail_id,
+              style: 'game',
+              level: this.level,
+              cources: 'PHONICS',
+            }
+          });
+        }else {
+          this.$router.push({
+            path: '/phonicsmenu',
+            query: {
+              unit: li.Name,
+              unitsId: li.id,
+              phonicsId: li.phonics_detail_id,
+              style: 'game',
+              level: this.level,
+              cources: 'PHONICS',
+            }
+          });
+        }
+      },
       areas(type){
         console.log(type);
         if (type === 'overall'){
@@ -840,11 +882,7 @@
         this.drawLine();
       },
       drawLine(){
-        console.log('my'+this.myChart);
-        if (this.myChart != null && this.myChart !== "" && this.myChart !== undefined) {
-          this.myChart.dispose();//销毁
-          console.log('dis2');
-        }
+        console.log(this.myChart);
         // 基于准备好的dom，初始化echarts实例
         this.myChart = this.$echarts.init(this.$refs.m)
         // 绘制图表
@@ -885,7 +923,20 @@
           tooltip: {
             //click:点击;mousemove:鼠标移动显示
             triggerOn: "click",
-            trigger: 'item'
+            backgroundColor:'#eeebc8',
+            borderColor:this.symbolColor['background-color'],
+            borderWidth:5,
+            borderRadius:35,
+            padding:[18,40],
+            trigger: 'item',
+            hideDelay: 2000,
+            position:'top',
+            //移动端窄屏，避免tooltip 超出外界被截断
+            confine:false,
+            formatter:function (params){
+              //console.log(params);
+              return "<p style='color:#f68a49;font-size: 20px;font-family: kg, serif'>"+"A:LET'S SPELL"+"</p>"+"<p style='color:#6d513d;font-size: 20px;font-family: kg, serif'>"+"SCORE:"+params.data+"/10"+"</p>"+"<p style='color:#6d513d;font-size: 15px;font-family: kg, serif'>"+"4/6/2020"+"</p>";
+            }
           },
           series: [
             {
@@ -1616,7 +1667,7 @@
           this.pass30 = res.data.intervals.pass30;
           this.improvement = res.data.improvement;
           for (let i = 0; i < this.overall.length; i++) {
-            this.overall[i].name = this.overall[i].name.slice(0,1);
+            this.overall[i].name = this.overall[i].abbreviation;
             let imgSrc = '';
             if(this.overall[i].percent <= 10){
               imgSrc = require('../../assets/image/letters/10/'+this.overall[i].name+'.png');
@@ -1854,9 +1905,32 @@
   body {
     width: 100%;
     padding: 0;
-    padding: 0;
     // overflow-y: scroll;
     position: static;
+  }
+
+  .AreasP {
+    color: white;
+    display: inline-block;
+    font-size: 1.5rem;
+    opacity: 0.7;
+    margin-right: 15px;
+  }
+
+  .AreasP2 {
+    color: white;
+    font-weight: 700;
+    display: inline-block;
+    font-size: 1.5rem;
+    border-radius: 30px;
+    background-color: #0d627c;
+    height: 30px;
+    width: 170px;
+  }
+
+  .AreasDiv {
+    float: right;
+    margin-top: 5px;
   }
 
   .echartStyle{
@@ -1873,14 +1947,14 @@
   }
 
   .improvementId {
-    width: 30%;
+    width: 25%;
     color: #6d513d;
     font-weight: 600;
     font-size: 1.5rem;
   }
 
   .improvementLetter {
-    width: 60%;
+    width: 65%;
     color: #6d513d;
     font-weight: 600;
     font-size: 1.5rem;
@@ -2077,7 +2151,7 @@
   }
 
   .pointPosition{
-    margin-top: -8%;
+    margin-top: -6.5%;
   }
 
   .intervalsHour {
@@ -2106,19 +2180,19 @@
   .iClock {
     width: 25%;
     left: 6%;
-    top: 10%;
+    top: 6%;
     position: absolute;
   }
 
   .point1{
-    font-size: 3rem;
+    font-size: 2rem;
     color: white;
     opacity: 1;
     font-family: pepper,serif;
   }
 
   .point2{
-    font-size: 3rem;
+    font-size: 2rem;
     color: white;
     opacity: 0.5;
     font-family: pepper,serif;
@@ -3228,7 +3302,7 @@
       height: 28%;
     }
     .progress2 img {
-      width: 0.9rem;
+      width: 0.8rem;
       margin: 0 1px -2px 0;
     }
     .listmemu {
@@ -3242,7 +3316,7 @@
       height: 30%;
     }
     .progress2{
-      height: 15px;
+      height: 12px;
     }
     .startP{
       font-size: 0.6rem;
@@ -3486,7 +3560,7 @@
       height: 17px;
     }
     .progress2{
-      height: 20px;
+      height: 15px;
     }
     .startP{
       font-size: 0.8rem;
@@ -4430,13 +4504,13 @@
       height: 30%;
     }
     .progress2 {
-      height: 30px;
+      height: 25px;
     }
     .startP {
-      font-size: 1.3rem;
+      font-size: 1rem;
     }
     .progress2 img {
-      width: 1.6rem;
+      width: 1.2rem;
     }
     .phonicsL {
       font-size: 2rem;
@@ -4978,7 +5052,7 @@
     }
 
     .progress2 {
-      height: 28px;
+      height: 18px;
       bottom: 25px;
     }
 
@@ -5029,7 +5103,7 @@
     }
 
     .userName {
-      margin-top: -19%;
+      margin-top: -22%;
       font-size: 2rem;
     }
 

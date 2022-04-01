@@ -1470,6 +1470,132 @@
             img:require('../../assets/image/Spring and summer/Sun Cream.png')
           }
         ],
+        TransportationPart1:[
+          {
+            id:1,
+            cardName:'traffic lights',
+            audio:require('../../assets/Flashcard Audio/april/traffic lights.mp3'),
+            img:require('..'+'/../assets/image/202004H5 Travelling Near/Traffic Lights.png')
+          },{
+            id:2,
+            cardName:'car',
+            audio:require('../../assets/Flashcard Audio/april/car.mp3'),
+            img:require('../../assets/image/202004H5 Travelling Near/Car.png')
+          },{
+            id:3,
+            cardName:'ferry',
+            audio:require('../../assets/Flashcard Audio/april/ferry.mp3'),
+            img:require('../../assets/image/202004H5 Travelling Near/Ferry.png')
+          },{
+            id:4,
+            cardName:'bus',
+            audio:require('../../assets/Flashcard Audio/april/bus.mp3'),
+            img:require('../../assets/image/202004H5 Travelling Near/Bus.png')
+          },{
+            id:5,
+            cardName:'bike',
+            audio:require('../../assets/Flashcard Audio/april/bike.mp3'),
+            img:require('../../assets/image/202004H5 Travelling Near/Bike.png')
+          },{
+            id:6,
+            cardName:'walk',
+            audio:require('../../assets/Flashcard Audio/april/walk.mp3'),
+            img:require('../../assets/image/202004H5 Travelling Near/Walk.png')
+          },{
+            id:7,
+            cardName:'tram',
+            audio:require('../../assets/Flashcard Audio/april/tram.mp3'),
+            img:require('../../assets/image/202004H5 Travelling Near/Tram.png')
+          },{
+            id:8,
+            cardName:'drive',
+            audio:require('../../assets/Flashcard Audio/april/drive.mp3'),
+            img:require('../../assets/image/202004H5 Travelling Near/Drive.png')
+          },{
+            id:9,
+            cardName:'stop',
+            audio:require('../../assets/Flashcard Audio/april/stop.mp3'),
+            img:require('../../assets/image/202004H5 Travelling Near/Stop.png')
+          },{
+            id:10,
+            cardName:'truck',
+            audio:require('../../assets/Flashcard Audio/april/truck.mp3'),
+            img:require('../../assets/image/202004H5 Travelling Near/Truck.png')
+          },{
+            id:11,
+            cardName:'honk',
+            audio:require('../../assets/Flashcard Audio/april/honk.mp3'),
+            img:require('../../assets/image/202004H5 Travelling Near/Honk.png')
+          },{
+            id:12,
+            cardName:'motorbike',
+            audio:require('../../assets/Flashcard Audio/april/motorbike.mp3'),
+            img:require('../../assets/image/202004H5 Travelling Near/Motorbike.png')
+          }
+        ],
+        TransportationPart2:[
+          {
+            id:1,
+            cardName:'fast',
+            audio:require('../../assets/Flashcard Audio/april/fast.mp3'),
+            img:require('..'+'/../assets/image/202004H5 Travelling Far/Fast.png')
+          },{
+            id:2,
+            cardName:'train',
+            audio:require('../../assets/Flashcard Audio/april/train.mp3'),
+            img:require('../../assets/image/202004H5 Travelling Far/Train.png')
+          },{
+            id:3,
+            cardName:'fly',
+            audio:require('../../assets/Flashcard Audio/april/fly.mp3'),
+            img:require('../../assets/image/202004H5 Travelling Far/Fly.png')
+          },{
+            id:4,
+            cardName:'helicopter',
+            audio:require('../../assets/Flashcard Audio/april/helicopter.mp3'),
+            img:require('../../assets/image/202004H5 Travelling Far/Helicopter.png')
+          },{
+            id:5,
+            cardName:'airplane',
+            audio:require('../../assets/Flashcard Audio/april/airplane.mp3'),
+            img:require('../../assets/image/202004H5 Travelling Far/Airplane.png')
+          },{
+            id:6,
+            cardName:'ticket',
+            audio:require('../../assets/Flashcard Audio/april/ticket.mp3'),
+            img:require('../../assets/image/202004H5 Travelling Far/ticket.png')
+          },{
+            id:7,
+            cardName:'slow',
+            audio:require('../../assets/Flashcard Audio/april/slow.mp3'),
+            img:require('../../assets/image/202004H5 Travelling Far/Slow.png')
+          },{
+            id:8,
+            cardName:'ship',
+            audio:require('../../assets/Flashcard Audio/april/ship.mp3'),
+            img:require('../../assets/image/202004H5 Travelling Far/Ship.png')
+          },{
+            id:9,
+            cardName:'airport',
+            audio:require('../../assets/Flashcard Audio/april/airport.mp3'),
+            img:require('../../assets/image/202004H5 Travelling Far/Airport.png')
+          },{
+            id:10,
+            cardName:'station',
+            audio:require('../../assets/Flashcard Audio/april/station.mp3'),
+            img:require('../../assets/image/202004H5 Travelling Far/Station.png')
+          },{
+            id:11,
+            cardName:'land',
+            audio:require('../../assets/Flashcard Audio/april/land.mp3'),
+            img:require('../../assets/image/202004H5 Travelling Far/Land.png')
+          },{
+            id:12,
+            cardName:'suitcase',
+            audio:require('../../assets/Flashcard Audio/april/suitcase.mp3'),
+            img:require('../../assets/image/202004H5 Travelling Far/Suitacase.png')
+          }
+        ],
         list:[],
         titleUrl:{
           MyCommunity:require('../../assets/image/2-logo.png'),
@@ -1507,6 +1633,8 @@
           OntheFarmPart2:require('../../assets/image/2-2logo2.png'),
           SeasonsPart1:require('../../assets/image/season-logo1.png'),
           SeasonsPart2:require('../../assets/image/season-logo2.png'),
+          TransportationPart1:require('../../assets/image/4-logo1.png'),
+          TransportationPart2:require('../../assets/image/4-logo2.png'),
         },
         title:'../../assets/image/6-6logo.png',
         flashCardUrl:'http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/9315e4a9-e1ec-4f49-8db5-5b3a9b6ae083.png',
