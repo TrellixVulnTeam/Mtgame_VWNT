@@ -364,10 +364,10 @@
             <div class="chosedisplay" v-if="!chatorphonics">
               <div  v-if="opciay1" style="width: 95%;display: inline-block">
                 <div class="choicephonics" v-for="(li,index) in phonicsList" :key='index'>
-                  <img src="../../assets/image/beginner.png" @click="pnext2(li)" style="width: 90%;" v-if="index==0">
+                  <img src="../../assets/image/beginner.png" @click="pnext2(li)" style="width: 90%;" v-if="index===0">
                   <img src="../../assets/image/intermediate.png" @click="pnext21(li)" style="width: 90%;"
                        v-if="index==1">
-                  <img src="../../assets/image/advance.png" style="width: 90%;" @click="pnext22(li)" v-if="index==2">
+                  <img src="../../assets/image/advance.png" style="width: 90%;" @click="pnext22(li)" v-if="index===2">
                   <!--<div class="progress" >-->
                   <img src="../../assets/image/completed.png" v-if="li.complete"
                        style="width: 80%;margin: 0 10%;z-index: 2;bottom:-6%;position: absolute;left:0;">
@@ -552,7 +552,7 @@
                   <!--Improvement-->
                   <div v-if="categoryNum === 6" style="height: 100%;padding-top: 2%;" >
                     <div class="improvementList" v-for="(li,index) in improvement" :key='index'>
-                      <div class="improvementId">{{index}}</div>
+                      <div class="improvementId">{{index+1}}</div>
                       <div class="improvementLetter">{{li.name}}</div>
                       <div class="improvementButton" @click="review(li)">Let's Review</div>
                       <div class="improvementPercent">{{li.average}}%</div>
@@ -561,7 +561,7 @@
                 </div>
                 <!--Scores for key areas-->
                 <div class="areasDiv" v-if="categoryNum === 4">
-                  <div class="areasButton">
+<!--                  <div class="areasButton">
                     <div class="areasButton1" :style="symbolNub ==='1' ? symbolColor:symbolDefaultColor" @click="areas('overall')">Overall</div>
                     <div class="areasButton2">
                       <div class="areasButton3" :style="symbolNub ==='2' ? symbolColor:symbolDefaultColor" @click="areas('listening')">Listening</div>
@@ -572,18 +572,27 @@
                       <div class="areasButton3" :style="symbolNub ==='5' ? symbolColor:symbolDefaultColor" @click="areas('writing')">Writing</div>
                     </div>
                     <div class="areasButton1" :style="symbolNub ==='6' ? symbolColor:symbolDefaultColor" @click="areas('letter')">Letter Recognition</div>
+                  </div>-->
+                  <div class="areasButton">
+                    <div class="areasButton1" :style="symbolNub ==='1' ? symbolColor:symbolDefaultColor" @click="areas('Vocabulary')">Vocabulary</div>
+                    <div class="areasButton1" :style="symbolNub ==='2' ? symbolColor:symbolDefaultColor" @click="areas('Spelling')">Spelling</div>
+                    <div class="areasButton1" :style="symbolNub ==='3' ? symbolColor:symbolDefaultColor" @click="areas('Writing')" v-if="level === 'Beginner'">Writing</div>
+                    <div class="areasButton1" :style="symbolNub ==='4' ? symbolColor:symbolDefaultColor" @click="areas('Letter')" v-if="level === 'Beginner'">Letter Recognition</div>
+                    <div class="areasButton1" :style="symbolNub ==='5' ? symbolColor:symbolDefaultColor" @click="areas('Sound')" v-if="level === 'Beginner'">Sound Recognition</div>
+                    <div class="areasButton1" :style="symbolNub ==='6' ? symbolColor:symbolDefaultColor" @click="areas('Reading')" v-if="level !== 'Beginner'">Reading</div>
+                    <div class="areasButton1" :style="symbolNub ==='7' ? symbolColor:symbolDefaultColor" @click="areas('Blend')" v-if="level !== 'Beginner'">Blend Recognition</div>
                   </div>
                   <div class="areas" >
                     <div  id="myChart" ref="m" style="width: 100%;height:100%;" class="echartStyle" />
                     <div class="AreasDiv">
-                      <p class="AreasP">Average  Score: 75%</p>
-                      <p class="AreasP2">EXCELLENT</p>
+                      <p class="AreasP">Average  Score: {{scoresAverage}}%</p>
+                      <p class="AreasP2" :style="scoresColor">{{scoresWord}}</p>
                     </div>
                   </div>
                 </div>
                 <!--Exercise Completion Intervals-->
-                <div class="intervals" v-if="categoriesName === 'Exercise Completion Intervals'">
-                  <img src="../../assets/image/iClock.png" class="iClock">
+                <div class="intervals" v-if="categoryNum === 2">
+                  <img src="../../assets/image/IClock.png" class="iClock">
                   <div class="intervalsPosition">
                   <p class="intervalsHour">{{ intervalsHour }}</p>
                   <p class="intervalsHours">hrs</p>
@@ -656,11 +665,21 @@
     data() {
       let myChart;
       return {
+        scoresWord:'Keep Practicing',
+        scoresAverage:0,
+        score:[],
+        scores:{},
+        scoresMap:{},
+        scoresData:{},
         symbolNub:'1',
         symbolColor:{
-          'background-color' :'#f5aa32'
+          //'background-color' :'#f5aa32'
+          'background-color' :'#939498'
         },
         symbolDefaultColor:{
+          'background-color' :'#939498'
+        },
+        scoresColor:{
           'background-color' :'#939498'
         },
         improvement:[],
@@ -801,18 +820,16 @@
     },
     watch:{
       'categoriesName':function (newVal) {
-        console.log(this.categoriesName);
-        console.log(this.myChart);
         if(this.categoriesName === 'Scores for Key Areas'){
           setTimeout(()=>{
           this.drawLine();
-          console.log('123');
           },1000);
         }else{
+          console.log(this.myChart);
           if (this.myChart != null && this.myChart !== "" && this.myChart !== undefined) {
+            console.log('cunzai');
             this.myChart.dispose();//销毁
             document.getElementById("myChart").style='';
-            console.log('dis');
           }
         }
         }
@@ -858,30 +875,80 @@
           });
         }
       },
-      areas(type){
-        console.log(type);
+      /*areas(type){
         if (type === 'overall'){
           this.symbolColor["background-color"] = '#f5aa32';
           this.symbolNub = '1';
         }else if(type === 'listening'){
           this.symbolColor["background-color"] = '#3f8e9e';
           this.symbolNub = '2';
+          this.score = ["10", "5", "2", "4", "3", "1", "3", "6", "1", "0"];
         }else if(type === 'vocab'){
           this.symbolColor["background-color"] = '#53ba6d';
           this.symbolNub = '3';
+          this.score = ["10", "1", "5", "4", "3", "1", "3", "6", "1", "0"];
         }else if(type === 'spelling'){
           this.symbolColor["background-color"] = '#f16d2f';
           this.symbolNub = '4';
+          this.score = ["10", "5", "2", "4", "3", "1", "10", "6", "1", "0"];
         }else if(type === 'writing'){
           this.symbolColor["background-color"] = '#c27db3';
           this.symbolNub = '5';
+          this.score = ["10", "5", "2", "4", "3", "1", "3", "8", "1", "0"];
         }else if(type === 'letter'){
           this.symbolColor["background-color"] = '#ec5d61';
           this.symbolNub = '6';
+          this.score = ["10", "5", "2", "4", "3", "1", "5", "6", "1", "7"];
         }
+
         this.drawLine();
+      },*/
+     areas(type){
+        if (type === 'Vocabulary'){
+          this.symbolNub = '1';
+        }else if(type === 'Spelling'){
+          this.symbolNub = '2';
+        }else if(type === 'Writing'){
+          this.symbolNub = '3';
+        }else if(type === 'Letter'){
+          this.symbolNub = '4';
+        }else if(type === 'Sound'){
+          this.symbolNub = '5';
+        }else if(type === 'Reading'){
+          this.symbolNub = '6';
+        }else if(type === 'Blend'){
+          this.symbolNub = '7';
+        }
+        this.scoresData = this.scoresMap[type];
+        this.score = [];
+        let m=0;
+        for (let i = 0; i < this.scoresData.length; i++) {
+          this.score[i] = this.scoresData[i].S;
+          m +=this.score[i];
+        }
+
+        this.scoresAverage = m;
+        if(0<=this.scoresAverage && this.scoresAverage<49){
+          this.scoresWord = 'Keep Practicing';
+          this.scoresColor["background-color"] = '#5bc192';
+        }else if(49<=this.scoresAverage && this.scoresAverage<69){
+          this.scoresWord = 'Good Progress';
+          this.scoresColor["background-color"] = '#f5bc51';
+        }else if(69<=this.scoresAverage && this.scoresAverage<79){
+          this.scoresWord = 'Getting Better';
+          this.scoresColor["background-color"] = '#f195ae';
+        }else if(79<=this.scoresAverage && this.scoresAverage<=100){
+          this.scoresWord = 'Well Done';
+          this.scoresColor["background-color"] = '#4ca0e6';
+        }
+
+        console.log(this.scoresWord);
+        setTimeout(() => {
+        this.drawLine();
+        },500);
       },
       drawLine(){
+        let that = this;
         console.log(this.myChart);
         // 基于准备好的dom，初始化echarts实例
         this.myChart = this.$echarts.init(this.$refs.m)
@@ -934,27 +1001,28 @@
             //移动端窄屏，避免tooltip 超出外界被截断
             confine:false,
             formatter:function (params){
-              //console.log(params);
-              return "<p style='color:#f68a49;font-size: 20px;font-family: kg, serif'>"+"A:LET'S SPELL"+"</p>"+"<p style='color:#6d513d;font-size: 20px;font-family: kg, serif'>"+"SCORE:"+params.data+"/10"+"</p>"+"<p style='color:#6d513d;font-size: 15px;font-family: kg, serif'>"+"4/6/2020"+"</p>";
+              return "<p style='color:#f68a49;font-size: 20px;font-family: kg, serif'>"+that.scoresData[params.dataIndex].name+"</p>"+"<p style='color:#6d513d;font-size: 20px;font-family: kg, serif'>"+"SCORE:"+that.scoresData[params.dataIndex].score+"</p>"+"<p style='color:#6d513d;font-size: 15px;font-family: kg, serif'>"+that.scoresData[params.dataIndex].date+"</p>";
             }
           },
           series: [
             {
-              data: [0,2,6,3,0,10,5,8,1,4],
+              data: this.score,
               type: 'line',
               //拐点大小
               symbolSize:15,
               //实心拐点
               symbol:'circle',
               //拐点颜色
-              color:this.symbolColor['background-color'],
+              //color:this.symbolColor['background-color'],
+              color:'#ec5d61',
               itemStyle:{
                 normal:{
                   lineStyle:{
                     width:7,
                     type:'solid',  //'dotted'虚线 'solid'实线
                     //折线颜色
-                    color:this.symbolColor['background-color'],
+                    //color:this.symbolColor['background-color'],
+                    color:'#ec5d61',
                     //borderColor:'#bebfc0', //拐角点颜色
                   }
                 }
@@ -968,10 +1036,10 @@
             }
           ]
         });
-        this.myChart.on('click', function (params) {
-          // 在用户点击后控制台打印数据的名称
-          console.log(params);
-        });
+        // this.myChart.on('click', function (params) {
+        //   // 在用户点击后控制台打印数据的名称
+        //   console.log(params);
+        // });
         window.onresize = function() {
           this.myChart.resize();
         };
@@ -1006,19 +1074,13 @@
           if(this.sliceMax-this.sliceMin<6){
             this.sliceMax-=this.overall.length%6;
             this.sliceMin-=6;
-            console.log(this.sliceMin);
-            console.log(this.sliceMax);
           }else{
             this.sliceMax-=6;
             this.sliceMin-=6;
-            console.log(this.sliceMin);
-            console.log(this.sliceMax);
           }
         }else {
           this.sliceMax = this.overall.length;
           this.sliceMin = this.overall.length-this.overall.length%6;
-          console.log(this.sliceMin);
-          console.log(this.sliceMax);
         }
       },
       categories(str){
@@ -1031,7 +1093,7 @@
           this.categoriesText='Time Spent Overall';
           this.categoryNum=2;
         }else if(str ===3){
-          this.categoriesName='Exercise Completion Intervals2';
+          this.categoriesName='Exercise Completion Intervals';
           this.categoriesText='Time Spent Overall';
           this.categoryNum=3;
         }else if(str ===4){
@@ -1071,21 +1133,19 @@
         return temp
       },
       back() {
-        // console.log(this.onef);
-        // console.log(this.seleinfo);
-        if (this.onef == false && this.seleinfo == false) {
+        if (this.onef === false && this.seleinfo === false) {
           this.action = true;
           setTimeout(() => {
             this.action = false;
             this.seleinfo = true;
           }, 1000);
-        } else if (this.onef == false && this.seleinfo == true) {
+        } else if (this.onef === false && this.seleinfo === true) {
           this.action = true;
           setTimeout(() => {
             this.action = false;
             this.onef = true;
           }, 1000);
-        } else if (this.onef == true) {
+        } else if (this.onef === true) {
           this.action = true;
           setTimeout(() => {
             this.action = false;
@@ -1219,7 +1279,6 @@
             studentId: localStorage.getItem('studentId'),
           })).then(res => {
             this.phonicsList = res.data.phonicsList;
-            console.log(this.phonicsList);
           }, res => {
             alertMsg("You must be connected to the internet.<br>Please connect and try again.");
           })
@@ -1657,7 +1716,6 @@
           studentId: localStorage.getItem('studentId'),
           level:this.level
         })).then(res => {
-          console.log(res);
           this.intervalsMins = res.data.time.mins;
           this.intervalsHour = res.data.time.hours;
           this.pass = res.data.time.pass;
@@ -1666,28 +1724,32 @@
           this.pass7 = res.data.intervals.pass7;
           this.pass30 = res.data.intervals.pass30;
           this.improvement = res.data.improvement;
+          this.scores = res.data.scores;
+          this.scoresMap = res.data.scoresMap;
+          this.scoresData = this.scoresMap.Vocabulary;
+
           for (let i = 0; i < this.overall.length; i++) {
             this.overall[i].name = this.overall[i].abbreviation;
             let imgSrc = '';
             if(this.overall[i].percent <= 10){
               imgSrc = require('../../assets/image/letters/10/'+this.overall[i].name+'.png');
-            }else if(10<this.overall[i].percent <= 20){
+            }else if(10<this.overall[i].percent && this.overall[i].percent<= 20){
               imgSrc = require('../../assets/image/letters/20/'+this.overall[i].name+'.png');
-            }else if(20<this.overall[i].percent <= 30){
+            }else if(20<this.overall[i].percent && this.overall[i].percent<= 30){
               imgSrc = require('../../assets/image/letters/30/'+this.overall[i].name+'.png');
-            }else if(30<this.overall[i].percent <= 40){
+            }else if(30<this.overall[i].percent && this.overall[i].percent<= 40){
               imgSrc = require('../../assets/image/letters/40/'+this.overall[i].name+'.png');
-            }else if(40<this.overall[i].percent <= 50){
+            }else if(40<this.overall[i].percent && this.overall[i].percent<= 50){
               imgSrc = require('../../assets/image/letters/50/'+this.overall[i].name+'.png');
-            }else if(50<this.overall[i].percent <= 60){
+            }else if(50<this.overall[i].percent && this.overall[i].percent<= 60){
               imgSrc = require('../../assets/image/letters/60/'+this.overall[i].name+'.png');
-            }else if(60<this.overall[i].percent <= 70){
+            }else if(60<this.overall[i].percent && this.overall[i].percent<= 70){
               imgSrc = require('../../assets/image/letters/70/'+this.overall[i].name+'.png');
-            }else if(70<this.overall[i].percent <= 80){
+            }else if(70<this.overall[i].percent && this.overall[i].percent<= 80){
               imgSrc = require('../../assets/image/letters/80/'+this.overall[i].name+'.png');
-            }else if(80<this.overall[i].percent <= 90){
+            }else if(80<this.overall[i].percent && this.overall[i].percent<= 90){
               imgSrc = require('../../assets/image/letters/90/'+this.overall[i].name+'.png');
-            }else if(90<this.overall[i].percent <= 99){
+            }else if(90<this.overall[i].percent && this.overall[i].percent<= 99){
               imgSrc = require('../../assets/image/letters/99/'+this.overall[i].name+'.png');
             }else if(this.overall[i].percent === 100){
               imgSrc = require('../../assets/image/letters/100/'+this.overall[i].name+'.png');
@@ -1697,21 +1759,41 @@
 
           if(this.pass7<=6){
             this.evaluate = 'KEEP TRYING';
-          }else if(6<this.pass7<=13){
+          }else if(6<this.pass7 && this.pass7<=13){
             this.evaluate = 'NICE';
-          }else if(13<this.pass7<=21){
+          }else if(13<this.pass7 && this.pass7<=21){
             this.evaluate = 'GREAT';
           }else if(21<this.pass7){
             this.evaluate = 'AMAZING';
           }
           if(this.pass30<=27){
-            this.evaluate = 'KEEP TRYING';
-          }else if(27<this.pass7<=52){
-            this.evaluate = 'NICE';
-          }else if(53<this.pass7<=84){
-            this.evaluate = 'GREAT';
-          }else if(85<this.pass7){
-            this.evaluate = 'AMAZING';
+            this.evaluate2 = 'KEEP TRYING';
+          }else if(27<this.pass30 && this.pass30<=52){
+            this.evaluate2 = 'NICE';
+          }else if(53<this.pass30 && this.pass30<=84){
+            this.evaluate2 = 'GREAT';
+          }else if(85<this.pass30){
+            this.evaluate2 = 'AMAZING';
+          }
+
+          let m=0;
+          for (let i = 0; i < this.scoresData.length; i++) {
+            this.score[i] = this.scoresData[i].S;
+            m +=this.score[i];
+          }
+          this.scoresAverage = m;
+          if(0<=m && m<49){
+            this.scoresWord = 'Keep Practicing';
+            this.scoresColor["background-color"] = '#5bc192';
+          }else if(49<=m && m<69){
+            this.scoresWord = 'Good Progress';
+            this.scoresColor["background-color"] = '#f5bc51';
+          }else if(69<=m && m<79){
+            this.scoresWord = 'Getting Better';
+            this.scoresColor["background-color"] = '#f195ae';
+          }else if(79<=m && m<=100){
+            this.scoresWord = 'Well Done';
+            this.scoresColor["background-color"] = '#4ca0e6';
           }
 
         }, res => {
@@ -1923,9 +2005,9 @@
     display: inline-block;
     font-size: 1.5rem;
     border-radius: 30px;
-    background-color: #0d627c;
     height: 30px;
-    width: 170px;
+    width: fit-content;
+    padding: 0 15px;
   }
 
   .AreasDiv {
@@ -2043,16 +2125,14 @@
     font-size: 1.5rem;
   }
 
-  .intervalsPassText1{
+  .intervalsPassText1 {
     font-family: kg,serif;
     color: #735138;
-    font-size: 8rem;
+    font-size: 7rem;
     position: relative;
-    left: 14%;
-    /* width: -webkit-fit-content; */
+    left: 1%;
     width: -moz-fit-content;
-    /* width: fit-content; */
-    width: 150px;
+    width: 220px;
     margin-top: 10%;
     text-align: right;
   }
@@ -2124,13 +2204,15 @@
     width: 50%;
     float: left;
     position: relative;
+    top: 5%;
   }
 
   .intervalsPass30{
     width: 50%;
     float: left;
     position: relative;
-    left: -8%;
+    left: -5%;
+    top: 5%;
   }
 
   .intervalsPass {
@@ -2300,7 +2382,7 @@
     color: white;
     font-size: 1.5rem;
     font-family: 'pepper', serif;
-    margin-top: 10%;
+    margin-top: 6%;
   }
 
   .areasButton2 {
@@ -2358,10 +2440,11 @@
     font-size: 2.8rem;
   }
 
-  .phonicsText{
+  .phonicsText {
     color: #7d4e28;
-    font-family: kg,serif;
-    font-size: 12px;
+    font-family: pepper,serif;
+    font-size: 1.8rem;
+    font-weight: 500;
   }
 
   .title {
@@ -3689,7 +3772,7 @@
     }
 
     .intervalsPass30 {
-      left: -7%;
+      left: -5%;
     }
     .intervalsPass7 {
       left: -5%;
@@ -3767,7 +3850,7 @@
       margin: 0 20px 5px 20px;
     }
     .phonicsText{
-      font-size: 0.7rem;
+      font-size: 0.8rem;
     }
     .phonicsL{
       font-size: 1rem;
@@ -3810,6 +3893,9 @@
   @media screen and (min-device-height: 812px) and (max-device-height: 894px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 812px) and (max-device-height: 894px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 812px) and (max-width: 894px) {
+    .phonicsText {
+      font-size: 1rem;
+    }
     .letterPercent {
       font-size: 1.6rem;
     }
@@ -4061,6 +4147,9 @@
   @media screen and (min-device-height: 895px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 895px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 895px) and (max-width: 1023px) {
+    .phonicsText {
+      font-size: 1rem;
+    }
     .intervalsPass {
       color: #77766D;
       font-family: pepper,serif;
@@ -4141,7 +4230,7 @@
     }
 
     .pointPosition {
-      margin-top: -9%;
+      margin-top: -8%;
     }
     .point1 {
       font-size: 2rem;
@@ -4241,9 +4330,12 @@
     .listmemu{
       margin: 0 20px 0 20px;
     }
+
     .phonicsL{
-      font-size: 1.5rem;
+      font-size: 1rem;
     }
+
+
     .unitnamep {
       font-size: 1rem;
     }
@@ -4252,9 +4344,6 @@
       margin-top: 5%;
     }
 
-    .chosedisplay {
-      // margin-top: 4%;
-    }
 
     .addchosecourseL {
       margin-top: 2%;
@@ -4356,6 +4445,9 @@
   @media screen and (min-device-height: 1024px) and (max-device-height: 1199px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 1024px) and (max-device-height: 1199px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 1024px) and (max-width: 1199px) {
+    .phonicsText {
+      font-size: 1.5rem;
+    }
     .intervalsPassNice {
       position: absolute;
       padding: 1.5% 4%;
@@ -4383,8 +4475,8 @@
       color: #9c8066;
       font-family: 'pepper', serif;
       font-size: 1rem;
-      left: 56%;
-      top: 76%;
+      left: 60%;
+      top: 80%;
     }
 
     .intervalsPassText2 {
@@ -4404,7 +4496,7 @@
       position: relative;
       left: 3%;
       margin-top: 21%;
-      width: 100px;
+      width: 125px;
     }
 
     .intervalsPassKeepTrying {
@@ -4777,16 +4869,16 @@
       margin-top: -9%;
     }
     .intervalsPass7 {
-      left: 7%;
+      left: 1%;
     }
-    .intervalsPassText1 {
+    .intervalsPassText1[data-v-2f20336a] {
       font-family: kg,serif;
       color: #735138;
-      font-size: 8rem;
+      font-size: 6rem;
       position: relative;
-      left: -3%;
+      left: -8%;
       margin-top: 15%;
-      width: 120px;
+      width: 180px;
     }
     .intervalsPassKeepTrying {
       right: 18%;
@@ -4810,7 +4902,7 @@
       top: 42%;
     }
     .intervalsPass30 {
-      left: 3%;
+      left: -1%;
     }
     .iClock {
       width: 30%;
