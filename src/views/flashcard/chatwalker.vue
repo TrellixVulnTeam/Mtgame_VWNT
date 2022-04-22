@@ -2511,6 +2511,225 @@
              :style="{zIndex: !ship ? 100 : 3}" @click="showGif('ship')">
       </div>
     </div>
+    <div v-else-if="this.unit === 'Bugs' && this.part === 'part1'">
+      <img src="../../assets/image/202005H5 Crawling Bugs_MT/Runner_BG/BG_00000.png"
+           style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;"/>
+      <div class="ant">
+        <img src="../../assets/image/202005H5 Crawling Bugs_MT/GIF_PNG/Png/Ant_comp_0000000000.png" v-if="ant" @click="showGif('ant')">
+        <img src="../../assets/image/202005H5 Crawling Bugs_MT/GIF_PNG/Gif/Ant_comp.gif" style="z-index: 100" v-if="!ant"
+             @click="showGif('ant')">
+      </div>
+      <div class="caterpillar">
+        <img src="../../assets/image/202005H5 Crawling Bugs_MT/GIF_PNG/Png/caterpilla_0000000000.png" v-if="caterpillar&&munch" @click="showGif('caterpillar')">
+        <img src="../../assets/image/202005H5 Crawling Bugs_MT/GIF_PNG/Gif/caterpilla.gif" style="z-index: 100" v-if="!caterpillar"
+             @click="showGif('caterpillar')">
+      </div>
+      <div class="caterpillar">
+        <img src="../../assets/image/202005H5 Crawling Bugs_MT/GIF_PNG/Gif/munch.gif" style="z-index: 100" v-if="!munch"
+             @click="showGif('munch')">
+      </div>
+      <div class="crawl">
+        <img src="../../assets/image/202005H5 Crawling Bugs_MT/GIF_PNG/Gif/crawl.gif" style="z-index: 100" v-if="!crawl"
+             @click="showGif('crawl')">
+      </div>
+      <div class="feelers">
+        <img src="../../assets/image/202005H5 Crawling Bugs_MT/GIF_PNG/Png/Feelers_comp_0000000000.png" v-if="feelers" @click="walkers&&showGif('feelers')">
+        <img src="../../assets/image/202005H5 Crawling Bugs_MT/GIF_PNG/Gif/Feelers_comp.gif" style="z-index: 100" v-if="!feelers"
+             @click="showGif('feelers')">
+      </div>
+      <div class="leaf">
+        <img src="../../assets/image/202005H5 Crawling Bugs_MT/GIF_PNG/Png/leaf_Comp__0000000000.png" v-if="leaf" @click="walkers&&showGif('leaf')">
+        <img src="../../assets/image/202005H5 Crawling Bugs_MT/GIF_PNG/Gif/leaf_Comp_.gif" style="z-index: 100" v-if="!leaf"
+             @click="showGif('leaf')">
+      </div>
+      <div class="mantis">
+        <img src="../../assets/image/202005H5 Crawling Bugs_MT/GIF_PNG/Png/Mantis_comp_0000000000.png" v-if="mantis" @click="walkers&&showGif('mantis')">
+        <img src="../../assets/image/202005H5 Crawling Bugs_MT/GIF_PNG/Gif/Mantis_comp.gif" style="z-index: 100" v-if="!mantis"
+             @click="showGif('mantis')">
+      </div>
+      <div class="snail">
+        <img src="../../assets/image/202005H5 Crawling Bugs_MT/GIF_PNG/Png/snail_comp_0000000000.png" v-if="snail" @click="showGif('snail')">
+        <img src="../../assets/image/202005H5 Crawling Bugs_MT/GIF_PNG/Gif/snail_comp.gif" style="z-index: 100" v-if="!snail"
+             @click="showGif('snail')">
+      </div>
+      <div class="spider">
+        <img src="../../assets/image/202005H5 Crawling Bugs_MT/GIF_PNG/Png/spider.png" v-if="spider&&web&&crawl" @click="showGif('spider')">
+        <img src="../../assets/image/202005H5 Crawling Bugs_MT/GIF_PNG/Gif/spider.gif" style="z-index: 100" v-if="!spider"
+             @click="showGif('spider')">
+      </div>
+      <div class="web">
+        <img src="../../assets/image/202005H5 Crawling Bugs_MT/GIF_PNG/Png/web.png" v-if="web&&crawl" @click="showGif('web')">
+        <img src="../../assets/image/202005H5 Crawling Bugs_MT/GIF_PNG/Gif/web.gif" style="z-index: 100" v-if="!web"
+             @click="showGif('web')">
+      </div>
+      <div class="wiggle">
+        <img src="../../assets/image/202005H5 Crawling Bugs_MT/GIF_PNG/Png/wiggle.png" v-if="wiggle&&worm" @click="showGif('wiggle')">
+        <img src="../../assets/image/202005H5 Crawling Bugs_MT/GIF_PNG/Gif/wiggle.gif" style="z-index: 100" v-if="!wiggle"
+             @click="showGif('wiggle')">
+      </div>
+      <div class="wiggle">
+        <img src="../../assets/image/202005H5 Crawling Bugs_MT/GIF_PNG/Gif/worm.gif" style="z-index: 100" v-if="!worm"
+             @click="showGif('worm')">
+      </div>
+      <div class="webButton">
+        <img src="../../assets/image/202005H5 Crawling Bugs_MT/words/word_web Comp 1_00000.png"
+             :style="{zIndex: !web ? 100 : 1}" @click="showGif('web')">
+      </div>
+      <div class="spiderButton">
+        <img src="../../assets/image/202005H5 Crawling Bugs_MT/words/word_spider Comp 1_00000.png"
+             :style="{zIndex: !spider ? 100 : 1}" @click="showGif('spider')">
+      </div>
+      <div class="feelersButton">
+        <img src="../../assets/image/202005H5 Crawling Bugs_MT/words/word_feelers Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !feelers ? 100 : 1}" @click="showGif('feelers')">
+      </div>
+      <div class="antButton">
+        <img src="../../assets/image/202005H5 Crawling Bugs_MT/words/word_ant Comp 1_00000.png"
+             :style="{zIndex: !ant ? 100 : 1}" @click="showGif('ant')">
+      </div>
+      <div class="crawlButton">
+        <img src="../../assets/image/202005H5 Crawling Bugs_MT/words/word_crawl Comp 1_00000.png"
+             :style="{zIndex: !crawl ? 100 : 1}" @click="showGif('crawl')">
+      </div>
+      <div class="leafButton">
+        <img src="../../assets/image/202005H5 Crawling Bugs_MT/words/word_leaf Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !leaf ? 100 : 1}" @click="showGif('leaf')">
+      </div>
+      <div class="mantisButton">
+        <img src="../../assets/image/202005H5 Crawling Bugs_MT/words/word_mantis Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !mantis ? 100 : 1}" @click="showGif('mantis')">
+      </div>
+      <div class="munchButton">
+        <img src="../../assets/image/202005H5 Crawling Bugs_MT/words/word_munch Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !munch ? 100 : 1}" @click="showGif('munch')">
+      </div>
+      <div class="snailButton">
+        <img src="../../assets/image/202005H5 Crawling Bugs_MT/words/word_snail Comp 1_00000.png"
+             :style="{zIndex: !snail ? 100 : 1}" @click="showGif('snail')">
+      </div>
+      <div class="caterpillarButton">
+        <img src="../../assets/image/202005H5 Crawling Bugs_MT/words/word_caterpillar Comp 1_00000.png"
+             :style="{zIndex: !caterpillar ? 100 : 1}" @click="showGif('caterpillar')">
+      </div>
+      <div class="wormButton">
+        <img src="../../assets/image/202005H5 Crawling Bugs_MT/words/word_worm Comp 1_00000.png"
+             :style="{zIndex: !worm ? 100 : 1}" @click="showGif('worm')">
+      </div>
+      <div class="wiggleButton">
+        <img src="../../assets/image/202005H5 Crawling Bugs_MT/words/word_wiggle Comp 1_00000.png"
+             :style="{zIndex: !wiggle ? 100 : 1}" @click="showGif('wiggle')">
+      </div>
+    </div>
+    <div v-else-if="this.unit === 'Bugs' && this.part === 'part2'">
+      <img src="../../assets/image/202005H5 Flying Bugs_MT/Runner_BG/BG_00000.png"
+           style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;"/>
+      <div class="bee">
+        <img src="../../assets/image/202005H5 Flying Bugs_MT/GIF_PNG/Png/bee.png" v-if="bee" @click="showGif('bee')">
+        <img src="../../assets/image/202005H5 Flying Bugs_MT/GIF_PNG/Gif/bee.gif" style="z-index: 100" v-if="!bee"
+             @click="showGif('bee')">
+      </div>
+      <div class="butterfly2">
+        <img src="../../assets/image/202005H5 Flying Bugs_MT/GIF_PNG/Png/butterfly.png" v-if="butterfly2&&fly2" @click="showGif('butterfly2')">
+        <img src="../../assets/image/202005H5 Flying Bugs_MT/GIF_PNG/Gif/butterfly_comp_2.gif" style="z-index: 100" v-if="!butterfly2"
+             @click="showGif('butterfly2')">
+      </div>
+      <div class="buzz">
+        <img src="../../assets/image/202005H5 Flying Bugs_MT/GIF_PNG/Png/buzz.png" v-if="buzz" @click="showGif('buzz')">
+        <img src="../../assets/image/202005H5 Flying Bugs_MT/GIF_PNG/Gif/buzz.gif" style="z-index: 100" v-if="!buzz"
+             @click="showGif('buzz')">
+      </div>
+      <div class="dragonfly">
+        <img src="../../assets/image/202005H5 Flying Bugs_MT/GIF_PNG/Png/dragonfly.png" v-if="dragonfly" @click="walkers&&showGif('dragonfly')">
+        <img src="../../assets/image/202005H5 Flying Bugs_MT/GIF_PNG/Gif/dragonfly_comp.gif" style="z-index: 100" v-if="!dragonfly"
+             @click="showGif('dragonfly')">
+      </div>
+      <div class="firefly">
+        <img src="../../assets/image/202005H5 Flying Bugs_MT/GIF_PNG/Png/firefly.png" v-if="firefly" @click="walkers&&showGif('firefly')">
+        <img src="../../assets/image/202005H5 Flying Bugs_MT/GIF_PNG/Gif/firefly_comp.gif" style="z-index: 100" v-if="!firefly"
+             @click="showGif('firefly')">
+      </div>
+      <div class="flower">
+        <img src="../../assets/image/202005H5 Flying Bugs_MT/GIF_PNG/Png/flower.png" v-if="flower" @click="showGif('flower')">
+        <img src="../../assets/image/202005H5 Flying Bugs_MT/GIF_PNG/Gif/flower.gif" style="z-index: 100" v-if="!flower"
+             @click="showGif('flower')">
+      </div>
+      <div class="butterfly2">
+        <img src="../../assets/image/202005H5 Flying Bugs_MT/GIF_PNG/Gif/fly.gif" style="z-index: 100" v-if="!fly2"
+             @click="showGif('fly2')">
+      </div>
+      <div class="hive">
+        <img src="../../assets/image/202005H5 Flying Bugs_MT/GIF_PNG/Png/hive.png" v-if="hive" @click="walkers&&showGif('hive')">
+        <img src="../../assets/image/202005H5 Flying Bugs_MT/GIF_PNG/Gif/hive.gif" style="z-index: 100" v-if="!hive"
+             @click="showGif('hive')">
+      </div>
+      <div class="ladybug">
+        <img src="../../assets/image/202005H5 Flying Bugs_MT/GIF_PNG/Png/ladybug.png" v-if="ladybug&&wings" @click="showGif('ladybug')">
+        <img src="../../assets/image/202005H5 Flying Bugs_MT/GIF_PNG/Gif/ladybug.gif" style="z-index: 100" v-if="!ladybug"
+             @click="showGif('ladybug')">
+      </div>
+      <div class="mosquito">
+        <img src="../../assets/image/202005H5 Flying Bugs_MT/GIF_PNG/Png/mosquito.png" v-if="mosquito" @click="walkers&&showGif('mosquito')">
+        <img src="../../assets/image/202005H5 Flying Bugs_MT/GIF_PNG/Gif/mosquito.gif" style="z-index: 100" v-if="!mosquito"
+             @click="showGif('mosquito')">
+      </div>
+      <div class="sting">
+        <img src="../../assets/image/202005H5 Flying Bugs_MT/GIF_PNG/Png/sting.png" v-if="sting" @click="showGif('sting')">
+        <img src="../../assets/image/202005H5 Flying Bugs_MT/GIF_PNG/Gif/sting_comp.gif" style="z-index: 100" v-if="!sting"
+             @click="showGif('sting')">
+      </div>
+      <div class="ladybug">
+        <img src="../../assets/image/202005H5 Flying Bugs_MT/GIF_PNG/Gif/wings.gif" style="z-index: 100" v-if="!wings"
+             @click="showGif('wings')">
+      </div>
+      <div class="beeButton">
+        <img src="../../assets/image/202005H5 Flying Bugs_MT/words/word_bee Comp 1_00000.png"
+             :style="{zIndex: !bee ? 100 : 1}" @click="showGif('bee')">
+      </div>
+      <div class="butterfly2Button">
+        <img src="../../assets/image/202005H5 Flying Bugs_MT/words/word_butterfly Comp 1_00000.png"
+             :style="{zIndex: !butterfly2 ? 100 : 1}" @click="showGif('butterfly2')">
+      </div>
+      <div class="buzzButton">
+        <img src="../../assets/image/202005H5 Flying Bugs_MT/words/word_buzz Comp 1_00000.png"
+             :style="{zIndex: !buzz ? 100 : 1}" @click="showGif('buzz')">
+      </div>
+      <div class="dragonflyButton">
+        <img src="../../assets/image/202005H5 Flying Bugs_MT/words/word_drgonfly Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !dragonfly ? 100 : 1}" @click="showGif('dragonfly')">
+      </div>
+      <div class="fireflyButton">
+        <img src="../../assets/image/202005H5 Flying Bugs_MT/words/word_firefly Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !firefly ? 100 : 1}" @click="showGif('firefly')">
+      </div>
+      <div class="flowerButton">
+        <img src="../../assets/image/202005H5 Flying Bugs_MT/words/word_flowers Comp 1_00000.png"
+             :style="{zIndex: !flower ? 100 : 1}" @click="showGif('flower')">
+      </div>
+      <div class="fly2Button">
+        <img src="../../assets/image/202005H5 Flying Bugs_MT/words/word_fly Comp 1_00000.png"
+             :style="{zIndex: !fly2 ? 100 : 1}" @click="showGif('fly2')">
+      </div>
+      <div class="hiveButton">
+        <img src="../../assets/image/202005H5 Flying Bugs_MT/words/word_hive Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !hive ? 100 : 1}" @click="showGif('hive')">
+      </div>
+      <div class="ladybugButton">
+        <img src="../../assets/image/202005H5 Flying Bugs_MT/words/word_ladybug Comp 1_00000.png"
+             :style="{zIndex: !ladybug ? 100 : 1}" @click="showGif('ladybug')">
+      </div>
+      <div class="mosquitoButton">
+        <img src="../../assets/image/202005H5 Flying Bugs_MT/words/word_mosquito Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !mosquito ? 100 : 1}" @click="showGif('mosquito')">
+      </div>
+      <div class="stingButton">
+        <img src="../../assets/image/202005H5 Flying Bugs_MT/words/word_sting Comp 1_00000.png"
+             :style="{zIndex: !sting ? 100 : 1}" @click="showGif('sting')">
+      </div>
+      <div class="wingsButton">
+        <img src="../../assets/image/202005H5 Flying Bugs_MT/words/word_wings _00000.png"
+             :style="{zIndex: !wings ? 100 : 1}" @click="showGif('wings')">
+      </div>
+    </div>
     <div v-else>
     <img src="../../assets/image/H5 Thing/Walker_BG/bg_0.png"
          style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;">
@@ -2927,8 +3146,58 @@ export default {
           tram:require('../../assets/Flashcard Audio/april/tram.mp3'),
           truck:require('../../assets/Flashcard Audio/april/truck.mp3'),
           walk:require('../../assets/Flashcard Audio/april/walk.mp3'),
+
+          //MAY
+          ant:require('../../assets/Flashcard Audio/april/walk.mp3'),
+          caterpillar:require('../../assets/Flashcard Audio/april/walk.mp3'),
+          munch:require('../../assets/Flashcard Audio/april/walk.mp3'),
+          crawl:require('../../assets/Flashcard Audio/april/walk.mp3'),
+          feelers:require('../../assets/Flashcard Audio/april/walk.mp3'),
+          leaf:require('../../assets/Flashcard Audio/april/walk.mp3'),
+          web:require('../../assets/Flashcard Audio/april/walk.mp3'),
+          mantis:require('../../assets/Flashcard Audio/april/walk.mp3'),
+          snail:require('../../assets/Flashcard Audio/april/walk.mp3'),
+          spider:require('../../assets/Flashcard Audio/april/walk.mp3'),
+          wiggle:require('../../assets/Flashcard Audio/april/walk.mp3'),
+          worm:require('../../assets/Flashcard Audio/april/walk.mp3'),
+          bee:require('../../assets/Flashcard Audio/april/walk.mp3'),
+          butterfly2:require('../../assets/Flashcard Audio/april/walk.mp3'),
+          buzz:require('../../assets/Flashcard Audio/april/walk.mp3'),
+          dragonfly:require('../../assets/Flashcard Audio/april/walk.mp3'),
+          firefly:require('../../assets/Flashcard Audio/april/walk.mp3'),
+          flower:require('../../assets/Flashcard Audio/april/walk.mp3'),
+          fly2:require('../../assets/Flashcard Audio/april/walk.mp3'),
+          hive:require('../../assets/Flashcard Audio/april/walk.mp3'),
+          ladybug:require('../../assets/Flashcard Audio/april/walk.mp3'),
+          mosquito:require('../../assets/Flashcard Audio/april/walk.mp3'),
+          sting:require('../../assets/Flashcard Audio/april/walk.mp3'),
+          wings:require('../../assets/Flashcard Audio/april/walk.mp3'),
         },
         cardType:'default',
+        ant:true,
+        caterpillar:true,
+        munch:true,
+        crawl:true,
+        feelers:true,
+        leaf:true,
+        web:true,
+        mantis:true,
+        snail:true,
+        spider:true,
+        wiggle:true,
+        worm:true,
+        bee:true,
+        butterfly2:true,
+        buzz:true,
+        dragonfly:true,
+        firefly:true,
+        flower:true,
+        fly2:true,
+        hive:true,
+        ladybug:true,
+        mosquito:true,
+        sting:true,
+        wings:true,
         fast:true,
         train:true,
         ticket:true,
@@ -3430,6 +3699,323 @@ export default {
     position: fixed;
     background-color: #44ccc2;
     z-index: 201;
+  }
+
+  .bee img {
+    width: 16%;
+    left: 66%;
+    top: 55%;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .butterfly2 img {
+    width: 18%;
+    left: 71%;
+    top: 4%;
+    position: absolute;
+  }
+
+  .buzz img {
+    width: 18%;
+    left: 25%;
+    top: 38%;
+    position: absolute;
+  }
+
+  .dragonfly img {
+    width: 20%;
+    left: 1%;
+    top: 47%;
+    position: absolute;
+  }
+
+  .firefly img {
+    width: 13%;
+    left: 24%;
+    top: 48%;
+    position: absolute;
+  }
+
+  .flower img {
+    width: 60%;
+    left: 40%;
+    top: 48%;
+    position: absolute;
+  }
+
+  .fly2 img {
+    width: 13%;
+    left: 33%;
+    top: 66%;
+    position: absolute;
+  }
+
+  .hive img {
+    width: 13%;
+    left: 39%;
+    top: 8%;
+    position: absolute;
+  }
+
+  .ladybug img {
+    width: 20%;
+    left: 2%;
+    top: 62%;
+    position: absolute;
+  }
+
+  .mosquito img {
+    width: 10%;
+    left: 57%;
+    top: 31%;
+    position: absolute;
+  }
+
+  .sting img {
+    width: 27%;
+    left: -1%;
+    top: 6%;
+    position: absolute;
+  }
+
+  .beeButton img {
+    width: 6%;
+    left: 79%;
+    top: 73%;
+    position: absolute;
+  }
+
+  .butterfly2Button img {
+    width: 8%;
+    left: 86%;
+    top: 27%;
+    position: absolute;
+  }
+
+  .buzzButton img {
+    width: 5%;
+    left: 33%;
+    top: 38%;
+    position: absolute;
+  }
+
+  .dragonflyButton img {
+    width: 8%;
+    left: 3%;
+    top: 46%;
+    position: absolute;
+  }
+
+  .fireflyButton img {
+    width: 6%;
+    left: 22%;
+    top: 60%;
+    position: absolute;
+  }
+
+  .flowerButton img {
+    width: 7%;
+    left: 59%;
+    top: 64%;
+    position: absolute;
+  }
+
+  .fly2Button img {
+    width: 5%;
+    left: 68%;
+    top: 10%;
+    position: absolute;
+  }
+
+  .hiveButton img {
+    width: 5%;
+    left: 35%;
+    top: 18%;
+    position: absolute;
+  }
+
+  .ladybugButton img {
+    width: 9%;
+    left: 21%;
+    top: 87%;
+    position: absolute;
+  }
+
+  .mosquitoButton img {
+    width: 9%;
+    left: 56%;
+    top: 27%;
+    position: absolute;
+  }
+
+  .stingButton img {
+    width: 7%;
+    left: 12%;
+    top: 26%;
+    position: absolute;
+  }
+
+  .wingsButton img {
+    width: 7%;
+    left: 2%;
+    top: 65%;
+    position: absolute;
+  }
+
+  .ant img {
+    width: 13%;
+    left: 33%;
+    top: 66%;
+    position: absolute;
+  }
+
+  .caterpillar img {
+    width: 26%;
+    left: 66%;
+    top: 19%;
+    position: absolute;
+  }
+
+  .crawl img {
+    width: 40%;
+    left: 0%;
+    top: -3%;
+    position: absolute;
+  }
+
+  .feelers img {
+    width: 10%;
+    left: 22%;
+    top: 73%;
+    position: absolute;
+  }
+
+  .leaf img {
+    width: 30%;
+    left: 32%;
+    top: 22%;
+    position: absolute;
+  }
+
+  .mantis img {
+    width: 15%;
+    left: 40%;
+    top: 47%;
+    position: absolute;
+  }
+
+  .snail img {
+    width: 17%;
+    left: 59%;
+    top: 57%;
+    position: absolute;
+  }
+
+  .spider img {
+    width: 40%;
+    left: 0%;
+    top: -3%;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .web img {
+    width: 40%;
+    left: 0%;
+    top: -3%;
+    position: absolute;
+  }
+
+  .wiggle img {
+    width: 15%;
+    left: 81%;
+    top: 70%;
+    position: absolute;
+  }
+
+  .webButton img {
+    width: 6%;
+    left: 5%;
+    top: 30%;
+    position: absolute;
+  }
+
+  .spiderButton img {
+    width: 7%;
+    left: 10%;
+    top: 13%;
+    position: absolute;
+  }
+
+  .feelersButton img {
+    width: 7%;
+    left: 23%;
+    top: 69%;
+    position: absolute;
+  }
+
+  .crawlButton img {
+    width: 7%;
+    left: 37%;
+    top: 21%;
+    position: absolute;
+  }
+
+  .leafButton img {
+    width: 6%;
+    left: 44%;
+    top: 38%;
+    position: absolute;
+  }
+
+  .mantisButton img {
+    width: 6%;
+    left: 49%;
+    top: 55%;
+    position: absolute;
+  }
+
+  .antButton img {
+    width: 5%;
+    left: 42%;
+    top: 81%;
+    position: absolute;
+  }
+
+  .munchButton img {
+    width: 7%;
+    left: 60%;
+    top: 28%;
+    position: absolute;
+  }
+
+  .snailButton img {
+    width: 6%;
+    left: 66%;
+    top: 56%;
+    position: absolute;
+  }
+
+  .caterpillarButton img {
+    width: 8%;
+    left: 79%;
+    top: 17%;
+    position: absolute;
+  }
+
+  .wormButton img {
+    width: 6%;
+    left: 83%;
+    top: 71%;
+    position: absolute;
+  }
+
+  .wiggleButton img {
+    width: 6%;
+    left: 88%;
+    top: 88%;
+    position: absolute;
   }
 
   .stationButton img {
@@ -8741,6 +9327,147 @@ export default {
   @media only screen and (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 3) ,
   (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 812px) and (max-width: 1023px){
+    .mosquito img {
+      width: 8%;
+      left: 59%;
+      top: 32%;
+      position: absolute;
+    }
+    .stingButton img {
+      width: 6%;
+      left: 12%;
+      top: 26%;
+      position: absolute;
+    }
+    .sting img {
+      width: 25%;
+      left: 1%;
+      top: 2%;
+      position: absolute;
+    }
+    .buzz img {
+      width: 18%;
+      left: 28%;
+      top: 36%;
+      position: absolute;
+      z-index: 1;
+    }
+    .firefly img {
+      width: 11%;
+      left: 25%;
+      top: 48%;
+      position: absolute;
+    }
+    .ladybug img {
+      width: 18%;
+      left: 4%;
+      top: 60%;
+      position: absolute;
+    }
+    .flower img {
+      width: 60%;
+      left: 40%;
+      top: 39%;
+      position: absolute;
+    }
+    .webButton img {
+      width: 5%;
+      left: 7%;
+      top: 29%;
+      position: absolute;
+    }
+    .crawlButton img {
+      width: 7%;
+      left: 33%;
+      top: 19%;
+      position: absolute;
+    }
+    .leafButton img {
+      width: 5%;
+      left: 46%;
+      top: 32%;
+      position: absolute;
+    }
+    .caterpillarButton img {
+      width: 8%;
+      left: 79%;
+      top: 16%;
+      position: absolute;
+    }
+    .snailButton img {
+      width: 6%;
+      left: 66%;
+      top: 55%;
+      position: absolute;
+    }
+    .wormButton img {
+      width: 6%;
+      left: 83%;
+      top: 68%;
+      position: absolute;
+    }
+    .spider img {
+      width: 37%;
+      left: 3%;
+      top: -10%;
+      position: absolute;
+      z-index: 1;
+    }
+    .crawl img {
+      width: 36%;
+      left: 3%;
+      top: -7%;
+      position: absolute;
+    }
+    .web img {
+      width: 36%;
+      left: 3%;
+      top: -7%;
+      position: absolute;
+    }
+    .mantis img {
+      width: 13%;
+      left: 42%;
+      top: 47%;
+      position: absolute;
+    }
+    .leaf img {
+      width: 28%;
+      left: 35%;
+      top: 17%;
+      position: absolute;
+    }
+    .feelers img {
+      width: 9%;
+      left: 22%;
+      top: 73%;
+      position: absolute;
+    }
+    .ant img {
+      width: 12%;
+      left: 34%;
+      top: 64%;
+      position: absolute;
+    }
+    .caterpillar img {
+      width: 24%;
+      left: 67%;
+      top: 17%;
+      position: absolute;
+    }
+    .wiggle img {
+      width: 15%;
+      left: 81%;
+      top: 67%;
+      position: absolute;
+    }
+    .snail img {
+      width: 16%;
+      left: 60%;
+      top: 54%;
+      transform: rotate(6deg);
+      position: absolute;
+    }
     .helicopterButton img {
       width: 8%;
       left: 49%;
@@ -11205,6 +11932,271 @@ export default {
   @media only screen and (min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 1024px) and (max-width: 1600px){
+    .butterfly2Button img {
+      width: 9%;
+      left: 86%;
+      top: 24%;
+      position: absolute;
+    }
+    .fly2Button img {
+      width: 6%;
+      left: 68%;
+      top: 11%;
+      position: absolute;
+    }
+    .mosquitoButton img {
+      width: 9%;
+      left: 56%;
+      top: 31%;
+      position: absolute;
+    }
+    .fireflyButton img {
+      width: 7%;
+      left: 19%;
+      top: 60%;
+      position: absolute;
+    }
+    .buzzButton img {
+      width: 6%;
+      left: 32%;
+      top: 38%;
+      position: absolute;
+    }
+    .hiveButton img {
+      width: 6%;
+      left: 34%;
+      top: 18%;
+      position: absolute;
+    }
+    .stingButton img {
+      width: 7%;
+      left: 12%;
+      top: 28%;
+      position: absolute;
+    }
+    .dragonflyButton img {
+      width: 9%;
+      left: 4%;
+      top: 48%;
+      position: absolute;
+    }
+    .wingsButton img {
+      width: 8%;
+      left: 3%;
+      top: 66%;
+      position: absolute;
+    }
+    .ladybugButton img {
+      width: 10%;
+      left: 20%;
+      top: 86%;
+      position: absolute;
+    }
+    .flowerButton img {
+      width: 9%;
+      left: 52%;
+      top: 67%;
+      position: absolute;
+    }
+    .beeButton img {
+      width: 6%;
+      left: 78%;
+      top: 78%;
+      position: absolute;
+    }
+    .butterfly2 img {
+      width: 20%;
+      left: 72%;
+      top: 4%;
+      position: absolute;
+    }
+    .buzz img {
+      width: 20%;
+      left: 26%;
+      top: 39%;
+      position: absolute;
+    }
+    .sting img {
+      width: 29%;
+      left: -1%;
+      top: 14%;
+      position: absolute;
+    }
+    .dragonfly img {
+      width: 20%;
+      left: 1%;
+      top: 51%;
+      position: absolute;
+    }
+    .hive img {
+      width: 15%;
+      left: 38%;
+      top: 8%;
+      position: absolute;
+    }
+    .firefly img {
+      width: 13%;
+      left: 24%;
+      top: 53%;
+      z-index: 1;
+      position: absolute;
+    }
+    .mosquito img {
+      width: 10%;
+      left: 57%;
+      top: 35%;
+      position: absolute;
+    }
+    .ladybug img {
+      width: 22%;
+      left: 2%;
+      top: 68%;
+      position: absolute;
+    }
+    .bee img {
+      width: 17%;
+      left: 63%;
+      top: 66%;
+      position: absolute;
+      z-index: 1;
+    }
+    .flower img {
+      width: 75%;
+      left: 25%;
+      top: 53%;
+      position: absolute;
+    }
+    .leaf img {
+      width: 32%;
+      left: 32%;
+      top: 27%;
+      position: absolute;
+    }
+    .webButton img {
+      width: 7%;
+      left: 5%;
+      top: 30%;
+      position: absolute;
+    }
+    .spiderButton img {
+      width: 9%;
+      left: 10%;
+      top: 13%;
+      position: absolute;
+    }
+    .crawlButton img {
+      width: 9%;
+      left: 33%;
+      top: 21%;
+      position: absolute;
+    }
+    .leafButton img {
+      width: 8%;
+      left: 44%;
+      top: 32%;
+      position: absolute;
+    }
+    .mantisButton img {
+      width: 8%;
+      left: 49%;
+      top: 57%;
+      position: absolute;
+    }
+    .feelersButton img {
+      width: 9%;
+      left: 23%;
+      top: 74%;
+      position: absolute;
+    }
+    .antButton img {
+      width: 6%;
+      left: 43%;
+      top: 81%;
+      position: absolute;
+    }
+    .munchButton img {
+      width: 9%;
+      left: 58%;
+      top: 28%;
+      position: absolute;
+    }
+    .caterpillarButton img {
+      width: 10%;
+      left: 79%;
+      top: 22%;
+      position: absolute;
+    }
+    .snailButton img {
+      width: 8%;
+      left: 66%;
+      top: 59%;
+      position: absolute;
+    }
+    .wormButton img {
+      width: 8%;
+      left: 83%;
+      top: 71%;
+      position: absolute;
+    }
+    .wiggleButton img {
+      width: 8%;
+      left: 88%;
+      top: 88%;
+      position: absolute;
+    }
+    .crawl img {
+      width: 45%;
+      left: 0%;
+      top: -2%;
+      position: absolute;
+    }
+    .spider img {
+      width: 40%;
+      left: 2%;
+      top: 1%;
+      position: absolute;
+      z-index: 1;
+    }
+    .web img {
+      width: 45%;
+      left: 0%;
+      top: -2%;
+      position: absolute;
+    }
+    .mantis img {
+      width: 17%;
+      left: 38%;
+      top: 51%;
+      position: absolute;
+    }
+    .feelers img {
+      width: 10%;
+      left: 22%;
+      top: 78%;
+      position: absolute;
+    }
+    .ant img {
+      width: 13%;
+      left: 33%;
+      top: 71%;
+      position: absolute;
+    }
+    .caterpillar img {
+      width: 26%;
+      left: 66%;
+      top: 24%;
+      position: absolute;
+    }
+    .snail img {
+      width: 17%;
+      left: 59%;
+      top: 62%;
+      position: absolute;
+    }
+    .wiggle img {
+      top: 74%;
+    }
+
     .slowButton img {
       width: 5%;
       left: 78%;

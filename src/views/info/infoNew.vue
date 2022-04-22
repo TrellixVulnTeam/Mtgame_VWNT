@@ -478,8 +478,9 @@
               </div>
               <!--phonics替代原先opciay1的部分，新更新的内容 v-if="opciayStatistics"-->
               <div  v-if="opciay2" style="width: 100%;height: 100%;">
-                <div class="categories" v-if="categoriesName !== 'Exercise Completion Intervals'&&categoryNum !== 3&&categoryNum !== 4">
-                  <div v-if="categoriesName === 'Overall' || categoriesName === 'Strengths'">
+                <div class="categories"  v-if="categoriesName === 'Performance Report' ||[1,5,6,7].includes(categoryNum)">
+<!--                  <div v-if="categoriesName === 'Overall' || categoriesName === 'Strengths'">-->
+                  <div v-if="[1,5].includes(categoryNum)">
                     <div class="cRight">
                       <img src="../../assets/image/LearningReportRight.png" class="LearningReportRight" @click="cRight">
                     </div>
@@ -492,6 +493,18 @@
                     <div class="letters" v-for="(li,index) in overall.slice(sliceMin,sliceMax)" :key='index'>
                       <img :src="li.imgSrc" style="width: 100%">
                       <p class="letterPercent">{{li.percent}}%</p>
+                    </div>
+                  </div>
+                  <!--Strengths-->
+                  <div v-if="categoryNum===5" class="Strengths">
+                    <div class="strengthsDiv">
+                      <div class="strengthsL">
+                        <div class="strengthsText">Vocabulary</div>
+                      </div>
+                      <img class="strengthsLogo" src="../../assets/image/strengthsLogo.png" />
+                      <img class="strengthsAbbreviation" src="../../assets/image/letters/100/A.png"/>
+                      <div class="strengthsLogo2"></div>
+                      <div class="strengthsPresent"></div>
                     </div>
                   </div>
                   <!--Performance Report-->
@@ -516,7 +529,7 @@
                     </li>
                   </ul>
                   <!--Exercise History-->
-                  <div v-if="categoriesName === 'Exercise History'">
+                  <div v-if="categoryNum===7">
                   <div  class="history">
                     <div class="historyLabel" >Date</div>
                     <div class="historyLabel" >Letter</div>
@@ -529,7 +542,7 @@
                            style="color: #007BB8; margin-top: -5px;">
                     <tr v-for="(li,index) in history" :key="index" >
                       <td class="historyLi" style="width: 10%;">{{li.date}}</td>
-                      <td class="historyLi" style="width: 10%;">{{li.letter}}</td>
+                      <td class="historyLi" style="width: 10%;left: -2%;position: relative;">{{li.letter}}</td>
                       <td class="historyLi" style="width: 10%;">{{li.exercise}}</td>
                       <td class="historyLi" style="width: 10%;">
                         <img src="../../assets/image/star_frame.png" v-if="li.star===1 || li.star===2 || li.star===3"
@@ -544,7 +557,7 @@
                              class="littlestar">
                         <img src="../../assets/image/Little_Star_frame.png" v-if="li.star===0 || li.star===1 || li.star===2" class="littlestar">
                       </td>
-                      <td class="historyLi" style="width: 10%;">{{li.score}}</td>
+                      <td class="historyLi" style="width: 10%;left: -1%;position: relative;">{{li.score}}</td>
                     </tr>
                     </table>
                   </div>
@@ -820,18 +833,10 @@
     },
     watch:{
       'categoriesName':function (newVal) {
-        if(this.categoriesName === 'Scores for Key Areas'){
-          setTimeout(()=>{
-          this.drawLine();
-          },1000);
-        }else{
-          console.log(this.myChart);
-          if (this.myChart != null && this.myChart !== "" && this.myChart !== undefined) {
-            console.log('cunzai');
+          if (this.myChart != null && this.myChart !== "" && this.myChart !== undefined && this.myChart._chartsViews != null) {
             this.myChart.dispose();//销毁
             document.getElementById("myChart").style='';
           }
-        }
         }
 
     },
@@ -942,10 +947,7 @@
           this.scoresColor["background-color"] = '#4ca0e6';
         }
 
-        console.log(this.scoresWord);
-        setTimeout(() => {
         this.drawLine();
-        },500);
       },
       drawLine(){
         let that = this;
@@ -1100,6 +1102,7 @@
           this.categoriesName='Scores for Key Areas';
           this.categoriesText='Score in last 10 times in different area';
           this.categoryNum=4;
+          setTimeout(()=>{this.drawLine();});
         }else if(str ===5){
           this.categoriesName='Strengths';
           this.categoriesText='Correctness of the last 10 times of each letter';
@@ -1731,25 +1734,25 @@
           for (let i = 0; i < this.overall.length; i++) {
             this.overall[i].name = this.overall[i].abbreviation;
             let imgSrc = '';
-            if(this.overall[i].percent <= 10){
+            if(this.overall[i].percent < 10){
               imgSrc = require('../../assets/image/letters/10/'+this.overall[i].name+'.png');
-            }else if(10<this.overall[i].percent && this.overall[i].percent<= 20){
+            }else if(10<= this.overall[i].percent && this.overall[i].percent< 20){
               imgSrc = require('../../assets/image/letters/20/'+this.overall[i].name+'.png');
-            }else if(20<this.overall[i].percent && this.overall[i].percent<= 30){
+            }else if(20<= this.overall[i].percent && this.overall[i].percent< 30){
               imgSrc = require('../../assets/image/letters/30/'+this.overall[i].name+'.png');
-            }else if(30<this.overall[i].percent && this.overall[i].percent<= 40){
+            }else if(30<= this.overall[i].percent && this.overall[i].percent< 40){
               imgSrc = require('../../assets/image/letters/40/'+this.overall[i].name+'.png');
-            }else if(40<this.overall[i].percent && this.overall[i].percent<= 50){
+            }else if(40<= this.overall[i].percent && this.overall[i].percent< 50){
               imgSrc = require('../../assets/image/letters/50/'+this.overall[i].name+'.png');
-            }else if(50<this.overall[i].percent && this.overall[i].percent<= 60){
+            }else if(50<= this.overall[i].percent && this.overall[i].percent< 60){
               imgSrc = require('../../assets/image/letters/60/'+this.overall[i].name+'.png');
-            }else if(60<this.overall[i].percent && this.overall[i].percent<= 70){
+            }else if(60<= this.overall[i].percent && this.overall[i].percent< 70){
               imgSrc = require('../../assets/image/letters/70/'+this.overall[i].name+'.png');
-            }else if(70<this.overall[i].percent && this.overall[i].percent<= 80){
+            }else if(70<= this.overall[i].percent && this.overall[i].percent< 80){
               imgSrc = require('../../assets/image/letters/80/'+this.overall[i].name+'.png');
-            }else if(80<this.overall[i].percent && this.overall[i].percent<= 90){
+            }else if(80<= this.overall[i].percent && this.overall[i].percent< 90){
               imgSrc = require('../../assets/image/letters/90/'+this.overall[i].name+'.png');
-            }else if(90<this.overall[i].percent && this.overall[i].percent<= 99){
+            }else if(90<= this.overall[i].percent && this.overall[i].percent< 99){
               imgSrc = require('../../assets/image/letters/99/'+this.overall[i].name+'.png');
             }else if(this.overall[i].percent === 100){
               imgSrc = require('../../assets/image/letters/100/'+this.overall[i].name+'.png');
@@ -1997,6 +2000,61 @@
     font-size: 1.5rem;
     opacity: 0.7;
     margin-right: 15px;
+  }
+
+  .Strengths{
+    /* width: 100%; */
+    height: 100%;
+    padding: 0 2%;
+  }
+
+  .strengthsL[data-v-2f20336a] {
+    width: 50%;
+    position: relative;
+    background: blue;
+    padding: 1% 15%;
+    border-radius: 30px;
+    left: 50%;
+    top: 8%;
+    transform: translateX(-50%);
+  }
+
+  .strengthsText {
+    color: white;
+    font-family: pepper,serif;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .strengthsLogo{
+    width: 4%;
+    height: 15%;
+    position: absolute;
+    left: 2%;
+    top: 23%;
+  }
+
+  .strengthsAbbreviation{
+    width: 100%;
+    height: 100%;
+    left: -13%;
+    position: relative;
+  }
+
+  .strengthsDiv {
+    float: left;
+    width: 33%;
+    height: 100%;
+  }
+
+  .strengthsLogo2{
+    width: 100%;
+    height: 100%;
+  }
+
+  .strengthsPresent{
+    width: 100%;
+    height: 100%;
   }
 
   .AreasP2 {
@@ -4871,7 +4929,7 @@
     .intervalsPass7 {
       left: 1%;
     }
-    .intervalsPassText1[data-v-2f20336a] {
+    .intervalsPassText1 {
       font-family: kg,serif;
       color: #735138;
       font-size: 6rem;
