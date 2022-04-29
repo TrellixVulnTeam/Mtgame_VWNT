@@ -34,12 +34,11 @@
 <!--                 <a>-->
                   <a @click="walkers2(phonicsList[1])">
                   <img src="../../assets/image/intermediate.png" style="width: 100%; ">
-<!--                  <img src="../../assets/image/coming-soon1.png" style="width: 80%;margin: 0 10%;z-index: 2;bottom:-6%;position: absolute;display: inline;float: left;left: 0;">-->
                   <div class="progress" v-if="!phonicsList[1].compelte">
                     <div class="goldBG03">
                       <img src="../../assets/image/champanp2.png" v-bind:style="{width:phonicsList[1].percent}">
                     </div>
-                    <!-- <img src="../../assets/image/golden.png" class="chamcup"/> -->
+                     <img src="../../assets/image/golden.png" class="chamcup"/>
                     <button class="percent">{{phonicsList[1].percent}}</button>
                   </div>
                   <div   v-if="phonicsList[1].compelte">
@@ -56,7 +55,7 @@
                     <div class="goldBG02">
                       <img src="../../assets/image/champanp3.png" v-bind:style="{width:phonicsList[2].percent}">
                     </div>
-                    <!-- <img src="../../assets/image/golden.png" class="chamcup"/> -->
+                     <img src="../../assets/image/golden.png" class="chamcup"/>
                     <button class="percent">{{phonicsList[2].percent}}</button>
                   </div>
                   <div   v-if="phonicsList[2].compelte">
@@ -114,8 +113,8 @@
             <div class="walkers-room">
               <ul class="box1" v-for="(li,index) in phonicsDetailList" :key="index" @click="walkersunit(li)">
                 <li>
-                  <img src="../../assets/image/plist3.png" v-if="index%2==0" style="  width: 92%;height: 100%; left: 4%; top: 0;">
-                  <img src="../../assets/image/plist4.png" v-if="index%2!=0" style="  width: 92%;height: 100%; left: 4%; top: 0;">
+                  <img src="../../assets/image/plist3.png" v-if="index%2===0" style="  width: 92%;height: 100%; left: 4%; top: 0;">
+                  <img src="../../assets/image/plist4.png" v-if="index%2!==0" style="  width: 92%;height: 100%; left: 4%; top: 0;">
 
                   <!-- <img src="../../assets/image/comingsoon.png" v-show="!li.status" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;z-index: 99;"> -->
                   <button class="walkerh3" v-bind:style="{'color':index%2!=0 ? '#157444' : '#4CAC58' }">

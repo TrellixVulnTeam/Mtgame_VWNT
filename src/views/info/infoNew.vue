@@ -678,6 +678,7 @@
     data() {
       let myChart;
       return {
+        screenStyle:{},
         scoresWord:'Keep Practicing',
         scoresAverage:0,
         score:[],
@@ -733,6 +734,7 @@
         gameImage: '',
         gameImage1: '',
         studentId: '',
+        loading:false,
         username: "usernameusername",
         code: "codecode",
         onef: true,
@@ -834,10 +836,27 @@
     watch:{
       'categoriesName':function (newVal) {
           if (this.myChart != null && this.myChart !== "" && this.myChart !== undefined && this.myChart._chartsViews != null) {
+            this.score =[];
             this.myChart.dispose();//销毁
             document.getElementById("myChart").style='';
+          }else if(this.categoriesName === 'Scores for Key Areas'){
+            this.scoresData = this.scoresMap['Vocabulary'];
+            this.score = [];
+            let m=0;
+            for (let i = 0; i < this.scoresData.length; i++) {
+              this.score[i] = this.scoresData[i].S;
+              m +=this.score[i];
+            }
           }
+        },
+      'loading': function(newVal) {
+        if (this.loading === true) {
+          alertMsg3("Loading...Please Wait");
+          setTimeout(() => {document.getElementById('alertFram').style.display = 'none'},15000)
+        }else{
+          setTimeout(() => {document.getElementById('alertFram').style.display = 'none'})
         }
+      },
 
     },
     methods: {
@@ -950,10 +969,13 @@
         this.drawLine();
       },
       drawLine(){
+        this.selectScreen();
         let that = this;
         console.log(this.myChart);
-        // 基于准备好的dom，初始化echarts实例
-        this.myChart = this.$echarts.init(this.$refs.m)
+        if (this.myChart != null && this.myChart !== "" && this.myChart !== undefined && this.myChart._chartsViews != null) {
+          this.myChart.dispose();//销毁
+        }
+         this.myChart = this.$echarts.init(this.$refs.m);
         // 绘制图表
         this.myChart.setOption({
           xAxis: {
@@ -965,6 +987,13 @@
               fontSize: 12,
             },
           },
+          grid:{
+            //left:'5%',
+            right:'8%',
+            bottom:'20%',
+            width:'80%',
+            height:'60%',
+          },
           yAxis: {
             type: 'value',
             min:0,
@@ -973,7 +1002,7 @@
             axisLabel:{
               //y轴文字样式
               textStyle: {
-                fontSize: '25',
+                fontSize: this.screenStyle['yFontSize'],
                 fontFamily: 'kg',
                 color:'#bebfc0'
               }
@@ -983,7 +1012,7 @@
               lineStyle: {
                 // 使用深浅的间隔色
                 color:['#bebfc0'],
-                width:5
+                width:this.screenStyle['yWidth']
               }
             }
 
@@ -994,16 +1023,16 @@
             triggerOn: "click",
             backgroundColor:'#eeebc8',
             borderColor:this.symbolColor['background-color'],
-            borderWidth:5,
-            borderRadius:35,
-            padding:[18,40],
+            borderWidth:this.screenStyle['borderWidth'],
+            borderRadius:this.screenStyle['borderRadius'],
+            padding:this.screenStyle['padding'],
             trigger: 'item',
             hideDelay: 2000,
             position:'top',
             //移动端窄屏，避免tooltip 超出外界被截断
             confine:false,
             formatter:function (params){
-              return "<p style='color:#f68a49;font-size: 20px;font-family: kg, serif'>"+that.scoresData[params.dataIndex].name+"</p>"+"<p style='color:#6d513d;font-size: 20px;font-family: kg, serif'>"+"SCORE:"+that.scoresData[params.dataIndex].score+"</p>"+"<p style='color:#6d513d;font-size: 15px;font-family: kg, serif'>"+that.scoresData[params.dataIndex].date+"</p>";
+              return `<p style='color:#f68a49;font-size: ${that.screenStyle['FontSize']}px;font-family: kg, serif'>${that.scoresData[params.dataIndex].name}</p><p style='color:#6d513d;font-size: ${that.screenStyle['FontSize2']}px;font-family: kg, serif'>SCORE:${that.scoresData[params.dataIndex].score}</p><p style='color:#6d513d;font-size: ${that.screenStyle['FontSize3']}px;font-family: kg, serif'>${that.scoresData[params.dataIndex].date}</p>`;
             }
           },
           series: [
@@ -1011,7 +1040,7 @@
               data: this.score,
               type: 'line',
               //拐点大小
-              symbolSize:15,
+              symbolSize:this.screenStyle['symbolSize'],
               //实心拐点
               symbol:'circle',
               //拐点颜色
@@ -1020,7 +1049,7 @@
               itemStyle:{
                 normal:{
                   lineStyle:{
-                    width:7,
+                    width:this.screenStyle['lineStyleWidth'],
                     type:'solid',  //'dotted'虚线 'solid'实线
                     //折线颜色
                     //color:this.symbolColor['background-color'],
@@ -1043,8 +1072,47 @@
         //   console.log(params);
         // });
         window.onresize = function() {
-          this.myChart.resize();
+          that.myChart.resize();
         };
+      },
+      selectScreen(){
+       if (200<=window.screen.width&&window.screen.width<=1023) {
+         //拐点大小
+         this.screenStyle['symbolSize']=8;
+         //折线粗细
+         this.screenStyle['lineStyleWidth']=4;
+         //y轴字体大小
+         this.screenStyle['yFontSize']=15;
+         //y轴横线的粗细
+         this.screenStyle['yWidth']=3;
+         //边框宽度
+         this.screenStyle['borderWidth']=5;
+         //边框圆角
+         this.screenStyle['borderRadius']=20;
+         this.screenStyle['padding']=[5,10];
+         //详细提示框的字体大小
+         this.screenStyle['FontSize']=15;
+         this.screenStyle['FontSize2']=10;
+         this.screenStyle['FontSize3']=10;
+       }else{
+         //拐点大小
+         this.screenStyle['symbolSize']=15;
+         //折线粗细
+         this.screenStyle['lineStyleWidth']=7;
+         //y轴字体大小
+         this.screenStyle['yFontSize']=25;
+         //y轴横线的粗细
+         this.screenStyle['yWidth']=5;
+         //边框宽度
+         this.screenStyle['borderWidth']=5;
+         //边框圆角
+         this.screenStyle['borderRadius']=35;
+         this.screenStyle['padding']=[18,40];
+         //详细提示框的字体大小
+         this.screenStyle['FontSize']=20;
+         this.screenStyle['FontSize2']=15;
+         this.screenStyle['FontSize3']=15;
+       }
       },
       cardRight(){
         if(this.categoryNum === 7){
@@ -1241,7 +1309,7 @@
         this.chatorphonics = true;
         // this.opciay5=true;
         this.courseId = this.courseList[0].course_id;
-        if (this.courseList[0].name == "CHAT ROOM") {
+        if (this.courseList[0].name === "CHAT ROOM") {
           this.course = "Chat Room";
         } else if (this.courseList[0].name == "PHONICS") {
           this.course = "Phonics";
@@ -1715,10 +1783,12 @@
       },
       //统计
       Statistics(){
+        this.loading = true;
         this.$axios.post('/user/getTimeLog', qs.stringify({
           studentId: localStorage.getItem('studentId'),
           level:this.level
         })).then(res => {
+
           this.intervalsMins = res.data.time.mins;
           this.intervalsHour = res.data.time.hours;
           this.pass = res.data.time.pass;
@@ -1730,10 +1800,9 @@
           this.scores = res.data.scores;
           this.scoresMap = res.data.scoresMap;
           this.scoresData = this.scoresMap.Vocabulary;
-
+          let imgSrc = '';
           for (let i = 0; i < this.overall.length; i++) {
             this.overall[i].name = this.overall[i].abbreviation;
-            let imgSrc = '';
             if(this.overall[i].percent < 10){
               imgSrc = require('../../assets/image/letters/10/'+this.overall[i].name+'.png');
             }else if(10<= this.overall[i].percent && this.overall[i].percent< 20){
@@ -1798,7 +1867,7 @@
             this.scoresWord = 'Well Done';
             this.scoresColor["background-color"] = '#4ca0e6';
           }
-
+          this.loading = false;
         }, res => {
           alertMsg("You must be connected to the internet.<br>Please connect and try again.");
         })
@@ -1814,7 +1883,6 @@
         this.ifboss2 = false;
         this.categoriesName = 'Performance Report';
         this.categoriesText = 'Please select categories';
-        //this.purl2 = this.url + "PhonicsDetail";
         this.phonicsId = li.id;
         this.level = li.name;
         this.Statistics();
@@ -1925,7 +1993,6 @@
         this.menuname = li.name;
         this.detailList = [];
         this.menuId = li.id;
-        console.log('1');
         if (this.level === "Beginner") {
           this.purl4 = this.url + "phonicsDetails";
         } else if (this.level === "Intermediate") {
@@ -2003,12 +2070,11 @@
   }
 
   .Strengths{
-    /* width: 100%; */
     height: 100%;
     padding: 0 2%;
   }
 
-  .strengthsL[data-v-2f20336a] {
+  .strengthsL {
     width: 50%;
     position: relative;
     background: blue;
@@ -2044,7 +2110,7 @@
   .strengthsDiv {
     float: left;
     width: 33%;
-    height: 100%;
+    height: 80%;
   }
 
   .strengthsLogo2{
@@ -2263,6 +2329,7 @@
     float: left;
     position: relative;
     top: 5%;
+    left: 3%;
   }
 
   .intervalsPass30{
@@ -2277,7 +2344,7 @@
     color: #77766D;
     font-family: pepper,serif;
     font-size: 1.2rem;
-    font-weight: 1000;
+    font-weight: 900;
     position: absolute;
     top: 90%;
     left: 24%;
@@ -3259,6 +3326,132 @@
   }
 
   @media screen and (max-width: 569px) {
+    .improvementButton {
+      width: 90%;
+      background-color: #f58948;
+      display: inline-block;
+      border-radius: 30px;
+      color: white;
+      font-size: 0.7rem;
+      font-family: 'pepper', serif;
+      border: 2px solid #ca642b;
+      line-height: 15px;
+      padding: 0 2px;
+    }
+    .history {
+      width: 120%;
+      height: 15%;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      padding-top: 2%;
+    }
+    .historyList {
+      position: absolute;
+      width: 105%;
+      top: 22%;
+      left: -4%;
+      overflow: hidden;
+      height: 77%;
+      overflow-y: auto;
+    }
+    .littlestar {
+      width: 0.8rem;
+    }
+    .historyLi {
+      font-size: 0.7rem;
+    }
+    .historyLabel {
+      display: inline;
+      width: 5%;
+      margin: 2%;
+      padding: 0.5% 2%;
+      color: white;
+      background: #2279ac;
+      border-radius: 50px;
+      font-family: 'pepper', serif;
+      font-size: 0.7rem;
+    }
+    .improvementButton {
+      width: 60%;
+      background-color: #f58948;
+      display: inline-block;
+      border-radius: 30px;
+      color: white;
+      font-size: 0.7rem;
+      font-family: 'pepper', serif;
+      border: 2px solid #ca642b;
+      line-height: 15px;
+    }
+    .improvementPercent {
+      width: 45%;
+      color: #9b9a8c;
+      font-weight: 600;
+      font-size: 0.7rem;
+    }
+    .improvementLetter {
+      width: 65%;
+      color: #6d513d;
+      font-weight: 600;
+      font-size: 0.7rem;
+    }
+    .improvementButton {
+      width: 60%;
+      background-color: #f58948;
+      display: inline-block;
+      border-radius: 30px;
+      color: white;
+      font-size: 0.7rem;
+      font-family: 'pepper', serif;
+      border: 2px solid #ca642b;
+      line-height: 40px;
+    }
+    .improvementId {
+      width: 15%;
+      color: #6d513d;
+      font-weight: 600;
+      font-size: 0.7rem;
+    }
+    .AreasDiv {
+      float: right;
+      margin-top: 1px;
+    }
+    .AreasP {
+      color: white;
+      display: inline-block;
+      font-size: 0.7rem;
+      opacity: 0.7;
+      margin-right: 15px;
+    }
+    .AreasP2 {
+      color: white;
+      font-weight: 700;
+      display: inline-block;
+      font-size: 0.7rem;
+      border-radius: 30px;
+      height: 15px;
+      width: fit-content;
+      padding: 0 10px;
+    }
+    .areas {
+      background-color: #eeebc8;
+      height: 75%;
+      position: relative;
+      border-radius: 20px;
+      width: 60%;
+      margin-top: 2%;
+    }
+    .areasButton1 {
+      width: 80%;
+      display: inline-block;
+      height: 20px;
+      border-radius: 30px;
+      color: white;
+      font-size: 0.7rem;
+      font-family: 'pepper', serif;
+      margin-top: 6%;
+    }
+
     .cRight {
       width: 30px;
       height: 30px;
@@ -3294,7 +3487,7 @@
       left: 57%;
     }
     .pointPosition {
-      margin-top: -6.5%;
+      margin-top: -6%;
     }
     .point1 {
       font-size: 1rem;
@@ -3318,8 +3511,6 @@
       color: #735138;
       font-size: 1rem;
       position: absolute;
-      width: -webkit-fit-content;
-      width: -moz-fit-content;
       width: fit-content;
       left: 45%;
       top: 55%;
@@ -3398,15 +3589,15 @@
     .categoriesLi {
       background-color: #f58948;
       display: inline-block;
-      width: 44%;
+      width: 47%;
       height: 14%;
       border-radius: 30px;
       float: left;
-      margin: 3% 0 0 2.8%;
+      margin: 4% 0 0 1%;
       color: white;
-      font-size: 0.6rem;
+      font-size: 0.7rem;
       font-family: 'pepper', serif;
-      border: 3px solid #ca642b;
+      border: 2px solid #ca642b;
       line-height: 13px;
     }
 
@@ -3418,7 +3609,7 @@
       left: 50%;
       -webkit-transform: translateX(-50%);
       transform: translateX(-50%);
-      border-radius: 30px;
+      border-radius: 15px;
       top: 3%;
     }
     .phonicsLevel {
@@ -3429,12 +3620,15 @@
     }
     .menu2Change {
       width: 65%;
+      border-radius: 15px;
     }
     .menu1 {
       width: 35%;
+      border-radius: 15px;
     }
     .menu2 {
       width: 35%;
+      border-radius: 15px;
     }
     .topMenu {
       height: 28%;
@@ -3555,6 +3749,106 @@
   @media screen and (min-device-height: 570px) and (max-device-height: 735px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 570px) and (max-device-height: 735px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 570px) and (max-width: 735px){
+    .historyList {
+      position: absolute;
+      width: 103%;
+      top: 23%;
+      left: -3%;
+      overflow: hidden;
+      height: 73%;
+      overflow-y: auto;
+    }
+    .historyLi {
+      font-size: 0.7rem;
+    }
+    .historyLabel {
+      display: inline;
+      width: 5%;
+      margin: 3%;
+      padding: 0.5% 2.5%;
+      color: white;
+      background: #2279ac;
+      border-radius: 50px;
+      font-family: 'pepper', serif;
+      font-size: 0.7rem;
+    }
+    .improvementButton {
+      width: 85%;
+      background-color: #f58948;
+      display: inline-block;
+      border-radius: 30px;
+      color: white;
+      font-size: 0.7rem;
+      font-family: 'pepper', serif;
+      border: 2px solid #ca642b;
+      line-height: 15px;
+    }
+    .improvementPercent {
+      width: 45%;
+      color: #9b9a8c;
+      font-weight: 600;
+      font-size: 0.7rem;
+    }
+    .improvementLetter {
+      width: 65%;
+      color: #6d513d;
+      font-weight: 600;
+      font-size: 0.7rem;
+    }
+    .improvementId {
+      width: 25%;
+      color: #6d513d;
+      font-weight: 600;
+      font-size: 0.7rem;
+    }
+    .menu2Change {
+      border-radius: 10px;
+    }
+    .menu2 {
+      border-radius: 10px;
+    }
+    .menu1 {
+      border-radius: 10px;
+    }
+    .AreasP {
+      color: white;
+      display: inline-block;
+      font-size: 0.8rem;
+      opacity: 0.7;
+      margin-right: 15px;
+    }
+    .AreasDiv {
+      float: right;
+      margin-top: 3px;
+    }
+    .AreasP2 {
+      color: white;
+      font-weight: 700;
+      display: inline-block;
+      font-size: 0.7rem;
+      border-radius: 20px;
+      height: 20px;
+      width: fit-content;
+      padding: 0px 12px;
+      line-height: 20px;
+    }
+    .areas {
+      background-color: #eeebc8;
+      height: 80%;
+      position: relative;
+      border-radius: 25px;
+      width: 60%;
+    }
+    .areasButton1 {
+      width: 80%;
+      display: inline-block;
+      height: 20px;
+      border-radius: 30px;
+      color: white;
+      font-size: 0.8rem;
+      font-family: 'pepper', serif;
+      margin-top: 6%;
+    }
     .letterPercent {
       font-size: 1.6rem;
     }
@@ -3609,12 +3903,12 @@
       background-color: #f389a4;
     }
 
-    .intervalsPassText1{
+    .intervalsPassText1 {
       font-family: kg,serif;
       color: #735138;
-      font-size: 4rem;
+      font-size: 2.7rem;
       position: relative;
-      left: -7%;
+      left: -9%;
       width: 100px;
       margin-top: 12%;
       text-align: right;
@@ -3633,17 +3927,17 @@
     }
 
     .intervalsPass30 {
-      left: -3%;
+      left: 0;
     }
 
     .point1 {
-      font-size: 2rem;
+      font-size: 1rem;
     }
     .point2 {
-      font-size: 2rem;
+      font-size: 1rem;
     }
     .pointPosition {
-      margin-top: -11%;
+      margin-top: -7%;
     }
     .intervalsPass{
       font-size: 0.7rem;
@@ -3671,7 +3965,7 @@
       width: 5%;
     }
     .categories {
-      border-radius: 30px;
+      border-radius: 20px;
     }
     .categoriesLi {
       background-color: #f58948;
@@ -3680,11 +3974,11 @@
       height: 15%;
       border-radius: 30px;
       float: left;
-      margin: 3% 0 0 5.5%;
+      margin: 4% 0 0 6.5%;
       color: white;
       font-size: 0.7rem;
       font-family: 'pepper', serif;
-      border: 5px solid #ca642b;
+      border: 2px solid #ca642b;
       line-height: 20px;
     }
     .phonicsLevel {
@@ -3730,6 +4024,116 @@
   @media screen and (min-device-height: 736px) and (max-device-height: 811px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 736px) and (max-device-height: 811px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 736px) and (max-width: 811px) {
+    .areasButton1 {
+      width: 80%;
+      display: inline-block;
+      height: 25px;
+      border-radius: 30px;
+      color: white;
+      font-size: 0.8rem;
+      font-family: 'pepper', serif;
+      margin-top: 6%;
+      line-height: 25px;
+    }
+    .historyList {
+      position: absolute;
+      width: 105%;
+      top: 20%;
+      left: -4%;
+      overflow: hidden;
+      height: 80%;
+      overflow-y: auto;
+    }
+    .historyLi {
+      font-size: 0.7rem;
+    }
+    .historyLabel {
+      display: inline;
+      width: 5%;
+      margin: 3%;
+      padding: 0.5% 2.5%;
+      color: white;
+      background: #2279ac;
+      border-radius: 50px;
+      font-family: 'pepper', serif;
+      font-size: 0.7rem;
+    }
+    .improvementPercent {
+      width: 45%;
+      color: #9b9a8c;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .improvementButton {
+      width: 65%;
+      background-color: #f58948;
+      display: inline-block;
+      border-radius: 30px;
+      color: white;
+      font-size: 12px;
+      font-family: 'pepper', serif;
+      border: 2px solid #ca642b;
+      line-height: 15px;
+      padding: 0 5px;
+    }
+    .improvementLetter {
+      width: 65%;
+      color: #6d513d;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .improvementId {
+      width: 20%;
+      color: #6d513d;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .AreasP2 {
+      color: white;
+      font-weight: 700;
+      display: inline-block;
+      font-size: 0.8rem;
+      border-radius: 30px;
+      height: 20px;
+      line-height: 20px;
+      width: fit-content;
+      padding: 0 15px;
+    }
+    .AreasP {
+      color: white;
+      display: inline-block;
+      font-size: 0.8rem;
+      opacity: 0.7;
+      margin-right: 15px;
+    }
+    .AreasDiv {
+      float: right;
+      margin-top: 3px;
+    }
+    .areas {
+      background-color: #eeebc8;
+      height: 80%;
+      position: relative;
+      border-radius: 25px;
+      width: 60%;
+    }
+    .menu2 {
+      float: left;
+      height: 100%;
+      width: 30%;
+      border-radius: 10px;
+      background-color: #FF9239;
+    }
+    .menu1 {
+      float: left;
+      height: 100%;
+      width: 30%;
+      border-radius: 10px;
+      background-color: #43BF76;
+    }
+    .menu2Change {
+      border-radius: 10px;
+    }
     .letterPercent {
       font-size: 1.6rem;
     }
@@ -3744,13 +4148,13 @@
       right: -16px;
     }
     .pointPosition {
-      margin-top: -10%;
+      margin-top: -7%;
     }
     .point2 {
-      font-size: 2rem;
+      font-size: 1rem;
     }
     .point1 {
-      font-size: 2rem;
+      font-size: 1rem;
     }
     .intervalsPassClass {
       position: absolute;
@@ -3765,8 +4169,6 @@
       color: #735138;
       font-size: 1.5rem;
       position: absolute;
-      width: -webkit-fit-content;
-      width: -moz-fit-content;
       width: fit-content;
       left: 45%;
       top: 55%;
@@ -3887,10 +4289,11 @@
     }
     .spanimg2 {
       width: 1rem;
-      margin: -3px 0px;
+      margin: -3px 0;
     }
     .buttonsty {
       font-size: 0.9rem;
+      padding: 0 10px 5px;
     }
     .progress2{
       height: 20px;
@@ -3951,6 +4354,98 @@
   @media screen and (min-device-height: 812px) and (max-device-height: 894px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 812px) and (max-device-height: 894px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 812px) and (max-width: 894px) {
+    .historyList {
+      position: absolute;
+      width: 105%;
+      top: 22%;
+      overflow: hidden;
+      height: 77%;
+      overflow-y: auto;
+      left: -3%;
+    }
+    .historyLi {
+      font-size: 0.7rem;
+    }
+    .historyLabel {
+      display: inline;
+      width: 5%;
+      margin: 3%;
+      padding: 0.5% 3%;
+      color: white;
+      background: #2279ac;
+      border-radius: 50px;
+      font-family: 'pepper', serif;
+      font-size: 0.7rem;
+    }
+    .improvementPercent {
+      width: 45%;
+      color: #9b9a8c;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .improvementButton {
+      width: 60%;
+      background-color: #f58948;
+      display: inline-block;
+      border-radius: 30px;
+      color: white;
+      font-size: 0.7rem;
+      font-family: 'pepper', serif;
+      border: 2px solid #ca642b;
+      line-height: 20px;
+    }
+    .improvementLetter {
+      width: 65%;
+      color: #6d513d;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .improvementId {
+      width: 25%;
+      color: #6d513d;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .AreasDiv {
+      float: right;
+      margin-top: 2px;
+    }
+    .AreasP2 {
+      color: white;
+      font-weight: 700;
+      display: inline-block;
+      font-size: 0.8rem;
+      border-radius: 30px;
+      height: 20px;
+      width: fit-content;
+      padding: 0 10px;
+      line-height: 20px;
+    }
+    .AreasP {
+      color: white;
+      display: inline-block;
+      font-size: 0.8rem;
+      opacity: 0.7;
+      margin-right: 15px;
+    }
+    .areas {
+      background-color: #eeebc8;
+      height: 80%;
+      position: relative;
+      border-radius: 25px;
+      width: 60%;
+    }
+    .areasButton1 {
+      width: 80%;
+      display: inline-block;
+      height: 20px;
+      border-radius: 30px;
+      color: white;
+      font-size: 0.7rem;
+      font-family: 'pepper', serif;
+      margin-top: 6%;
+      line-height: 20px;
+    }
     .phonicsText {
       font-size: 1rem;
     }
@@ -3968,13 +4463,13 @@
       right: -16px;
     }
     .pointPosition {
-      margin-top: -9%;
+      margin-top: -5.5%;
     }
     .point1 {
-      font-size: 2rem;
+      font-size: 1rem;
     }
     .point2 {
-      font-size: 2rem;
+      font-size: 1rem;
     }
     .intervalsPassClass {
       position: absolute;
@@ -3997,15 +4492,23 @@
       top: 50%;
     }
 
-    .intervalsPassText1{
+    .intervalsPassText1 {
       font-family: kg,serif;
       color: #735138;
-      font-size: 3.5rem;
+      font-size: 3rem;
       position: relative;
       left: 1%;
       text-align: right;
       width: 100px;
       margin-top: 10%;
+    }
+
+    .intervalsPass7 {
+      width: 50%;
+      float: left;
+      position: relative;
+      top: 5%;
+      left: -2%;
     }
 
     .intervalsPassKeepTrying {
@@ -4047,7 +4550,7 @@
     }
 
     .intervalsPass30 {
-      left: -5%;
+      left: -4%;
     }
 
     .intervalsPass {
@@ -4205,6 +4708,102 @@
   @media screen and (min-device-height: 895px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 895px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 895px) and (max-width: 1023px) {
+    .historyList {
+      position: absolute;
+      width: 100%;
+      top: 20%;
+      overflow: hidden;
+      height: 80%;
+      overflow-y: auto;
+    }
+    .intervalsPass7 {
+      width: 50%;
+      float: left;
+      position: relative;
+      top: 0%;
+    }
+    .historyLi {
+      font-size: 0.7rem;
+    }
+    .historyLabel {
+      display: inline;
+      width: 5%;
+      margin: 3%;
+      padding: 0.5% 3%;
+      color: white;
+      background: #2279ac;
+      border-radius: 50px;
+      font-family: 'pepper', serif;
+      font-size: 0.7rem;
+    }
+    .improvementPercent {
+      width: 45%;
+      color: #9b9a8c;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .improvementButton {
+      width: 60%;
+      background-color: #f58948;
+      display: inline-block;
+      border-radius: 20px;
+      color: white;
+      font-size: 0.7rem;
+      font-family: 'pepper', serif;
+      border: 2px solid #ca642b;
+      line-height: 20px;
+    }
+    .improvementLetter {
+      width: 65%;
+      color: #6d513d;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .improvementId {
+      width: 25%;
+      color: #6d513d;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .areas {
+      background-color: #eeebc8;
+      height: 80%;
+      position: relative;
+      border-radius: 30px;
+      width: 60%;
+    }
+    .AreasDiv {
+      float: right;
+      margin-top: 3px;
+    }
+    .AreasP2 {
+      color: white;
+      font-weight: 700;
+      display: inline-block;
+      font-size: 0.8rem;
+      border-radius: 30px;
+      height: 20px;
+      width: fit-content;
+      padding: 0 12px;
+      line-height: 20px;
+    }
+    .AreasP {
+      color: white;
+      display: inline-block;
+      font-size: 1rem;
+      opacity: 0.7;
+      margin-right: 15px;
+    }
+    .areasButton1 {
+      width: 80%;
+      display: inline-block;
+      height: 25px;
+      border-radius: 30px;
+      color: white;
+      font-size: 1rem;
+      font-family: 'pepper', serif;
+      margin-top: 5%;
+    }
     .phonicsText {
       font-size: 1rem;
     }
@@ -4288,13 +4887,13 @@
     }
 
     .pointPosition {
-      margin-top: -8%;
+      margin-top: -5%;
     }
     .point1 {
-      font-size: 2rem;
+      font-size: 1rem;
     }
     .point2 {
-      font-size: 2rem;
+      font-size: 1rem;
     }
     .intervalsPassClass{
       position: absolute;
@@ -4354,6 +4953,7 @@
 
     .intervalsPass30 {
       left: -5%;
+      top: 0;
     }
     .phonicsLevel {
       padding-left: 60px;
@@ -4369,9 +4969,10 @@
     }
     .categoriesLi {
       border-radius: 30px;
-      margin: 3% 0 0 6%;
+      margin: 3.5% 0 0 6%;
       font-size: 0.9rem;
       line-height: 24px;
+      border: 3px solid #ca642b;
     }
     .spanimg2{
       width: 1rem;
@@ -4495,14 +5096,80 @@
       height: 19px;
     }
 
-    // .rightmenu{
-    // 	height:85%;
-    // }
   }
 
   @media screen and (min-device-height: 1024px) and (max-device-height: 1199px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 1024px) and (max-device-height: 1199px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 1024px) and (max-width: 1199px) {
+    .historyLi {
+      font-size: 1rem;
+    }
+    .historyLabel {
+      display: inline;
+      width: 5%;
+      margin: 2.5%;
+      padding: 0.5% 3%;
+      color: white;
+      background: #2279ac;
+      border-radius: 50px;
+      font-family: 'pepper', serif;
+      font-size: 1rem;
+    }
+    .improvementPercent {
+      width: 45%;
+      color: #9b9a8c;
+      font-weight: 600;
+      font-size: 1.3rem;
+    }
+    .improvementLetter {
+      width: 65%;
+      color: #6d513d;
+      font-weight: 600;
+      font-size: 1.3rem;
+    }
+    .improvementId {
+      width: 25%;
+      color: #6d513d;
+      font-weight: 600;
+      font-size: 1.3rem;
+    }
+    .improvementButton {
+      width: 60%;
+      background-color: #f58948;
+      display: inline-block;
+      border-radius: 25px;
+      color: white;
+      font-size: 0.8rem;
+      font-family: 'pepper', serif;
+      border: 3px solid #ca642b;
+      line-height: 30px;
+    }
+    .areasButton1 {
+      width: 80%;
+      display: inline-block;
+      height: 40px;
+      border-radius: 30px;
+      color: white;
+      font-size: 1.2rem;
+      font-family: 'pepper', serif;
+      margin-top: 6%;
+      line-height: 40px;
+    }
+    .intervalsPassText1 {
+      font-family: kg,serif;
+      color: #735138;
+      font-size: 4rem;
+      position: relative;
+      left: -5%;
+      margin-top: 21%;
+      width: 125px;
+    }
+    .intervalsPass30 {
+      left: -1%;
+    }
+    .intervalsPass7 {
+      left: -1%;
+    }
     .phonicsText {
       font-size: 1.5rem;
     }
@@ -4534,7 +5201,7 @@
       font-family: 'pepper', serif;
       font-size: 1rem;
       left: 60%;
-      top: 80%;
+      top: 85%;
     }
 
     .intervalsPassText2 {
@@ -4550,9 +5217,9 @@
     .intervalsPassText1{
       font-family: kg,serif;
       color: #735138;
-      font-size: 4rem;
+      font-size: 3rem;
       position: relative;
-      left: 3%;
+      left: -5%;
       margin-top: 21%;
       width: 125px;
     }
@@ -4884,6 +5551,17 @@
   @media screen and (min-device-height: 1200px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 1200px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 1200px) and (max-width: 1600px) {
+    .historyLabel {
+      display: inline;
+      width: 5%;
+      margin: 3%;
+      padding: 0.5% 2.3%;
+      color: white;
+      background: #2279ac;
+      border-radius: 50px;
+      font-family: 'pepper', serif;
+      font-size: 1.5rem;
+    }
     .intervalsPosition {
       position: absolute;
       top: 25%;
@@ -4894,7 +5572,7 @@
       font-family: kg,serif;
       display: inline;
       color: #735138;
-      font-size: 7.5rem;
+      font-size: 5rem;
     }
     .intervalsHours {
       font-family: kg,serif;
@@ -4907,7 +5585,7 @@
       font-family: kg,serif;
       display: inline;
       color: #735138;
-      font-size: 4rem;
+      font-size: 3rem;
       margin-left: 3%;
     }
     .intervalsPass {
@@ -4917,14 +5595,14 @@
       font-weight: 1000;
       position: absolute;
       top: 90%;
-      left: 31%;
+      left: 30%;
     }
     .intervalsPassNice {
       top: 44%;
       left: 61%;
     }
     .pointPosition {
-      margin-top: -9%;
+      margin-top: -8%;
     }
     .intervalsPass7 {
       left: 1%;

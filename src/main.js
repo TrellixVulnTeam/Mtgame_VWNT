@@ -11,7 +11,7 @@ Vue.prototype.$echarts = echarts;
 // import cookies from 'vue-cookies';
 // import qs from 'qs';
 // import {createWorker} from 'tesseract.js';
-
+import 'default-passive-events'
 import Bounce from 'vue-bounce';
 import "babel-polyfill";
 import animated from 'animate.css' // npm install animate.css --save安装，在引入
@@ -26,20 +26,20 @@ Vue.use(animated);
 Vue.config.productionTip = false;
 Vue.prototype.$axios = axios;
 
- axios.defaults.baseURL = 'http://dodosurvey.com/monkeytownHK'  // api 即上面 vue.config.js 中配置的地址
+ //axios.defaults.baseURL = 'http://dodosurvey.com/monkeytownHK'  // api 即上面 vue.config.js 中配置的地址
 
 axios.defaults.baseURL = 'http://localhost:8080/monkeytownCN';
 //axios.defaults.baseURL2 = 'http://localhost:8080/monkeytownHK';
 
 axios.defaults.baseURL2 = 'http://gamejava.monkeytree.com.hk';
-axios.defaults.baseURL = 'https://gamejava.monkeytree.com.cn';
+//axios.defaults.baseURL = 'https://gamejava.monkeytree.com.cn';
 //axios.defaults.baseURL = 'http://gamejava.monkeytree.com.hk';
 
 localStorage.setItem('localurl',axios.defaults.baseURL);
 //版本号，更新需要+1
-localStorage.setItem('version',34);
+localStorage.setItem('version',35);
 //发布 ios OR android
-localStorage.setItem('system','ios');
+localStorage.setItem('system','android');
 //发布到hk版还是cn版
 localStorage.setItem('local','cn');
 //是否发布到应用宝

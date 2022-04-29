@@ -450,7 +450,7 @@ export default new Router({
 			path: "/info",
 			name: "info",
 			//component: Info
-      component:resolve => {require(['./views/info/info.vue'],resolve)}
+      component:resolve => {require(['./views/info/infoNew.vue'],resolve)}
 		},
     {
       path: "/infoNew",

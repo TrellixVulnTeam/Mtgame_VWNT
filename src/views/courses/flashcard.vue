@@ -1600,126 +1600,125 @@
           {
             id:1,
             cardName:'web',
-            audio:require('../../assets/Flashcard Audio/april/traffic lights.mp3'),
+            audio:require('../../assets/Flashcard Audio/may/web.mp3'),
             img:require('..'+'/../assets/image/Crawling Bugs/Web.png')
           },{
             id:2,
             cardName:'spider',
-            audio:require('../../assets/Flashcard Audio/april/car.mp3'),
+            audio:require('../../assets/Flashcard Audio/may/spider.mp3'),
             img:require('../../assets/image/Crawling Bugs/Spiders.png')
           },{
             id:3,
             cardName:'crawl',
-            audio:require('../../assets/Flashcard Audio/april/ferry.mp3'),
+            audio:require('../../assets/Flashcard Audio/may/crawl.mp3'),
             img:require('../../assets/image/Crawling Bugs/Crawl.png')
           },{
             id:4,
             cardName:'ant',
-            audio:require('../../assets/Flashcard Audio/april/bus.mp3'),
+            audio:require('../../assets/Flashcard Audio/may/Ant.mp3'),
             img:require('../../assets/image/Crawling Bugs/Ant.png')
           },{
             id:5,
             cardName:'snail',
-            audio:require('../../assets/Flashcard Audio/april/bike.mp3'),
+            audio:require('../../assets/Flashcard Audio/may/snail.mp3'),
             img:require('../../assets/image/Crawling Bugs/Snail.png')
           },{
             id:6,
             cardName:'caterpillar',
-            audio:require('../../assets/Flashcard Audio/april/walk.mp3'),
+            audio:require('../../assets/Flashcard Audio/may/caterpillar.mp3'),
             img:require('../../assets/image/Crawling Bugs/Caterpillar.png')
           },{
             id:7,
             cardName:'worm',
-            audio:require('../../assets/Flashcard Audio/april/tram.mp3'),
+            audio:require('../../assets/Flashcard Audio/may/worm.mp3'),
             img:require('../../assets/image/Crawling Bugs/Worm.png')
           },{
             id:8,
             cardName:'wiggle',
-            audio:require('../../assets/Flashcard Audio/april/drive.mp3'),
+            audio:require('../../assets/Flashcard Audio/may/wiggle.mp3'),
             img:require('../../assets/image/Crawling Bugs/Wiggle.png')
           },{
             id:9,
             cardName:'feelers',
-            audio:require('../../assets/Flashcard Audio/april/stop.mp3'),
+            audio:require('../../assets/Flashcard Audio/may/feelers.mp3'),
             img:require('../../assets/image/Crawling Bugs/Feelers.png')
           },{
             id:10,
             cardName:'leaf',
-            audio:require('../../assets/Flashcard Audio/april/truck.mp3'),
+            audio:require('../../assets/Flashcard Audio/may/leaf.mp3'),
             img:require('../../assets/image/Crawling Bugs/Leaf.png')
           },{
             id:11,
             cardName:'munch',
-            audio:require('../../assets/Flashcard Audio/april/honk.mp3'),
+            audio:require('../../assets/Flashcard Audio/may/munch.mp3'),
             img:require('../../assets/image/Crawling Bugs/Much.png')
           },{
             id:12,
             cardName:'mantis',
-            audio:require('../../assets/Flashcard Audio/april/motorbike.mp3'),
+            audio:require('../../assets/Flashcard Audio/may/mantis.mp3'),
             img:require('../../assets/image/Crawling Bugs/Mantis.png')
           }
         ],
-        //202005H5 Flying Bugs_MT
         BugsPart2:[
           {
             id:1,
             cardName:'wings',
-            audio:require('../../assets/Flashcard Audio/april/fast.mp3'),
+            audio:require('../../assets/Flashcard Audio/may/wings.mp3'),
             img:require('../../assets/image/Flying Bugs/Wings.png')
           },{
             id:2,
             cardName:'ladybug',
-            audio:require('../../assets/Flashcard Audio/april/train.mp3'),
+            audio:require('../../assets/Flashcard Audio/may/ladybug.mp3'),
             img:require('../../assets/image/Flying Bugs/Ladybug.png')
           },{
             id:3,
             cardName:'sting',
-            audio:require('../../assets/Flashcard Audio/april/fly.mp3'),
+            audio:require('../../assets/Flashcard Audio/may/sting.mp3'),
             img:require('../../assets/image/Flying Bugs/Sting.png')
           },{
             id:4,
             cardName:'buzz',
-            audio:require('../../assets/Flashcard Audio/april/helicopter.mp3'),
+            audio:require('../../assets/Flashcard Audio/may/buzz.mp3'),
             img:require('../../assets/image/Flying Bugs/Buzz.png')
           },{
             id:5,
             cardName:'flowers',
-            audio:require('../../assets/Flashcard Audio/april/airplane.mp3'),
+            audio:require('../../assets/Flashcard Audio/may/flowers.mp3'),
             img:require('../../assets/image/Flying Bugs/Flowers.png')
           },{
             id:6,
             cardName:'fly',
-            audio:require('../../assets/Flashcard Audio/april/ticket.mp3'),
+            audio:require('../../assets/Flashcard Audio/may/fly.mp3'),
             img:require('../../assets/image/Flying Bugs/Fly.png')
           },{
             id:7,
             cardName:'butterfly',
-            audio:require('../../assets/Flashcard Audio/april/slow.mp3'),
+            audio:require('../../assets/Flashcard Audio/may/butterfly.mp3'),
             img:require('../../assets/image/Flying Bugs/Butterfly.png')
           },{
             id:8,
             cardName:'bee',
-            audio:require('../../assets/Flashcard Audio/april/ship.mp3'),
+            audio:require('../../assets/Flashcard Audio/may/bee.mp3'),
             img:require('../../assets/image/Flying Bugs/Bee.png')
           },{
             id:9,
             cardName:'firefly',
-            audio:require('../../assets/Flashcard Audio/april/airport.mp3'),
+            audio:require('../../assets/Flashcard Audio/may/firefly.mp3'),
             img:require('../../assets/image/Flying Bugs/Firefly.png')
           },{
             id:10,
             cardName:'dragonfly',
-            audio:require('../../assets/Flashcard Audio/april/station.mp3'),
+            audio:require('../../assets/Flashcard Audio/may/dragonfly.mp3'),
             img:require('../../assets/image/Flying Bugs/Dragonfly.png')
           },{
             id:11,
             cardName:'hive',
-            audio:require('../../assets/Flashcard Audio/april/land.mp3'),
+            audio:require('../../assets/Flashcard Audio/may/hive.mp3'),
             img:require('../../assets/image/Flying Bugs/Hive.png')
           },{
             id:12,
             cardName:'mosquito',
-            audio:require('../../assets/Flashcard Audio/april/suitcase.mp3'),
+            audio:require('../../assets/Flashcard Audio/may/mosquito.mp3'),
             img:require('../../assets/image/Flying Bugs/Mosquito.png')
           }
         ],
