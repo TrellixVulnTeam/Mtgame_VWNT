@@ -2730,6 +2730,83 @@
              :style="{zIndex: !wings ? 100 : 1}" @click="showGif('wings')">
       </div>
     </div>
+    <div v-else-if="this.unit === 'Clothes' && this.part === 'part1'">
+      <img src="../../assets/image/202006H5 Summer clothes_MT/Runner_BG/BG__00000.png"
+           style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;"/>
+      <div class="bag">
+      <img src="../../assets/image/202006H5 Summer clothes_MT/GIF_PNG/png/bag.png" v-if="bag" @click="showGif('bag')"/>
+      <img src="../../assets/image/202006H5 Summer clothes_MT/GIF_PNG/gif/bag.gif" style="z-index: 100" v-if="!bag"
+           @click="showGif('bag')">
+      </div>
+      <div class="dress">
+        <img src="../../assets/image/202006H5 Summer clothes_MT/GIF_PNG/png/dress.png" v-if="dress" @click="showGif('dress')">
+        <img src="../../assets/image/202006H5 Summer clothes_MT/GIF_PNG/gif/dress.gif" style="z-index: 100" v-if="!dress"
+             @click="showGif('dress')">
+      </div>
+      <div class="hat">
+        <img src="../../assets/image/202006H5 Summer clothes_MT/GIF_PNG/png/hat.png" v-if="hat" @click="showGif('hat')">
+        <img src="../../assets/image/202006H5 Summer clothes_MT/GIF_PNG/gif/hat.gif" style="z-index: 100" v-if="!hat"
+             @click="showGif('hat')">
+      </div>
+      <div class="sandals">
+        <img src="../../assets/image/202006H5 Summer clothes_MT/GIF_PNG/png/sandals.png" v-if="sandals" @click="showGif('sandals')">
+        <img src="../../assets/image/202006H5 Summer clothes_MT/GIF_PNG/gif/sandals.gif" style="z-index: 100" v-if="!sandals"
+             @click="showGif('sandals')">
+      </div>
+      <div class="shoes">
+        <img src="../../assets/image/202006H5 Summer clothes_MT/GIF_PNG/png/shoes.png" v-if="shoes" @click="showGif('shoes')">
+        <img src="../../assets/image/202006H5 Summer clothes_MT/GIF_PNG/gif/shoes.gif" style="z-index: 100" v-if="!shoes"
+             @click="showGif('shoes')">
+      </div>
+      <div class="shorts">
+        <img src="../../assets/image/202006H5 Summer clothes_MT/GIF_PNG/png/shorts.png" v-if="shorts" @click="showGif('shorts')">
+        <img src="../../assets/image/202006H5 Summer clothes_MT/GIF_PNG/gif/shorts.gif" style="z-index: 100" v-if="!shorts"
+             @click="showGif('shorts')">
+      </div>
+      <div class="skirt">
+        <img src="../../assets/image/202006H5 Summer clothes_MT/GIF_PNG/png/skirt.png" v-if="skirt" @click="showGif('skirt')">
+        <img src="../../assets/image/202006H5 Summer clothes_MT/GIF_PNG/gif/skirt.gif" style="z-index: 100" v-if="!skirt"
+             @click="showGif('skirt')">
+      </div>
+      <div class="sunglasses">
+        <img src="../../assets/image/202006H5 Summer clothes_MT/GIF_PNG/png/sunglasses.png" v-if="sunglasses" @click="showGif('sunglasses')">
+        <img src="../../assets/image/202006H5 Summer clothes_MT/GIF_PNG/gif/sunglasses.gif" style="z-index: 100" v-if="!sunglasses"
+             @click="showGif('sunglasses')">
+      </div>
+      <div class="tie">
+        <img src="../../assets/image/202006H5 Summer clothes_MT/GIF_PNG/png/tie.png" v-if="tie" @click="showGif('tie')">
+        <img src="../../assets/image/202006H5 Summer clothes_MT/GIF_PNG/gif/tie.gif" style="z-index: 100" v-if="!tie"
+             @click="showGif('tie')">
+      </div>
+      <div class="tShirt">
+        <img src="../../assets/image/202006H5 Summer clothes_MT/GIF_PNG/png/T-shirt.png" v-if="tShirt" @click="showGif('tShirt')">
+        <img src="../../assets/image/202006H5 Summer clothes_MT/GIF_PNG/gif/T-shirt.gif" style="z-index: 100" v-if="!tShirt"
+             @click="showGif('tShirt')">
+      </div>
+      <div class="watch1">
+        <img src="../../assets/image/202006H5 Summer clothes_MT/GIF_PNG/png/watch.png" v-if="watch1" @click="showGif('watch1')">
+        <img src="../../assets/image/202006H5 Summer clothes_MT/GIF_PNG/gif/watch.gif" style="z-index: 100" v-if="!watch1"
+             @click="showGif('watch1')">
+      </div>
+      <div class="wear">
+        <img src="../../assets/image/202006H5 Summer clothes_MT/GIF_PNG/png/wear.png" v-if="wear" @click="showGif('wear')">
+        <img src="../../assets/image/202006H5 Summer clothes_MT/GIF_PNG/gif/wear.gif" style="z-index: 100" v-if="!wear"
+             @click="showGif('wear')">
+      </div>
+      <div class="beeButton">
+        <img src="../../assets/image/202006H5 Summer clothes_MT/words/word_bag Comp 1_00000.png"
+             :style="{zIndex: !bee ? 100 : 1}" @click="showGif('bee')">
+      </div>
+    </div>
+    <div v-else-if="this.unit === 'Clothes' && this.part === 'part2'">
+      <img src="../../assets/image/202006H5 Summer clothes_MT/words/word_bag Comp 1_00000.png"
+           style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;"/>
+      <div class="bee">
+        <img src="../../assets/image/202005H5 Flying Bugs_MT/GIF_PNG/Png/bee.png" v-if="bee" @click="showGif('bee')">
+        <img src="../../assets/image/202005H5 Flying Bugs_MT/GIF_PNG/Gif/bee.gif" style="z-index: 100" v-if="!bee"
+             @click="showGif('bee')">
+      </div>
+    </div>
     <div v-else>
     <img src="../../assets/image/H5 Thing/Walker_BG/bg_0.png"
          style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;">
@@ -3174,6 +3251,18 @@ export default {
           wings:require('../../assets/Flashcard Audio/may/wings.mp3'),
         },
         cardType:'default',
+        bag:true,
+        dress:true,
+        hat:true,
+        sandals:true,
+        shoes:true,
+        shorts:true,
+        skirt:true,
+        sunglasses:true,
+        tie:true,
+        tShirt:true,
+        watch1:true,
+        wear:true,
         ant:true,
         caterpillar:true,
         munch:true,
@@ -3699,6 +3788,90 @@ export default {
     position: fixed;
     background-color: #44ccc2;
     z-index: 201;
+  }
+
+  .bag img {
+    width: 30%;
+    left: 11%;
+    top: 49%;
+    position: absolute;
+  }
+
+  .dress img {
+    width: 15%;
+    left: 33%;
+    top: 9%;
+    position: absolute;
+  }
+
+  .hat img {
+    width: 16%;
+    left: 83%;
+    top: 35%;
+    position: absolute;
+  }
+
+  .sandals img {
+    width: 14%;
+    left: 48%;
+    top: 57%;
+    position: absolute;
+  }
+
+  .shoes img {
+    width: 12%;
+    left: 33%;
+    top: 61%;
+    position: absolute;
+  }
+
+  .shorts img {
+    width: 14%;
+    left: 85%;
+    top: 49%;
+    position: absolute;
+  }
+
+  .skirt img {
+    width: 14%;
+    left: 49%;
+    top: 8%;
+    position: absolute;
+  }
+
+  .sunglasses img {
+    width: 14%;
+    left: 39%;
+    top: 70%;
+    position: absolute;
+  }
+
+  .tie img {
+    width: 19%;
+    left: 67%;
+    top: 55%;
+    position: absolute;
+  }
+
+  .tShirt img {
+    width: 25%;
+    left: 13%;
+    top: -1%;
+    position: absolute;
+  }
+
+  .watch1 img {
+    width: 24%;
+    left: 24%;
+    top: 75%;
+    position: absolute;
+  }
+
+  .wear img {
+    width: 15%;
+    left: 60%;
+    top: 12%;
+    position: absolute;
   }
 
   .bee img {

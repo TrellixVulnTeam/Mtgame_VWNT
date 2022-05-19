@@ -496,15 +496,45 @@
                     </div>
                   </div>
                   <!--Strengths-->
-                  <div v-if="categoryNum===5" class="Strengths">
-                    <div class="strengthsDiv">
-                      <div class="strengthsL">
-                        <div class="strengthsText">Vocabulary</div>
+                  <div v-if="categoryNum===5">
+                    <div  class="Strengths" v-for="(li,index) in strengthsTemp" :key='index'>
+                      <div class="strengthsDiv">
+                        <div class="strengthsL" v-if="Object.values(li)[0].classification==='Spelling'" style="background: #ffa217">
+                          <div class="strengthsText" >{{Object.values(li)[0].classification}}</div>
+                        </div>
+                        <div class="strengthsL" v-if="Object.values(li)[0].classification==='Letter Recognition'" style="background: #ff6a8a">
+                          <div class="strengthsText" >{{Object.values(li)[0].classification}}</div>
+                        </div>
+                        <div class="strengthsL" v-if="Object.values(li)[0].classification==='Listening'" style="background: #48cfdb">
+                          <div class="strengthsText" >{{Object.values(li)[0].classification}}</div>
+                        </div>
+                        <div class="strengthsL" v-if="Object.values(li)[0].classification==='Vocabulary'" style="background: #81db48">
+                          <div class="strengthsText" >{{Object.values(li)[0].classification}}</div>
+                        </div>
+                        <div class="strengthsL" v-if="Object.values(li)[0].classification==='Writing'" style="background: #f0aae1">
+                          <div class="strengthsText" >{{Object.values(li)[0].classification}}</div>
+                        </div>
+                        <img class="strengthsLogo" src="../../assets/image/strengthsLogo.png" />
+                        <div class="strengthsLiAll">
+                          <div class="strengthsLi" v-for="(li2,index2) in li" :key='index2'>
+                            <div class="strengthsAbbreviation" v-if="index2===0">{{li2.letter}}</div>
+                            <div class="strengthsAbbreviation" v-if="Object.values(li)[0].classification==='Spelling'&&index2!==0" style="color: #ffa217">{{li2.letter}}</div>
+                            <div class="strengthsAbbreviation" v-if="Object.values(li)[0].classification==='Letter Recognition'&&index2!==0" style="color: #ff6a8a">{{li2.letter}}</div>
+                            <div class="strengthsAbbreviation" v-if="Object.values(li)[0].classification==='Listening'&&index2!==0" style="color: #48cfdb">{{li2.letter}}</div>
+                            <div class="strengthsAbbreviation" v-if="Object.values(li)[0].classification==='Vocabulary'&&index2!==0" style="color: #81db48">{{li2.letter}}</div>
+                            <div class="strengthsAbbreviation" v-if="Object.values(li)[0].classification==='Writing'&&index2!==0" style="color: #f0aae1">{{li2.letter}}</div>
+                            <div class="strengthsLogo2Div">
+                              <img class="strengthsLogo2" v-if="index2===0" src="../../assets/image/allColor.png"/>
+                              <img class="strengthsLogo2" v-if="Object.values(li)[0].classification==='Spelling'&&index2!==0" src="../../assets/image/spellingColor.png"/>
+                              <img class="strengthsLogo2" v-if="Object.values(li)[0].classification==='Letter Recognition'&&index2!==0" src="../../assets/image/LetterRecognitionColor.png"/>
+                              <img class="strengthsLogo2" v-if="Object.values(li)[0].classification==='Listening'&&index2!==0" src="../../assets/image/listeningColor.png"/>
+                              <img class="strengthsLogo2" v-if="Object.values(li)[0].classification==='Vocabulary'&&index2!==0" src="../../assets/image/vocabularyColor.png"/>
+                              <img class="strengthsLogo2" v-if="Object.values(li)[0].classification==='Writing'&&index2!==0" src="../../assets/image/writingColor.png"/>
+                            </div>
+                            <div class="strengthsPresent">{{li2.persent}}%</div>
+                          </div>
+                        </div>  
                       </div>
-                      <img class="strengthsLogo" src="../../assets/image/strengthsLogo.png" />
-                      <img class="strengthsAbbreviation" src="../../assets/image/letters/100/A.png"/>
-                      <div class="strengthsLogo2"></div>
-                      <div class="strengthsPresent"></div>
                     </div>
                   </div>
                   <!--Performance Report-->
@@ -678,6 +708,10 @@
     data() {
       let myChart;
       return {
+        strengthsMinNub:0,
+        strengthsMaxNub:3,
+        strengths:[],
+        strengthsTemp:[],
         screenStyle:{},
         scoresWord:'Keep Practicing',
         scoresAverage:0,
@@ -1115,12 +1149,12 @@
        }
       },
       cardRight(){
-        if(this.categoryNum === 7){
-          this.categoryNum=1
-        }else {
-          this.categoryNum+=1
-        }
-        this.categories(this.categoryNum);
+          if(this.categoryNum === 7){
+            this.categoryNum=1
+          }else {
+            this.categoryNum+=1
+          }
+          this.categories(this.categoryNum);      
       },
       cardLeft(){
         if(this.categoryNum === 1){
@@ -1131,26 +1165,57 @@
         this.categories(this.categoryNum);
       },
       cRight(){
-        if (this.sliceMax - this.overall.length<0){
-          this.sliceMax+=6;
-          this.sliceMin+=6;
-        }else{
-          this.sliceMax=6;
-          this.sliceMin=0;
+        if(this.categoryNum===1){
+          if (this.sliceMax - this.overall.length<0){
+            this.sliceMax+=6;
+            this.sliceMin+=6;
+          }else{
+            this.sliceMax=6;
+            this.sliceMin=0;
+          }
+        }else if(this.categoryNum===5){
+          if(this.strengthsMaxNub<Object.keys(this.strengths).length){
+            var length = Object.keys(this.strengths).length-this.strengthsMaxNub<3?Object.keys(this.strengths).length-this.strengthsMaxNub:3;
+            this.strengthsTemp=[];
+            for (let i = 0; i < length; i++) {
+              this.strengthsTemp[i] = Object.values(this.strengths)[this.strengthsMaxNub+i]
+            }
+            this.strengthsMaxNub+=length;
+          }    
         }
       },
       cLeft(){
-        if (this.sliceMin>=6){
-          if(this.sliceMax-this.sliceMin<6){
-            this.sliceMax-=this.overall.length%6;
-            this.sliceMin-=6;
-          }else{
-            this.sliceMax-=6;
-            this.sliceMin-=6;
+        if(this.categoryNum===1){
+          if (this.sliceMin>=6){
+            if(this.sliceMax-this.sliceMin<6){
+              this.sliceMax-=this.overall.length%6;
+              this.sliceMin-=6;
+            }else{
+              this.sliceMax-=6;
+              this.sliceMin-=6;
+            }
+          }else {
+            this.sliceMax = this.overall.length;
+            this.sliceMin = this.overall.length-this.overall.length%6;
           }
-        }else {
-          this.sliceMax = this.overall.length;
-          this.sliceMin = this.overall.length-this.overall.length%6;
+        }else if(this.categoryNum===5){
+          if(3<this.strengthsMaxNub){
+            //初始化临时数组
+            this.strengthsTemp=[];
+            if(this.strengthsMaxNub%3!==0){
+              var length =this.strengthsMaxNub-this.strengthsMaxNub%3;
+              for (let i = 0; i < 3; i++) {
+                this.strengthsTemp[i] = Object.values(this.strengths)[length-3+i]
+              }
+              this.strengthsMaxNub=length;
+            }else{
+              for (let i = 0; i < 3; i++) {
+                this.strengthsTemp[i] = Object.values(this.strengths)[this.strengthsMaxNub-3+i]
+              }
+              this.strengthsMaxNub=this.strengthsMaxNub-3;
+            }
+          } 
+          
         }
       },
       categories(str){
@@ -1307,6 +1372,7 @@
         this.ifboss2 = false;
         this.page1 = true;
         this.chatorphonics = true;
+        this.strengthsTemp=[];
         // this.opciay5=true;
         this.courseId = this.courseList[0].course_id;
         if (this.courseList[0].name === "CHAT ROOM") {
@@ -1322,6 +1388,7 @@
             alertFram.style.display = "none";
           }), 1500)
         } else {
+          this.strengthsTemp=[];
           this.backgrorang = true;
           this.backgrgreen = false;
           this.page2 = false;
@@ -1788,7 +1855,14 @@
           studentId: localStorage.getItem('studentId'),
           level:this.level
         })).then(res => {
-
+          this.strengths = res.data.Strengths;
+          this.strengthsMaxNub = Object.keys(this.strengths).length < 3?Object.keys(this.strengths).length:3;
+          for (let i = 0; i < this.strengthsMaxNub; i++) {
+            this.strengthsTemp[i] = Object.values(this.strengths)[i]
+          }
+          console.log(res.data.Strengths);
+          console.log(this.strengthsTemp.length);
+          console.log(this.strengthsTemp);
           this.intervalsMins = res.data.time.mins;
           this.intervalsHour = res.data.time.hours;
           this.pass = res.data.time.pass;
@@ -2075,52 +2149,84 @@
   }
 
   .strengthsL {
-    width: 50%;
     position: relative;
-    background: blue;
-    padding: 1% 15%;
+    background: #1ac6d9;
+    padding: 1% 0;
     border-radius: 30px;
-    left: 50%;
     top: 8%;
+    width: 90%;
+    left: 50%;
     transform: translateX(-50%);
   }
 
-  .strengthsText {
+.strengthsText[data-v-2f20336a] {
     color: white;
     font-family: pepper,serif;
-    font-size: 1rem;
+    font-size: 24px;
     font-weight: 600;
-  }
+}
 
   .strengthsLogo{
-    width: 4%;
+    width: 10%;
     height: 15%;
-    position: absolute;
-    left: 2%;
-    top: 23%;
+    position: relative;
+    left: 42%;
+    top: 10%;
   }
 
   .strengthsAbbreviation{
     width: 100%;
     height: 100%;
-    left: -13%;
+    left: -4%;
+    font-size: 2rem;
+    font-family: 'kg';
+    font-weight: 600;
+    color: #1ac6d9;
     position: relative;
+    text-align: right;
   }
+
+.strengthsLiAll{
+    margin-top: -18%;
+    position: relative;
+}
+
+.strengthsLi{
+    width: 80%;
+    height: 40PX;
+    top: -10%;
+    left: 7%;
+    margin-top: 15px;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
 
   .strengthsDiv {
     float: left;
     width: 33%;
-    height: 80%;
+    height: 95%;
+    margin-top: 4%;
   }
 
   .strengthsLogo2{
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    bottom: -30%;
+    position: relative;
+  }
+
+  .strengthsLogo2Div{
+    width: 15%;
   }
 
   .strengthsPresent{
-    width: 100%;
+    width: 35%;
     height: 100%;
+    font-size: 1.2rem;
+    color: #1ac6d9;
+    position: relative;
+    bottom: -30%;
   }
 
   .AreasP2 {
@@ -3013,7 +3119,7 @@
     height: 80%;
     border-radius: 20px;
     float: left;
-    margin-top: -10%;
+    margin-top: -9%;
   }
 
   .listmemu {
@@ -3521,7 +3627,6 @@
       font-size: 2.5rem;
       position: relative;
       left: -14%;
-      /* width: -webkit-fit-content; */
       width: -moz-fit-content;
       /* width: fit-content; */
       margin-top: 10%;

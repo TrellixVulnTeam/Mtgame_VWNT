@@ -15,14 +15,14 @@
         <div class="album__paper" :style="{zIndex: isOpenedTop ? 0 : items.length + 1}" :class="{'open': isOpenedTop,'albem_center':!isOpenedTop}"
              @click="topOpen(isOpenedTop)">
           <div class="album__page front" :style="{zIndex:  items.length  }">
+            <!--封面-->
             <div>
               <img :src=fontimg style="width: 100%;height: 100%;position: absolute;border-radius: 25px;">
-              <!-- <div class="album__top-title">Album</div>
-              <div class="cat-mark"></div> -->
             </div>
           </div>
+          <!-- 前言,封面背后 -->
           <div class="album__page back" :style="{zIndex: 0}" v-show="isOpenedTop1">
-            <img :src="backimg"   class="backclass5"/><!-- 前言 -->
+            <img :src="backimg"   class="backclass5"/>
           </div>
         </div>
 
@@ -30,7 +30,7 @@
              :class="{'open': page.is_open,'albem_center':!isOpenedTop}" @click="idx+1 === items.length ? close(idx, page.is_open) : open(idx, page.is_open)">
           <div class="album__page front" :style="{zIndex:  items.length +1}">
             <img :src="backimg2" class="backclass" v-if="idx===0" v-show="isOpenedTop1" :style="{zIndex:  items.length +2}"/>
-            <img :src="insetimg" class="insetimg" v-if="idx+1 === items.length"  v-show="isOpenedTop1" :style="{zIndex:  1}"/>
+            <img :src="insetimg" class="insetimg" @load="updated()" v-if="idx+1 === items.length"  v-show="isOpenedTop1" :style="{zIndex:  1}"/>
 
             <div class="fontclass" v-if="idx!=0" v-show="isOpenedTop1"  :style="{zIndex:  items.length}">
               <img :src="wordimg"   class="fontback" v-show="isOpenedTop1&&!fontshow" style="z-index: 999;">
@@ -50,9 +50,8 @@
 
           </div>
           <div  class="album__page back" :style="{zIndex: idx}">
-            <img :src="page.bg"  @load="updated(idx)"  :class="idx+1 === items.length ?  'backclass3' : 'backclass4'" v-if="!thend" v-show="isOpenedTop1&&page.is_open"/>
-            <img :src="page.bg" :class="idx+1 === items.length ? 'backclass2' : 'backclass3'"  :style="{display: thend ? 'block':'none'}" v-if="thend" v-show="!isOpenedTop1"/>
-            <!-- <img :src="backimg" /> -->
+            <img :src="page.bg"   :class="idx+1 === items.length ?  'backclass3' : 'backclass4'" v-if="!thend&&readyLoad" v-show="isOpenedTop1&&page.is_open"/><!--v-if="!thend" v-show="isOpenedTop1&&page.is_open"-->
+            <img :src="page.bg" :class="idx+1 === items.length ? 'backclass2' : 'backclass3'"  :style="{display: thend ? 'block':'none'}" v-if="thend&&readyLoad" v-show="!isOpenedTop1"/><!--v-if="thend" v-show="!isOpenedTop1" -->
           </div>
 
         </div>
@@ -62,9 +61,7 @@
           <img src="../../assets/image/blue_restart0.png" class="buttonsimg" @click="reset()">
           <img src="../../assets/image/blue_next0.png" class="buttonsimg2" @click="next()">
         </div>
-        <!-- <div class="album__back"></div>
-        <div class="album__bottom"></div>
-        <div class="album__shadow"></div> -->
+
       </div>
 
     </div>
@@ -79,13 +76,6 @@
   export default {
     name: "demo",
     watch: {
-      'items': function(newVal) {
-        setTimeout(() => {
-          // $('.album__paper:first .album__page').css("background-image", this.insetimg);
-          //  $('.album__paper:last-child').css("background-image", this.insetimg);
-          // console.log($('.album__paper:last-child'));
-        }, 500)
-      },
       'video': function(newVal) {
         if (this.video === true) {
           setTimeout(() => {
@@ -94,27 +84,11 @@
           }, this.playtime * 1000);
         }
       },
-      // 'updated2':function(newVal){
-      //   let imgList = document.getElementsByClassName('backclass4');//图片集合
-      //   let imgCount = imgList.length;//图片总数
-      //
-      //   // for (let i = 0; i < imgCount; i++) {
-      //   //   if(imgList[i].complete){
-      //   this.imgLoad++;
-      //   console.log(this.imgLoad);
-      //   if (this.imgLoad === imgCount) {
-      //     this.loading =false;
-      //     this.isAllLoaded = true;
-      //     this.topOpen2();
-      //     console.log("图片加载完成 展示组件");
-      //   }
-      //
-      // }
-
-
     },
     data() {
       return {
+        //封面加载完再加载内容
+        readyLoad:false,
         bReady: true,
         iNow: 0,
         oBox: "",
@@ -125,6 +99,7 @@
         pageurl:'/book/bookCompleteUpdate',
         endPage:0,
         oldreadpage:0,
+        //判断图片是否全部加载完毕
         isAllLoaded:false,
         loading:true,
         helps:false,
@@ -370,20 +345,12 @@
     },
     methods: {
       topOpen() {
-
-      //   this.updated();
-      //   if(this.isAllLoaded!=true){
-      //     alertMsg4("Loading...");
-      //   }
-      // },
-      // topOpen2(){
-        if(this.isAllLoaded==true){
+        //翻页，判断是否图片加载完
+        if(this.isAllLoaded===true){
           if(this.readpage===0){
             this.readpage=this.readpage+1;
             this.oldreadpage=this.readpage;
           }
-
-        // console.log('1');
         this.isOpenedTop = !this.isOpenedTop;
         if(this.isOpenedTop1===0){
           this.isOpenedTop1=1;
@@ -392,14 +359,11 @@
             this.isOpenedTop1=0;
           },600);
         }
-        }else {
-          // this.updated();
         }
       },
 
       open(idx, is_open) {
         console.log(idx, is_open);
-
         if(this.oldreadpage>idx+1){
           console.log(this.oldreadpage);
         }else {
@@ -407,7 +371,7 @@
           this.oldreadpage=this.readpage;
           console.log(this.oldreadpage);
         }
-        if (idx == 0 && is_open == 1) {
+        if (idx === 0 && is_open === 1) {
           this.showsound=false;
         }else{
           this.showsound=!this.showsound;
@@ -420,7 +384,7 @@
 
         if(idx || is_open || idx === 0 || is_open === 0){
           this.helps=true;
-        if (idx == 0 && is_open == 1) {
+        if (idx === 0 && is_open === 1) {
           document.getElementById('out').style.display = 'none';
         } else {
           document.getElementById('out').style.display = 'block';
@@ -433,12 +397,12 @@
               this.fontshow=true;
             },600);
           }
-          if (this.isOpenedTop && is_open == 0) {//下一页
+          if (this.isOpenedTop && is_open === 0) {//下一页
             if (this.wordlength < this.items[idx].word.length) {//如果还有文字
-              if (idx == 0) {
-                if (this.items[idx].is_open == 1) {
+              if (idx === 0) {
+                if (this.items[idx].is_open === 1) {
                   this.items[idx].is_open = 0;
-                } else if (this.items[idx].is_open == 0) {
+                } else if (this.items[idx].is_open === 0) {
                   this.items[idx].is_open = 1;
                 }
                 this.video = true;
@@ -562,13 +526,11 @@
       aaa(idxs) {
         // clearTimeout(this.time);
         // 获取音频时长
-
         var myVid = document.getElementById("audiomp3");
         if (myVid != null) {
           var duration;
           myVid.load();
           myVid.oncanplay = function() {
-            //      console.log("myVid.duration",myVid.duration);
             this.playtime = myVid.duration;
             var oP = document.getElementsByClassName('p' + idxs);
             // console.log(this.playtime);
@@ -590,8 +552,7 @@
                 str_2 = str_2 + "<span class='text2' id=str" + i + ">" + str.charAt(i) + "</span>";
               }
               oP[0].innerHTML = str_2;
-            };
-
+            }
             function play() {
               var len = str.length;
               if (document.getElementById('str' + a)) {
@@ -606,15 +567,13 @@
               } else {
                 a = 0;
               }
-            };
-
+            }
             play();
-
           }
         }
       },
       close(idx, is_open) {
-        if (this.isOpenedTop && is_open == 0) {//下一页
+        if (this.isOpenedTop && is_open === 0) {//下一页
           if (this.wordlength < this.items[idx].word.length) {
             this.open(idx,is_open);
           }else {
@@ -678,18 +637,7 @@
         }else{
           audio.play();
         }
-        this.$axios.post(this.pageurl, qs.stringify({
-          bookId: this.bookId,
-          readPage: this.oldreadpage,
-          endPage: this.endPage,
-          studentId:localStorage.getItem('studentId')
-          // studentId: localStorage.getItem('studentId')
-        })).then(res => {
-          // localStorage.setItem('startTimeid', '');
-          // localStorage.setItem('gamename', '');
-        }, res => {
-          alertMsg("You must be connected to the internet.<br>Please connect and try again.");
-        });
+
         this.$router.push({ //核心语句
           path: '/ebookchioce', //跳转的路径
           query: {
@@ -798,33 +746,44 @@
         }
         }
       },
-      updated(idx) {
-        // console.log(idx);
+      //废弃
+      updated1(idx) {
+        console.log(document.getElementsByClassName('backclass').length);
         if(this.loading ===true){
           alertMsg4("Loading...");
-
           let imgList = document.getElementsByClassName('backclass4');//图片集合
           let imgCount = imgList.length;//图片总数
           if(this.imgLoad>imgCount){
             this.topOpen();
-            return;
           }else{
-
             if (this.imgLoad === imgCount) {
               this.loading =false;
               this.isAllLoaded = true;
               this.topOpen();
               document.getElementById('alertFram').style.display = "none";
               console.log("图片加载完成 展示组件");
-
             }
             this.imgLoad++;
-            console.log(this.imgLoad);
+            console.log("图片已加载数："+this.imgLoad);
           }
         }
-
-
-
+      },
+      //1.打开先判断backclass5,backclass,intseting的长度，大于1直接执行topOpen方法
+      updated(idx) {
+        if(this.loading ===true){
+          alertMsg4("Loading...");
+          let imgBackClassListCount = document.getElementsByClassName('backclass').length;
+          let imgBackClass5ListCount = document.getElementsByClassName('backclass5').length;
+          let imgInsetimgListCount = document.getElementsByClassName('insetimg').length;
+          if (imgBackClassListCount>0 && imgBackClass5ListCount>0 && imgInsetimgListCount>0) {
+            this.readyLoad = true;
+            this.loading =false;
+            this.isAllLoaded = true;
+            this.topOpen();
+            document.getElementById('alertFram').style.display = "none";
+            console.log("图片加载完成 展示组件");
+          }
+        }
       },
       compeletered(){
         this.$axios.post(this.pageurl, qs.stringify({
@@ -843,33 +802,20 @@
     },
 
     mounted() {
-      // this.updated();
-
-      // setTimeout(() => {
-        //   $('.album__paper:first .album__page').css("background-image", this.insetimg);
-        // $('.album__paper:last-child').css("background-image", this.insetimg);
-        //    console.log($('.album__paper:last-child'));
-      // }, 1000)
-      // this.resizeimg();
-      // console.log($('.album__paper:nth-of-type(1) .album__page').css("background-image"));
     },
 
     destroyed() {
       this.loading=false;
       if(document.getElementById('alertFram')) {
         document.getElementById('alertFram').style.display = "none";
-        // console.log(document.getElementById('alertFram').style.display);
       }
       document.body.removeEventListener('touchmove', this.bodyScroll, {
         passive: false
       });
-
-      // console.log('100');
       this.compeletered();
     },
     created() {
       this.pic = this.$axios.defaults.baseURL2;
-      // this.pic2 = this.$axios.defaults.baseURL3;
       this.sortId=this.$route.query.sortId;
       this.bookId = this.$route.query.bookId;
       this.booklevel = this.$route.query.booklevel;
@@ -878,7 +824,7 @@
       this.booktitleColor = this.$route.query.booktitleColor;
       this.nextId = this.$route.query.nextId;
       // this.show=true;//背景音乐
-      if(localStorage.getItem('audiomusic')=="false"){
+      if(localStorage.getItem('audiomusic')==="false"){
         this.show=false;
       }else{
         this.show=true;
@@ -918,7 +864,7 @@
           alertMsg("You must be connected to the internet.<br>Please connect and try again.");
       });
       document.onreadystatechange = function () {
-        if (document.readyState == "complete") {
+        if (document.readyState === "complete") {
           this.isAllLoaded = true;
           console.log("true");
         }}

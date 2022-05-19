@@ -11,7 +11,7 @@
             <button class="books" v-bind:class="{ ebooslength: ebooslengthall}" :style="{backgroundColor:booktitleColor}">{{this.booklevel}}</button>
             <div class="box1">
               <div style="padding:  0px 2% 0px 2%; width: 20%;" v-for="(li,l) in listBookName">
-              <img class="imglist"  :src='li.head_img'  @click="godemo(li,l)"  @load="loaded">
+              <img class="imglist"  :src='li.head_img'  @click="godemo(li,l)"  @load="loaded" >
              <!-- <img src="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/get-the-mud-off.png"  @click="godemo()">
               <img src="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/glen-the-slug.png">
               <img src="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/helen-hen's-eggs.png">
@@ -470,7 +470,6 @@
      }
      .box1 {
        margin-top: 3%;
-
      }
      .ebooslength{
        font-size: 1.3rem;

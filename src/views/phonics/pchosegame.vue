@@ -210,6 +210,9 @@
       'loading': function(newVal) {
         if (this.loading === true) {
             alertMsg3("Loading...Please Wait");
+          setTimeout(() => {
+              document.getElementById('alertFram').style.display = 'none'}
+            ,15000)
         }else{
           setTimeout(() => {
               document.getElementById('alertFram').style.display = 'none'}
@@ -338,9 +341,6 @@
       },
 
       walkers1(li) {
-        if (this.loading === true) {
-            alertMsg3("Loading...Please Wait");
-        }
         this.phonics = false;
         this.walkers = true;
         this.level = li.name;
@@ -361,9 +361,6 @@
         })
       },
       walkers2(li){
-        if (this.loading === true) {
-            alertMsg3("Loading...Please Wait");
-        }
         this.phonics = false;
         this.runners = true;
         this.level =li.name;
@@ -382,9 +379,6 @@
         });
       },
       walkers3(li){
-        if (this.loading === true) {
-            alertMsg3("Loading...Please Wait");
-        }
         this.phonics = false;
         this.advanced = true;
         this.level =li.name;
@@ -447,12 +441,6 @@
               }
             });
           }
-        console.log(this.unitname);
-        console.log(this.unitsId);
-        console.log(this.phonicsId);
-        console.log(this.style);
-        console.log(this.level);
-        console.log(this.cources);
       },
 
       goinfo() {
@@ -477,6 +465,7 @@
         if (this.level === "Beginner") {
           this.phonics = false;
           this.walkers = true;
+          this.advanced = false;
           this.url3 = this.url + "PhonicsDetail";
           this.$axios.post(this.url3, qs.stringify({
             studentId: localStorage.getItem('studentId'),
@@ -490,13 +479,28 @@
         } else if (this.level === "Intermediate") {
           this.phonics = false;
           this.runners = true;
+          this.advanced = false;
           this.url3 = this.url + "PhonicsDetail2";
           this.$axios.post(this.url3, qs.stringify({
             studentId: localStorage.getItem('studentId'),
             phonicsId: this.phonicsId
           })).then(res => {
             this.phonicsDetailList = res.data.phonicsDetailList;
-
+            console.log('2');
+          }, res => {
+            alertMsg("You must be connected to the internet.<br>Please connect and try again.");
+          })
+        }else if (this.level === "Advanced") {
+          this.phonics = false;
+          this.runners = false;
+          this.advanced = true;
+          this.url3 = this.url + "PhonicsDetail3";
+          this.$axios.post(this.url3, qs.stringify({
+            studentId: localStorage.getItem('studentId'),
+            phonicsId: this.phonicsId
+          })).then(res => {
+            this.phonicsDetailList = res.data.phonicsDetailList;
+            console.log('3');
           }, res => {
             alertMsg("You must be connected to the internet.<br>Please connect and try again.");
           })
