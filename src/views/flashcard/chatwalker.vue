@@ -2749,7 +2749,7 @@
              @click="showGif('hat')">
       </div>
       <div class="sandals">
-        <img src="../../assets/image/202006H5 Summer clothes_MT/GIF_PNG/png/sandals.png" v-if="sandals" @click="showGif('sandals')">
+        <img src="../../assets/image/202006H5 Summer clothes_MT/GIF_PNG/png/sandals.png" v-if="sandals" @click="walkers&&showGif('sandals')">
         <img src="../../assets/image/202006H5 Summer clothes_MT/GIF_PNG/gif/sandals.gif" style="z-index: 100" v-if="!sandals"
              @click="showGif('sandals')">
       </div>
@@ -2764,17 +2764,17 @@
              @click="showGif('shorts')">
       </div>
       <div class="skirt">
-        <img src="../../assets/image/202006H5 Summer clothes_MT/GIF_PNG/png/skirt.png" v-if="skirt" @click="showGif('skirt')">
+        <img src="../../assets/image/202006H5 Summer clothes_MT/GIF_PNG/png/skirt.png" v-if="skirt" @click="walkers&&showGif('skirt')">
         <img src="../../assets/image/202006H5 Summer clothes_MT/GIF_PNG/gif/skirt.gif" style="z-index: 100" v-if="!skirt"
              @click="showGif('skirt')">
       </div>
       <div class="sunglasses">
-        <img src="../../assets/image/202006H5 Summer clothes_MT/GIF_PNG/png/sunglasses.png" v-if="sunglasses" @click="showGif('sunglasses')">
+        <img src="../../assets/image/202006H5 Summer clothes_MT/GIF_PNG/png/sunglasses.png" v-if="sunglasses" @click="walkers&&showGif('sunglasses')">
         <img src="../../assets/image/202006H5 Summer clothes_MT/GIF_PNG/gif/sunglasses.gif" style="z-index: 100" v-if="!sunglasses"
              @click="showGif('sunglasses')">
       </div>
       <div class="tie">
-        <img src="../../assets/image/202006H5 Summer clothes_MT/GIF_PNG/png/tie.png" v-if="tie" @click="showGif('tie')">
+        <img src="../../assets/image/202006H5 Summer clothes_MT/GIF_PNG/png/tie.png" v-if="tie" @click="walkers&&showGif('tie')">
         <img src="../../assets/image/202006H5 Summer clothes_MT/GIF_PNG/gif/tie.gif" style="z-index: 100" v-if="!tie"
              @click="showGif('tie')">
       </div>
@@ -2793,18 +2793,165 @@
         <img src="../../assets/image/202006H5 Summer clothes_MT/GIF_PNG/gif/wear.gif" style="z-index: 100" v-if="!wear"
              @click="showGif('wear')">
       </div>
-      <div class="beeButton">
+      <div class="tShirtButton">
+        <img src="../../assets/image/202006H5 Summer clothes_MT/words/word_T-shirt Comp 1_00000.png"
+             :style="{zIndex: !tShirt ? 100 : 1}" @click="showGif('tShirt')">
+      </div>
+      <div class="bagButton">
         <img src="../../assets/image/202006H5 Summer clothes_MT/words/word_bag Comp 1_00000.png"
-             :style="{zIndex: !bee ? 100 : 1}" @click="showGif('bee')">
+             :style="{zIndex: !bag ? 100 : 1}" @click="showGif('bag')">
+      </div>
+      <div class="watch1Button">
+        <img src="../../assets/image/202006H5 Summer clothes_MT/words/word_watch Comp 1_00000.png"
+             :style="{zIndex: !watch1 ? 100 : 1}" @click="showGif('watch1')">
+      </div>
+      <div class="dressButton">
+        <img src="../../assets/image/202006H5 Summer clothes_MT/words/word_dress Comp 1_00000.png"
+             :style="{zIndex: !dress ? 100 : 1}" @click="showGif('dress')">
+      </div>
+      <div class="shoesButton">
+        <img src="../../assets/image/202006H5 Summer clothes_MT/words/word_shoes Comp 1_00000.png"
+             :style="{zIndex: !shoes ? 100 : 1}" @click="showGif('shoes')">
+      </div>
+      <div class="skirtButton">
+        <img src="../../assets/image/202006H5 Summer clothes_MT/words/word_skirt Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !skirt ? 100 : 1}" @click="showGif('skirt')">
+      </div>
+      <div class="sandalsButton">
+        <img src="../../assets/image/202006H5 Summer clothes_MT/words/word_sandals Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !sandals ? 100 : 1}" @click="showGif('sandals')">
+      </div>
+      <div class="sunglassesButton">
+        <img src="../../assets/image/202006H5 Summer clothes_MT/words/word_sunglasses Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !sunglasses ? 100 : 1}" @click="showGif('sunglasses')">
+      </div>
+      <div class="wearButton">
+        <img src="../../assets/image/202006H5 Summer clothes_MT/words/word_wear Comp 1_00000.png"
+             :style="{zIndex: !wear ? 100 : 1}" @click="showGif('wear')">
+      </div>
+      <div class="tieButton">
+        <img src="../../assets/image/202006H5 Summer clothes_MT/words/word_tie Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !tie ? 100 : 1}" @click="showGif('tie')">
+      </div>
+      <div class="hatButton">
+        <img src="../../assets/image/202006H5 Summer clothes_MT/words/word_hat Comp 1_00000.png"
+             :style="{zIndex: !hat ? 100 : 1}" @click="showGif('hat')">
+      </div>
+      <div class="shortsButton">
+        <img src="../../assets/image/202006H5 Summer clothes_MT/words/word_shorts Comp 1_00000.png"
+             :style="{zIndex: !shorts ? 100 : 1}" @click="showGif('shorts')">
       </div>
     </div>
     <div v-else-if="this.unit === 'Clothes' && this.part === 'part2'">
-      <img src="../../assets/image/202006H5 Summer clothes_MT/words/word_bag Comp 1_00000.png"
+      <img src="../../assets/image/202006H5 Winter clothes_MT/Runner_BG/BG__00000.png"
            style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;"/>
-      <div class="bee">
-        <img src="../../assets/image/202005H5 Flying Bugs_MT/GIF_PNG/Png/bee.png" v-if="bee" @click="showGif('bee')">
-        <img src="../../assets/image/202005H5 Flying Bugs_MT/GIF_PNG/Gif/bee.gif" style="z-index: 100" v-if="!bee"
-             @click="showGif('bee')">
+      <div class="belt">
+        <img src="../../assets/image/202006H5 Winter clothes_MT/GIF_PNG/png/belt.png" v-if="belt" @click="showGif('belt')">
+        <img src="../../assets/image/202006H5 Winter clothes_MT/GIF_PNG/gif/belt.gif" style="z-index: 100" v-if="!belt"
+             @click="showGif('belt')">
+      </div>
+      <div class="boots">
+        <img src="../../assets/image/202006H5 Winter clothes_MT/GIF_PNG/png/boots.png" v-if="boots" @click="showGif('boots')">
+        <img src="../../assets/image/202006H5 Winter clothes_MT/GIF_PNG/gif/boots.gif" style="z-index: 100" v-if="!boots"
+             @click="showGif('boots')">
+      </div>
+      <div class="jacket">
+        <img src="../../assets/image/202006H5 Winter clothes_MT/GIF_PNG/png/jacket.png" v-if="jacket" @click="showGif('jacket')">
+        <img src="../../assets/image/202006H5 Winter clothes_MT/GIF_PNG/gif/jacket.gif" style="z-index: 100" v-if="!jacket"
+             @click="showGif('jacket')">
+      </div>
+      <div class="mittens">
+        <img src="../../assets/image/202006H5 Winter clothes_MT/GIF_PNG/png/mittens.png" v-if="mittens" @click="walkers&&showGif('mittens')">
+        <img src="../../assets/image/202006H5 Winter clothes_MT/GIF_PNG/gif/mittens.gif" style="z-index: 100" v-if="!mittens"
+             @click="showGif('mittens')">
+      </div>
+      <div class="pajamas">
+        <img src="../../assets/image/202006H5 Winter clothes_MT/GIF_PNG/png/pajamas.png" v-if="pajamas" @click="walkers&&showGif('pajamas')">
+        <img src="../../assets/image/202006H5 Winter clothes_MT/GIF_PNG/gif/pajamas.gif" style="z-index: 100" v-if="!pajamas"
+             @click="showGif('pajamas')">
+      </div>
+      <div class="scarf1">
+        <img src="../../assets/image/202006H5 Winter clothes_MT/GIF_PNG/png/scarf.png" v-if="scarf1" @click="showGif('scarf1')">
+        <img src="../../assets/image/202006H5 Winter clothes_MT/GIF_PNG/gif/scarf.gif" style="z-index: 100" v-if="!scarf1"
+             @click="showGif('scarf1')">
+      </div>
+      <div class="shirt">
+        <img src="../../assets/image/202006H5 Winter clothes_MT/GIF_PNG/png/shirt.png" v-if="shirt" @click="walkers&&showGif('shirt')">
+        <img src="../../assets/image/202006H5 Winter clothes_MT/GIF_PNG/gif/shirt.gif" style="z-index: 100" v-if="!shirt"
+             @click="showGif('shirt')">
+      </div>
+      <div class="socks">
+        <img src="../../assets/image/202006H5 Winter clothes_MT/GIF_PNG/png/socks.png" v-if="socks" @click="showGif('socks')">
+        <img src="../../assets/image/202006H5 Winter clothes_MT/GIF_PNG/gif/socks.gif" style="z-index: 100" v-if="!socks"
+             @click="showGif('socks')">
+      </div>
+      <div class="sweater">
+        <img src="../../assets/image/202006H5 Winter clothes_MT/GIF_PNG/png/sweater.png" v-if="sweater" @click="walkers&&showGif('sweater')">
+        <img src="../../assets/image/202006H5 Winter clothes_MT/GIF_PNG/gif/sweater.gif" style="z-index: 100" v-if="!sweater"
+             @click="showGif('sweater')">
+      </div>
+      <div class="trousers">
+        <img src="../../assets/image/202006H5 Winter clothes_MT/GIF_PNG/png/trousers.png" v-if="trousers" @click="showGif('trousers')">
+        <img src="../../assets/image/202006H5 Winter clothes_MT/GIF_PNG/gif/trousers.gif" style="z-index: 100" v-if="!trousers"
+             @click="showGif('trousers')">
+      </div>
+      <div class="wrap">
+        <img src="../../assets/image/202006H5 Winter clothes_MT/GIF_PNG/png/wrap.png" v-if="wrap" @click="showGif('wrap')">
+        <img src="../../assets/image/202006H5 Winter clothes_MT/GIF_PNG/gif/wrap.gif" style="z-index: 100" v-if="!wrap"
+             @click="showGif('wrap')">
+      </div>
+      <div class="zip">
+        <img src="../../assets/image/202006H5 Winter clothes_MT/GIF_PNG/png/zip.png" v-if="zip" @click="showGif('zip')">
+        <img src="../../assets/image/202006H5 Winter clothes_MT/GIF_PNG/gif/zip.gif" style="z-index: 100" v-if="!zip"
+             @click="showGif('zip')">
+      </div>
+      <div class="beltButton">
+        <img src="../../assets/image/202006H5 Winter clothes_MT/Word/word_belt Comp 1_00000.png"
+             :style="{zIndex: !belt ? 100 : 1}" @click="showGif('belt')">
+      </div>
+      <div class="bootsButton">
+        <img src="../../assets/image/202006H5 Winter clothes_MT/Word/word_boots Comp 1_00000.png"
+             :style="{zIndex: !boots ? 100 : 1}" @click="showGif('boots')">
+      </div>
+      <div class="zipButton">
+        <img src="../../assets/image/202006H5 Winter clothes_MT/Word/word_zip Comp 1_00000.png"
+             :style="{zIndex: !zip ? 100 : 1}" @click="showGif('zip')">
+      </div>
+      <div class="jacketButton">
+        <img src="../../assets/image/202006H5 Winter clothes_MT/Word/word_jacket Comp 1_00000.png"
+             :style="{zIndex: !jacket ? 100 : 1}" @click="showGif('jacket')">
+      </div>
+      <div class="mittensButton">
+        <img src="../../assets/image/202006H5 Winter clothes_MT/Word/word_mittens Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !mittens ? 100 : 1}" @click="showGif('mittens')">
+      </div>
+      <div class="pajamasButton">
+        <img src="../../assets/image/202006H5 Winter clothes_MT/Word/word_pajamas Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !pajamas ? 100 : 1}" @click="showGif('pajamas')">
+      </div>
+      <div class="scarf1Button">
+        <img src="../../assets/image/202006H5 Winter clothes_MT/Word/word_scarf Comp 1_00000.png"
+             :style="{zIndex: !scarf1 ? 100 : 1}" @click="showGif('scarf1')">
+      </div>
+      <div class="shirtButton">
+        <img src="../../assets/image/202006H5 Winter clothes_MT/Word/word_shirt Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !shirt ? 100 : 1}" @click="showGif('shirt')">
+      </div>
+      <div class="socksButton">
+        <img src="../../assets/image/202006H5 Winter clothes_MT/Word/word_socks Comp 1_00000.png"
+             :style="{zIndex: !socks ? 100 : 1}" @click="showGif('socks')">
+      </div>
+      <div class="sweaterButton">
+        <img src="../../assets/image/202006H5 Winter clothes_MT/Word/word_sweater Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !sweater ? 100 : 5}" @click="showGif('sweater')">
+      </div>
+      <div class="trousersButton">
+        <img src="../../assets/image/202006H5 Winter clothes_MT/Word/word_trousers Comp 1_00000.png"
+             :style="{zIndex: !trousers ? 100 : 1}" @click="showGif('trousers')">
+      </div>
+      <div class="wrapButton">
+        <img src="../../assets/image/202006H5 Winter clothes_MT/Word/word_wrap Comp 1_00000.png"
+             :style="{zIndex: !wrap ? 100 : 1}" @click="showGif('wrap')">
       </div>
     </div>
     <div v-else>
@@ -3223,7 +3370,6 @@ export default {
           tram:require('../../assets/Flashcard Audio/april/tram.mp3'),
           truck:require('../../assets/Flashcard Audio/april/truck.mp3'),
           walk:require('../../assets/Flashcard Audio/april/walk.mp3'),
-
           //MAY
           ant:require('../../assets/Flashcard Audio/may/Ant.mp3'),
           caterpillar:require('../../assets/Flashcard Audio/may/caterpillar.mp3'),
@@ -3249,8 +3395,46 @@ export default {
           mosquito:require('../../assets/Flashcard Audio/may/mosquito.mp3'),
           sting:require('../../assets/Flashcard Audio/may/sting.mp3'),
           wings:require('../../assets/Flashcard Audio/may/wings.mp3'),
+
+          //clothes
+          bag:require('../../assets/Flashcard Audio/clothes/bag.mp3'),
+          belt:require('../../assets/Flashcard Audio/clothes/belt.mp3'),
+          boots:require('../../assets/Flashcard Audio/clothes/boots.mp3'),
+          dress:require('../../assets/Flashcard Audio/clothes/dress.mp3'),
+          hat:require('../../assets/Flashcard Audio/clothes/hat.mp3'),
+          jacket:require('../../assets/Flashcard Audio/clothes/jacket.mp3'),
+          mittens:require('../../assets/Flashcard Audio/clothes/mittens.mp3'),
+          pajamas:require('../../assets/Flashcard Audio/clothes/pajamas.mp3'),
+          sandals:require('../../assets/Flashcard Audio/clothes/sandals.mp3'),
+          scarf1:require('../../assets/Flashcard Audio/clothes/scarf.mp3'),
+          shirt:require('../../assets/Flashcard Audio/clothes/shirt.mp3'),
+          shoes:require('../../assets/Flashcard Audio/clothes/shoes.mp3'),
+          skirt:require('../../assets/Flashcard Audio/clothes/skirt.mp3'),
+          socks:require('../../assets/Flashcard Audio/clothes/socks.mp3'),
+          sunglasses:require('../../assets/Flashcard Audio/clothes/sunglasses.mp3'),
+          sweater:require('../../assets/Flashcard Audio/clothes/sweater.mp3'),
+          tie:require('../../assets/Flashcard Audio/clothes/tie.mp3'),
+          trousers:require('../../assets/Flashcard Audio/clothes/trousers.mp3'),
+          tShirt:require('../../assets/Flashcard Audio/clothes/t-shirt.mp3'),
+          watch1:require('../../assets/Flashcard Audio/clothes/watch.mp3'),
+          wear:require('../../assets/Flashcard Audio/clothes/wear.mp3'),
+          wrap:require('../../assets/Flashcard Audio/clothes/wrap.mp3'),
+          zip:require('../../assets/Flashcard Audio/clothes/zip.mp3'),
+          shorts:require('../../assets/Flashcard Audio/clothes/shorts.mp3'),
         },
         cardType:'default',
+        belt:true,
+        boots:true,
+        jacket:true,
+        mittens:true,
+        pajamas:true,
+        scarf1:true,
+        shirt:true,
+        socks:true,
+        sweater:true,
+        trousers:true,
+        wrap:true,
+        zip:true,
         bag:true,
         dress:true,
         hat:true,
@@ -3789,6 +3973,263 @@ export default {
     background-color: #44ccc2;
     z-index: 201;
   }
+
+  .beltButton img {
+    width: 5%;
+    left: 43%;
+    top: 77%;
+    position: absolute;
+  }
+
+  .bootsButton img {
+    width: 6%;
+    left: 7%;
+    top: 63%;
+    position: absolute;
+  }
+
+  .jacketButton img {
+    width: 7%;
+    left: 17%;
+    top: 17%;
+    position: absolute;
+  }
+
+  .mittensButton img {
+    width: 7%;
+    left: 62%;
+    top: 91%;
+    position: absolute;
+  }
+
+  .pajamasButton img {
+    width: 9%;
+    left: 22%;
+    top: 64%;
+    position: absolute;
+  }
+
+  .scarf1Button img {
+    width: 6%;
+    left: 57%;
+    top: 62%;
+    position: absolute;
+  }
+
+  .shirtButton img {
+    width: 5%;
+    left: 89%;
+    top: 28%;
+    position: absolute;
+  }
+
+  .socksButton img {
+    width: 6%;
+    left: 28%;
+    top: 88%;
+    position: absolute;
+  }
+
+  .sweaterButton img {
+    width: 8%;
+    left: 74%;
+    top: 5%;
+    position: absolute;
+  }
+
+  .trousersButton img {
+    width: 8%;
+    left: 58%;
+    top: 38%;
+    position: absolute;
+  }
+
+  .wrapButton img {
+    width: 6%;
+    left: 82%;
+    top: 64%;
+    position: absolute;
+  }
+
+  .zipButton img {
+    width: 4%;
+    left: 36%;
+    top: 36%;
+    position: absolute;
+  }
+
+
+  .belt img {
+    width: 13%;
+    left: 40%;
+    top: 80%;
+    position: absolute;
+  }
+
+  .boots img {
+    width: 15%;
+    left: 1%;
+    top: 65%;
+    position: absolute;
+  }
+
+  .jacket img {
+    width: 21%;
+    left: 0%;
+    top: 7%;
+    position: absolute;
+  }
+
+  .mittens img {
+    width: 12%;
+    left: 53%;
+    top: 72%;
+    position: absolute;
+  }
+
+  .pajamas img {
+    width: 32%;
+    left: 13%;
+    height: 26%;
+    top: 43%;
+    position: absolute;
+  }
+
+  .scarf1 img {
+    width: 16%;
+    left: 51%;
+    top: 65%;
+    position: absolute;
+  }
+
+  .shirt img {
+    width: 19%;
+    left: 72%;
+    top: 6%;
+    position: absolute;
+    z-index: 3;
+  }
+
+  .socks img {
+    width: 18%;
+    left: 12%;
+    top: 73%;
+    position: absolute;
+  }
+
+  .sweater img {
+    width: 16%;
+    left: 68%;
+    top: 6%;
+    position: absolute;
+    z-index: 2;
+  }
+
+  .trousers img {
+    width: 14%;
+    left: 63%;
+    top: 7%;
+    position: absolute;
+  }
+
+  .wrap img {
+    width: 18%;
+    left: 66%;
+    top: 34%;
+    position: absolute;
+  }
+
+  .zip img {
+    width: 17%;
+    left: 34%;
+    top: 17%;
+    position: absolute;
+  }
+
+  .tShirtButton img {
+    width: 6%;
+    left: 13%;
+    top: 27%;
+    position: absolute;
+  }
+
+  .bagButton img {
+    width: 5%;
+    left: 16%;
+    top: 74%;
+    position: absolute;
+  }
+
+  .watch1Button img {
+    width: 6%;
+    left: 27%;
+    top: 90%;
+    position: absolute;
+  }
+
+  .dressButton img {
+    width: 6%;
+    left: 40%;
+    top: 49%;
+    position: absolute;
+  }
+
+  .shoesButton img {
+    width: 6%;
+    left: 38%;
+    top: 58%;
+    position: absolute;
+  }
+
+  .skirtButton img {
+    width: 5%;
+    left: 54%;
+    top: 34%;
+    position: absolute;
+  }
+
+  .sandalsButton img {
+    width: 7%;
+    left: 51%;
+    top: 58%;
+    position: absolute;
+  }
+
+  .sunglassesButton img {
+    width: 9%;
+    left: 50%;
+    top: 80%;
+    position: absolute;
+  }
+
+  .wearButton img {
+    width: 6%;
+    left: 73%;
+    top: 27%;
+    position: absolute;
+  }
+
+  .tieButton img {
+    width: 5%;
+    left: 78%;
+    top: 92%;
+    position: absolute;
+  }
+
+  .hatButton img {
+    width: 5%;
+    left: 89%;
+    top: 35%;
+    position: absolute;
+  }
+
+  .shortsButton img {
+    width: 6%;
+    left: 89%;
+    top: 70%;
+    position: absolute;
+  }
+
 
   .bag img {
     width: 30%;
@@ -9500,6 +9941,207 @@ export default {
   @media only screen and (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 3) ,
   (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 812px) and (max-width: 1023px){
+    .sweaterButton img {
+      width: 7%;
+      left: 74%;
+      top: 4%;
+      position: absolute;
+    }
+    .mittens img {
+      width: 13%;
+      left: 53%;
+      top: 68%;
+      position: absolute;
+    }
+    .scarf1 img {
+      width: 15%;
+      left: 52%;
+      top: 63%;
+      position: absolute;
+    }
+    .beltButton img {
+      width: 5%;
+      left: 43%;
+      top: 76%;
+      position: absolute;
+    }
+    .belt img {
+      width: 12%;
+      left: 41%;
+      top: 79%;
+      position: absolute;
+    }
+    .socksButton img {
+      width: 6%;
+      left: 28%;
+      top: 88%;
+      position: absolute;
+    }
+    .socks img {
+      width: 16%;
+      left: 14%;
+      top: 72%;
+      position: absolute;
+    }
+    .bootsButton img {
+      width: 6%;
+      left: 7%;
+      top: 62%;
+      position: absolute;
+    }
+    .jacketButton img {
+      width: 6%;
+      left: 16%;
+      top: 17%;
+      position: absolute;
+    }
+    .boots img {
+      width: 14%;
+      left: 1%;
+      top: 62%;
+      position: absolute;
+    }
+    .jacket img {
+      width: 18%;
+      left: 1%;
+      top: 7%;
+      position: absolute;
+    }
+    .trousers img {
+      width: 12%;
+      left: 65%;
+      top: 7%;
+      position: absolute;
+    }
+    .sweater img {
+      width: 14%;
+      left: 70%;
+      top: 6%;
+      position: absolute;
+      z-index: 2;
+    }
+    .shirt img {
+      width: 17%;
+      left: 74%;
+      top: 6%;
+      position: absolute;
+      z-index: 3;
+    }
+    .wrap img {
+      width: 15%;
+      left: 68%;
+      top: 36%;
+      position: absolute;
+    }
+    .skirtButton img {
+      width: 5%;
+      left: 54%;
+      top: 38%;
+      position: absolute;
+    }
+    .tieButton img {
+      width: 4.5%;
+      left: 78%;
+      top: 92%;
+      position: absolute;
+    }
+    .sunglasses img {
+      width: 14%;
+      left: 39%;
+      top: 68%;
+      position: absolute;
+    }
+    .watch1 img {
+      width: 23%;
+      left: 25%;
+      top: 73%;
+      transform: rotate(4deg);
+      position: absolute;
+    }
+    .bag img {
+      width: 30%;
+      left: 12%;
+      top: 42%;
+      position: absolute;
+    }
+    .tShirt img {
+      width: 23%;
+      left: 13.5%;
+      top: -1%;
+      position: absolute;
+    }
+    .shoesButton img {
+      width: 5%;
+      left: 39%;
+      top: 59%;
+      position: absolute;
+    }
+    .shoes img {
+      width: 12%;
+      left: 33%;
+      top: 59%;
+      position: absolute;
+    }
+    .dressButton img {
+      width: 5%;
+      left: 40%;
+      top: 51%;
+      position: absolute;
+    }
+    .dress img {
+      width: 15%;
+      left: 33%;
+      top: 7%;
+      position: absolute;
+    }
+    .sandals img {
+      width: 13%;
+      left: 49%;
+      top: 56%;
+      position: absolute;
+    }
+    .watch1 img {
+      width: 23%;
+      left: 25%;
+      top: 74%;
+      position: absolute;
+    }
+    .wearButton img {
+      width: 6%;
+      left: 74%;
+      top: 27%;
+      position: absolute;
+    }
+    .wear img {
+      width: 14%;
+      left: 61%;
+      top: 7%;
+      position: absolute;
+    }
+    .hatButton img {
+      width: 5%;
+      left: 89%;
+      top: 33%;
+      position: absolute;
+    }
+    .shorts img {
+      width: 13%;
+      left: 85%;
+      top: 48%;
+      position: absolute;
+    }
+    .hat img {
+      width: 16%;
+      left: 83%;
+      top: 33%;
+      position: absolute;
+    }
+    .tie img {
+      width: 19%;
+      left: 67%;
+      top: 48%;
+      position: absolute;
+    }
     .mosquito img {
       width: 8%;
       left: 59%;
@@ -12105,6 +12747,272 @@ export default {
   @media only screen and (min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 1024px) and (max-width: 1600px){
+    .zipButton img {
+      width: 5%;
+      left: 34%;
+      top: 37%;
+      position: absolute;
+    }
+    .shirtButton img {
+      width: 6%;
+      left: 92%;
+      top: 28%;
+      position: absolute;
+    }
+    .jacketButton img {
+      width: 8%;
+      left: 18%;
+      top: 17%;
+      position: absolute;
+    }
+    .scarf1Button img {
+      width: 7%;
+      left: 56%;
+      top: 66%;
+      position: absolute;
+    }
+    .beltButton img {
+      width: 6%;
+      left: 44%;
+      top: 78%;
+      position: absolute;
+    }
+    .trousersButton img {
+      width: 10%;
+      left: 56%;
+      top: 36%;
+      position: absolute;
+    }
+    .sweaterButton img {
+      width: 9%;
+      left: 75%;
+      top: 5%;
+      position: absolute;
+    }
+    .socksButton img {
+      width: 7%;
+      left: 28%;
+      top: 89%;
+      position: absolute;
+    }
+    .mittensButton img {
+      width: 9%;
+      left: 62%;
+      top: 91%;
+      position: absolute;
+    }
+    .trousers img {
+      width: 16%;
+      left: 63%;
+      top: 8%;
+      position: absolute;
+    }
+    .sweater img {
+      width: 18%;
+      left: 69%;
+      top: 8%;
+      position: absolute;
+      z-index: 2;
+    }
+    .shirt img {
+      width: 21%;
+      left: 73%;
+      top: 8%;
+      position: absolute;
+      z-index: 3;
+    }
+    .zip img {
+      width: 18%;
+      left: 34%;
+      top: 26%;
+      position: absolute;
+    }
+    .jacket img {
+      width: 26%;
+      left: -1%;
+      top: 9%;
+      position: absolute;
+    }
+    .zip img {
+      width: 17%;
+      left: 34%;
+      top: 28%;
+      position: absolute;
+    }
+    .boots img {
+      width: 15%;
+      left: 1%;
+      top: 71%;
+      position: absolute;
+    }
+    .socks img {
+      width: 19%;
+      left: 12%;
+      top: 77%;
+      position: absolute;
+    }
+    .belt img {
+      width: 14%;
+      left: 40%;
+      top: 82%;
+      position: absolute;
+    }
+    .scarf1 img {
+      width: 17%;
+      left: 51%;
+      top: 68%;
+      position: absolute;
+    }
+    .mittens img {
+      width: 13%;
+      left: 53%;
+      top: 76%;
+      position: absolute;
+    }
+    .wrap img {
+      width: 22%;
+      left: 64%;
+      top: 42%;
+      position: absolute;
+    }
+    .tShirtButton img {
+      width: 8%;
+      left: 12%;
+      top: 27%;
+      position: absolute;
+    }
+    .tShirt img {
+      width: 25%;
+      left: 13%;
+      top: 7%;
+      position: absolute;
+    }
+    .shoesButton img {
+      width: 7%;
+      left: 38%;
+      top: 58%;
+      position: absolute;
+    }
+    .shoes img {
+      width: 15%;
+      left: 31%;
+      top: 62%;
+      position: absolute;
+    }
+    .bagButton img {
+      width: 7%;
+      left: 16%;
+      top: 74%;
+      position: absolute;
+    }
+    .bag img {
+      width: 32%;
+      left: 10%;
+      top: 57%;
+      position: absolute;
+    }
+    .sunglassesButton img {
+      width: 12%;
+      left: 50%;
+      top: 80%;
+      position: absolute;
+    }
+    .sunglasses img {
+      width: 16%;
+      left: 39%;
+      top: 72%;
+      position: absolute;
+    }
+    .watch1Button img {
+      width: 8%;
+      left: 27%;
+      top: 92%;
+      position: absolute;
+    }
+    .watch1 img {
+      width: 26%;
+      left: 23%;
+      top: 79%;
+      position: absolute;
+    }
+    .dressButton img {
+      width: 7%;
+      left: 39%;
+      top: 40%;
+      position: absolute;
+    }
+    .skirtButton img {
+      width: 6%;
+      left: 52%;
+      top: 31%;
+      position: absolute;
+    }
+    .sandalsButton img {
+      width: 8%;
+      left: 51%;
+      top: 61%;
+      position: absolute;
+    }
+    .sandals img {
+      width: 15%;
+      left: 48%;
+      top: 61%;
+      position: absolute;
+    }
+    .skirt img {
+      width: 15%;
+      left: 47%;
+      top: 10%;
+      position: absolute;
+    }
+    .wearButton img {
+      width: 7%;
+      left: 72%;
+      top: 30%;
+      position: absolute;
+    }
+    .wear img {
+      width: 18%;
+      left: 58%;
+      top: 19%;
+      position: absolute;
+    }
+    .hatButton img {
+      width: 6%;
+      left: 88%;
+      top: 38%;
+      position: absolute;
+    }
+    .hat img {
+      width: 18%;
+      left: 82%;
+      top: 38%;
+      position: absolute;
+    }
+    .shortsButton img {
+      width: 8%;
+      left: 89%;
+      top: 70%;
+      position: absolute;
+    }
+    .shorts img {
+      width: 18%;
+      left: 83%;
+      top: 50%;
+      position: absolute;
+    }
+    .tieButton img {
+      width: 6%;
+      left: 78%;
+      top: 92%;
+      position: absolute;
+    }
+    .tie img {
+      width: 21%;
+      left: 66%;
+      top: 63%;
+      position: absolute;
+    }
     .butterfly2Button img {
       width: 9%;
       left: 86%;

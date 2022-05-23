@@ -533,7 +533,7 @@
                             </div>
                             <div class="strengthsPresent">{{li2.persent}}%</div>
                           </div>
-                        </div>  
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -977,7 +977,7 @@
         }else if(type === 'Blend'){
           this.symbolNub = '7';
         }
-        this.scoresData = this.scoresMap[type];
+        this.scoresData = this.scoresMap[type].reverse();
         this.score = [];
         let m=0;
         for (let i = 0; i < this.scoresData.length; i++) {
@@ -1154,7 +1154,7 @@
           }else {
             this.categoryNum+=1
           }
-          this.categories(this.categoryNum);      
+          this.categories(this.categoryNum);
       },
       cardLeft(){
         if(this.categoryNum === 1){
@@ -1181,7 +1181,7 @@
               this.strengthsTemp[i] = Object.values(this.strengths)[this.strengthsMaxNub+i]
             }
             this.strengthsMaxNub+=length;
-          }    
+          }
         }
       },
       cLeft(){
@@ -1214,8 +1214,8 @@
               }
               this.strengthsMaxNub=this.strengthsMaxNub-3;
             }
-          } 
-          
+          }
+
         }
       },
       categories(str){
@@ -1873,7 +1873,7 @@
           this.improvement = res.data.improvement;
           this.scores = res.data.scores;
           this.scoresMap = res.data.scoresMap;
-          this.scoresData = this.scoresMap.Vocabulary;
+          this.scoresData = this.scoresMap.Vocabulary.reverse();
           let imgSrc = '';
           for (let i = 0; i < this.overall.length; i++) {
             this.overall[i].name = this.overall[i].abbreviation;

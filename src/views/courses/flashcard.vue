@@ -1722,6 +1722,132 @@
             img:require('../../assets/image/Flying Bugs/Mosquito.png')
           }
         ],
+        ClothesPart1:[
+          {
+            id:1,
+            cardName:'T-shirt',
+            audio:require('../../assets/Flashcard Audio/clothes/t-shirt.mp3'),
+            img:require('../../assets/image/Summer clothes/T-shirt.jpg')
+          },{
+            id:2,
+            cardName:'bag',
+            audio:require('../../assets/Flashcard Audio/clothes/bag.mp3'),
+            img:require('../../assets/image/Summer clothes/Bag.jpg')
+          },{
+            id:3,
+            cardName:'watch',
+            audio:require('../../assets/Flashcard Audio/clothes/watch.mp3'),
+            img:require('../../assets/image/Summer clothes/Watch.jpg')
+          },{
+            id:4,
+            cardName:'dress',
+            audio:require('../../assets/Flashcard Audio/clothes/dress.mp3'),
+            img:require('../../assets/image/Summer clothes/Dress.jpg')
+          },{
+            id:5,
+            cardName:'shoes',
+            audio:require('../../assets/Flashcard Audio/clothes/shoes.mp3'),
+            img:require('../../assets/image/Summer clothes/Shoes.jpg')
+          },{
+            id:6,
+            cardName:'wear',
+            audio:require('../../assets/Flashcard Audio/clothes/wear.mp3'),
+            img:require('../../assets/image/Summer clothes/Wear.jpg')
+          },{
+            id:7,
+            cardName:'hat',
+            audio:require('../../assets/Flashcard Audio/clothes/hat.mp3'),
+            img:require('../../assets/image/Summer clothes/Hat.jpg')
+          },{
+            id:8,
+            cardName:'shorts',
+            audio:require('../../assets/Flashcard Audio/clothes/shorts.mp3'),
+            img:require('../../assets/image/Summer clothes/Shorts.jpg')
+          },{
+            id:9,
+            cardName:'sunglasses',
+            audio:require('../../assets/Flashcard Audio/clothes/sunglasses.mp3'),
+            img:require('../../assets/image/Summer clothes/Sunglasses.jpg')
+          },{
+            id:10,
+            cardName:'skirt',
+            audio:require('../../assets/Flashcard Audio/clothes/skirt.mp3'),
+            img:require('../../assets/image/Summer clothes/Skirt.jpg')
+          },{
+            id:11,
+            cardName:'tie',
+            audio:require('../../assets/Flashcard Audio/clothes/tie.mp3'),
+            img:require('../../assets/image/Summer clothes/Tie.jpg')
+          },{
+            id:12,
+            cardName:'sandals',
+            audio:require('../../assets/Flashcard Audio/clothes/sandals.mp3'),
+            img:require('../../assets/image/Summer clothes/Sandals.jpg')
+          }
+        ],
+        ClothesPart2:[
+          {
+            id:1,
+            cardName:'jacket',
+            audio:require('../../assets/Flashcard Audio/clothes/jacket.mp3'),
+            img:require('../../assets/image/Flying Bugs/Wings.png')
+          },{
+            id:2,
+            cardName:'boots',
+            audio:require('../../assets/Flashcard Audio/clothes/boots.mp3'),
+            img:require('../../assets/image/Flying Bugs/Ladybug.png')
+          },{
+            id:3,
+            cardName:'zip',
+            audio:require('../../assets/Flashcard Audio/clothes/zip.mp3'),
+            img:require('../../assets/image/Flying Bugs/Sting.png')
+          },{
+            id:4,
+            cardName:'socks',
+            audio:require('../../assets/Flashcard Audio/clothes/socks.mp3'),
+            img:require('../../assets/image/Flying Bugs/Buzz.png')
+          },{
+            id:5,
+            cardName:'belt',
+            audio:require('../../assets/Flashcard Audio/clothes/belt.mp3'),
+            img:require('../../assets/image/Flying Bugs/Flowers.png')
+          },{
+            id:6,
+            cardName:'scarf',
+            audio:require('../../assets/Flashcard Audio/clothes/scarf.mp3'),
+            img:require('../../assets/image/Flying Bugs/Fly.png')
+          },{
+            id:7,
+            cardName:'trousers',
+            audio:require('../../assets/Flashcard Audio/clothes/trousers.mp3'),
+            img:require('../../assets/image/Flying Bugs/Butterfly.png')
+          },{
+            id:8,
+            cardName:'wrap',
+            audio:require('../../assets/Flashcard Audio/clothes/wrap.mp3'),
+            img:require('../../assets/image/Flying Bugs/Bee.png')
+          },{
+            id:9,
+            cardName:'pajamas',
+            audio:require('../../assets/Flashcard Audio/clothes/pajamas.mp3'),
+            img:require('../../assets/image/Flying Bugs/Firefly.png')
+          },{
+            id:10,
+            cardName:'mittens',
+            audio:require('../../assets/Flashcard Audio/clothes/mittens.mp3'),
+            img:require('../../assets/image/Flying Bugs/Dragonfly.png')
+          },{
+            id:11,
+            cardName:'sweater',
+            audio:require('../../assets/Flashcard Audio/clothes/sweater.mp3'),
+            img:require('../../assets/image/Flying Bugs/Hive.png')
+          },{
+            id:12,
+            cardName:'shirt',
+            audio:require('../../assets/Flashcard Audio/clothes/shirt.mp3'),
+            img:require('../../assets/image/Flying Bugs/Mosquito.png')
+          }
+        ],
         list:[],
         titleUrl:{
           MyCommunity:require('../../assets/image/2-logo.png'),
@@ -1763,6 +1889,8 @@
           TransportationPart2:require('../../assets/image/4-logo2.png'),
           BugsPart1:require('../../assets/image/5-logo1.png'),
           BugsPart2:require('../../assets/image/5-logo2.png'),
+          ClothesPart1:require('../../assets/image/6-logo1.png'),
+          ClothesPart2:require('../../assets/image/6-logo2.png'),
         },
         title:'../../assets/image/6-6logo.png',
         flashCardUrl:'http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/9315e4a9-e1ec-4f49-8db5-5b3a9b6ae083.png',
