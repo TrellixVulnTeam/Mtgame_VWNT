@@ -453,33 +453,12 @@
                         <img src="../../assets/image/star_frame.png" v-if="li.allstar[0].three2" class="littlestar">
                       </td>
                     </tr>
-                    <!-- <tr v-for="(li,index) in detailList" :key="index" v-if="ifboss2">
-            					<td>{{li.date| formatDate}}</td>
-            					<td>{{li.score}}</td>
-            					<td>
-            			<img src="../../assets/image/Little_Star_frame.png" v-if="!li.stars[0].onestart" class="littlestar">
-            			<img src="../../assets/image/star_frame.png" v-if="li.stars[0].onestart" class="littlestar" >
-            			<img src="../../assets/image/Little_Star_frame.png" v-if="!li.stars[0].twostart" class="littlestar">
-            			<img src="../../assets/image/star_frame.png" v-if="li.stars[0].twostart" class="littlestar" >
-            			<img src="../../assets/image/Little_Star_frame.png" v-if="!li.stars[0].threestart" class="littlestar">
-            			<img src="../../assets/image/star_frame.png" v-if="li.stars[0].threestart" class="littlestar">
-
-            			<img src="../../assets/image/Little_Star_frame.png" v-if="!li.allstar[0].one1" class="littlestar">
-            			<img src="../../assets/image/star_frame.png" v-if="li.allstar[0].one1" class="littlestar">
-            			<img src="../../assets/image/Little_Star_frame.png" v-if="!li.allstar[0].two1" class="littlestar" >
-            			<img src="../../assets/image/star_frame.png" v-if="li.allstar[0].two1" class="littlestar" >
-            			<img src="../../assets/image/Little_Star_frame.png" v-if="!li.allstar[0].three1" class="littlestar">
-            			<img src="../../assets/image/star_frame.png" v-if="li.allstar[0].three1" class="littlestar"> -->
-
-                    <!-- </td>
-            			</tr> -->
                   </table>
                 </div>
               </div>
               <!--phonics替代原先opciay1的部分，新更新的内容 v-if="opciayStatistics"-->
               <div  v-if="opciay2" style="width: 100%;height: 100%;">
                 <div class="categories"  v-if="categoriesName === 'Performance Report' ||[1,5,6,7].includes(categoryNum)">
-<!--                  <div v-if="categoriesName === 'Overall' || categoriesName === 'Strengths'">-->
                   <div v-if="[1,5].includes(categoryNum)">
                     <div class="cRight">
                       <img src="../../assets/image/LearningReportRight.png" class="LearningReportRight" @click="cRight">
@@ -499,37 +478,52 @@
                   <div v-if="categoryNum===5">
                     <div  class="Strengths" v-for="(li,index) in strengthsTemp" :key='index'>
                       <div class="strengthsDiv">
+                        <div class="strengthsL" v-if="Object.values(li)[0].classification==='Blend Recognition'" style="background: #1ac6d9">
+                          <div class="strengthsText" >{{Object.values(li)[0].classification}}</div>
+                        </div>
+                        <div class="strengthsL" v-if="Object.values(li)[0].classification==='Sound Recognition'" style="background: #3793a8">
+                          <div class="strengthsText" >{{Object.values(li)[0].classification}}</div>
+                        </div>
                         <div class="strengthsL" v-if="Object.values(li)[0].classification==='Spelling'" style="background: #ffa217">
                           <div class="strengthsText" >{{Object.values(li)[0].classification}}</div>
                         </div>
-                        <div class="strengthsL" v-if="Object.values(li)[0].classification==='Letter Recognition'" style="background: #ff6a8a">
+                        <div class="strengthsL" v-if="Object.values(li)[0].classification==='Letter Recognition'" style="background: #f55b5b">
                           <div class="strengthsText" >{{Object.values(li)[0].classification}}</div>
                         </div>
                         <div class="strengthsL" v-if="Object.values(li)[0].classification==='Listening'" style="background: #48cfdb">
                           <div class="strengthsText" >{{Object.values(li)[0].classification}}</div>
                         </div>
-                        <div class="strengthsL" v-if="Object.values(li)[0].classification==='Vocabulary'" style="background: #81db48">
+                        <div class="strengthsL" v-if="Object.values(li)[0].classification==='Reading'" style="background: #8460cc">
                           <div class="strengthsText" >{{Object.values(li)[0].classification}}</div>
                         </div>
-                        <div class="strengthsL" v-if="Object.values(li)[0].classification==='Writing'" style="background: #f0aae1">
+                        <div class="strengthsL" v-if="Object.values(li)[0].classification==='Vocabulary'" style="background: #00c455">
+                          <div class="strengthsText" >{{Object.values(li)[0].classification}}</div>
+                        </div>
+                        <div class="strengthsL" v-if="Object.values(li)[0].classification==='Writing'" style="background: #de81ca">
                           <div class="strengthsText" >{{Object.values(li)[0].classification}}</div>
                         </div>
                         <img class="strengthsLogo" src="../../assets/image/strengthsLogo.png" />
                         <div class="strengthsLiAll">
                           <div class="strengthsLi" v-for="(li2,index2) in li" :key='index2'>
-                            <div class="strengthsAbbreviation" v-if="index2===0">{{li2.letter}}</div>
-                            <div class="strengthsAbbreviation" v-if="Object.values(li)[0].classification==='Spelling'&&index2!==0" style="color: #ffa217">{{li2.letter}}</div>
-                            <div class="strengthsAbbreviation" v-if="Object.values(li)[0].classification==='Letter Recognition'&&index2!==0" style="color: #ff6a8a">{{li2.letter}}</div>
-                            <div class="strengthsAbbreviation" v-if="Object.values(li)[0].classification==='Listening'&&index2!==0" style="color: #48cfdb">{{li2.letter}}</div>
-                            <div class="strengthsAbbreviation" v-if="Object.values(li)[0].classification==='Vocabulary'&&index2!==0" style="color: #81db48">{{li2.letter}}</div>
-                            <div class="strengthsAbbreviation" v-if="Object.values(li)[0].classification==='Writing'&&index2!==0" style="color: #f0aae1">{{li2.letter}}</div>
+                            <div :class="level==='Advanced'?'strengthsAbbreviationAdvanced':'strengthsAbbreviation'" v-if="index2!==0">{{li2.letter}}</div>
+                            <div :class="level==='Advanced'?'strengthsAbbreviationAdvanced':'strengthsAbbreviation'" v-if="Object.values(li)[0].classification==='Blend Recognition'&&index2===0" style="color: #1ac6d9">{{li2.letter}}</div>
+                            <div :class="level==='Advanced'?'strengthsAbbreviationAdvanced':'strengthsAbbreviation'" v-if="Object.values(li)[0].classification==='Sound Recognition'&&index2===0" style="color: #3793a8">{{li2.letter}}</div>
+                            <div :class="level==='Advanced'?'strengthsAbbreviationAdvanced':'strengthsAbbreviation'" v-if="Object.values(li)[0].classification==='Spelling'&&index2===0" style="color: #ffa217">{{li2.letter}}</div>
+                            <div :class="level==='Advanced'?'strengthsAbbreviationAdvanced':'strengthsAbbreviation'" v-if="Object.values(li)[0].classification==='Letter Recognition'&&index2===0" style="color: #f55b5b">{{li2.letter}}</div>
+                            <div :class="level==='Advanced'?'strengthsAbbreviationAdvanced':'strengthsAbbreviation'" v-if="Object.values(li)[0].classification==='Listening'&&index2===0" style="color: #48cfdb">{{li2.letter}}</div>
+                            <div :class="level==='Advanced'?'strengthsAbbreviationAdvanced':'strengthsAbbreviation'" v-if="Object.values(li)[0].classification==='Reading'&&index2===0" style="color: #8460cc">{{li2.letter}}</div>
+                            <div :class="level==='Advanced'?'strengthsAbbreviationAdvanced':'strengthsAbbreviation'" v-if="Object.values(li)[0].classification==='Vocabulary'&&index2===0" style="color: #00c455">{{li2.letter}}</div>
+                            <div :class="level==='Advanced'?'strengthsAbbreviationAdvanced':'strengthsAbbreviation'" v-if="Object.values(li)[0].classification==='Writing'&&index2===0" style="color: #de81ca">{{li2.letter}}</div>
                             <div class="strengthsLogo2Div">
-                              <img class="strengthsLogo2" v-if="index2===0" src="../../assets/image/allColor.png"/>
-                              <img class="strengthsLogo2" v-if="Object.values(li)[0].classification==='Spelling'&&index2!==0" src="../../assets/image/spellingColor.png"/>
-                              <img class="strengthsLogo2" v-if="Object.values(li)[0].classification==='Letter Recognition'&&index2!==0" src="../../assets/image/LetterRecognitionColor.png"/>
-                              <img class="strengthsLogo2" v-if="Object.values(li)[0].classification==='Listening'&&index2!==0" src="../../assets/image/listeningColor.png"/>
-                              <img class="strengthsLogo2" v-if="Object.values(li)[0].classification==='Vocabulary'&&index2!==0" src="../../assets/image/vocabularyColor.png"/>
-                              <img class="strengthsLogo2" v-if="Object.values(li)[0].classification==='Writing'&&index2!==0" src="../../assets/image/writingColor.png"/>
+                              <img class="strengthsLogo2" v-if="index2!==0" src="../../assets/image/allColor.png"/>
+                              <img class="strengthsLogo2" v-if="Object.values(li)[0].classification==='Blend Recognition'&&index2===0" src="../../assets/image/BlendRecognitionColor.png"/>
+                              <img class="strengthsLogo2" v-if="Object.values(li)[0].classification==='Sound Recognition'&&index2===0" src="../../assets/image/SoundRecognitionColor.png"/>
+                              <img class="strengthsLogo2" v-if="Object.values(li)[0].classification==='Spelling'&&index2===0" src="../../assets/image/spellingColor.png"/>
+                              <img class="strengthsLogo2" v-if="Object.values(li)[0].classification==='Letter Recognition'&&index2===0" src="../../assets/image/LetterRecognitionColor.png"/>
+                              <img class="strengthsLogo2" v-if="Object.values(li)[0].classification==='Listening'&&index2===0" src="../../assets/image/listeningColor.png"/>
+                              <img class="strengthsLogo2" v-if="Object.values(li)[0].classification==='Reading'&&index2===0" src="../../assets/image/readingColor.png"/>
+                              <img class="strengthsLogo2" v-if="Object.values(li)[0].classification==='Vocabulary'&&index2===0" src="../../assets/image/vocabularyColor.png"/>
+                              <img class="strengthsLogo2" v-if="Object.values(li)[0].classification==='Writing'&&index2===0" src="../../assets/image/writingColor.png"/>
                             </div>
                             <div class="strengthsPresent">{{li2.persent}}%</div>
                           </div>
@@ -604,18 +598,6 @@
                 </div>
                 <!--Scores for key areas-->
                 <div class="areasDiv" v-if="categoryNum === 4">
-<!--                  <div class="areasButton">
-                    <div class="areasButton1" :style="symbolNub ==='1' ? symbolColor:symbolDefaultColor" @click="areas('overall')">Overall</div>
-                    <div class="areasButton2">
-                      <div class="areasButton3" :style="symbolNub ==='2' ? symbolColor:symbolDefaultColor" @click="areas('listening')">Listening</div>
-                      <div class="areasButton3" :style="symbolNub ==='3' ? symbolColor:symbolDefaultColor" @click="areas('vocab')">Vocab</div>
-                    </div>
-                    <div class="areasButton2">
-                      <div class="areasButton3" :style="symbolNub ==='4' ? symbolColor:symbolDefaultColor" @click="areas('spelling')">Spelling</div>
-                      <div class="areasButton3" :style="symbolNub ==='5' ? symbolColor:symbolDefaultColor" @click="areas('writing')">Writing</div>
-                    </div>
-                    <div class="areasButton1" :style="symbolNub ==='6' ? symbolColor:symbolDefaultColor" @click="areas('letter')">Letter Recognition</div>
-                  </div>-->
                   <div class="areasButton">
                     <div class="areasButton1" :style="symbolNub ==='1' ? symbolColor:symbolDefaultColor" @click="areas('Vocabulary')">Vocabulary</div>
                     <div class="areasButton1" :style="symbolNub ==='2' ? symbolColor:symbolDefaultColor" @click="areas('Spelling')">Spelling</div>
@@ -977,7 +959,7 @@
         }else if(type === 'Blend'){
           this.symbolNub = '7';
         }
-        this.scoresData = this.scoresMap[type].reverse();
+        this.scoresData = this.scoresMap[type];
         this.score = [];
         let m=0;
         for (let i = 0; i < this.scoresData.length; i++) {
@@ -1873,7 +1855,7 @@
           this.improvement = res.data.improvement;
           this.scores = res.data.scores;
           this.scoresMap = res.data.scoresMap;
-          this.scoresData = this.scoresMap.Vocabulary.reverse();
+          this.scoresData = this.scoresMap.Vocabulary;
           let imgSrc = '';
           for (let i = 0; i < this.overall.length; i++) {
             this.overall[i].name = this.overall[i].abbreviation;
@@ -2159,7 +2141,7 @@
     transform: translateX(-50%);
   }
 
-.strengthsText[data-v-2f20336a] {
+.strengthsText {
     color: white;
     font-family: pepper,serif;
     font-size: 24px;
@@ -2181,9 +2163,22 @@
     font-size: 2rem;
     font-family: 'kg';
     font-weight: 600;
-    color: #1ac6d9;
+    color: #9c9c9c;
     position: relative;
     text-align: right;
+  }
+
+  .strengthsAbbreviationAdvanced {
+    width: 100%;
+    height: 40px;
+    left: -4%;
+    font-size: 0.9rem;
+    font-family: 'kg';
+    font-weight: 500;
+    color: #9c9c9c;
+    position: relative;
+    text-align: right;
+    line-height: 40px;
   }
 
 .strengthsLiAll{
@@ -3117,7 +3112,7 @@
   .bottommemu {
     width: 95%;
     height: 80%;
-    border-radius: 20px;
+    border-radius: 15px;
     float: left;
     margin-top: -9%;
   }
@@ -3432,6 +3427,83 @@
   }
 
   @media screen and (max-width: 569px) {
+    .strengthsAbbreviation {
+      width: 100%;
+      height: 100%;
+      left: -4%;
+      font-size: 0.8rem;
+      font-family: 'kg';
+      font-weight: 600;
+      color: #9c9c9c;
+      position: relative;
+      line-height: 20px;
+      text-align: right;
+    }
+    .strengthsLogo2 {
+      width: 80%;
+      bottom: -15%;
+      position: relative;
+    }
+    .strengthsL {
+      position: relative;
+      background: #1ac6d9;
+      padding: 1% 0;
+      border-radius: 30px;
+      top: 8%;
+      width: 98%;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+    }
+    .strengthsLi {
+      width: 80%;
+      height: 15PX;
+      top: -10%;
+      left: -3%;
+      margin-top: 0px;
+      position: relative;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+    }
+    .strengthsAbbreviationAdvanced{
+      width: 100%;
+      height: 20px;
+      font-size: 0.7rem;
+      font-family: 'pepper';
+      color: #9c9c9c;
+      position: relative;
+      text-align: right;
+      line-height: 20px;
+      white-space: nowrap;
+      /* text-overflow: ellipsis; */
+      overflow: hidden;
+      left: 0%;
+      -webkit-transform: scale(0.9);
+      transform: scale(0.9);
+    }
+    .strengthsPresent {
+      width: 15%;
+      height: 100%;
+      font-size: 0.7rem;
+      color: #1ac6d9;
+      position: relative;
+      bottom: -30%;
+      transform: scale(0.8);
+    }
+    .strengthsDiv{
+      float: left;
+      width: 33%;
+      height: 95%;
+      margin-top: 2%;
+    }
+    .strengthsText{
+      color: white;
+      font-family: pepper,serif;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 15px;
+    }
     .improvementButton {
       width: 90%;
       background-color: #f58948;
@@ -3725,15 +3797,15 @@
     }
     .menu2Change {
       width: 65%;
-      border-radius: 15px;
+      border-radius: 10px;
     }
     .menu1 {
       width: 35%;
-      border-radius: 15px;
+      border-radius: 10px;
     }
     .menu2 {
       width: 35%;
-      border-radius: 15px;
+      border-radius: 10px;
     }
     .topMenu {
       height: 28%;
@@ -3854,6 +3926,89 @@
   @media screen and (min-device-height: 570px) and (max-device-height: 735px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 570px) and (max-device-height: 735px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 570px) and (max-width: 735px){
+    .strengthsLiAll{
+      margin-top: -20%;
+      position: relative;
+    }
+    .strengthsAbbreviation{
+      width: 100%;
+      height: 100%;
+      left: 0%;
+      font-size: 0.8rem;
+      font-family: 'kg';
+      font-weight: 600;
+      color: #9c9c9c;
+      position: relative;
+      line-height: 28px;
+      text-align: right;
+    }
+    .strengthsLogo {
+      width: 10%;
+      height: 15%;
+      position: relative;
+      left: 45%;
+      top: 10%;
+    }
+    .strengthsL{
+      position: relative;
+      background: #1ac6d9;
+      padding: 1% 0;
+      border-radius: 30px;
+      top: 8%;
+      width: 98%;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+    }
+    .strengthsLi {
+      width: 80%;
+      height: 20PX;
+      top: -10%;
+      left: 1%;
+      margin-top: 2px;
+      position: relative;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+    }
+    .strengthsAbbreviationAdvanced {
+      width: 100%;
+      height: 30px;
+      font-size: 0.7rem;
+      font-family: 'kg';
+      color: #9c9c9c;
+      position: relative;
+      text-align: right;
+      line-height: 30px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      left: 0%;
+    }
+    .strengthsPresent {
+      width: 15%;
+      height: 100%;
+      font-size: 0.7rem;
+      color: #1ac6d9;
+      position: relative;
+      font-weight: 600;
+      bottom: -30%;
+      transform: scale(0.9);
+      line-height: 18px;
+    }
+    .strengthsDiv{
+      float: left;
+      width: 33%;
+      height: 95%;
+      margin-top: 2%;
+    }
+    .strengthsText{
+      color: white;
+      font-family: pepper,serif;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 15px;
+    }
     .historyList {
       position: absolute;
       width: 103%;
@@ -4072,19 +4227,20 @@
     .categories {
       border-radius: 20px;
     }
-    .categoriesLi {
+    .categoriesLi{
       background-color: #f58948;
       display: inline-block;
-      width: 40%;
+      width: 43%;
       height: 15%;
       border-radius: 30px;
       float: left;
-      margin: 4% 0 0 6.5%;
+      margin: 4% 0 0 4.5%;
       color: white;
       font-size: 0.7rem;
       font-family: 'pepper', serif;
       border: 2px solid #ca642b;
       line-height: 20px;
+      /* transform: scale(0.6); */
     }
     .phonicsLevel {
       padding-left: 45px;
@@ -4129,6 +4285,67 @@
   @media screen and (min-device-height: 736px) and (max-device-height: 811px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 736px) and (max-device-height: 811px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 736px) and (max-width: 811px) {
+    .strengthsAbbreviation {
+      width: 100%;
+      height: 100%;
+      left: 0%;
+      font-size: 1rem;
+      font-family: 'kg';
+      font-weight: 600;
+      color: #9c9c9c;
+      position: relative;
+      text-align: right;
+      line-height: 27px;
+    }
+    .strengthsLi {
+      width: 80%;
+      height: 20PX;
+      top: -10%;
+      left: 0%;
+      margin-top: 0px;
+      position: relative;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+    }
+    .strengthsAbbreviationAdvanced {
+      width: 100%;
+      height: 30px;
+      font-size: 0.7rem;
+      font-family: 'kg';
+      color: #9c9c9c;
+      position: relative;
+      text-align: right;
+      line-height: 30px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      left: 0%;
+    }
+    .strengthsPresent {
+      width: 15%;
+      height: 100%;
+      font-size: 0.7rem;
+      color: #1ac6d9;
+      position: relative;
+      font-weight: 600;
+      bottom: -30%;
+      transform: scale(0.9);
+      line-height: 18px;
+    }
+    .strengthsDiv{
+      float: left;
+      width: 33%;
+      height: 95%;
+      margin-top: 4%;
+    }
+    .strengthsText{
+      color: white;
+      font-family: pepper,serif;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 15px;
+    }
     .areasButton1 {
       width: 80%;
       display: inline-block;
@@ -4459,6 +4676,66 @@
   @media screen and (min-device-height: 812px) and (max-device-height: 894px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 812px) and (max-device-height: 894px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 812px) and (max-width: 894px) {
+    .strengthsAbbreviation {
+      width: 100%;
+      height: 100%;
+      left: -4%;
+      font-size: 1rem;
+      font-family: 'kg';
+      font-weight: 600;
+      color: #9c9c9c;
+      position: relative;
+      line-height: 27px;
+      text-align: right;
+    }
+    .strengthsLi {
+      width: 80%;
+      height: 20PX;
+      top: -10%;
+      left: 0%;
+      margin-top: 2px;
+      position: relative;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+    }
+    .strengthsAbbreviationAdvanced {
+      width: 100%;
+      height: 30px;
+      font-size: 0.7rem;
+      font-family: 'kg';
+      color: #9c9c9c;
+      position: relative;
+      text-align: right;
+      line-height: 30px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      left: 0%;
+    }
+    .strengthsPresent {
+      width: 15%;
+      height: 100%;
+      font-size: 0.7rem;
+      color: #1ac6d9;
+      position: relative;
+      bottom: -30%;
+      line-height: 17px;
+    }
+    .strengthsDiv{
+      float: left;
+      width: 33%;
+      height: 95%;
+      margin-top: 2%;
+    }
+    .strengthsText{
+      color: white;
+      font-family: pepper,serif;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 15px;
+    }
+
     .historyList {
       position: absolute;
       width: 105%;
@@ -4813,6 +5090,63 @@
   @media screen and (min-device-height: 895px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 895px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 895px) and (max-width: 1023px) {
+    .strengthsAbbreviation{
+      width: 100%;
+      height: 100%;
+      left: -4%;
+      font-size: 1.2rem;
+      font-family: 'kg';
+      font-weight: 600;
+      color: #9c9c9c;
+      position: relative;
+      text-align: right;
+    }
+    .strengthsLi{
+      width: 80%;
+      height: 20PX;
+      top: -10%;
+      left: 2%;
+      margin-top: 4px;
+      position: relative;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+    }
+    .strengthsAbbreviationAdvanced {
+      width: 100%;
+      height: 30px;
+      font-size: 0.7rem;
+      font-family: 'kg';
+      color: #9c9c9c;
+      position: relative;
+      text-align: right;
+      line-height: 30px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      left: 0%;
+    }
+    .strengthsPresent {
+      width: 15%;
+      height: 100%;
+      font-size: 0.7rem;
+      color: #1ac6d9;
+      position: relative;
+      bottom: -30%;
+    }
+    .strengthsDiv{
+      float: left;
+      width: 33%;
+      height: 95%;
+      margin-top: 2%;
+    }
+    .strengthsText{
+      color: white;
+      font-family: pepper,serif;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 15px;
+    }
     .historyList {
       position: absolute;
       width: 100%;
@@ -5206,6 +5540,75 @@
   @media screen and (min-device-height: 1024px) and (max-device-height: 1199px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 1024px) and (max-device-height: 1199px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 1024px) and (max-width: 1199px) {
+
+    .strengthsL{
+      position: relative;
+      background: #1ac6d9;
+      padding: 3% 0;
+      border-radius: 30px;
+      top: 8%;
+      width: 98%;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+    }
+    .strengthsAbbreviation {
+      width: 100%;
+      height: 100%;
+      left: -4%;
+      font-size: 1.4rem;
+      font-family: 'kg';
+      font-weight: 600;
+      color: #9c9c9c;
+      position: relative;
+      line-height: 35px;
+      text-align: right;
+    }
+    .strengthsLiAll {
+      margin-top: -13%;
+      position: relative;
+    }
+    .strengthsLi {
+      width: 85%;
+      height: 40PX;
+      top: -6%;
+      left: -7px;
+      margin-top: 0px;
+      position: relative;
+      display: flex;
+    }
+    .strengthsAbbreviationAdvanced {
+      width: 100%;
+      height: 40px;
+      left: 0%;
+      font-size: 0.7rem;
+      font-family: 'kg';
+      color: #9c9c9c;
+      position: relative;
+      text-align: right;
+      line-height: 40px;
+    }
+    .strengthsLogo{
+      width: 8%;
+      height: 12%;
+      position: relative;
+      left: 45%;
+      top: 10%;
+    }
+    .strengthsPresent{
+      width: 10%;
+      height: 100%;
+      font-size: 1rem;
+      color: #1ac6d9;
+      position: relative;
+      bottom: -30%;
+    }
+    .strengthsText{
+      color: white;
+      font-family: pepper,serif;
+      font-size: 20px;
+      font-weight: 500;
+    }
     .historyLi {
       font-size: 1rem;
     }
@@ -5527,11 +5930,7 @@
       top: 2%;
       height: 80%;
     }
-
-    // .listimg1{
-    // 	padding: 15px;
-    // 	width: 23%;
-    // }
+    
     .neirong {
       font-size: 1.2rem;
     }
@@ -5656,6 +6055,39 @@
   @media screen and (min-device-height: 1200px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 1200px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 1200px) and (max-width: 1600px) {
+    .strengthsText{
+      color: white;
+      font-family: pepper,serif;
+      font-size: 20px;
+      font-weight: 600;
+    }
+    .strengthsLi{
+      width: 85%;
+      height: 40PX;
+      top: -6%;
+      left: 1%;
+      margin-top: 10px;
+      position: relative;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+    }
+    .strengthsLiAll {
+      margin-top: -17%;
+      position: relative;
+    }
+    .strengthsAbbreviationAdvanced{
+      width: 100%;
+      height: 40px;
+      left: -2%;
+      font-size: 1rem;
+      font-family: 'kg';
+      font-weight: 600;
+      color: #9c9c9c;
+      position: relative;
+      text-align: right;
+      line-height: 40px;
+    }
     .historyLabel {
       display: inline;
       width: 5%;
