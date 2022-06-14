@@ -178,7 +178,6 @@
           this.list1[0].image = this.pic + this.list1[0].image;
           // this.list1[0].image2 = this.pic + this.list1[0].image2;
           // }
-          console.log(this.list1[0].image);
           if (this.onef === true) {
             setTimeout(() => {
               this.onef = false;
@@ -295,7 +294,6 @@
         }
       },
       resize() {
-        console.log('resize');
         setTimeout(() => {
           if (this.list1.length > 0) {
             const canvas = document.getElementById('canvas'); // 初次进来初始化画布
@@ -334,7 +332,6 @@
 
             const reg2 = new Image();
             reg2.src = c.toDataURL("image/png");
-            console.log(reg2.src);
             this.yuantu = reg2.src;
             o.clearRect(0, 0, c.width, c.height);
           }
@@ -473,13 +470,13 @@
         this.popp = !this.popp;
       },
       help() {
-        if (this.onef == false) {
+        if (this.onef === false) {
           this.spanp = "Use your finger and trace the letter.";
           this.popp = !this.popp;
-          if (this.items1[0].rank == 0) {
+          if (this.items1[0].rank === 0) {
             this.ruleimg15 = true;
             this.ruleimg25 = false;
-          } else if (this.items1[0].rank == 1) {
+          } else if (this.items1[0].rank === 1) {
             this.ruleimg15 = false;
             this.ruleimg25 = true;
           }
@@ -541,7 +538,7 @@
           } else {
             canvasX = e.changedTouches[0].clientX - t.parentNode.offsetLeft;
             canvasY = e.changedTouches[0].clientY - t.parentNode.offsetTop;
-          };
+          }
           // 连接到移动的位置并上色
           this.context.lineTo(canvasX, canvasY);
           this.context.stroke();

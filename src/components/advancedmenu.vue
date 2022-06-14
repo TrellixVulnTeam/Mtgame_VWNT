@@ -1,6 +1,6 @@
 <template>
 
-  <div id="hello" style="background: ">
+  <div id="hello">
     <!-- <h1>{{ msg }}</h1> -->
     <div class="contain" id="container">
 <!--      <img src="../assets/image/advancebg9.png" style="width: 100%;top:0;height: 100%;display:block;position: absolute;">-->
@@ -173,6 +173,7 @@
     },
     data() {
       return {
+        loading:false,
         popp: false,
         sum: 0,
         spring: '',
@@ -700,10 +701,25 @@
 
       },
     },
+    watch: {
+      'loading': function(newVal) {
+        if (this.loading === true) {
+          alertMsg3("Loading...Please Wait");
+          setTimeout(() => {
+              document.getElementById('alertFram').style.display = 'none'}
+            ,15000)
+        }else{
+          setTimeout(() => {
+              document.getElementById('alertFram').style.display = 'none'}
+            ,1000)
+        }
+      },
+    },
     // destroyed() {
     // document.body.removeEventListener('touchmove',this.bodyScroll,{passive: false});
     // },
     created() {
+      this.loading = true;
       this.star = "http://monkeytown.monkeytree.com.hk/image/season-star2.png";
       this.lightstar = "http://monkeytown.monkeytree.com.hk/image/season-star.png";
       if (this.$route.query.studentId) {
@@ -715,6 +731,7 @@
           this.$axios.post(this.url2, qs.stringify({
             studentId: localStorage.getItem('studentId'),
           })).then(res => {
+            this.loading = false;
             this.phonicsList = res.data.phonicsList;
             for(var i=0;i<this.phonicsList.length;i++){
               if(this.phonicsList[i].name==this.$route.query.level){
@@ -747,6 +764,7 @@
                         studentId: localStorage.getItem('studentId'),
                         phonicsDetailId: this.unitsId
                       })).then(res => {
+                        this.loading = false;
                         this.UnitsList = res.data.PhonicsList;
                         this.sum = res.data.sumCoins;
                         localStorage.setItem('sumCoins', this.sum);
@@ -826,6 +844,7 @@
           studentId: localStorage.getItem('studentId'),
           phonicsDetailId: this.unitsId
         })).then(res => {
+          this.loading = false;
           this.UnitsList = res.data.PhonicsList;
           this.sum = res.data.sumCoins;
           localStorage.setItem('sumCoins', this.sum);

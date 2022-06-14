@@ -37,7 +37,7 @@
           <img :src=star style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="!stars[2].twostart">
           <img :src=lightstar class="imgposit1" v-if="stars[2].threestart">
           <img :src=star class="imgposit1" v-if="!stars[2].threestart">
-          <img @click="change3" src="../assets/image/inter5.png" style="position: sticky;height: 65%">
+          <img @click="change3" src="../assets/image/inter3.png" style="position: sticky;height: 65%">
         </div>
         <div class="listimg">
           <img :src=lightstar class="imgposit" v-if="stars[3].onestart">
@@ -55,7 +55,7 @@
           <img :src=star style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="!stars[4].twostart">
           <img :src=lightstar class="imgposit1" v-if="stars[4].threestart">
           <img :src=star class="imgposit1" v-if="!stars[4].threestart">
-          <img @click="change5" src="../assets/image/inter3.png" style="position: sticky;height: 65%">
+          <img @click="change5" src="../assets/image/inter5.png" style="position: sticky;height: 65%">
         </div>
         <div class="listimg">
           <img :src=lightstar class="imgposit" v-if="stars[5].onestart">
@@ -172,6 +172,7 @@
     },
     data() {
       return {
+        loading:false,
         popp: false,
         sum: 0,
         spring: '',
@@ -281,6 +282,20 @@
         // id: "a",
         // page: 1,
       }
+    },
+    watch: {
+      'loading': function(newVal) {
+        if (this.loading === true) {
+          alertMsg3("Loading...Please Wait");
+          setTimeout(() => {
+              document.getElementById('alertFram').style.display = 'none'}
+            ,15000)
+        }else{
+          setTimeout(() => {
+              document.getElementById('alertFram').style.display = 'none'}
+            ,1000)
+        }
+      },
     },
     methods: {
       change() {
@@ -704,6 +719,7 @@
     // document.body.removeEventListener('touchmove',this.bodyScroll,{passive: false});
     // },
     created() {
+      this.loading = true;
       this.star = "http://monkeytown.monkeytree.com.hk/image/season-star2.png";
       this.lightstar = "http://monkeytown.monkeytree.com.hk/image/season-star.png";
       if (this.$route.query.studentId) {
@@ -715,11 +731,11 @@
           this.$axios.post(this.url2, qs.stringify({
             studentId: localStorage.getItem('studentId'),
           })).then(res => {
+            this.loading = false;
             this.phonicsList = res.data.phonicsList;
             for(var i=0;i<this.phonicsList.length;i++){
-              if(this.phonicsList[i].name==this.$route.query.level){
+              if(this.phonicsList[i].name===this.$route.query.level){
                 this.phonicsId=this.phonicsList[i].id;
-
                 this.url3 = this.url + "PhonicsDetail2";
                 this.$axios.post(this.url3, qs.stringify({
                   studentId: localStorage.getItem('studentId'),
@@ -747,34 +763,30 @@
                         studentId: localStorage.getItem('studentId'),
                         phonicsDetailId: this.unitsId
                       })).then(res => {
+                        this.loading = false;
                         this.UnitsList = res.data.PhonicsList;
                         this.sum = res.data.sumCoins;
                         localStorage.setItem('sumCoins', this.sum);
                         // res.data.UnitsList.splice(8,1);
                         for (var i = 0; i < this.UnitsList.length; i++) {
-                          if (this.UnitsList[i].sta == "0") {
+                          if (this.UnitsList[i].sta === 0) {
                             this.stars[i].onestart = false;
                             this.stars[i].twostart = false;
                             this.stars[i].threestart = false;
-                          } else if (this.UnitsList[i].sta == "1") {
+                          } else if (this.UnitsList[i].sta === 1) {
                             this.stars[i].onestart = true;
                             this.stars[i].twostart = false;
                             this.stars[i].threestart = false;
-                          } else if (this.UnitsList[i].sta == "2") {
+                          } else if (this.UnitsList[i].sta === 2) {
                             this.stars[i].onestart = true;
                             this.stars[i].twostart = true;
                             this.stars[i].threestart = false;
-                          } else if (this.UnitsList[i].sta == "3") {
+                          } else if (this.UnitsList[i].sta === 3) {
                             this.stars[i].onestart = true;
                             this.stars[i].twostart = true;
                             this.stars[i].threestart = true;
                           }
                         }
-                        // this.startcoins = this.sum;
-                        // if (this.startcoins >= 20) {
-                        //   this.startcoins = 20;
-                        //   this.boss = true;
-                        // }
                       }, res => {
                         console.info('false');
                       });
@@ -789,8 +801,6 @@
           }, res => {
             console.info('false');
           });
-
-
         }else {
           this.$router.push({ //核心语句
             path: '/login', //跳转的路径
@@ -826,34 +836,30 @@
           studentId: localStorage.getItem('studentId'),
           phonicsDetailId: this.unitsId
         })).then(res => {
+          this.loading = false;
           this.UnitsList = res.data.PhonicsList;
           this.sum = res.data.sumCoins;
           localStorage.setItem('sumCoins', this.sum);
           // res.data.UnitsList.splice(8,1);
           for (var i = 0; i < this.UnitsList.length; i++) {
-            if (this.UnitsList[i].sta == "0") {
+            if (this.UnitsList[i].sta === 0) {
               this.stars[i].onestart = false;
               this.stars[i].twostart = false;
               this.stars[i].threestart = false;
-            } else if (this.UnitsList[i].sta == "1") {
+            } else if (this.UnitsList[i].sta === 1) {
               this.stars[i].onestart = true;
               this.stars[i].twostart = false;
               this.stars[i].threestart = false;
-            } else if (this.UnitsList[i].sta == "2") {
+            } else if (this.UnitsList[i].sta === 2) {
               this.stars[i].onestart = true;
               this.stars[i].twostart = true;
               this.stars[i].threestart = false;
-            } else if (this.UnitsList[i].sta == "3") {
+            } else if (this.UnitsList[i].sta === 3) {
               this.stars[i].onestart = true;
               this.stars[i].twostart = true;
               this.stars[i].threestart = true;
             }
           }
-          // this.startcoins = this.sum;
-          // if (this.startcoins >= 20) {
-          //   this.startcoins = 20;
-          //   this.boss = true;
-          // }
         }, res => {
           console.info('false');
         });

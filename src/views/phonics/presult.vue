@@ -204,6 +204,7 @@
 				coin:0,
 				partName:'',
 				account:'',
+        insert:'',
 				nice:false,
 				again:false,
 				great:false,
@@ -239,7 +240,6 @@
           this.$router.push({ //核心语句
             path: '/advmenu', //跳转的路径
             query: { //路由传参时push和query搭配使用 ，作用时传递参数
-
               unitsId:this.unitsId,
               unit:this.unit,
             }
@@ -479,6 +479,7 @@
 			this.menuId=this.$route.query.menuId;
 			this.unitsId=this.$route.query.unitsId;
 			this.unit=this.$route.query.unit;
+			this.insert=this.$route.query.insert;
 			if(this.type==="intermediate"){
 				this.url=this.url2;
 			}else if(this.type==="advanced"){
@@ -489,6 +490,7 @@
 			this.$axios.post(this.url, qs.stringify({
 				menuId:this.menuId,
 				score:this.account,
+        insert:this.insert
 			})).then(res => {
 				this.star = res.data.star;
 				this.score = res.data.score;

@@ -366,7 +366,7 @@
                 <div class="choicephonics" v-for="(li,index) in phonicsList" :key='index'>
                   <img src="../../assets/image/beginner.png" @click="pnext2(li)" style="width: 90%;" v-if="index===0">
                   <img src="../../assets/image/intermediate.png" @click="pnext21(li)" style="width: 90%;"
-                       v-if="index==1">
+                       v-if="index===1">
                   <img src="../../assets/image/advance.png" style="width: 90%;" @click="pnext22(li)" v-if="index===2">
                   <!--<div class="progress" >-->
                   <img src="../../assets/image/completed.png" v-if="li.complete"
@@ -400,7 +400,6 @@
                     </li>
                   </ul>
                 </div>
-
               </div>-->
               <div class="choseRW" v-if="opciay3">
                 <div class="infoimg1">
@@ -516,16 +515,16 @@
                             <div :class="level==='Advanced'?'strengthsAbbreviationAdvanced':'strengthsAbbreviation'" v-if="Object.values(li)[0].classification==='Writing'&&index2===0" style="color: #de81ca">{{li2.letter}}</div>
                             <div class="strengthsLogo2Div">
                               <img class="strengthsLogo2" v-if="index2!==0" src="../../assets/image/allColor.png"/>
-                              <img class="strengthsLogo2" v-if="Object.values(li)[0].classification==='Blend Recognition'&&index2===0" src="../../assets/image/BlendRecognitionColor.png"/>
-                              <img class="strengthsLogo2" v-if="Object.values(li)[0].classification==='Sound Recognition'&&index2===0" src="../../assets/image/SoundRecognitionColor.png"/>
-                              <img class="strengthsLogo2" v-if="Object.values(li)[0].classification==='Spelling'&&index2===0" src="../../assets/image/spellingColor.png"/>
-                              <img class="strengthsLogo2" v-if="Object.values(li)[0].classification==='Letter Recognition'&&index2===0" src="../../assets/image/LetterRecognitionColor.png"/>
-                              <img class="strengthsLogo2" v-if="Object.values(li)[0].classification==='Listening'&&index2===0" src="../../assets/image/listeningColor.png"/>
-                              <img class="strengthsLogo2" v-if="Object.values(li)[0].classification==='Reading'&&index2===0" src="../../assets/image/readingColor.png"/>
-                              <img class="strengthsLogo2" v-if="Object.values(li)[0].classification==='Vocabulary'&&index2===0" src="../../assets/image/vocabularyColor.png"/>
-                              <img class="strengthsLogo2" v-if="Object.values(li)[0].classification==='Writing'&&index2===0" src="../../assets/image/writingColor.png"/>
+                              <img class="strengthsLogo2" v-if="Object.values(li)[0].classification==='Blend Recognition' && Object.values(li)[0].persent!==undefined && index2===0" src="../../assets/image/BlendRecognitionColor.png"/>
+                              <img class="strengthsLogo2" v-if="Object.values(li)[0].classification==='Sound Recognition' && Object.values(li)[0].persent!==undefined && index2===0" src="../../assets/image/SoundRecognitionColor.png"/>
+                              <img class="strengthsLogo2" v-if="Object.values(li)[0].classification==='Spelling' && Object.values(li)[0].persent!==undefined && index2===0" src="../../assets/image/spellingColor.png"/>
+                              <img class="strengthsLogo2" v-if="Object.values(li)[0].classification==='Letter Recognition' && Object.values(li)[0].persent!==undefined && index2===0" src="../../assets/image/LetterRecognitionColor.png"/>
+                              <img class="strengthsLogo2" v-if="Object.values(li)[0].classification==='Listening' && Object.values(li)[0].persent!==undefined && index2===0" src="../../assets/image/listeningColor.png"/>
+                              <img class="strengthsLogo2" v-if="Object.values(li)[0].classification==='Reading' && Object.values(li)[0].persent!==undefined && index2===0" src="../../assets/image/readingColor.png"/>
+                              <img class="strengthsLogo2" v-if="Object.values(li)[0].classification==='Vocabulary' && Object.values(li)[0].persent!==undefined && index2===0" src="../../assets/image/vocabularyColor.png"/>
+                              <img class="strengthsLogo2" v-if="Object.values(li)[0].classification==='Writing' && Object.values(li)[0].persent!==undefined && index2===0" src="../../assets/image/writingColor.png"/>
                             </div>
-                            <div class="strengthsPresent">{{li2.persent}}%</div>
+                            <div class="strengthsPresent" v-if="Object.values(li)[0].persent!==undefined">{{li2.persent}}%</div>
                           </div>
                         </div>
                       </div>
@@ -645,7 +644,7 @@
               <div class="pointPosition" v-if="opciay2&&categoriesName !== 'Performance Report'">
                 <span :class="categoriesName === 'Overall' ?'point1':'point2'" >.</span>
                 <span :class="categoriesName === 'Exercise Completion Intervals'?'point1':'point2'">.</span>
-                <span :class="categoriesName === 'Exercise Completion Intervals2'?'point1':'point2'">.</span>
+                <span :class="categoryNum === 3?'point1':'point2'">.</span>
                 <span :class="categoriesName === 'Scores for Key Areas'?'point1':'point2'">.</span>
                 <span :class="categoriesName === 'Strengths'?'point1':'point2'">.</span>
                 <span :class="categoriesName === 'Improvement'?'point1':'point2'">.</span>
@@ -668,10 +667,10 @@
           <img src="../../assets/image/icon_coin.png" class="coinstyle">
           <span class="fontsize leftmar2">{{sum}}</span>
         </div>
-        <!-- <div @click="back">
-					<img src="../../assets/image/game-course03.png"  class="pause"> -->
+        <div @click="back">
+					<img src="../../assets/image/game-course03.png"  class="pause">
         <!-- 	<img src="../../assets/image/game-course03.png"  class=" pause" v-if="!action"> -->
-        <!-- </div> -->
+        </div>
         <div @click="home">
           <!-- <img src="../../assets/image/Icon_home0.png" class="repeat" v-if="action1"> -->
           <img src="../../assets/image/Icon_home.png" class="repeat">
@@ -915,35 +914,15 @@
           });
         }
       },
-      /*areas(type){
-        if (type === 'overall'){
-          this.symbolColor["background-color"] = '#f5aa32';
-          this.symbolNub = '1';
-        }else if(type === 'listening'){
-          this.symbolColor["background-color"] = '#3f8e9e';
-          this.symbolNub = '2';
-          this.score = ["10", "5", "2", "4", "3", "1", "3", "6", "1", "0"];
-        }else if(type === 'vocab'){
-          this.symbolColor["background-color"] = '#53ba6d';
-          this.symbolNub = '3';
-          this.score = ["10", "1", "5", "4", "3", "1", "3", "6", "1", "0"];
-        }else if(type === 'spelling'){
-          this.symbolColor["background-color"] = '#f16d2f';
-          this.symbolNub = '4';
-          this.score = ["10", "5", "2", "4", "3", "1", "10", "6", "1", "0"];
-        }else if(type === 'writing'){
-          this.symbolColor["background-color"] = '#c27db3';
-          this.symbolNub = '5';
-          this.score = ["10", "5", "2", "4", "3", "1", "3", "8", "1", "0"];
-        }else if(type === 'letter'){
-          this.symbolColor["background-color"] = '#ec5d61';
-          this.symbolNub = '6';
-          this.score = ["10", "5", "2", "4", "3", "1", "5", "6", "1", "7"];
-        }
-
-        this.drawLine();
-      },*/
      areas(type){
+       //绿 ：#43BF76 蓝：#4169E1 紫：#a020f0
+       if(this.level === 'Beginner'){
+         this.symbolColor["background-color"] = '#43BF76';
+       }else if(this.level === 'Intermediate'){
+         this.symbolColor["background-color"] = '#4169E1';
+       }else if(this.level === 'Advanced'){
+         this.symbolColor["background-color"] = '#a020f0';
+       }
         if (type === 'Vocabulary'){
           this.symbolNub = '1';
         }else if(type === 'Spelling'){
@@ -987,7 +966,6 @@
       drawLine(){
         this.selectScreen();
         let that = this;
-        console.log(this.myChart);
         if (this.myChart != null && this.myChart !== "" && this.myChart !== undefined && this.myChart._chartsViews != null) {
           this.myChart.dispose();//销毁
         }
@@ -1038,7 +1016,7 @@
             //click:点击;mousemove:鼠标移动显示
             triggerOn: "click",
             backgroundColor:'#eeebc8',
-            borderColor:this.symbolColor['background-color'],
+            borderColor:'#939498',
             borderWidth:this.screenStyle['borderWidth'],
             borderRadius:this.screenStyle['borderRadius'],
             padding:this.screenStyle['padding'],
@@ -1157,7 +1135,7 @@
           }
         }else if(this.categoryNum===5){
           if(this.strengthsMaxNub<Object.keys(this.strengths).length){
-            var length = Object.keys(this.strengths).length-this.strengthsMaxNub<3?Object.keys(this.strengths).length-this.strengthsMaxNub:3;
+            let length = Object.keys(this.strengths).length-this.strengthsMaxNub<3?Object.keys(this.strengths).length-this.strengthsMaxNub:3;
             this.strengthsTemp=[];
             for (let i = 0; i < length; i++) {
               this.strengthsTemp[i] = Object.values(this.strengths)[this.strengthsMaxNub+i]
@@ -1181,18 +1159,18 @@
             this.sliceMin = this.overall.length-this.overall.length%6;
           }
         }else if(this.categoryNum===5){
-          if(3<this.strengthsMaxNub){
+          if(this.strengthsMaxNub>3){
             //初始化临时数组
             this.strengthsTemp=[];
             if(this.strengthsMaxNub%3!==0){
-              var length =this.strengthsMaxNub-this.strengthsMaxNub%3;
+              let length =this.strengthsMaxNub-this.strengthsMaxNub%3;
               for (let i = 0; i < 3; i++) {
                 this.strengthsTemp[i] = Object.values(this.strengths)[length-3+i]
               }
               this.strengthsMaxNub=length;
             }else{
               for (let i = 0; i < 3; i++) {
-                this.strengthsTemp[i] = Object.values(this.strengths)[this.strengthsMaxNub-3+i]
+                this.strengthsTemp[i] = Object.values(this.strengths)[this.strengthsMaxNub-6+i]
               }
               this.strengthsMaxNub=this.strengthsMaxNub-3;
             }
@@ -1207,11 +1185,11 @@
           this.categoryNum=1;
         }else if(str ===2){
           this.categoriesName='Exercise Completion Intervals';
-          this.categoriesText='Time Spent Overall';
+          this.categoriesText='Exercises finished in the past 7/ 30 days';
           this.categoryNum=2;
         }else if(str ===3){
           this.categoriesName='Exercise Completion Intervals';
-          this.categoriesText='Time Spent Overall';
+          this.categoriesText='Exercises finished in the past 7/ 30 days';
           this.categoryNum=3;
         }else if(str ===4){
           this.categoriesName='Scores for Key Areas';
@@ -1251,26 +1229,28 @@
         return temp
       },
       back() {
-        if (this.onef === false && this.seleinfo === false) {
-          this.action = true;
-          setTimeout(() => {
-            this.action = false;
-            this.seleinfo = true;
-          }, 1000);
-        } else if (this.onef === false && this.seleinfo === true) {
-          this.action = true;
-          setTimeout(() => {
-            this.action = false;
-            this.onef = true;
-          }, 1000);
-        } else if (this.onef === true) {
-          this.action = true;
-          setTimeout(() => {
-            this.action = false;
-            this.$router.push({
-              path: "/source", //跳转的路径
-            });
-          }, 1000);
+        if(this.chatorphonics){
+          if(this.opciay4){
+            this.sectionp3();
+          }else if(this.opciay3){
+            this.section3();
+          }else if(this.opciay2 === false&&this.page2){
+            this.section2();
+          }else if(this.opciay2&&this.page2){
+            this.changeBcolo1();
+          }else{
+            this.home();
+          }
+        }else if(!this.chatorphonics){
+          if(this.opciay1){
+            this.home();
+          }else if(this.opciay2 && this.categoriesName === 'Performance Report'){
+            this.changeBcolo2();
+          }else if(this.opciay2 && this.categoriesName !== 'Performance Report'){
+            this.categoriesName = 'Performance Report';
+            this.categoriesText = 'Please select your level';
+            this.categoryNum = '';
+          }
         }
       },
       switchs() {
@@ -1359,11 +1339,12 @@
         this.courseId = this.courseList[0].course_id;
         if (this.courseList[0].name === "CHAT ROOM") {
           this.course = "Chat Room";
-        } else if (this.courseList[0].name == "PHONICS") {
+        } else if (this.courseList[0].name === "PHONICS") {
           this.course = "Phonics";
         }
       },
       changeBcolo2() {
+        this.loading = true;
         if (this.phonics == 0) {
           alertMsg3("Active Phonics Student Only");
           setTimeout((function () {
@@ -1399,6 +1380,7 @@
             studentId: localStorage.getItem('studentId'),
           })).then(res => {
             this.phonicsList = res.data.phonicsList;
+            this.loading = false;
           }, res => {
             alertMsg("You must be connected to the internet.<br>Please connect and try again.");
           })
@@ -1430,7 +1412,6 @@
         this.opciay4 = false;
       },
       section3() {
-        if (this.opciay4 == true) {
           this.ifboss1 = false;
           this.ifboss2 = false;
           this.page4 = false;
@@ -1440,7 +1421,6 @@
           this.opciay1 = false;
           this.opciay6 = true;
           this.opciay4 = false;
-        }
       },
       section4() {
         this.ifboss1 = false;
@@ -1464,7 +1444,6 @@
         this.opciay4 = false;
       },
       sectionp3() {
-        // if (this.opciay4 == true) {
         this.ifboss1 = false;
         this.ifboss2 = false;
         this.page4 = false;
@@ -1474,7 +1453,6 @@
         this.opciay1 = false;
         this.opciay6 = false;
         this.opciay4 = false;
-        // }
       },
       sectionp4() {
         if (this.opciay4 == 'false') {
@@ -1832,19 +1810,19 @@
       },
       //统计
       Statistics(){
+        let map="[{'name':'a','value':1},{'name':'b','value':2}";
+        let map1 = map+",{'name':'b','value':2}]";
         this.loading = true;
         this.$axios.post('/user/getTimeLog', qs.stringify({
           studentId: localStorage.getItem('studentId'),
-          level:this.level
+          level:this.level,
+          map10:map1
         })).then(res => {
           this.strengths = res.data.Strengths;
           this.strengthsMaxNub = Object.keys(this.strengths).length < 3?Object.keys(this.strengths).length:3;
           for (let i = 0; i < this.strengthsMaxNub; i++) {
             this.strengthsTemp[i] = Object.values(this.strengths)[i]
           }
-          console.log(res.data.Strengths);
-          console.log(this.strengthsTemp.length);
-          console.log(this.strengthsTemp);
           this.intervalsMins = res.data.time.mins;
           this.intervalsHour = res.data.time.hours;
           this.pass = res.data.time.pass;
@@ -1929,6 +1907,8 @@
         })
       },
       pnext2(li) {
+        this.symbolColor["background-color"] = '#43BF76';
+        this.symbolNub = '1';
         this.page2 = true;
         this.opciay2 = true;
         this.opciay1 = false;
@@ -1944,6 +1924,8 @@
         this.Statistics();
       },
       pnext21(li) {
+        this.symbolColor["background-color"] = '#4169E1';
+        this.symbolNub = '1';
         this.page2 = true;
         this.opciay2 = true;
         this.opciay1 = false;
@@ -1960,6 +1942,8 @@
         this.Statistics();
       },
       pnext22(li) {
+        this.symbolColor["background-color"] = '#a020f0';
+        this.symbolNub = '1';
         this.page2 = true;
         this.opciay2 = true;
         this.opciay1 = false;
@@ -2165,7 +2149,7 @@
     font-weight: 600;
     color: #9c9c9c;
     position: relative;
-    text-align: right;
+    text-align: center;
   }
 
   .strengthsAbbreviationAdvanced {
@@ -2177,7 +2161,7 @@
     font-weight: 500;
     color: #9c9c9c;
     position: relative;
-    text-align: right;
+    text-align: center;
     line-height: 40px;
   }
 
@@ -3071,13 +3055,13 @@
     background-color: #007BB8;
     border-radius: 50px;
     padding: 2px 15px;
-    font-family: pepper;
+    font-family: pepper,serif;
   }
 
   .menu1 {
     float: left;
     height: 100%;
-    width: 30%;
+    width: 36%;
     border-radius: 20px;
     background-color: #43BF76;
   }
@@ -3085,7 +3069,7 @@
   .menu2 {
     float: left;
     height: 100%;
-    width: 30%;
+    width: 36%;
     border-radius: 20px;
     background-color: #FF9239;
   }
@@ -3144,7 +3128,7 @@
   }
 
   .spanimg2{
-    width: 1.5rem;
+    width: 2rem;
     margin: -2px 3px;
   }
 
@@ -3261,7 +3245,7 @@
     background: #007BB8;
     color: white;
     font-size: 1.5rem;
-    font-family: KG;
+    font-family: KG,serif;
   }
 
   .save {
@@ -3316,7 +3300,7 @@
     height: 100%;
     width: 26%;
     color: white;
-    margin-top: 0%;
+    margin-top: 0;
     margin-left: 1%;
     margin-right: 1%;
     background: none;
@@ -3437,7 +3421,7 @@
       color: #9c9c9c;
       position: relative;
       line-height: 20px;
-      text-align: right;
+      text-align: center;
     }
     .strengthsLogo2 {
       width: 80%;
@@ -3473,7 +3457,7 @@
       font-family: 'pepper';
       color: #9c9c9c;
       position: relative;
-      text-align: right;
+      text-align: center;
       line-height: 20px;
       white-space: nowrap;
       /* text-overflow: ellipsis; */
@@ -3926,6 +3910,13 @@
   @media screen and (min-device-height: 570px) and (max-device-height: 735px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 570px) and (max-device-height: 735px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 570px) and (max-width: 735px){
+    .menu2Change{
+      float: left;
+      height: 100%;
+      width: 64%;
+      border-radius: 20px;
+      background-color: #FF9239;
+    }
     .strengthsLiAll{
       margin-top: -20%;
       position: relative;
@@ -3940,7 +3931,7 @@
       color: #9c9c9c;
       position: relative;
       line-height: 28px;
-      text-align: right;
+      text-align: center;
     }
     .strengthsLogo {
       width: 10%;
@@ -3978,7 +3969,7 @@
       font-family: 'kg';
       color: #9c9c9c;
       position: relative;
-      text-align: right;
+      text-align: center;
       line-height: 30px;
       white-space: nowrap;
       text-overflow: ellipsis;
@@ -4249,7 +4240,7 @@
       width: 0.7rem;
     }
     .buttonsty {
-      font-size: 0.7rem;
+      font-size: 0.9rem;
       height: 30%;
     }
     .progress2{
@@ -4294,7 +4285,7 @@
       font-weight: 600;
       color: #9c9c9c;
       position: relative;
-      text-align: right;
+      text-align: center;
       line-height: 27px;
     }
     .strengthsLi {
@@ -4315,7 +4306,7 @@
       font-family: 'kg';
       color: #9c9c9c;
       position: relative;
-      text-align: right;
+      text-align: center;
       line-height: 30px;
       white-space: nowrap;
       text-overflow: ellipsis;
@@ -4442,14 +4433,14 @@
     .menu2 {
       float: left;
       height: 100%;
-      width: 30%;
+      width: 36%;
       border-radius: 10px;
       background-color: #FF9239;
     }
     .menu1 {
       float: left;
       height: 100%;
-      width: 30%;
+      width: 36%;
       border-radius: 10px;
       background-color: #43BF76;
     }
@@ -4676,6 +4667,28 @@
   @media screen and (min-device-height: 812px) and (max-device-height: 894px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 812px) and (max-device-height: 894px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 812px) and (max-width: 894px) {
+
+    .menu2{
+      float: left;
+      height: 100%;
+      width: 36%;
+      border-radius: 15px;
+      background-color: #FF9239;
+    }
+    .menu2Change{
+      float: left;
+      height: 100%;
+      width: 60%;
+      border-radius: 15px;
+      background-color: #FF9239;
+    }
+    .menu1 {
+      float: left;
+      height: 100%;
+      width: 36%;
+      border-radius: 15px;
+      background-color: #43BF76;
+    }
     .strengthsAbbreviation {
       width: 100%;
       height: 100%;
@@ -4686,7 +4699,7 @@
       color: #9c9c9c;
       position: relative;
       line-height: 27px;
-      text-align: right;
+      text-align: center;
     }
     .strengthsLi {
       width: 80%;
@@ -4706,7 +4719,7 @@
       font-family: 'kg';
       color: #9c9c9c;
       position: relative;
-      text-align: right;
+      text-align: center;
       line-height: 30px;
       white-space: nowrap;
       text-overflow: ellipsis;
@@ -4867,8 +4880,6 @@
       color: #735138;
       font-size: 1.5rem;
       position: absolute;
-      width: -webkit-fit-content;
-      width: -moz-fit-content;
       width: fit-content;
       left: 42%;
       top: 50%;
@@ -5090,6 +5101,16 @@
   @media screen and (min-device-height: 895px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 895px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 895px) and (max-width: 1023px) {
+    .buttonsty {
+      border-style: none;
+      background: none;
+      color: white;
+      font-size: 1.2rem;
+      font-weight: bold;
+      height: 40%;
+      padding: 0 10px;
+      font-family: pepper;
+    }
     .strengthsAbbreviation{
       width: 100%;
       height: 100%;
@@ -5099,7 +5120,7 @@
       font-weight: 600;
       color: #9c9c9c;
       position: relative;
-      text-align: right;
+      text-align: center;
     }
     .strengthsLi{
       width: 80%;
@@ -5119,7 +5140,7 @@
       font-family: 'kg';
       color: #9c9c9c;
       position: relative;
-      text-align: right;
+      text-align: center;
       line-height: 30px;
       white-space: nowrap;
       text-overflow: ellipsis;
@@ -5348,8 +5369,6 @@
       color: #735138;
       font-size: 1.5rem;
       position: absolute;
-      width: -webkit-fit-content;
-      width: -moz-fit-content;
       width: fit-content;
       left: 40%;
       top: 50%;
@@ -5398,10 +5417,10 @@
       padding-left: 60px;
     }
     .cardRight {
-      top: 26%;
+      top: 28%;
     }
     .cardLeft {
-      top: 26%;
+      top: 28%;
     }
     .categories {
       border-radius: 30px;
@@ -5562,7 +5581,7 @@
       color: #9c9c9c;
       position: relative;
       line-height: 35px;
-      text-align: right;
+      text-align: center;
     }
     .strengthsLiAll {
       margin-top: -13%;
@@ -5585,7 +5604,7 @@
       font-family: 'kg';
       color: #9c9c9c;
       position: relative;
-      text-align: right;
+      text-align: center;
       line-height: 40px;
     }
     .strengthsLogo{
@@ -5827,6 +5846,10 @@
     }
     .buttonsty {
       height: 30%;
+      font-size: 24px;
+    }
+    .menu2Change {
+      width: 64%;
     }
     .progress2 {
       height: 25px;
@@ -5930,7 +5953,7 @@
       top: 2%;
       height: 80%;
     }
-    
+
     .neirong {
       font-size: 1.2rem;
     }
@@ -6014,7 +6037,7 @@
     }
 
     .bottommemu {
-      margin-top: -13%;
+      margin-top: -12%;
     }
 
     .addlevels {
@@ -6052,9 +6075,26 @@
 
   }
 
+  @media screen and(min-device-height: 1180px) and (max-device-height: 1180px) and (-webkit-device-pixel-ratio: 2),
+  (min-width: 1180px) and (max-width: 1180px){
+    .cardRight {
+      top: 33%;
+    }
+    .cardLeft {
+      top: 33%;
+    }
+    .pointPosition {
+      margin-top: -6%;
+    }
+  }
+
   @media screen and (min-device-height: 1200px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 1200px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 1200px) and (max-width: 1600px) {
+    .chosedisplay {
+      height: 80%;
+      margin-top: -2%;
+    }
     .strengthsText{
       color: white;
       font-family: pepper,serif;
@@ -6065,7 +6105,7 @@
       width: 85%;
       height: 40PX;
       top: -6%;
-      left: 1%;
+      left: -1%;
       margin-top: 10px;
       position: relative;
       display: -webkit-box;
@@ -6081,11 +6121,11 @@
       height: 40px;
       left: -2%;
       font-size: 1rem;
-      font-family: 'kg';
+      font-family: 'kg',serif;
       font-weight: 600;
       color: #9c9c9c;
       position: relative;
-      text-align: right;
+      text-align: center;
       line-height: 40px;
     }
     .historyLabel {
@@ -6259,12 +6299,12 @@
 
     .rightmenu {
       height: 75%;
-      padding-top: 10%;
+      padding-top: 9%;
     }
 
     .buttonsty {
-      font-size: 1.5rem;
-      padding: 0 10px 25px 10px;
+      font-size: 30px;
+      padding: 0 10px 0 10px;
     }
 
     .listmemu span {
@@ -6292,10 +6332,7 @@
       height: 80%;
     }
 
-    // .listimg1{
-    // 	padding: 15px;
-    // 	width: 23%;
-    // }
+
     .unit {
       font-size: 1.8rem;
     }
@@ -6386,7 +6423,7 @@
     }
 
     .bottommemu {
-      margin-top: -13%;
+      margin-top: -12%;
     }
 
     .addlevels {
@@ -6485,7 +6522,7 @@
     }
 
     .buttonsty {
-      font-size: 1.8rem;
+      font-size: 40px;
       height: 30%;
     }
 
@@ -6525,7 +6562,7 @@
 
     .tabtit {
       padding: 6px 25px;
-      font-family: pepper;
+      font-family: pepper,serif;
       font-size: 2rem;
     }
 

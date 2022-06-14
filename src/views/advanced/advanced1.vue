@@ -256,6 +256,7 @@
         unitsId: '',
         unit: '',
         menuId: '',
+        insert:'[',
         question: 10,
         listF: [],
         countpage: 1,
@@ -291,7 +292,6 @@
     methods: {
       answer(li) {
         this.zhezhao = true;
-        // this.space = li.name;
         for(var i=0;i<this.titlequesion.length;i++){
           if(this.titlequesion[i].name==='_'){
             this.titlequesion[i].name=li.letter_name;
@@ -304,6 +304,12 @@
           this.showstart = true;
           this.countpage += 1;
           this.account += 1;
+          if (this.countpage-2 !==9){
+            this.insert = this.insert+"{'phonics_detail_id':"+this.listF[this.countpage-2][0].phonics_detail_id+",'ansResult':1},";
+          }else{
+            this.insert = this.insert+"{'phonics_detail_id':"+this.listF[this.countpage-2][0].phonics_detail_id+",'ansResult':1}]";
+          }
+          console.log(this.insert);
           setTimeout(() => {
             this.showstart = false;
             this.soundscorrect = false;
@@ -314,7 +320,6 @@
               // this.space = "__";
             } else {
               setTimeout(() => {
-
                 this.$router.push({
                   //核心语句
                   path: "/presult", //跳转的路径
@@ -324,7 +329,8 @@
                     account: this.account,
                     menuId: this.menuId,
                     unitsId: this.unitsId,
-                    unit: this.unit
+                    unit: this.unit,
+                    insert:this.insert
                   }
                 });
 
@@ -336,11 +342,16 @@
           this.countpage += 1;
           li.redsuccess = 1;
           this.changecolor2 = true;
+          if (this.countpage-2 !==9){
+            this.insert = this.insert+"{'phonics_detail_id':"+this.listF[this.countpage-2][0].phonics_detail_id+",'ansResult':0},";
+          }else{
+            this.insert = this.insert+"{'phonics_detail_id':"+this.listF[this.countpage-2][0].phonics_detail_id+",'ansResult':0}]";
+          }
+          console.log(this.insert);
           setTimeout(() => {
             this.soundsWrong = false;
             li.redsuccess = 0;
             this.changecolor2 = false;
-
             for (var l = 0; l < this.list1.length; l++) {
               if (this.list1[l].score === '1') {
                 this.list1[l].successful = 1;
@@ -361,13 +372,13 @@
                   //核心语句
                   path: "/presult", //跳转的路径
                   query: {
-
                     type: this.type,
                     partName: 'advanced1',
                     account: this.account,
                     menuId: this.menuId,
                     unitsId: this.unitsId,
-                    unit: this.unit
+                    unit: this.unit,
+                    insert:this.insert
                   }
                 });
               }
@@ -475,6 +486,7 @@
           this.listF[i] = this.listF[currentRandom];
           this.listF[currentRandom] = current;
         }
+        console.log(this.listF);
         this.question = this.listF.length;
         this.list1 = this.listF[this.countpage - 1];
 

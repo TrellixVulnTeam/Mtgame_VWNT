@@ -109,7 +109,7 @@
     name: "phonics8",
     watch: {
       'loaded': function(newVal) {
-        if (this.onef == true) {
+        if (this.onef === true) {
           if (this.list1.length > 2 || this.list2.length > 2) {
             this.changwidth = true;
           }
@@ -124,7 +124,7 @@
           }, 2000);
 
         }
-        if (this.onef == false) {
+        if (this.onef === false) {
           setTimeout(() => {
             const that = this;
             jsPlumb.ready(function() {
@@ -220,7 +220,7 @@
                 }
 
                 for (var i = 0; i < that.list1.length; i++) {
-                  if (that.loaded == true) {
+                  if (that.loaded === true) {
                     instance.addEndpoint(
                       that.list1[i].id, {
                         anchor: [1, 0.5, 0, 0, 25, 0],
@@ -230,7 +230,7 @@
                   }
                 }
                 for (var j = 0; j < that.list2.length; j++) {
-                  if (that.loaded == true) {
+                  if (that.loaded === true) {
                     instance.addEndpoint(
                       that.list2[j].id, {
                         anchor: [0, 0.5, 0, 0, -20, 0],
@@ -247,13 +247,13 @@
                   //console.log(connection);
                   var truetime = that.list1.length;
                   for (var i = 0; i < that.list1.length; i++) {
-                    if (connection.sourceId == that.list1[i].id) {
-                      if (connection.targetId == that.list1[i].targetId) {
+                    if (connection.sourceId === that.list1[i].id) {
+                      if (connection.targetId === that.list1[i].targetId) {
                         if (connection.target != null) {
                           if (that.truelist.length <= 0) {
                             that.truelist.push(connection.targetId);
                             for (var f = 0; f < that.falselist.length; f++) {
-                              if (that.falselist[f] == connection.suspendedElementId) {
+                              if (that.falselist[f] === connection.suspendedElementId) {
                                 that.falselist.splice(f, 1);
                               }
                             }
@@ -264,31 +264,31 @@
                             // 	}
                             // }
                             for (var f = 0; f < that.falselist.length; f++) {
-                              if (that.falselist[f] == connection.suspendedElementId) {
+                              if (that.falselist[f] === connection.suspendedElementId) {
                                 that.falselist.splice(f, 1);
                               }
                             }
                           }
                         } else {
                           for (var t = 0; t < that.truelist.length; t++) {
-                            if (that.truelist[t] == connection.suspendedElementId) {
+                            if (that.truelist[t] === connection.suspendedElementId) {
                               that.truelist.splice(t, 1);
                             }
                           }
                           for (var f = 0; f < that.falselist.length; f++) {
-                            if (that.falselist[f] == connection.suspendedElementId) {
+                            if (that.falselist[f] === connection.suspendedElementId) {
                               that.falselist.splice(f, 1);
                             }
                           }
                         }
                       } else {
                         for (var g = 0; g < that.list1.length; g++) {
-                          if (connection.targetId == that.list1[g].targetId) {
+                          if (connection.targetId === that.list1[g].targetId) {
                             if (connection.target != null) {
                               if (that.falselist.length <= 0) {
                                 that.falselist.push(connection.targetId);
                                 for (var t = 0; t < that.truelist.length; t++) {
-                                  if (that.truelist[t] == connection.suspendedElementId) {
+                                  if (that.truelist[t] === connection.suspendedElementId) {
                                     that.truelist.splice(t, 1);
                                   }
                                 }
@@ -301,7 +301,7 @@
                               }
                             } else {
                               for (var f = 0; f < that.falselist.length; f++) {
-                                if (that.falselist[f] == connection.suspendedElementId) {
+                                if (that.falselist[f] === connection.suspendedElementId) {
                                   that.falselist.splice(f, 1);
                                 }
                               }
@@ -316,7 +316,7 @@
                     that.nowtime = document.getElementsByTagName("svg").length;
                     //console.log(that.nowtime);
 
-                    if (that.nowtime == truetime) { //连接的数量
+                    if (that.nowtime === truetime) { //连接的数量
                       that.zhezhao = true;
                       that.countpage += 1;
                       if (that.falselist.length <= 0) { //错误list的长度
@@ -406,10 +406,10 @@
                         that.soundsWrong = true;
                         for (var i = 0; i < that.list2.length; i++) {
                           for (var k = 0; k < that.falselist.length; k++) {
-                            if (that.falselist[k] == that.list2[i].id) {
+                            if (that.falselist[k] === that.list2[i].id) {
                               that.list2[i].issuccess = 1; //晃动错误
                             }
-                            if (that.falselist[k] == svgLine[i]._jsPlumb.targetId) {
+                            if (that.falselist[k] === svgLine[i]._jsPlumb.targetId) {
                               svgLine[i].children[0].setAttribute("stroke", "#cc6453");
                             }
                           }
@@ -1348,7 +1348,9 @@
 
   }
 
-  @media screen and (min-width: 482px) and (max-width: 569px) {
+  @media screen and (min-device-height: 811px) and (max-device-height: 569px) and (-webkit-device-pixel-ratio: 3),
+  (min-device-height: 811px) and (max-device-height: 569px) and (-webkit-device-pixel-ratio: 2),
+  (min-width: 482px) and (max-width: 569px) {
 
     .fontsize {
       font-family: pepper;
@@ -1407,7 +1409,151 @@
     }
   }
 
-  @media screen and (min-width: 1024px)and (max-width: 1354px) {
+  @media screen and (min-device-height: 700px) and (max-device-height: 811px) and (-webkit-device-pixel-ratio: 3),
+  (min-device-height: 700px) and (max-device-height: 811px) and (-webkit-device-pixel-ratio: 2),
+  (min-width: 700px) and (max-width: 811px) {
+    .fontsizes {
+      margin-top: 17%;
+    }
+
+    .twomenu {
+      padding-top: 18%;
+    }
+
+    .drag-drop-demo .window1 {
+      width: 30%;
+    }
+
+    .leftbox1 {
+      width: 58%;
+      margin-top: 2%;
+      margin-left: 14%;
+    }
+
+    .rightbox1 {
+      margin-top: 2% !important;
+
+    }
+
+    .withcolor {
+      height: 70%;
+    }
+
+
+  }
+
+  @media screen and (min-device-height: 812px) and (max-device-height: 895px) and (-webkit-device-pixel-ratio: 3),
+  (min-device-height: 812px) and (max-device-height: 895px) and (-webkit-device-pixel-ratio: 2),
+  (min-width: 812px) and (max-width:895px) {
+
+    .twomenu {
+      padding-top: 14%;
+    }
+
+
+    .fontsizes {
+      margin-top: 17%;
+    }
+
+    .imgsty1 {
+      width: 63% !important;
+    }
+
+    .windows {
+
+      margin: 5rem 1px 0 15px;
+    }
+
+    .leftbox {
+      margin-top: 4%;
+    }
+    .leftbox1{
+      margin-top: 1%;
+    }
+    .drag-drop-demo .window {
+      width: 30%;
+    }
+
+    .drag-drop-demo .window1 {
+      width: 30% !important;
+    }
+
+    .otherwidth {
+      margin: 2.8rem 1px 0 15px;
+    }
+
+    .rightbox1 {
+      margin-top: 1% !important;
+    }
+
+    .withcolor {
+      height: 70%;
+    }
+
+  }
+
+  @media screen and (min-device-height: 895px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 3),
+  (min-device-height: 895px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 2),
+  (min-width: 895px) and (max-width:1023px) {
+
+    .twomenu {
+      padding-top: 14%;
+    }
+
+
+    .fontsizes {
+      margin-top: 17%;
+    }
+    .imgsty{
+      max-height: 5rem;
+    }
+    .windows {
+
+      margin: 5rem 1px 0 15px;
+    }
+
+    .leftbox {
+      margin-top: 3%;
+    }
+
+    // .window1{
+    // 	width: 30%;
+    // }
+    .drag-drop-demo .window {
+      width: 30%;
+    }
+
+    .leftbox1 {
+      margin-top: 3% !important;
+    }
+
+    .rightbox {
+      margin-top: 4%;
+    }
+
+    .rightbox1 {
+      margin-top: 4%;
+
+    }
+
+    .drag-drop-demo .window1 {
+      width: 30% !important;
+    }
+
+    .otherwidth {
+      margin: 2.8rem 1px 0 15px;
+    }
+
+    .withcolor {
+      height: 70%;
+    }
+
+
+  }
+
+  @media screen and (min-device-height: 1024px) and (max-device-height: 1354px) and (-webkit-device-pixel-ratio: 3),
+  (min-device-height: 1024px) and (max-device-height: 1354px) and (-webkit-device-pixel-ratio: 2),
+  (min-width: 1024px)and (max-width: 1354px) {
 
     .fontsizes {
       margin-top: 30%;
@@ -1476,7 +1622,7 @@
     }
 
     .leftbox1 {
-      margin-top: 1%;
+      margin-top: 4%;
     }
 
     .drag-drop-demo .window1 {
@@ -1523,7 +1669,9 @@
     }
   }
 
-  @media screen and (min-width: 1355px) and (max-width: 1600px){
+  @media screen and (min-device-height: 1355px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 3),
+  (min-device-height: 1355px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 2),
+  (min-width: 1355px) and (max-width: 1600px){
     .fontsizes {
       margin-top: 30%;
     }
@@ -1589,11 +1737,11 @@
     .drag-drop-demo .window1 {
       width: 45% !important;
       border-radius: 40px !important;
-      margin: 40px 30px;
+      margin: 75px 30px;
       border: 0.6rem solid #8e5644 !important;
     }
     .leftbox1{
-      margin-top: 4%;
+      margin-top: 6%;
     }
     .rightbox{
       margin-top: 7%;
@@ -1636,141 +1784,6 @@
     }
   }
 
-  @media screen and (min-width: 700px) and (max-width: 811px) {
-    .fontsizes {
-      margin-top: 17%;
-    }
-
-    .twomenu {
-      padding-top: 18%;
-    }
-
-    .drag-drop-demo .window1 {
-      width: 30%;
-    }
-
-   .leftbox1 {
-     width: 58%;
-     margin-top: 1%;
-     margin-left: 14%;
-   }
-
-    .rightbox1 {
-      margin-top: 2% !important;
-
-    }
-
-    .withcolor {
-      height: 70%;
-    }
-
-
-  }
-
-  @media screen and (min-width: 812px) and (max-width:895px) {
-
-    .twomenu {
-      padding-top: 14%;
-    }
-
-
-    .fontsizes {
-      margin-top: 17%;
-    }
-
-    .imgsty1 {
-      width: 63% !important;
-    }
-
-    .windows {
-
-      margin: 5rem 1px 0 15px;
-    }
-
-    .leftbox {
-      margin-top: 4%;
-    }
-    .leftbox1{
-      margin-top: 2%;
-    }
-    .drag-drop-demo .window {
-      width: 30%;
-    }
-
-    .drag-drop-demo .window1 {
-      width: 30% !important;
-    }
-
-    .otherwidth {
-      margin: 2.8rem 1px 0 15px;
-    }
-
-    .rightbox1 {
-      margin-top: 1% !important;
-    }
-
-    .withcolor {
-      height: 70%;
-    }
-
-  }
-
-  @media screen and (min-width: 895px) and (max-width:1023px) {
-
-    .twomenu {
-      padding-top: 14%;
-    }
-
-
-    .fontsizes {
-      margin-top: 17%;
-    }
-    .imgsty{
-      max-height: 5rem;
-    }
-    .windows {
-
-      margin: 5rem 1px 0 15px;
-    }
-
-    .leftbox {
-      margin-top: 3%;
-    }
-
-    // .window1{
-    // 	width: 30%;
-    // }
-    .drag-drop-demo .window {
-      width: 30%;
-    }
-
-    .leftbox1 {
-      margin-top: 2% !important;
-    }
-
-    .rightbox {
-      margin-top: 0%;
-    }
-
-    .rightbox1 {
-      margin-top: 4%;
-
-    }
-
-    .drag-drop-demo .window1 {
-      width: 30% !important;
-    }
-
-    .otherwidth {
-      margin: 2.8rem 1px 0 15px;
-    }
-
-    .withcolor {
-      height: 70%;
-    }
-
-
-  }
   @media screen and (min-width: 1600px){
     .fontsizes {
       margin-top: 20%;
@@ -1834,15 +1847,17 @@
     .drag-drop-demo .window1 {
       width: 27% !important;
       border-radius: 40px !important;
-      margin: 40px 30px;
+      //margin: 40px 30px;
+      margin: 70px 30px;
       border: 0.6rem solid #8e5644 !important;
     }
     .leftbox1{
-      margin-top: 4%;
+      margin-top: 3%;
+      //margin-top: 4%;
       margin-left: 20%;
     }
     .rightbox{
-      margin-top: 7%;
+      margin-top: 5%;
     }
     .otherwidth{
       height: 7rem;
@@ -1888,4 +1903,5 @@
       font-size: 1.5rem !important;
     }
   }
+
 </style>
