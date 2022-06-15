@@ -140,6 +140,7 @@
 				soundscorrect:false,
 				show: true,
 				resume3: false,
+        insert:'[',
 				id: '',
 				page: this.page++,
 				account: 0,
@@ -282,6 +283,11 @@
           this.countpage += 1;
           this.account += 1;
           li.showstart=1;
+          if (this.countpage-2 !==9){
+            this.insert = this.insert+"{'phonics_detail_id':"+this.listG[this.countpage-2][0].phonics_detail_id+",'ansResult':1},";
+          }else{
+            this.insert = this.insert+"{'phonics_detail_id':"+this.listG[this.countpage-2][0].phonics_detail_id+",'ansResult':1}]";
+          }
           setTimeout(() => {
             this.soundscorrect=false;
           },2000);
@@ -304,7 +310,8 @@
                   account:this.account,
                   menuId: this.menuId,
                   unitsId:this.unitsId,
-                  unit:this.unit
+                  unit:this.unit,
+                  insert:this.insert
                 }
               });
 
@@ -317,6 +324,11 @@
           },1800)
           this.soundsWrong=true;
           this.countpage += 1;
+          if (this.countpage-2 !==9){
+            this.insert = this.insert+"{'phonics_detail_id':"+this.listG[this.countpage-2][0].phonics_detail_id+",'ansResult':0},";
+          }else{
+            this.insert = this.insert+"{'phonics_detail_id':"+this.listG[this.countpage-2][0].phonics_detail_id+",'ansResult':0}]";
+          }
           setTimeout(() => {
             this.rEopcily=false;
             this.lEopcily=false;
@@ -340,7 +352,8 @@
                   account:this.account,
                   menuId: this.menuId,
                   unitsId:this.unitsId,
-                  unit:this.unit
+                  unit:this.unit,
+                  insert:this.insert
                 }
               });
 

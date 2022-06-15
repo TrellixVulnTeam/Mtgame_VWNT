@@ -169,6 +169,7 @@
         ruleimg12: false,
         list1: [],
         list2: [],
+        insert:'[',
         zhezhao:true,
         bg: '',
         audio: '',
@@ -306,7 +307,6 @@
         this.centerP.forEach((item, index) => {
           // 获取答题选项下标，判断是否选中答案
           if (this.context.isPointInPath(item.corePx, item.corePy)) {
-            console.log('选中了');
             anwserIndex = index;
             isSelect = true;
             anwserList.push(item);
@@ -333,13 +333,16 @@
               this.showstart = true;
               this.account += 1;
               this.soundscorrect=true;
-              //console.log(this.listB.length);
+              if (this.countpage-1 !==9){
+                this.insert = this.insert+"{'phonics_detail_id':"+this.listF[this.countpage-1][0].phonics_detail_id+",'ansResult':1},";
+              }else{
+                this.insert = this.insert+"{'phonics_detail_id':"+this.listF[this.countpage-1][0].phonics_detail_id+",'ansResult':1}]";
+              }
               if (this.countpage === this.listF.length) {
                 setTimeout(() => {
                   this.showstart = false;
                   this.soundscorrect = false;
                   this.changecolor=false;
-
                   this.$router.push({
                     //核心语句
                     path: "/presult", //跳转的路径
@@ -349,7 +352,8 @@
                       account: this.account,
                       menuId: this.menuId,
                       unitsId: this.unitsId,
-                      unit: this.unit
+                      unit: this.unit,
+                      insert:this.insert
                     }
                   });
                 },2000);
@@ -372,6 +376,11 @@
               this.list1[anwserIndex].redsuccess=1;
               this.changecolor2=true;
               this.canvasObj.height = this.canvasH;
+              if (this.countpage-1 !==9){
+                this.insert = this.insert+"{'phonics_detail_id':"+this.listF[this.countpage-1][0].phonics_detail_id+",'ansResult':0},";
+              }else{
+                this.insert = this.insert+"{'phonics_detail_id':"+this.listF[this.countpage-1][0].phonics_detail_id+",'ansResult':0}]";
+              }
               setTimeout(() => {
                 this.soundsWrong=false;
                 this.list1[anwserIndex].redsuccess=0;
@@ -395,7 +404,8 @@
                         account: this.account,
                         menuId: this.menuId,
                         unitsId: this.unitsId,
-                        unit: this.unit
+                        unit: this.unit,
+                        insert:this.insert
                       }
                     });
 

@@ -309,8 +309,8 @@
             // id: 26,
             name: "m",
           },
-
         ],
+        insert:'[',
         id: '',
         timeout: 0,
         consize1: false,
@@ -425,27 +425,30 @@
         }
       },
       enters() {
-        if (this.space.length == 0 || this.space.length == null) {
-          // this.warn='Please input words.';
-        } else if (this.truelist.length == this.space.length) {
+        if (this.space.length === 0 || this.space.length == null) {
+
+        } else if (this.truelist.length === this.space.length) {
           this.countpage += 1;
           this.zhezhao = true;
           if (this.countpage <= this.listBoss.length) {//不是最后一题
-            // console.log(this.countpage);
             for (var i = 0; i < this.truelist.length; i++) {
-              if (this.truelist[i].name == this.space[i].name || this.truelist[i].name == this.space[i].name.toLowerCase()) {
+              if (this.truelist[i].name === this.space[i].name || this.truelist[i].name === this.space[i].name.toLowerCase()) {
                 this.truefalse = 1;
               } else {
                 this.truefalse = false;
                 break;
               }
             }
-            //this.truelist.name.includes(this.space.name);
-            if (this.truefalse == 1) {//长度一样正确
+            if (this.truefalse === 1) {//长度一样正确
               this.showstart = true;
               this.soundscorrect = true;
               this.changeblue = true;
               this.account += 1;
+              if (this.countpage-2 !==9){
+                this.insert = this.insert+"{'phonics_detail_id':"+this.listBoss[this.countpage-2][0].phonics_detail_id+",'ansResult':1},";
+              }else{
+                this.insert = this.insert+"{'phonics_detail_id':"+this.listBoss[this.countpage-2][0].phonics_detail_id+",'ansResult':1}]";
+              }
               setTimeout(() => {
                 this.showstart = false;
                 this.soundscorrect = false;
@@ -459,6 +462,11 @@
               this.answer = true;
               this.soundsWrong = true;
               this.changered = true;
+              if (this.countpage-2 !==9){
+                this.insert = this.insert+"{'phonics_detail_id':"+this.listBoss[this.countpage-2][0].phonics_detail_id+",'ansResult':0},";
+              }else{
+                this.insert = this.insert+"{'phonics_detail_id':"+this.listBoss[this.countpage-2][0].phonics_detail_id+",'ansResult':0}]";
+              }
               setTimeout(() => {
                 this.answer = false;
                 this.soundsWrong = false;
@@ -488,6 +496,11 @@
               this.soundscorrect = true;
               this.changeblue = true;
               this.account += 1;
+              if (this.countpage-2 !==9){
+                this.insert = this.insert+"{'phonics_detail_id':"+this.listBoss[this.countpage-2][0].phonics_detail_id+",'ansResult':1},";
+              }else{
+                this.insert = this.insert+"{'phonics_detail_id':"+this.listBoss[this.countpage-2][0].phonics_detail_id+",'ansResult':1}]";
+              }
               setTimeout(() => {
                 this.showstart = false;
                 this.soundscorrect = false;
@@ -501,7 +514,8 @@
                       account: this.account,
                       menuId: this.menuId,
                       unitsId: this.unitsId,
-                      unit: this.unit
+                      unit: this.unit,
+                      insert:this.insert
                     }
                   });
                 }, 2000);
@@ -510,6 +524,11 @@
               this.answer = true;
               this.changered = true;
               this.soundsWrong = true;
+              if (this.countpage-2 !==9){
+                this.insert = this.insert+"{'phonics_detail_id':"+this.listBoss[this.countpage-2][0].phonics_detail_id+",'ansResult':0},";
+              }else{
+                this.insert = this.insert+"{'phonics_detail_id':"+this.listBoss[this.countpage-2][0].phonics_detail_id+",'ansResult':0}]";
+              }
               setTimeout(() => {
                 this.answer = false;
                 this.soundsWrong = false;
@@ -528,8 +547,8 @@
                       account: this.account,
                       menuId: this.menuId,
                       unitsId: this.unitsId,
-                      unit: this.unit
-
+                      unit: this.unit,
+                      insert:this.insert
                     }
                   });
                 }, 2000);
@@ -541,9 +560,13 @@
           this.zhezhao = true;
           if (this.countpage <= this.question) {//长度不一样错误不是最后一题
             this.answer = true;
-            // console.log(this.countpage);
             this.soundsWrong = true;
             this.changered = true;
+            if (this.countpage-2 !==9){
+              this.insert = this.insert+"{'phonics_detail_id':"+this.listBoss[this.countpage-2][0].phonics_detail_id+",'ansResult':0},";
+            }else{
+              this.insert = this.insert+"{'phonics_detail_id':"+this.listBoss[this.countpage-2][0].phonics_detail_id+",'ansResult':0}]";
+            }
             setTimeout(() => {
               this.answer = false;
               this.soundsWrong = false;
@@ -564,6 +587,11 @@
             this.answer = true;
             this.soundsWrong = true;
             this.changered = true;
+            if (this.countpage-2 !==9){
+              this.insert = this.insert+"{'phonics_detail_id':"+this.listBoss[this.countpage-2][0].phonics_detail_id+",'ansResult':0},";
+            }else{
+              this.insert = this.insert+"{'phonics_detail_id':"+this.listBoss[this.countpage-2][0].phonics_detail_id+",'ansResult':0}]";
+            }
             setTimeout(() => {
               this.answer = false;
               this.soundsWrong = false;
@@ -583,16 +611,14 @@
                     account: this.account,
                     menuId: this.menuId,
                     unitsId: this.unitsId,
-                    unit: this.unit
-
+                    unit: this.unit,
+                    insert:this.insert
                   }
                 });
               }, 2000);
             }, 2000);
-
           }
         }
-
       },
       bodyScroll(event) {
         event.preventDefault();

@@ -209,6 +209,7 @@
         showNum:false,
         popp: false,
         spanp:'',
+        insert:'[',
         ruleimg8:false,
         ruleimg10:false,
         ruleimg4:false,
@@ -250,8 +251,8 @@
         ],
         fade: 'fade',
         flag2: true,
-
-        sort2: '',sort3: '',
+        sort2: '',
+        sort3: '',
         sort1: '',
         marginboth: false,
         // disnone:false,
@@ -314,13 +315,6 @@
       bodyScroll(event) {
         event.preventDefault();
       },
-      // onMove({ relatedContext, draggedContext }) {
-      //   const relatedElement = relatedContext.element;
-      //   const draggedElement = draggedContext.element;
-      //   return (
-      //     (!relatedElement || !relatedElement.fixed) && !draggedElement.fixed
-      //     );
-      // },
       speak(i){
         this.items1[i].sound=1;
 
@@ -377,13 +371,17 @@
       log: function(evt) {
         // console.log(this.count);
         if (evt.removed) {
-          if(this.over==false){
+          console.log(this.over);
+          console.log(this.items1);
+          console.log(this.items2);
+          if(this.over===false){
             this.over=true;
             this.zhezhao=false;
-            if (this.items1.length == 0) {
+            //判断剩余的单词是否为0
+            if (this.items1.length === 0) {
               this.countpage += 1;
-              if (this.items2.length == 1) {
-                if ($.trim(evt.removed.element.name) == $.trim(this.sort1)) {
+              if (this.items2.length === 1) {
+                if ($.trim(evt.removed.element.name) === $.trim(this.sort1)) {
                   this.ended1 = false;this.soundscorrect=true;
                   this.count += 1;
                   if(this.count===3){
@@ -435,7 +433,8 @@
 
                   },2000);
                 } else{
-                  this.issuccess1 = true;this.soundsWrong=true;
+                  this.issuccess1 = true;
+                  this.soundsWrong=true;
                   setTimeout(() => {
                     this.soundsWrong=false;
                     if (this.countpage <= this.listH.length) {
@@ -481,9 +480,9 @@
                   }, 2000);
                 }
               }
-              if (this.items4.length == 1) {
+              if (this.items4.length === 1) {
 
-                if ($.trim(evt.removed.element.name) == $.trim(this.sort2)) {
+                if ($.trim(evt.removed.element.name) === $.trim(this.sort2)) {
                   this.ended2 = false;this.soundscorrect=true;
                   this.count += 1;
                   if(this.count===3){
@@ -581,8 +580,8 @@
                   }, 2000);
                 }
               }
-              if (this.items5.length == 1) {
-                if ($.trim(evt.removed.element.name) == $.trim(this.sort3)) {
+              if (this.items5.length === 1) {
+                if ($.trim(evt.removed.element.name) === $.trim(this.sort3)) {
                   this.ended3 = false;this.soundscorrect=true;
                   this.count += 1;
                   if(this.count===3){
@@ -677,28 +676,8 @@
               }
 
             } else {
-              if (this.items2.length == 1) {
-                // if ($.trim(evt.removed.element.name) == $.trim(this.sort1)) {
-                //   this.ended1 = false;this.soundscorrect=true;
-                //   this.count += 1;
-                //   setTimeout(() => {
-                //     this.soundscorrect=false;
-                //     this.ended1 = true;
-                //     this.items2 = [];
-                //     this.fangda1 = false;
-                //     this.over=false;
-                //   }, 2000);
-                // } else if ($.trim(evt.removed.element.name) == $.trim(this.sort2)) {
-                //   this.issuccess1 = true;this.soundsWrong=true;
-                //   setTimeout(() => {
-                //     this.soundsWrong=false;
-                //     this.issuccess1 = false;
-                //     this.items2 = [];
-                //     this.fangda1 = false;
-                //     this.over=false;
-                //   }, 2000);
-                // }
-                if ($.trim(evt.removed.element.name) == $.trim(this.sort1)) {
+              if (this.items2.length === 1) {
+                if ($.trim(evt.removed.element.name) === $.trim(this.sort1)) {
                   this.ended1 = false;this.soundscorrect=true;
                   this.count += 1;
                   setTimeout(() => {
@@ -719,9 +698,9 @@
                   }, 2000);
                 }
               }
-              if (this.items4.length == 1) {
+              if (this.items4.length === 1) {
 
-                if ($.trim(evt.removed.element.name) == $.trim(this.sort2)) {
+                if ($.trim(evt.removed.element.name) === $.trim(this.sort2)) {
                   this.ended2 = false;this.soundscorrect=true;
                   this.count += 1;
                   setTimeout(() => {
@@ -742,8 +721,8 @@
                   }, 2000);
                 }
               }
-              if (this.items5.length == 1) {
-                if ($.trim(evt.removed.element.name) == $.trim(this.sort3)) {
+              if (this.items5.length === 1) {
+                if ($.trim(evt.removed.element.name) === $.trim(this.sort3)) {
                   this.ended3 = false;this.soundscorrect=true;
                   this.count += 1;
                   setTimeout(() => {
@@ -769,7 +748,6 @@
 
           }
         } else if (evt.moved) {
-
           this.zhezhao=false;
           this.fangda1 = false;
           this.fangda2 = false;

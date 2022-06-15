@@ -233,6 +233,7 @@
         showstart: false,
         unitsId: '',
         unit: '',
+        insert:'[',
         menuId: '',
         question: 10,
         listF: [],
@@ -316,7 +317,6 @@
         }
       },
       canvasMove(e) {
-        //console.log(e);
         if(this.canvasMoveUse) {
           // 只有允许移动时调用
           const t = e.target;
@@ -374,7 +374,11 @@
               this.showstart = true;
               this.account += 1;
               this.soundscorrect=true;
-              //console.log(this.listB.length);
+              if (this.countpage-1 !==9){
+                this.insert = this.insert+"{'phonics_detail_id':"+this.listF[this.countpage-1][0].phonics_detail_id+",'ansResult':1},";
+              }else{
+                this.insert = this.insert+"{'phonics_detail_id':"+this.listF[this.countpage-1][0].phonics_detail_id+",'ansResult':1}]";
+              }
               if (this.countpage === this.listF.length) {
                 setTimeout(() => {
                   this.showstart = false;
@@ -390,7 +394,8 @@
                       account: this.account,
                       menuId: this.menuId,
                       unitsId: this.unitsId,
-                      unit: this.unit
+                      unit: this.unit,
+                      insert:this.insert
                     }
                   });
                 },2000);
@@ -408,12 +413,16 @@
               }
 
             } else {
-              console.log('bj');
               /*回答错误在这里写效果*/
               this.soundsWrong=true;
               this.list1[anwserIndex].redsuccess=1;
               this.changecolor2=true;
               this.canvasObj.height = this.canvasH;
+              if (this.countpage-1 !==9){
+                this.insert = this.insert+"{'phonics_detail_id':"+this.listF[this.countpage-1][0].phonics_detail_id+",'ansResult':0},";
+              }else{
+                this.insert = this.insert+"{'phonics_detail_id':"+this.listF[this.countpage-1][0].phonics_detail_id+",'ansResult':0}]";
+              }
               setTimeout(() => {
                 this.soundsWrong=false;
                 this.list1[anwserIndex].redsuccess=0;
@@ -437,7 +446,8 @@
                         account: this.account,
                         menuId: this.menuId,
                         unitsId: this.unitsId,
-                        unit: this.unit
+                        unit: this.unit,
+                        insert:this.insert
                       }
                     });
 
@@ -581,7 +591,6 @@
         this.list1 = this.listF[this.countpage - 1];
 
         this.titlequesion=this.list1[0].question_name;
-        // this.bg = this.pic +this.list1[0].bg;
         for(var l=0;l<this.list1.length;l++){
           this.list1[l].successful=0;
           this.list1[l].fail=0;
@@ -590,7 +599,6 @@
           if(this.list1[l].score=="1"){
             this.audio =  this.list1[l].audio;
           }
-          console.log(this.audio);
         }
         if (this.onef == true) {
           this.showNum = true;
