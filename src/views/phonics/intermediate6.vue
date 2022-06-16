@@ -180,6 +180,7 @@
     },
     data() {
       return {
+        insert:'[',
         popp: false,
         spanp:'',
         playtime:1,
@@ -474,6 +475,11 @@
           this.successful=true;
           this.count += 1;
           this.countpage += 1;
+          if (this.countpage-2 !==9){
+            this.insert = this.insert+"{'phonics_detail_id':"+this.listG[this.countpage-2][0].phonics_detail_id+",'ansResult':1},";
+          }else{
+            this.insert = this.insert+"{'phonics_detail_id':"+this.listG[this.countpage-2][0].phonics_detail_id+",'ansResult':1}]";
+          }
           if(this.countpage <= this.listG.length){
             setTimeout(() => {
                this.onef=true;
@@ -493,7 +499,8 @@
                 account: this.count,
                 menuId: this.menuId,
                 unitsId: this.unitsId,
-                unit: this.unit
+                unit: this.unit,
+                insert:this.insert
               }
             });
             }, 2000);
@@ -504,6 +511,11 @@
                this.buttonlist[i].color3=1;
              }
            }
+          if (this.countpage-1 !==9){
+            this.insert = this.insert+"{'phonics_detail_id':"+this.listG[this.countpage-1][0].phonics_detail_id+",'ansResult':0},";
+          }else{
+            this.insert = this.insert+"{'phonics_detail_id':"+this.listG[this.countpage-1][0].phonics_detail_id+",'ansResult':0}]";
+          }
            this.soundsWrong=true;
             setTimeout(() => {
               for(var i=0;i<truelist.length;i++){
@@ -534,7 +546,8 @@
                       account: this.count,
                       menuId: this.menuId,
                       unitsId: this.unitsId,
-                      unit: this.unit
+                      unit: this.unit,
+                      insert:this.insert
                     }
                   });
                 }, 2000);

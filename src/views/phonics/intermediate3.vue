@@ -192,6 +192,7 @@
     },
     data() {
       return {
+        insert:'[',
         showNum:false,
         popp: false,
         ruleimg8: false,
@@ -347,16 +348,15 @@
         this.centerP.forEach((item, index) => {
           if (this.context.isPointInPath(item.corePx, item.corePy)) { // 获取答题选项下标
             anwserIndex = index;
-          };
+          }
 
           if (this.context.isPointInPath(item.corePx, item.corePy)) {
             isSelect = true;
             anwserList.push(item);
-          };
+          }
         });
 
         for(var i=0;i<this.list1.length;i++){
-          // var score=this.list1[i].score;
           if (this.list1[i].score==='1') { // 获取正确选项下标
             successIndex = i;
           }
@@ -377,12 +377,16 @@
               this.showstart = true;
               this.account += 1;
               this.soundscorrect=true;
+              if (this.countpage-1 !==9){
+                this.insert = this.insert+"{'phonics_detail_id':"+this.listF[this.countpage-1][0].phonics_detail_id+",'ansResult':1},";
+              }else{
+                this.insert = this.insert+"{'phonics_detail_id':"+this.listF[this.countpage-1][0].phonics_detail_id+",'ansResult':1}]";
+              }
               if (this.countpage === this.listF.length) {
                 setTimeout(() => {
                   this.showstart = false;
                   this.soundscorrect = false;
                   this.changecolor=false;
-
                   this.$router.push({
                     //核心语句
                     path: "/presult", //跳转的路径
@@ -392,7 +396,8 @@
                       account: this.account,
                       menuId: this.menuId,
                       unitsId: this.unitsId,
-                      unit: this.unit
+                      unit: this.unit,
+                      insert:this.insert
                     }
                   });
                 },2000);
@@ -415,7 +420,11 @@
               this.list1[anwserIndex].redsuccess=1;
               this.changecolor2=true;
               this.canvasObj.height = this.canvasH;
-
+              if (this.countpage-1 !==9){
+                this.insert = this.insert+"{'phonics_detail_id':"+this.listF[this.countpage-1][0].phonics_detail_id+",'ansResult':0},";
+              }else{
+                this.insert = this.insert+"{'phonics_detail_id':"+this.listF[this.countpage-1][0].phonics_detail_id+",'ansResult':0}]";
+              }
               setTimeout(() => {
                 this.soundsWrong=false;
                 this.list1[anwserIndex].redsuccess=0;
@@ -439,7 +448,8 @@
                         account: this.account,
                         menuId: this.menuId,
                         unitsId: this.unitsId,
-                        unit: this.unit
+                        unit: this.unit,
+                        insert:this.insert
                       }
                     });
                   },2000);

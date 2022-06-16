@@ -140,7 +140,11 @@
             this.onef = false;
             this.video = true;
             this.zhezhao = false;
-            console.log(this.truelist);
+            // let tl = '';
+            // for (let i = 0; i < this.truelist.length; i++) {
+            //   tl=tl+this.truelist[i].name
+            // }
+            // console.log(tl);
           }, 2000);
 
         }
@@ -157,6 +161,7 @@
     },
     data() {
       return {
+        insert:'[',
         popp: false,
         spanp: '',
         ruleimg8: false,
@@ -173,7 +178,6 @@
         show: true,
         space:[],
         audios: '',
-
         video: false,
         soundsWrong: false,
         soundscorrect: false,
@@ -189,11 +193,8 @@
         wordname: '',
         menuId: '',
         listBoss: [],
-
         warn: "Look at the picture. Then, listen and spell the word. ",
-
         pic: "",
-
         url: '/phonics2/phonics2',
         // url2: '/phonics6/phonics6',
         // pic: "http://demo11.embraiz.com/mtGameHK",
@@ -432,26 +433,28 @@
         }
       },
       enters() {
-        if (this.space.length == 0 || this.space.length == null) {
-          // this.warn='Please input words.';
-        } else if (this.truelist.length == this.space.length) {
+        if (this.truelist.length === this.space.length) {
           this.countpage += 1;
           this.zhezhao = true;
           if (this.countpage <= this.listBoss.length) {//不是最后一题
             for (var i = 0; i < this.truelist.length; i++) {
-              if (this.truelist[i].name == this.space[i].name || this.truelist[i].name == this.space[i].name.toLowerCase()) {
+              if (this.truelist[i].name === this.space[i].name || this.truelist[i].name === this.space[i].name.toLowerCase()) {
                 this.truefalse = 1;
               } else {
                 this.truefalse = false;
                 break;
               }
             }
-            //this.truelist.name.includes(this.space.name);
-            if (this.truefalse == 1) {//长度一样正确
+            if (this.truefalse === 1) {//长度一样正确
               this.showstart = true;
               this.soundscorrect = true;
               this.changeblue = true;
               this.account += 1;
+              if (this.countpage-2 !==9){
+                this.insert = this.insert+"{'phonics_detail_id':"+this.listBoss[this.countpage-2][0].phonics_detail_id+",'ansResult':1},";
+              }else{
+                this.insert = this.insert+"{'phonics_detail_id':"+this.listBoss[this.countpage-2][0].phonics_detail_id+",'ansResult':1}]";
+              }
               setTimeout(() => {
                 this.showstart = false;
                 this.soundscorrect = false;
@@ -465,6 +468,11 @@
               this.answer = true;
               this.soundsWrong = true;
               this.changered = true;
+              if (this.countpage-2 !==9){
+                this.insert = this.insert+"{'phonics_detail_id':"+this.listBoss[this.countpage-2][0].phonics_detail_id+",'ansResult':0},";
+              }else{
+                this.insert = this.insert+"{'phonics_detail_id':"+this.listBoss[this.countpage-2][0].phonics_detail_id+",'ansResult':0}]";
+              }
               setTimeout(() => {
                 this.answer = false;
                 this.soundsWrong = false;
@@ -482,18 +490,23 @@
             }
           } else {//是最后一题
             for (var i = 0; i < this.truelist.length; i++) {
-              if (this.truelist[i].name == this.space[i].name || this.truelist[i].name == this.space[i].name.toLowerCase()) {
+              if (this.truelist[i].name === this.space[i].name || this.truelist[i].name === this.space[i].name.toLowerCase()) {
                 this.truefalse = 2;
               } else {
                 this.truefalse = false;
                 break;
               }
             }
-            if (this.truefalse == 2) {//是最后一题正确
+            if (this.truefalse === 2) {//是最后一题正确
               this.showstart = true;
               this.soundscorrect = true;
               this.changeblue = true;
               this.account += 1;
+              if (this.countpage-2 !==9){
+                this.insert = this.insert+"{'phonics_detail_id':"+this.listBoss[this.countpage-2][0].phonics_detail_id+",'ansResult':1},";
+              }else{
+                this.insert = this.insert+"{'phonics_detail_id':"+this.listBoss[this.countpage-2][0].phonics_detail_id+",'ansResult':1}]";
+              }
               setTimeout(() => {
                 this.showstart = false;
                 this.soundscorrect = false;
@@ -507,7 +520,8 @@
                       account: this.account,
                       menuId: this.menuId,
                       unitsId: this.unitsId,
-                      unit: this.unit
+                      unit: this.unit,
+                      insert:this.insert
                     }
                   });
                 }, 2000);
@@ -516,6 +530,11 @@
               this.answer = true;
               this.changered = true;
               this.soundsWrong = true;
+              if (this.countpage-2 !==9){
+                this.insert = this.insert+"{'phonics_detail_id':"+this.listBoss[this.countpage-2][0].phonics_detail_id+",'ansResult':0},";
+              }else{
+                this.insert = this.insert+"{'phonics_detail_id':"+this.listBoss[this.countpage-2][0].phonics_detail_id+",'ansResult':0}]";
+              }
               setTimeout(() => {
                 this.answer = false;
                 this.soundsWrong = false;
@@ -534,8 +553,8 @@
                       account: this.account,
                       menuId: this.menuId,
                       unitsId: this.unitsId,
-                      unit: this.unit
-
+                      unit: this.unit,
+                      insert:this.insert
                     }
                   });
                 }, 2000);
@@ -549,6 +568,12 @@
             this.answer = true;
             this.soundsWrong = true;
             this.changered = true;
+            console.log(this.countpage);
+            if (this.countpage-2 !==9){
+              this.insert = this.insert+"{'phonics_detail_id':"+this.listBoss[this.countpage-2][0].phonics_detail_id+",'ansResult':0},";
+            }else{
+              this.insert = this.insert+"{'phonics_detail_id':"+this.listBoss[this.countpage-2][0].phonics_detail_id+",'ansResult':0}]";
+            }
             setTimeout(() => {
               this.answer = false;
               this.soundsWrong = false;
@@ -558,7 +583,6 @@
               }
               this.changered = false;
               this.changeblue = true;
-
               setTimeout(() => {
                 this.onef = true;
                 this.space = [];
@@ -569,6 +593,11 @@
             this.answer = true;
             this.soundsWrong = true;
             this.changered = true;
+            if (this.countpage-2 !==9){
+              this.insert = this.insert+"{'phonics_detail_id':"+this.listBoss[this.countpage-2][0].phonics_detail_id+",'ansResult':0},";
+            }else{
+              this.insert = this.insert+"{'phonics_detail_id':"+this.listBoss[this.countpage-2][0].phonics_detail_id+",'ansResult':0}]";
+            }
             setTimeout(() => {
               this.answer = false;
               this.soundsWrong = false;
@@ -588,13 +617,12 @@
                     account: this.account,
                     menuId: this.menuId,
                     unitsId: this.unitsId,
-                    unit: this.unit
-
+                    unit: this.unit,
+                    insert:this.insert
                   }
                 });
               }, 2000);
             }, 2000);
-
           }
         }
       },

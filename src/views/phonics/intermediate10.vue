@@ -137,6 +137,11 @@
             this.onef = false;
             this.video = true;
             this.zhezhao = false;
+            let tl = '';
+            for (let i = 0; i < this.truelist.length; i++) {
+              tl=tl+this.truelist[i].name
+            }
+            console.log(tl);
           }, 2000);
 
         }
@@ -153,6 +158,7 @@
     },
     data() {
       return {
+        insert:'[',
         popp: false,
         spanp: '',
         ruleimg8: false,
@@ -425,15 +431,15 @@
         }
       },
       enters() {
-        if (this.space.length == 0 || this.space.length == null) {
+        if (this.space.length === 0 || this.space.length == null) {
           // this.warn='Please input words.';
-        } else if (this.truelist.length == this.space.length) {
+        } else if (this.truelist.length === this.space.length) {
           this.countpage += 1;
           this.zhezhao = true;
           if (this.countpage <= this.listBoss.length) {//不是最后一题
             // console.log(this.countpage);
             for (var i = 0; i < this.truelist.length; i++) {
-              if (this.truelist[i].name == this.space[i].name || this.truelist[i].name == this.space[i].name.toLowerCase()) {
+              if (this.truelist[i].name === this.space[i].name || this.truelist[i].name === this.space[i].name.toLowerCase()) {
                 this.truefalse = 1;
               } else {
                 this.truefalse = false;
@@ -441,11 +447,16 @@
               }
             }
             //this.truelist.name.includes(this.space.name);
-            if (this.truefalse == 1) {//长度一样正确
+            if (this.truefalse === 1) {//长度一样正确
               this.showstart = true;
               this.soundscorrect = true;
               this.changeblue = true;
               this.account += 1;
+              if (this.countpage-2 !==9){
+                this.insert = this.insert+"{'phonics_detail_id':"+this.listBoss[this.countpage-2][0].phonics_detail_id+",'ansResult':0},";
+              }else{
+                this.insert = this.insert+"{'phonics_detail_id':"+this.listBoss[this.countpage-2][0].phonics_detail_id+",'ansResult':0}]";
+              }
               setTimeout(() => {
                 this.showstart = false;
                 this.soundscorrect = false;
@@ -459,6 +470,11 @@
               this.answer = true;
               this.soundsWrong = true;
               this.changered = true;
+              if (this.countpage-2 !==9){
+                this.insert = this.insert+"{'phonics_detail_id':"+this.listBoss[this.countpage-2][0].phonics_detail_id+",'ansResult':0},";
+              }else{
+                this.insert = this.insert+"{'phonics_detail_id':"+this.listBoss[this.countpage-2][0].phonics_detail_id+",'ansResult':0}]";
+              }
               setTimeout(() => {
                 this.answer = false;
                 this.soundsWrong = false;
@@ -476,18 +492,23 @@
             }
           } else {//是最后一题
             for (var i = 0; i < this.truelist.length; i++) {
-              if (this.truelist[i].name == this.space[i].name || this.truelist[i].name == this.space[i].name.toLowerCase()) {
+              if (this.truelist[i].name === this.space[i].name || this.truelist[i].name === this.space[i].name.toLowerCase()) {
                 this.truefalse = 2;
               } else {
                 this.truefalse = false;
                 break;
               }
             }
-            if (this.truefalse == 2) {//是最后一题正确
+            if (this.truefalse === 2) {//是最后一题正确
               this.showstart = true;
               this.soundscorrect = true;
               this.changeblue = true;
               this.account += 1;
+              if (this.countpage-2 !==9){
+                this.insert = this.insert+"{'phonics_detail_id':"+this.listBoss[this.countpage-2][0].phonics_detail_id+",'ansResult':0},";
+              }else{
+                this.insert = this.insert+"{'phonics_detail_id':"+this.listBoss[this.countpage-2][0].phonics_detail_id+",'ansResult':0}]";
+              }
               setTimeout(() => {
                 this.showstart = false;
                 this.soundscorrect = false;
@@ -501,7 +522,8 @@
                       account: this.account,
                       menuId: this.menuId,
                       unitsId: this.unitsId,
-                      unit: this.unit
+                      unit: this.unit,
+                      insert:this.insert
                     }
                   });
                 }, 2000);
@@ -510,6 +532,11 @@
               this.answer = true;
               this.changered = true;
               this.soundsWrong = true;
+              if (this.countpage-2 !==9){
+                this.insert = this.insert+"{'phonics_detail_id':"+this.listBoss[this.countpage-2][0].phonics_detail_id+",'ansResult':0},";
+              }else{
+                this.insert = this.insert+"{'phonics_detail_id':"+this.listBoss[this.countpage-2][0].phonics_detail_id+",'ansResult':0}]";
+              }
               setTimeout(() => {
                 this.answer = false;
                 this.soundsWrong = false;
@@ -528,8 +555,8 @@
                       account: this.account,
                       menuId: this.menuId,
                       unitsId: this.unitsId,
-                      unit: this.unit
-
+                      unit: this.unit,
+                      insert:this.insert
                     }
                   });
                 }, 2000);
@@ -544,6 +571,11 @@
             // console.log(this.countpage);
             this.soundsWrong = true;
             this.changered = true;
+            if (this.countpage-2 !==9){
+              this.insert = this.insert+"{'phonics_detail_id':"+this.listBoss[this.countpage-2][0].phonics_detail_id+",'ansResult':0},";
+            }else{
+              this.insert = this.insert+"{'phonics_detail_id':"+this.listBoss[this.countpage-2][0].phonics_detail_id+",'ansResult':0}]";
+            }
             setTimeout(() => {
               this.answer = false;
               this.soundsWrong = false;
@@ -564,6 +596,11 @@
             this.answer = true;
             this.soundsWrong = true;
             this.changered = true;
+            if (this.countpage-2 !==9){
+              this.insert = this.insert+"{'phonics_detail_id':"+this.listBoss[this.countpage-2][0].phonics_detail_id+",'ansResult':0},";
+            }else{
+              this.insert = this.insert+"{'phonics_detail_id':"+this.listBoss[this.countpage-2][0].phonics_detail_id+",'ansResult':0}]";
+            }
             setTimeout(() => {
               this.answer = false;
               this.soundsWrong = false;
@@ -583,8 +620,8 @@
                     account: this.account,
                     menuId: this.menuId,
                     unitsId: this.unitsId,
-                    unit: this.unit
-
+                    unit: this.unit,
+                    insert:this.insert
                   }
                 });
               }, 2000);

@@ -223,9 +223,9 @@
         fisrtanswer:false,
         question: 1,
         zhezhao:true,
+        insert:'[',
         list1: [
           {
-
             fail:0,
             sound:0,
             successful:0
@@ -392,28 +392,6 @@
       bodyScroll(event) {
         event.preventDefault();
       },
-      // play(i){
-      //
-      //           if(i===0){
-      //             if(this.show1===false){
-      //               this.show1=true;
-      //             }
-      //
-      //           }else if(i===1){
-      //             if(this.show2===false){
-      //               this.show2=true;
-      //             }
-      //           }else if(i===2){
-      //             if(this.show3===false){
-      //               this.show3=true;
-      //             }
-      //           }else if(i===3){
-      //             if(this.show4===false){
-      //               this.show4=true;
-      //             }
-      //           }
-      //
-      // },
       xy($event){
         console.log($event);
         for(var i=0;i<this.centerP.length;i++){
@@ -531,10 +509,14 @@
         } else {
           if (anwserList.length === 1) { // 答题时只有圈中一个选项才能进行判断
             this.zhezhao=true;
-            // console.log(anwserIndex);
             if (this.list1[anwserIndex].score==='1') {
               /*回答正确在这里写效果*/
               this.soundscorrect=true;
+              if (this.countpage-1 !==9){
+                this.insert = this.insert+"{'phonics_detail_id':"+this.listG[this.countpage-1][0].phonics_detail_id+",'ansResult':1},";
+              }else{
+                this.insert = this.insert+"{'phonics_detail_id':"+this.listG[this.countpage-1][0].phonics_detail_id+",'ansResult':1}]";
+              }
               setTimeout(() => {
                 this.soundscorrect=false;
               },2000);
@@ -578,7 +560,8 @@
                                 account:this.account,
                                 menuId: this.menuId,
                                 unitsId:this.unitsId,
-                                unit:this.unit
+                                unit:this.unit,
+                                insert:this.insert
                               }
                             });
 
@@ -598,10 +581,13 @@
             } else {
               /*回答错误在这里写效果*/
               this.soundsWrong=true;
-              // this.fisrtanswer=true;this.issuccess2=true;
+              if (this.countpage-1 !==9){
+                this.insert = this.insert+"{'phonics_detail_id':"+this.listG[this.countpage-1][0].phonics_detail_id+",'ansResult':0},";
+              }else{
+                this.insert = this.insert+"{'phonics_detail_id':"+this.listG[this.countpage-1][0].phonics_detail_id+",'ansResult':0}]";
+              }
               setTimeout(() => {
                 this.soundsWrong=false;
-
               },2000);
               setTimeout(() => {
                 this.canvasObj.height = this.canvasH; // 清空画布
@@ -637,16 +623,13 @@
                         path: "/presult", //跳转的路径
                         query: {
                           //路由传参时push和query搭配使用 ，作用时传递参数
-                          // id: this.id,
-                          // account: this.account,
-                          // type: this.type,
-                          // sum:this.sum,
                           type:this.type,
                           partName:'intermediate8',
                           account:this.account,
                           menuId: this.menuId,
                           unitsId:this.unitsId,
-                          unit:this.unit
+                          unit:this.unit,
+                          insert:this.insert
                         }
                       });
 

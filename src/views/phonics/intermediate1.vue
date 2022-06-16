@@ -264,6 +264,7 @@
         fangda1: false,
         fangda2: false,
         othersize: false,
+        insert:'[',
         levels: 0,
         page: 2,
         type: 'intermediate',
@@ -308,16 +309,19 @@
         //console.log('end');
       },
       blue() {
-
-        if (this.zhezhao == false) {
+        if (this.zhezhao === false) {
           this.countpage += 1;
         }
         this.zhezhao = true;
-        //console.log(this.items1[0].score);
-        if (this.items1[0].score == '1') {
+        if (this.items1[0].score === '1') {
           this.ended1 = false;
           this.soundscorrect = true;
           this.account += 1;
+          if (this.countpage-2 !==9){
+            this.insert = this.insert+"{'phonics_detail_id':"+this.listE[this.countpage-2][0].phonics_detail_id+",'ansResult':1},";
+          }else{
+            this.insert = this.insert+"{'phonics_detail_id':"+this.listE[this.countpage-2][0].phonics_detail_id+",'ansResult':1}]";
+          }
           // console.log(this.account);
           setTimeout(() => {
             if (this.countpage <= this.listE.length) {
@@ -342,16 +346,13 @@
                   path: "/presult", //跳转的路径
                   query: {
                     //路由传参时push和query搭配使用 ，作用时传递参数
-                    // id: this.id,
-                    // account: this.account,
-                    // type: this.type,
-                    // sum: this.sum,
                     type: this.type,
                     partName: 'intermediate1',
                     account: this.account,
                     menuId: this.menuId,
                     unitsId: this.unitsId,
-                    unit: this.unit
+                    unit: this.unit,
+                    insert:this.insert
                   }
                 });
 
@@ -361,6 +362,11 @@
         } else {
           this.issuccess1 = true;
           this.soundsWrong = true;
+          if (this.countpage-2 !==9){
+            this.insert = this.insert+"{'phonics_detail_id':"+this.listE[this.countpage-2][0].phonics_detail_id+",'ansResult':0},";
+          }else{
+            this.insert = this.insert+"{'phonics_detail_id':"+this.listE[this.countpage-2][0].phonics_detail_id+",'ansResult':0}]";
+          }
           setTimeout(() => {
             this.soundsWrong = false;
             if (this.countpage <= this.listE.length) {
@@ -386,16 +392,13 @@
                   path: "/presult", //跳转的路径
                   query: {
                     //路由传参时push和query搭配使用 ，作用时传递参数
-                    // id: this.id,
-                    // account: this.account,
-                    // type: this.type,
-                    // sum: this.sum,
                     type: this.type,
                     partName: 'intermediate1',
                     account: this.account,
                     menuId: this.menuId,
                     unitsId: this.unitsId,
-                    unit: this.unit
+                    unit: this.unit,
+                    insert:this.insert
                   }
                 });
 
@@ -406,15 +409,19 @@
         }
 
       },
-      red() {
-
-        if (this.zhezhao == false) {
+      red: function () {
+        if (this.zhezhao === false) {
           this.countpage += 1;
         }
         this.zhezhao = true;
-        if (this.items1[0].score == '1') {
+        if (this.items1[0].score === '1') {
           this.issuccess2 = true;
           this.soundsWrong = true;
+          if (this.countpage - 2 !== 9) {
+            this.insert = this.insert + "{'phonics_detail_id':" + this.listE[this.countpage - 2][0].phonics_detail_id + ",'ansResult':0},";
+          } else {
+            this.insert = this.insert + "{'phonics_detail_id':" + this.listE[this.countpage - 2][0].phonics_detail_id + ",'ansResult':0}]";
+          }
           setTimeout(() => {
             this.soundsWrong = false;
             if (this.countpage <= this.listE.length) {
@@ -427,9 +434,9 @@
                 this.reload = true;
                 this.items1 = this.listE[this.countpage - 1];
                 this.titname = this.items1[0].name;
-                this.imagebg=this.pic+this.items1[0].bg;
-                this.audio1=this.pic+this.items1[0].audio;
-                this.audio2=this.pic+this.items1[0].audio2;
+                this.imagebg = this.pic + this.items1[0].bg;
+                this.audio1 = this.pic + this.items1[0].audio;
+                this.audio2 = this.pic + this.items1[0].audio2;
               }, 1000);
             } else {
 
@@ -439,16 +446,13 @@
                   path: "/presult", //跳转的路径
                   query: {
                     //路由传参时push和query搭配使用 ，作用时传递参数
-                    // id: this.id,
-                    // account: this.account,
-                    // type: this.type,
-                    // sum: this.sum,
                     type: this.type,
                     partName: 'intermediate1',
                     account: this.account,
                     menuId: this.menuId,
                     unitsId: this.unitsId,
-                    unit: this.unit
+                    unit: this.unit,
+                    insert:this.insert
                   }
                 });
 
@@ -459,6 +463,11 @@
           this.ended2 = false;
           this.soundscorrect = true;
           this.account += 1;
+          if (this.countpage - 2 !== 9) {
+            this.insert = this.insert + "{'phonics_detail_id':" + this.listE[this.countpage - 2][0].phonics_detail_id + ",'ansResult':1},";
+          } else {
+            this.insert = this.insert + "{'phonics_detail_id':" + this.listE[this.countpage - 2][0].phonics_detail_id + ",'ansResult':1}]";
+          }
           setTimeout(() => {
             this.soundscorrect = false;
             if (this.countpage <= this.listE.length) {
@@ -471,9 +480,9 @@
                 this.reload = true;
                 this.items1 = this.listE[this.countpage - 1];
                 this.titname = this.items1[0].name;
-                this.imagebg=this.pic+this.items1[0].bg;
-                this.audio1=this.pic+this.items1[0].audio;
-                this.audio2=this.pic+this.items1[0].audio2;
+                this.imagebg = this.pic + this.items1[0].bg;
+                this.audio1 = this.pic + this.items1[0].audio;
+                this.audio2 = this.pic + this.items1[0].audio2;
               }, 1000);
               // this.items1.bg=this.pic+this.items1.bg;
             } else {
@@ -484,16 +493,13 @@
                   path: "/presult", //跳转的路径
                   query: {
                     //路由传参时push和query搭配使用 ，作用时传递参数
-                    // id: this.id,
-                    // account: this.account,
-                    // type: this.type,
-                    // sum: this.sum,
                     type: this.type,
                     partName: 'intermediate1',
                     account: this.account,
                     menuId: this.menuId,
                     unitsId: this.unitsId,
-                    unit: this.unit
+                    unit: this.unit,
+                    insert:this.insert
                   }
                 });
               }, 1000);

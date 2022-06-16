@@ -234,6 +234,7 @@
         ],
         show1:false,
         show2:false,
+        insert:'[',
         show3:false,
         show4:false,
         truesound:'',
@@ -511,7 +512,7 @@
           if (this.context.isPointInPath(item.corePx, item.corePy)) { // 获取答题选项下标
             anwserIndex = index;
           }
-          if (this.list1[index].score=='1') { // 获取正确选项下标
+          if (this.list1[index].score==='1') { // 获取正确选项下标
             successIndex = index;
           }
           if (this.context.isPointInPath(item.corePx, item.corePy)) {
@@ -519,8 +520,6 @@
             anwserList.push(item);
           }
         });
-        //  const canvas = document.getElementById('canvas');
-        // this.convertCanvasToImage(canvas);
         if (!isSelect) { // 没有选中
           this.canvasObj.height = this.canvasH;
           this.setCanvasStyle();
@@ -528,20 +527,22 @@
           if (anwserList.length === 1) { // 答题时只有圈中一个选项才能进行判断
             this.zhezhao=true;
             // console.log(anwserIndex);
-            if (this.list1[anwserIndex].score=='1') {
+            if (this.list1[anwserIndex].score==='1') {
               /*回答正确在这里写效果*/
               this.soundscorrect=true;
+              if (this.countpage-2 !==9){
+                this.insert = this.insert+"{'phonics_detail_id':"+this.listG[this.countpage-2][0].phonics_detail_id+",'ansResult':1},";
+              }else{
+                this.insert = this.insert+"{'phonics_detail_id':"+this.listG[this.countpage-2][0].phonics_detail_id+",'ansResult':1}]";
+              }
               setTimeout(() => {
                 this.soundscorrect=false;
               },2000);
               setTimeout(() => {
                 this.canvasObj.height = this.canvasH; // 清空画布
-                // this.issuccess1=true;
                 this.score="1";
                 this.countpage += 1;
-                // if(this.fisrtanswer==false){
                 this.account += 1;
-                // }
                 this.context.beginPath(); // 重新绘制一个圆
                 this.context.lineWidth = 6;
                 this.context.shadowBlur = 1;
@@ -561,10 +562,8 @@
                         if(this.countpage<=this.listG.length){
                           this.onef = true;
                         }else{
-
                           setTimeout(() => {
                             this.zhezhao=false;
-                            // this.gomemu();
                             this.$router.push({
                               //核心语句
                               path: "/presult", //跳转的路径
@@ -575,10 +574,10 @@
                                 account:this.account,
                                 menuId: this.menuId,
                                 unitsId:this.unitsId,
-                                unit:this.unit
+                                unit:this.unit,
+                                insert:this.insert
                               }
                             });
-
                           }, 1000);
                         }
                         imgsty[successIndex].classList.remove("sacle1_2");
@@ -595,10 +594,13 @@
             } else {
               /*回答错误在这里写效果*/
               this.soundsWrong=true;
-              // this.fisrtanswer=true;this.issuccess2=true;
               setTimeout(() => {
                 this.soundsWrong=false;
-
+                if (this.countpage-2 !==9){
+                  this.insert = this.insert+"{'phonics_detail_id':"+this.listG[this.countpage-2][0].phonics_detail_id+",'ansResult':0},";
+                }else{
+                  this.insert = this.insert+"{'phonics_detail_id':"+this.listG[this.countpage-2][0].phonics_detail_id+",'ansResult':0}]";
+                }
               },2000);
               setTimeout(() => {
                 this.canvasObj.height = this.canvasH; // 清空画布
@@ -625,51 +627,29 @@
                       this.list1[l].fail=1;
                     }
                   }
-
                 }, 1000);
                 if (this.countpage>this.listG.length) {
                   setTimeout(() => {
-                    // this.gomemu();
                     this.$router.push({
                       //核心语句
                       path: "/presult", //跳转的路径
                       query: {
                         //路由传参时push和query搭配使用 ，作用时传递参数
-                        // id: this.id,
-                        // account: this.account,
-                        // type: this.type,
-                        // sum:this.sum,
                         type:this.type,
                         partName:'intermediate2',
                         account:this.account,
                         menuId: this.menuId,
                         unitsId:this.unitsId,
-                        unit:this.unit
+                        unit:this.unit,
+                        insert:this.insert
                       }
                     });
-
                   },2000);
                 } else {
                     setTimeout(() => {
                     this.onef = true;
                     }, 2000);
-
                 }
-// 								setTimeout(() => {
-// 									// this.canvasObj.style.transition = "all 0.4s";
-// 									// this.canvasObj.style.opacity = 0;
-//
-// 									const canvas = document.getElementById('canvas'); // 初次进来初始化画布
-// 									let imgBox = document.getElementById('imgBox');
-// 									this.canvasObj = canvas;
-// 									this.canvasH = imgBox.clientHeight; // 存储canvas的高度，用于清空画布
-// 									canvas.width = imgBox.clientWidth; // 动态赋值canvas的宽度
-// 									canvas.height = imgBox.clientHeight; // 动态赋值canvas的高度
-// 									this.context = canvas.getContext('2d');
-// 									this.setCanvasStyle();
-//
-//
-// 								}, 800);
               }, 500);
             }
           } else {
