@@ -111,7 +111,7 @@
 		watch: {
 
 			'loaded': function(newVal) {
-				if (this.onef == true) {
+				if (this.onef === true) {
 					if (this.list1.length > 2 ||this.list2.length > 2) {
 						 this.changwidth = true;
 						}
@@ -124,9 +124,8 @@
 					setTimeout(() => {
 						this.onef = false;
 					}, 2000);
-
 				}
-				if (this.onef == false) {
+				if (this.onef === false) {
 
 					setTimeout(() => {
 						const that = this;
@@ -215,10 +214,9 @@
 									isTarget: true,
 									dropOptions: exampleDropOptions
 								};
-                                if (that.list1.length > 2 ||that.list2.length > 2) {
-                                   that.changwidth = true;
-                                 }
-
+                if (that.list1.length > 2 ||that.list2.length > 2) {
+                   that.changwidth = true;
+                 }
 								for (var i = 0; i < that.list1.length; i++) {
 									 if(that.loaded==true){
 									instance.addEndpoint(
@@ -247,24 +245,20 @@
 									//console.log(connection);
 									var truetime = that.list1.length;
 									for (var i = 0; i < that.list1.length; i++) {
-										if (connection.sourceId == that.list1[i].id) {
-											if (connection.targetId == that.list1[i].targetId) {
+										if (connection.sourceId === that.list1[i].id) {
+											if (connection.targetId === that.list1[i].targetId) {
 												if (connection.target != null) {
 													if(that.truelist.length <= 0){
 														that.truelist.push(connection.targetId);
 														for (var f = 0; f < that.falselist.length; f++) {
-															if (that.falselist[f] == connection.suspendedElementId) {
+															if (that.falselist[f] === connection.suspendedElementId) {
 																that.falselist.splice(f, 1);
 															}
 														}
 													}else{
-														// for(var f=0;f<that.truelist.length;f++){
-														// 	if(that.truelist[f] != connection.targetId){
 																that.truelist.push(connection.targetId);
-														// 	}
-														// }
 														for (var f = 0; f < that.falselist.length; f++) {
-															if (that.falselist[f] == connection.suspendedElementId) {
+															if (that.falselist[f] === connection.suspendedElementId) {
 																that.falselist.splice(f, 1);
 															}
 														}
@@ -301,7 +295,7 @@
 															}
 														} else {
 															for (var f = 0; f < that.falselist.length; f++) {
-																if (that.falselist[f] == connection.suspendedElementId) {
+																if (that.falselist[f] === connection.suspendedElementId) {
 																	that.falselist.splice(f, 1);
 																}
 															}
@@ -314,24 +308,23 @@
 
 									setTimeout(() => {
 										that.nowtime = document.getElementsByTagName("svg").length;
-                    //console.log(that.nowtime);
-
-										if (that.nowtime == truetime) { //连接的数量
+										if (that.nowtime === truetime) { //连接的数量
 										that.zhezhao=true;
 										that.countpage += 1;
 											if (that.falselist.length <= 0) { //错误list的长度
-												that.showbg = 1;that.soundscorrect=true;
+												that.showbg = 1;
+												that.soundscorrect=true;
+                        if (that.countpage-2 !==9){
+                          that.insert = that.insert+"{'phonics_detail_id':"+that.listD[that.countpage-2][0].phonics_detail_id+",'ansResult':1},";
+                        }else{
+                          that.insert = that.insert+"{'phonics_detail_id':"+that.listD[that.countpage-2][0].phonics_detail_id+",'ansResult':1}]";
+                        }
 												for (var i = 0; i < that.list2.length; i++) {
-													 //展示星星
-
+                          //展示星星
 													that.list2[i].changecolor=1;
 												}
-												//console.log( that.account);
-													// that.account += 1;
 												setTimeout(() => {
-													// for (var i = 0; i < that.list2.length; i++) {
-														that.showbg = 0;that.soundscorrect=false;
-													// }
+                          that.showbg = 0;that.soundscorrect=false;
 													that.nowtime = 0;
 													if(that.countpage<=that.listD.length){
                              that.account += 1;
@@ -348,28 +341,15 @@
                                 bg: that.list[u].bg,
 													   		id:that.list[u].id2,
 													   		changecolor: that.list[u].changecolor,
-
 													   		issuccess:that.list[u].issuccess,
 													   		name:that.list[u].name,
-
 													   		showbg:that.list[u].showbg,
-
 													   		targetId:that.list[u].targetId2,
-
 													   	})
-
 													   }
-													   // var leng=that.list.length/2-1;
-													   //   that.list2=[];that.list1=[];
-													   // for(var i=leng+1;i<that.list.length;i++){
-													   // 	that.list2.push(that.list[i]);
-													   // }
-													   // for(var i=0;i<leng+1;i++){
-													   // 	that.list1.push(that.list[i]);
-													   // }
 													 that.zhezhao=false;
 													}else{
-                                                            that.account += 1;
+                                that.account += 1;
 																setTimeout(() => {
 																	that.zhezhao=false;
 																	that.$router.push({
@@ -377,16 +357,13 @@
 																		path: "/presult", //跳转的路径
 																		query: {
 																			//路由传参时push和query搭配使用 ，作用时传递参数
-																			// id: that.id,
-																			// account: that.account,
-																			// type: that.type,
-																			// sum: that.sum,
 																			type:that.type,
 																			partName:'phonics5',
 																			account:that.account,
 																			menuId: that.menuId,
 																			unitsId:that.unitsId,
-																			unit:that.unit
+																			unit:that.unit,
+                                      insert:that.insert
 																		}
 																	});
 
@@ -394,28 +371,28 @@
 													}
 													that.truelist = [];
 													that.falselist = [];
-
-
 												}, 2000);
 											} else {
 												var svgLine = document.getElementsByTagName("svg");
 												that.soundsWrong=true;
+                        if (that.countpage-2 !==9){
+                          that.insert = that.insert+"{'phonics_detail_id':"+that.listD[that.countpage-2][0].phonics_detail_id+",'ansResult':0},";
+                        }else{
+                          that.insert = that.insert+"{'phonics_detail_id':"+that.listD[that.countpage-2][0].phonics_detail_id+",'ansResult':0}]";
+                        }
 													for (var i = 0; i < that.list2.length; i++) {
 														for (var k = 0; k < that.falselist.length; k++) {
-														if (that.falselist[k] == that.list2[i].id) {
+														if (that.falselist[k] === that.list2[i].id) {
 															that.list2[i].issuccess = 1; //晃动错误
 														}
-														if (that.falselist[k] == svgLine[i]._jsPlumb.targetId) {
+														if (that.falselist[k] === svgLine[i]._jsPlumb.targetId) {
 															svgLine[i].children[0].setAttribute("stroke", "#cc6453");
 														}
 													}
 												}
-												// that.account=that.account+that.list2.length-that.falselist.length;
-												//console.log( that.account);
 												setTimeout(() => {
 													that.soundsWrong=false;
 													for (var i = 0; i < svgLine.length; i++) {
-														/*svgLine[i].children[0].setAttribute("stroke", "#cc6453");*/
 														svgLine[i].style.transition = 'all 0.4s';
 														svgLine[i].style.width = '0px';
 													}
@@ -472,20 +449,13 @@
                                       bg: that.list[u].bg,
 																   		id:that.list[u].id2,
 																   		changecolor: that.list[u].changecolor,
-
 																   		issuccess:that.list[u].issuccess,
 																   		name:that.list[u].name,
-
 																   		showbg:that.list[u].showbg,
-
 																   		targetId:that.list[u].targetId2,
-
                                       size:0,
 																   	})
-
-
 																   }
-
 																   that.zhezhao=false;
 																}else{
 																			setTimeout(() => {
@@ -495,16 +465,13 @@
 																					path: "/presult", //跳转的路径
 																					query: {
 																						//路由传参时push和query搭配使用 ，作用时传递参数
-																						// id: that.id,
-																						// account: that.account,
-																						// type: that.type,
-																						// sum: that.sum,
 																						type:that.type,
 																						partName:'phonics5',
 																						account:that.account,
 																						menuId: that.menuId,
 																						unitsId:that.unitsId,
-																						unit:that.unit
+																						unit:that.unit,
+                                            insert:that.insert
 																					}
 																				});
 //
@@ -512,7 +479,6 @@
 																}
 																that.truelist = [];
 																that.falselist = [];
-
 															}, 1000);
 														}, 100);
 													}, 300);
@@ -523,18 +489,15 @@
 										}
 									}, 400);
 								});
-								// make .window divs draggable
-								//instance.draggable(jsPlumb.getSelector(".drag-drop-demo .window"));
 							});
-							// jsPlumb.fire("jsPlumbDemoLoaded", instance);
 						});
 					}, 500);
 				}
-
 			},
 		},
 		data() {
 			return {
+			  insert:'[',
 				popp: false,
 				ruleimg8:false,
 				spanp:'',

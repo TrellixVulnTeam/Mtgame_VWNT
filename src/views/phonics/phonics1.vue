@@ -221,6 +221,7 @@
             if(this.list1[i].score===1){
               this.titlequesion = this.list1[i].title;
               this.audio = this.pic + this.list1[i].audio;
+              this.phonicsDetailId =this.list1[i].pid;
             }
           }
           // console.log(this.countpage);
@@ -280,6 +281,8 @@
         videoOptions:{
           controls:false,
         },
+        phonicsDetailId:0,
+        insert:'[',
         popp: false,
         ruleimg8: false,
         ruleimg10: false,
@@ -391,16 +394,23 @@
       anser(li){
         if(this.scoreacount>0){
           this.zhezhao=true;
-          if(li.score==1){
+          if(li.score===1){
             this.soundscorrect=true;
-            li.start=1;li.ifshow=0;
+            li.start=1;
+            li.ifshow=0;
             setTimeout(() => {
               li.start=0; this.scoreacount-=1;
               this.zhezhao=false;
               this.soundscorrect=false;
-              if(this.scoreacount==0){
+              if(this.scoreacount===0){
                 this.zhezhao=true;
-                this.countpage += 1;this.account += 1;
+                this.countpage += 1;
+                this.account += 1;
+                if (this.countpage-2 !==9){
+                  this.insert = this.insert+"{'phonics_detail_id':"+this.phonicsDetailId+",'ansResult':1},";
+                }else{
+                  this.insert = this.insert+"{'phonics_detail_id':"+this.phonicsDetailId+",'ansResult':1}]";
+                }
                 if (this.countpage > this.question) {
                   setTimeout(() => {
                     this.$router.push({
@@ -413,7 +423,8 @@
                         account:this.account,
                         menuId: this.menuId,
                         unitsId:this.unitsId,
-                        unit:this.unit
+                        unit:this.unit,
+                        insert:this.insert
                       }
                     });
                   }, 1000);
@@ -435,6 +446,7 @@
               this.soundsWrong = false;
             }, 1000);
             if (this.timeout >= 5) {
+              this.insert = this.insert+"{'phonics_detail_id':"+this.phonicsDetailId+",'ansResult':0}]";
               setTimeout(() => {
                 this.$router.push({
                   //核心语句
@@ -446,14 +458,14 @@
                     account:this.account,
                     menuId: this.menuId,
                     unitsId:this.unitsId,
-                    unit:this.unit
+                    unit:this.unit,
+                    insert:this.insert
                   }
                 });
               }, 1000);
             }
           }
         }
-
       },
       gomemu() {
         var audio = document.getElementById('music');
@@ -516,11 +528,7 @@
       localStorage.setItem('gamename',this.gamename);
       var timestamp = (new Date()).getTime();
       localStorage.setItem('startTimeid',timestamp);
-      if(localStorage.getItem('gamemusic')=="false"){
-        this.show=false;
-      }else{
-        this.show=true;
-      }
+      this.show = localStorage.getItem('gamemusic') !== "false";
       this.$axios.post(this.url, qs.stringify({
         menuId: this.menuId,
         num:10
@@ -528,8 +536,7 @@
         for (var i=0;i<10;i++) {
           this.listF.push(res.data.list['list'+i]); //属性
         }
-        // console.log(this.listF);
-        // this.listF=[];
+        this.phonicsDetailId = res.data.phonicsDetailId;
         for(let i = 0,len = this.listF.length; i < len; i++){
           let currentRandom = parseInt(Math.random() * (len - 1));
           let current = this.listF[i];
@@ -548,6 +555,7 @@
           if(this.list1[i].score===1){
             this.titlequesion = this.list1[i].title;
             this.audio = this.pic + this.list1[i].audio;
+            this.phonicsDetailId =this.list1[i].pid;
           }
         }
       // }, res => {
@@ -589,7 +597,6 @@
               }
               for (var i = 0; i < this.list1.length; i++) {
                 this.list1[i].ifshow=1;
-                console.log(this.list1[i].ifshow);
                 // if(this.list1[i].score===1){
                 //   this.titlequesion = this.list1[i].title;
                 // }

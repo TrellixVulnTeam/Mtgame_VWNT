@@ -192,6 +192,7 @@ b'c
         spanp:'',
         playtime:1,
         countpage:1,
+        insert:'[',
         shownumb:false,
         fisrtanswer:false,
         question: 1,
@@ -469,7 +470,7 @@ b'c
           if (this.context.isPointInPath(item.corePx, item.corePy)) { // 获取答题选项下标
             anwserIndex = index;
           }
-          if (this.list1[index].score=='1') { // 获取正确选项下标
+          if (this.list1[index].score==='1') { // 获取正确选项下标
             successIndex = index;
           }
           if (this.context.isPointInPath(item.corePx, item.corePy)) {
@@ -485,10 +486,15 @@ b'c
         } else {
           if (anwserList.length === 1) { // 答题时只有圈中一个选项才能进行判断
             this.zhezhao=true;
-            // console.log(anwserIndex);
-            if (this.list1[anwserIndex].score=='1') {
+            if (this.list1[anwserIndex].score==='1') {
               /*回答正确在这里写效果*/
               this.soundscorrect=true;
+              if (this.countpage-1 !==9){
+                this.insert = this.insert+"{'phonics_detail_id':"+this.listG[this.countpage-1][0].phonics_detail_id+",'ansResult':1},";
+              }else{
+                this.insert = this.insert+"{'phonics_detail_id':"+this.listG[this.countpage-1][0].phonics_detail_id+",'ansResult':1}]";
+              }
+              console.log(this.insert);
               setTimeout(() => {
                 this.soundscorrect=false;
               },2000);
@@ -533,7 +539,8 @@ b'c
                                 account:this.account,
                                 menuId: this.menuId,
                                 unitsId:this.unitsId,
-                                unit:this.unit
+                                unit:this.unit,
+                                insert:this,insert
                               }
                             });
 
@@ -553,7 +560,12 @@ b'c
             } else {
               /*回答错误在这里写效果*/
               this.soundsWrong=true;
-              // this.fisrtanswer=true;this.issuccess2=true;
+              if (this.countpage-1 !==9){
+                this.insert = this.insert+"{'phonics_detail_id':"+this.listG[this.countpage-1][0].phonics_detail_id+",'ansResult':0},";
+              }else{
+                this.insert = this.insert+"{'phonics_detail_id':"+this.listG[this.countpage-1][0].phonics_detail_id+",'ansResult':0}]";
+              }
+              console.log(this.insert);
               setTimeout(() => {
                 this.soundsWrong=false;
 
@@ -593,16 +605,13 @@ b'c
                       path: "/presult", //跳转的路径
                       query: {
                         //路由传参时push和query搭配使用 ，作用时传递参数
-                        // id: this.id,
-                        // account: this.account,
-                        // type: this.type,
-                        // sum:this.sum,
                         type:this.type,
                         partName:'phonics4',
                         account:this.account,
                         menuId: this.menuId,
                         unitsId:this.unitsId,
-                        unit:this.unit
+                        unit:this.unit,
+                        insert:this.insert
                       }
                     });
 

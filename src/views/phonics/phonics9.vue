@@ -159,6 +159,7 @@
         popp: false,
         spanp: '',
         duration:0,
+        insert:'[',
         ruleimg8: false,
         shownumb: false,
         ruleimg10: false,
@@ -429,14 +430,19 @@
         }
       },
       enters() {
-        if (this.space != '' && this.space != null) {
+        if (this.space !== '' && this.space != null) {
           this.zhezhao = true;
-          if (this.turename == this.space) {
+          if (this.turename === this.space) {
             this.countpage += 1;
             this.changecolor2 = 1;
             this.account += 1;
             this.showstart = true;
             this.soundscorrect = true;
+            if (this.countpage-2 !==9){
+              this.insert = this.insert+"{'phonics_detail_id':"+this.listBoss[this.countpage-2][0].phonics_detail_id+",'ansResult':1},";
+            }else{
+              this.insert = this.insert+"{'phonics_detail_id':"+this.listBoss[this.countpage-2][0].phonics_detail_id+",'ansResult':1}]";
+            }
             setTimeout(() => {
               this.showstart = false;
               this.soundscorrect = false;
@@ -447,33 +453,33 @@
                   this.spanline = true;
                   this.space = '';
                 } else {
-
                   setTimeout(() => {
                     this.$router.push({
                       //核心语句
                       path: "/presult", //跳转的路径
                       query: {
-
                         type: this.type,
                         partName: 'phonics9',
                         account: this.account,
                         menuId: this.menuId,
                         unitsId: this.unitsId,
-                        unit: this.unit
+                        unit: this.unit,
+                        insert:this.insert
                       }
                     });
-
-
                   }, 1000);
                 }
-
               }, 1000);
             }, 2000);
           } else {
             this.soundsWrong = true;
             this.changecolor = 1;
             this.countpage += 1;
-
+            if (this.countpage-2 !==9){
+              this.insert = this.insert+"{'phonics_detail_id':"+this.listBoss[this.countpage-2][0].phonics_detail_id+",'ansResult':0},";
+            }else{
+              this.insert = this.insert+"{'phonics_detail_id':"+this.listBoss[this.countpage-2][0].phonics_detail_id+",'ansResult':0}]";
+            }
             setTimeout(() => {
               this.soundsWrong = false;
               this.changecolor = 0;
@@ -487,8 +493,6 @@
                 this.spanline = true;
                 this.space = '';
               } else {
-
-
                   this.$router.push({
                     //核心语句
                     path: "/presult", //跳转的路径
@@ -498,18 +502,15 @@
                       account: this.account,
                       menuId: this.menuId,
                       unitsId: this.unitsId,
-                      unit: this.unit
+                      unit: this.unit,
+                      insert:this.insert
                     }
                   });
-//
               }
               }, 1500);
             }, 2000);
-
           }
-
         }
-
       },
       bodyScroll(event) {
         event.preventDefault();

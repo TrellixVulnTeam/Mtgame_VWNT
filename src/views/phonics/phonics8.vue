@@ -322,6 +322,11 @@
                       if (that.falselist.length <= 0) { //错误list的长度
                         that.showbg = 1;
                         that.soundscorrect = true;
+                        if (that.countpage-2 !==9){
+                          that.insert = that.insert+"{'phonics_detail_id':"+that.listD[that.countpage-2][0].phonics_detail_id+",'ansResult':1},";
+                        }else{
+                          that.insert = that.insert+"{'phonics_detail_id':"+that.listD[that.countpage-2][0].phonics_detail_id+",'ansResult':1}]";
+                        }
                         for (var i = 0; i < that.list2.length; i++) {
                           //展示星星
 
@@ -381,16 +386,13 @@
                                 path: "/presult", //跳转的路径
                                 query: {
                                   //路由传参时push和query搭配使用 ，作用时传递参数
-                                  // id: that.id,
-                                  // account: that.account,
-                                  // type: that.type,
-                                  // sum: that.sum,
                                   type: that.type,
                                   partName: 'phonics8',
                                   account: that.account,
                                   menuId: that.menuId,
                                   unitsId: that.unitsId,
-                                  unit: that.unit
+                                  unit: that.unit,
+                                  insert:that.insert
                                 }
                               });
                               //
@@ -404,6 +406,11 @@
                       } else {
                         var svgLine = document.getElementsByTagName("svg");
                         that.soundsWrong = true;
+                        if (that.countpage-2 !==9){
+                          that.insert = that.insert+"{'phonics_detail_id':"+that.listD[that.countpage-2][0].phonics_detail_id+",'ansResult':0},";
+                        }else{
+                          that.insert = that.insert+"{'phonics_detail_id':"+that.listD[that.countpage-2][0].phonics_detail_id+",'ansResult':0}]";
+                        }
                         for (var i = 0; i < that.list2.length; i++) {
                           for (var k = 0; k < that.falselist.length; k++) {
                             if (that.falselist[k] === that.list2[i].id) {
@@ -504,16 +511,13 @@
                                       path: "/presult", //跳转的路径
                                       query: {
                                         //路由传参时push和query搭配使用 ，作用时传递参数
-                                        // id: that.id,
-                                        // account: that.account,
-                                        // type: that.type,
-                                        // sum: that.sum,
                                         type: that.type,
                                         partName: 'phonics8',
                                         account: that.account,
                                         menuId: that.menuId,
                                         unitsId: that.unitsId,
-                                        unit: that.unit
+                                        unit: that.unit,
+                                        insert:that.insert
                                       }
                                     });
 
@@ -544,6 +548,7 @@
     },
     data() {
       return {
+        insert:'[',
         popp: false,
         ruleimg8: false,
         spanp: '',

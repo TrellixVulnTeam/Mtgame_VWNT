@@ -103,6 +103,7 @@
 		name: "phonics6",
 		data() {
 			return {
+			  insert:'[',
 				popp: false,
 				spanp:'',
 				ruleimg8:false,
@@ -373,17 +374,15 @@
 				this.centerP.forEach((item, index) => {
 					if (this.context.isPointInPath(item.corePx, item.corePy)) { // 获取答题选项下标
 						anwserIndex = index;
-					};
-					if (this.list1[index].score==1) { // 获取正确选项下标
+					}
+					if (this.list1[index].score===1) { // 获取正确选项下标
 						successIndex = index;
-					};
+					}
 					if (this.context.isPointInPath(item.corePx, item.corePy)) {
 						isSelect = true;
 						anwserList.push(item);
-					};
+					}
 				});
-        //  const canvas = document.getElementById('canvas');
-        // this.convertCanvasToImage(canvas);
 				if (!isSelect) { // 没有选中
 					this.canvasObj.height = this.canvasH;
 					this.setCanvasStyle();
@@ -391,9 +390,14 @@
 					if (anwserList.length === 1) { // 答题时只有圈中一个选项才能进行判断
 					     this.zhezhao=true;
 						// console.log(anwserIndex);
-						if (this.list1[anwserIndex].score==1) {
+						if (this.list1[anwserIndex].score===1) {
 							/*回答正确在这里写效果*/
 							this.soundscorrect=true;
+              if (this.countpage-1 !==9){
+                this.insert = this.insert+"{'phonics_detail_id':"+this.listG[this.countpage-1][0].phonics_detail_id+",'ansResult':1},";
+              }else{
+                this.insert = this.insert+"{'phonics_detail_id':"+this.listG[this.countpage-1][0].phonics_detail_id+",'ansResult':1}]";
+              }
 							setTimeout(() => {
 								this.soundscorrect=false;
 							},2000);
@@ -424,7 +428,6 @@
 												if(this.countpage<=this.listG.length){
 												this.onef = true;
 												}else{
-
 															setTimeout(() => {
 																 this.zhezhao=false;
                                  // this.gomemu();
@@ -438,10 +441,10 @@
 																		account:this.account,
 																		menuId: this.menuId,
 																		unitsId:this.unitsId,
-																		unit:this.unit
+																		unit:this.unit,
+                                    insert:this.insert
 																	}
 																});
-
 															}, 1000);
 												}
 												imgsty[successIndex].classList.remove("sacle1_2");
@@ -458,7 +461,11 @@
 						} else {
 							/*回答错误在这里写效果*/
 							this.soundsWrong=true;
-							// this.fisrtanswer=true;this.issuccess2=true;
+              if (this.countpage-1 !==9){
+                this.insert = this.insert+"{'phonics_detail_id':"+this.listG[this.countpage-1][0].phonics_detail_id+",'ansResult':0},";
+              }else{
+                this.insert = this.insert+"{'phonics_detail_id':"+this.listG[this.countpage-1][0].phonics_detail_id+",'ansResult':0}]";
+              }
 							setTimeout(() => {
 								this.soundsWrong=false;
 							},2000);
@@ -481,16 +488,13 @@
                 			path: "/presult", //跳转的路径
                 			query: {
                 				//路由传参时push和query搭配使用 ，作用时传递参数
-                				// id: this.id,
-                				// account: this.account,
-                				// type: this.type,
-                				// sum:this.sum,
                 				type:this.type,
                 				partName:'phonics6',
                 				account:this.account,
                 				menuId: this.menuId,
                 				unitsId:this.unitsId,
-                				unit:this.unit
+                				unit:this.unit,
+                        insert:this.insert
                 			}
                 		});
 

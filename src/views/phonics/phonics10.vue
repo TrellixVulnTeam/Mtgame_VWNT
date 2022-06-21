@@ -190,6 +190,7 @@
         showstart: false,
         onef: true,
         fade: 'fade',
+        insert:'[',
         show: true,
         space: '',
         audios: '',
@@ -453,29 +454,34 @@
         }
       },
       enters() {
-        if (this.space != '' && this.space != null) {
+        if (this.space !== '' && this.space != null) {
           this.zhezhao = true;
           for(var i=0;i<this.items2.length;i++){
-            if(this.space==this.items2[i].name){
+            if(this.space===this.items2[i].name){
               this.items2[i].liopciay=true;
             }
           }
           for(var i=0;i<this.items3.length;i++){
-            if(this.space==this.items3[i].name){
+            if(this.space===this.items3[i].name){
               this.items3[i].liopciay=true;
             }
           }
           for(var i=0;i<this.items4.length;i++){
-            if(this.space==this.items4[i].name){
+            if(this.space===this.items4[i].name){
               this.items4[i].liopciay=true;
             }
           }
-          if (this.turename == this.space) {
+          if (this.turename === this.space) {
             this.countpage += 1;
             this.changecolor2 = 1;
             this.account += 1;
             this.showstart = true;
             this.soundscorrect = true;
+            if (this.countpage-2 !==9){
+              this.insert = this.insert+"{'phonics_detail_id':"+this.listBoss[this.countpage-2][0].phonics_detail_id+",'ansResult':1},";
+            }else{
+              this.insert = this.insert+"{'phonics_detail_id':"+this.listBoss[this.countpage-2][0].phonics_detail_id+",'ansResult':1}]";
+            }
             setTimeout(() => {
               this.showstart = false;
               this.soundscorrect = false;
@@ -498,9 +504,10 @@
                         account: this.account,
                         menuId: this.menuId,
                         unitsId: this.unitsId,
-                        unit: this.unit
+                        unit: this.unit,
+                        insert:this.insert
                       }
-                    });
+                    })
 
                   }, 1000);
                 }
@@ -510,7 +517,6 @@
           } else {
             this.soundsWrong = true;
             this.changecolor = 1;
-
             this.timeout = this.timeout + 1;
             if (this.timeout >= 1) {
             	for (var t = 1; t <= this.timeout; t++) {
@@ -524,6 +530,11 @@
                 this.changecolor = 0;
                 this.space= this.turename;
                 this.changecolor2=1;
+                if (this.countpage-2 !==9){
+                  this.insert = this.insert+"{'phonics_detail_id':"+this.listBoss[this.countpage-2][0].phonics_detail_id+",'ansResult':0},";
+                }else{
+                  this.insert = this.insert+"{'phonics_detail_id':"+this.listBoss[this.countpage-2][0].phonics_detail_id+",'ansResult':0}]";
+                }
                 setTimeout(() => {
               if (this.countpage <= this.listBoss.length) {
                 this.onef = true;
@@ -541,7 +552,8 @@
                       account: this.account,
                       menuId: this.menuId,
                       unitsId: this.unitsId,
-                      unit: this.unit
+                      unit: this.unit,
+                      insert:this.insert
                     }
                   });
               }

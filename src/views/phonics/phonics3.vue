@@ -141,6 +141,7 @@
         zhezhao:true,
         bg: '',
         audio: '',
+        insert:'[',
         soundsWrong: false,
         soundscorrect: false,
         video: false,
@@ -181,12 +182,17 @@
       },
       answer(li){
            this.zhezhao=true;
-           if(li.score==1){
+           if(li.score===1){
               this.soundscorrect = true;
               li.bluesuccess=1;
               this.showstart = true;
               this.countpage += 1;
               this.account+=1;
+             if (this.countpage-2 !==9){
+               this.insert = this.insert+"{'phonics_detail_id':"+this.listF[this.countpage-2][0].phonics_detail_id+",'ansResult':1},";
+             }else{
+               this.insert = this.insert+"{'phonics_detail_id':"+this.listF[this.countpage-2][0].phonics_detail_id+",'ansResult':1}]";
+             }
               setTimeout(() => {
                 this.showstart = false;
                 this.soundscorrect = false;
@@ -205,7 +211,8 @@
                         account: this.account,
                         menuId: this.menuId,
                         unitsId: this.unitsId,
-                        unit: this.unit
+                        unit: this.unit,
+                        insert:this.insert
                       }
                     });
 
@@ -216,6 +223,11 @@
            this.soundsWrong = true;
            this.countpage += 1;
            li.redsuccess=1;
+             if (this.countpage-2 !==9){
+               this.insert = this.insert+"{'phonics_detail_id':"+this.listF[this.countpage-2][0].phonics_detail_id+",'ansResult':0},";
+             }else{
+               this.insert = this.insert+"{'phonics_detail_id':"+this.listF[this.countpage-2][0].phonics_detail_id+",'ansResult':0}]";
+             }
            setTimeout(() => {
              this.soundsWrong = false; li.redsuccess=0;
              for(var l=0;l<this.list1.length;l++){
@@ -233,13 +245,13 @@
                    //核心语句
                    path: "/presult", //跳转的路径
                    query: {
-
                      type: this.type,
                      partName: 'phonics3',
                      account: this.account,
                      menuId: this.menuId,
                      unitsId: this.unitsId,
-                     unit: this.unit
+                     unit: this.unit,
+                     insert:this.insert
                    }
                  });
              }

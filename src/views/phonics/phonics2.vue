@@ -156,8 +156,7 @@
 </template>
 <!-- <script src="./static/tesseract/tesseract.min.js"></script> -->
 <script>
-  import $ from 'jquery';
-  var qs = require('qs');
+var qs = require('qs');
 
   // import OCRAD from "../../../ocrad.js";
 
@@ -264,7 +263,7 @@
         canvasmove: false,
         gamename: '',
         timeurl: '/user/playTime',
-
+        insert:'[',
       }
     },
     mounted() {
@@ -280,7 +279,7 @@
         event.preventDefault();
       },
       change() {
-        if (this.onef == false) {
+        if (this.onef === false) {
           this.video = true;
         }
       },
@@ -369,20 +368,19 @@
           const reg = new Image();
           // reg.setAttribute("crossOrigin",'Anonymous');
         reg.src = c.toDataURL("image/png");
-                   // this.pngimg2=reg.src;
-          console.log(reg.src);
-
         this.$axios.post(this.url2, qs.stringify({
           imageFile: reg.src,
           image: this.yuantu,
         })).then(res => {
-          // console.log(res.data);
           if (res.data.success === true) {
-            // that.video = true;
             this.account += 1;
             this.soundscorrect = true;
             this.showstart = true;
-            // console.log(that.zhezhao);
+            if (this.countpage-1 !==9){
+              this.insert = this.insert+"{'phonics_detail_id':"+this.listF[this.countpage-1][0].phonics_detail_id+",'ansResult':1},";
+            }else{
+              this.insert = this.insert+"{'phonics_detail_id':"+this.listF[this.countpage-1][0].phonics_detail_id+",'ansResult':1}]";
+            }
             setTimeout(() => {
               this.soundscorrect = false;
               this.showstart = false;
@@ -397,16 +395,13 @@
                   path: "/presult", //跳转的路径
                   query: {
                     //路由传参时push和query搭配使用 ，作用时传递参数
-                    // id: that.id,
-                    // account: that.account,
-                    // type: that.type,
-                    // sum: that.sum,
                     type: this.type,
                     partName: 'phonics2',
                     account: this.account,
                     menuId: this.menuId,
                     unitsId: this.unitsId,
-                    unit: this.unit
+                    unit: this.unit,
+                    insert:this.insert
                   }
                 });
               }
@@ -416,6 +411,11 @@
             // this.setCanvasStyle();
           } else {
               this.soundsWrong = true;
+            if (this.countpage-1 !==9){
+              this.insert = this.insert+"{'phonics_detail_id':"+this.listF[this.countpage-1][0].phonics_detail_id+",'ansResult':0},";
+            }else{
+              this.insert = this.insert+"{'phonics_detail_id':"+this.listF[this.countpage-1][0].phonics_detail_id+",'ansResult':0}]";
+            }
               setTimeout(() => {
                 this.soundsWrong = false;
                 if (this.countpage < this.question) {
@@ -427,16 +427,13 @@
                     path: "/presult", //跳转的路径
                     query: {
                       //路由传参时push和query搭配使用 ，作用时传递参数
-                      // id: this.id,
-                      // account: this.account,
-                      // type: this.type,
-                      // sum: this.sum,
                       type: this.type,
                       partName: 'phonics2',
                       account: this.account,
                       menuId: this.menuId,
                       unitsId: this.unitsId,
-                      unit: this.unit
+                      unit: this.unit,
+                      insert:this.insert
                     }
                   });
                 }

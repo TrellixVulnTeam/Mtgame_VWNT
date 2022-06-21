@@ -190,6 +190,7 @@
         ruleimg12:false,
         speaksound:false,
         audiosound:'',
+        insert:'[',
         controlOnStart: true,
         falgs: 'article',
         disabled: false,
@@ -358,6 +359,17 @@
                   this.count += 1;
                   if(this.count===3){
                     this.account+=1;
+                    if (this.countpage-2 !==9){
+                      this.insert = this.insert+"{'phonics_detail_id':"+this.listH[this.countpage-2][0].phonics_detail_id+",'ansResult':1},";
+                    }else{
+                      this.insert = this.insert+"{'phonics_detail_id':"+this.listH[this.countpage-2][0].phonics_detail_id+",'ansResult':1}]";
+                    }
+                  }else{
+                    if (this.countpage-2 !==9){
+                      this.insert = this.insert+"{'phonics_detail_id':"+this.listH[this.countpage-2][0].phonics_detail_id+",'ansResult':0},";
+                    }else{
+                      this.insert = this.insert+"{'phonics_detail_id':"+this.listH[this.countpage-2][0].phonics_detail_id+",'ansResult':0}]";
+                    }
                   }
                   setTimeout(() => {
                     if (this.countpage <= this.listH.length) {
@@ -367,7 +379,7 @@
                         this.items2 = [];
                         this.fangda1 = false;
                         this.reload = true;
-                        this.items1 = this.listH[this.countpage - 1];
+                        this.items1 = JSON.parse(JSON.stringify(this.listH[this.countpage - 1]));
                         for(var a=0;a<this.items1.length;a++){
                           this.items1[a].imgop=0;
                           this.items1[a].sound=0;
@@ -394,7 +406,8 @@
                             account: this.account,
                             menuId: this.menuId,
                             unitsId: this.unitsId,
-                            unit: this.unit
+                            unit: this.unit,
+                            insert:this.insert
                           }
                         });
 
@@ -403,7 +416,13 @@
 
                   },2000);
                 } else{
-                  this.issuccess1 = true;this.soundsWrong=true;
+                  this.issuccess1 = true;
+                  this.soundsWrong=true;
+                  if (this.countpage-2 !==9){
+                    this.insert = this.insert+"{'phonics_detail_id':"+this.listH[this.countpage-2][0].phonics_detail_id+",'ansResult':0},";
+                  }else{
+                    this.insert = this.insert+"{'phonics_detail_id':"+this.listH[this.countpage-2][0].phonics_detail_id+",'ansResult':0}]";
+                  }
                   setTimeout(() => {
                     this.soundsWrong=false;
                     if (this.countpage <= this.listH.length) {
@@ -413,7 +432,7 @@
                         this.items2 = [];
                         this.fangda1 = false;
                         this.reload = true;
-                        this.items1 = this.listH[this.countpage - 1];
+                        this.items1 = JSON.parse(JSON.stringify(this.listH[this.countpage - 1]));
                         for(var a=0;a<this.items1.length;a++){
                           this.items1[a].imgop=0;
                           this.items1[a].sound=0;
@@ -438,7 +457,8 @@
                             account: this.account,
                             menuId: this.menuId,
                             unitsId: this.unitsId,
-                            unit: this.unit
+                            unit: this.unit,
+                            insert:this.insert
                           }
                         });
 
@@ -459,7 +479,7 @@
                 //         this.items4 = [];
                 //         this.fangda2 = false;
                 //         this.reload = true;
-                //         this.items1 = this.listH[this.countpage - 1];
+                //         this.items1 = JSON.parse(JSON.stringify(this.listH[this.countpage - 1]));
                 //         this.sort2 = this.items1[0].sort2;
                 //         this.sort1 = this.items1[0].sort1;
                 //         this.sort3 = this.items1[0].sort3;
@@ -495,6 +515,17 @@
                   this.count += 1;
                     if(this.count===3){
                       this.account+=1;
+                      if (this.countpage-2 !==9){
+                        this.insert = this.insert+"{'phonics_detail_id':"+this.listH[this.countpage-2][0].phonics_detail_id+",'ansResult':1},";
+                      }else{
+                        this.insert = this.insert+"{'phonics_detail_id':"+this.listH[this.countpage-2][0].phonics_detail_id+",'ansResult':1}]";
+                      }
+                    }else{
+                      if (this.countpage-2 !==9){
+                        this.insert = this.insert+"{'phonics_detail_id':"+this.listH[this.countpage-2][0].phonics_detail_id+",'ansResult':0},";
+                      }else{
+                        this.insert = this.insert+"{'phonics_detail_id':"+this.listH[this.countpage-2][0].phonics_detail_id+",'ansResult':0}]";
+                      }
                     }
                   setTimeout(() => {
                     this.soundscorrect=false;
@@ -505,7 +536,7 @@
                         this.items4 = [];
                         this.fangda2 = false;
                         this.reload = true;
-                        this.items1 = this.listH[this.countpage - 1];
+                        this.items1 = JSON.parse(JSON.stringify(this.listH[this.countpage - 1]));
                         for(var a=0;a<this.items1.length;a++){
                           this.items1[a].imgop=0;
                           this.items1[a].sound=0;
@@ -531,7 +562,8 @@
                             account: this.account,
                             menuId: this.menuId,
                             unitsId: this.unitsId,
-                            unit: this.unit
+                            unit: this.unit,
+                            insert:this.insert
                           }
                         });
 
@@ -539,7 +571,13 @@
                     }
                   }, 2000);
                 }else{
-                    this.issuccess2 = true;this.soundsWrong=true;
+                    this.issuccess2 = true;
+                    this.soundsWrong=true;
+                    if (this.countpage-2 !==9){
+                      this.insert = this.insert+"{'phonics_detail_id':"+this.listH[this.countpage-2][0].phonics_detail_id+",'ansResult':0},";
+                    }else{
+                      this.insert = this.insert+"{'phonics_detail_id':"+this.listH[this.countpage-2][0].phonics_detail_id+",'ansResult':0}]";
+                    }
                     setTimeout(() => {
                       this.soundsWrong=false;
                       if (this.countpage <= this.listH.length) {
@@ -549,7 +587,7 @@
                           this.items4 = [];
                           this.fangda2 = false;
                           this.reload = true;
-                          this.items1 = this.listH[this.countpage - 1];
+                          this.items1 = JSON.parse(JSON.stringify(this.listH[this.countpage - 1]));
                           for(var a=0;a<this.items1.length;a++){
                             this.items1[a].imgop=0;
                             this.items1[a].sound=0;
@@ -574,7 +612,8 @@
                               account: this.account,
                               menuId: this.menuId,
                               unitsId: this.unitsId,
-                              unit: this.unit
+                              unit: this.unit,
+                              insert:this.insert
                             }
                           });
 
@@ -589,6 +628,17 @@
                   this.count += 1;
                   if(this.count===3){
                     this.account+=1;
+                    if (this.countpage-2 !==9){
+                      this.insert = this.insert+"{'phonics_detail_id':"+this.listH[this.countpage-2][0].phonics_detail_id+",'ansResult':1},";
+                    }else{
+                      this.insert = this.insert+"{'phonics_detail_id':"+this.listH[this.countpage-2][0].phonics_detail_id+",'ansResult':1}]";
+                    }
+                  }else{
+                    if (this.countpage-2 !==9){
+                      this.insert = this.insert+"{'phonics_detail_id':"+this.listH[this.countpage-2][0].phonics_detail_id+",'ansResult':0},";
+                    }else{
+                      this.insert = this.insert+"{'phonics_detail_id':"+this.listH[this.countpage-2][0].phonics_detail_id+",'ansResult':0}]";
+                    }
                   }
                   setTimeout(() => {
                     if (this.countpage <= this.listH.length) {
@@ -598,7 +648,7 @@
                         this.items5 = [];
                         this.fangda3 = false;
                         this.reload = true;
-                        this.items1 = this.listH[this.countpage - 1];
+                        this.items1 = JSON.parse(JSON.stringify(this.listH[this.countpage - 1]));
                         for(var a=0;a<this.items1.length;a++){
                           this.items1[a].imgop=0;
                           this.items1[a].sound=0;
@@ -623,7 +673,8 @@
                             account: this.account,
                             menuId: this.menuId,
                             unitsId: this.unitsId,
-                            unit: this.unit
+                            unit: this.unit,
+                            insert:this.insert
                           }
                         });
 
@@ -632,7 +683,13 @@
 
                   },2000);
                 } else{
-                  this.issuccess3 = true;this.soundsWrong=true;
+                  this.issuccess3 = true;
+                  this.soundsWrong=true;
+                  if (this.countpage-2 !==9){
+                    this.insert = this.insert+"{'phonics_detail_id':"+this.listH[this.countpage-2][0].phonics_detail_id+",'ansResult':0},";
+                  }else{
+                    this.insert = this.insert+"{'phonics_detail_id':"+this.listH[this.countpage-2][0].phonics_detail_id+",'ansResult':0}]";
+                  }
                   setTimeout(() => {
                     this.soundsWrong=false;
                     if (this.countpage <= this.listH.length) {
@@ -642,7 +699,7 @@
                         this.items5 = [];
                         this.fangda3 = false;
                         this.reload = true;
-                        this.items1 = this.listH[this.countpage - 1];
+                        this.items1 = JSON.parse(JSON.stringify(this.listH[this.countpage - 1]));
                         for(var a=0;a<this.items1.length;a++){
                           this.items1[a].imgop=0;
                           this.items1[a].sound=0;
@@ -666,7 +723,8 @@
                             account: this.account,
                             menuId: this.menuId,
                             unitsId: this.unitsId,
-                            unit: this.unit
+                            unit: this.unit,
+                            insert:this.insert
                           }
                         });
 
@@ -876,7 +934,7 @@
             this.listH.push(res.data.maps[i]); //属性
           }
           this.question = this.listH.length;
-          this.items1 = this.listH[this.countpage - 1];
+          this.items1 = JSON.parse(JSON.stringify(this.listH[this.countpage - 1]));
           for(var a=0;a<this.items1.length;a++){
             this.items1[a].imgop=0;
             this.items1[a].sound=0;

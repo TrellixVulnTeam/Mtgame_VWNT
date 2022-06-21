@@ -199,6 +199,7 @@
         ruleimg8: false,
         spanp: '',
         duration:0,
+        insert:'[',
         shownumb: false,
         ruleimg10: false,
         ruleimg4: false,
@@ -301,17 +302,20 @@
         //console.log('end');
       },
       blue() {
-
-        if (this.zhezhao == false) {
+        if (this.zhezhao === false) {
           this.countpage += 1;
         }
         this.zhezhao = true;
         //console.log(this.items1[0].score);
-        if (this.items1[0].score == 1) {
+        if (this.items1[0].score === 1) {
           this.ended1 = false;
           this.soundscorrect = true;
           this.account += 1;
-          // console.log(this.account);
+          if (this.countpage-2 !==9){
+            this.insert = this.insert+"{'phonics_detail_id':"+this.listE[this.countpage-2][0].phonics_detail_id+",'ansResult':1},";
+          }else{
+            this.insert = this.insert+"{'phonics_detail_id':"+this.listE[this.countpage-2][0].phonics_detail_id+",'ansResult':1}]";
+          }
           setTimeout(() => {
             if (this.countpage <= this.listE.length) {
               setTimeout(() => {
@@ -332,16 +336,13 @@
                   path: "/presult", //跳转的路径
                   query: {
                     //路由传参时push和query搭配使用 ，作用时传递参数
-                    // id: this.id,
-                    // account: this.account,
-                    // type: this.type,
-                    // sum: this.sum,
                     type: this.type,
                     partName: 'phonics7',
                     account: this.account,
                     menuId: this.menuId,
                     unitsId: this.unitsId,
-                    unit: this.unit
+                    unit: this.unit,
+                    insert:this.insert
                   }
                 });
 
@@ -351,6 +352,11 @@
         } else {
           this.issuccess1 = true;
           this.soundsWrong = true;
+          if (this.countpage-2 !==9){
+            this.insert = this.insert+"{'phonics_detail_id':"+this.listE[this.countpage-2][0].phonics_detail_id+",'ansResult':0},";
+          }else{
+            this.insert = this.insert+"{'phonics_detail_id':"+this.listE[this.countpage-2][0].phonics_detail_id+",'ansResult':0}]";
+          }
           setTimeout(() => {
             this.soundsWrong = false;
             if (this.countpage <= this.listE.length) {
@@ -373,16 +379,13 @@
                   path: "/presult", //跳转的路径
                   query: {
                     //路由传参时push和query搭配使用 ，作用时传递参数
-                    // id: this.id,
-                    // account: this.account,
-                    // type: this.type,
-                    // sum: this.sum,
                     type: this.type,
                     partName: 'phonics7',
                     account: this.account,
                     menuId: this.menuId,
                     unitsId: this.unitsId,
-                    unit: this.unit
+                    unit: this.unit,
+                    insert:this.insert
                   }
                 });
 
@@ -395,13 +398,18 @@
       },
       red() {
 
-        if (this.zhezhao == false) {
+        if (this.zhezhao === false) {
           this.countpage += 1;
         }
         this.zhezhao = true;
-        if (this.items1[0].score == 1) {
+        if (this.items1[0].score === 1) {
           this.issuccess2 = true;
           this.soundsWrong = true;
+          if (this.countpage-2 !==9){
+            this.insert = this.insert+"{'phonics_detail_id':"+this.listE[this.countpage-2][0].phonics_detail_id+",'ansResult':0},";
+          }else{
+            this.insert = this.insert+"{'phonics_detail_id':"+this.listE[this.countpage-2][0].phonics_detail_id+",'ansResult':0}]";
+          }
           setTimeout(() => {
             this.soundsWrong = false;
             if (this.countpage <= this.listE.length) {
@@ -423,16 +431,13 @@
                   path: "/presult", //跳转的路径
                   query: {
                     //路由传参时push和query搭配使用 ，作用时传递参数
-                    // id: this.id,
-                    // account: this.account,
-                    // type: this.type,
-                    // sum: this.sum,
                     type: this.type,
                     partName: 'phonics7',
                     account: this.account,
                     menuId: this.menuId,
                     unitsId: this.unitsId,
-                    unit: this.unit
+                    unit: this.unit,
+                    insert:this.insert
                   }
                 });
 
@@ -443,6 +448,11 @@
           this.ended2 = false;
           this.soundscorrect = true;
           this.account += 1;
+          if (this.countpage-2 !==9){
+            this.insert = this.insert+"{'phonics_detail_id':"+this.listE[this.countpage-2][0].phonics_detail_id+",'ansResult':1},";
+          }else{
+            this.insert = this.insert+"{'phonics_detail_id':"+this.listE[this.countpage-2][0].phonics_detail_id+",'ansResult':1}]";
+          }
           setTimeout(() => {
             this.soundscorrect = false;
             if (this.countpage <= this.listE.length) {
@@ -453,29 +463,24 @@
                 this.fangda2 = false;
                 // this.disnone=false;
                 this.reload = true;
-
                 this.items1 = this.listE[this.countpage - 1];
                 this.titname = this.items1[0].name;
               }, 1000);
               // this.items1.bg=this.pic+this.items1.bg;
             } else {
-
               setTimeout(() => {
                 this.$router.push({
                   //核心语句
                   path: "/presult", //跳转的路径
                   query: {
                     //路由传参时push和query搭配使用 ，作用时传递参数
-                    // id: this.id,
-                    // account: this.account,
-                    // type: this.type,
-                    // sum: this.sum,
                     type: this.type,
                     partName: 'phonics7',
                     account: this.account,
                     menuId: this.menuId,
                     unitsId: this.unitsId,
-                    unit: this.unit
+                    unit: this.unit,
+                    insert:this.insert
                   }
                 });
 
