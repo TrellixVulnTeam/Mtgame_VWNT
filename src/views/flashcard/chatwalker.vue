@@ -2961,13 +2961,13 @@
              @click="showGif('bumper')">
       </div>
       <div class="carousel">
-        <img src="../../assets/image/202007H5 Theme Parks_MT/GIF_PNG/png/carousel_00000.png" v-if="carousel" @click="showGif('carousel')">
+        <img src="../../assets/image/202007H5 Theme Parks_MT/GIF_PNG/png/carousel_00000.png" v-if="carousel" @click="walkers&&showGif('carousel')">
         <img src="../../assets/image/202007H5 Theme Parks_MT/GIF_PNG/gif/carousel.gif" style="z-index: 100" v-if="!carousel"
              @click="showGif('carousel')">
       </div>
       <div class="pool">
         <img src="../../assets/image/202007H5 Theme Parks_MT/GIF_PNG/gif/pool.gif" style="z-index: 100" v-if="!pool"
-             @click="showGif('pool')">
+             @click="walkers&&showGif('pool')">
       </div>
       <div class="cottonCandy">
         <img src="../../assets/image/202007H5 Theme Parks_MT/GIF_PNG/png/cotton candy_00000.png" v-if="cottonCandy" @click="showGif('cottonCandy')">
@@ -2985,7 +2985,7 @@
              @click="showGif('popcorn')">
       </div>
       <div class="queue">
-        <img src="../../assets/image/202007H5 Theme Parks_MT/GIF_PNG/png/queue_00000.png" v-if="queue" @click="showGif('queue')">
+        <img src="../../assets/image/202007H5 Theme Parks_MT/GIF_PNG/png/queue_00000.png" v-if="queue" @click="walkers&&showGif('queue')">
         <img src="../../assets/image/202007H5 Theme Parks_MT/GIF_PNG/gif/queue.gif" style="z-index: 100" v-if="!queue"
              @click="showGif('queue')">
       </div>
@@ -2999,7 +2999,7 @@
              @click="showGif('scream1')">
       </div>
       <div class="swim1">
-        <img src="../../assets/image/202007H5 Theme Parks_MT/GIF_PNG/png/swim_00000.png" v-if="swim1&&pool" @click="showGif('swim1')">
+        <img src="../../assets/image/202007H5 Theme Parks_MT/GIF_PNG/png/swim_00000.png" v-if="swim1&&pool" @click="walkers&&showGif('swim1')">
         <img src="../../assets/image/202007H5 Theme Parks_MT/GIF_PNG/gif/swim.gif" style="z-index: 100" v-if="!swim1"
              @click="showGif('swim1')">
       </div>
@@ -3029,7 +3029,7 @@
              :style="{zIndex: !bumper ? 100 : 1}" @click="showGif('bumper')">
       </div>
       <div class="carouselButton">
-        <img src="../../assets/image/202007H5 Theme Parks_MT/Word/word_r_carousel Comp 1_00000.png"
+        <img src="../../assets/image/202007H5 Theme Parks_MT/Word/word_r_carousel Comp 1_00000.png" v-if="walkers"
              :style="{zIndex: !carousel ? 100 : 1}" @click="showGif('carousel')">
       </div>
       <div class="cottonCandyButton">
@@ -3041,7 +3041,7 @@
              :style="{zIndex: !ferrisWheel ? 100 : 1}" @click="showGif('ferrisWheel')">
       </div>
       <div class="poolButton">
-        <img src="../../assets/image/202007H5 Theme Parks_MT/Word/word_r_pool Comp 1_00000.png"
+        <img src="../../assets/image/202007H5 Theme Parks_MT/Word/word_r_pool Comp 1_00000.png" v-if="walkers"
              :style="{zIndex: !pool ? 100 : 1}" @click="showGif('pool')">
       </div>
       <div class="popcornButton">
@@ -3049,7 +3049,7 @@
              :style="{zIndex: !popcorn ? 100 : 1}" @click="showGif('popcorn')">
       </div>
       <div class="queueButton">
-        <img src="../../assets/image/202007H5 Theme Parks_MT/Word/word_r_queue Comp 1_00000.png"
+        <img src="../../assets/image/202007H5 Theme Parks_MT/Word/word_r_queue Comp 1_00000.png" v-if="walkers"
              :style="{zIndex: !queue ? 100 : 1}" @click="showGif('queue')">
       </div>
       <div class="rollerCoasterButton">
@@ -3061,7 +3061,7 @@
              :style="{zIndex: !scream1 ? 100 : 1}" @click="showGif('scream1')">
       </div>
       <div class="swim1Button">
-        <img src="../../assets/image/202007H5 Theme Parks_MT/Word/word_r_swim Comp 1_00000.png"
+        <img src="../../assets/image/202007H5 Theme Parks_MT/Word/word_r_swim Comp 1_00000.png" v-if="walkers"
              :style="{zIndex: !swim1 ? 100 : 1}" @click="showGif('swim1')">
       </div>
       <div class="ticket1Button">
@@ -3070,115 +3070,114 @@
       </div>
     </div>
     <div v-else-if="this.unit === 'Theme Park' && this.part === 'part2'">
-      <img src="../../assets/image/202006H5 Winter clothes_MT/Runner_BG/BG__00000.png"
+      <img src="../../assets/image/202007H5 Water Parks_MT/Runner_BG/BG_00000.png"
            style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;"/>
-      <div class="belt">
-        <img src="../../assets/image/202006H5 Winter clothes_MT/GIF_PNG/png/belt.png" v-if="belt" @click="showGif('belt')">
-        <img src="../../assets/image/202006H5 Winter clothes_MT/GIF_PNG/gif/belt.gif" style="z-index: 100" v-if="!belt"
-             @click="showGif('belt')">
+      <div class="dry">
+        <img src="../../assets/image/202007H5 Water Parks_MT/GIF_PNG/png/dry_00000.png" v-if="dry" @click="walkers&&showGif('dry')">
+        <img src="../../assets/image/202007H5 Water Parks_MT/GIF_PNG/gif/dry.gif" style="z-index: 100" v-if="!dry"
+             @click="showGif('dry')">
       </div>
-      <div class="boots">
-        <img src="../../assets/image/202006H5 Winter clothes_MT/GIF_PNG/png/boots.png" v-if="boots" @click="showGif('boots')">
-        <img src="../../assets/image/202006H5 Winter clothes_MT/GIF_PNG/gif/boots.gif" style="z-index: 100" v-if="!boots"
-             @click="showGif('boots')">
+      <div class="float">
+        <img src="../../assets/image/202007H5 Water Parks_MT/GIF_PNG/png/float_00000.png" v-if="float" @click="showGif('float')">
+        <img src="../../assets/image/202007H5 Water Parks_MT/GIF_PNG/gif/float.gif" style="z-index: 100" v-if="!float"
+             @click="showGif('float')">
       </div>
-      <div class="jacket">
-        <img src="../../assets/image/202006H5 Winter clothes_MT/GIF_PNG/png/jacket.png" v-if="jacket" @click="showGif('jacket')">
-        <img src="../../assets/image/202006H5 Winter clothes_MT/GIF_PNG/gif/jacket.gif" style="z-index: 100" v-if="!jacket"
-             @click="showGif('jacket')">
+      <div class="lazy">
+        <img src="../../assets/image/202007H5 Water Parks_MT/GIF_PNG/png/Lazy river_00000.png" v-if="lazy" @click="showGif('lazy')">
+        <img src="../../assets/image/202007H5 Water Parks_MT/GIF_PNG/gif/Lazy-river.gif" style="z-index: 100" v-if="!lazy"
+             @click="showGif('lazy')">
       </div>
-      <div class="mittens">
-        <img src="../../assets/image/202006H5 Winter clothes_MT/GIF_PNG/png/mittens.png" v-if="mittens" @click="walkers&&showGif('mittens')">
-        <img src="../../assets/image/202006H5 Winter clothes_MT/GIF_PNG/gif/mittens.gif" style="z-index: 100" v-if="!mittens"
-             @click="showGif('mittens')">
+      <div class="lifeguard">
+        <img src="../../assets/image/202007H5 Water Parks_MT/GIF_PNG/png/lifeguard_00000.png" v-if="lifeguard" @click="showGif('lifeguard')">
+        <img src="../../assets/image/202007H5 Water Parks_MT/GIF_PNG/gif/lifeguard.gif" style="z-index: 100" v-if="!lifeguard"
+             @click="showGif('lifeguard')">
       </div>
-      <div class="pajamas">
-        <img src="../../assets/image/202006H5 Winter clothes_MT/GIF_PNG/png/pajamas.png" v-if="pajamas" @click="walkers&&showGif('pajamas')">
-        <img src="../../assets/image/202006H5 Winter clothes_MT/GIF_PNG/gif/pajamas.gif" style="z-index: 100" v-if="!pajamas"
-             @click="showGif('pajamas')">
+      <div class="ride">
+        <img src="../../assets/image/202007H5 Water Parks_MT/GIF_PNG/gif/ride.gif" style="z-index: 100" v-if="!ride"
+             @click="showGif('ride')">
       </div>
-      <div class="scarf1">
-        <img src="../../assets/image/202006H5 Winter clothes_MT/GIF_PNG/png/scarf.png" v-if="scarf1" @click="showGif('scarf1')">
-        <img src="../../assets/image/202006H5 Winter clothes_MT/GIF_PNG/gif/scarf.gif" style="z-index: 100" v-if="!scarf1"
-             @click="showGif('scarf1')">
+      <div class="splash1">
+        <img src="../../assets/image/202007H5 Water Parks_MT/GIF_PNG/png/splash_00000.png" v-if="splash1&&waterSlide&&ride" @click="walkers&&showGif('splash1')">
+        <img src="../../assets/image/202007H5 Water Parks_MT/GIF_PNG/gif/splash.gif" style="z-index: 100" v-if="!splash1"
+             @click="showGif('splash1')">
       </div>
-      <div class="shirt">
-        <img src="../../assets/image/202006H5 Winter clothes_MT/GIF_PNG/png/shirt.png" v-if="shirt" @click="walkers&&showGif('shirt')">
-        <img src="../../assets/image/202006H5 Winter clothes_MT/GIF_PNG/gif/shirt.gif" style="z-index: 100" v-if="!shirt"
-             @click="showGif('shirt')">
+      <div class="swimsuit">
+        <img src="../../assets/image/202007H5 Water Parks_MT/GIF_PNG/png/swimsuit_00000.png" v-if="swimsuit" @click="showGif('swimsuit')">
+        <img src="../../assets/image/202007H5 Water Parks_MT/GIF_PNG/gif/swimsuit.gif" style="z-index: 100" v-if="!swimsuit"
+             @click="showGif('swimsuit')">
       </div>
-      <div class="socks">
-        <img src="../../assets/image/202006H5 Winter clothes_MT/GIF_PNG/png/socks.png" v-if="socks" @click="showGif('socks')">
-        <img src="../../assets/image/202006H5 Winter clothes_MT/GIF_PNG/gif/socks.gif" style="z-index: 100" v-if="!socks"
-             @click="showGif('socks')">
+      <div class="towel">
+        <img src="../../assets/image/202007H5 Water Parks_MT/GIF_PNG/png/towel_00000.png" v-if="towel" @click="walkers&&showGif('towel')">
+        <img src="../../assets/image/202007H5 Water Parks_MT/GIF_PNG/gif/towel.gif" style="z-index: 100" v-if="!towel"
+             @click="showGif('towel')">
       </div>
-      <div class="sweater">
-        <img src="../../assets/image/202006H5 Winter clothes_MT/GIF_PNG/png/sweater.png" v-if="sweater" @click="walkers&&showGif('sweater')">
-        <img src="../../assets/image/202006H5 Winter clothes_MT/GIF_PNG/gif/sweater.gif" style="z-index: 100" v-if="!sweater"
-             @click="showGif('sweater')">
+      <div class="tube">
+        <img src="../../assets/image/202007H5 Water Parks_MT/GIF_PNG/png/tube_00000.png" v-if="tube" @click="showGif('tube')">
+        <img src="../../assets/image/202007H5 Water Parks_MT/GIF_PNG/gif/tube.gif" style="z-index: 100" v-if="!tube"
+             @click="showGif('tube')">
       </div>
-      <div class="trousers">
-        <img src="../../assets/image/202006H5 Winter clothes_MT/GIF_PNG/png/trousers.png" v-if="trousers" @click="showGif('trousers')">
-        <img src="../../assets/image/202006H5 Winter clothes_MT/GIF_PNG/gif/trousers.gif" style="z-index: 100" v-if="!trousers"
-             @click="showGif('trousers')">
+      <div class="waterSlide">
+<!--        <img src="../../assets/image/202007H5 Water Parks_MT/GIF_PNG/png/water slide_00000.png" v-if="waterSlide" @click="showGif('waterSlide')">-->
+        <img src="../../assets/image/202007H5 Water Parks_MT/GIF_PNG/gif/water-slide.gif" style="z-index: 100" v-if="!waterSlide"
+             @click="showGif('waterSlide')">
       </div>
-      <div class="wrap">
-        <img src="../../assets/image/202006H5 Winter clothes_MT/GIF_PNG/png/wrap.png" v-if="wrap" @click="showGif('wrap')">
-        <img src="../../assets/image/202006H5 Winter clothes_MT/GIF_PNG/gif/wrap.gif" style="z-index: 100" v-if="!wrap"
-             @click="showGif('wrap')">
+      <div class="wavePool">
+        <img src="../../assets/image/202007H5 Water Parks_MT/GIF_PNG/png/wave pool_00000.png" v-if="wavePool" @click="showGif('wavePool')">
+        <img src="../../assets/image/202007H5 Water Parks_MT/GIF_PNG/gif/wave-pool.gif" style="z-index: 100" v-if="!wavePool"
+             @click="showGif('wavePool')">
       </div>
-      <div class="zip">
-        <img src="../../assets/image/202006H5 Winter clothes_MT/GIF_PNG/png/zip.png" v-if="zip" @click="showGif('zip')">
-        <img src="../../assets/image/202006H5 Winter clothes_MT/GIF_PNG/gif/zip.gif" style="z-index: 100" v-if="!zip"
-             @click="showGif('zip')">
+      <div class="wet">
+        <img src="../../assets/image/202007H5 Water Parks_MT/GIF_PNG/png/wet_00000.png" v-if="wet" @click="showGif('wet')">
+        <img src="../../assets/image/202007H5 Water Parks_MT/GIF_PNG/gif/wet.gif" style="z-index: 100" v-if="!wet"
+             @click="showGif('wet')">
       </div>
-      <div class="beltButton">
-        <img src="../../assets/image/202006H5 Winter clothes_MT/Word/word_belt Comp 1_00000.png"
-             :style="{zIndex: !belt ? 100 : 1}" @click="showGif('belt')">
+     <div class="lifeguardButton">
+        <img src="../../assets/image/202007H5 Water Parks_MT/Word/word_lifeguard Comp 1_00000.png"
+             :style="{zIndex: !lifeguard ? 100 : 1}" @click="showGif('lifeguard')">
       </div>
-      <div class="bootsButton">
-        <img src="../../assets/image/202006H5 Winter clothes_MT/Word/word_boots Comp 1_00000.png"
-             :style="{zIndex: !boots ? 100 : 1}" @click="showGif('boots')">
+      <div class="lazyButton">
+        <img src="../../assets/image/202007H5 Water Parks_MT/Word/word_Lazy river Comp 1_00000.png"
+             :style="{zIndex: !lazy ? 100 : 1}" @click="showGif('lazy')">
       </div>
-      <div class="zipButton">
-        <img src="../../assets/image/202006H5 Winter clothes_MT/Word/word_zip Comp 1_00000.png"
-             :style="{zIndex: !zip ? 100 : 1}" @click="showGif('zip')">
+      <div class="tubeButton">
+        <img src="../../assets/image/202007H5 Water Parks_MT/Word/word_tube Comp 1_00000.png"
+             :style="{zIndex: !tube ? 100 : 1}" @click="showGif('tube')">
       </div>
-      <div class="jacketButton">
-        <img src="../../assets/image/202006H5 Winter clothes_MT/Word/word_jacket Comp 1_00000.png"
-             :style="{zIndex: !jacket ? 100 : 1}" @click="showGif('jacket')">
+      <div class="floatButton">
+        <img src="../../assets/image/202007H5 Water Parks_MT/Word/word_float Comp 1_00000.png"
+             :style="{zIndex: !float ? 100 : 1}" @click="showGif('float')">
       </div>
-      <div class="mittensButton">
-        <img src="../../assets/image/202006H5 Winter clothes_MT/Word/word_mittens Comp 1_00000.png" v-if="walkers"
-             :style="{zIndex: !mittens ? 100 : 1}" @click="showGif('mittens')">
+      <div class="towelButton">
+        <img src="../../assets/image/202007H5 Water Parks_MT/Word/word_r_towel Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !towel ? 100 : 1}" @click="showGif('towel')">
       </div>
-      <div class="pajamasButton">
-        <img src="../../assets/image/202006H5 Winter clothes_MT/Word/word_pajamas Comp 1_00000.png" v-if="walkers"
-             :style="{zIndex: !pajamas ? 100 : 1}" @click="showGif('pajamas')">
+      <div class="dryButton">
+        <img src="../../assets/image/202007H5 Water Parks_MT/Word/word_r_dry Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !dry ? 100 : 1}" @click="showGif('dry')">
       </div>
-      <div class="scarf1Button">
-        <img src="../../assets/image/202006H5 Winter clothes_MT/Word/word_scarf Comp 1_00000.png"
-             :style="{zIndex: !scarf1 ? 100 : 1}" @click="showGif('scarf1')">
+      <div class="wetButton">
+        <img src="../../assets/image/202007H5 Water Parks_MT/Word/word_wet Comp 1_00000.png"
+             :style="{zIndex: !wet ? 100 : 1}" @click="showGif('wet')">
       </div>
-      <div class="shirtButton">
-        <img src="../../assets/image/202006H5 Winter clothes_MT/Word/word_shirt Comp 1_00000.png" v-if="walkers"
-             :style="{zIndex: !shirt ? 100 : 1}" @click="showGif('shirt')">
+      <div class="swimsuitButton">
+        <img src="../../assets/image/202007H5 Water Parks_MT/Word/word_swimsuit Comp 1_00000.png"
+             :style="{zIndex: !swimsuit ? 100 : 1}" @click="showGif('swimsuit')">
       </div>
-      <div class="socksButton">
-        <img src="../../assets/image/202006H5 Winter clothes_MT/Word/word_socks Comp 1_00000.png"
-             :style="{zIndex: !socks ? 100 : 1}" @click="showGif('socks')">
+      <div class="splash1Button">
+        <img src="../../assets/image/202007H5 Water Parks_MT/Word/word_r_splash Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !splash1 ? 100 : 1}" @click="showGif('splash1')">
       </div>
-      <div class="sweaterButton">
-        <img src="../../assets/image/202006H5 Winter clothes_MT/Word/word_sweater Comp 1_00000.png" v-if="walkers"
-             :style="{zIndex: !sweater ? 100 : 5}" @click="showGif('sweater')">
+      <div class="rideButton">
+        <img src="../../assets/image/202007H5 Water Parks_MT/Word/word_r_ride Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !ride ? 100 : 1}" @click="showGif('ride')">
       </div>
-      <div class="trousersButton">
-        <img src="../../assets/image/202006H5 Winter clothes_MT/Word/word_trousers Comp 1_00000.png"
-             :style="{zIndex: !trousers ? 100 : 1}" @click="showGif('trousers')">
+      <div class="wavePoolButton">
+        <img src="../../assets/image/202007H5 Water Parks_MT/Word/word_wave pool Comp 1_00000.png"
+             :style="{zIndex: !wavePool ? 100 : 1}" @click="showGif('wavePool')">
       </div>
-      <div class="wrapButton">
-        <img src="../../assets/image/202006H5 Winter clothes_MT/Word/word_wrap Comp 1_00000.png"
-             :style="{zIndex: !wrap ? 100 : 1}" @click="showGif('wrap')">
+      <div class="waterSlideButton">
+        <img src="../../assets/image/202007H5 Water Parks_MT/Word/word_water slide Comp 1_00000.png"
+             :style="{zIndex: !waterSlide ? 100 : 1}" @click="showGif('waterSlide')">
       </div>
     </div>
     <div v-else>
@@ -3648,9 +3647,47 @@ export default {
           wrap:require('../../assets/Flashcard Audio/clothes/wrap.mp3'),
           zip:require('../../assets/Flashcard Audio/clothes/zip.mp3'),
           shorts:require('../../assets/Flashcard Audio/clothes/shorts.mp3'),
+
+          //Theme
+          scream1:require('../../assets/Flashcard Audio/ThemPark/Scream.mp3'),
+          rollerCoaster:require('../../assets/Flashcard Audio/ThemPark/roller coaster.mp3'),
+          ticket1:require('../../assets/Flashcard Audio/ThemPark/ticket.mp3'),
+          queue:require('../../assets/Flashcard Audio/ThemPark/queue.mp3'),
+          swim1:require('../../assets/Flashcard Audio/ThemPark/swim.mp3'),
+          pool:require('../../assets/Flashcard Audio/ThemPark/pool.mp3'),
+          carousel:require('../../assets/Flashcard Audio/ThemPark/carousel.mp3'),
+          ferrisWheel:require('../../assets/Flashcard Audio/ThemPark/Ferris wheel.mp3'),
+          cottonCandy:require('../../assets/Flashcard Audio/ThemPark/cotton candy.mp3'),
+          popcorn:require('../../assets/Flashcard Audio/ThemPark/Popcorn.mp3'),
+          balloons1:require('../../assets/Flashcard Audio/ThemPark/balloons.mp3'),
+          bumperCars:require('../../assets/Flashcard Audio/ThemPark/bumper cars.mp3'),
+          dry:require('../../assets/Flashcard Audio/ThemPark/dry.mp3'),
+          float:require('../../assets/Flashcard Audio/ThemPark/July - float.mp3'),
+          lazy:require('../../assets/Flashcard Audio/ThemPark/lazy river.mp3'),
+          lifeguard:require('../../assets/Flashcard Audio/ThemPark/lifeguard.mp3'),
+          ride:require('../../assets/Flashcard Audio/ThemPark/ride.mp3'),
+          splash1:require('../../assets/Flashcard Audio/ThemPark/splash.mp3'),
+          swimsuit:require('../../assets/Flashcard Audio/ThemPark/swimsuit.mp3'),
+          towel:require('../../assets/Flashcard Audio/ThemPark/towel.mp3'),
+          tube:require('../../assets/Flashcard Audio/ThemPark/tube.mp3'),
+          waterSlide:require('../../assets/Flashcard Audio/ThemPark/water slide.mp3'),
+          wavePool:require('../../assets/Flashcard Audio/ThemPark/wave pool.mp3'),
+          wet:require('../../assets/Flashcard Audio/ThemPark/wet.mp3'),
         },
         local:'',
         cardType:'default',
+        dry:true,
+        float:true,
+        lazy:true,
+        lifeguard:true,
+        ride:true,
+        splash1:true,
+        swimsuit:true,
+        towel:true,
+        tube:true,
+        waterSlide:true,
+        wavePool:true,
+        wet:true,
         balloons1:true,
         bumper:true,
         carousel:true,
@@ -4212,6 +4249,182 @@ export default {
     position: fixed;
     background-color: #44ccc2;
     z-index: 201;
+  }
+
+  .lifeguardButton img {
+    width: 7%;
+    left: 19%;
+    top: 10%;
+    position: absolute;
+  }
+
+  .lazyButton img {
+    width: 7%;
+    left: 7%;
+    top: 26%;
+    position: absolute;
+  }
+
+  .tubeButton img {
+    width: 5%;
+    left: 12%;
+    top: 58%;
+    position: absolute;
+  }
+
+  .floatButton img {
+    width: 5%;
+    left: 14%;
+    top: 76%;
+    position: absolute;
+  }
+
+  .dryButton img {
+    width: 5%;
+    left: 25%;
+    top: 56%;
+    position: absolute;
+  }
+
+  .towelButton img {
+    width: 5%;
+    left: 30%;
+    top: 32%;
+    position: absolute;
+  }
+
+  .swimsuitButton img {
+    width: 9%;
+    left: 34%;
+    top: 75%;
+    position: absolute;
+  }
+
+  .wetButton img {
+    width: 5%;
+    left: 48%;
+    top: 53%;
+    position: absolute;
+  }
+
+  .wavePoolButton img {
+    width: 9%;
+    left: 65%;
+    top: 18%;
+    position: absolute;
+  }
+
+  .waterSlideButton img {
+    width: 9%;
+    left: 78%;
+    top: 45%;
+    position: absolute;
+  }
+
+  .splash1Button img {
+    width: 7%;
+    left: 60%;
+    top: 80%;
+    position: absolute;
+  }
+
+  .rideButton img {
+    width: 5%;
+    left: 94%;
+    top: 63%;
+    position: absolute;
+  }
+
+  .dry img {
+    width: 8%;
+    left: 18%;
+    top: 35%;
+    position: absolute;
+  }
+
+  .float img {
+    width: 18%;
+    left: 5%;
+    top: 74%;
+    position: absolute;
+  }
+
+  .lazy img {
+    width: 9%;
+    left: 3%;
+    top: 29%;
+    position: absolute;
+  }
+
+  .lifeguard img {
+    width: 11%;
+    left: 24%;
+    top: 6%;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .ride img {
+    width: 75%;
+    height: 105%;
+    left: 31%;
+    top: -2%;
+    position: absolute;
+  }
+
+  .splash1 img {
+    width: 73%;
+    height: 103%;
+    left: 33%;
+    top: 1%;
+    position: absolute;
+  }
+
+  .swimsuit img {
+    width: 10%;
+    left: 25%;
+    top: 61%;
+    position: absolute;
+  }
+
+  .towel img {
+    width: 11%;
+    left: 26%;
+    top: 35%;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .tube img {
+    width: 13%;
+    left: 3%;
+    top: 54%;
+    position: absolute;
+  }
+
+  .waterSlide img {
+    width: 75%;
+    height: 105%;
+    left: 32%;
+    top: -1%;
+    position: absolute;
+  }
+
+  .wavePool img {
+    width: 55%;
+    height: 48%;
+    left: 28%;
+    top: 9%;
+    transform: rotate(-2deg);
+    position: absolute;
+  }
+
+  .wet img {
+    width: 10%;
+    left: 38%;
+    top: 30%;
+    position: absolute;
+    z-index: 1;
   }
 
   .scream1Button img {
@@ -10390,6 +10603,89 @@ export default {
   @media only screen and (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 3) ,
   (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 812px) and (max-width: 1023px){
+    .swimsuit img {
+      width: 10%;
+      left: 25%;
+      top: 57%;
+      position: absolute;
+    }
+    .towel img {
+      width: 11%;
+      left: 26%;
+      top: 32%;
+      position: absolute;
+    }
+    .wet img {
+      width: 10%;
+      left: 38%;
+      top: 25%;
+      position: absolute;
+      z-index: 1;
+    }
+    .dry img {
+      width: 8%;
+      left: 18%;
+      top: 31%;
+      position: absolute;
+    }
+    .lifeguard img {
+      width: 11%;
+      left: 24%;
+      top: 2%;
+      position: absolute;
+      z-index: 1;
+    }
+    .bumper img {
+      width: 35%;
+      left: 68%;
+      height: 51%;
+      top: 29%;
+      position: absolute;
+    }
+    .carouselButton img {
+      width: 9%;
+      left: 60%;
+      top: 1%;
+      position: absolute;
+    }
+    .ferrisWheelButton img {
+      width: 10%;
+      left: 79%;
+      top: 16%;
+      position: absolute;
+    }
+    .carousel img {
+      width: 20%;
+      left: 54%;
+      top: 0%;
+      position: absolute;
+    }
+    .ferrisWheel img {
+      width: 22%;
+      left: 77%;
+      top: -7%;
+      position: absolute;
+    }
+    .queue img {
+      width: 29%;
+      left: -1%;
+      top: 64%;
+      position: absolute;
+      z-index: 1;
+    }
+    .ticket1 img {
+      width: 16%;
+      left: 21%;
+      top: 47%;
+      position: absolute;
+    }
+    .scream1 img {
+      width: 46%;
+      left: 0%;
+      top: 0%;
+      position: absolute;
+      z-index: 1;
+    }
     .sweaterButton img {
       width: 7%;
       left: 74%;
@@ -13196,21 +13492,176 @@ export default {
   @media only screen and (min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 1024px) and (max-width: 1600px){
-    .balloons1Button img[data-v-580a76d2] {
+    .splash1Button img {
+      width: 10%;
+      left: 60%;
+      top: 80%;
+      position: absolute;
+    }
+    .rideButton img {
+      width: 7%;
+      left: 93%;
+      top: 63%;
+      position: absolute;
+    }
+    .waterSlideButton img {
+      width: 13%;
+      left: 78%;
+      top: 45%;
+      position: absolute;
+    }
+    .wavePoolButton img {
+      width: 12%;
+      left: 65%;
+      top: 18%;
+      position: absolute;
+    }
+    .lifeguardButton img {
       width: 9%;
+      left: 18%;
+      top: 18%;
+      position: absolute;
+    }
+    .towelButton img {
+      width: 7%;
+      left: 28%;
+      top: 34%;
+      position: absolute;
+    }
+    .dryButton img {
+      width: 6%;
+      left: 25%;
+      top: 56%;
+      position: absolute;
+    }
+    .wetButton img {
+      width: 6%;
+      left: 48%;
+      top: 53%;
+      position: absolute;
+    }
+    .lifeguard img {
+      width: 11%;
+      left: 24%;
+      top: 13%;
+      position: absolute;
+      z-index: 1;
+    }
+    .wet img {
+      width: 12%;
+      left: 37%;
+      top: 34%;
+      position: absolute;
+      z-index: 1;
+    }
+    .towel img {
+      width: 11%;
+      left: 26%;
+      top: 38%;
+      position: absolute;
+    }
+    .dry img {
+      width: 10%;
+      left: 17%;
+      top: 37%;
+      position: absolute;
+    }
+    .swimsuitButton img {
+      width: 11%;
+      left: 35%;
+      top: 78%;
+      position: absolute;
+    }
+    .swimsuit img {
+      width: 12%;
+      left: 25%;
+      top: 67%;
+      position: absolute;
+    }
+    .lazyButton img {
+      width: 10%;
+      left: 3%;
+      top: 29%;
+      position: absolute;
+    }
+    .lazy img {
+      width: 12%;
+      left: 1%;
+      top: 32%;
+      position: absolute;
+    }
+    .tubeButton img {
+      width: 7%;
+      left: 11%;
+      top: 56%;
+      position: absolute;
+    }
+    .tube img {
+      width: 14%;
+      left: 2%;
+      top: 54%;
+      position: absolute;
+    }
+    .floatButton img {
+      width: 7%;
+      left: 15%;
+      top: 80%;
+      position: absolute;
+    }
+    .float img {
+      width: 22%;
+      left: 3%;
+      top: 77%;
+      position: absolute;
+    }
+    .cottonCandy img {
+      width: 13%;
+      left: 37%;
+      top: 69%;
+      position: absolute;
+      z-index: 1;
+    }
+    .popcornButton img {
+      width: 10%;
+      left: 52%;
+      top: 91%;
+      position: absolute;
+    }
+    .still4 img {
+      width: 6%;
+      left: 54%;
+      top: 85%;
+      position: absolute;
+      z-index: 1;
+    }
+    .popcorn img {
+      width: 12%;
+      left: 50%;
+      top: 78%;
+      position: absolute;
+      z-index: 1;
+    }
+    .cottonCandyButton img {
+      width: 14%;
+      left: 36%;
+      top: 81%;
+      position: absolute;
+    }
+    .balloons1Button img {
+      width: 10%;
       left: 65%;
       top: 80%;
       position: absolute;
     }
     .ferrisWheelButton img {
-      width: 12%;
+      width: 13%;
       left: 78%;
       top: 19%;
       position: absolute;
     }
     .carouselButton img {
-      width: 10%;
-      left: 58%;
+      width: 11%;
+      left: 57%;
       top: 9%;
       position: absolute;
     }
@@ -13251,7 +13702,7 @@ export default {
       position: absolute;
     }
     .ticket1Button img {
-      width: 8%;
+      width: 9%;
       left: 12%;
       top: 65%;
       position: absolute;
@@ -13262,9 +13713,16 @@ export default {
       top: 91%;
       position: absolute;
     }
+    .bumper img {
+      width: 36%;
+      left: 67%;
+      height: 40%;
+      top: 37%;
+      position: absolute;
+    }
     .bumperButton img {
-      width: 14%;
-      left: 81%;
+      width: 16%;
+      left: 79%;
       top: 63%;
       position: absolute;
     }

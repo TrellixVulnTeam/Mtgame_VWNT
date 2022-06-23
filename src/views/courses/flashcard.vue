@@ -1848,6 +1848,132 @@
             img:require('../../assets/image/Winter clothes/Shirt.png')
           }
         ],
+        ThemeParkPart1:[
+          {
+            id:1,
+            cardName:'balloons',
+            audio:require('../../assets/Flashcard Audio/ThemPark/balloons.mp3'),
+            img:require('../../assets/image/ThemeParks/Balloons.png')
+          },{
+            id:2,
+            cardName:'bumper cars',
+            audio:require('../../assets/Flashcard Audio/ThemPark/bumper cars.mp3'),
+            img:require('../../assets/image/ThemeParks/Bumper Cars.png')
+          },{
+            id:3,
+            cardName:'cotton candy',
+            audio:require('../../assets/Flashcard Audio/ThemPark/cotton candy.mp3'),
+            img:require('../../assets/image/ThemeParks/Cotton Candy.png')
+          },{
+            id:4,
+            cardName:'ferris wheel',
+            audio:require('../../assets/Flashcard Audio/ThemPark/Ferris wheel.mp3'),
+            img:require('../../assets/image/ThemeParks/Ferris Wheel.png')
+          },{
+            id:5,
+            cardName:'popcorn',
+            audio:require('../../assets/Flashcard Audio/ThemPark/Popcorn.mp3'),
+            img:require('../../assets/image/ThemeParks/Popcorn.png')
+          },{
+            id:6,
+            cardName:'rollercoaster',
+            audio:require('../../assets/Flashcard Audio/ThemPark/roller coaster.mp3'),
+            img:require('../../assets/image/ThemeParks/Rollercoaster.png')
+          },{
+            id:7,
+            cardName:'scream',
+            audio:require('../../assets/Flashcard Audio/ThemPark/Scream.mp3'),
+            img:require('../../assets/image/ThemeParks/Scream.png')
+          },{
+            id:8,
+            cardName:'ticket',
+            audio:require('../../assets/Flashcard Audio/ThemPark/ticket.mp3'),
+            img:require('../../assets/image/ThemeParks/Ticket.png')
+          },{
+            id:9,
+            cardName:'carousel',
+            audio:require('../../assets/Flashcard Audio/ThemPark/carousel.mp3'),
+            img:require('../../assets/image/ThemeParks/Carousel.png')
+          },{
+            id:10,
+            cardName:'swim',
+            audio:require('../../assets/Flashcard Audio/ThemPark/swim.mp3'),
+            img:require('../../assets/image/ThemeParks/Swim.png')
+          },{
+            id:11,
+            cardName:'pool',
+            audio:require('../../assets/Flashcard Audio/ThemPark/pool.mp3'),
+            img:require('../../assets/image/ThemeParks/Pool.png')
+          },{
+            id:12,
+            cardName:'queue',
+            audio:require('../../assets/Flashcard Audio/ThemPark/queue.mp3'),
+            img:require('../../assets/image/ThemeParks/Queue.png')
+          }
+        ],
+        ThemeParkPart2:[
+          {
+            id:1,
+            cardName:'float',
+            audio:require('../../assets/Flashcard Audio/ThemPark/July - float.mp3'),
+            img:require('../../assets/image/WaterParks/Float.png')
+          },{
+            id:2,
+            cardName:'lazy river',
+            audio:require('../../assets/Flashcard Audio/ThemPark/lazy river.mp3'),
+            img:require('../../assets/image/WaterParks/Lazy River.png')
+          },{
+            id:3,
+            cardName:'lifeguard',
+            audio:require('../../assets/Flashcard Audio/ThemPark/lifeguard.mp3'),
+            img:require('../../assets/image/WaterParks/Lifeguard.png')
+          },{
+            id:4,
+            cardName:'swimsuit',
+            audio:require('../../assets/Flashcard Audio/ThemPark/swimsuit.mp3'),
+            img:require('../../assets/image/WaterParks/Swimsuit.png')
+          },{
+            id:5,
+            cardName:'tube',
+            audio:require('../../assets/Flashcard Audio/ThemPark/tube.mp3'),
+            img:require('../../assets/image/WaterParks/Tube.png')
+          },{
+            id:6,
+            cardName:'water slide',
+            audio:require('../../assets/Flashcard Audio/ThemPark/water slide.mp3'),
+            img:require('../../assets/image/WaterParks/Waterslide.png')
+          },{
+            id:7,
+            cardName:'wave pool',
+            audio:require('../../assets/Flashcard Audio/ThemPark/wave pool.mp3'),
+            img:require('../../assets/image/WaterParks/Wave pool.png')
+          },{
+            id:8,
+            cardName:'wet',
+            audio:require('../../assets/Flashcard Audio/ThemPark/wet.mp3'),
+            img:require('../../assets/image/WaterParks/Wet.png')
+          },{
+            id:9,
+            cardName:'dry',
+            audio:require('../../assets/Flashcard Audio/ThemPark/dry.mp3'),
+            img:require('../../assets/image/WaterParks/Dry.png')
+          },{
+            id:10,
+            cardName:'towel',
+            audio:require('../../assets/Flashcard Audio/ThemPark/towel.mp3'),
+            img:require('../../assets/image/WaterParks/Towel.png')
+          },{
+            id:11,
+            cardName:'ride',
+            audio:require('../../assets/Flashcard Audio/ThemPark/ride.mp3'),
+            img:require('../../assets/image/WaterParks/Ride.png')
+          },{
+            id:12,
+            cardName:'splash',
+            audio:require('../../assets/Flashcard Audio/ThemPark/splash.mp3'),
+            img:require('../../assets/image/WaterParks/Splash.png')
+          }
+        ],
         list:[],
         titleUrl:{
           MyCommunity:require('../../assets/image/2-logo.png'),
@@ -1891,6 +2017,8 @@
           BugsPart2:require('../../assets/image/5-logo2.png'),
           ClothesPart1:require('../../assets/image/6-logo1.png'),
           ClothesPart2:require('../../assets/image/6-logo2.png'),
+          ThemeParkPart1:require('../../assets/image/7-logo1.png'),
+          ThemeParkPart2:require('../../assets/image/7-logo2.png'),
         },
         title:'../../assets/image/6-6logo.png',
         flashCardUrl:'http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/9315e4a9-e1ec-4f49-8db5-5b3a9b6ae083.png',

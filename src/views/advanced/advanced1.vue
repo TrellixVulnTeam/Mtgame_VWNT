@@ -309,7 +309,6 @@
           }else{
             this.insert = this.insert+"{'phonics_detail_id':"+this.listF[this.countpage-2][0].phonics_detail_id+",'ansResult':1}]";
           }
-          console.log(this.insert);
           setTimeout(() => {
             this.showstart = false;
             this.soundscorrect = false;
@@ -347,7 +346,6 @@
           }else{
             this.insert = this.insert+"{'phonics_detail_id':"+this.listF[this.countpage-2][0].phonics_detail_id+",'ansResult':0}]";
           }
-          console.log(this.insert);
           setTimeout(() => {
             this.soundsWrong = false;
             li.redsuccess = 0;

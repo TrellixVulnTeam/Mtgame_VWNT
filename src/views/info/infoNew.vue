@@ -689,6 +689,7 @@
     data() {
       let myChart;
       return {
+        comingSoon:true,
         strengthsMinNub:0,
         strengthsMaxNub:3,
         strengths:[],
@@ -2337,7 +2338,7 @@
   .intervalsPassText1 {
     font-family: kg,serif;
     color: #735138;
-    font-size: 7rem;
+    font-size: 6.5rem;
     position: relative;
     left: 1%;
     width: -moz-fit-content;
