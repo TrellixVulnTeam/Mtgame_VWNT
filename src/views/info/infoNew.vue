@@ -553,13 +553,13 @@
                   </ul>
                   <!--Exercise History-->
                   <div v-if="categoryNum===7">
-                  <div  class="history">
-                    <div class="historyLabel" >Date</div>
-                    <div class="historyLabel" >Letter</div>
-                    <div class="historyLabel" >Exercise</div>
-                    <div class="historyLabel" >Star</div>
-                    <div class="historyLabel" >Score</div>
-                  </div>
+                    <div  class="history">
+                      <div class="historyLabel" >Date</div>
+                      <div class="historyLabel" >Letter</div>
+                      <div class="historyLabel" >Exercise</div>
+                      <div class="historyLabel" >Star</div>
+                      <div class="historyLabel" >Score</div>
+                    </div>
                   <div class="historyList">
                     <table align="center" width="100%" cellspacing="6" cellpadding="0"
                            style="color: #007BB8; margin-top: -5px;">
@@ -586,13 +586,17 @@
                   </div>
                  </div>
                   <!--Improvement-->
-                  <div v-if="categoryNum === 6" style="height: 100%;padding-top: 2%;" >
+                  <div v-if="categoryNum === 6 &&comingSoon ===false" style="height: 100%;padding-top: 2%;" >
                     <div class="improvementList" v-for="(li,index) in improvement" :key='index'>
                       <div class="improvementId">{{index+1}}</div>
                       <div class="improvementLetter">{{li.name}}</div>
                       <div class="improvementButton" @click="review(li)">Let's Review</div>
                       <div class="improvementPercent">{{li.average}}%</div>
                     </div>
+                  </div>
+                  <!--Improvement coming soon-->
+                  <div v-if="categoryNum === 6 &&comingSoon ===true" style="height: 100%;font-size: 48px;color: #7d4e28;display: flex;align-items: center;justify-content: center;">
+                    <p>coming soon!</p>
                   </div>
                 </div>
                 <!--Scores for key areas-->
@@ -1804,20 +1808,24 @@
         // console.log( this.detailList);
       },
       logout() {
-        this.$router.push({
-          path: "/login", //跳转的路径
-        });
+        if(this.local === 'cn'){
+          this.$router.push({
+            path: "/login", //跳转的路径
+          });
+        }else{
+          this.$router.push({
+            path: "/loginhk", //跳转的路径
+          });
+        }
+
         localStorage.setItem("userId", '');
       },
       //统计
       Statistics(){
-        let map="[{'name':'a','value':1},{'name':'b','value':2}";
-        let map1 = map+",{'name':'b','value':2}]";
         this.loading = true;
         this.$axios.post('/user/getTimeLog', qs.stringify({
           studentId: localStorage.getItem('studentId'),
           level:this.level,
-          map10:map1
         })).then(res => {
           this.strengths = res.data.Strengths;
           this.strengthsMaxNub = Object.keys(this.strengths).length < 3?Object.keys(this.strengths).length:3;
