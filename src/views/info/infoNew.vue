@@ -1460,7 +1460,7 @@
         this.opciay4 = false;
       },
       sectionp4() {
-        if (this.opciay4 == 'false') {
+        if (this.opciay4 === 'false') {
           this.ifboss1 = false;
           this.ifboss2 = false;
           this.page4 = true;
@@ -3419,7 +3419,7 @@
     }
   }
 
-  @media screen and (max-width: 569px) {
+  @media only screen and (max-width: 569px) {
     .strengthsAbbreviation {
       width: 100%;
       height: 100%;
@@ -3916,7 +3916,7 @@
     }
   }
 
-  @media screen and (min-device-height: 570px) and (max-device-height: 735px) and (-webkit-device-pixel-ratio: 3),
+  @media only screen and (min-device-height: 570px) and (max-device-height: 735px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 570px) and (max-device-height: 735px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 570px) and (max-width: 735px){
     .menu2Change{
@@ -4025,7 +4025,7 @@
       display: inline;
       width: 5%;
       margin: 3%;
-      padding: 0.5% 2.5%;
+      padding: 0.5% 1.5%;
       color: white;
       background: #2279ac;
       border-radius: 50px;
@@ -4282,7 +4282,7 @@
     }
   }
 
-  @media screen and (min-device-height: 736px) and (max-device-height: 811px) and (-webkit-device-pixel-ratio: 3),
+  @media only screen and (min-device-height: 736px) and (max-device-height: 811px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 736px) and (max-device-height: 811px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 736px) and (max-width: 811px) {
     .strengthsAbbreviation {
@@ -4673,7 +4673,7 @@
     }
   }
 
-  @media screen and (min-device-height: 812px) and (max-device-height: 894px) and (-webkit-device-pixel-ratio: 3),
+  @media only screen and (min-device-height: 812px) and (max-device-height: 894px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 812px) and (max-device-height: 894px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 812px) and (max-width: 894px) {
 
@@ -5107,7 +5107,7 @@
 
   }
 
-  @media screen and (min-device-height: 895px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 3),
+  @media only screen and (min-device-height: 895px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 895px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 895px) and (max-width: 1023px) {
     .buttonsty {
@@ -5565,7 +5565,7 @@
 
   }
 
-  @media screen and (min-device-height: 1024px) and (max-device-height: 1199px) and (-webkit-device-pixel-ratio: 3),
+  @media only screen and (min-device-height: 1024px) and (max-device-height: 1199px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 1024px) and (max-device-height: 1199px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 1024px) and (max-width: 1199px) {
 
@@ -6084,7 +6084,8 @@
 
   }
 
-  @media screen and(min-device-height: 1180px) and (max-device-height: 1180px) and (-webkit-device-pixel-ratio: 2),
+  @media only screen and(min-device-height: 1180px) and (max-device-height: 1180px) and (-webkit-device-pixel-ratio: 3),
+  (min-device-height: 1180px) and (max-device-height: 1180px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 1180px) and (max-width: 1180px){
     .cardRight {
       top: 33%;
@@ -6097,7 +6098,7 @@
     }
   }
 
-  @media screen and (min-device-height: 1200px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 3),
+  @media only screen and (min-device-height: 1200px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 1200px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 1200px) and (max-width: 1600px) {
     .chosedisplay {

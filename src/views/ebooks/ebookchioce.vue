@@ -20,8 +20,8 @@
               <img src="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/let's-get-healthy.png"> -->
               <!--<div>-->
 
-                <img v-if="li.completes=='100%'&&loadimg" style="display: block;width: 20%;margin-left: 40%;" src="../../assets/image/truest.png">
-                <div v-if="li.completes!='100%'&&loadimg" style="margin: 4% ;background-color: white;height: 10px;border-radius: 50px;display: block;">
+                <img v-if="li.completes==='100%'&&loadimg" style="display: block;width: 20%;margin-left: 40%;" src="../../assets/image/truest.png">
+                <div v-if="li.completes!=='100%'&&loadimg" style="margin: 4% ;background-color: white;height: 10px;border-radius: 50px;display: block;">
                   <div :style="{width:li.completes}" style="height: 10px;border-radius: 50px; left: 0;background-color: green;"></div>
                 </div>
               </div>
@@ -104,7 +104,7 @@
 
         if(this.imgLoad>imgCount){
 
-          return;
+
         }else{
 
           if (this.imgLoad === imgCount) {
@@ -200,11 +200,7 @@
             this.listBookName[i].head_img=this.pic+this.listBookName[i].head_img;
             this.listBookName[i].word_img=this.pic+this.listBookName[i].word_img;
           }
-          if(this.booklevel.length>10){
-            this.ebooslengthall=true;
-          }else {
-            this.ebooslengthall=false;
-          }
+          this.ebooslengthall = this.booklevel.length > 10;
       }, res => {
           alertMsg("You must be connected to the internet.<br>Please connect and try again.");
       })
@@ -332,7 +328,7 @@
   .box1 {
     position: absolute;
     width: 100%;
-    height: auto;
+    height: 57.5%;
     justify-content: space-between;
     white-space: nowrap;
     display: flex;
@@ -340,7 +336,6 @@
     overflow-x: scroll;
     margin-top: 4%;
     transform: rotateX(10deg);
-
     .imglist {
         height: 20%;
     }
@@ -548,7 +543,7 @@
     .box1 {
       margin-top: 4%;
       .imglist {
-        height: 50%;
+        height: 80%;
       }
 
     }

@@ -1165,13 +1165,12 @@
     width: 100%;
     height: 100%;
     padding: 0;
-    margin: 0;
     z-index: 99;
     display: block;
     transform: rotateX(0) rotateY(180deg) rotateZ(0);
     max-width: 330px;
     max-height: 377px;
-    margin-left: -165px;
+    margin: 0 0 0 -165px;
     border-radius: 25px;
   }
   .disnone{
@@ -1682,7 +1681,7 @@
     .backclass2 {
       max-width: 630px;
       max-height:720px;
-      margin-left:-315px;
+      margin-left:-240px;
     }
 
     .backclass3 {

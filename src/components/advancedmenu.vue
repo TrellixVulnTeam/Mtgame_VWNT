@@ -1100,7 +1100,7 @@
     width: 100%;
     display: inline-flex;
     float: left;
-    height: 84%;
+    height: 85%;
     padding-left: 5%;
     overflow: scroll;
     overflow-y: hidden;
