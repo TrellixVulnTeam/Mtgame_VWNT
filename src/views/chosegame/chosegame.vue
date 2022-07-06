@@ -17,7 +17,7 @@
 							<!-- <img src="../../assets/image/coming-soon.png" class="comingsoon"  v-if="index"> -->
 							<div style="position: relative;">
 							<!-- <div  class=" couresgrey" v-if="index" style="width: 100%;height: 100%;"></div> -->
-							  <a class="abgcgreen" @click="chartroom1(courseList[0])">
+							  <a class="abgcgreen" @click="$tips(true);chartroom1(courseList[0])">
 								<div class="l-box">
 										<img src="../../assets/image/greenmonkey.png" class="p-monkey">
 								</div>
@@ -34,7 +34,7 @@
             	 <!--<img src="../../assets/image/coming-soon.png" class="comingsoon">-->
             	<div style="position: relative;">
             	 <!--<div  class="couresgrey" style="width: 100%;height: 100%;"></div>-->
-				  <a class="abgcgreen aackgrou"  @click="chartroom2(courseList[1])">
+				  <a class="abgcgreen aackgrou"  @click="$tips(true);chartroom2(courseList[1])">
             		<div class="l-box">
                     <img src="../../assets/image/pinkmonkey.png" class="p-monkey">
             		</div>
@@ -57,7 +57,7 @@
               <h2 class="chartroom-title"><span>CHAT ROOM</span></h2>
               <div class="chart-room">
 								<div class="left-walkers"  v-for="(li,i) in levelsList">
-									<a @click="walkers1(li)">
+									<a @click="$tips(true);walkers1(li)">
 										<img src="../../assets/image/selectW.png" v-if="i===0" class="sizeselect">
                     <img src="../../assets/image/selectR.png" v-if="i===1" class="sizeselect">
 										<!--<div class="progress">-->
@@ -255,7 +255,7 @@
 					<img src="../../assets/image/walker_bar.png" style="width: 100%;bottom: 0;height: 100%;">
 					<!-- <img src="../assets/image/runner_bar.png" style="width: 100%;bottom: 0;height: 100%;" v-if="levels"> -->
 					<div>
-						<img :src=gameImage class="acstyle" @click="goinfo" />
+						<img :src=gameImage class="acstyle" @click="$tips(true);goinfo()" />
 						<span class="fontsize leftmar" >{{firstName}}</span>
 					</div>
 					<div>
@@ -266,10 +266,10 @@
 						<img src="../../assets/image/game-course03.png"  class="pause">
 						 <img src="../../assets/image/game-course03.png"  class=" pause" v-if="!action"> -->
 					<!-- </div> -->
-					<div @click="back">
+					<div @click="$tips(true);back()">
            				<img src="../../assets/image/Icon_back.png"  class="pause">
          			</div>
-					<div @click="home">
+					<div @click="$tips(true);home()">
 						<!-- <img src="../../assets/image/Icon_home0.png" class="repeat" v-if="action1"> -->
 						<img src="../../assets/image/Icon_home.png" class="repeat">
 					</div>
@@ -605,7 +605,7 @@
           })
         }else{
           this.loading = true;
-          alertMsg3("Loading...Please Wait");
+          alertImg(this.$axios.defaults.baseURL2);
         }
       },
 			walkers1(li) {
@@ -1251,7 +1251,7 @@
 		.walkers-room-out{
 			position: relative;
 			top: 3%;
-			height: 80%;
+			height: 82%;
 			//height: 85%;
 			    overflow: hidden;
 			    overflow-y: scroll;

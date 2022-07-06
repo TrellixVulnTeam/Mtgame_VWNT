@@ -563,6 +563,13 @@
                   <div class="historyList">
                     <table align="center" width="100%" cellspacing="6" cellpadding="0"
                            style="color: #007BB8; margin-top: -5px;">
+<!--                      <tr>-->
+<!--                        <th>Date</th>-->
+<!--                        <th>Date</th>-->
+<!--                        <th>Date</th>-->
+<!--                        <th>Date</th>-->
+<!--                        <th>Date</th>-->
+<!--                      </tr>-->
                     <tr v-for="(li,index) in history" :key="index" >
                       <td class="historyLi" style="width: 10%;">{{li.date}}</td>
                       <td class="historyLi" style="width: 10%;left: -2%;position: relative;">{{li.letter}}</td>
@@ -693,7 +700,7 @@
     data() {
       let myChart;
       return {
-        comingSoon:true,
+        comingSoon:false,
         strengthsMinNub:0,
         strengthsMaxNub:3,
         strengths:[],
@@ -871,10 +878,10 @@
         },
       'loading': function(newVal) {
         if (this.loading === true) {
-          alertMsg3("Loading...Please Wait");
+          alertImg(this.$axios.defaults.baseURL2);
           setTimeout(() => {document.getElementById('alertFram').style.display = 'none'},15000)
         }else{
-          setTimeout(() => {document.getElementById('alertFram').style.display = 'none'})
+          setTimeout(() => {document.getElementById('alertFram').style.display = 'none'},1000)
         }
       },
 
@@ -2079,6 +2086,8 @@
     mounted(){
     },
     created() { //生命周期里接收参数
+      console.log('高：'+window.screen.height);
+      console.log('宽：'+window.screen.width);
       this.local = localStorage.getItem('local');
       this.gameImage = localStorage.getItem('gameImage');
       this.firstName = localStorage.getItem('firstName');
@@ -3098,7 +3107,7 @@
     font-size: 1rem;
     font-weight: bold;
     height: 40%;
-    padding: 0 10px;
+    padding: 0 5px;
     font-family: pepper;
   }
 
@@ -3602,7 +3611,7 @@
       border-radius: 30px;
       height: 15px;
       width: fit-content;
-      padding: 0 10px;
+      padding: 0 5px;
     }
     .areas {
       background-color: #eeebc8;
@@ -3916,14 +3925,12 @@
     }
   }
 
-  @media only screen and (min-device-height: 570px) and (max-device-height: 735px) and (-webkit-device-pixel-ratio: 3),
-  (min-device-height: 570px) and (max-device-height: 735px) and (-webkit-device-pixel-ratio: 2),
-  (min-width: 570px) and (max-width: 735px){
+  @media only screen and (min-width: 570px) and (max-width: 735px) {
     .menu2Change{
       float: left;
       height: 100%;
       width: 64%;
-      border-radius: 20px;
+      border-radius: 10px;
       background-color: #FF9239;
     }
     .strengthsLiAll{
@@ -4024,13 +4031,14 @@
     .historyLabel {
       display: inline;
       width: 5%;
-      margin: 3%;
-      padding: 0.5% 1.5%;
+      margin: 1.5%;
+      padding: 0.5% 2.5%;
       color: white;
       background: #2279ac;
       border-radius: 50px;
       font-family: 'pepper', serif;
       font-size: 0.7rem;
+      transform: scale(1.5);
     }
     .improvementButton {
       width: 85%;
@@ -4060,12 +4068,6 @@
       color: #6d513d;
       font-weight: 600;
       font-size: 0.7rem;
-    }
-    .menu2Change {
-      border-radius: 10px;
-    }
-    .menu2 {
-      border-radius: 10px;
     }
     .menu1 {
       border-radius: 10px;
@@ -4282,9 +4284,7 @@
     }
   }
 
-  @media only screen and (min-device-height: 736px) and (max-device-height: 811px) and (-webkit-device-pixel-ratio: 3),
-  (min-device-height: 736px) and (max-device-height: 811px) and (-webkit-device-pixel-ratio: 2),
-  (min-width: 736px) and (max-width: 811px) {
+  @media only screen and (min-width: 736px) and (max-width: 811px) {
     .strengthsAbbreviation {
       width: 100%;
       height: 100%;
@@ -4372,7 +4372,7 @@
     .historyLabel {
       display: inline;
       width: 5%;
-      margin: 3%;
+      margin: 1.5%;
       padding: 0.5% 2.5%;
       color: white;
       background: #2279ac;
@@ -4673,9 +4673,7 @@
     }
   }
 
-  @media only screen and (min-device-height: 812px) and (max-device-height: 894px) and (-webkit-device-pixel-ratio: 3),
-  (min-device-height: 812px) and (max-device-height: 894px) and (-webkit-device-pixel-ratio: 2),
-  (min-width: 812px) and (max-width: 894px) {
+  @media only screen and (min-width: 812px) and (max-width: 894px) {
 
     .menu2{
       float: left;
@@ -4774,7 +4772,7 @@
       display: inline;
       width: 5%;
       margin: 3%;
-      padding: 0.5% 3%;
+      padding: 0.5% 2.5%;
       color: white;
       background: #2279ac;
       border-radius: 50px;
@@ -4851,7 +4849,7 @@
       line-height: 20px;
     }
     .phonicsText {
-      font-size: 1rem;
+      font-size: 0.7rem;
     }
     .letterPercent {
       font-size: 1.6rem;
@@ -4927,14 +4925,14 @@
 
     .intervalsPassAmazing {
       padding: 0.5% 3%;
-      top: 35%;
+      top: 32%;
       left: 66%;
       font-size: 0.7rem;
     }
 
     .intervalsPassNice {
       padding: 0.5% 3%;
-      top: 35%;
+      top: 32%;
       left: 78%;
       font-size: 0.7rem;
     }
@@ -5043,7 +5041,7 @@
     }
 
     .lefticon {
-      padding-top: 4%;
+      padding-top: 3%;
     }
 
     .topMenu {
@@ -5107,9 +5105,393 @@
 
   }
 
-  @media only screen and (min-device-height: 895px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 3),
-  (min-device-height: 895px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 2),
-  (min-width: 895px) and (max-width: 1023px) {
+  @media only screen and (min-device-height: 812px) and (max-device-height: 894px) and (-webkit-device-pixel-ratio: 3),
+  (min-device-height: 812px) and (max-device-height: 894px) and (-webkit-device-pixel-ratio: 2){
+    .historyLabel {
+      display: inline;
+      width: 5%;
+      margin: 3%;
+      padding: 0.5% 1.5%;
+      color: white;
+      background: #2279ac;
+      border-radius: 50px;
+      font-family: 'pepper', serif;
+      font-size: 0.7rem;
+    }
+    .improvementPercent {
+      width: 45%;
+      color: #9b9a8c;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .improvementButton {
+      width: 60%;
+      background-color: #f58948;
+      display: inline-block;
+      border-radius: 30px;
+      color: white;
+      font-size: 0.7rem;
+      font-family: 'pepper', serif;
+      border: 2px solid #ca642b;
+      line-height: 20px;
+    }
+    .improvementLetter {
+      width: 65%;
+      color: #6d513d;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .improvementId {
+      width: 25%;
+      color: #6d513d;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .AreasDiv {
+      float: right;
+      margin-top: 2px;
+    }
+    .AreasP2 {
+      color: white;
+      font-weight: 700;
+      display: inline-block;
+      font-size: 0.8rem;
+      border-radius: 30px;
+      height: 20px;
+      width: fit-content;
+      padding: 0 10px;
+      line-height: 20px;
+    }
+    .AreasP {
+      color: white;
+      display: inline-block;
+      font-size: 0.8rem;
+      opacity: 0.7;
+      margin-right: 15px;
+    }
+    .areas {
+      background-color: #eeebc8;
+      height: 80%;
+      position: relative;
+      border-radius: 25px;
+      width: 60%;
+    }
+    .areasButton1 {
+      width: 80%;
+      display: inline-block;
+      height: 20px;
+      border-radius: 30px;
+      color: white;
+      font-size: 0.7rem;
+      font-family: 'pepper', serif;
+      margin-top: 6%;
+      line-height: 20px;
+    }
+
+    .letterPercent {
+      font-size: 1.6rem;
+    }
+    .cLeft {
+      width: 36px;
+      height: 36px;
+      left: -18px;
+    }
+    .cRight {
+      width: 36px;
+      height: 36px;
+      right: -16px;
+    }
+    .pointPosition {
+      margin-top: -5.5%;
+    }
+    .point1 {
+      font-size: 1rem;
+    }
+    .point2 {
+      font-size: 1rem;
+    }
+    .intervalsPassClass {
+      position: absolute;
+      color: #9c8066;
+      font-family: 'pepper', serif;
+      font-size: 0.7rem;
+      left: 65%;
+      top: 81%;
+    }
+
+    .intervalsPassText2 {
+      font-family: kg,serif;
+      color: #735138;
+      font-size: 1.5rem;
+      position: absolute;
+      width: fit-content;
+      left: 42%;
+      top: 50%;
+    }
+
+    .intervalsPassText1 {
+      font-family: kg,serif;
+      color: #735138;
+      font-size: 3rem;
+      position: relative;
+      left: 1%;
+      text-align: right;
+      width: 100px;
+      margin-top: 10%;
+    }
+
+    .intervalsPass7 {
+      width: 50%;
+      float: left;
+      position: relative;
+      top: 5%;
+      left: -2%;
+    }
+
+    .intervalsPassKeepTrying {
+      position: absolute;
+      padding: 0.5% 3%;
+      font-size: 0.7rem;
+      border-radius: 30px;
+      color: white;
+      font-family: 'kg', serif;
+      top: 32%;
+      right: 6%;
+      background-color: #2aba8f;
+    }
+
+    .intervalsPassAmazing {
+      padding: 0.5% 3%;
+      top: 32%;
+      left: 66%;
+      font-size: 0.7rem;
+    }
+
+    .intervalsPassNice {
+      padding: 0.5% 3%;
+      top: 32%;
+      left: 78%;
+      font-size: 0.7rem;
+    }
+
+    .intervalsPassGreat{
+      position: absolute;
+      padding: 0.5% 3%;
+      font-size: 0.7rem;
+      border-radius: 30px;
+      color: white;
+      font-family: 'kg', serif;
+      top: 32%;
+      right: 6%;
+      background-color: #f389a4;
+    }
+
+    .intervalsPass30 {
+      left: -4%;
+    }
+
+    .intervalsPass {
+      font-size: 0.7rem;
+    }
+    .intervalsMins {
+      font-size: 2rem;
+    }
+    .intervalsHours {
+      font-size: 2rem;
+    }
+    .intervalsHour {
+      font-size: 3rem;
+    }
+    .cardRight {
+      top: 26%;
+    }
+    .cardLeft {
+      top: 26%;
+    }
+    .categories {
+      border-radius: 30px;
+    }
+
+    .buttonsty {
+      border-style: none;
+      background: none;
+      color: white;
+      font-size: 1rem;
+      font-weight: bold;
+      height: 40%;
+      padding: 0 5px;
+      font-family: pepper,serif;
+    }
+
+    .categoriesLi {
+      background-color: #f58948;
+      display: inline-block;
+      width: 40%;
+      height: 15%;
+      border-radius: 30px;
+      float: left;
+      margin: 3.5% 0 0 6.6%;
+      color: white;
+      font-size: 0.8rem;
+      font-family: 'pepper', serif;
+      border: 2px solid #ca642b;
+      line-height: 23px;
+    }
+
+    .phonicsLevel {
+      padding-left: 50px;
+    }
+
+    .progress2{
+      height: 23px;
+    }
+    .progress2 img{
+      width: 1.3rem;
+    }
+    .startP{
+      font-size: 1rem;
+    }
+    .listmemu{
+      margin: 0 20px 0 20px;
+    }
+
+    .infoimg {
+      height: 75%;
+      margin-top: 5%;
+    }
+
+    .chosedisplay {
+      // margin-top: 4%;
+    }
+
+    .addchosecourseL {
+      margin-top: 2%;
+    }
+
+    .chosecourseL {
+      //margin-top:-2%;
+    }
+
+    .cicleimg {
+      margin-top: 10%;
+    }
+
+    .cicleimg1 {
+      margin-top: 6%;
+    }
+
+    .infomesse {
+      margin-top: 9%;
+    }
+
+    .chosegamecord {
+      height: 80%;
+    }
+
+    .lefticon {
+      padding-top: 3%;
+    }
+
+    .levels {
+      width: 44%;
+    }
+
+    .blueBG {
+      width: 165px;
+      height: 50px;
+    }
+
+    .blueBG img {
+      height: 50px;
+    }
+
+    .percent {
+      top: 25%;
+    }
+    .choicephonics{
+      margin-top: 0;
+    }
+    .infoimg1 ul {
+      height: 100%;
+    }
+
+    .addlevels {
+      margin-top: 10%;
+    }
+
+    .unitnamep {
+      font-size: 0.5rem;
+    }
+    .bluecicle {
+      border: 8px solid #007BB8;
+      height: 150px;
+      width: 150px;
+    }
+
+    .imgstyle {
+      width: 142px;
+      height: 142px;
+      border: 4px solid #0D627C;
+    }
+    .progress2 {
+      height: 18px;
+    }
+    .percent2 {
+      /*top: 3px;*/
+      height: 19px;
+    }
+    .historyLabel {
+      display: inline;
+      width: 5%;
+      margin: 3%;
+      padding: 0.5% 1.5%;
+      color: white;
+      background: #2279ac;
+      border-radius: 50px;
+      font-family: 'pepper', serif;
+      font-size: 0.7rem;
+    }
+    .topMenu {
+      height: 32%;
+    }
+    .menu1 {
+      float: left;
+      height: 100%;
+      width: 36%;
+      border-radius: 15px;
+      background-color: #43BF76;
+    }
+    .menu2Change {
+      float: left;
+      height: 100%;
+      width: 60%;
+      border-radius: 15px;
+      background-color: #FF9239;
+    }
+    .spanimg2 {
+      width: 1rem;
+      margin: -2px 3px;
+    }
+    .phonicsL {
+      color: white;
+      font-family: pepper,serif;
+      font-size: 1rem;
+    }
+    .phonicsText {
+      color: #7d4e28;
+      font-family: pepper,serif;
+      font-size: 0.7rem;
+      font-weight: 500;
+    }
+    .iClock {
+      width: 21%;
+      left: 6%;
+      top: 6%;
+      position: absolute;
+    }
+  }
+
+  @media only screen and (min-width: 895px) and (max-width: 1023px) {
     .buttonsty {
       border-style: none;
       background: none;
@@ -5189,7 +5571,8 @@
       width: 50%;
       float: left;
       position: relative;
-      top: 0%;
+      top: 0;
+      left:0;
     }
     .historyLi {
       font-size: 0.7rem;
@@ -5334,7 +5717,7 @@
     }
     .intervalsPassAmazing {
       position: absolute;
-      padding: 1.5% 4%;
+      padding: 0.5% 3%;
       border-radius: 30px;
       color: white;
       font-family: 'kg', serif;
@@ -5386,7 +5769,7 @@
     .intervalsPassText1{
       font-family: kg,serif;
       color: #735138;
-      font-size: 4.5rem;
+      font-size: 3rem;
       position: relative;
       left: 2%;
       text-align: right;
@@ -5565,9 +5948,25 @@
 
   }
 
-  @media only screen and (min-device-height: 1024px) and (max-device-height: 1199px) and (-webkit-device-pixel-ratio: 3),
-  (min-device-height: 1024px) and (max-device-height: 1199px) and (-webkit-device-pixel-ratio: 2),
-  (min-width: 1024px) and (max-width: 1199px) {
+  @media only screen and (min-width: 1024px) and (max-width: 1199px) {
+    .AreasP2 {
+      color: white;
+      font-weight: 700;
+      display: inline-block;
+      font-size: 1.2rem;
+      border-radius: 30px;
+      height: 30px;
+      width: fit-content;
+      padding: 0 10px;
+      line-height: 30px;
+    }
+    .AreasP {
+      color: white;
+      display: inline-block;
+      font-size: 1.2rem;
+      opacity: 0.7;
+      margin-right: 15px;
+    }
 
     .strengthsL{
       position: relative;
@@ -5715,7 +6114,7 @@
       border-radius: 30px;
       color: white;
       font-family: 'kg', serif;
-      top: 43%;
+      top: 38%;
       left: 73%;
       font-size: 1rem;
       background-color: #f7af42;
@@ -5726,7 +6125,7 @@
       border-radius: 30px;
       color: white;
       font-family: 'kg', serif;
-      top: 43%;
+      top: 38%;
       left: 61%;
       font-size: 1rem;
     }
@@ -5766,7 +6165,7 @@
       border-radius: 30px;
       color: white;
       font-family: 'kg', serif;
-      top: 45%;
+      top: 38%;
       right: 7%;
       background-color: #2aba8f;
     }
@@ -5777,7 +6176,7 @@
       border-radius: 30px;
       color: white;
       font-family: 'kg', serif;
-      top: 45%;
+      top: 38%;
       right: 4%;
       background-color: #f389a4;
     }
@@ -5819,7 +6218,7 @@
     }
 
     .pointPosition{
-      margin-top: -8%;
+      margin-top: -9%;
     }
 
     .cRight {
@@ -5855,7 +6254,7 @@
     }
     .buttonsty {
       height: 30%;
-      font-size: 24px;
+      font-size: 22px;
     }
     .menu2Change {
       width: 64%;
@@ -6084,9 +6483,7 @@
 
   }
 
-  @media only screen and(min-device-height: 1180px) and (max-device-height: 1180px) and (-webkit-device-pixel-ratio: 3),
-  (min-device-height: 1180px) and (max-device-height: 1180px) and (-webkit-device-pixel-ratio: 2),
-  (min-width: 1180px) and (max-width: 1180px){
+  @media only screen and (min-width: 1180px) and (max-width: 1180px){
     .cardRight {
       top: 33%;
     }
@@ -6094,13 +6491,39 @@
       top: 33%;
     }
     .pointPosition {
-      margin-top: -6%;
+      margin-top: -8%;
+    }
+    .bottommemu {
+      margin-top: -11%;
+    }
+    .iClock {
+      width: 28%;
     }
   }
 
-  @media only screen and (min-device-height: 1200px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 3),
-  (min-device-height: 1200px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 2),
-  (min-width: 1200px) and (max-width: 1600px) {
+  @media only screen and (min-width: 1200px) and (max-width: 1600px) {
+    .strengthsAbbreviation {
+      width: 100%;
+      height: 100%;
+      left: 4%;
+      font-size: 1.8rem;
+      font-family: 'kg';
+      font-weight: 600;
+      color: #9c9c9c;
+      position: relative;
+      text-align: center;
+    }
+    .phonicsL {
+      color: white;
+      font-family: pepper,serif;
+      font-size: 2.5rem;
+    }
+    .phonicsText {
+      color: #7d4e28;
+      font-family: pepper,serif;
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
     .chosedisplay {
       height: 80%;
       margin-top: -2%;
@@ -6185,28 +6608,36 @@
       left: 30%;
     }
     .intervalsPassNice {
-      top: 44%;
-      left: 61%;
+      top: 38%;
+      left: 80%;
     }
     .pointPosition {
       margin-top: -8%;
     }
     .intervalsPass7 {
-      left: 1%;
+      left: 0;
     }
     .intervalsPassText1 {
       font-family: kg,serif;
       color: #735138;
-      font-size: 6rem;
+      font-size: 5.5rem;
       position: relative;
-      left: -8%;
+      left: 1%;
       margin-top: 15%;
       width: 180px;
     }
+    .intervalsPassClass {
+      position: absolute;
+      color: #9c8066;
+      font-family: 'pepper', serif;
+      font-size: 1.2rem;
+      left: 65%;
+      top: 76%;
+    }
     .intervalsPassKeepTrying {
-      right: 18%;
+      right: 1%;
       padding: 1.5% 4%;
-      top: 42%;
+      top: 38%;
     }
     .intervalsPassGreat {
       left: 59%;
@@ -6220,9 +6651,9 @@
       top: 42%;
     }
     .intervalsPassAmazing {
-      right: 18%;
-      padding: 1.5% 4%;
-      top: 42%;
+      left: 72%;
+      padding: 1.5% 3%;
+      top: 38%;
     }
     .intervalsPass30 {
       left: -1%;
@@ -6433,7 +6864,7 @@
     }
 
     .bottommemu {
-      margin-top: -12%;
+      margin-top: -11%;
     }
 
     .addlevels {
@@ -6532,7 +6963,7 @@
     }
 
     .buttonsty {
-      font-size: 40px;
+      font-size: 36px;
       height: 30%;
     }
 

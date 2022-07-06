@@ -28,13 +28,13 @@ Vue.prototype.$axios = axios;
 
  //axios.defaults.baseURL = 'http://dodosurvey.com/monkeytownHK'  // api 即上面 vue.config.js 中配置的地址
 
-axios.defaults.baseURL = 'http://localhost:8080/monkeytownCN';
+//axios.defaults.baseURL = 'http://localhost:8080/monkeytownCN';
 //axios.defaults.baseURL = 'http://localhost:8080/monkeytownHK';
 //图片url
-axios.defaults.baseURL2 = 'http://gamejava.monkeytree.com.hk';
-//axios.defaults.baseURL2 = 'https://gamejava.monkeytree.com.cn';
+//axios.defaults.baseURL2 = 'http://gamejava.monkeytree.com.hk';
+axios.defaults.baseURL2 = 'https://gamejava.monkeytree.com.cn';
 //后端url
-//axios.defaults.baseURL = 'https://gamejava.monkeytree.com.cn';
+axios.defaults.baseURL = 'https://gamejava.monkeytree.com.cn';
 //axios.defaults.baseURL = 'http://gamejava.monkeytree.com.hk';
 
 localStorage.setItem('localurl',axios.defaults.baseURL);
@@ -51,7 +51,13 @@ Vue.use(Bounce)
 Vue.use(Bounce, {
     name: 'directiveName' // 可选参数用于覆盖指令名
 })
-
+Vue.prototype.$tips =  function (start) {
+  // if(start){
+  //   let audio = new Audio();
+  //   audio.src = require('../src/assets/video/tips.mp3');
+  //   audio.play().then(r => console.log('播放成功'));
+  // }
+}
 
 // Vue.prototype.setCookie = function (name, value, day) {
 //     if (day !== 0) { //当设置的时间等于0时，不设置expires属性，cookie在浏览器关闭后删除

@@ -626,4 +626,5 @@ import $ from "jquery";
       }
     }
   }
+
 </style>

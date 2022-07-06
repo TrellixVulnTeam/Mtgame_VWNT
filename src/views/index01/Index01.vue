@@ -16,12 +16,12 @@
 			</div>
 		<div class="itemWarp2" style="pointer-events: painted;z-index: 9;">
 					<div class="item2 game active"  >
-						<a class="monkey" @click="jumpexercise" style="pointer-events: painted">
+						<a class="monkey" @click="$tips(true);jumpexercise()" style="pointer-events: painted">
 							<img src="../../assets/image/gameicon.png"  style="z-index: 100;"/>
 						</a>
 					</div>
 					<div class="item2 exercise" >
-						<a  class="monkey" @click="jumpgame" style="pointer-events: painted">
+						<a  class="monkey" @click="jumpgame()" style="pointer-events: painted">
 							<img src="../../assets/image/exercise2.png" style="z-index: 100;"/>
 						</a>
 					</div>
@@ -47,9 +47,9 @@
     </div>
       <!--<div class="roate-icon">-->
         <!--<div class="roate-icon-img">-->
-          <a style="position: absolute;left: 5%;top: 55%;width: 6%;z-index: 10" @click="roateleft">
+          <a style="position: absolute;left: 5%;top: 55%;width: 6%;z-index: 10" @click="$tips(true);roateleft()">
             <img src="../../assets/image/left-icon01_03.png" style="width: 100%"></a>
-          <a style="position: absolute;right: 5%;top: 55%;width: 6%;z-index: 10" @click="roateright">
+          <a style="position: absolute;right: 5%;top: 55%;width: 6%;z-index: 10" @click="$tips(true);roateright()">
             <img src="../../assets/image/right-icon01_03.png" style="width: 100%"></a>
         <!--</div>-->
       <!--</div>-->
@@ -58,7 +58,7 @@
 				<img src="../../assets/image/walker_bar.png" style="width: 100%;bottom: 0;height: 100%;">
 			<!-- 	<img src="../../assets/image/runner_bar.png" style="width: 100%;bottom: 0;height: 100%;" v-if="levels"> -->
 				<div>
-					<img :src=gameImage class="acstyle" @click="goinfo"/>
+					<img :src=gameImage class="acstyle" @click="$tips(true);goinfo()"/>
 					<span class="fontsize1 leftmar" >{{firstName}}</span>
 				</div>
 				<div>
@@ -209,7 +209,7 @@
 			}.bind(this), 100);
 		  },
 		  roateleft(){
-			var _height;
+			        var _height;
 						 var direction = 'left';
 						this.translate = direction === 'left' ? this.deg = this.deg - 72 : this.deg = this.deg + 72;
 						this.translate = direction === 'left' ? this.pageNow = this.pageNow + 1 : this.pageNow = this.pageNow - 1;

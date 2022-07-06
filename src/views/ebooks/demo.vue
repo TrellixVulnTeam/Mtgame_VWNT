@@ -1,9 +1,11 @@
 <template>
   <div id="demo">
-    <audio autoplay="autoplay" loop="loop" ref="MusicPlay" v-if="show" id="bookmusic"><source  src="../../assets/video/book.mp3"></audio>
+    <audio autoplay="autoplay" loop="loop" ref="MusicPlay" v-if="show" id="bookmusic">
+      <source  src="../../assets/video/book.mp3">
+    </audio>
 
     <audio id="audiomp3" autoplay="autoplay" style="display: none;" controls>
-      <source :src="bigsound" v-if="video">
+      <source :src="bigsound" v-show="video">
     </audio>
     <img src="../../assets/image/eback.png" @click="back" class="backbutton" />
     <!--<img src="../../assets/image/booksounds.png" @click="help" class="helpbutton" />-->
@@ -32,7 +34,7 @@
             <img :src="backimg2" class="backclass" v-if="idx===0" v-show="isOpenedTop1" :style="{zIndex:  items.length +2}"/>
             <img :src="insetimg" class="insetimg" @load="updated()" v-if="idx+1 === items.length"  v-show="isOpenedTop1" :style="{zIndex:  1}"/>
 
-            <div class="fontclass" v-if="idx!=0" v-show="isOpenedTop1"  :style="{zIndex:  items.length}">
+            <div class="fontclass" v-if="idx!==0" v-show="isOpenedTop1" :style="{zIndex:  items.length}">
               <img :src="wordimg"   class="fontback" v-show="isOpenedTop1&&!fontshow" style="z-index: 999;">
               <!--<img src="../../assets/image/fontabck.png" class="fontback" v-show="isOpenedTop1">-->
               <button style="width: 85%;height:75%;background: none;border: none;font-size: 2rem;

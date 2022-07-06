@@ -619,7 +619,7 @@
     watch: {
       'loading': function(newVal) {
         if (this.loading === true) {
-          alertMsg3("Loading...Please Wait");
+          alertImg(this.$axios.defaults.baseURL2);
           setTimeout(() => {
               document.getElementById('alertFram').style.display = 'none'}
             ,15000)
@@ -747,7 +747,8 @@
 				],
 				// url: '/user/Menu',
         url: '/user/',
-        // pic: "http://demo11.embraiz.com/mtGameHK",
+        pic: '',
+        picGIF:['/image/a.gif','/image/b.gif','/image/c.gif','/image/d.gif','/image/e.gif','/image/f.gif','/image/g.gif','/image/h.gif','/image/boss.gif'],
         url1:'',
         url2:'',
         url3:'',
@@ -1221,6 +1222,7 @@
       },
 		},
 	  created() {
+      this.pic = this.$axios.defaults.baseURL2;
 		  console.log(this.$route.query);
 		  this.cources=this.$route.query.cources;
       this.courseId=this.$route.query.courseId;
@@ -1803,7 +1805,7 @@
 		width: 100%;
 		display: inline-flex;
 		float: left;
-		height: 84%;
+		height: 85%;
 		padding-left: 5%;
 		overflow: scroll;
     	position: relative;

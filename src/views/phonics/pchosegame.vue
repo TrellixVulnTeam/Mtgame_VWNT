@@ -209,7 +209,7 @@
     watch: {
       'loading': function(newVal) {
         if (this.loading === true) {
-            alertMsg3("Loading...Please Wait");
+            alertImg(this.$axios.defaults.baseURL2);
           setTimeout(() => {
               document.getElementById('alertFram').style.display = 'none'}
             ,15000)

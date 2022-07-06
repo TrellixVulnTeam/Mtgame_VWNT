@@ -164,9 +164,21 @@ window.alertMsg3 = function (txt) {
   alertFram.innerHTML = strHtml;
   let app=document.getElementById('app');
   app.appendChild(alertFram);
-  // setTimeout((function () {
-  //     alertFram.style.display = "none";
-  // }), 1500)
+};
+window.alertImg = function (txt) {
+  var strHtml='';
+  alertFram.id = "alertFram";
+  alertFram.style.position = "absolute";
+  alertFram.style.width = "100%";
+  alertFram.style.height = "100%";
+  alertFram.style.top = "0"
+  alertFram.style.display = "block";
+  alertFram.style.textAlign = "center";
+  alertFram.style.zIndex = "10001";
+  strHtml =  "<div  style='width: fit-content;border-radius: 10px;position: absolute;left: 50%;bottom:15%;transform: translateX(-50%);'><img src='"+txt+"/image/img/Loading icon L2-01.png' style='width: 20%;margin-bottom: -4px;'></div>" ;
+  alertFram.innerHTML = strHtml;
+  let app=document.getElementById('app');
+  app.appendChild(alertFram);
 };
 window.alertMsg4 = function (txt) {
   var strHtml='';

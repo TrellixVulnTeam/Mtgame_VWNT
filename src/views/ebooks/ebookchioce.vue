@@ -351,6 +351,9 @@
   }
 
   @media screen and (min-width: 482px) and (max-width: 569px) {
+    .box1{
+      height: 200%;
+    }
     .fontsize {
       bottom: 16%;
       position: absolute;
@@ -358,7 +361,11 @@
       margin-left: 2%;
     }
   }
-
+  @media screen and (min-width: 570px) and (max-width: 736px){
+    .box1{
+      height: 200%;
+    }
+  }
 
 
   @media screen and (min-width: 1024px) and (max-width: 1199px) {
@@ -400,7 +407,7 @@
     }
     .box1 {
       margin-top: 10%;
-
+      height: 100%;
       .imglist {
         height: 30%;
       }
@@ -452,7 +459,7 @@
     }
     .box1 {
       margin-top: 13%;
-
+      height: 75%;
       .imglist {
         height: 40%;
       }
@@ -465,6 +472,7 @@
      }
      .box1 {
        margin-top: 3%;
+       height: 200%;
      }
      .ebooslength{
        font-size: 1.3rem;
@@ -477,7 +485,7 @@
       }
       .box1 {
         margin-top: 3%;
-
+        height: 200%;
       }
     .ebooslength{
       font-size: 1.2rem;
