@@ -8,8 +8,8 @@
 
     <transition name="fades">
       <div class="contain" v-show="!resume">
-        <img src="../../assets/image/prightback.png" @click="gomemu" class="backbutton" />
-        <img src="../../assets/image/phelp.png" @click="help" class="helpbutton" />
+        <img src="../../assets/image/prightback.png" @click="$tips(true);gomemu()" class="backbutton" />
+        <img src="../../assets/image/phelp.png" @click="$tips(true);help()" class="helpbutton" />
         <transition name="fade1">
           <div v-if="onef" style="width: 100%; height: 90%;display:block;position: absolute;">
             <!--<img src="../../assets/image/phonicsbg.png" style="width: 100%; z-index: -1;background-color: #204900; height: 100%;display:block;position: absolute;">-->
@@ -152,7 +152,7 @@
         <div class="settinglist">
           <img src="../../assets/image/pbar.png" style="width: 100%;bottom: 0;height: 100%;">
           <span class="fontsize">{{titlequesion}}</span>
-          <div @click="changesett">
+          <div @click="$tips(true);changesett()">
             <img src="../../assets/image/p-pause.png" class="repeat">
           </div>
         </div>
@@ -165,7 +165,7 @@
         <!--<img src="../../assets/image/walkerks-rule.png" style="height: 100%;" v-if="ruleimg15" />-->
       </button>
       <div class="withcolor">
-        <div class="close" @click="pop">
+        <div class="close" @click="$tips(true);pop()">
           <img src="../../assets/image/pcloce.png">
         </div>
         <img class="animapng7" src="http://monkeytown.monkeytree.com.hk/image/excercise1.gif">

@@ -21,23 +21,23 @@
 						</a>
 					</div>
 					<div class="item2 exercise" >
-						<a  class="monkey" @click="jumpgame()" style="pointer-events: painted">
+						<a  class="monkey" @click="$tips(true);jumpgame()" style="pointer-events: painted">
 							<img src="../../assets/image/exercise2.png" style="z-index: 100;"/>
 						</a>
 					</div>
 					<div class="item2 courses" >
-						<a  class="monkey" @click="jumpwatch" style="pointer-events: painted">
+						<a  class="monkey" @click="$tips(true);jumpwatch()" style="pointer-events: painted">
 						<img src="../../assets/image/watchicon.png"  style="z-index: 100;"/>
 						</a>
 					</div>
 					<div class="item2 watch">
-						<a  class="monkey" @click="jumpbooks" style="pointer-events: painted">
+						<a  class="monkey" @click="$tips(true);jumpbooks()" style="pointer-events: painted">
 							<img src="../../assets/image/books2.png"  style="z-index: 100;"/>
               <!--<img src="../../assets/image/books.png" style="z-index: 100;"/>-->
 						</a>
 					</div>
 					<div class="item2 books" >
-						<a  class="monkey book0001"  @click="jumpcourses" style="pointer-events: painted">
+						<a  class="monkey book0001"  @click="$tips(true);jumpcourses()" style="pointer-events: painted">
 							<!-- 关闭主页course点击入口 -->
 							<!-- <img src="../../assets/image/courses1.png"  @click="jumpcourses" style="z-index: 100;"/> -->
 							<img src="../../assets/image/courses.png"   style="z-index: 100;"/>
@@ -65,7 +65,7 @@
 					<img src="../../assets/image/icon_coin.png" class="coinstyle">
 					<span class="fontsize1 leftmar2">{{sum}}</span>
 				</div>
-				<div  @click="routerabout">
+				<div  @click="$tips(true);routerabout()">
 				<!-- 	<img src="../../assets/image/Icon_setting.png" class="setting" v-show="action"> -->
 					<!-- <img src="../../assets/image/blue_setting.png" class="setting" v-if="levels" v-show="action"> -->
 					<img src="../../assets/image/Icon_setting0.png" class="repeat">

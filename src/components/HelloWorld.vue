@@ -30,7 +30,7 @@
 
 <!--      <img src="../assets/image/rightback.png"  @click="back" class="backbutton"/>-->
 	  <div>
-		<h2 class="jump" @click="jump()" v-if="this.part!=='part3'">Flashcards</h2>
+		<h2 class="jump" @click="$tips(true);jump()" v-if="this.part!=='part3'">Flashcards</h2>
 	  </div>
 			<div class="menulist" id="scrollbody">
 				<div class="styletit">
@@ -123,31 +123,31 @@
 
 					<img :src=lightstar class="imgposit1"   v-if="stars[0].threestart">
 					<img :src=star class="imgposit1"   v-if="!stars[0].threestart">
-					<img @click="change2" src="../assets/image/3-2.png" style="position: sticky;height: 60%" v-if="bgimg[0].active">
-					<img @click="change2" src="../assets/image/4-2.png" style="position: sticky;height: 60%" v-if="bgimg[1].active">
-					<img @click="change2" src="../assets/image/5-2.png" style="position: sticky;height: 60%" v-if="bgimg[2].active">
-					<img @click="change2" src="../assets/image/6-2.png" style="position: sticky;height: 60%" v-if="bgimg[3].active">
-					<img @click="change2" src="../assets/image/7-2.png" style="position: sticky;height: 60%" v-if="bgimg[4].active">
-					<img @click="change2" src="../assets/image/8-2.png" style="position: sticky;height: 60%" v-if="bgimg[5].active">
-					<img @click="change2" src="../assets/image/9-2.png" style="position: sticky;height: 60%" v-if="bgimg[6].active">
-					<img @click="change2" src="../assets/image/10-2.png" style="position: sticky;height: 60%" v-if="bgimg[7].active">
-					<img @click="change2" src="../assets/image/11-2.png" style="position: sticky;height: 60%" v-if="bgimg[8].active">
-					<img @click="change2" src="../assets/image/12-2.png" style="position: sticky;height: 60%" v-if="bgimg[9].active">
-          <img @click="change2" src="../assets/image/1-2.png" style="position: sticky;height: 60%" v-if="bgimg[10].active">
-          <img @click="change2" src="../assets/image/2-2.png" style="position: sticky;height: 60%" v-if="bgimg[11].active">
-          <img @click="change2" src="../assets/image/3-23.png" style="position: sticky;height: 60%" v-if="bgimg[12].active">
-          <img @click="change2" src="../assets/image/4-24.png" style="position: sticky;height: 60%" v-if="bgimg[13].active">
-          <img @click="change2" src="../assets/image/5-25.png" style="position: sticky;height: 60%" v-if="bgimg[14].active">
-					<img @click="change2" src="../assets/image/6-26.png" style="position: sticky;height: 60%" v-if="bgimg[15].active">
-          <img @click="change2" src="../assets/image/7-71.png" style="position: sticky;height: 60%" v-if="bgimg[16].active">
-          <img @click="change2" src="../assets/image/8-81.png" style="position: sticky;height: 60%" v-if="bgimg[17].active">
-          <img @click="change2" src="../assets/image/9-29.png" style="position: sticky;height: 60%" v-if="bgimg[18].active">
-          <img @click="change2" src="../assets/image/10-210.png" style="position: sticky;height: 60%" v-if="bgimg[19].active">
-          <img @click="change2" src="../assets/image/11-211.png" style="position: sticky;height: 60%" v-if="bgimg[20].active">
-          <img @click="change2" src="../assets/image/12-212.png" style="position: sticky;height: 60%" v-if="bgimg[21].active">
-          <img @click="change2" src="../assets/image/1-21.png" style="position: sticky;height: 60%" v-if="bgimg[22].active">
-          <img @click="change2" src="../assets/image/2-22.png" style="position: sticky;height: 60%" v-if="bgimg[23].active">
-          <!--<img @click="change" src="../assets/image/abc555.png" style="position: absolute;height: 32%;left: 17%;top:28%;"> -->
+					<img @click="$tips(true);change2()" src="../assets/image/3-2.png" style="position: sticky;height: 60%" v-if="bgimg[0].active">
+					<img @click="$tips(true);change2()" src="../assets/image/4-2.png" style="position: sticky;height: 60%" v-if="bgimg[1].active">
+					<img @click="$tips(true);change2()" src="../assets/image/5-2.png" style="position: sticky;height: 60%" v-if="bgimg[2].active">
+					<img @click="$tips(true);change2()" src="../assets/image/6-2.png" style="position: sticky;height: 60%" v-if="bgimg[3].active">
+					<img @click="$tips(true);change2()" src="../assets/image/7-2.png" style="position: sticky;height: 60%" v-if="bgimg[4].active">
+					<img @click="$tips(true);change2()" src="../assets/image/8-2.png" style="position: sticky;height: 60%" v-if="bgimg[5].active">
+					<img @click="$tips(true);change2()" src="../assets/image/9-2.png" style="position: sticky;height: 60%" v-if="bgimg[6].active">
+					<img @click="$tips(true);change2()" src="../assets/image/10-2.png" style="position: sticky;height: 60%" v-if="bgimg[7].active">
+					<img @click="$tips(true);change2()" src="../assets/image/11-2.png" style="position: sticky;height: 60%" v-if="bgimg[8].active">
+					<img @click="$tips(true);change2()" src="../assets/image/12-2.png" style="position: sticky;height: 60%" v-if="bgimg[9].active">
+          <img @click="$tips(true);change2()" src="../assets/image/1-2.png" style="position: sticky;height: 60%" v-if="bgimg[10].active">
+          <img @click="$tips(true);change2()" src="../assets/image/2-2.png" style="position: sticky;height: 60%" v-if="bgimg[11].active">
+          <img @click="$tips(true);change2()" src="../assets/image/3-23.png" style="position: sticky;height: 60%" v-if="bgimg[12].active">
+          <img @click="$tips(true);change2()" src="../assets/image/4-24.png" style="position: sticky;height: 60%" v-if="bgimg[13].active">
+          <img @click="$tips(true);change2()" src="../assets/image/5-25.png" style="position: sticky;height: 60%" v-if="bgimg[14].active">
+					<img @click="$tips(true);change2()" src="../assets/image/6-26.png" style="position: sticky;height: 60%" v-if="bgimg[15].active">
+          <img @click="$tips(true);change2()" src="../assets/image/7-71.png" style="position: sticky;height: 60%" v-if="bgimg[16].active">
+          <img @click="$tips(true);change2()" src="../assets/image/8-81.png" style="position: sticky;height: 60%" v-if="bgimg[17].active">
+          <img @click="$tips(true);change2()" src="../assets/image/9-29.png" style="position: sticky;height: 60%" v-if="bgimg[18].active">
+          <img @click="$tips(true);change2()" src="../assets/image/10-210.png" style="position: sticky;height: 60%" v-if="bgimg[19].active">
+          <img @click="$tips(true);change2()" src="../assets/image/11-211.png" style="position: sticky;height: 60%" v-if="bgimg[20].active">
+          <img @click="$tips(true);change2()" src="../assets/image/12-212.png" style="position: sticky;height: 60%" v-if="bgimg[21].active">
+          <img @click="$tips(true);change2()" src="../assets/image/1-21.png" style="position: sticky;height: 60%" v-if="bgimg[22].active">
+          <img @click="$tips(true);change2()" src="../assets/image/2-22.png" style="position: sticky;height: 60%" v-if="bgimg[23].active">
+          <!--<img @click="$tips(true);change()" src="../assets/image/abc555.png" style="position: absolute;height: 32%;left: 17%;top:28%;"> -->
 				</div>
 				<div class="listimg">
 					<img :src=lightstar class="imgposit" v-if="stars[1].onestart">
@@ -158,37 +158,37 @@
 
 					<img :src=lightstar class="imgposit1"   v-if="stars[1].threestart">
 					<img :src=star class="imgposit1"   v-if="!stars[1].threestart">
-				<!-- 	<img @click="change2" src="../assets/image/memu2.png" style="position: sticky;height: 60%"> -->
+				<!-- 	<img @click="$tips(true);change2()" src="../assets/image/memu2.png" style="position: sticky;height: 60%"> -->
 
-          <img @click="change4" src="../assets/image/3-4.png" style="position: sticky;height: 60%" v-if="bgimg[0].active">
-          <img @click="change4" src="../assets/image/4-4.png" style="position: sticky;height: 60%" v-if="bgimg[1].active">
-          <img @click="change4" src="../assets/image/5-4.png" style="position: sticky;height: 60%" v-if="bgimg[2].active">
-          <img @click="change4" src="../assets/image/6-4.png" style="position: sticky;height: 60%" v-if="bgimg[3].active">
-          <img @click="change4" src="../assets/image/7-4.png" style="position: sticky;height: 60%" v-if="bgimg[4].active">
-          <img @click="change4" src="../assets/image/8-4.png" style="position: sticky;height: 60%" v-if="bgimg[5].active">
-          <img @click="change4" src="../assets/image/9-4.png" style="position: sticky;height: 60%" v-if="bgimg[6].active">
-          <img @click="change4" src="../assets/image/10-4.png" style="position: sticky;height: 60%" v-if="bgimg[7].active">
-          <img @click="change4" src="../assets/image/11-4.png" style="position: sticky;height: 60%" v-if="bgimg[8].active">
-          <img @click="change4" src="../assets/image/12-4.png" style="position: sticky;height: 60%" v-if="bgimg[9].active">
-          <img @click="change4" src="../assets/image/1-4.png" style="position: sticky;height: 60%" v-if="bgimg[10].active">
-          <img @click="change4" src="../assets/image/2-4.png" style="position: sticky;height: 60%" v-if="bgimg[11].active">
-          <img @click="change4" src="../assets/image/3-43.png" style="position: sticky;height: 60%" v-if="bgimg[12].active">
-          <img @click="change4" src="../assets/image/4-44.png" style="position: sticky;height: 60%" v-if="bgimg[13].active">
-          <img @click="change4" src="../assets/image/5-45.png" style="position: sticky;height: 60%" v-if="bgimg[14].active">
-					<img @click="change4" src="../assets/image/6-46.png" style="position: sticky;height: 60%" v-if="bgimg[15].active">
-          <img @click="change4" src="../assets/image/7-72.png" style="position: sticky;height: 60%" v-if="bgimg[16].active">
-          <img @click="change4" src="../assets/image/8-82.png" style="position: sticky;height: 60%" v-if="bgimg[17].active">
-          <img @click="change4" src="../assets/image/9-49.png" style="position: sticky;height: 60%" v-if="bgimg[18].active">
-          <img @click="change4" src="../assets/image/10-410.png" style="position: sticky;height: 60%" v-if="bgimg[19].active">
-          <img @click="change4" src="../assets/image/11-411.png" style="position: sticky;height: 60%" v-if="bgimg[20].active">
-          <img @click="change4" src="../assets/image/12-412.png" style="position: sticky;height: 60%" v-if="bgimg[21].active">
-          <img @click="change4" src="../assets/image/1-41.png" style="position: sticky;height: 60%" v-if="bgimg[22].active">
-          <img @click="change4" src="../assets/image/2-42.png" style="position: sticky;height: 60%" v-if="bgimg[23].active">
-          <!--<img @click="change2" src="../assets/image/abc555.png" style="position: absolute;height: 32%;left: 17%;top:28%;"> -->
+          <img @click="$tips(true);change4()" src="../assets/image/3-4.png" style="position: sticky;height: 60%" v-if="bgimg[0].active">
+          <img @click="$tips(true);change4()" src="../assets/image/4-4.png" style="position: sticky;height: 60%" v-if="bgimg[1].active">
+          <img @click="$tips(true);change4()" src="../assets/image/5-4.png" style="position: sticky;height: 60%" v-if="bgimg[2].active">
+          <img @click="$tips(true);change4()" src="../assets/image/6-4.png" style="position: sticky;height: 60%" v-if="bgimg[3].active">
+          <img @click="$tips(true);change4()" src="../assets/image/7-4.png" style="position: sticky;height: 60%" v-if="bgimg[4].active">
+          <img @click="$tips(true);change4()" src="../assets/image/8-4.png" style="position: sticky;height: 60%" v-if="bgimg[5].active">
+          <img @click="$tips(true);change4()" src="../assets/image/9-4.png" style="position: sticky;height: 60%" v-if="bgimg[6].active">
+          <img @click="$tips(true);change4()" src="../assets/image/10-4.png" style="position: sticky;height: 60%" v-if="bgimg[7].active">
+          <img @click="$tips(true);change4()" src="../assets/image/11-4.png" style="position: sticky;height: 60%" v-if="bgimg[8].active">
+          <img @click="$tips(true);change4()" src="../assets/image/12-4.png" style="position: sticky;height: 60%" v-if="bgimg[9].active">
+          <img @click="$tips(true);change4()" src="../assets/image/1-4.png" style="position: sticky;height: 60%" v-if="bgimg[10].active">
+          <img @click="$tips(true);change4()" src="../assets/image/2-4.png" style="position: sticky;height: 60%" v-if="bgimg[11].active">
+          <img @click="$tips(true);change4()" src="../assets/image/3-43.png" style="position: sticky;height: 60%" v-if="bgimg[12].active">
+          <img @click="$tips(true);change4()" src="../assets/image/4-44.png" style="position: sticky;height: 60%" v-if="bgimg[13].active">
+          <img @click="$tips(true);change4()" src="../assets/image/5-45.png" style="position: sticky;height: 60%" v-if="bgimg[14].active">
+					<img @click="$tips(true);change4()" src="../assets/image/6-46.png" style="position: sticky;height: 60%" v-if="bgimg[15].active">
+          <img @click="$tips(true);change4()" src="../assets/image/7-72.png" style="position: sticky;height: 60%" v-if="bgimg[16].active">
+          <img @click="$tips(true);change4()" src="../assets/image/8-82.png" style="position: sticky;height: 60%" v-if="bgimg[17].active">
+          <img @click="$tips(true);change4()" src="../assets/image/9-49.png" style="position: sticky;height: 60%" v-if="bgimg[18].active">
+          <img @click="$tips(true);change4()" src="../assets/image/10-410.png" style="position: sticky;height: 60%" v-if="bgimg[19].active">
+          <img @click="$tips(true);change4()" src="../assets/image/11-411.png" style="position: sticky;height: 60%" v-if="bgimg[20].active">
+          <img @click="$tips(true);change4()" src="../assets/image/12-412.png" style="position: sticky;height: 60%" v-if="bgimg[21].active">
+          <img @click="$tips(true);change4()" src="../assets/image/1-41.png" style="position: sticky;height: 60%" v-if="bgimg[22].active">
+          <img @click="$tips(true);change4()" src="../assets/image/2-42.png" style="position: sticky;height: 60%" v-if="bgimg[23].active">
+          <!--<img @click="$tips(true);change2()" src="../assets/image/abc555.png" style="position: absolute;height: 32%;left: 17%;top:28%;"> -->
 					<img src="../assets/image/chose.png" class="keyclose"  v-if="key">
 					<!-- <span class="spanicon">LISTENING</span> -->
-					<!-- <img @click="change2" src="../assets/image/11.png" style="position: sticky;height: 60%"> -->
-<!-- 					<img @click="change2" src="../assets/image/abc555.png" style="position: absolute;height: 32%;left: 17%;top:28%;">
+					<!-- <img @click="$tips(true);change2()" src="../assets/image/11.png" style="position: sticky;height: 60%"> -->
+<!-- 					<img @click="$tips(true);change2()" src="../assets/image/abc555.png" style="position: absolute;height: 32%;left: 17%;top:28%;">
  -->				</div>
 				<div class="listimg">
 					<img :src=lightstar class="imgposit" v-if="stars[2].onestart">
@@ -197,35 +197,35 @@
 					<img :src=star style="position: relative;height: 11%;top: 21%;left: 1%;z-index: 2;"v-if="!stars[2].twostart">
 					<img :src=lightstar class="imgposit1"   v-if="stars[2].threestart">
 					<img :src=star class="imgposit1"   v-if="!stars[2].threestart">
-					<img @click="change3" src="../assets/image/3-3.png" style="position: sticky;height: 60%" v-if="bgimg[0].active">
-					<img @click="change3" src="../assets/image/4-3.png" style="position: sticky;height: 60%" v-if="bgimg[1].active">
-					<img @click="change3" src="../assets/image/5-3.png" style="position: sticky;height: 60%" v-if="bgimg[2].active">
-					<img @click="change3" src="../assets/image/6-3.png" style="position: sticky;height: 60%" v-if="bgimg[3].active">
-					<img @click="change3" src="../assets/image/7-3.png" style="position: sticky;height: 60%" v-if="bgimg[4].active">
-					<img @click="change3" src="../assets/image/8-3.png" style="position: sticky;height: 60%" v-if="bgimg[5].active">
-					<img @click="change3" src="../assets/image/9-3.png" style="position: sticky;height: 60%" v-if="bgimg[6].active">
-					<img @click="change3" src="../assets/image/10-3.png" style="position: sticky;height: 60%" v-if="bgimg[7].active">
-					<img @click="change3" src="../assets/image/11-3.png" style="position: sticky;height: 60%" v-if="bgimg[8].active">
-					<img @click="change3" src="../assets/image/12-3.png" style="position: sticky;height: 60%" v-if="bgimg[9].active">
-          <img @click="change3" src="../assets/image/1-3.png" style="position: sticky;height: 60%" v-if="bgimg[10].active">
-          <img @click="change3" src="../assets/image/2-3.png" style="position: sticky;height: 60%" v-if="bgimg[11].active">
-          <img @click="change3" src="../assets/image/3-33.png" style="position: sticky;height: 60%" v-if="bgimg[12].active">
-          <img @click="change3" src="../assets/image/4-34.png" style="position: sticky;height: 60%" v-if="bgimg[13].active">
-          <img @click="change3" src="../assets/image/5-35.png" style="position: sticky;height: 60%" v-if="bgimg[14].active">
-					<img @click="change3" src="../assets/image/6-36.png" style="position: sticky;height: 60%" v-if="bgimg[15].active">
-          <img @click="change3" src="../assets/image/7-73.png" style="position: sticky;height: 60%" v-if="bgimg[16].active">
-          <img @click="change3" src="../assets/image/8-83.png" style="position: sticky;height: 60%" v-if="bgimg[17].active">
-          <img @click="change3" src="../assets/image/9-39.png" style="position: sticky;height: 60%" v-if="bgimg[18].active">
-          <img @click="change3" src="../assets/image/10-310.png" style="position: sticky;height: 60%" v-if="bgimg[19].active">
-          <img @click="change3" src="../assets/image/11-311.png" style="position: sticky;height: 60%" v-if="bgimg[20].active">
-          <img @click="change3" src="../assets/image/12-312.png" style="position: sticky;height: 60%" v-if="bgimg[21].active">
-          <img @click="change3" src="../assets/image/1-31.png" style="position: sticky;height: 60%" v-if="bgimg[22].active">
-          <img @click="change3" src="../assets/image/2-32.png" style="position: sticky;height: 60%" v-if="bgimg[23].active">
-          <!-- <img @click="change3" src="../assets/image/abc555.png" style="position: absolute;height: 32%;left: 17%;top:28%;"> -->
+					<img @click="$tips(true);change3()" src="../assets/image/3-3.png" style="position: sticky;height: 60%" v-if="bgimg[0].active">
+					<img @click="$tips(true);change3()" src="../assets/image/4-3.png" style="position: sticky;height: 60%" v-if="bgimg[1].active">
+					<img @click="$tips(true);change3()" src="../assets/image/5-3.png" style="position: sticky;height: 60%" v-if="bgimg[2].active">
+					<img @click="$tips(true);change3()" src="../assets/image/6-3.png" style="position: sticky;height: 60%" v-if="bgimg[3].active">
+					<img @click="$tips(true);change3()" src="../assets/image/7-3.png" style="position: sticky;height: 60%" v-if="bgimg[4].active">
+					<img @click="$tips(true);change3()" src="../assets/image/8-3.png" style="position: sticky;height: 60%" v-if="bgimg[5].active">
+					<img @click="$tips(true);change3()" src="../assets/image/9-3.png" style="position: sticky;height: 60%" v-if="bgimg[6].active">
+					<img @click="$tips(true);change3()" src="../assets/image/10-3.png" style="position: sticky;height: 60%" v-if="bgimg[7].active">
+					<img @click="$tips(true);change3()" src="../assets/image/11-3.png" style="position: sticky;height: 60%" v-if="bgimg[8].active">
+					<img @click="$tips(true);change3()" src="../assets/image/12-3.png" style="position: sticky;height: 60%" v-if="bgimg[9].active">
+          <img @click="$tips(true);change3()" src="../assets/image/1-3.png" style="position: sticky;height: 60%" v-if="bgimg[10].active">
+          <img @click="$tips(true);change3()" src="../assets/image/2-3.png" style="position: sticky;height: 60%" v-if="bgimg[11].active">
+          <img @click="$tips(true);change3()" src="../assets/image/3-33.png" style="position: sticky;height: 60%" v-if="bgimg[12].active">
+          <img @click="$tips(true);change3()" src="../assets/image/4-34.png" style="position: sticky;height: 60%" v-if="bgimg[13].active">
+          <img @click="$tips(true);change3()" src="../assets/image/5-35.png" style="position: sticky;height: 60%" v-if="bgimg[14].active">
+					<img @click="$tips(true);change3()" src="../assets/image/6-36.png" style="position: sticky;height: 60%" v-if="bgimg[15].active">
+          <img @click="$tips(true);change3()" src="../assets/image/7-73.png" style="position: sticky;height: 60%" v-if="bgimg[16].active">
+          <img @click="$tips(true);change3()" src="../assets/image/8-83.png" style="position: sticky;height: 60%" v-if="bgimg[17].active">
+          <img @click="$tips(true);change3()" src="../assets/image/9-39.png" style="position: sticky;height: 60%" v-if="bgimg[18].active">
+          <img @click="$tips(true);change3()" src="../assets/image/10-310.png" style="position: sticky;height: 60%" v-if="bgimg[19].active">
+          <img @click="$tips(true);change3()" src="../assets/image/11-311.png" style="position: sticky;height: 60%" v-if="bgimg[20].active">
+          <img @click="$tips(true);change3()" src="../assets/image/12-312.png" style="position: sticky;height: 60%" v-if="bgimg[21].active">
+          <img @click="$tips(true);change3()" src="../assets/image/1-31.png" style="position: sticky;height: 60%" v-if="bgimg[22].active">
+          <img @click="$tips(true);change3()" src="../assets/image/2-32.png" style="position: sticky;height: 60%" v-if="bgimg[23].active">
+          <!-- <img @click="$tips(true);change3()" src="../assets/image/abc555.png" style="position: absolute;height: 32%;left: 17%;top:28%;"> -->
 					<img src="../assets/image/chose.png" class="keyclose"  v-if="key">
 					<!-- <span class="spanicon">MEMORY  GAME</span> -->
-					<!-- <img @click="change2" src="../assets/image/11.png" style="position: sticky;height: 60%"> -->
-<!-- 					<img @click="change3" src="../assets/image/abc555.png" style="position: absolute;height: 32%;left: 17%;top:28%;">
+					<!-- <img @click="$tips(true);change2()" src="../assets/image/11.png" style="position: sticky;height: 60%"> -->
+<!-- 					<img @click="$tips(true);change3()" src="../assets/image/abc555.png" style="position: absolute;height: 32%;left: 17%;top:28%;">
  -->				</div>
 				<div class="listimg">
 					<img :src=lightstar class="imgposit" v-if="stars[3].onestart">
@@ -236,35 +236,35 @@
 
 					<img :src=lightstar class="imgposit1"   v-if="stars[3].threestart">
 					<img :src=star class="imgposit1"   v-if="!stars[3].threestart">
-					<img @click="change6" src="../assets/image/3-6.png" style="position: sticky;height: 60%" v-if="bgimg[0].active">
-					<img @click="change6" src="../assets/image/4-6.png" style="position: sticky;height: 60%" v-if="bgimg[1].active">
-					<img @click="change6" src="../assets/image/5-6.png" style="position: sticky;height: 60%" v-if="bgimg[2].active">
-					<img @click="change6" src="../assets/image/6-6.png" style="position: sticky;height: 60%" v-if="bgimg[3].active">
-					<img @click="change6" src="../assets/image/7-6.png" style="position: sticky;height: 60%" v-if="bgimg[4].active">
-					<img @click="change6" src="../assets/image/8-6.png" style="position: sticky;height: 60%" v-if="bgimg[5].active">
-					<img @click="change6" src="../assets/image/9-6.png" style="position: sticky;height: 60%" v-if="bgimg[6].active">
-					<img @click="change6" src="../assets/image/10-6.png" style="position: sticky;height: 60%" v-if="bgimg[7].active">
-					<img @click="change6" src="../assets/image/11-6.png" style="position: sticky;height: 60%" v-if="bgimg[8].active">
-					<img @click="change6" src="../assets/image/12-6.png" style="position: sticky;height: 60%" v-if="bgimg[9].active">
-          <img @click="change6" src="../assets/image/1-6.png" style="position: sticky;height: 60%" v-if="bgimg[10].active">
-          <img @click="change6" src="../assets/image/2-6.png" style="position: sticky;height: 60%" v-if="bgimg[11].active">
-          <img @click="change6" src="../assets/image/3-63.png" style="position: sticky;height: 60%" v-if="bgimg[12].active">
-          <img @click="change6" src="../assets/image/4-64.png" style="position: sticky;height: 60%" v-if="bgimg[13].active">
-          <img @click="change6" src="../assets/image/5-65.png" style="position: sticky;height: 60%" v-if="bgimg[14].active">
-					<img @click="change6" src="../assets/image/6-66.png" style="position: sticky;height: 60%" v-if="bgimg[15].active">
-          <img @click="change6" src="../assets/image/7-74.png" style="position: sticky;height: 60%" v-if="bgimg[16].active">
-          <img @click="change6" src="../assets/image/8-84.png" style="position: sticky;height: 60%" v-if="bgimg[17].active">
-          <img @click="change6" src="../assets/image/9-69.png" style="position: sticky;height: 60%" v-if="bgimg[18].active">
-          <img @click="change6" src="../assets/image/10-610.png" style="position: sticky;height: 60%" v-if="bgimg[19].active">
-          <img @click="change6" src="../assets/image/11-611.png" style="position: sticky;height: 60%" v-if="bgimg[20].active">
-          <img @click="change6" src="../assets/image/12-612.png" style="position: sticky;height: 60%" v-if="bgimg[21].active">
-          <img @click="change6" src="../assets/image/1-61.png" style="position: sticky;height: 60%" v-if="bgimg[22].active">
-          <img @click="change6" src="../assets/image/2-62.png" style="position: sticky;height: 60%" v-if="bgimg[23].active">
-          <!-- <img @click="change4" src="../assets/image/abc555.png" style="position: absolute;height: 32%;left: 17%;top:28%;"> -->
+					<img @click="$tips(true);change6()" src="../assets/image/3-6.png" style="position: sticky;height: 60%" v-if="bgimg[0].active">
+					<img @click="$tips(true);change6()" src="../assets/image/4-6.png" style="position: sticky;height: 60%" v-if="bgimg[1].active">
+					<img @click="$tips(true);change6()" src="../assets/image/5-6.png" style="position: sticky;height: 60%" v-if="bgimg[2].active">
+					<img @click="$tips(true);change6()" src="../assets/image/6-6.png" style="position: sticky;height: 60%" v-if="bgimg[3].active">
+					<img @click="$tips(true);change6()" src="../assets/image/7-6.png" style="position: sticky;height: 60%" v-if="bgimg[4].active">
+					<img @click="$tips(true);change6()" src="../assets/image/8-6.png" style="position: sticky;height: 60%" v-if="bgimg[5].active">
+					<img @click="$tips(true);change6()" src="../assets/image/9-6.png" style="position: sticky;height: 60%" v-if="bgimg[6].active">
+					<img @click="$tips(true);change6()" src="../assets/image/10-6.png" style="position: sticky;height: 60%" v-if="bgimg[7].active">
+					<img @click="$tips(true);change6()" src="../assets/image/11-6.png" style="position: sticky;height: 60%" v-if="bgimg[8].active">
+					<img @click="$tips(true);change6()" src="../assets/image/12-6.png" style="position: sticky;height: 60%" v-if="bgimg[9].active">
+          <img @click="$tips(true);change6()" src="../assets/image/1-6.png" style="position: sticky;height: 60%" v-if="bgimg[10].active">
+          <img @click="$tips(true);change6()" src="../assets/image/2-6.png" style="position: sticky;height: 60%" v-if="bgimg[11].active">
+          <img @click="$tips(true);change6()" src="../assets/image/3-63.png" style="position: sticky;height: 60%" v-if="bgimg[12].active">
+          <img @click="$tips(true);change6()" src="../assets/image/4-64.png" style="position: sticky;height: 60%" v-if="bgimg[13].active">
+          <img @click="$tips(true);change6()" src="../assets/image/5-65.png" style="position: sticky;height: 60%" v-if="bgimg[14].active">
+					<img @click="$tips(true);change6()" src="../assets/image/6-66.png" style="position: sticky;height: 60%" v-if="bgimg[15].active">
+          <img @click="$tips(true);change6()" src="../assets/image/7-74.png" style="position: sticky;height: 60%" v-if="bgimg[16].active">
+          <img @click="$tips(true);change6()" src="../assets/image/8-84.png" style="position: sticky;height: 60%" v-if="bgimg[17].active">
+          <img @click="$tips(true);change6()" src="../assets/image/9-69.png" style="position: sticky;height: 60%" v-if="bgimg[18].active">
+          <img @click="$tips(true);change6()" src="../assets/image/10-610.png" style="position: sticky;height: 60%" v-if="bgimg[19].active">
+          <img @click="$tips(true);change6()" src="../assets/image/11-611.png" style="position: sticky;height: 60%" v-if="bgimg[20].active">
+          <img @click="$tips(true);change6()" src="../assets/image/12-612.png" style="position: sticky;height: 60%" v-if="bgimg[21].active">
+          <img @click="$tips(true);change6()" src="../assets/image/1-61.png" style="position: sticky;height: 60%" v-if="bgimg[22].active">
+          <img @click="$tips(true);change6()" src="../assets/image/2-62.png" style="position: sticky;height: 60%" v-if="bgimg[23].active">
+          <!-- <img @click="$tips(true);change4()" src="../assets/image/abc555.png" style="position: absolute;height: 32%;left: 17%;top:28%;"> -->
 					<img src="../assets/image/chose.png" class="keyclose"  v-if="key">
 					<!-- <span class="spanicon">MATCHING</span> -->
-					<!-- <img @click="change2" src="../assets/image/11.png" style="position: sticky;height: 60%"> -->
-<!-- 					<img @click="change4" src="../assets/image/abc555.png" style="position: absolute;height: 32%;left: 17%;top:28%;">
+					<!-- <img @click="$tips(true);change2()" src="../assets/image/11.png" style="position: sticky;height: 60%"> -->
+<!-- 					<img @click="$tips(true);change4()" src="../assets/image/abc555.png" style="position: absolute;height: 32%;left: 17%;top:28%;">
  -->				</div>
 				<div class="listimg">
 					<img :src=lightstar class="imgposit" v-if="stars[4].onestart">
@@ -276,35 +276,35 @@
 					<img :src=lightstar class="imgposit1"   v-if="stars[4].threestart">
 					<img :src=star class="imgposit1"   v-if="!stars[4].threestart">
 
-          <img @click="change7" src="../assets/image/3-7.png" style="position: sticky;height: 60%" v-if="bgimg[0].active">
-          <img @click="change7" src="../assets/image/4-7.png" style="position: sticky;height: 60%" v-if="bgimg[1].active">
-          <img @click="change7" src="../assets/image/5-7.png" style="position: sticky;height: 60%" v-if="bgimg[2].active">
-          <img @click="change7" src="../assets/image/6-7.png" style="position: sticky;height: 60%" v-if="bgimg[3].active">
-          <img @click="change7" src="../assets/image/7-7.png" style="position: sticky;height: 60%" v-if="bgimg[4].active">
-          <img @click="change7" src="../assets/image/8-7.png" style="position: sticky;height: 60%" v-if="bgimg[5].active">
-          <img @click="change7" src="../assets/image/9-7.png" style="position: sticky;height: 60%" v-if="bgimg[6].active">
-          <img @click="change7" src="../assets/image/10-7.png" style="position: sticky;height: 60%" v-if="bgimg[7].active">
-          <img @click="change7" src="../assets/image/11-7.png" style="position: sticky;height: 60%" v-if="bgimg[8].active">
-          <img @click="change7" src="../assets/image/12-7.png" style="position: sticky;height: 60%" v-if="bgimg[9].active">
-          <img @click="change7" src="../assets/image/1-7.png" style="position: sticky;height: 60%" v-if="bgimg[10].active">
-          <img @click="change7" src="../assets/image/2-7.png" style="position: sticky;height: 60%" v-if="bgimg[11].active">
-          <img @click="change7" src="../assets/image/3-73.png" style="position: sticky;height: 60%" v-if="bgimg[12].active">
-          <img @click="change7" src="../assets/image/4-74.png" style="position: sticky;height: 60%" v-if="bgimg[13].active">
-          <img @click="change7" src="../assets/image/5-75.png" style="position: sticky;height: 60%" v-if="bgimg[14].active">
-					<img @click="change7" src="../assets/image/6-76.png" style="position: sticky;height: 60%" v-if="bgimg[15].active">
-          <img @click="change7" src="../assets/image/7-75.png" style="position: sticky;height: 60%" v-if="bgimg[16].active">
-          <img @click="change7" src="../assets/image/8-85.png" style="position: sticky;height: 60%" v-if="bgimg[17].active">
-          <img @click="change7" src="../assets/image/9-79.png" style="position: sticky;height: 60%" v-if="bgimg[18].active">
-          <img @click="change7" src="../assets/image/10-710.png" style="position: sticky;height: 60%" v-if="bgimg[19].active">
-          <img @click="change7" src="../assets/image/11-711.png" style="position: sticky;height: 60%" v-if="bgimg[20].active">
-          <img @click="change7" src="../assets/image/12-712.png" style="position: sticky;height: 60%" v-if="bgimg[21].active">
-          <img @click="change7" src="../assets/image/1-71.png" style="position: sticky;height: 60%" v-if="bgimg[22].active">
-          <img @click="change7" src="../assets/image/2-72.png" style="position: sticky;height: 60%" v-if="bgimg[23].active">
-          <!-- <img @click="change5" src="../assets/image/abc555.png" style="position: absolute;height: 32%;left: 17%;top:28%;"> -->
+          <img @click="$tips(true);change7()" src="../assets/image/3-7.png" style="position: sticky;height: 60%" v-if="bgimg[0].active">
+          <img @click="$tips(true);change7()" src="../assets/image/4-7.png" style="position: sticky;height: 60%" v-if="bgimg[1].active">
+          <img @click="$tips(true);change7()" src="../assets/image/5-7.png" style="position: sticky;height: 60%" v-if="bgimg[2].active">
+          <img @click="$tips(true);change7()" src="../assets/image/6-7.png" style="position: sticky;height: 60%" v-if="bgimg[3].active">
+          <img @click="$tips(true);change7()" src="../assets/image/7-7.png" style="position: sticky;height: 60%" v-if="bgimg[4].active">
+          <img @click="$tips(true);change7()" src="../assets/image/8-7.png" style="position: sticky;height: 60%" v-if="bgimg[5].active">
+          <img @click="$tips(true);change7()" src="../assets/image/9-7.png" style="position: sticky;height: 60%" v-if="bgimg[6].active">
+          <img @click="$tips(true);change7()" src="../assets/image/10-7.png" style="position: sticky;height: 60%" v-if="bgimg[7].active">
+          <img @click="$tips(true);change7()" src="../assets/image/11-7.png" style="position: sticky;height: 60%" v-if="bgimg[8].active">
+          <img @click="$tips(true);change7()" src="../assets/image/12-7.png" style="position: sticky;height: 60%" v-if="bgimg[9].active">
+          <img @click="$tips(true);change7()" src="../assets/image/1-7.png" style="position: sticky;height: 60%" v-if="bgimg[10].active">
+          <img @click="$tips(true);change7()" src="../assets/image/2-7.png" style="position: sticky;height: 60%" v-if="bgimg[11].active">
+          <img @click="$tips(true);change7()" src="../assets/image/3-73.png" style="position: sticky;height: 60%" v-if="bgimg[12].active">
+          <img @click="$tips(true);change7()" src="../assets/image/4-74.png" style="position: sticky;height: 60%" v-if="bgimg[13].active">
+          <img @click="$tips(true);change7()" src="../assets/image/5-75.png" style="position: sticky;height: 60%" v-if="bgimg[14].active">
+					<img @click="$tips(true);change7()" src="../assets/image/6-76.png" style="position: sticky;height: 60%" v-if="bgimg[15].active">
+          <img @click="$tips(true);change7()" src="../assets/image/7-75.png" style="position: sticky;height: 60%" v-if="bgimg[16].active">
+          <img @click="$tips(true);change7()" src="../assets/image/8-85.png" style="position: sticky;height: 60%" v-if="bgimg[17].active">
+          <img @click="$tips(true);change7()" src="../assets/image/9-79.png" style="position: sticky;height: 60%" v-if="bgimg[18].active">
+          <img @click="$tips(true);change7()" src="../assets/image/10-710.png" style="position: sticky;height: 60%" v-if="bgimg[19].active">
+          <img @click="$tips(true);change7()" src="../assets/image/11-711.png" style="position: sticky;height: 60%" v-if="bgimg[20].active">
+          <img @click="$tips(true);change7()" src="../assets/image/12-712.png" style="position: sticky;height: 60%" v-if="bgimg[21].active">
+          <img @click="$tips(true);change7()" src="../assets/image/1-71.png" style="position: sticky;height: 60%" v-if="bgimg[22].active">
+          <img @click="$tips(true);change7()" src="../assets/image/2-72.png" style="position: sticky;height: 60%" v-if="bgimg[23].active">
+          <!-- <img @click="$tips(true);change5()" src="../assets/image/abc555.png" style="position: absolute;height: 32%;left: 17%;top:28%;"> -->
 					<img src="../assets/image/chose.png" class="keyclose"  v-if="key">
 					<!-- <span class="spanicon">YES  0R  NO</span> -->
-					<!-- <img @click="change2" src="../assets/image/11.png" style="position: sticky;height: 60%"> -->
-<!-- 					<img @click="change5" src="../assets/image/abc555.png" style="position: absolute;height: 32%;left: 17%;top:28%;">
+					<!-- <img @click="$tips(true);change2()" src="../assets/image/11.png" style="position: sticky;height: 60%"> -->
+<!-- 					<img @click="$tips(true);change5()" src="../assets/image/abc555.png" style="position: absolute;height: 32%;left: 17%;top:28%;">
  -->				</div>
 				<div class="listimg">
 					<img :src=lightstar class="imgposit" v-if="stars[5].onestart">
@@ -313,35 +313,35 @@
 					<img :src=star style="position: relative;height: 11%;top: 21%; z-index: 2;" v-if="!stars[5].twostart">
 					<img :src=lightstar class="imgposit1"   v-if="stars[5].threestart">
 					<img :src=star class="imgposit1"   v-if="!stars[5].threestart">
-					<img @click="change5" src="../assets/image/3-5.png" style="position: sticky;height: 60%" v-if="bgimg[0].active">
-					<img @click="change5" src="../assets/image/4-5.png" style="position: sticky;height: 60%" v-if="bgimg[1].active">
-					<img @click="change5" src="../assets/image/5-5.png" style="position: sticky;height: 60%" v-if="bgimg[2].active">
-					<img @click="change5" src="../assets/image/6-5.png" style="position: sticky;height: 60%" v-if="bgimg[3].active">
-					<img @click="change5" src="../assets/image/7-5.png" style="position: sticky;height: 60%" v-if="bgimg[4].active">
-					<img @click="change5" src="../assets/image/8-5.png" style="position: sticky;height: 60%" v-if="bgimg[5].active">
-					<img @click="change5" src="../assets/image/9-5.png" style="position: sticky;height: 60%" v-if="bgimg[6].active">
-					<img @click="change5" src="../assets/image/10-5.png" style="position: sticky;height: 60%" v-if="bgimg[7].active">
-					<img @click="change5" src="../assets/image/11-5.png" style="position: sticky;height: 60%" v-if="bgimg[8].active">
-					<img @click="change5" src="../assets/image/12-5.png" style="position: sticky;height: 60%" v-if="bgimg[9].active">
-          <img @click="change5" src="../assets/image/1-5.png" style="position: sticky;height: 60%" v-if="bgimg[10].active">
-          <img @click="change5" src="../assets/image/2-5.png" style="position: sticky;height: 60%" v-if="bgimg[11].active">
-          <img @click="change5" src="../assets/image/3-53.png" style="position: sticky;height: 60%" v-if="bgimg[12].active">
-          <img @click="change5" src="../assets/image/4-54.png" style="position: sticky;height: 60%" v-if="bgimg[13].active">
-          <img @click="change5" src="../assets/image/5-55.png" style="position: sticky;height: 60%" v-if="bgimg[14].active">
-					<img @click="change5" src="../assets/image/6-56.png" style="position: sticky;height: 60%" v-if="bgimg[15].active">
-          <img @click="change5" src="../assets/image/7-76.png" style="position: sticky;height: 60%" v-if="bgimg[16].active">
-          <img @click="change5" src="../assets/image/8-86.png" style="position: sticky;height: 60%" v-if="bgimg[17].active">
-          <img @click="change5" src="../assets/image/9-59.png" style="position: sticky;height: 60%" v-if="bgimg[18].active">
-          <img @click="change5" src="../assets/image/10-510.png" style="position: sticky;height: 60%" v-if="bgimg[19].active">
-          <img @click="change5" src="../assets/image/11-511.png" style="position: sticky;height: 60%" v-if="bgimg[20].active">
-          <img @click="change5" src="../assets/image/12-512.png" style="position: sticky;height: 60%" v-if="bgimg[21].active">
-          <img @click="change5" src="../assets/image/1-51.png" style="position: sticky;height: 60%" v-if="bgimg[22].active">
-          <img @click="change5" src="../assets/image/2-52.png" style="position: sticky;height: 60%" v-if="bgimg[23].active">
-          <!-- <img @click="change6" src="../assets/image/abc555.png" style="position: absolute;height: 32%;left: 17%;top:28%;"> -->
+					<img @click="$tips(true);change5()" src="../assets/image/3-5.png" style="position: sticky;height: 60%" v-if="bgimg[0].active">
+					<img @click="$tips(true);change5()" src="../assets/image/4-5.png" style="position: sticky;height: 60%" v-if="bgimg[1].active">
+					<img @click="$tips(true);change5()" src="../assets/image/5-5.png" style="position: sticky;height: 60%" v-if="bgimg[2].active">
+					<img @click="$tips(true);change5()" src="../assets/image/6-5.png" style="position: sticky;height: 60%" v-if="bgimg[3].active">
+					<img @click="$tips(true);change5()" src="../assets/image/7-5.png" style="position: sticky;height: 60%" v-if="bgimg[4].active">
+					<img @click="$tips(true);change5()" src="../assets/image/8-5.png" style="position: sticky;height: 60%" v-if="bgimg[5].active">
+					<img @click="$tips(true);change5()" src="../assets/image/9-5.png" style="position: sticky;height: 60%" v-if="bgimg[6].active">
+					<img @click="$tips(true);change5()" src="../assets/image/10-5.png" style="position: sticky;height: 60%" v-if="bgimg[7].active">
+					<img @click="$tips(true);change5()" src="../assets/image/11-5.png" style="position: sticky;height: 60%" v-if="bgimg[8].active">
+					<img @click="$tips(true);change5()" src="../assets/image/12-5.png" style="position: sticky;height: 60%" v-if="bgimg[9].active">
+          <img @click="$tips(true);change5()" src="../assets/image/1-5.png" style="position: sticky;height: 60%" v-if="bgimg[10].active">
+          <img @click="$tips(true);change5()" src="../assets/image/2-5.png" style="position: sticky;height: 60%" v-if="bgimg[11].active">
+          <img @click="$tips(true);change5()" src="../assets/image/3-53.png" style="position: sticky;height: 60%" v-if="bgimg[12].active">
+          <img @click="$tips(true);change5()" src="../assets/image/4-54.png" style="position: sticky;height: 60%" v-if="bgimg[13].active">
+          <img @click="$tips(true);change5()" src="../assets/image/5-55.png" style="position: sticky;height: 60%" v-if="bgimg[14].active">
+					<img @click="$tips(true);change5()" src="../assets/image/6-56.png" style="position: sticky;height: 60%" v-if="bgimg[15].active">
+          <img @click="$tips(true);change5()" src="../assets/image/7-76.png" style="position: sticky;height: 60%" v-if="bgimg[16].active">
+          <img @click="$tips(true);change5()" src="../assets/image/8-86.png" style="position: sticky;height: 60%" v-if="bgimg[17].active">
+          <img @click="$tips(true);change5()" src="../assets/image/9-59.png" style="position: sticky;height: 60%" v-if="bgimg[18].active">
+          <img @click="$tips(true);change5()" src="../assets/image/10-510.png" style="position: sticky;height: 60%" v-if="bgimg[19].active">
+          <img @click="$tips(true);change5()" src="../assets/image/11-511.png" style="position: sticky;height: 60%" v-if="bgimg[20].active">
+          <img @click="$tips(true);change5()" src="../assets/image/12-512.png" style="position: sticky;height: 60%" v-if="bgimg[21].active">
+          <img @click="$tips(true);change5()" src="../assets/image/1-51.png" style="position: sticky;height: 60%" v-if="bgimg[22].active">
+          <img @click="$tips(true);change5()" src="../assets/image/2-52.png" style="position: sticky;height: 60%" v-if="bgimg[23].active">
+          <!-- <img @click="$tips(true);change6()" src="../assets/image/abc555.png" style="position: absolute;height: 32%;left: 17%;top:28%;"> -->
 					<img src="../assets/image/chose.png" class="keyclose"  v-if="key">
 					<!-- <span class="spanicon">MISSING  LETTERS</span> -->
-					<!-- <img @click="change2" src="../assets/image/11.png" style="position: sticky;height: 60%"> -->
-<!-- 					<img @click="change6" src="../assets/image/abc555.png" style="position: absolute;height: 32%;left: 17%;top:28%;">-->
+					<!-- <img @click="$tips(true);change2()" src="../assets/image/11.png" style="position: sticky;height: 60%"> -->
+<!-- 					<img @click="$tips(true);change6()" src="../assets/image/abc555.png" style="position: absolute;height: 32%;left: 17%;top:28%;">-->
 				</div>
 				<div class="listimg" v-if="!boss">
 					<img :src=lightstar class="imgposit" v-if="stars[6].onestart">
@@ -352,35 +352,35 @@
 
 					<img :src=lightstar class="imgposit1"   v-if="stars[6].threestart">
 					<img :src=star class="imgposit1"   v-if="!stars[6].threestart">
-					 <img @click="change8" src="../assets/image/3-8.png" style="position: sticky;height: 60%" v-if="bgimg[0].active">
-          <img @click="change8" src="../assets/image/4-8.png" style="position: sticky;height: 60%" v-if="bgimg[1].active">
-          <img @click="change8" src="../assets/image/5-8.png" style="position: sticky;height: 60%" v-if="bgimg[2].active">
-          <img @click="change8" src="../assets/image/6-8.png" style="position: sticky;height: 60%" v-if="bgimg[3].active">
-          <img @click="change8" src="../assets/image/7-8.png" style="position: sticky;height: 60%" v-if="bgimg[4].active">
-          <img @click="change8" src="../assets/image/8-8.png" style="position: sticky;height: 60%" v-if="bgimg[5].active">
-          <img @click="change8" src="../assets/image/9-8.png" style="position: sticky;height: 60%" v-if="bgimg[6].active">
-          <img @click="change8" src="../assets/image/10-8.png" style="position: sticky;height: 60%" v-if="bgimg[7].active">
-          <img @click="change8" src="../assets/image/11-8.png" style="position: sticky;height: 60%" v-if="bgimg[8].active">
-          <img @click="change8" src="../assets/image/12-8.png" style="position: sticky;height: 60%" v-if="bgimg[9].active">
-          <img @click="change8" src="../assets/image/1-8.png" style="position: sticky;height: 60%" v-if="bgimg[10].active">
-          <img @click="change8" src="../assets/image/2-8.png" style="position: sticky;height: 60%" v-if="bgimg[11].active">
-          <img @click="change8" src="../assets/image/3-83.png" style="position: sticky;height: 60%" v-if="bgimg[12].active">
-          <img @click="change8" src="../assets/image/4-84.png" style="position: sticky;height: 60%" v-if="bgimg[13].active">
-          <img @click="change8" src="../assets/image/5-85.png" style="position: sticky;height: 60%" v-if="bgimg[14].active">
-					<img @click="change8" src="../assets/image/6-86.png" style="position: sticky;height: 60%" v-if="bgimg[15].active">
-          <img @click="change8" src="../assets/image/7-77.png" style="position: sticky;height: 60%" v-if="bgimg[16].active">
-          <img @click="change8" src="../assets/image/8-87.png" style="position: sticky;height: 60%" v-if="bgimg[17].active">
-          <img @click="change8" src="../assets/image/9-89.png" style="position: sticky;height: 60%" v-if="bgimg[18].active">
-          <img @click="change8" src="../assets/image/10-810.png" style="position: sticky;height: 60%" v-if="bgimg[19].active">
-          <img @click="change8" src="../assets/image/11-811.png" style="position: sticky;height: 60%" v-if="bgimg[20].active">
-          <img @click="change8" src="../assets/image/12-812.png" style="position: sticky;height: 60%" v-if="bgimg[21].active">
-          <img @click="change8" src="../assets/image/1-81.png" style="position: sticky;height: 60%" v-if="bgimg[22].active">
-          <img @click="change8" src="../assets/image/2-82.png" style="position: sticky;height: 60%" v-if="bgimg[23].active">
-          <!-- <img @click="change7" src="../assets/image/abc555.png" style="position: absolute;height: 32%;left: 17%;top:28%;"> -->
+					 <img @click="$tips(true);change8()" src="../assets/image/3-8.png" style="position: sticky;height: 60%" v-if="bgimg[0].active">
+          <img @click="$tips(true);change8()" src="../assets/image/4-8.png" style="position: sticky;height: 60%" v-if="bgimg[1].active">
+          <img @click="$tips(true);change8()" src="../assets/image/5-8.png" style="position: sticky;height: 60%" v-if="bgimg[2].active">
+          <img @click="$tips(true);change8()" src="../assets/image/6-8.png" style="position: sticky;height: 60%" v-if="bgimg[3].active">
+          <img @click="$tips(true);change8()" src="../assets/image/7-8.png" style="position: sticky;height: 60%" v-if="bgimg[4].active">
+          <img @click="$tips(true);change8()" src="../assets/image/8-8.png" style="position: sticky;height: 60%" v-if="bgimg[5].active">
+          <img @click="$tips(true);change8()" src="../assets/image/9-8.png" style="position: sticky;height: 60%" v-if="bgimg[6].active">
+          <img @click="$tips(true);change8()" src="../assets/image/10-8.png" style="position: sticky;height: 60%" v-if="bgimg[7].active">
+          <img @click="$tips(true);change8()" src="../assets/image/11-8.png" style="position: sticky;height: 60%" v-if="bgimg[8].active">
+          <img @click="$tips(true);change8()" src="../assets/image/12-8.png" style="position: sticky;height: 60%" v-if="bgimg[9].active">
+          <img @click="$tips(true);change8()" src="../assets/image/1-8.png" style="position: sticky;height: 60%" v-if="bgimg[10].active">
+          <img @click="$tips(true);change8()" src="../assets/image/2-8.png" style="position: sticky;height: 60%" v-if="bgimg[11].active">
+          <img @click="$tips(true);change8()" src="../assets/image/3-83.png" style="position: sticky;height: 60%" v-if="bgimg[12].active">
+          <img @click="$tips(true);change8()" src="../assets/image/4-84.png" style="position: sticky;height: 60%" v-if="bgimg[13].active">
+          <img @click="$tips(true);change8()" src="../assets/image/5-85.png" style="position: sticky;height: 60%" v-if="bgimg[14].active">
+					<img @click="$tips(true);change8()" src="../assets/image/6-86.png" style="position: sticky;height: 60%" v-if="bgimg[15].active">
+          <img @click="$tips(true);change8()" src="../assets/image/7-77.png" style="position: sticky;height: 60%" v-if="bgimg[16].active">
+          <img @click="$tips(true);change8()" src="../assets/image/8-87.png" style="position: sticky;height: 60%" v-if="bgimg[17].active">
+          <img @click="$tips(true);change8()" src="../assets/image/9-89.png" style="position: sticky;height: 60%" v-if="bgimg[18].active">
+          <img @click="$tips(true);change8()" src="../assets/image/10-810.png" style="position: sticky;height: 60%" v-if="bgimg[19].active">
+          <img @click="$tips(true);change8()" src="../assets/image/11-811.png" style="position: sticky;height: 60%" v-if="bgimg[20].active">
+          <img @click="$tips(true);change8()" src="../assets/image/12-812.png" style="position: sticky;height: 60%" v-if="bgimg[21].active">
+          <img @click="$tips(true);change8()" src="../assets/image/1-81.png" style="position: sticky;height: 60%" v-if="bgimg[22].active">
+          <img @click="$tips(true);change8()" src="../assets/image/2-82.png" style="position: sticky;height: 60%" v-if="bgimg[23].active">
+          <!-- <img @click="$tips(true);change7()" src="../assets/image/abc555.png" style="position: absolute;height: 32%;left: 17%;top:28%;"> -->
 					<img src="../assets/image/chose.png" class="keyclose"  v-if="key">
 					<!-- <span class="spanicon">EXERCISE  B</span> -->
-					<!-- <img @click="change2" src="../assets/image/11.png" style="position: sticky;height: 60%"> -->
-          <!--<img @click="change7" src="../assets/image/abc555.png" style="position: absolute;height: 32%;left: 17%;top:28%;">-->
+					<!-- <img @click="$tips(true);change2()" src="../assets/image/11.png" style="position: sticky;height: 60%"> -->
+          <!--<img @click="$tips(true);change7()" src="../assets/image/abc555.png" style="position: absolute;height: 32%;left: 17%;top:28%;">-->
         </div>
         <div class="listimg" :class="!boss ? 'bosimg':''">
           <img :src=lightstar class="imgposit" v-if="stars[7].onestart">
@@ -389,35 +389,35 @@
           <img :src=star style="position: relative;height: 11%;top: 21%; z-index: 2;" v-if="!stars[7].twostart">
           <img :src=lightstar class="imgposit1"   v-if="stars[7].threestart">
           <img :src=star class="imgposit1"   v-if="!stars[7].threestart">
-          <img @click="change" src="../assets/image/3-1.png" style="position: sticky;height: 60%" v-if="bgimg[0].active">
-          <img @click="change" src="../assets/image/4-1.png" style="position: sticky;height: 60%" v-if="bgimg[1].active">
-          <img @click="change" src="../assets/image/5-1.png" style="position: sticky;height: 60%" v-if="bgimg[2].active">
-          <img @click="change" src="../assets/image/6-1.png" style="position: sticky;height: 60%" v-if="bgimg[3].active">
-          <img @click="change" src="../assets/image/7-1.png" style="position: sticky;height: 60%" v-if="bgimg[4].active">
-          <img @click="change" src="../assets/image/8-1.png" style="position: sticky;height: 60%" v-if="bgimg[5].active">
-          <img @click="change" src="../assets/image/9-1.png" style="position: sticky;height: 60%" v-if="bgimg[6].active">
-          <img @click="change" src="../assets/image/10-1.png" style="position: sticky;height: 60%" v-if="bgimg[7].active">
-          <img @click="change" src="../assets/image/11-1.png" style="position: sticky;height: 60%" v-if="bgimg[8].active">
-          <img @click="change" src="../assets/image/12-1.png" style="position: sticky;height: 60%" v-if="bgimg[9].active">
-          <img @click="change" src="../assets/image/1-1.png" style="position: sticky;height: 60%" v-if="bgimg[10].active">
-          <img @click="change" src="../assets/image/2-1.png" style="position: sticky;height: 60%" v-if="bgimg[11].active">
-          <img @click="change" src="../assets/image/3-13.png" style="position: sticky;height: 60%" v-if="bgimg[12].active">
-          <img @click="change" src="../assets/image/4-14.png" style="position: sticky;height: 60%" v-if="bgimg[13].active">
-          <img @click="change" src="../assets/image/5-15.png" style="position: sticky;height: 60%" v-if="bgimg[14].active">
-          <img @click="change" src="../assets/image/6-16.png" style="position: sticky;height: 60%" v-if="bgimg[15].active">
-          <img @click="change" src="../assets/image/7-78.png" style="position: sticky;height: 60%" v-if="bgimg[16].active">
-          <img @click="change" src="../assets/image/8-88.png" style="position: sticky;height: 60%" v-if="bgimg[17].active">
-          <img @click="change" src="../assets/image/9-19.png" style="position: sticky;height: 60%" v-if="bgimg[18].active">
-          <img @click="change" src="../assets/image/10-110.png" style="position: sticky;height: 60%" v-if="bgimg[19].active">
-          <img @click="change" src="../assets/image/11-111.png" style="position: sticky;height: 60%" v-if="bgimg[20].active">
-          <img @click="change" src="../assets/image/12-112.png" style="position: sticky;height: 60%" v-if="bgimg[21].active">
-          <img @click="change" src="../assets/image/1-11.png" style="position: sticky;height: 60%" v-if="bgimg[22].active">
-          <img @click="change" src="../assets/image/2-12.png" style="position: sticky;height: 60%" v-if="bgimg[23].active">
-          <!-- <img @click="change8" src="../assets/image/abc555.png" style="position: absolute;height: 32%;left: 17%;top:28%;"> -->
+          <img @click="$tips(true);change()" src="../assets/image/3-1.png" style="position: sticky;height: 60%" v-if="bgimg[0].active">
+          <img @click="$tips(true);change()" src="../assets/image/4-1.png" style="position: sticky;height: 60%" v-if="bgimg[1].active">
+          <img @click="$tips(true);change()" src="../assets/image/5-1.png" style="position: sticky;height: 60%" v-if="bgimg[2].active">
+          <img @click="$tips(true);change()" src="../assets/image/6-1.png" style="position: sticky;height: 60%" v-if="bgimg[3].active">
+          <img @click="$tips(true);change()" src="../assets/image/7-1.png" style="position: sticky;height: 60%" v-if="bgimg[4].active">
+          <img @click="$tips(true);change()" src="../assets/image/8-1.png" style="position: sticky;height: 60%" v-if="bgimg[5].active">
+          <img @click="$tips(true);change()" src="../assets/image/9-1.png" style="position: sticky;height: 60%" v-if="bgimg[6].active">
+          <img @click="$tips(true);change()" src="../assets/image/10-1.png" style="position: sticky;height: 60%" v-if="bgimg[7].active">
+          <img @click="$tips(true);change()" src="../assets/image/11-1.png" style="position: sticky;height: 60%" v-if="bgimg[8].active">
+          <img @click="$tips(true);change()" src="../assets/image/12-1.png" style="position: sticky;height: 60%" v-if="bgimg[9].active">
+          <img @click="$tips(true);change()" src="../assets/image/1-1.png" style="position: sticky;height: 60%" v-if="bgimg[10].active">
+          <img @click="$tips(true);change()" src="../assets/image/2-1.png" style="position: sticky;height: 60%" v-if="bgimg[11].active">
+          <img @click="$tips(true);change()" src="../assets/image/3-13.png" style="position: sticky;height: 60%" v-if="bgimg[12].active">
+          <img @click="$tips(true);change()" src="../assets/image/4-14.png" style="position: sticky;height: 60%" v-if="bgimg[13].active">
+          <img @click="$tips(true);change()" src="../assets/image/5-15.png" style="position: sticky;height: 60%" v-if="bgimg[14].active">
+          <img @click="$tips(true);change()" src="../assets/image/6-16.png" style="position: sticky;height: 60%" v-if="bgimg[15].active">
+          <img @click="$tips(true);change()" src="../assets/image/7-78.png" style="position: sticky;height: 60%" v-if="bgimg[16].active">
+          <img @click="$tips(true);change()" src="../assets/image/8-88.png" style="position: sticky;height: 60%" v-if="bgimg[17].active">
+          <img @click="$tips(true);change()" src="../assets/image/9-19.png" style="position: sticky;height: 60%" v-if="bgimg[18].active">
+          <img @click="$tips(true);change()" src="../assets/image/10-110.png" style="position: sticky;height: 60%" v-if="bgimg[19].active">
+          <img @click="$tips(true);change()" src="../assets/image/11-111.png" style="position: sticky;height: 60%" v-if="bgimg[20].active">
+          <img @click="$tips(true);change()" src="../assets/image/12-112.png" style="position: sticky;height: 60%" v-if="bgimg[21].active">
+          <img @click="$tips(true);change()" src="../assets/image/1-11.png" style="position: sticky;height: 60%" v-if="bgimg[22].active">
+          <img @click="$tips(true);change()" src="../assets/image/2-12.png" style="position: sticky;height: 60%" v-if="bgimg[23].active">
+          <!-- <img @click="$tips(true);change8()" src="../assets/image/abc555.png" style="position: absolute;height: 32%;left: 17%;top:28%;"> -->
           <!--<img src="../assets/image/chose.png" class="keyclose" v-if="key">-->
           <!-- <span class="spanicon">THIS   OR  THAT</span> -->
-          <!-- <img @click="change2" src="../assets/image/11.png" style="position: sticky;height: 60%"> -->
-          <!-- <img @click="change7" src="../assets/image/abc555.png" style="position: absolute;height: 32%;left: 17%;top:28%;">-->
+          <!-- <img @click="$tips(true);change2()" src="../assets/image/11.png" style="position: sticky;height: 60%"> -->
+          <!-- <img @click="$tips(true);change7()" src="../assets/image/abc555.png" style="position: absolute;height: 32%;left: 17%;top:28%;">-->
         </div>
         <!--<div class="listimg" :class="!boss ? 'bosimg':''">-->
           <!--<img @click="chatwalker" src="../assets/image/3-1.png" style="position: sticky;height: 60%">-->
@@ -432,54 +432,30 @@
           <img :src=star style="position: relative;height: 11%;top: 21%; z-index: 2;" v-if="!stars[8].twostart">
           <img :src=lightstar class="imgposit1"   v-if="stars[8].threestart">
           <img :src=star class="imgposit1"   v-if="!stars[8].threestart">
-          <img  @click="bigboss" src="../assets/image/moon/seasonsb.png" style="position: sticky;margin-top: -10%;margin-right: -3%;height: 75%;" v-if="bgimg[0].active">
-          <img  @click="bigboss" src="../assets/image/moon/transportationb.png" style="position: sticky;margin-top: -10%;margin-right: -3%;height: 75%;" v-if="bgimg[1].active">
-          <img  @click="bigboss" src="../assets/image/moon/bugsb.png" style="position: sticky;margin-top: -10%;margin-right: -3%;height: 75%;" v-if="bgimg[2].active">
-          <img  @click="bigboss" src="../assets/image/moon/clothesb.png" style="position: sticky;margin-top: -10%;margin-right: -3%;height: 75%;" v-if="bgimg[3].active">
-          <img  @click="bigboss" src="../assets/image/moon/themeparksb.png" style="position: sticky;margin-top: -10%;margin-right: -3%;height: 75%;" v-if="bgimg[4].active">
-          <img  @click="bigboss" src="../assets/image/moon/spaceb.png" style="position: sticky;margin-top: -10%;margin-right: -3%;height: 75%;" v-if="bgimg[5].active">
-          <img  @click="bigboss" src="../assets/image/moon/mybodyb.png" style="position: sticky;margin-top: -10%;margin-right: -3%;height: 75%;" v-if="bgimg[6].active">
-          <img  @click="bigboss" src="../assets/image/moon/myweekendb.png" style="position: sticky;margin-top: -10%;margin-right: -3%;height: 75%;" v-if="bgimg[7].active">
-          <img  @click="bigboss" src="../assets/image/moon/wildanimalsb.png" style="position: sticky;margin-top: -10%;margin-right: -3%;height: 75%;" v-if="bgimg[8].active">
-          <img  @click="bigboss" src="../assets/image/moon/christmasb.png" style="position: sticky;margin-top: -10%;margin-right: -3%;height: 75%;" v-if="bgimg[9].active">
-          <img  @click="bigboss" src="../assets/image/moon/letsgoshoppingb.png" style="position: sticky;margin-top: -10%;margin-right: -3%;height: 75%;" v-if="bgimg[10].active">
-          <img  @click="bigboss" src="../assets/image/moon/mycommunityb.png" style="position: sticky;margin-top: -10%;margin-right: -3%;height: 75%;" v-if="bgimg[11].active">
-          <img  @click="bigboss" src="../assets/image/moon/funtimeb.png" style="position: sticky;margin-top: -10%;margin-right: -3%;height: 75%;" v-if="bgimg[12].active">
-          <img  @click="bigboss" src="../assets/image/moon/myhomeb.png" style="position: sticky;margin-top: -10%;margin-right: -3%;height: 75%;" v-if="bgimg[13].active">
-          <img  @click="bigboss" src="../assets/image/moon/ourworldb.png" style="position: sticky;margin-top: -10%;margin-right: -3%;height: 75%;" v-if="bgimg[14].active">
-          <img  @click="bigboss" src="../assets/image/moon/fairytalesb.png" style="position: sticky;margin-top: -10%;margin-right: -3%;height: 75%;" v-if="bgimg[15].active">
-          <img  @click="bigboss" src="../assets/image/moon/fairytalesb.png" style="position: sticky;margin-top: -10%;margin-right: -3%;height: 75%;" v-if="bgimg[16].active">
-          <img  @click="bigboss" src="../assets/image/moon/summer-fun.png" style="position: sticky;margin-top: -10%;margin-right: -3%;height: 75%;" v-if="bgimg[17].active">
-          <img  @click="bigboss" src="../assets/image/moon/schooltimeb.png" style="position: sticky;margin-top: -10%;margin-right: -3%;height: 75%;" v-if="bgimg[18].active">
-          <img  @click="bigboss" src="../assets/image/moon/animalsb.png" style="position: sticky;margin-top: -10%;margin-right: -3%;height: 75%;" v-if="bgimg[19].active">
-          <img  @click="bigboss" src="../assets/image/moon/myfamilyb.png" style="position: sticky;margin-top: -10%;margin-right: -3%;height: 75%;" v-if="bgimg[20].active">
-          <img  @click="bigboss" src="../assets/image/moon/holidaysb.png" style="position: sticky;margin-top: -10%;margin-right: -3%;height: 75%;" v-if="bgimg[21].active">
-          <img  @click="bigboss" src="../assets/image/moon/mealtimeb.png" style="position: sticky;margin-top: -10%;margin-right: -3%;height: 75%;" v-if="bgimg[22].active">
-          <img  @click="bigboss" src="../assets/image/moon/onthefarmb.png" style="position: sticky;margin-top: -10%;margin-right: -3%;height: 75%;" v-if="bgimg[23].active">
-
-          <!--<img @click="bigboss" src="../assets/image/3-8.png" style="position: sticky;height: 60%" v-if="bgimg[0].active">-->
-					<!--<img @click="bigboss" src="../assets/image/4-8.png" style="position: sticky;height: 60%" v-if="bgimg[1].active">-->
-					<!--<img @click="bigboss" src="../assets/image/5-8.png" style="position: sticky;height: 60%" v-if="bgimg[2].active">-->
-					<!--<img @click="bigboss" src="../assets/image/6-8.png" style="position: sticky;height: 60%" v-if="bgimg[3].active">-->
-					<!--<img @click="bigboss" src="../assets/image/7-8.png" style="position: sticky;height: 60%" v-if="bgimg[4].active">-->
-					<!--<img @click="bigboss" src="../assets/image/8-8.png" style="position: sticky;height: 60%" v-if="bgimg[5].active">-->
-					<!--<img @click="bigboss" src="../assets/image/9-8.png" style="position: sticky;height: 60%" v-if="bgimg[6].active">-->
-					<!--<img @click="bigboss" src="../assets/image/10-8.png" style="position: sticky;height: 60%" v-if="bgimg[7].active">-->
-					<!--<img @click="bigboss" src="../assets/image/11-8.png" style="position: sticky;height: 60%" v-if="bgimg[8].active">-->
-					<!--<img @click="bigboss" src="../assets/image/12-8.png" style="position: sticky;height: 60%" v-if="bgimg[9].active">-->
-          <!--<img @click="bigboss" src="../assets/image/1-8.png" style="position: sticky;height: 60%" v-if="bgimg[10].active">-->
-					<!--<img @click="bigboss" src="../assets/image/2-8.png" style="position: sticky;height: 60%" v-if="bgimg[11].active">-->
-					<!--<img @click="bigboss" src="../assets/image/3-83.png" style="position: sticky;height: 60%" v-if="bgimg[12].active">-->
-					<!--<img @click="bigboss" src="../assets/image/4-p1.png" style="position: sticky;height: 60%" v-if="bgimg[13].active">-->
-					<!--<img @click="bigboss" src="../assets/image/5-85.png" style="position: sticky;height: 60%" v-if="bgimg[14].active">-->
-					<!--<img @click="bigboss" src="../assets/image/6-86.png" style="position: sticky;height: 60%" v-if="bgimg[15].active">-->
-          <!--<img @click="bigboss" src="../assets/image/9-89.png" style="position: sticky;height: 60%" v-if="bgimg[18].active">-->
-          <!--<img @click="bigboss" src="../assets/image/10-810.png" style="position: sticky;height: 60%" v-if="bgimg[19].active">-->
-          <!--<img @click="bigboss" src="../assets/image/11-811.png" style="position: sticky;height: 60%" v-if="bgimg[20].active">-->
-          <!--<img @click="bigboss" src="../assets/image/12-812.png" style="position: sticky;height: 60%" v-if="bgimg[21].active">-->
-          <!--<img @click="bigboss" src="../assets/image/1-81.png" style="position: sticky;height: 60%" v-if="bgimg[22].active">-->
-          <!--<img @click="bigboss" src="../assets/image/2-82.png" style="position: sticky;height: 60%" v-if="bgimg[23].active">-->
-
+          <img  @click="$tips(true);bigboss()" src="../assets/image/moon/seasonsb.png" style="position: sticky;margin-top: -10%;margin-right: -3%;height: 75%;" v-if="bgimg[0].active">
+          <img  @click="$tips(true);bigboss()" src="../assets/image/moon/transportationb.png" style="position: sticky;margin-top: -10%;margin-right: -3%;height: 75%;" v-if="bgimg[1].active">
+          <img  @click="$tips(true);bigboss()" src="../assets/image/moon/bugsb.png" style="position: sticky;margin-top: -10%;margin-right: -3%;height: 75%;" v-if="bgimg[2].active">
+          <img  @click="$tips(true);bigboss()" src="../assets/image/moon/clothesb.png" style="position: sticky;margin-top: -10%;margin-right: -3%;height: 75%;" v-if="bgimg[3].active">
+          <img  @click="$tips(true);bigboss()" src="../assets/image/moon/themeparksb.png" style="position: sticky;margin-top: -10%;margin-right: -3%;height: 75%;" v-if="bgimg[4].active">
+          <img  @click="$tips(true);bigboss()" src="../assets/image/moon/spaceb.png" style="position: sticky;margin-top: -10%;margin-right: -3%;height: 75%;" v-if="bgimg[5].active">
+          <img  @click="$tips(true);bigboss()" src="../assets/image/moon/mybodyb.png" style="position: sticky;margin-top: -10%;margin-right: -3%;height: 75%;" v-if="bgimg[6].active">
+          <img  @click="$tips(true);bigboss()" src="../assets/image/moon/myweekendb.png" style="position: sticky;margin-top: -10%;margin-right: -3%;height: 75%;" v-if="bgimg[7].active">
+          <img  @click="$tips(true);bigboss()" src="../assets/image/moon/wildanimalsb.png" style="position: sticky;margin-top: -10%;margin-right: -3%;height: 75%;" v-if="bgimg[8].active">
+          <img  @click="$tips(true);bigboss()" src="../assets/image/moon/christmasb.png" style="position: sticky;margin-top: -10%;margin-right: -3%;height: 75%;" v-if="bgimg[9].active">
+          <img  @click="$tips(true);bigboss()" src="../assets/image/moon/letsgoshoppingb.png" style="position: sticky;margin-top: -10%;margin-right: -3%;height: 75%;" v-if="bgimg[10].active">
+          <img  @click="$tips(true);bigboss()" src="../assets/image/moon/mycommunityb.png" style="position: sticky;margin-top: -10%;margin-right: -3%;height: 75%;" v-if="bgimg[11].active">
+          <img  @click="$tips(true);bigboss()" src="../assets/image/moon/funtimeb.png" style="position: sticky;margin-top: -10%;margin-right: -3%;height: 75%;" v-if="bgimg[12].active">
+          <img  @click="$tips(true);bigboss()" src="../assets/image/moon/myhomeb.png" style="position: sticky;margin-top: -10%;margin-right: -3%;height: 75%;" v-if="bgimg[13].active">
+          <img  @click="$tips(true);bigboss()" src="../assets/image/moon/ourworldb.png" style="position: sticky;margin-top: -10%;margin-right: -3%;height: 75%;" v-if="bgimg[14].active">
+          <img  @click="$tips(true);bigboss()" src="../assets/image/moon/fairytalesb.png" style="position: sticky;margin-top: -10%;margin-right: -3%;height: 75%;" v-if="bgimg[15].active">
+          <img  @click="$tips(true);bigboss()" src="../assets/image/moon/fairytalesb.png" style="position: sticky;margin-top: -10%;margin-right: -3%;height: 75%;" v-if="bgimg[16].active">
+          <img  @click="$tips(true);bigboss()" src="../assets/image/moon/summer-fun.png" style="position: sticky;margin-top: -10%;margin-right: -3%;height: 75%;" v-if="bgimg[17].active">
+          <img  @click="$tips(true);bigboss()" src="../assets/image/moon/schooltimeb.png" style="position: sticky;margin-top: -10%;margin-right: -3%;height: 75%;" v-if="bgimg[18].active">
+          <img  @click="$tips(true);bigboss()" src="../assets/image/moon/animalsb.png" style="position: sticky;margin-top: -10%;margin-right: -3%;height: 75%;" v-if="bgimg[19].active">
+          <img  @click="$tips(true);bigboss()" src="../assets/image/moon/myfamilyb.png" style="position: sticky;margin-top: -10%;margin-right: -3%;height: 75%;" v-if="bgimg[20].active">
+          <img  @click="$tips(true);bigboss()" src="../assets/image/moon/holidaysb.png" style="position: sticky;margin-top: -10%;margin-right: -3%;height: 75%;" v-if="bgimg[21].active">
+          <img  @click="$tips(true);bigboss()" src="../assets/image/moon/mealtimeb.png" style="position: sticky;margin-top: -10%;margin-right: -3%;height: 75%;" v-if="bgimg[22].active">
+          <img  @click="$tips(true);bigboss()" src="../assets/image/moon/onthefarmb.png" style="position: sticky;margin-top: -10%;margin-right: -3%;height: 75%;" v-if="bgimg[23].active">
         </div>
         <!--</div>-->
 			</div>
@@ -512,14 +488,14 @@
 
         <!-- <img src="../assets/image/runner_bar.png" style="width: 100%;bottom: 0;height: 100%;" v-if="levels"> -->
 				<div>
-					<img :src=gameImage class="acstyle" @click="goinfo" />
+					<img :src=gameImage class="acstyle" @click="$tips(true);goinfo()" />
 					<span class="fontsize leftmar" >{{firstName}}</span>
 				</div>
 				<div>
 					<img src="../assets/image/icon_coin.png" class="coinstyle">
 					<span class="fontsize leftmar2">{{sum}}</span>
 				</div>
-        <div @click="back">
+        <div @click="$tips(true);back()">
 					<img src="../assets/image/season-back.png"  class="settingb" v-if="bgimg[0].active">
 					<img src="../assets/image/4-back.png"  class="settingb" v-if="bgimg[1].active">
           <img src="../assets/image/5-back.png"  class="settingb" v-if="bgimg[2].active">
@@ -546,7 +522,7 @@
           <img src="../assets/image/2-2back.png"  class="settingb" v-if="bgimg[23].active">
           <!-- 	<img src="../assets/image/game-course03.png"  class=" pause" v-if="!action"> -->
 				</div>
-				<div  @click="routerabout" >
+				<div  @click="$tips(true);routerabout()" >
 					<img src="../assets/image/season-home.png" class="repeat" v-if="bgimg[0].active">
 					<img src="../assets/image/4-home.png" class="repeat" v-if="bgimg[1].active">
 					<img src="../assets/image/5-home.png" class="repeat" v-if="bgimg[2].active">
@@ -587,7 +563,7 @@
 					<img src="../assets/image/boss-rule2.png" style="height: 100%;"  v-if="ruleimg8"/>
 			</button>
 			<div class="withcolor" v-bind:class="{oringe:changei1||changei2||changei3||changei9}">
-				<div class="close"  @click="pop">
+				<div class="close"  @click="$tips(true);pop()">
 					<img src="../assets/image/cloce.png">
 				</div>
 				<button class="animapng7">
@@ -601,7 +577,7 @@
 				  <img  src="http://monkeytown.monkeytree.com.hk/image/h.gif" v-if="changei8">
 				  <img  src="http://monkeytown.monkeytree.com.hk/image/boss.gif" v-if="changei9">
 				</button>
-				<button class="start" @click="starpop"><span class="startspan">START</span></button>
+				<button class="start" @click="$tips(true);starpop()"><span class="startspan">START</span></button>
 			</div>
 		</div>
 	</div>

@@ -36,21 +36,21 @@
 				</div>
 			</div>
 			<div style="width: 100%; height: 30%;display:block;position: absolute;bottom: 0;">
-				<div @click="change2" style="display: contents;">
+				<div @click="$tips(true);change2()" style="display: contents;">
 						<img src="../assets/image/blue_home.png" class="centerimg" v-if="action1">
 						<img src="../assets/image/blue_home0.png" class="centerimg" v-if="!action1">
 				</div>
-				<div @click="change" style="display: contents;">
+				<div @click="$tips(true);change()" style="display: contents;">
 					<!-- <router-link to="/"> -->
 						<img src="../assets/image/blue_restart.png"  class="centerimg"  @click="change" v-if="action2">
 						<img src="../assets/image/blue_restart0.png"  class="centerimg"  @click="change" v-if="!action2">
 					<!-- </router-link> -->
 				</div>
-				<div @click="change1" style="display: contents;">
+				<div @click="$tips(true);change1()" style="display: contents;">
 						<img src="../assets/image/blue_next.png" class="centerimg" v-if="action3">
 						<img src="../assets/image/blue_next0.png" class="centerimg" v-if="!action3">
 				</div>
-				<div @click="change3" style="display: contents;" v-if="mycard">
+				<div @click="$tips(true);change3()" style="display: contents;" v-if="mycard">
 						<img src="../assets/image/blue_next.png" class="centerimg" v-if="action3">
 						<img src="../assets/image/blue_next0.png" class="centerimg" v-if="!action3">
 				</div>

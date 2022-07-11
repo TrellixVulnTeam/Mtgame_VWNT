@@ -15,7 +15,7 @@
               <button>{{cources}}</button></h2>
             <div class="chart-room">
               <div class="left-walkers">
-                <a @click="walkers1(phonicsList[0])">
+                <a @click="$tips(true);walkers1(phonicsList[0])">
                   <img src="../../assets/image/beginner.png" style="width:100%;">
                   <div class="progress" v-if="!phonicsList[0].compelte">
                   <div class="goldBG01">
@@ -32,7 +32,7 @@
               </div>
               <div class="left-walkers">
 <!--                 <a>-->
-                  <a @click="walkers2(phonicsList[1])">
+                  <a @click="$tips(true);walkers2(phonicsList[1])">
                   <img src="../../assets/image/intermediate.png" style="width: 100%; ">
                   <div class="progress" v-if="!phonicsList[1].compelte">
                     <div class="goldBG03">
@@ -48,7 +48,7 @@
               </div>
               <div class="left-walkers">
 <!--                 <a>-->
-                <a @click="walkers3(phonicsList[2])">
+                <a @click="$tips(true);walkers3(phonicsList[2])">
                   <img src="../../assets/image/advance.png" style="width: 100%; ">
 <!--                  <img src="../../assets/image/coming-soon1.png" style="width: 80%;margin: 0 10%;z-index: 2;bottom:-6%;position: absolute;display: inline;float: left;left: 0;">-->
                   <div class="progress" v-if="!phonicsList[2].compelte">
@@ -77,7 +77,7 @@
               <img src="../../assets/image/ptop.png">
               <button style="text-transform:uppercase;color:#8B6443;" :style="{fontSize:level.length>10 ? '20px':'24px'}">{{level}}</button></h2>
             <div class="walkers-room">
-              <ul class="box1" v-for="(li,index) in phonicsDetailList" :key="index" @click="walkersunit(li)">
+              <ul class="box1" v-for="(li,index) in phonicsDetailList" :key="index" @click="$tips(true);walkersunit(li)">
                 <li>
                   <img src="../../assets/image/plist1.png" v-if="index%2==0" style="  width: 92%;height: 100%; left: 4%; top: 0;">
                   <img src="../../assets/image/plist2.png" v-if="index%2!=0" style="  width: 92%;height: 100%; left: 4%; top: 0;">
@@ -178,19 +178,19 @@
         <img src="../../assets/image/abar.png" v-if="advanced" style="width: 100%;bottom: 0;height: 100%;">
         <!-- <img src="../assets/image/runner_bar.png" style="width: 100%;bottom: 0;height: 100%;" v-if="levels"> -->
         <div>
-          <img :src=gameImage class="acstyle" @click="goinfo" />
+          <img :src=gameImage class="acstyle" @click="$tips(true);goinfo()" />
           <span class="fontsize leftmar">{{firstName}}</span>
         </div>
         <div>
           <img src="../../assets/image/icon_coin.png" class="coinstyle">
           <span class="fontsize leftmar2">{{sum}}</span>
         </div>
-        <div @click="back">
+        <div @click="$tips(true);back()">
 						<img src="../../assets/image/pback.png"  class="pause" v-if="phonics||walkers">
             <img src="../../assets/image/7-back.png"  class="pause" v-if="runners">
           <img src="../../assets/image/adBack.png"  class="pause" v-if="advanced">
         </div>
-        <div @click="home">
+        <div @click="$tips(true);home()">
           <img src="../../assets/image/phome.png" class="repeat" v-if="phonics||walkers">
           <img src="../../assets/image/7-home.png" class="repeat" v-if="runners">
           <img src="../../assets/image/adHome.png" class="repeat" v-if="advanced">

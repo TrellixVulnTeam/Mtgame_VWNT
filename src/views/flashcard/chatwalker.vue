@@ -907,8 +907,8 @@
         <img src="../../assets/image/201909H5 SchoolTime_MT/Word/word_jungle gym Comp 1_0.png" v-if="walkers"
              :style="{zIndex: !junglegym ? 100 : 1}" @click="showGif('junglegym')">
       </div>
-    </div>-->
-    <div v-if="this.unit === 'Animals' && this.part === 'part1'">
+    </div>
+    <div v-else-if="this.unit === 'Animals' && this.part === 'part1'">
       <img src="../../assets/image/201910H5 Pets_MT/Walker_BG/bg_0.png"
            style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;"/>
       <div class="big">
@@ -1231,7 +1231,6 @@
              @click="showGif('hug')">
       </div>
       <div class="caring">
-<!--        <img src="../../assets/image/201911H5 Family_MT/GIF_PNG/png/caring.png" v-if="caring" @click="showGif('caring')">-->
         <img src="../../assets/image/201911H5 Family_MT/GIF_PNG/Gif/caring.gif" style="z-index: 100" v-if="!caring"
              @click="showGif('caring')">
       </div>
@@ -1256,12 +1255,10 @@
              @click="showGif('mother')">
       </div>
       <div class="old">
-<!--        <img src="../../assets/image/201911H5 Family_MT/GIF_PNG/png/old.png" v-if="old" @click="showGif('old')">-->
         <img src="../../assets/image/201911H5 Family_MT/GIF_PNG/Gif/old.gif" style="z-index: 100" v-if="!old"
              @click="showGif('old')">
       </div>
       <div class="share">
-<!--        <img src="../../assets/image/201911H5 Family_MT/GIF_PNG/png/share.png" v-if="share" @click="showGif('share')">-->
         <img src="../../assets/image/201911H5 Family_MT/GIF_PNG/Gif/share.gif" style="z-index: 100" v-if="!share"
              @click="showGif('share')">
       </div>
@@ -1271,7 +1268,6 @@
              @click="showGif('sister')">
       </div>
       <div class="baby">
-<!--        <img src="../../assets/image/201911H5 Family_MT/GIF_PNG/png/young.png" v-if="young" @click="showGif('young')">-->
         <img src="../../assets/image/201911H5 Family_MT/GIF_PNG/Gif/baby.gif" style="z-index: 100" v-if="!young"
              @click="showGif('young')">
       </div>
@@ -1340,7 +1336,6 @@
       </div>
       <div class="cakeClick" @click="showGif('cake')"/>
       <div class="cake">
-<!--        <img src="../../assets/image/201911 H5 Happy birthday_MT/GIF_PNG/png/cake.png" v-if="cake&&walkers" >-->
         <img src="../../assets/image/201911 H5 Happy birthday_MT/GIF_PNG/gif/cake.gif" style="z-index: 100" v-if="!cake"
              @click="showGif('cake')">
       </div>
@@ -1362,7 +1357,6 @@
              @click="showGif('cut')">
       </div>
       <div class="friends">
-<!--        <img src="../../assets/image/201911 H5 Happy birthday_MT/GIF_PNG/png/friends.png" v-if="friends&&walkers" @click="showGif('friends')">-->
         <img src="../../assets/image/201911 H5 Happy birthday_MT/GIF_PNG/gif/friends.gif" style="z-index: 100" v-if="!friends"
              @click="showGif('friends')">
       </div>
@@ -1852,8 +1846,8 @@
         <img src="../../assets/image/202001H5 At the Restaurant_MT/Word/word_plate Comp 1_00000.png"
              :style="{zIndex: !plate ? 100 : 1}" @click="showGif('plate')">
       </div>
-    </div>
-    <div v-else-if="this.unit === 'On the Farm' && this.part === 'part1'">
+    </div>-->
+    <div v-if="this.unit === 'On the Farm' && this.part === 'part1'">
       <img src="../../assets/image/202002H5 In the barn_MT/Walker_BG/BG_00000.png"
            style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;"/>
       <div class="barn">
@@ -2076,7 +2070,6 @@
       <img src="../../assets/image/Autumn and winter_MT/Walker_BG/BG__00000.png"
            style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;"/>
       <div class="hotChocolate">
-<!--        <img src="../../assets/image/Autumn and winter_MT/GIF_PNG/png/hot chocolate.png" v-if="hotChocolate" @click="showGif('hotChocolate')">-->
         <img src="../../assets/image/Autumn and winter_MT/GIF_PNG/gif/hot chocolate.gif" style="z-index: 100" v-if="!hotChocolate"
              @click="showGif('hotChocolate')">
       </div>
@@ -3180,6 +3173,125 @@
              :style="{zIndex: !waterSlide ? 100 : 1}" @click="showGif('waterSlide')">
       </div>
     </div>
+    <div v-else-if="this.unit === 'Space' && this.part === 'part1'">
+      <img src="../../assets/image/202008H5 Blast Off_MT/Runner_BG/Background_0.png"
+           style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;"/>
+      <div class="astronaut">
+        <img src="../../assets/image/202008H5 Blast Off_MT/GIF_PNG/png/astronaut_0.png" v-if="astronaut&&helmet" @click="showGif('astronaut')">
+        <img src="../../assets/image/202008H5 Blast Off_MT/GIF_PNG/gif/astronaut.gif" style="z-index: 100" v-if="!astronaut"
+             @click="showGif('astronaut')">
+      </div>
+      <div class="explore">
+        <img src="../../assets/image/202008H5 Blast Off_MT/GIF_PNG/png/explore Comp 1_0.png" v-if="explore" @click="walkers&&showGif('explore')">
+        <img src="../../assets/image/202008H5 Blast Off_MT/GIF_PNG/gif/explore.gif" style="z-index: 100" v-if="!explore"
+             @click="showGif('explore')">
+      </div>
+      <div class="fuel">
+        <img src="../../assets/image/202008H5 Blast Off_MT/GIF_PNG/png/fuel_1.png" v-if="fuel&&blastOff&&fire&&rocket" @click="walkers&&showGif('fuel')">
+        <img src="../../assets/image/202008H5 Blast Off_MT/GIF_PNG/gif/fuel.gif" style="z-index: 100" v-if="!fuel"
+             @click="showGif('fuel')">
+      </div>
+      <div class="radio">
+        <img src="../../assets/image/202008H5 Blast Off_MT/GIF_PNG/png/radio Comp 1_0.png" v-if="radio" @click="walkers&&showGif('radio')">
+        <img src="../../assets/image/202008H5 Blast Off_MT/GIF_PNG/gif/radio.gif" style="z-index: 100" v-if="!radio"
+             @click="showGif('radio')">
+      </div>
+      <div class="scientist">
+        <img src="../../assets/image/202008H5 Blast Off_MT/GIF_PNG/png/scientist Comp 1_0.png" v-if="scientist" @click="walkers&&showGif('scientist')">
+        <img src="../../assets/image/202008H5 Blast Off_MT/GIF_PNG/gif/scientist.gif" style="z-index: 100" v-if="!scientist"
+             @click="showGif('scientist')">
+      </div>
+      <div class="spaceSuit">
+        <img src="../../assets/image/202008H5 Blast Off_MT/GIF_PNG/png/space suit  Comp 1_0.png" v-if="spaceSuit" @click="showGif('spaceSuit')">
+        <img src="../../assets/image/202008H5 Blast Off_MT/GIF_PNG/gif/space suit.gif" style="z-index: 100" v-if="!spaceSuit"
+             @click="showGif('spaceSuit')">
+      </div>
+      <div class="blastOff">
+        <img src="../../assets/image/202008H5 Blast Off_MT/GIF_PNG/gif/blast off.gif" style="z-index: 100" v-if="!blastOff"
+             @click="showGif('blastOff')">
+      </div>
+      <div class="countdown">
+        <img src="../../assets/image/202008H5 Blast Off_MT/GIF_PNG/gif/countdown.gif" style="z-index: 100" v-if="!countdown"
+             @click="showGif('countdown')">
+      </div>
+      <div class="fire">
+        <img src="../../assets/image/202008H5 Blast Off_MT/GIF_PNG/gif/fire.gif" style="z-index: 100" v-if="!fire"
+             @click="showGif('fire')">
+      </div>
+      <div class="helmet">
+        <img src="../../assets/image/202008H5 Blast Off_MT/GIF_PNG/gif/helmet.gif" style="z-index: 100" v-if="!helmet"
+             @click="showGif('helmet')">
+      </div>
+      <div class="rocket">
+        <img src="../../assets/image/202008H5 Blast Off_MT/GIF_PNG/gif/rocket.gif" style="z-index: 100" v-if="!rocket"
+             @click="showGif('rocket')">
+      </div>
+      <div class="fly3">
+        <img src="../../assets/image/202008H5 Blast Off_MT/GIF_PNG/png/fly Comp 1_0.png" v-if="fly3" @click="showGif('fly3')">
+        <img src="../../assets/image/202008H5 Blast Off_MT/GIF_PNG/gif/fly.gif" style="z-index: 100" v-if="!fly3"
+             @click="showGif('fly3')">
+      </div>
+      <div class="spaceStill">
+        <img src="../../assets/image/202008H5 Blast Off_MT/StillObj/Still2_0.png">
+      </div>
+      <div class="fly3Button">
+        <img src="../../assets/image/202008H5 Blast Off_MT/Word/word_r_fly Comp 1_0.png"
+             :style="{zIndex: !fly3 ? 100 : 1}" @click="showGif('fly3')">
+      </div>
+      <div class="fuelButton">
+        <img src="../../assets/image/202008H5 Blast Off_MT/Word/word_fuel_0.png" v-if="walkers"
+             :style="{zIndex: !fuel ? 100 : 1}" @click="showGif('fuel')">
+      </div>
+      <div class="blastOffButton">
+        <img src="../../assets/image/202008H5 Blast Off_MT/Word/word_r_blast off Comp 1_0.png"
+             :style="{zIndex: !blastOff ? 100 : 1}" @click="showGif('blastOff')">
+      </div>
+      <div class="fireButton">
+        <img src="../../assets/image/202008H5 Blast Off_MT/Word/word_r_fire Comp 1_0.png"
+             :style="{zIndex: !fire ? 100 : 1}" @click="showGif('fire')">
+      </div>
+      <div class="rocketButton">
+        <img src="../../assets/image/202008H5 Blast Off_MT/Word/word_r_rocket Comp 1_0.png"
+             :style="{zIndex: !rocket ? 100 : 1}" @click="showGif('rocket')">
+      </div>
+      <div class="countdownButton">
+        <img src="../../assets/image/202008H5 Blast Off_MT/Word/word_r_countdown Comp 1_0.png"
+             :style="{zIndex: !countdown ? 100 : 1}" @click="showGif('countdown')">
+      </div>
+      <div class="helmetButton">
+        <img src="../../assets/image/202008H5 Blast Off_MT/Word/word_r_helmet Comp 1_0.png"
+             :style="{zIndex: !helmet ? 100 : 1}" @click="showGif('helmet')">
+      </div>
+      <div class="exploreButton">
+        <img src="../../assets/image/202008H5 Blast Off_MT/Word/word_explore Comp 1_0.png" v-if="walkers"
+             :style="{zIndex: !explore ? 100 : 1}" @click="showGif('explore')">
+      </div>
+      <div class="astronautButton">
+        <img src="../../assets/image/202008H5 Blast Off_MT/Word/word_r_astronaut Comp 1_0.png"
+             :style="{zIndex: !astronaut ? 100 : 1}" @click="showGif('astronaut')">
+      </div>
+      <div class="spaceSuitButton">
+        <img src="../../assets/image/202008H5 Blast Off_MT/Word/word_r_space suit Comp 1_0.png"
+             :style="{zIndex: !spaceSuit ? 100 : 1}" @click="showGif('spaceSuit')">
+      </div>
+      <div class="scientistButton">
+        <img src="../../assets/image/202008H5 Blast Off_MT/Word/word_scientist Comp 1_0.png" v-if="walkers"
+             :style="{zIndex: !scientist ? 100 : 1}" @click="showGif('scientist')">
+      </div>
+      <div class="radioButton">
+        <img src="../../assets/image/202008H5 Blast Off_MT/Word/word_radio Comp 1_0.png" v-if="walkers"
+             :style="{zIndex: !radio ? 100 : 1}" @click="showGif('radio')">
+      </div>
+    </div>
+    <div v-else-if="this.unit === 'Space' && this.part === 'part2'">
+      <img src="../../assets/image/202007H5 Water Parks_MT/Runner_BG/BG_00000.png"
+           style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;"/>
+      <div class="dry">
+        <img src="../../assets/image/202007H5 Water Parks_MT/GIF_PNG/png/dry_00000.png" v-if="dry" @click="walkers&&showGif('dry')">
+        <img src="../../assets/image/202007H5 Water Parks_MT/GIF_PNG/gif/dry.gif" style="z-index: 100" v-if="!dry"
+             @click="showGif('dry')">
+      </div>
+    </div>
     <div v-else>
     <img src="../../assets/image/H5 Thing/Walker_BG/bg_0.png"
          style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;">
@@ -3676,6 +3788,18 @@ export default {
         },
         local:'',
         cardType:'default',
+        fly3:true,
+        rocket:true,
+        fuel:true,
+        blastOff:true,
+        fire:true,
+        countdown:true,
+        helmet:true,
+        astronaut:true,
+        scientist:true,
+        explore:true,
+        spaceSuit:true,
+        radio:true,
         dry:true,
         float:true,
         lazy:true,
@@ -4249,6 +4373,184 @@ export default {
     position: fixed;
     background-color: #44ccc2;
     z-index: 201;
+  }
+
+  .exploreButton img {
+    width: 7%;
+    left: 84%;
+    top: 23%;
+    position: absolute;
+  }
+
+  .fuelButton img {
+    width: 5%;
+    left: 8%;
+    top: 83%;
+    position: absolute;
+  }
+
+  .astronautButton img {
+    width: 8%;
+    left: 60%;
+    top: 60%;
+    position: absolute;
+  }
+
+  .blastOffButton img {
+    width: 8%;
+    left: 20%;
+    top: 78%;
+    position: absolute;
+  }
+
+  .countdownButton img {
+    width: 8%;
+    left: 49%;
+    top: 9%;
+    position: absolute;
+  }
+
+  .fireButton img {
+    width: 5%;
+    left: 30%;
+    top: 62%;
+    position: absolute;
+  }
+
+  .fly3Button img {
+    width: 4%;
+    left: 18%;
+    top: 2%;
+    position: absolute;
+  }
+
+  .helmetButton img {
+    width: 7%;
+    left: 59%;
+    top: 25%;
+    position: absolute;
+  }
+
+  .rocketButton img {
+    width: 7%;
+    left: 22%;
+    top: 16%;
+    position: absolute;
+  }
+
+  .spaceSuitButton img {
+    width: 8%;
+    left: 82%;
+    top: 61%;
+    position: absolute;
+  }
+
+  .radioButton img {
+    width: 6%;
+    left: 79%;
+    top: 90%;
+    position: absolute;
+  }
+
+  .scientistButton img {
+    width: 8%;
+    left: 50%;
+    top: 91%;
+    position: absolute;
+  }
+
+  .spaceStill img {
+    width: 37%;
+    height: 55%;
+    left: 60%;
+    top: 45%;
+    position: absolute;
+  }
+
+  .astronaut img {
+    width: 23%;
+    left: 59%;
+    top: 24%;
+    position: absolute;
+  }
+
+  .blastOff img {
+    width: 38%;
+    left: -1%;
+    top: -11%;
+    position: absolute;
+  }
+
+  .countdown img {
+    width: 12%;
+    left: 35%;
+    top: 9%;
+    position: absolute;
+  }
+
+  .explore img {
+    width: 13%;
+    left: 84%;
+    top: 24%;
+    position: absolute;
+  }
+
+  .fire img {
+    width: 29%;
+    left: 5%;
+    top: 3%;
+    position: absolute;
+  }
+
+  .fly3 img {
+    width: 12%;
+    left: 6%;
+    top: 0%;
+    position: absolute;
+  }
+
+  .fuel img {
+    width: 35%;
+    left: -2%;
+    top: 5%;
+    position: absolute;
+  }
+
+  .helmet img {
+    width: 23%;
+    left: 59%;
+    top: 24%;
+    position: absolute;
+  }
+
+  .radio img {
+    width: 17%;
+    left: 79%;
+    top: 72%;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .rocket img {
+    width: 29%;
+    left: 5%;
+    top: 3%;
+    position: absolute;
+  }
+
+  .scientist img {
+    width: 15%;
+    left: 44%;
+    top: 50%;
+    position: absolute;
+  }
+
+  .spaceSuit img {
+    width: 7%;
+    left: 87%;
+    top: 44%;
+    position: absolute;
+    z-index: 1;
   }
 
   .lifeguardButton img {
@@ -10603,6 +10905,76 @@ export default {
   @media only screen and (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 3) ,
   (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 812px) and (max-width: 1023px){
+    .spaceSuit img{
+      width: 6%;
+      left: 87%;
+      top: 44%;
+      position: absolute;
+      z-index: 1;
+    }
+    .countdownButton img {
+      width: 10%;
+      left: 50%;
+      top: 14%;
+      position: absolute;
+    }
+    .spaceSuitButton img {
+      width: 9%;
+      left: 82%;
+      top: 59%;
+      position: absolute;
+    }
+    .helmet img {
+      width: 20%;
+      left: 61%;
+      top: 23%;
+      position: absolute;
+    }
+    .astronaut img {
+      width: 20%;
+      left: 61%;
+      top: 23%;
+      position: absolute;
+    }
+    .scientist img {
+      width: 13%;
+      left: 44%;
+      top: 49%;
+      position: absolute;
+    }
+    .explore img {
+      width: 11%;
+      left: 84%;
+      top: 24%;
+      position: absolute;
+    }
+    .radio img {
+      width: 15%;
+      left: 80%;
+      top: 71%;
+      position: absolute;
+      z-index: 1;
+    }
+    .spaceStill img {
+      width: 30%;
+      height: 55%;
+      left: 65%;
+      top: 45%;
+      position: absolute;
+    }
+    .fly3 img {
+      width: 14%;
+      left: 5%;
+      top: 0%;
+      position: absolute;
+    }
+    .fuel img {
+      width: 36%;
+      height: 99%;
+      left: -2%;
+      top: 6%;
+      position: absolute;
+    }
     .swimsuit img {
       width: 10%;
       left: 25%;
@@ -13492,6 +13864,153 @@ export default {
   @media only screen and (min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 1024px) and (max-width: 1600px){
+    .helmet img {
+      width: 26%;
+      left: 58%;
+      top: 32%;
+      position: absolute;
+    }
+    .countdownButton img {
+      width: 12%;
+      left: 49%;
+      top: 14%;
+      position: absolute;
+    }
+    .exploreButton img {
+      width: 9%;
+      left: 80%;
+      top: 28%;
+      position: absolute;
+    }
+    .explore img {
+      width: 13%;
+      left: 84%;
+      top: 27%;
+      position: absolute;
+    }
+    .helmetButton img {
+      width: 9%;
+      left: 58%;
+      top: 35%;
+      position: absolute;
+    }
+    .astronautButton img {
+      width: 10%;
+      left: 58%;
+      top: 61%;
+      position: absolute;
+    }
+    .spaceSuit img {
+      width: 9%;
+      left: 86%;
+      top: 45%;
+      position: absolute;
+      z-index: 1;
+    }
+    .spaceSuitButton img {
+      width: 11%;
+      left: 81%;
+      top: 60%;
+      position: absolute;
+    }
+    .astronaut img {
+      width: 26%;
+      left: 58%;
+      top: 32%;
+      position: absolute;
+    }
+    .scientist img {
+      width: 17%;
+      left: 41%;
+      top: 59%;
+      position: absolute;
+    }
+    .scientistButton img {
+      width: 10%;
+      left: 56%;
+      top: 92%;
+      position: absolute;
+    }
+    .radioButton img {
+      width: 7%;
+      left: 79%;
+      top: 89%;
+      position: absolute;
+    }
+    .radio img {
+      width: 23%;
+      left: 77%;
+      top: 73%;
+      position: absolute;
+      z-index: 1;
+    }
+    .spaceStill img {
+      width: 35%;
+      height: 55%;
+      left: 62%;
+      top: 45%;
+      position: absolute;
+    }
+    .fly3Button img {
+      width: 5%;
+      left: 20%;
+      top: 4%;
+      position: absolute;
+    }
+    .fly3 img {
+      width: 17%;
+      left: 3%;
+      top: 3%;
+      position: absolute;
+    }
+    .rocketButton img {
+      width: 8%;
+      left: 22%;
+      top: 35%;
+      position: absolute;
+    }
+    .fireButton img {
+      width: 6%;
+      left: 31%;
+      top: 67%;
+      position: absolute;
+    }
+    .blastOffButton img {
+      width: 10%;
+      left: 21%;
+      top: 83%;
+      position: absolute;
+    }
+    .fuelButton img {
+      width: 6%;
+      left: 8%;
+      top: 83%;
+      position: absolute;
+    }
+    .rocket img {
+      width: 30.5%;
+      left: 5.5%;
+      top: 26.5%;
+      position: absolute;
+    }
+    .fire img {
+      width: 30.5%;
+      left: 5.5%;
+      top: 26.5%;
+      position: absolute;
+    }
+    .blastOff img {
+      width: 40%;
+      left: 0%;
+      top: 15%;
+      position: absolute;
+    }
+    .fuel img {
+      width: 37%;
+      left: -2%;
+      top: 28%;
+      position: absolute;
+    }
     .splash1Button img {
       width: 10%;
       left: 60%;

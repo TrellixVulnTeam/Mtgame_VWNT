@@ -5,8 +5,8 @@
 		</span>
 		<transition name="fades">
 			<div class="contain" v-if="!resume3">
-				<img src="../../assets/image/rightback.png"  @click="gomemu" class="backbutton"/>
-				 <img src="../../assets/image/help.png"  @click="help" class="helpbutton"/>
+				<img src="../../assets/image/rightback.png"  @click="$tips(true);gomemu()" class="backbutton"/>
+				 <img src="../../assets/image/help.png"  @click="$tips(true);help()" class="helpbutton"/>
 				<transition name="fade1">
 					<div v-if="onef" style="width: 100%; height: 90%;display:block;position: absolute;">
 						<img src="../../assets/image/seasons.png"  style="width: 100%; z-index: -1;background-color: #ffd55f; height: 100%;display:block;position: absolute;" v-if="bgimg[0].active">
@@ -110,7 +110,7 @@
           <img src="../../assets/image/1-1bar.png" style="width: 100%;bottom: 0;height: 100%;" v-if="bgimg[22].active">
           <img src="../../assets/image/2-2bar.png" style="width: 100%;bottom: 0;height: 100%;" v-if="bgimg[23].active">
 					<span class="fontsize">Read the word and circle the correct picture.</span>
-					<div @click="changesett">
+					<div @click="$tips(true);changesett()">
 						<img src="../../assets/image/season-pause.png" class=" repeat" v-if="bgimg[0].active">
 						<img src="../../assets/image/4-pause.png" class=" repeat" v-if="bgimg[1].active">
 						<img src="../../assets/image/5-pause.png" class=" repeat" v-if="bgimg[2].active">
@@ -146,7 +146,7 @@
 				<img src="../../assets/image/boss-rule2.png" style="height: 100%;"  v-if="ruleimg8"/>
 			</button>
 			<div class="withcolor">
-				<div class="close"  @click="pop">
+				<div class="close"  @click="$tips(true);pop()">
 					<img src="../../assets/image/cloce.png">
 				</div>
 				<img class="animapng7" src="http://monkeytown.monkeytree.com.hk/image/g.gif">
