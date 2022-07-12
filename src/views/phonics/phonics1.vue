@@ -188,10 +188,10 @@
             <img src="../../assets/image/sound_off.png" style="width: 30%; height: 10%;" v-show="!show" @click="sound" />
           </div>
           <div style="margin-top: 5px;">
-            <img src="../../assets/image/resume.png" style="width: 30%; height: 10%;" @click="changesett">
+            <img src="../../assets/image/resume.png" style="width: 30%; height: 10%;" @click="$tips(true);changesett()">
           </div>
           <!-- <div style="margin-top: 5px;">
-						<div><img src="../../assets/image/home.png" style="width: 30%; height: 10%;"  @click="gomemu"></div>
+						<div><img src="../../assets/image/home.png" style="width: 30%; height: 10%;"  @click="$tips(true);gomemu()"></div>
 					</div> -->
         </div>
       </div>

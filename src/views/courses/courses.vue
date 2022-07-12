@@ -17,7 +17,7 @@
               <!-- <img src="../../assets/image/coming-soon.png" class="comingsoon"  v-if="index"> -->
               <div style="position: relative;">
                 <!-- <div  class=" couresgrey" v-if="index" style="width: 100%;height: 100%;"></div> -->
-                <a class="abgcgreen" @click="chartroom1(courseList[0])">
+                <a class="abgcgreen" @click="$tips(true);chartroom1(courseList[0])">
                   <div class="l-box">
                     <img src="../../assets/image/greenmonkey2.png" style="width: 100%;position:relative;display: block">
 
@@ -55,7 +55,7 @@
             <h2 class="chartroom-title"><span>CHAT ROOM</span></h2>
             <div class="chart-room">
               <div class="left-walkers"  v-for="(li,i) in levelsList">
-                <a @click="walkers1(li)">
+                <a @click="$tips(true);walkers1(li)">
                   <img src="../../assets/image/selectW.png" v-if="i===0" class="sizeselect">
                   <img src="../../assets/image/selectR.png" v-if="i===1" class="sizeselect">
                   <!--<div class="progress">-->
@@ -85,35 +85,35 @@
             <div class="walkers-room">
               <!--<div class="box1" v-for="(li,index) in unitsList" :key="index" v-if="li.name==='Clothes'">-->
               <!--<a  style="min-height: 100px;" >-->
-              <!--<img src="../../assets/image/moon/s4.png"  style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">-->
+              <!--<img src="../../assets/image/moon/s4.png"  style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="$tips(true);walkersunit(li)">-->
               <!--<img src="../../assets/image/comingsoon.png" v-show="!li.status" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;z-index: 99;">-->
               <!--<p><i><img src="../../assets/image/star_frame.png"></i>{{li.stars}}</p>-->
               <!--</a>-->
               <!--</div>-->
               <!--<div class="box1" v-for="(li,index) in unitsList" :key="index" v-if="li.name==='Theme Park'">-->
               <!--<a  style="min-height: 100px;" >-->
-              <!--<img src="../../assets/image/moon/s5.png" v-if="li.name==='Theme Park'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">-->
+              <!--<img src="../../assets/image/moon/s5.png" v-if="li.name==='Theme Park'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="$tips(true);walkersunit(li)">-->
               <!--<img src="../../assets/image/comingsoon.png" v-show="!li.status" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;z-index: 99;">-->
               <!--<p><i><img src="../../assets/image/star_frame.png"></i>{{li.stars}}</p>-->
               <!--</a>-->
               <!--</div>-->
               <!--<div class="box1" v-for="(li,index) in unitsList" :key="index" v-if="li.name==='Space'">-->
               <!--<a  style="min-height: 100px;" >-->
-              <!--<img src="../../assets/image/moon/s6.png" v-if="li.name==='Space'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">-->
+              <!--<img src="../../assets/image/moon/s6.png" v-if="li.name==='Space'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="$tips(true);walkersunit(li)">-->
               <!--<img src="../../assets/image/comingsoon.png" v-show="!li.status" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;z-index: 99;">-->
               <!--<p><i><img src="../../assets/image/star_frame.png"></i>{{li.stars}}</p>-->
               <!--</a>-->
               <!--</div>-->
               <!--<div class="box1" v-for="(li,index) in unitsList" :key="index" v-if="li.name==='My Body'">-->
               <!--<a  style="min-height: 100px;" >-->
-              <!--<img src="../../assets/image/moon/mybody.png" v-if="li.name==='My Body'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">-->
+              <!--<img src="../../assets/image/moon/mybody.png" v-if="li.name==='My Body'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="$tips(true);walkersunit(li)">-->
               <!--<img src="../../assets/image/comingsoon.png" v-show="!li.status" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;z-index: 99;">-->
               <!--<p><i><img src="../../assets/image/star_frame.png"></i>{{li.stars}}</p>-->
               <!--</a>-->
               <!--</div>-->
               <!--<div class="box1" v-for="(li,index) in unitsList" :key="index" v-if="li.name==='My Weekend'">-->
               <!--<a  style="min-height: 100px;" >-->
-              <!--<img src="../../assets/image/moon/myweekend.png" v-if="li.name==='My Weekend'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">-->
+              <!--<img src="../../assets/image/moon/myweekend.png" v-if="li.name==='My Weekend'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="$tips(true);walkersunit(li)">-->
               <!--<img src="../../assets/image/comingsoon.png" v-show="!li.status" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;z-index: 99;">-->
 
               <!--<p><i><img src="../../assets/image/star_frame.png"></i>{{li.stars}}</p>-->
@@ -121,7 +121,7 @@
               <!--</div>-->
               <!--<div class="box1" v-for="(li,index) in unitsList" :key="index" v-if="li.name==='Wild Animals'">-->
               <!--<a  style="min-height: 100px;" >-->
-              <!--<img src="../../assets/image/moon/wild-animals.png" v-if="li.name==='Wild Animals'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">-->
+              <!--<img src="../../assets/image/moon/wild-animals.png" v-if="li.name==='Wild Animals'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="$tips(true);walkersunit(li)">-->
               <!--<img src="../../assets/image/comingsoon.png" v-show="!li.status" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;z-index: 99;">-->
 
               <!--<p><i><img src="../../assets/image/star_frame.png"></i>{{li.stars}}</p>-->
@@ -129,7 +129,7 @@
               <!--</div>-->
               <!--<div class="box1" v-for="(li,index) in unitsList" :key="index" v-if="li.name==='Christmas'">-->
               <!--<a  style="min-height: 100px;" >-->
-              <!--<img src="../../assets/image/moon/christmas.png" v-if="li.name==='Christmas'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">-->
+              <!--<img src="../../assets/image/moon/christmas.png" v-if="li.name==='Christmas'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="$tips(true);walkersunit(li)">-->
               <!--<img src="../../assets/image/comingsoon.png" v-show="!li.status" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;z-index: 99;">-->
               <!--<p><i><img src="../../assets/image/star_frame.png"></i>{{li.stars}}</p>-->
               <!--</a>-->
@@ -137,100 +137,100 @@
 
               <!--<div class="box1" v-for="(li,index) in unitsList" :key="index" v-if="li.name==='shopping'">-->
               <!--<a  style="min-height: 100px;">-->
-              <!--<img src="../../assets/image/moon/letsgoshopping.png" v-if="li.name==='shopping'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">-->
+              <!--<img src="../../assets/image/moon/letsgoshopping.png" v-if="li.name==='shopping'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="$tips(true);walkersunit(li)">-->
               <!--<img src="../../assets/image/comingsoon.png" v-show="!li.status"  style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;z-index: 99;">-->
               <!--<p><i><img src="../../assets/image/star_frame.png"></i>{{li.stars}}</p>-->
               <!--</a>-->
               <!--</div>-->
               <!--<div class="box1" v-for="(li,index) in unitsList" :key="index" v-if="li.name==='My Community'">-->
               <!--<a  style="min-height: 100px;">-->
-              <!--<img src="../../assets/image/moon/mycommunity.png" v-if="li.name==='My Community'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">-->
+              <!--<img src="../../assets/image/moon/mycommunity.png" v-if="li.name==='My Community'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="$tips(true);walkersunit(li)">-->
               <!--<img src="../../assets/image/comingsoon.png" v-show="!li.status"  style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;z-index: 99;">-->
               <!--<p><i><img src="../../assets/image/star_frame.png"></i>{{li.stars}}</p>-->
               <!--</a>-->
               <!--</div>-->
               <!--<div class="box1" v-for="(li,index) in unitsList" :key="index" v-if="li.name==='Fun Time!'">-->
               <!--<a  style="min-height: 100px;">-->
-              <!--<img src="../../assets/image/moon/funtime.png" v-if="li.name==='Fun Time!'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">-->
+              <!--<img src="../../assets/image/moon/funtime.png" v-if="li.name==='Fun Time!'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="$tips(true);walkersunit(li)">-->
               <!--<img src="../../assets/image/comingsoon.png" v-show="!li.status"  style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;z-index: 99;">-->
               <!--<p><i><img src="../../assets/image/star_frame.png"></i>{{li.stars}}</p>-->
               <!--</a>-->
               <!--</div>-->
               <!--<div class="box1" v-for="(li,index) in unitsList" :key="index" v-if="li.name==='My Home'">-->
               <!--<a  style="min-height: 100px;">-->
-              <!--<img src="../../assets/image/moon/myhome.png" v-if="li.name==='My Home'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">-->
+              <!--<img src="../../assets/image/moon/myhome.png" v-if="li.name==='My Home'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="$tips(true);walkersunit(li)">-->
               <!--<img src="../../assets/image/comingsoon.png" v-show="!li.status"  style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;z-index: 99;">-->
               <!--<p><i><img src="../../assets/image/star_frame.png"></i>{{li.stars}}</p>-->
               <!--</a>-->
               <!--</div>-->
               <!--<div class="box1" v-for="(li,index) in unitsList" :key="index" v-if="li.name==='Our World'">-->
               <!--<a  style="min-height: 100px;">-->
-              <!--<img src="../../assets/image/moon/ourworld.png" v-if="li.name==='Our World'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">-->
+              <!--<img src="../../assets/image/moon/ourworld.png" v-if="li.name==='Our World'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="$tips(true);walkersunit(li)">-->
               <!--<img src="../../assets/image/comingsoon.png" v-show="!li.status"  style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;z-index: 99;">-->
               <!--<p><i><img src="../../assets/image/star_frame.png"></i>{{li.stars}}</p>-->
               <!--</a>-->
               <!--</div>-->
               <!--<div class="box1"  v-for="(li,index) in unitsList" :key="index" v-if="li.name==='Fairy Tales'">-->
               <!--<a  style="min-height: 100px;">-->
-              <!--<img src="../../assets/image/moon/fairytales.png" v-if="li.name==='Fairy Tales'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">-->
+              <!--<img src="../../assets/image/moon/fairytales.png" v-if="li.name==='Fairy Tales'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="$tips(true);walkersunit(li)">-->
               <!--<img src="../../assets/image/comingsoon.png" v-show="!li.status" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;z-index: 99;">-->
               <!--<p><i><img src="../../assets/image/star_frame.png"></i>{{li.stars}}</p>-->
               <!--</a>-->
               <!--</div>-->
               <!--<div class="box1" v-for="(li,index) in unitsList" :key="index" v-if="li.name==='School Life'">-->
               <!--<a  style="min-height: 100px;">-->
-              <!--<img src="../../assets/image/moon/schooltime.png"  v-if="li.name==='School Life'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">-->
+              <!--<img src="../../assets/image/moon/schooltime.png"  v-if="li.name==='School Life'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="$tips(true);walkersunit(li)">-->
               <!--<img src="../../assets/image/comingsoon.png" v-show="!li.status" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;z-index: 99;">-->
               <!--<p><i><img src="../../assets/image/star_frame.png"></i>{{li.stars}}</p>-->
               <!--</a>-->
               <!--</div>-->
               <!--<div class="box1" v-for="(li,index) in unitsList" :key="index" v-if="li.name==='Animals'">-->
               <!--<a  style="min-height: 100px;">-->
-              <!--<img src="../../assets/image/moon/animals.png"  v-if="li.name==='Animals'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">-->
+              <!--<img src="../../assets/image/moon/animals.png"  v-if="li.name==='Animals'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="$tips(true);walkersunit(li)">-->
               <!--<img src="../../assets/image/comingsoon.png" v-show="!li.status" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;z-index: 99;">-->
               <!--<p><i><img src="../../assets/image/star_frame.png"></i>{{li.stars}}</p>-->
               <!--</a>-->
               <!--</div>-->
               <!--<div class="box1" v-for="(li,index) in unitsList" :key="index" v-if="li.name==='Family Time'">-->
               <!--<a  style="min-height: 100px;">-->
-              <!--<img src="../../assets/image/moon/myfamily.png"  v-if="li.name==='Family Time'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">-->
+              <!--<img src="../../assets/image/moon/myfamily.png"  v-if="li.name==='Family Time'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="$tips(true);walkersunit(li)">-->
               <!--<img src="../../assets/image/comingsoon.png" v-show="!li.status" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;z-index: 99;">-->
               <!--<p><i><img src="../../assets/image/star_frame.png"></i>{{li.stars}}</p>-->
               <!--</a>-->
               <!--</div>-->
               <!--<div class="box1" v-for="(li,index) in unitsList" :key="index" v-if="li.name==='Holidays'">-->
               <!--<a  style="min-height: 100px;">-->
-              <!--<img src="../../assets/image/moon/holidays.png"  v-if="li.name==='Holidays'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">-->
+              <!--<img src="../../assets/image/moon/holidays.png"  v-if="li.name==='Holidays'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="$tips(true);walkersunit(li)">-->
               <!--<img src="../../assets/image/comingsoon.png" v-show="!li.status" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;z-index: 99;">-->
               <!--<p><i><img src="../../assets/image/star_frame.png"></i>{{li.stars}}</p>-->
               <!--</a>-->
               <!--</div>-->
               <div class="box1" v-for="(li,index) in unitsList" :key="index">
                 <a  style="min-height: 100px;">
-                  <img src="../../assets/image/moon/mealtime.png" v-if="li.name==='Meal Time'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">
-                  <img src="../../assets/image/moon/onthefarm.png" v-if="li.name==='On the Farm'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">
-                  <img src="../../assets/image/moon/s1.png" v-if="li.name==='Seasons'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">
-                  <img src="../../assets/image/moon/s2.png" v-if="li.name==='Transportation'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">
-                  <img src="../../assets/image/moon/s3.png" v-if="li.name==='Bugs'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">
-                  <img src="../../assets/image/moon/s4.png" v-if="li.name==='Clothes'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">
-                  <img src="../../assets/image/moon/s5.png" v-if="li.name==='Theme Park'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">
-                  <img src="../../assets/image/moon/s6.png" v-if="li.name==='Space'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">
-                  <img src="../../assets/image/moon/mybody.png" v-if="li.name==='My Body'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">
-                  <img src="../../assets/image/moon/myweekend.png" v-if="li.name==='My Weekend'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">
-                  <img src="../../assets/image/moon/wild-animals.png" v-if="li.name==='Wild Animals'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">
-                  <img src="../../assets/image/moon/christmas.png" v-if="li.name==='Christmas'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">
-                  <img src="../../assets/image/moon/letsgoshopping.png" v-if="li.name==='Let\'s Go Shopping'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">
-                  <img src="../../assets/image/moon/mycommunity.png" v-if="li.name==='My Community'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">
-                  <img src="../../assets/image/moon/funtime.png" v-if="li.name==='Fun Time!'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">
-                  <img src="../../assets/image/moon/myhome.png" v-if="li.name==='My Home'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">
-                  <img src="../../assets/image/moon/ourworld.png" v-if="li.name==='Our World'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">
-                  <img src="../../assets/image/moon/fairytales.png" v-if="li.name==='Fairy Tales'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">
-                  <img src="../../assets/image/moon/animals.png" v-if="li.name==='Animals'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">
-                  <img src="../../assets/image/moon/myfamily.png" v-if="li.name==='Family Time'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">
-                  <img src="../../assets/image/moon/holidays.png" v-if="li.name==='Holidays'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">
-                  <img src="../../assets/image/moon/Exploration.png" v-if="li.name==='Exploration'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">
-                  <img src="../../assets/image/moon/Summer Fun.png" v-if="li.name==='Summer Fun'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">
-                  <img src="../../assets/image/moon/schooltime.png" v-if="li.name==='School Time'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="walkersunit(li)">
+                  <img src="../../assets/image/moon/mealtime.png" v-if="li.name==='Meal Time'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="$tips(true);walkersunit(li)">
+                  <img src="../../assets/image/moon/onthefarm.png" v-if="li.name==='On the Farm'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="$tips(true);walkersunit(li)">
+                  <img src="../../assets/image/moon/s1.png" v-if="li.name==='Seasons'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="$tips(true);walkersunit(li)">
+                  <img src="../../assets/image/moon/s2.png" v-if="li.name==='Transportation'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="$tips(true);walkersunit(li)">
+                  <img src="../../assets/image/moon/s3.png" v-if="li.name==='Bugs'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="$tips(true);walkersunit(li)">
+                  <img src="../../assets/image/moon/s4.png" v-if="li.name==='Clothes'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="$tips(true);walkersunit(li)">
+                  <img src="../../assets/image/moon/s5.png" v-if="li.name==='Theme Park'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="$tips(true);walkersunit(li)">
+                  <img src="../../assets/image/moon/s6.png" v-if="li.name==='Space'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="$tips(true);walkersunit(li)">
+                  <img src="../../assets/image/moon/mybody.png" v-if="li.name==='My Body'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="$tips(true);walkersunit(li)">
+                  <img src="../../assets/image/moon/myweekend.png" v-if="li.name==='My Weekend'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="$tips(true);walkersunit(li)">
+                  <img src="../../assets/image/moon/wild-animals.png" v-if="li.name==='Wild Animals'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="$tips(true);walkersunit(li)">
+                  <img src="../../assets/image/moon/christmas.png" v-if="li.name==='Christmas'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="$tips(true);walkersunit(li)">
+                  <img src="../../assets/image/moon/letsgoshopping.png" v-if="li.name==='Let\'s Go Shopping'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="$tips(true);walkersunit(li)">
+                  <img src="../../assets/image/moon/mycommunity.png" v-if="li.name==='My Community'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="$tips(true);walkersunit(li)">
+                  <img src="../../assets/image/moon/funtime.png" v-if="li.name==='Fun Time!'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="$tips(true);walkersunit(li)">
+                  <img src="../../assets/image/moon/myhome.png" v-if="li.name==='My Home'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="$tips(true);walkersunit(li)">
+                  <img src="../../assets/image/moon/ourworld.png" v-if="li.name==='Our World'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="$tips(true);walkersunit(li)">
+                  <img src="../../assets/image/moon/fairytales.png" v-if="li.name==='Fairy Tales'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="$tips(true);walkersunit(li)">
+                  <img src="../../assets/image/moon/animals.png" v-if="li.name==='Animals'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="$tips(true);walkersunit(li)">
+                  <img src="../../assets/image/moon/myfamily.png" v-if="li.name==='Family Time'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="$tips(true);walkersunit(li)">
+                  <img src="../../assets/image/moon/holidays.png" v-if="li.name==='Holidays'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="$tips(true);walkersunit(li)">
+                  <img src="../../assets/image/moon/Exploration.png" v-if="li.name==='Exploration'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="$tips(true);walkersunit(li)">
+                  <img src="../../assets/image/moon/Summer Fun.png" v-if="li.name==='Summer Fun'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="$tips(true);walkersunit(li)">
+                  <img src="../../assets/image/moon/schooltime.png" v-if="li.name==='School Time'" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;" @click="$tips(true);walkersunit(li)">
                   <img src="../../assets/image/comingsoon.png" v-show="!li.status"  style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;z-index: 99;">
                 </a>
               </div>
@@ -247,18 +247,18 @@
         <img src="../../assets/image/walker_bar.png" style="width: 100%;bottom: 0;height: 100%;">
         <!-- <img src="../assets/image/runner_bar.png" style="width: 100%;bottom: 0;height: 100%;" v-if="levels"> -->
         <div>
-          <img :src=gameImage class="acstyle" @click="goinfo" />
+          <img :src=gameImage class="acstyle" @click="$tips(true);goinfo()" />
           <span class="fontsize leftmar" >{{firstName}}</span>
         </div>
         <div>
           <img src="../../assets/image/icon_coin.png" class="coinstyle">
           <span class="fontsize leftmar2">{{sum}}</span>
         </div>
-         <div @click="back">
+         <div @click="$tips(true);back()">
            <img src="../../assets/image/Icon_back.png"  class="pause">
 
          </div>
-        <div @click="home">
+        <div @click="$tips(true);home()">
           <!-- <img src="../../assets/image/Icon_home0.png" class="repeat" v-if="action1"> -->
           <img src="../../assets/image/Icon_home.png" class="repeat">
         </div>
@@ -267,10 +267,10 @@
       <div class='popContainer' v-show="popp">
 
         <div class="withcolor">
-          <div class="close"  @click="pop">
+          <div class="close"  @click="$tips(true);pop()">
             <img src="../../assets/image/cloce.png">
           </div>
-          <button class="animapng7" @click="tohome(1)">
+          <button class="animapng7" @click="$tips(true);tohome(1)">
             <!--<img  src="../../assets/image/4-4p1.png" class="imgpart" >-->
             <img src="../../assets/image/moon/mealtime1.png" v-if="this.unitname==='Meal Time'"  class="imgpart">
             <img src="../../assets/image/moon/onthefarm1.png" v-if="this.unitname==='On the Farm'" class="imgpart">
@@ -299,7 +299,7 @@
             <img src="../../assets/image/moon/summerfun1.png" v-if="this.unitname==='Summer Fun'" class="imgpart">
             <img src="../../assets/image/moon/schooltime1.png" v-if="this.unitname==='School Time'" class="imgpart">
           </button>
-          <button class="animapng7" @click="tohome(2)">
+          <button class="animapng7" @click="$tips(true);tohome(2)">
             <img src="../../assets/image/moon/mealtime2.png" v-if="this.unitname==='Meal Time'"  class="imgpart">
             <img src="../../assets/image/moon/onthefarm2.png" v-if="this.unitname==='On the Farm'" class="imgpart">
             <img src="../../assets/image/moon/seasons2.png" v-if="this.unitname==='Seasons'" class="imgpart">

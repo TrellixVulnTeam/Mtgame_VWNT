@@ -6,25 +6,25 @@
 
       <transition name="fade1">
         <div style="width: 100%;height: 100%;">
-          <img src="../../assets/image/picture.png" class="backbutton" @click="gocard()" v-if="this.unit!=='Our World'&&this.unit!=='My Home'&&this.unit!=='Fun Time!'&&this.unit!=='My Community'"/>
+          <img src="../../assets/image/picture.png" class="backbutton" @click="$tips(true);gocard()" v-if="this.unit!=='Our World'&&this.unit!=='My Home'&&this.unit!=='Fun Time!'&&this.unit!=='My Community'"/>
           <img :src="title" class="toptitle">
           <div>
             <div class="cardleft">
-              <img src="../../assets/image/cardleft1.png" @click="turncard('left')" style="width: 40%;top: 40%;position: relative;">
+              <img src="../../assets/image/cardleft1.png" @click="$tips(true);turncard('left')" style="width: 40%;top: 40%;position: relative;">
             </div>
 
             <div class="cardlist">
               <div class="eightCard">
-                <div class="list" v-for="li in list" :key="li.id" @click="startpop(li)" >
+                <div class="list" v-for="li in list" :key="li.id" @click="$tips(true);startpop(li)" >
                   <img :src=li.img class="card-img1">
                   <img src="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/front.png" class="card-img2">
                 </div>
               </div>
-                  <h2 @click="jump()" class="jump">Games</h2>
+                  <h2 @click="$tips(true);jump()" class="jump">Games</h2>
             </div>
 
             <div class="cardright">
-              <img src="../../assets/image/cardright1.png" @click="turncard('right')" style="width: 40%;top: 40%;position: relative;">
+              <img src="../../assets/image/cardright1.png" @click="$tips(true);turncard('right')" style="width: 40%;top: 40%;position: relative;">
             </div>
 
           </div>
@@ -36,29 +36,29 @@
         <img src="../../assets/image/walker_bar.png" style="width: 100%;bottom: 0;height: 100%;">
 
         <div>
-          <img :src=gameImage class="acstyle" @click="goinfo"/>
+          <img :src=gameImage class="acstyle" @click="$tips(true);goinfo()"/>
           <span class="fontsize leftmar">{{firstName}}</span>
         </div>
         <div>
           <img src="../../assets/image/icon_coin.png" class="coinstyle">
           <span class="fontsize leftmar2">{{sum}}</span>
         </div>
-        <div @click="back">
+        <div @click="$tips(true);back()">
 
           <img src="../../assets/image/Icon_back.png" class="pause">
         </div>
-        <div @click="home">
+        <div @click="$tips(true);home()">
 
           <img src="../../assets/image/Icon_home.png" class="repeat">
         </div>
       </div>
       <div class='popContainer' v-show="popp">
         <div class="withcolor">
-          <div class="close" @click="pop">
+          <div class="close" @click="$tips(true);pop()">
             <img src="../../assets/image/cloce2.png" style="z-index: 1;position: relative;">
           </div>
           <div class="cardleft2">
-            <img src="../../assets/image/cardleft.png" @click="turnpop('left')" style="width: 40%;top: 40%;position: relative;">
+            <img src="../../assets/image/cardleft.png" @click="$tips(true);turnpop('left')" style="width: 40%;top: 40%;position: relative;">
           </div>
           <p class="pstyle">{{ flashCardId }}/{{ flashCardCount }}</p>
           <button class="animapng1">
@@ -71,7 +71,7 @@
             <img src="../../assets/image/playsound.png" class="imgpart1">
           </button>
           <div class="cardright2">
-            <img src="../../assets/image/cardright.png" @click="turnpop('right')" style="width: 40%;top: 40%;position: relative;">
+            <img src="../../assets/image/cardright.png" @click="$tips(true);turnpop('right')" style="width: 40%;top: 40%;position: relative;">
           </div>
 
         </div>

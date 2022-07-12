@@ -2,7 +2,7 @@
   <div class="others">
     <!-- <div v-if="start" style="position: relative; width: 100%;height: 100%;">
       <img src="../../assets/image/otherbg.png" class="otherbg" />
-      <img src="../../assets/image/redback.png" @click="back()" style="position: absolute; width: 5%;top: 10px;left: 10px;z-index: 2;" />
+      <img src="../../assets/image/redback.png" @click="$tips(true);back()" style="position: absolute; width: 5%;top: 10px;left: 10px;z-index: 2;" />
       <div class="box">
         <button>
           <img src="../../assets/image/otherstart.png" style="width: 80%;" @click="open()">
@@ -16,7 +16,7 @@
       <!-- </div> -->
       <div style="width: 100%;height: 100%;position: relative;">
         <img src="../../assets/image/menubg.png" style="width: inherit;height: inherit;" />
-        <img src="../../assets/image/redback.png" @click="back()" style="position: absolute; width: 5%;top: 10px;left: 10px;z-index: 2;" />
+        <img src="../../assets/image/redback.png" @click="$tips(true);back()" style="position: absolute; width: 5%;top: 10px;left: 10px;z-index: 2;" />
       </div>
       <div class="box1">
         <button class="game1">

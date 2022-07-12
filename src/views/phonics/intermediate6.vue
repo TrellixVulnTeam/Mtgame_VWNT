@@ -7,8 +7,8 @@
 
     <transition name="fades">
       <div class="contain" v-if="!resume3">
-        <img src="../../assets/image/irightback.png"  @click="gomemu" class="backbutton"/>
-        <img src="../../assets/image/ihelp.png"  @click="help" class="helpbutton"/>
+        <img src="../../assets/image/irightback.png"  @click="$tips(true);gomemu()" class="backbutton"/>
+        <img src="../../assets/image/ihelp.png"  @click="$tips(true);help()" class="helpbutton"/>
         <transition name="fade1">
           <div v-if="onef" style="width: 100%; height: 90%;display:block;position: absolute;">
             <!--<img src="../../assets/image/phonicsbg.png"  style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;">-->
@@ -59,7 +59,7 @@
         <div class="settinglist">
           <img src="../../assets/image/interbar.png" style="width: 100%;bottom: 0;height: 100%;">
           <span class="fontsize">Listen to the word. Then, put the letters in the correct order.</span>
-          <div @click="changesett">
+          <div @click="$tips(true);changesett()">
             <img src="../../assets/image/interpause.png" class=" repeat">
           </div>
         </div>
@@ -71,7 +71,7 @@
         <img src="../../assets/image/p-rule.png" style="height: 100%;"/>
       </button>
       <div class="withcolor">
-        <div class="close"  @click="pop">
+        <div class="close"  @click="$tips(true);pop()">
           <img src="../../assets/image/pcloce.png">
         </div>
         <img class="animapng7" src="http://monkeytown.monkeytree.com.hk/image/intermediate6.gif">
@@ -87,10 +87,10 @@
             <img src="../../assets/image/sound_off.png" style="width: 30%; height: 10%;" v-show="!show"  @click="sound"/>
           </div>
           <div style="margin-top: 5px;">
-            <img src="../../assets/image/resume.png" style="width: 30%; height: 10%;" @click="changesett">
+            <img src="../../assets/image/resume.png" style="width: 30%; height: 10%;" @click="$tips(true);changesett()">
           </div>
           <!-- <div style="margin-top: 5px;" >
-                        <div><img src="../../assets/image/home.png" style="width: 30%; height: 10%;" @click="gomemu"></div>
+                        <div><img src="../../assets/image/home.png" style="width: 30%; height: 10%;" @click="$tips(true);gomemu()"></div>
                     </div> -->
         </div>
       </div>

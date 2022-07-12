@@ -4,7 +4,7 @@
 		<audio autoplay="autoplay" loop="loop" ref="MusicPlay" v-if="show" id="partmusic"><source
       src="../../assets/video/gamemusic.mp3"></audio>
 		</span>
-    <img src="../../assets/image/rightback.png" @click="gomemu" class="backbutton"/>
+    <img src="../../assets/image/rightback.png" @click="$tips(true);gomemu()" class="backbutton"/>
     <div v-if="zhezhao" @click="showGif()"
          style="width: 100%; height: 100%;display:block;position: absolute;opacity: 0.5;z-index: 100;background-color: black">
     </div>

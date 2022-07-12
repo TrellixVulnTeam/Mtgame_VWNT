@@ -7,12 +7,12 @@
     <audio id="audiomp3" autoplay="autoplay" style="display: none;" controls>
       <source :src="bigsound" v-show="video">
     </audio>
-    <img src="../../assets/image/eback.png" @click="back" class="backbutton" />
-    <!--<img src="../../assets/image/booksounds.png" @click="help" class="helpbutton" />-->
+    <img src="../../assets/image/eback.png" @click="$tips(true);back()" class="backbutton" />
+    <!--<img src="../../assets/image/booksounds.png" @click="$tips(true);help()" class="helpbutton" />-->
     <img src="../../assets/image/ebook.png" style="width: 100%;height: 100%; z-index: -1;position: absolute;">
     <div class="container" v-show="onef">
       <div id="out" style="width: 100%;height: 100%;position: absolute;z-index: 2;display: none;"></div>
-      <img src="../../assets/image/booksounds.png" @click="help" class="helpbutton"  v-show="showsound"/>
+      <img src="../../assets/image/booksounds.png" @click="$tips(true);help()" class="helpbutton"  v-show="showsound"/>
       <div class="album" :class="{'album--open': isOpenedTop,'album--close': isCloseddTop}" style="pointer-events: painted;">
         <div class="album__paper" :style="{zIndex: isOpenedTop ? 0 : items.length + 1}" :class="{'open': isOpenedTop,'albem_center':!isOpenedTop}"
              @click="topOpen(isOpenedTop)">
@@ -60,8 +60,8 @@
 
         <div class="buttons" v-if="buttons">
           <!-- <img src="../../assets/image/Icon_home0.png" class="repeat" v-if="action1"> -->
-          <img src="../../assets/image/blue_restart0.png" class="buttonsimg" @click="reset()">
-          <img src="../../assets/image/blue_next0.png" class="buttonsimg2" @click="next()">
+          <img src="../../assets/image/blue_restart0.png" class="buttonsimg" @click="$tips(true);reset()">
+          <img src="../../assets/image/blue_next0.png" class="buttonsimg2" @click="$tips(true);next()">
         </div>
 
       </div>

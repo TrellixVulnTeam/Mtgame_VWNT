@@ -2,13 +2,13 @@
   <div class="ebooks">
     <div class="contain" id="container">
       <img src="../../assets/image/ebook.png" style="width: 100%; height: 100%;display:block;position: absolute;">
-      <img src="../../assets/image/eback.png" @click="back()" class="backbutton" />
+      <img src="../../assets/image/eback.png" @click="$tips(true);back()" class="backbutton" />
       <!-- chosegame -->
       <transition name="fade1">
         <div v-if="showbooks" style="width: 100%;height: 100%;">
           <button class="books" :style="{backgroundColor: booklevel==='Phonics' ? '#FF9201' : '#00B73B'}">{{booklevel}}</button>
           <div class="box1">
-            <img v-for="li in listBook" :src='li.bg' @click="gochoice(li)">
+            <img v-for="li in listBook" :src='li.bg' @click="$tips(true);gochoice(li)">
            <!-- <img src="../../assets/image/ebeginnerA.png"  @click="gochoice()">
             <img src="../../assets/image/elittleA.png" @click="gochoice()">
             <img src="../../assets/image/elittleB.png" @click="gochoice()">
@@ -35,14 +35,14 @@
         <img src="../../assets/image/storybar.png" style="width: 100%;bottom: 0;height: 100%;">
         <!-- <img src="../assets/image/runner_bar.png" style="width: 100%;bottom: 0;height: 100%;" v-if="levels"> -->
         <div>
-          <img :src=gameImage class="acstyle" @click="goinfo" />
+          <img :src=gameImage class="acstyle" @click="$tips(true);goinfo()" />
           <span class="fontsize leftmar">{{firstName}}</span>
         </div>
         <div>
           <img src="../../assets/image/icon_coin.png" class="coinstyle">
           <span class="fontsize leftmar2">{{sum}}</span>
         </div>
-        <div @click="home">
+        <div @click="$tips(true);home()">
           <!-- <img src="../../assets/image/Icon_home0.png" class="repeat" v-if="action1"> -->
           <img src="../../assets/image/storyicon.png" class="repeat">
         </div>
@@ -299,7 +299,7 @@
     font-size: 2rem;
   }
 
-  
+
 
   .leftmar {
     left: 13%

@@ -497,7 +497,7 @@
 					<img src="../../assets/image/game-course03.png"  class="pause"> -->
         <!-- 	<img src="../../assets/image/game-course03.png"  class=" pause" v-if="!action"> -->
         <!-- </div> -->
-        <div @click="home">
+        <div @click="$tips(true);home()">
           <!-- <img src="../../assets/image/Icon_home0.png" class="repeat" v-if="action1"> -->
           <img src="../../assets/image/Icon_home.png" class="repeat">
         </div>

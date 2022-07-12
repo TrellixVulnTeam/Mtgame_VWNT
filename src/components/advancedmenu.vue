@@ -17,7 +17,7 @@
           <img :src=star style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="!stars[0].twostart">
           <img :src=lightstar class="imgposit1" v-if="stars[0].threestart">
           <img :src=star class="imgposit1" v-if="!stars[0].threestart">
-          <img @click="change" src="../assets/image/inter11.png" style="position: sticky;height: 50%;margin-top: 30%;margin-left: 3%">
+          <img @click="$tips(true);change()" src="../assets/image/inter11.png" style="position: sticky;height: 50%;margin-top: 30%;margin-left: 3%">
         </div>
         <div class="listimg">
           <img :src=lightstar class="imgposit" v-if="stars[1].onestart">
@@ -26,7 +26,7 @@
           <img :src=star style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="!stars[1].twostart">
           <img :src=lightstar class="imgposit1" v-if="stars[1].threestart">
           <img :src=star class="imgposit1" v-if="!stars[1].threestart">
-          <img @click="change2" src="../assets/image/inter21.png" style="position: sticky;height: 49%;margin-top: 28%;margin-left: 3%">
+          <img @click="$tips(true);change2()" src="../assets/image/inter21.png" style="position: sticky;height: 49%;margin-top: 28%;margin-left: 3%">
         </div>
         <div class="listimg">
           <img :src=lightstar class="imgposit" v-if="stars[2].onestart">
@@ -35,7 +35,7 @@
           <img :src=star style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="!stars[2].twostart">
           <img :src=lightstar class="imgposit1" v-if="stars[2].threestart">
           <img :src=star class="imgposit1" v-if="!stars[2].threestart">
-          <img @click="change3" src="../assets/image/inter31.png" style="position: sticky;height: 50%;margin-top: 28%;margin-left: 3%">
+          <img @click="$tips(true);change3()" src="../assets/image/inter31.png" style="position: sticky;height: 50%;margin-top: 28%;margin-left: 3%">
         </div>
 <!--        yes or no收-->
 <!--        <div class="listimg">-->
@@ -45,7 +45,7 @@
 <!--          <img :src=star style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="!stars[3].twostart">-->
 <!--          <img :src=lightstar class="imgposit1" v-if="stars[3].threestart">-->
 <!--          <img :src=star class="imgposit1" v-if="!stars[3].threestart">-->
-<!--          <img @click="change4" src="../assets/image/inter41.png" style="position: sticky;height: 50%;margin-top: 30%;margin-left: 4%">-->
+<!--          <img @click="$tips(true);change4" src="../assets/image/inter41.png" style="position: sticky;height: 50%;margin-top: 30%;margin-left: 4%">-->
 <!--        </div>-->
 <!--        letter scrabble收-->
 <!--        <div class="listimg">-->
@@ -55,7 +55,7 @@
 <!--          <img :src=star style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="!stars[4].twostart">-->
 <!--          <img :src=lightstar class="imgposit1" v-if="stars[4].threestart">-->
 <!--          <img :src=star class="imgposit1" v-if="!stars[4].threestart">-->
-<!--          <img @click="change5" src="../assets/image/inter51.png" style="position: sticky;height: 50%;margin-top: 30%;margin-left: 3%">-->
+<!--          <img @click="$tips(true);change5" src="../assets/image/inter51.png" style="position: sticky;height: 50%;margin-top: 30%;margin-left: 3%">-->
 <!--        </div>-->
 <!--        circle the sound-->
         <div class="listimg">
@@ -65,7 +65,7 @@
           <img :src=star style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="!stars[5].twostart">
           <img :src=lightstar class="imgposit1" v-if="stars[5].threestart">
           <img :src=star class="imgposit1" v-if="!stars[5].threestart">
-          <img @click="change6" src="../assets/image/inter61.png" style="position: sticky;height: 50%;margin-top: 30%;margin-left: 3%">
+          <img @click="$tips(true);change6()" src="../assets/image/inter61.png" style="position: sticky;height: 50%;margin-top: 30%;margin-left: 3%">
         </div>
 <!--        odd word out收-->
 <!--        <div class="listimg">-->
@@ -75,7 +75,7 @@
 <!--          <img :src=star style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="!stars[6].twostart">-->
 <!--          <img :src=lightstar class="imgposit1" v-if="stars[6].threestart">-->
 <!--          <img :src=star class="imgposit1" v-if="!stars[6].threestart">-->
-<!--          <img @click="change7" src="../assets/image/inter71.png" style="position: sticky;height: 50%;margin-top: 30%;margin-left: 3%">-->
+<!--          <img @click="$tips(true);change7" src="../assets/image/inter71.png" style="position: sticky;height: 50%;margin-top: 30%;margin-left: 3%">-->
 <!--        </div>-->
         <div class="listimg">
           <img :src=lightstar class="imgposit" v-if="stars[7].onestart">
@@ -84,7 +84,7 @@
           <img :src=star style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="!stars[7].twostart">
           <img :src=lightstar class="imgposit1" v-if="stars[7].threestart">
           <img :src=star class="imgposit1" v-if="!stars[7].threestart">
-          <img @click="change8" src="../assets/image/inter81.png" style="position: sticky;height: 50%;margin-top: 30%;margin-left: 3%">
+          <img @click="$tips(true);change8()" src="../assets/image/inter81.png" style="position: sticky;height: 50%;margin-top: 30%;margin-left: 3%">
         </div>
         <div class="listimg">
           <img :src=lightstar class="imgposit" v-if="stars[8].onestart">
@@ -93,7 +93,7 @@
           <img :src=star style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="!stars[8].twostart">
           <img :src=lightstar class="imgposit1" v-if="stars[8].threestart">
           <img :src=star class="imgposit1" v-if="!stars[8].threestart">
-          <img @click="change9" src="../assets/image/inter101.png" style="position: sticky;height: 50%;margin-top: 30%;margin-left: 3%">
+          <img @click="$tips(true);change9()" src="../assets/image/inter101.png" style="position: sticky;height: 50%;margin-top: 30%;margin-left: 3%">
         </div>
         <div class="listimg bosimg">
           <img :src=lightstar class="imgposit" v-if="stars[9].onestart">
@@ -102,7 +102,7 @@
           <img :src=star style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="!stars[9].twostart">
           <img :src=lightstar class="imgposit1" v-if="stars[9].threestart">
           <img :src=star class="imgposit1" v-if="!stars[9].threestart">
-          <img @click="change10" src="../assets/image/inter91.png" style="position: sticky;height: 50%;margin-top: 30%;margin-left: 3%">
+          <img @click="$tips(true);change10()" src="../assets/image/inter91.png" style="position: sticky;height: 50%;margin-top: 30%;margin-left: 3%">
         </div>
 
 
@@ -112,17 +112,17 @@
         <img src="../assets/image/abar.png" style="width: 100%;bottom: 0;height: 100%;">
 
         <div>
-          <img :src=gameImage class="acstyle" @click="goinfo" />
+          <img :src=gameImage class="acstyle" @click="$tips(true);goinfo()" />
           <span class="fontsize leftmar">{{firstName}}</span>
         </div>
         <div>
           <img src="../assets/image/icon_coin.png" class="coinstyle">
           <span class="fontsize leftmar2">{{sum}}</span>
         </div>
-        <div @click="routerabout">
+        <div @click="$tips(true);routerabout()">
           <img src="../assets/image/adHome.png" class="repeat">
         </div>
-        <div @click="back">
+        <div @click="$tips(true);back()">
           <img src="../assets/image/adBack.png"  class="pause" >
         </div>
       </div>
@@ -140,7 +140,7 @@
         <!--<img src="../assets/image/boss-rule2.png" style="height: 100%;" v-if="ruleimg8" />-->
       </button>
       <div class="withcolor">
-        <div class="close" @click="pop">
+        <div class="close" @click="$tips(true);pop()">
           <img src="../assets/image/pcloce.png">
         </div>
         <button class="animapng7">
@@ -285,6 +285,7 @@
     },
     methods: {
       change() {
+        console.log(this.UnitsList);
         if (this.UnitsList.length != 0) {
           this.spanp = "Look at the picture and listen to the word. Then, select the missing sound.";
           setTimeout(() => {
@@ -719,6 +720,7 @@
     // document.body.removeEventListener('touchmove',this.bodyScroll,{passive: false});
     // },
     created() {
+      console.log(this.$route.query);
       this.loading = true;
       this.star = "http://monkeytown.monkeytree.com.hk/image/season-star2.png";
       this.lightstar = "http://monkeytown.monkeytree.com.hk/image/season-star.png";

@@ -111,7 +111,7 @@
               <img src="../../assets/image/ptop2.png">
               <button style="text-transform:uppercase" :style="{fontSize:level.length>10 ? '20px':'24px'}">{{level}}</button></h2>
             <div class="walkers-room">
-              <ul class="box1" v-for="(li,index) in phonicsDetailList" :key="index" @click="walkersunit(li)">
+              <ul class="box1" v-for="(li,index) in phonicsDetailList" :key="index" @click="$tips(true);walkersunit(li)">
                 <li>
                   <img src="../../assets/image/plist3.png" v-if="index%2===0" style="  width: 92%;height: 100%; left: 4%; top: 0;">
                   <img src="../../assets/image/plist4.png" v-if="index%2!==0" style="  width: 92%;height: 100%; left: 4%; top: 0;">
@@ -144,10 +144,10 @@
               <img src="../../assets/image/ptop3.png">
               <button style="text-transform:uppercase" :style="{fontSize:level.length>10 ? '20px':'24px'}">{{level}}</button></h2>
             <div class="walkers-room">
-              <ul class="box1" v-for="(li,index) in phonicsDetailList" :key="index" @click="walkersunit(li)">
+              <ul class="box1" v-for="(li,index) in phonicsDetailList" :key="index" @click="$tips(true);walkersunit(li)">
                 <li>
-                  <img src="../../assets/image/plist5.png" v-if="index%2==0" style="  width: 92%;height: 100%; left: 4%; top: 0;">
-                  <img src="../../assets/image/plist6.png" v-if="index%2!=0" style="  width: 92%;height: 100%; left: 4%; top: 0;">
+                  <img src="../../assets/image/plist5.png" v-if="index%2===0" style="  width: 92%;height: 100%; left: 4%; top: 0;">
+                  <img src="../../assets/image/plist6.png" v-if="index%2!==0" style="  width: 92%;height: 100%; left: 4%; top: 0;">
 
                   <!-- <img src="../../assets/image/comingsoon.png" v-show="!li.status" style="position: absolute; width: 105%;height: 101%; left: -2%; top: 0;z-index: 99;"> -->
                   <button class="walkerh3"  style="color:#4e5098;">

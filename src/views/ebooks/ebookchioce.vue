@@ -2,7 +2,7 @@
   <div class="choiceebook">
     <div class="contain" >
       <img src="../../assets/image/ebook1.png" style="width: 100%; height: 100%;display:block;position: absolute;">
-      <img src="../../assets/image/eback.png" @click="back()" class="backbutton" />
+      <img src="../../assets/image/eback.png" @click="$tips(true);back()" class="backbutton" />
 
 
       <!-- walkers -->
@@ -11,7 +11,7 @@
             <button class="books" v-bind:class="{ ebooslength: ebooslengthall}" :style="{backgroundColor:booktitleColor}">{{this.booklevel}}</button>
             <div class="box1">
               <div style="padding:  0px 2% 0px 2%; width: 20%;" v-for="(li,l) in listBookName">
-              <img class="imglist"  :src='li.head_img'  @click="godemo(li,l)"  @load="loaded" >
+              <img class="imglist"  :src='li.head_img'  @click="$tips(true);godemo(li,l)"  @load="loaded" >
              <!-- <img src="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/get-the-mud-off.png"  @click="godemo()">
               <img src="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/glen-the-slug.png">
               <img src="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/helen-hen's-eggs.png">
@@ -33,14 +33,14 @@
         <img src="../../assets/image/storybar.png" style="width: 100%;bottom: 0;height: 100%;">
         <!-- <img src="../assets/image/runner_bar.png" style="width: 100%;bottom: 0;height: 100%;" v-if="levels"> -->
         <div>
-          <img :src=gameImage class="acstyle" @click="goinfo" />
+          <img :src=gameImage class="acstyle" @click="$tips(true);goinfo()" />
           <span class="fontsize leftmar">{{firstName}}</span>
         </div>
         <div>
           <img src="../../assets/image/icon_coin.png" class="coinstyle">
           <span class="fontsize leftmar2">{{sum}}</span>
         </div>
-        <div @click="home">
+        <div @click="$tips(true);home()">
           <!-- <img src="../../assets/image/Icon_home0.png" class="repeat" v-if="action1"> -->
           <img src="../../assets/image/storyicon.png" class="repeat">
         </div>

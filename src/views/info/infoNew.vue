@@ -4,20 +4,20 @@
       <img src="../../assets/image/main_bg.png" style="width: 100%; height: 100%;display:block;position: absolute;">
       <div v-if="!onef" style="width: 100%;height: 85%;display: block;">
         <div class="withcolor">
-          <div class="close" @click="back">
+          <div class="close" @click="$tips(true);back()">
             <img src="../../assets/image/cloce.png">
           </div>
           <div v-if="seleinfo" class="seleinput">
             <div class="cicleimg">
               <img :src=gameImage class="cicleimgstyle">
-              <img src="../../assets/image/add.png" class="addimg" @click="seletimg">
+              <img src="../../assets/image/add.png" class="addimg" @click="$tips(true);seletimg()">
             </div>  <!-- @keyup="firstName1 = check(firstName1)" -->
             <div class="infomesse">
               <P style="text-align: left;"><span class="inputspan">NAME:</span><span><input type="text"
                                                                                             v-model="firstName1"
                                                                                             name="username"
                                                                                             class="inputu"
-                                                                                            @keyup="firstName1 = check(firstName1)"
+                                                                                            @keyup="$tips(true);firstName1 = check(firstName1)"
                                                                                             maxlength="10"/></span></P>
               <P style="text-align: left;"><span class="inputspan">CODE:</span><span><input type="text" name="code"
                                                                                             class="inputu"
@@ -25,7 +25,7 @@
                                                                                             disabled="disabled"/></span>
               </P>
               <div class="save1">
-                <button @click="save1" v-bind:class="{changewi:changewidth1}">SAVE</button>
+                <button @click="$tips(true);save1()" v-bind:class="{changewi:changewidth1}">SAVE</button>
               </div>
             </div>
           </div>
@@ -33,7 +33,7 @@
             <div class="cicleimg1">
               <img :src=gameImage1 class="cicleimgstyle">
               <div class="save1">
-                <button @click="save2" v-bind:class="{changewi:changewidth2}">SAVE</button>
+                <button @click="$tips(true);save2()" v-bind:class="{changewi:changewidth2}">SAVE</button>
               </div>
             </div>
             <div class="infoimg">
@@ -51,7 +51,7 @@
 			<transition name="fade1"> -->
       <div v-if="onef" style="width: 100%;height: 85%;position: relative;display: block;">
         <div class="lefticon">
-          <div class="bluecicle" @click="settinfo">
+          <div class="bluecicle" @click="$tips(true);settinfo()">
             <img :src=gameImage class="imgstyle">
           </div>
           <img src="../../assets/image/bluebottom.png" class="imgBstyle">
@@ -60,10 +60,10 @@
               {{firstName}}</p>
           </div>
           <div class="logoutsty1">
-            <button class="buttonsty" @click="switchs">SWITCH PLAYER</button>
+            <button class="buttonsty" @click="$tips(true);switchs()">SWITCH PLAYER</button>
           </div>
           <div class="logoutsty">
-            <button class="buttonsty" @click="logout">LOG OUT</button>
+            <button class="buttonsty" @click="$tips(true);logout()">LOG OUT</button>
           </div>
           <h3 class="title1" v-if="local === 'cn'"><span class="title"  @click="PrivacyPolicy('service')">用户协议</span>和<span class="title" @click="PrivacyPolicy('Privacy')">隐私声明</span></h3>
 <!--          <h3 class="title1"><a class="title" target="_blank" href="http://103.218.241.33/monkeytreeApp/www2/privacyhk.html">隱私政策</a></h3>-->
@@ -71,10 +71,10 @@
         <div class="rightmenu">
           <div class="topMenu">
             <div class="menu1">
-              <button class="buttonsty" @click="changeBcolo1">{{courseList[0].name}}</button>
+              <button class="buttonsty" @click="$tips(true);changeBcolo1()">{{courseList[0].name}}</button>
             </div>
             <div :class="{menu2:!page2 || page2&&chatorphonics,menu2Change:page2&&!chatorphonics}">
-              <button class="buttonsty" @click="changeBcolo2">{{courseList[1].name}}</button>
+              <button class="buttonsty" @click="$tips(true);changeBcolo2()">{{courseList[1].name}}</button>
               <img src="../../assets/image/rightarrow.png" class="spanimg2" v-if="page2&&!chatorphonics">
               <button class="buttonsty opacity" v-if="page2&&!chatorphonics">{{level}}</button>
             </div>
@@ -85,13 +85,13 @@
             <div class="listmemu" v-if="chatorphonics">
               <!--<span v-if="page1" v-bind:class="{opciay:opciay1}" @click="section1">{{course}}</span>-->
               <!--<span v-if="page2"><img src="../../assets/image/rightarrow.png" class="spanimg"></span>-->
-              <span v-if="page2" v-bind:class="{opciay:opciay2}" @click="section2">{{level}}</span>
+              <span v-if="page2" v-bind:class="{opciay:opciay2}" @click="$tips(true);section2()">{{level}}</span>
               <!--<span v-if="page6"><img src="../../assets/image/rightarrow.png" class="spanimg"></span>-->
               <!--<span v-if="page6" v-bind:class="{opciay:opciay6}" @click="section3">{{unitname}}</span>-->
               <span v-if="page3"><img src="../../assets/image/rightarrow.png" class="spanimg"></span>
-              <span v-if="page3" v-bind:class="{opciay:opciay3}" @click="section3">{{unitname}}</span>
+              <span v-if="page3" v-bind:class="{opciay:opciay3}" @click="$tips(true);section3()">{{unitname}}</span>
               <span v-if="page4"><img src="../../assets/image/rightarrow.png" class="spanimg"></span>
-              <span v-if="page4" v-bind:class="{opciay:opciay4}" @click="section4">{{menuname}}</span>
+              <span v-if="page4" v-bind:class="{opciay:opciay4}" @click="$tips(true);section4()">{{menuname}}</span>
             </div>
             <div class="listmemu" v-if="!chatorphonics">
               <!--<span v-if="page1" v-bind:class="{opciay:opciay1}" @click="section1">{{course}}</span>-->
@@ -100,14 +100,14 @@
               <!--<span v-if="page6"><img src="../../assets/image/rightarrow.png" class="spanimg"></span>-->
               <!--<span v-if="page6" v-bind:class="{opciay:opciay6}" @click="sectionp3">{{unitname}}</span>-->
               <span v-if="page3"><img src="../../assets/image/rightarrow.png" class="spanimg"></span>
-              <span v-if="page3" v-bind:class="{opciay:opciay3}" @click="sectionp3">{{unitname}}</span>
+              <span v-if="page3" v-bind:class="{opciay:opciay3}" @click="$tips(true);sectionp3()">{{unitname}}</span>
               <span v-if="page4"><img src="../../assets/image/rightarrow.png" class="spanimg"></span>
-              <span v-if="page4" v-bind:class="{opciay:opciay4}" @click="sectionp4">{{menuname}}</span>
+              <span v-if="page4" v-bind:class="{opciay:opciay4}" @click="$tips(true);sectionp4()">{{menuname}}</span>
             </div>
             <!-- chat rppm -->
             <div class="chosedisplay" v-if="chatorphonics">
               <div class="choseclass" v-if="opciay1">
-                <div class="chosecourseL" @click="next2(li)" v-for="(li,i) in levelsList">
+                <div class="chosecourseL" @click="$tips(true);next2(li)" v-for="(li,i) in levelsList">
                   <!--<p class="levels">{{li.name}}</p>-->
                   <img src="../../assets/image/selectW.png" v-if="i===0" style="width: 90%;">
                   <img src="../../assets/image/selectR.png" v-if="i===1" style="width: 90%;">
@@ -126,7 +126,7 @@
                 <div class="infoimg1">
                   <!-- 	<img src="../../assets/image/BGselect.png"> -->
                   <ul>
-                    <li class="listimg1" @click="next3(li)" v-for="li in unitsList">
+                    <li class="listimg1" @click="$tips(true);next3(li)" v-for="li in unitsList">
                       <!-- <img src="../../assets/image/BGselect.png"  > -->
                       <div class="neirong">
                         <!--<p class="unit">{{li.unit_name}}</p>-->
@@ -144,7 +144,7 @@
                 <!--<ul>-->
                 <!--<li class="listimg1">-->
                 <div class="neirong">
-                  <button class="animapng7" @click="tohome(1)">
+                  <button class="animapng7" @click="$tips(true);tohome(1)">
                     <!--<img  src="../../assets/image/4-4p1.png" class="imgpart" >-->
                     <img src="../../assets/image/moon/mealtime1.png" v-if="this.unitname==='MEAL TIME'" class="imgpart">
                     <img src="../../assets/image/moon/onthefarm1.png" v-if="this.unitname==='ON THE FARM'"
@@ -183,7 +183,7 @@
                     <img src="../../assets/image/moon/holidays1.png" v-if="this.unitname==='Holidays'" class="imgpart">
 
                   </button>
-                  <button class="animapng7" @click="tohome(2)">
+                  <button class="animapng7" @click="$tips(true);tohome(2)">
                     <img src="../../assets/image/moon/mealtime2.png" v-if="this.unitname==='MEAL TIME'" class="imgpart">
                     <img src="../../assets/image/moon/onthefarm2.png" v-if="this.unitname==='ON THE FARM'"
                          class="imgpart">
@@ -221,7 +221,7 @@
                     <img src="../../assets/image/moon/holidays2.png" v-if="this.unitname==='Holidays'" class="imgpart">
 
                   </button>
-                  <button class="animapng7" @click="tohome(3)">
+                  <button class="animapng7" @click="$tips(true);tohome(3)">
                     <img src="../../assets/image/moon/mealtime3.png" v-if="this.unitname==='MEAL TIME'" class="imgpart">
                     <img src="../../assets/image/moon/onthefarm3.png" v-if="this.unitname==='ON THE FARM'"
                          class="imgpart">
@@ -268,7 +268,7 @@
                 <div class="infoimg1">
                   <!-- 	<img src="../../assets/image/BGselect.png"> -->
                   <ul>
-                    <li class="listimg2" @click="next4(li)" v-for="(li,index) in menu" :key="index">
+                    <li class="listimg2" @click="$tips(true);next4(li)" v-for="(li,index) in menu" :key="index">
                       <!-- <img src="../../assets/image/BGselect.png"  > -->
                       <div class="neirong">
                         <p class="unitname">{{li.name}}</p>
@@ -286,7 +286,7 @@
                       </div>
 
                     </li>
-                    <li class="listimg2" @click="next5(li)" v-for="li in menuboss">
+                    <li class="listimg2" @click="$tips(true);next5(li)" v-for="li in menuboss">
                       <!-- <img src="../../assets/image/BGselect.png"  > -->
                       <div class="neirong">
                         <p class="unitname">{{li.part_name}}</p>
@@ -357,17 +357,17 @@
             <div class="phonicsLevel" v-if="!chatorphonics&&opciay1 || !chatorphonics&&page2">
               <p class="phonicsL">{{ categoriesName }}</p>
               <p class="phonicsText">{{ categoriesText }}</p>
-              <img src="../../assets/image/cardleft.png" class="cardLeft" @click="cardLeft" v-if="opciay2 && categoriesName !== 'Performance Report'">
-              <img src="../../assets/image/cardright.png" class="cardRight" @click="cardRight" v-if="opciay2 && categoriesName !== 'Performance Report'">
+              <img src="../../assets/image/cardleft.png" class="cardLeft" @click="$tips(true);cardLeft()" v-if="opciay2 && categoriesName !== 'Performance Report'">
+              <img src="../../assets/image/cardright.png" class="cardRight" @click="$tips(true);cardRight()" v-if="opciay2 && categoriesName !== 'Performance Report'">
             </div>
 
             <div class="chosedisplay" v-if="!chatorphonics">
               <div  v-if="opciay1" style="width: 95%;display: inline-block">
                 <div class="choicephonics" v-for="(li,index) in phonicsList" :key='index'>
-                  <img src="../../assets/image/beginner.png" @click="pnext2(li)" style="width: 90%;" v-if="index===0">
-                  <img src="../../assets/image/intermediate.png" @click="pnext21(li)" style="width: 90%;"
+                  <img src="../../assets/image/beginner.png" @click="$tips(true);pnext2(li)" style="width: 90%;" v-if="index===0">
+                  <img src="../../assets/image/intermediate.png" @click="$tips(true);pnext21(li)" style="width: 90%;"
                        v-if="index===1">
-                  <img src="../../assets/image/advance.png" style="width: 90%;" @click="pnext22(li)" v-if="index===2">
+                  <img src="../../assets/image/advance.png" style="width: 90%;" @click="$tips(true);pnext22(li)" v-if="index===2">
                   <!--<div class="progress" >-->
                   <img src="../../assets/image/completed.png" v-if="li.complete"
                        style="width: 80%;margin: 0 10%;z-index: 2;bottom:-6%;position: absolute;left:0;">
@@ -460,10 +460,10 @@
                 <div class="categories"  v-if="categoriesName === 'Performance Report' ||[1,5,6,7].includes(categoryNum)">
                   <div v-if="[1,5].includes(categoryNum)">
                     <div class="cRight">
-                      <img src="../../assets/image/LearningReportRight.png" class="LearningReportRight" @click="cRight">
+                      <img src="../../assets/image/LearningReportRight.png" class="LearningReportRight" @click="$tips(true);cRight()">
                     </div>
                     <div class="cLeft">
-                      <img src="../../assets/image/LearningReportLeft.png" class="LearningReportLeft" @click="cLeft">
+                      <img src="../../assets/image/LearningReportLeft.png" class="LearningReportLeft" @click="$tips(true);cLeft()">
                     </div>
                   </div>
                   <!--overall-->
@@ -532,22 +532,22 @@
                   </div>
                   <!--Performance Report-->
                   <ul style="height: 100%;" v-if="categoriesName === 'Performance Report'">
-                    <li class="categoriesLi" @click="categories(1)">
+                    <li class="categoriesLi" @click="$tips(true);categories(1)">
                       Overall
                     </li>
-                    <li class="categoriesLi" @click="categories(5)">
+                    <li class="categoriesLi" @click="$tips(true);categories(5)">
                       Strengths
                     </li>
-                    <li class="categoriesLi" @click="categories(2)">
+                    <li class="categoriesLi" @click="$tips(true);categories(2)">
                       Exercise Completion Intervals
                     </li>
-                    <li class="categoriesLi" @click="categories(6)">
+                    <li class="categoriesLi" @click="$tips(true);categories(6)">
                       Improvement
                     </li>
-                    <li class="categoriesLi" @click="categories(4)">
+                    <li class="categoriesLi" @click="$tips(true);categories(4)">
                       Scores for Key Areas
                     </li>
-                    <li class="categoriesLi" @click="categories(7)">
+                    <li class="categoriesLi" @click="$tips(true);categories(7)">
                       Exercise History
                     </li>
                   </ul>
@@ -597,7 +597,7 @@
                     <div class="improvementList" v-for="(li,index) in improvement" :key='index'>
                       <div class="improvementId">{{index+1}}</div>
                       <div class="improvementLetter">{{li.name}}</div>
-                      <div class="improvementButton" @click="review(li)">Let's Review</div>
+                      <div class="improvementButton" @click="$tips(true);review(li)">Let's Review</div>
                       <div class="improvementPercent">{{li.average}}%</div>
                     </div>
                   </div>
@@ -609,13 +609,13 @@
                 <!--Scores for key areas-->
                 <div class="areasDiv" v-if="categoryNum === 4">
                   <div class="areasButton">
-                    <div class="areasButton1" :style="symbolNub ==='1' ? symbolColor:symbolDefaultColor" @click="areas('Vocabulary')">Vocabulary</div>
-                    <div class="areasButton1" :style="symbolNub ==='2' ? symbolColor:symbolDefaultColor" @click="areas('Spelling')">Spelling</div>
-                    <div class="areasButton1" :style="symbolNub ==='3' ? symbolColor:symbolDefaultColor" @click="areas('Writing')" v-if="level === 'Beginner'">Writing</div>
-                    <div class="areasButton1" :style="symbolNub ==='4' ? symbolColor:symbolDefaultColor" @click="areas('Letter')" v-if="level === 'Beginner'">Letter Recognition</div>
-                    <div class="areasButton1" :style="symbolNub ==='5' ? symbolColor:symbolDefaultColor" @click="areas('Sound')" v-if="level === 'Beginner'">Sound Recognition</div>
-                    <div class="areasButton1" :style="symbolNub ==='6' ? symbolColor:symbolDefaultColor" @click="areas('Reading')" v-if="level !== 'Beginner'">Reading</div>
-                    <div class="areasButton1" :style="symbolNub ==='7' ? symbolColor:symbolDefaultColor" @click="areas('Blend')" v-if="level !== 'Beginner'">Blend Recognition</div>
+                    <div class="areasButton1" :style="symbolNub ==='1' ? symbolColor:symbolDefaultColor" @click="$tips(true);areas('Vocabulary')">Vocabulary</div>
+                    <div class="areasButton1" :style="symbolNub ==='2' ? symbolColor:symbolDefaultColor" @click="$tips(true);areas('Spelling')">Spelling</div>
+                    <div class="areasButton1" :style="symbolNub ==='3' ? symbolColor:symbolDefaultColor" @click="$tips(true);areas('Writing')" v-if="level === 'Beginner'">Writing</div>
+                    <div class="areasButton1" :style="symbolNub ==='4' ? symbolColor:symbolDefaultColor" @click="$tips(true);areas('Letter')" v-if="level === 'Beginner'">Letter Recognition</div>
+                    <div class="areasButton1" :style="symbolNub ==='5' ? symbolColor:symbolDefaultColor" @click="$tips(true);areas('Sound')" v-if="level === 'Beginner'">Sound Recognition</div>
+                    <div class="areasButton1" :style="symbolNub ==='6' ? symbolColor:symbolDefaultColor" @click="$tips(true);areas('Reading')" v-if="level !== 'Beginner'">Reading</div>
+                    <div class="areasButton1" :style="symbolNub ==='7' ? symbolColor:symbolDefaultColor" @click="$tips(true);areas('Blend')" v-if="level !== 'Beginner'">Blend Recognition</div>
                   </div>
                   <div class="areas" >
                     <div  id="myChart" ref="m" style="width: 100%;height:100%;" class="echartStyle" />
@@ -682,7 +682,7 @@
 					<img src="../../assets/image/game-course03.png"  class="pause">
         <!-- 	<img src="../../assets/image/game-course03.png"  class=" pause" v-if="!action"> -->
         </div>
-        <div @click="home">
+        <div @click="$tips(true);home()">
           <!-- <img src="../../assets/image/Icon_home0.png" class="repeat" v-if="action1"> -->
           <img src="../../assets/image/Icon_home.png" class="repeat">
         </div>
@@ -888,6 +888,8 @@
     },
     methods: {
       review(li){
+        console.log(li);
+        console.log(this.level);
         if(this.level==="Intermediate"){
           this.$router.push({
             path: '/intermenu',
@@ -905,7 +907,7 @@
             path: '/advmenu',
             query: {
               unit: li.Name,
-              unitsId: li.id,
+              unitsId: this.unitsId,
               phonicsId: li.phonics_detail_id,
               style: 'game',
               level: this.level,
@@ -1189,6 +1191,8 @@
           }
 
         }
+        console.log(this.sliceMin,this.sliceMax);
+        console.log(this.overall.slice(this.sliceMin,this.sliceMax));
       },
       categories(str){
         if (str === 1){
