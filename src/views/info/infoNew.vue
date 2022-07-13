@@ -896,7 +896,7 @@
             query: {
               unit: li.Name,
               unitsId: li.id,
-              phonicsId: li.phonics_detail_id,
+              phonicsId: li.phonics_id,
               style: 'game',
               level: this.level,
               cources: 'PHONICS',
@@ -907,8 +907,8 @@
             path: '/advmenu',
             query: {
               unit: li.Name,
-              unitsId: this.unitsId,
-              phonicsId: li.phonics_detail_id,
+              unitsId: li.id,
+              phonicsId: li.phonics_id,
               style: 'game',
               level: this.level,
               cources: 'PHONICS',
@@ -920,7 +920,7 @@
             query: {
               unit: li.Name,
               unitsId: li.id,
-              phonicsId: li.phonics_detail_id,
+              phonicsId: li.phonics_id,
               style: 'game',
               level: this.level,
               cources: 'PHONICS',
