@@ -756,7 +756,7 @@
       },
       changeBcolo2() {
         if (this.phonics == 0) {
-          alertMsg3("Active Phonics Student Only");
+          alertImg2(this.$axios.defaults.baseURL2);
           setTimeout((function () {
             alertFram.style.display = "none";
           }), 1500)

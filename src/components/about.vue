@@ -1,6 +1,6 @@
 <template>
 	<div v-bind:class="{'twomenu':resume,'about':!resume}">
-		<div @click="sound">
+		<div @click="$tips(true);sound()">
 			<img src="../assets/image/sound_on.png" style="width: 30%; height: 10%;" v-show="!show" />
 			<img src="../assets/image/sound_off.png" style="width: 30%; height: 10%;" v-show="show" />
 		</div>
@@ -24,7 +24,7 @@
 				id:4,
 				page:1,
 				type:'about',
-			
+
 			}
 		},
 		methods: {
@@ -35,19 +35,19 @@
 					this.show=false;
 					localStorage.setItem("audiomusic", "true");
 				}else{
-					
+
 					audio.pause();
 					this.show=true;
 					localStorage.setItem("audiomusic", "false");
 				}
 			},
-			
+
 		},
 		created() { //生命周期里接收参数
 			this.id = this.$route.query.id; //接受参数关键代码
 			this.page = this.$route.query.page;
 			this.type = this.$route.query.type;
-	
+
 			if(localStorage.getItem('audiomusic')=="false"){
 				this.show=true;
 			}else{
@@ -110,17 +110,6 @@
 			padding-top: 23%;
 		}
 	}
-
-	@media screen and (min-width: 1024px) {
-		.about {
-			padding-top: 24%;
-		}
-
-		.twomenu {
-			padding-top: 28%;
-		}
-	}
-
 	@media screen and (min-width: 812px) and (max-width:1023px) {
 		.about {
 			padding-top: 10%;
@@ -130,4 +119,18 @@
 			padding-top: 14%;
 		}
 	}
+  @media screen and (min-width: 1024px)and(max-width: 1600px) {
+    .about {
+      padding-top: 24%;
+    }
+
+    .twomenu {
+      padding-top: 28%;
+    }
+  }
+  @media screen and (min-width: 1600px){
+    .twomenu {
+      padding-top: 18%;
+    }
+  }
 </style>

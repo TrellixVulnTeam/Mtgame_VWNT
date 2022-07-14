@@ -561,15 +561,7 @@
                       <div class="historyLabel" >Score</div>
                     </div>
                   <div class="historyList">
-                    <table align="center" width="100%" cellspacing="6" cellpadding="0"
-                           style="color: #007BB8; margin-top: -5px;">
-<!--                      <tr>-->
-<!--                        <th>Date</th>-->
-<!--                        <th>Date</th>-->
-<!--                        <th>Date</th>-->
-<!--                        <th>Date</th>-->
-<!--                        <th>Date</th>-->
-<!--                      </tr>-->
+                    <table style="color: #007BB8; margin-top: -5px;">
                     <tr v-for="(li,index) in history" :key="index" >
                       <td class="historyLi" style="width: 10%;">{{li.date}}</td>
                       <td class="historyLi" style="width: 10%;left: -2%;position: relative;">{{li.letter}}</td>
@@ -678,7 +670,7 @@
           <img src="../../assets/image/icon_coin.png" class="coinstyle">
           <span class="fontsize leftmar2">{{sum}}</span>
         </div>
-        <div @click="back">
+        <div @click="$tips(true);back()">
 					<img src="../../assets/image/game-course03.png"  class="pause">
         <!-- 	<img src="../../assets/image/game-course03.png"  class=" pause" v-if="!action"> -->
         </div>
@@ -1360,13 +1352,13 @@
         }
       },
       changeBcolo2() {
-        this.loading = true;
-        if (this.phonics == 0) {
-          alertMsg3("Active Phonics Student Only");
+        if (this.phonics === 0) {
+          alertImg2(this.$axios.defaults.baseURL2);
           setTimeout((function () {
             alertFram.style.display = "none";
           }), 1500)
         } else {
+          this.loading = true;
           this.strengthsTemp=[];
           this.backgrorang = true;
           this.backgrgreen = false;
@@ -4076,6 +4068,9 @@
     .menu1 {
       border-radius: 10px;
     }
+    .menu2 {
+      border-radius: 10px;
+    }
     .AreasP {
       color: white;
       display: inline-block;
@@ -6498,7 +6493,7 @@
       margin-top: -8%;
     }
     .bottommemu {
-      margin-top: -11%;
+      margin-top: -14%;
     }
     .iClock {
       width: 28%;

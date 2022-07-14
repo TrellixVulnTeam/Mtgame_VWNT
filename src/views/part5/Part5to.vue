@@ -221,8 +221,8 @@
 			<div class="about" v-if="resume">
 				<div class="twomenu">
 					<div>
-						<img src="../../assets/image/sound_on.png" style="width: 30%; height: 10%;" v-show="show"  @click="sound"/>
-						<img src="../../assets/image/sound_off.png" style="width: 30%; height: 10%;" v-show="!show"  @click="sound"/>
+						<img src="../../assets/image/sound_on.png" style="width: 30%; height: 10%;" v-show="show"  @click="$tips(true);sound()"/>
+						<img src="../../assets/image/sound_off.png" style="width: 30%; height: 10%;" v-show="!show"  @click="$tips(true);sound()"/>
 					</div>
 					<div style="margin-top: 5px;">
 						<img src="../../assets/image/resume.png" style="width: 30%; height: 10%;" @click="$tips(true);changesett()">
@@ -1449,9 +1449,7 @@
       margin-top: 20%;
       font-size: 3rem;
     }
-    .twomenu {
-      padding-top: 14%;
-    }
+
     .fontsize {
       font-family: pepper;
       color: white;

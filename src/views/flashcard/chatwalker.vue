@@ -3284,12 +3284,70 @@
       </div>
     </div>
     <div v-else-if="this.unit === 'Space' && this.part === 'part2'">
-      <img src="../../assets/image/202007H5 Water Parks_MT/Runner_BG/BG_00000.png"
+      <img src="../../assets/image/202008H5 In Space_MT/Runner_BG/Background_0.png"
            style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;"/>
-      <div class="dry">
-        <img src="../../assets/image/202007H5 Water Parks_MT/GIF_PNG/png/dry_00000.png" v-if="dry" @click="walkers&&showGif('dry')">
-        <img src="../../assets/image/202007H5 Water Parks_MT/GIF_PNG/gif/dry.gif" style="z-index: 100" v-if="!dry"
-             @click="showGif('dry')">
+      <div class="alien">
+        <img src="../../assets/image/202008H5 In Space_MT/GIF_PNG/png/alien_00000.png" v-if="alien" @click="showGif('alien')">
+        <img src="../../assets/image/202008H5 In Space_MT/GIF_PNG/gif/alien.gif" style="z-index: 100" v-if="!alien"
+             @click="showGif('alien')">
+      </div>
+      <div class="asteroid">
+        <img src="../../assets/image/202008H5 In Space_MT/GIF_PNG/png/asteroid Comp 1_00000.png" v-if="asteroid" @click="showGif('asteroid')">
+        <img src="../../assets/image/202008H5 In Space_MT/GIF_PNG/gif/asteroid.gif" style="z-index: 100" v-if="!asteroid"
+             @click="showGif('asteroid')">
+      </div>
+      <div class="bright">
+        <img src="../../assets/image/202008H5 In Space_MT/GIF_PNG/png/bright Comp 1_00000.png" v-if="bright" @click="showGif('bright')">
+        <img src="../../assets/image/202008H5 In Space_MT/GIF_PNG/gif/bright.gif" style="z-index: 100" v-if="!bright"
+             @click="showGif('bright')">
+      </div>
+      <div class="dark">
+        <img src="../../assets/image/202008H5 In Space_MT/GIF_PNG/png/dark Comp 1_00000.png" v-if="dark" @click="showGif('dark')">
+        <img src="../../assets/image/202008H5 In Space_MT/GIF_PNG/gif/dark.gif" style="z-index: 100" v-if="!dark"
+             @click="showGif('dark')">
+      </div>
+      <div class="earth">
+        <img src="../../assets/image/202008H5 In Space_MT/GIF_PNG/png/earth Comp 1_00000.png" v-if="earth" @click="showGif('earth')">
+        <img src="../../assets/image/202008H5 In Space_MT/GIF_PNG/gif/earth.gif" style="z-index: 100" v-if="!earth"
+             @click="showGif('earth')">
+      </div>
+      <div class="moon">
+        <img src="../../assets/image/202008H5 In Space_MT/GIF_PNG/png/moon Comp 1_00000.png" v-if="moon" @click="showGif('moon')">
+        <img src="../../assets/image/202008H5 In Space_MT/GIF_PNG/gif/moon.gif" style="z-index: 100" v-if="!moon"
+             @click="showGif('moon')">
+      </div>
+      <div class="planet">
+<!--        <img src="../../assets/image/202008H5 In Space_MT/GIF_PNG/png/planet Comp 1_00000.png" v-if="planet" @click="showGif('planet')">-->
+        <img src="../../assets/image/202008H5 In Space_MT/GIF_PNG/gif/planet.gif" style="z-index: 100" v-if="!planet"
+             @click="showGif('planet')">
+      </div>
+      <div class="planet2">
+        <img src="../../assets/image/202008H5 In Space_MT/GIF_PNG/png/planet2.png">
+      </div>
+      <div class="spaceStation">
+        <img src="../../assets/image/202008H5 In Space_MT/GIF_PNG/png/space station Comp 1_00000.png" v-if="spaceStation" @click="showGif('spaceStation')">
+        <img src="../../assets/image/202008H5 In Space_MT/GIF_PNG/gif/space station.gif" style="z-index: 100" v-if="!spaceStation"
+             @click="showGif('spaceStation')">
+      </div>
+      <div class="space">
+        <img src="../../assets/image/202008H5 In Space_MT/GIF_PNG/png/Space_00000.png" v-if="space" @click="showGif('space')">
+        <img src="../../assets/image/202008H5 In Space_MT/GIF_PNG/gif/Space.gif" style="z-index: 100" v-if="!space"
+             @click="showGif('space')">
+      </div>
+      <div class="star">
+        <img src="../../assets/image/202008H5 In Space_MT/GIF_PNG/png/star Comp 1_00000.png" v-if="star" @click="showGif('star')">
+        <img src="../../assets/image/202008H5 In Space_MT/GIF_PNG/gif/star.gif" style="z-index: 100" v-if="!star"
+             @click="showGif('star')">
+      </div>
+      <div class="sun">
+<!--        <img src="../../assets/image/202008H5 In Space_MT/GIF_PNG/png/sun Comp 1_00000.png" v-if="sun" @click="showGif('sun')">-->
+        <img src="../../assets/image/202008H5 In Space_MT/GIF_PNG/gif/sun.gif" style="z-index: 100" v-if="!sun"
+             @click="showGif('sun')">
+      </div>
+      <div class="ufo">
+<!--        <img src="../../assets/image/202008H5 In Space_MT/GIF_PNG/png/UFO Comp 1_00000.png" v-if="ufo" @click="showGif('ufo')">-->
+        <img src="../../assets/image/202008H5 In Space_MT/GIF_PNG/gif/UFO.gif" style="z-index: 100" v-if="!ufo"
+             @click="showGif('ufo')">
       </div>
     </div>
     <div v-else>
@@ -3785,9 +3843,47 @@ export default {
           waterSlide:require('../../assets/Flashcard Audio/ThemPark/water slide.mp3'),
           wavePool:require('../../assets/Flashcard Audio/ThemPark/wave pool.mp3'),
           wet:require('../../assets/Flashcard Audio/ThemPark/wet.mp3'),
+
+          //space
+          fly3:require('../../assets/Flashcard Audio/space/fly.mp3'),
+          rocket:require('../../assets/Flashcard Audio/space/rocket.mp3'),
+          fuel:require('../../assets/Flashcard Audio/space/fuel.mp3'),
+          blastOff:require('../../assets/Flashcard Audio/space/blast off.mp3'),
+          fire:require('../../assets/Flashcard Audio/space/fire.mp3'),
+          countdown:require('../../assets/Flashcard Audio/space/countdown.mp3'),
+          helmet:require('../../assets/Flashcard Audio/space/helmet.mp3'),
+          astronaut:require('../../assets/Flashcard Audio/space/astronaut.mp3'),
+          scientist:require('../../assets/Flashcard Audio/space/scientist.mp3'),
+          explore:require('../../assets/Flashcard Audio/space/explore.mp3'),
+          spaceSuit:require('../../assets/Flashcard Audio/space/spacesuit.mp3'),
+          radio:require('../../assets/Flashcard Audio/space/radio.mp3'),
+          alien:require('../../assets/Flashcard Audio/space/alien.mp3'),
+          asteroid:require('../../assets/Flashcard Audio/space/asteroid.mp3'),
+          bright:require('../../assets/Flashcard Audio/space/bright.mp3'),
+          dark:require('../../assets/Flashcard Audio/space/dark.mp3'),
+          earth:require('../../assets/Flashcard Audio/space/Earth.mp3'),
+          moon:require('../../assets/Flashcard Audio/space/moon.mp3'),
+          planet:require('../../assets/Flashcard Audio/space/planet.mp3'),
+          spaceStation:require('../../assets/Flashcard Audio/space/space station.mp3'),
+          space:require('../../assets/Flashcard Audio/space/space.mp3'),
+          star:require('../../assets/Flashcard Audio/space/stars.mp3'),
+          sun:require('../../assets/Flashcard Audio/space/sun.mp3'),
+          ufo:require('../../assets/Flashcard Audio/space/UFO.mp3'),
         },
         local:'',
         cardType:'default',
+        alien:true,
+        asteroid:true,
+        bright:true,
+        dark:true,
+        earth:true,
+        moon:true,
+        planet:true,
+        spaceStation:true,
+        space:true,
+        star:true,
+        sun:true,
+        ufo:true,
         fly3:true,
         rocket:true,
         fuel:true,
@@ -4373,6 +4469,100 @@ export default {
     position: fixed;
     background-color: #44ccc2;
     z-index: 201;
+  }
+
+  .alien img {
+    width: 25%;
+    left: 68%;
+    top: 64%;
+    position: absolute;
+  }
+
+  .asteroid img {
+    width: 17%;
+    left: 45%;
+    top: 63%;
+    position: absolute;
+  }
+
+  .bright img {
+    width: 50%;
+    left: -2%;
+    top: 33%;
+    position: absolute;
+  }
+
+  .dark img {
+    width: 25%;
+    left: 0%;
+    top: 0%;
+    position: absolute;
+  }
+
+  .earth img {
+    width: 22%;
+    left: 39%;
+    top: 31%;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .moon img {
+    width: 5%;
+    left: 54%;
+    top: 24%;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .planet img {
+    width: 23%;
+    left: 59%;
+    top: 24%;
+    position: absolute;
+  }
+
+  .planet2 img {
+    width: 8%;
+    left: 14%;
+    top: 29%;
+    position: absolute;
+  }
+
+  .spaceStation img {
+    width: 21%;
+    left: 26%;
+    top: 23%;
+    position: absolute;
+  }
+
+  .space img {
+    width: 55.5%;
+    left: 48%;
+    top: -3%;
+    transform: rotate(1deg);
+    position: absolute;
+  }
+
+  .star img {
+    width: 12%;
+    left: 72%;
+    top: 43%;
+    position: absolute;
+  }
+
+  .sun img {
+    width: 23%;
+    left: 59%;
+    top: 24%;
+    position: absolute;
+  }
+
+  .ufo img {
+    width: 23%;
+    left: 59%;
+    top: 24%;
+    position: absolute;
   }
 
   .exploreButton img {

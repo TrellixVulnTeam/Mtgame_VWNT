@@ -209,7 +209,7 @@
     watch: {
       'loading': function(newVal) {
         if (this.loading === true) {
-            alertImg(this.$axios.defaults.baseURL2);
+          alertImg(this.$axios.defaults.baseURL2);
           setTimeout(() => {
               document.getElementById('alertFram').style.display = 'none'}
             ,15000)
@@ -246,15 +246,15 @@
         ],
         phonicsList: [{
             compelte: 0,
-            percent:'0%',
+            percent:'0.00%',
           },
           {
             compelte: 0,
-            percent:'0%',
+            percent:'0.00%',
           },
           {
             compelte: 0,
-            percent:'0%',
+            percent:'0.00%',
           },
         ],
         phonicsDetailList: [],

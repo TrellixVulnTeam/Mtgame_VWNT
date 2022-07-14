@@ -26,15 +26,15 @@ Vue.use(animated);
 Vue.config.productionTip = false;
 Vue.prototype.$axios = axios;
 
- //axios.defaults.baseURL = 'http://dodosurvey.com/monkeytownHK'  // api 即上面 vue.config.js 中配置的地址
+//axios.defaults.baseURL = 'http://dodosurvey.com/monkeytownHK'  // api 即上面 vue.config.js 中配置的地址
 
-axios.defaults.baseURL = 'http://localhost:8080/monkeytownCN';
+//axios.defaults.baseURL = 'http://localhost:8080/monkeytownCN';
 //axios.defaults.baseURL = 'http://localhost:8080/monkeytownHK';
 //图片url
 //axios.defaults.baseURL2 = 'http://gamejava.monkeytree.com.hk';
 axios.defaults.baseURL2 = 'https://gamejava.monkeytree.com.cn';
 //后端url
-//axios.defaults.baseURL = 'https://gamejava.monkeytree.com.cn';
+axios.defaults.baseURL = 'https://gamejava.monkeytree.com.cn';
 //axios.defaults.baseURL = 'http://gamejava.monkeytree.com.hk';
 
 localStorage.setItem('localurl',axios.defaults.baseURL);

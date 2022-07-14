@@ -180,6 +180,23 @@ window.alertImg = function (txt) {
   let app=document.getElementById('app');
   app.appendChild(alertFram);
 };
+
+window.alertImg2 = function (txt) {
+  var strHtml='';
+  alertFram.id = "alertFram";
+  alertFram.style.position = "absolute";
+  alertFram.style.width = "100%";
+  alertFram.style.height = "100%";
+  alertFram.style.top = "0"
+  alertFram.style.display = "block";
+  alertFram.style.textAlign = "center";
+  alertFram.style.zIndex = "10001";
+  strHtml =  "<div  style='width: fit-content;border-radius: 10px;position: absolute;left: 50%;bottom:15%;transform: translateX(-50%);'><img src='"+txt+"/image/img/Active Phonics Student Only.png' style='width: 30%;margin-bottom: -6px;'></div>" ;
+  alertFram.innerHTML = strHtml;
+  let app=document.getElementById('app');
+  app.appendChild(alertFram);
+};
+
 window.alertMsg4 = function (txt) {
   var strHtml='';
   alertFram.id = "alertFram";

@@ -380,18 +380,15 @@
 		name: "chosegame",
 		watch: {
       'loading': function(newVal) {
-        if (this.loading === false) {
+        if (this.loading === true) {
+          alertImg(this.$axios.defaults.baseURL2);
           setTimeout(() => {
-          document.getElementById('alertFram').style.display = 'none'}
-            ,1000)
-          this.$router.push({
-            path: '/pchosegame',
-            query: {
-              courseId:this.courseList[1].course_id,
-              cources:this.courseList[1].name,
-              style:this.style,
-            }
-          })
+              document.getElementById('alertFram').style.display = 'none'}
+            ,15000)
+        }else{
+          setTimeout(() => {
+              document.getElementById('alertFram').style.display = 'none'}
+            ,500)
         }
       }
 		},
@@ -588,7 +585,7 @@
 			},
       chartroom2(li) {
         if(this.phonics===0){
-          alertMsg3("Active Phonics Student Only");
+          alertImg2(this.$axios.defaults.baseURL2);
           setTimeout((function () {
                 alertFram.style.display = "none";
           }), 1500)
@@ -603,9 +600,6 @@
               style:this.style,
             }
           })
-        }else{
-          this.loading = true;
-          alertImg(this.$axios.defaults.baseURL2);
         }
       },
 			walkers1(li) {
@@ -727,6 +721,7 @@
 				this.gameImage=localStorage.getItem('gameImage');
 				this.sum=localStorage.getItem('sumCoins');
 				this.studentId=localStorage.getItem('studentId');
+				this.loading = true;
 				this.url1=this.url+"course";
 				this.$axios.post(this.url1,qs.stringify({
 				  studentId:localStorage.getItem('studentId')
@@ -742,6 +737,7 @@
 				})
 
 		}
+
 	};
 </script>
 
@@ -1872,7 +1868,7 @@
         width: 60px;
       }
 		}
-  @media screen and (min-width: 1600px){
+    @media screen and (min-width: 1600px){
     .two-monkey{
       top: 25%;
       transform: scale(1.5);
