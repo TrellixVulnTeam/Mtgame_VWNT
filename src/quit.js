@@ -77,7 +77,7 @@
 //     }
 // }
 var alertFram = document.createElement("DIV");
- var alertiframe = document.createElement("DIV");
+var alertiframe = document.createElement("DIV");
 //自定义提示框
 
 // 弹出网络提示

@@ -10,16 +10,8 @@
         <div  style="width: 100%;height: 100%;">
             <button class="books" v-bind:class="{ ebooslength: ebooslengthall}" :style="{backgroundColor:booktitleColor}">{{this.booklevel}}</button>
             <div class="box1">
-              <div style="padding:  0px 2% 0px 2%; width: 20%;" v-for="(li,l) in listBookName">
-              <img class="imglist"  :src='li.head_img'  @click="$tips(true);godemo(li,l)"  @load="loaded" >
-             <!-- <img src="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/get-the-mud-off.png"  @click="godemo()">
-              <img src="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/glen-the-slug.png">
-              <img src="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/helen-hen's-eggs.png">
-              <img src="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/i-can-color.png">
-              <img src="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/kit's-red-pin.png">
-              <img src="http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/let's-get-healthy.png"> -->
-              <!--<div>-->
-
+              <div style="padding:  0px 2% 0px 2%; width: 20%;" v-for="(li,l) in listBookNameTemp">
+              <img class="imgList"  :src='li.head_img'  @click="$tips(true);godemo(li,l)"  @load="loaded" >
                 <img v-if="li.completes==='100%'&&loadimg" style="display: block;width: 20%;margin-left: 40%;" src="../../assets/image/truest.png">
                 <div v-if="li.completes!=='100%'&&loadimg" style="margin: 4% ;background-color: white;height: 10px;border-radius: 50px;display: block;">
                   <div :style="{width:li.completes}" style="height: 10px;border-radius: 50px; left: 0;background-color: green;"></div>
@@ -70,6 +62,7 @@
         studentId: '',
         video: false,
         listBookName:[],
+        listBookNameTemp:[],
         sortId:'',
         ebooslengthall:false,
         choiceebooks:true,
@@ -99,22 +92,27 @@
         })
       },
       loaded(){
-        let imgList = document.getElementsByClassName('backclass4');//图片集合
-        let imgCount = imgList.length;//图片总数
+        // let imgList = document.getElementsByClassName('imgList');//图片集合
+        // let imgCount = imgList.length;//图片总数
+        // console.log(imgCount);
+        // if(this.imgLoad<=imgCount){
+        //   if (this.imgLoad === imgCount) {
+        //     this.loadimg =true;
+        //     console.log("图片加载完成 展示组件");
+        //   }
+        //   this.imgLoad++;
+        //   console.log(this.imgLoad);
+        //   this.listBookNameTemp = this.listBookName;
+        // }
 
-        if(this.imgLoad>imgCount){
-
-
-        }else{
-
-          if (this.imgLoad === imgCount) {
-            this.loadimg =true;
-
-            console.log("图片加载完成 展示组件");
-
+        //先加载前面五张封面
+        if(this.listBookNameTemp.length ===5){
+          //获取已加载的图片数量
+          let imgCount = document.getElementsByClassName('imgList').length;
+          if (imgCount === 5){
+            this.listBookNameTemp = this.listBookName;
+            console.log('加载第五张后面的封面');
           }
-          this.imgLoad++;
-          console.log(this.imgLoad);
         }
       },
 
@@ -192,6 +190,7 @@
         studentId:localStorage.getItem('studentId')
       })).then(res=>{
           this.listBookName=res.data.listBookName;
+          this.listBookNameTemp = this.listBookName.slice(0,5);
           for(var i=0;i<this.listBookName.length;i++){
             this.listBookName[i].before_img=this.pic+this.listBookName[i].before_img;
             this.listBookName[i].before_img1=this.pic+this.listBookName[i].before_img1;
@@ -336,7 +335,7 @@
     overflow-x: scroll;
     margin-top: 4%;
     transform: rotateX(10deg);
-    .imglist {
+    .imgList {
         height: 20%;
     }
   }
@@ -408,7 +407,7 @@
     .box1 {
       margin-top: 10%;
       height: 100%;
-      .imglist {
+      .imgList {
         height: 30%;
       }
     }
@@ -460,7 +459,7 @@
     .box1 {
       margin-top: 13%;
       height: 75%;
-      .imglist {
+      .imgList {
         height: 40%;
       }
     }
@@ -550,7 +549,7 @@
 
     .box1 {
       margin-top: 4%;
-      .imglist {
+      .imgList {
         height: 80%;
       }
 

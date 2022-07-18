@@ -1974,6 +1974,132 @@
             img:require('../../assets/image/WaterParks/Splash.png')
           }
         ],
+        SpacePart1:[
+          {
+            id:1,
+            cardName:'fly',
+            audio:require('../../assets/Flashcard Audio/space/fly.mp3'),
+            img:require('../../assets/image/Blast Off/Fly.png')
+          },{
+            id:2,
+            cardName:'rocket',
+            audio:require('../../assets/Flashcard Audio/space/rocket.mp3'),
+            img:require('../../assets/image/Blast Off/Rocket.png')
+          },{
+            id:3,
+            cardName:'blast off',
+            audio:require('../../assets/Flashcard Audio/space/blast off.mp3'),
+            img:require('../../assets/image/Blast Off/Blast Off.png')
+          },{
+            id:4,
+            cardName:'fire',
+            audio:require('../../assets/Flashcard Audio/space/fire.mp3'),
+            img:require('../../assets/image/Blast Off/Fire.png')
+          },{
+            id:5,
+            cardName:'countdown',
+            audio:require('../../assets/Flashcard Audio/space/countdown.mp3'),
+            img:require('../../assets/image/Blast Off/Countdown.png')
+          },{
+            id:6,
+            cardName:'helmet',
+            audio:require('../../assets/Flashcard Audio/space/helmet.mp3'),
+            img:require('../../assets/image/Blast Off/Helmet.png')
+          },{
+            id:7,
+            cardName:'astronaut',
+            audio:require('../../assets/Flashcard Audio/space/astronaut.mp3'),
+            img:require('../../assets/image/Blast Off/Astronaut.png')
+          },{
+            id:8,
+            cardName:'space suit',
+            audio:require('../../assets/Flashcard Audio/space/spacesuit.mp3'),
+            img:require('../../assets/image/Blast Off/Spacesuit.png')
+          },{
+            id:9,
+            cardName:'fuel',
+            audio:require('../../assets/Flashcard Audio/space/fuel.mp3'),
+            img:require('../../assets/image/Blast Off/Fuel.png')
+          },{
+            id:10,
+            cardName:'explore',
+            audio:require('../../assets/Flashcard Audio/space/explore.mp3'),
+            img:require('../../assets/image/Blast Off/Explore.png')
+          },{
+            id:11,
+            cardName:'scientist',
+            audio:require('../../assets/Flashcard Audio/space/scientist.mp3'),
+            img:require('../../assets/image/Blast Off/Scientist.png')
+          },{
+            id:12,
+            cardName:'radio',
+            audio:require('../../assets/Flashcard Audio/space/radio.mp3'),
+            img:require('../../assets/image/Blast Off/Radio.png')
+          }
+        ],
+        SpacePart2:[
+          {
+            id:1,
+            cardName:'planet',
+            audio:require('../../assets/Flashcard Audio/space/planet.mp3'),
+            img:require('../../assets/image/In Space/Planet.png')
+          },{
+            id:2,
+            cardName:'space',
+            audio:require('../../assets/Flashcard Audio/space/space.mp3'),
+            img:require('../../assets/image/In Space/Space.png')
+          },{
+            id:3,
+            cardName:'asteroid',
+            audio:require('../../assets/Flashcard Audio/space/asteroid.mp3'),
+            img:require('../../assets/image/In Space/Asteroid.png')
+          },{
+            id:4,
+            cardName:'Earth',
+            audio:require('../../assets/Flashcard Audio/space/Earth.mp3'),
+            img:require('../../assets/image/In Space/Earth.png')
+          },{
+            id:5,
+            cardName:'Moon',
+            audio:require('../../assets/Flashcard Audio/space/moon.mp3'),
+            img:require('../../assets/image/In Space/Moon.png')
+          },{
+            id:6,
+            cardName:'sun',
+            audio:require('../../assets/Flashcard Audio/space/sun.mp3'),
+            img:require('../../assets/image/In Space/Sun.png')
+          },{
+            id:7,
+            cardName:'alien',
+            audio:require('../../assets/Flashcard Audio/space/alien.mp3'),
+            img:require('../../assets/image/In Space/Alien.png')
+          },{
+            id:8,
+            cardName:'stars',
+            audio:require('../../assets/Flashcard Audio/space/stars.mp3'),
+            img:require('../../assets/image/In Space/Stars.png')
+          },{
+            id:9,
+            cardName:'dark',
+            audio:require('../../assets/Flashcard Audio/space/dark.mp3'),
+            img:require('../../assets/image/In Space/Dark.png')
+          },{
+            id:10,
+            cardName:'space station',
+            audio:require('../../assets/Flashcard Audio/space/space.mp3'),
+            img:require('../../assets/image/In Space/Space Station.png')
+          },{
+            id:11,
+            cardName:'bright',
+            audio:require('../../assets/Flashcard Audio/space/bright.mp3'),
+            img:require('../../assets/image/In Space/Bright.png')
+          },{
+            id:12,
+            cardName:'UFO',
+            audio:require('../../assets/Flashcard Audio/space/UFO.mp3'),
+            img:require('../../assets/image/In Space/UFO.png')
+          }
+        ],
         list:[],
         titleUrl:{
           MyCommunity:require('../../assets/image/2-logo.png'),
@@ -2019,6 +2145,8 @@
           ClothesPart2:require('../../assets/image/6-logo2.png'),
           ThemeParkPart1:require('../../assets/image/7-logo1.png'),
           ThemeParkPart2:require('../../assets/image/7-logo2.png'),
+          SpacePart1:require('../../assets/image/8-logo1.png'),
+          SpacePart2:require('../../assets/image/8-logo2.png'),
         },
         title:'../../assets/image/6-6logo.png',
         flashCardUrl:'http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/9315e4a9-e1ec-4f49-8db5-5b3a9b6ae083.png',
@@ -2307,7 +2435,7 @@
   .card-img1 {
     width: 95%;
     position: absolute;
-    left: 2%;
+    left: 1%;
   }
 
   .card-img2 {

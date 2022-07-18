@@ -101,6 +101,7 @@
 <script>
 
   var qs = require('qs');
+  const {Debounce} = require("../../Debounce");
   export default {
     name: "intermediate6",
     watch: {
@@ -457,9 +458,12 @@
         }
         // this.buttonlist
       },
-      confirms(){
-       var truelist=this.questionname.split("");
-       var answlist=[];
+      confirms:Debounce(function(){
+        this.confirm()
+      },500),
+      confirm(){
+        const truelist = this.questionname.split("");
+        const answlist = [];
         for(var i=0;i<this.buttonlist.length;i++){
           this.buttonlist[i].color1=0;
           answlist.push(this.buttonlist[i].name);
@@ -558,7 +562,7 @@
 
       },
       changesett() {
-        if(this.onef==false){
+        if(this.onef===false){
           setTimeout(() => {
             this.resume3 = !this.resume3;
             if (!this.resume3) {

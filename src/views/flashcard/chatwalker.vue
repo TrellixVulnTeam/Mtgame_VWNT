@@ -3287,7 +3287,7 @@
       <img src="../../assets/image/202008H5 In Space_MT/Runner_BG/Background_0.png"
            style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;"/>
       <div class="alien">
-        <img src="../../assets/image/202008H5 In Space_MT/GIF_PNG/png/alien_00000.png" v-if="alien" @click="showGif('alien')">
+        <img src="../../assets/image/202008H5 In Space_MT/GIF_PNG/png/alien_00000.png" v-if="alien&&ufo" @click="showGif('alien')">
         <img src="../../assets/image/202008H5 In Space_MT/GIF_PNG/gif/alien.gif" style="z-index: 100" v-if="!alien"
              @click="showGif('alien')">
       </div>
@@ -3297,12 +3297,12 @@
              @click="showGif('asteroid')">
       </div>
       <div class="bright">
-        <img src="../../assets/image/202008H5 In Space_MT/GIF_PNG/png/bright Comp 1_00000.png" v-if="bright" @click="showGif('bright')">
+        <img src="../../assets/image/202008H5 In Space_MT/GIF_PNG/png/bright Comp 1_00000.png" v-if="bright&&sun&&planet" @click="walkers&&showGif('bright')">
         <img src="../../assets/image/202008H5 In Space_MT/GIF_PNG/gif/bright.gif" style="z-index: 100" v-if="!bright"
              @click="showGif('bright')">
       </div>
       <div class="dark">
-        <img src="../../assets/image/202008H5 In Space_MT/GIF_PNG/png/dark Comp 1_00000.png" v-if="dark" @click="showGif('dark')">
+        <img src="../../assets/image/202008H5 In Space_MT/GIF_PNG/png/dark Comp 1_00000.png" v-if="dark" @click="walkers&&showGif('dark')">
         <img src="../../assets/image/202008H5 In Space_MT/GIF_PNG/gif/dark.gif" style="z-index: 100" v-if="!dark"
              @click="showGif('dark')">
       </div>
@@ -3322,10 +3322,10 @@
              @click="showGif('planet')">
       </div>
       <div class="planet2">
-        <img src="../../assets/image/202008H5 In Space_MT/GIF_PNG/png/planet2.png">
+        <img src="../../assets/image/202008H5 In Space_MT/GIF_PNG/png/planet2.png" v-if="planet">
       </div>
       <div class="spaceStation">
-        <img src="../../assets/image/202008H5 In Space_MT/GIF_PNG/png/space station Comp 1_00000.png" v-if="spaceStation" @click="showGif('spaceStation')">
+        <img src="../../assets/image/202008H5 In Space_MT/GIF_PNG/png/space station Comp 1_00000.png" v-if="spaceStation" @click="walkers&&showGif('spaceStation')">
         <img src="../../assets/image/202008H5 In Space_MT/GIF_PNG/gif/space station.gif" style="z-index: 100" v-if="!spaceStation"
              @click="showGif('spaceStation')">
       </div>
@@ -3348,6 +3348,54 @@
 <!--        <img src="../../assets/image/202008H5 In Space_MT/GIF_PNG/png/UFO Comp 1_00000.png" v-if="ufo" @click="showGif('ufo')">-->
         <img src="../../assets/image/202008H5 In Space_MT/GIF_PNG/gif/UFO.gif" style="z-index: 100" v-if="!ufo"
              @click="showGif('ufo')">
+      </div>
+      <div class="darkButton">
+        <img src="../../assets/image/202008H5 In Space_MT/Word/word_dark Comp 1_0.png" v-if="walkers"
+             :style="{zIndex: !dark ? 100 : 1}" @click="showGif('dark')">
+      </div>
+      <div class="planetButton">
+        <img src="../../assets/image/202008H5 In Space_MT/Word/word_r_planet Comp 1_0.png"
+             :style="{zIndex: !planet ? 100 : 1}" @click="showGif('planet')">
+      </div>
+      <div class="sunButton">
+        <img src="../../assets/image/202008H5 In Space_MT/Word/word_r_Sun Comp 1_0.png"
+             :style="{zIndex: !sun ? 100 : 1}" @click="showGif('sun')">
+      </div>
+      <div class="brightButton">
+        <img src="../../assets/image/202008H5 In Space_MT/Word/word_bright Comp 1_0.png" v-if="walkers"
+             :style="{zIndex: !bright ? 100 : 1}" @click="showGif('bright')">
+      </div>
+      <div class="spaceStationButton">
+        <img src="../../assets/image/202008H5 In Space_MT/Word/word_space station Comp 1_0.png" v-if="walkers"
+             :style="{zIndex: !spaceStation ? 100 : 1}" @click="showGif('spaceStation')">
+      </div>
+      <div class="asteroidButton">
+        <img src="../../assets/image/202008H5 In Space_MT/Word/word_r_asteroid Comp 1_0.png"
+             :style="{zIndex: !asteroid ? 100 : 1}" @click="showGif('asteroid')">
+      </div>
+      <div class="earthButton">
+        <img src="../../assets/image/202008H5 In Space_MT/Word/word_r_Earth Comp 1_0.png"
+             :style="{zIndex: !earth ? 100 : 1}" @click="showGif('earth')">
+      </div>
+      <div class="moonButton">
+        <img src="../../assets/image/202008H5 In Space_MT/Word/word_r_moon Comp 1_0.png"
+             :style="{zIndex: !moon ? 100 : 1}" @click="showGif('moon')">
+      </div>
+      <div class="spaceButton">
+        <img src="../../assets/image/202008H5 In Space_MT/Word/word_r_space Comp 1_0.png"
+             :style="{zIndex: !space ? 100 : 1}" @click="showGif('space')">
+      </div>
+      <div class="starButton">
+        <img src="../../assets/image/202008H5 In Space_MT/Word/word_r_stars Comp 1_0.png"
+             :style="{zIndex: !star ? 100 : 1}" @click="showGif('star')">
+      </div>
+      <div class="ufoButton">
+        <img src="../../assets/image/202008H5 In Space_MT/Word/word_ufo Comp 1_0.png" v-if="walkers"
+             :style="{zIndex: !ufo ? 100 : 1}" @click="showGif('ufo')">
+      </div>
+      <div class="alienButton">
+        <img src="../../assets/image/202008H5 In Space_MT/Word/word_r_alien Comp 1_0.png"
+             :style="{zIndex: !alien ? 100 : 1}" @click="showGif('alien')">
       </div>
     </div>
     <div v-else>
@@ -4471,6 +4519,90 @@ export default {
     z-index: 201;
   }
 
+  .darkButton img {
+    width: 6%;
+    left: 8%;
+    top: 11%;
+    position: absolute;
+  }
+
+  .planetButton img {
+    width: 7%;
+    left: 15%;
+    top: 40%;
+    position: absolute;
+  }
+
+  .sunButton img {
+    width: 6%;
+    left: 21%;
+    top: 64%;
+    position: absolute;
+  }
+
+  .brightButton img {
+    width: 7%;
+    left: 29%;
+    top: 57%;
+    position: absolute;
+  }
+
+  .spaceStationButton img {
+    width: 10%;
+    left: 34%;
+    top: 22%;
+    position: absolute;
+  }
+
+  .asteroidButton img {
+    width: 7%;
+    left: 44%;
+    top: 85%;
+    position: absolute;
+  }
+
+  .earthButton img {
+    width: 6%;
+    left: 55%;
+    top: 43%;
+    position: absolute;
+  }
+
+  .moonButton img {
+    width: 6%;
+    left: 60%;
+    top: 27%;
+    position: absolute;
+  }
+
+  .spaceButton img {
+    width: 7%;
+    left: 69%;
+    top: 7%;
+    position: absolute;
+  }
+
+  .alienButton img {
+    width: 6%;
+    left: 76%;
+    top: 65%;
+    position: absolute;
+  }
+
+  .ufoButton img {
+    width: 6%;
+    left: 89%;
+    top: 85%;
+    position: absolute;
+  }
+
+  .starButton img {
+    width: 6%;
+    left: 81%;
+    top: 49%;
+    position: absolute;
+  }
+
   .alien img {
     width: 25%;
     left: 68%;
@@ -4516,9 +4648,9 @@ export default {
   }
 
   .planet img {
-    width: 23%;
-    left: 59%;
-    top: 24%;
+    width: 55%;
+    left: -2%;
+    top: 15%;
     position: absolute;
   }
 
@@ -4552,16 +4684,16 @@ export default {
   }
 
   .sun img {
-    width: 23%;
-    left: 59%;
-    top: 24%;
+    width: 40%;
+    left: -1%;
+    top: 47%;
     position: absolute;
   }
 
   .ufo img {
-    width: 23%;
-    left: 59%;
-    top: 24%;
+    width: 25%;
+    left: 68%;
+    top: 64%;
     position: absolute;
   }
 
@@ -11095,6 +11227,50 @@ export default {
   @media only screen and (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 3) ,
   (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 812px) and (max-width: 1023px){
+    .spaceStationButton img {
+      width: 12%;
+      left: 34%;
+      top: 22%;
+      position: absolute;
+    }
+    .planet img {
+      width: 47%;
+      left: -2%;
+      top: 19%;
+      position: absolute;
+    }
+    .dark img {
+      width: 23%;
+      left: 0%;
+      top: 0%;
+      position: absolute;
+    }
+    .ufo img {
+      width: 22%;
+      left: 70%;
+      top: 64%;
+      position: absolute;
+    }
+    .alien img {
+      width: 22%;
+      left: 70%;
+      top: 64%;
+      position: absolute;
+    }
+    .star img {
+      width: 11%;
+      left: 72%;
+      top: 41%;
+      position: absolute;
+    }
+    .space img {
+      width: 58.5%;
+      left: 49%;
+      top: -6%;
+      -webkit-transform: rotate(1deg);
+      transform: rotate(2deg);
+      position: absolute;
+    }
     .spaceSuit img{
       width: 6%;
       left: 87%;
@@ -14054,6 +14230,152 @@ export default {
   @media only screen and (min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 1024px) and (max-width: 1600px){
+    .planet img {
+      width: 66%;
+      left: -3%;
+      top: 29%;
+      position: absolute;
+    }
+    .ufo img{
+      width: 35%;
+      left: 65%;
+      top: 64%;
+      position: absolute;
+    }
+    .sun img{
+      width: 49%;
+      left: -2%;
+      top: 53%;
+      position: absolute;
+    }
+    .spaceStationButton img {
+      width: 15%;
+      left: 31%;
+      top: 22%;
+      position: absolute;
+    }
+    .darkButton img {
+      width: 8%;
+      left: 8%;
+      top: 9%;
+      position: absolute;
+    }
+    .spaceButton img {
+      width: 9%;
+      left: 67%;
+      top: 7%;
+      position: absolute;
+    }
+    .moonButton img {
+      width: 8%;
+      left: 59%;
+      top: 27%;
+      position: absolute;
+    }
+    .planetButton img {
+      width: 9%;
+      left: 10%;
+      top: 47%;
+      position: absolute;
+    }
+    .earthButton img {
+      width: 9%;
+      left: 55%;
+      top: 43%;
+      position: absolute;
+    }
+    .brightButton img {
+      width: 10%;
+      left: 29%;
+      top: 57%;
+      position: absolute;
+    }
+    .sunButton img {
+      width: 8%;
+      left: 22%;
+      top: 69%;
+      position: absolute;
+    }
+    .asteroidButton img {
+      width: 10%;
+      left: 44%;
+      top: 78%;
+      position: absolute;
+    }
+    .starButton img {
+      width: 8%;
+      left: 81%;
+      top: 48%;
+      position: absolute;
+    }
+    .ufoButton img {
+      width: 8%;
+      left: 88%;
+      top: 85%;
+      position: absolute;
+    }
+    .alienButton img {
+      width: 8%;
+      left: 76%;
+      top: 65%;
+      position: absolute;
+    }
+    .space img {
+      width: 60.5%;
+      height: 60%;
+      left: 44%;
+      top: -3%;
+      position: absolute;
+    }
+    .moon img {
+      width: 6%;
+      left: 53%;
+      top: 26%;
+      position: absolute;
+      z-index: 1;
+    }
+    .spaceStation img {
+      width: 25%;
+      left: 22%;
+      top: 23%;
+      position: absolute;
+    }
+    .planet2 img {
+      width: 10%;
+      left: 10%;
+      top: 38%;
+      position: absolute;
+    }
+    .asteroid img {
+      width: 20%;
+      left: 44%;
+      top: 56%;
+      position: absolute;
+    }
+    .star img {
+      width: 15%;
+      left: 72%;
+      top: 46%;
+      position: absolute;
+    }
+    .dark img {
+      width: 30%;
+      left: 0%;
+      top: 0%;
+      position: absolute;
+    }
+    .alien img {
+      width: 35%;
+      left: 65%;
+      top: 64%;
+      position: absolute;
+    }
+    .bright img {
+      width: 60%;
+      left: -2%;
+      top: 42%;
+      position: absolute;
+    }
     .helmet img {
       width: 26%;
       left: 58%;

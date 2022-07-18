@@ -5,8 +5,8 @@ import router from "./router";
 import store from "./store";
 import quit from "./quit";
 import axios from 'axios';
-
 import * as echarts from 'echarts';
+import {tips} from './tips';
 Vue.prototype.$echarts = echarts;
 // import cookies from 'vue-cookies';
 // import qs from 'qs';
@@ -25,7 +25,7 @@ Vue.use(animated);
 // import OCRAD from "./ocrad.js";
 Vue.config.productionTip = false;
 Vue.prototype.$axios = axios;
-
+Vue.prototype.$tips = tips;
 //axios.defaults.baseURL = 'http://dodosurvey.com/monkeytownHK'  // api 即上面 vue.config.js 中配置的地址
 
 //axios.defaults.baseURL = 'http://localhost:8080/monkeytownCN';
@@ -51,13 +51,13 @@ Vue.use(Bounce)
 Vue.use(Bounce, {
     name: 'directiveName' // 可选参数用于覆盖指令名
 })
-Vue.prototype.$tips =  function (start) {
-  if(start){
-    let audio = new Audio();
-    audio.src = require('../src/assets/video/tips.mp3');
-    audio.play().then(r => console.log('播放成功'));
-  }
-}
+// Vue.prototype.$tips =  function (start) {
+//   if(start){
+//     let audio = new Audio();
+//     audio.src = require('../src/assets/video/tips.mp3');
+//     audio.play().then(r => console.log('播放成功'));
+//   }
+// }
 
 // Vue.prototype.setCookie = function (name, value, day) {
 //     if (day !== 0) { //当设置的时间等于0时，不设置expires属性，cookie在浏览器关闭后删除

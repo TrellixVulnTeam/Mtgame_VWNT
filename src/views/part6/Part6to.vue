@@ -229,11 +229,9 @@
 				}
 			},
 			'video': function(newVal) {
-			  console.log(this.video);
-        if (this.video == true) {
+        if (this.video === true) {
           this.$refs.videos.play();
           setTimeout(() => {
-            this.$refs.videos.pause();
             this.video =false;
           }, this.duration*1000);
         }
@@ -328,7 +326,7 @@
       getDuration() {
         console.log(this.$refs.videos.duration); //此时可以获取到duration
         this.duration = this.$refs.videos.duration;
-        this.video=true;
+        //this.video=true;
       },
             fillansw(li){
 				if(this.fill==''||this.fill==undefined){
@@ -500,10 +498,12 @@
 				}
 			},
 			change() {
-				if(this.onef == false){
-
-					this.video=true;
-				}
+				if(this.onef === false){
+          if (this.$refs.videos.paused){
+            this.video=true;
+          }else
+            this.$refs.videos.load();
+          }
 			},
 			changesett() {
 					if(this.action==false&&this.onef==false){

@@ -880,8 +880,6 @@
     },
     methods: {
       review(li){
-        console.log(li);
-        console.log(this.level);
         if(this.level==="Intermediate"){
           this.$router.push({
             path: '/intermenu',
@@ -1848,33 +1846,32 @@
           this.scoresData = this.scoresMap.Vocabulary;
           let imgSrc = '';
           for (let i = 0; i < this.overall.length; i++) {
-            this.overall[i].name = this.overall[i].abbreviation;
-            if(this.overall[i].percent < 10){
-              imgSrc = require('../../assets/image/letters/10/'+this.overall[i].name+'.png');
-            }else if(10<= this.overall[i].percent && this.overall[i].percent< 20){
-              imgSrc = require('../../assets/image/letters/20/'+this.overall[i].name+'.png');
-            }else if(20<= this.overall[i].percent && this.overall[i].percent< 30){
-              imgSrc = require('../../assets/image/letters/30/'+this.overall[i].name+'.png');
-            }else if(30<= this.overall[i].percent && this.overall[i].percent< 40){
-              imgSrc = require('../../assets/image/letters/40/'+this.overall[i].name+'.png');
-            }else if(40<= this.overall[i].percent && this.overall[i].percent< 50){
-              imgSrc = require('../../assets/image/letters/50/'+this.overall[i].name+'.png');
-            }else if(50<= this.overall[i].percent && this.overall[i].percent< 60){
-              imgSrc = require('../../assets/image/letters/60/'+this.overall[i].name+'.png');
-            }else if(60<= this.overall[i].percent && this.overall[i].percent< 70){
-              imgSrc = require('../../assets/image/letters/70/'+this.overall[i].name+'.png');
-            }else if(70<= this.overall[i].percent && this.overall[i].percent< 80){
-              imgSrc = require('../../assets/image/letters/80/'+this.overall[i].name+'.png');
-            }else if(80<= this.overall[i].percent && this.overall[i].percent< 90){
-              imgSrc = require('../../assets/image/letters/90/'+this.overall[i].name+'.png');
-            }else if(90<= this.overall[i].percent && this.overall[i].percent< 99){
-              imgSrc = require('../../assets/image/letters/99/'+this.overall[i].name+'.png');
-            }else if(this.overall[i].percent === 100){
-              imgSrc = require('../../assets/image/letters/100/'+this.overall[i].name+'.png');
-            }
-            this.overall[i].imgSrc = imgSrc;
-          }
-
+                this.overall[i].name = this.overall[i].abbreviation;
+                if (this.overall[i].percent < 10) {
+                  imgSrc = require('../../assets/image/letters/10/' + this.overall[i].name + '.png');
+                } else if (10 <= this.overall[i].percent && this.overall[i].percent < 20) {
+                  imgSrc = require('../../assets/image/letters/20/' + this.overall[i].name + '.png');
+                } else if (20 <= this.overall[i].percent && this.overall[i].percent < 30) {
+                  imgSrc = require('../../assets/image/letters/30/' + this.overall[i].name + '.png');
+                } else if (30 <= this.overall[i].percent && this.overall[i].percent < 40) {
+                  imgSrc = require('../../assets/image/letters/40/' + this.overall[i].name + '.png');
+                } else if (40 <= this.overall[i].percent && this.overall[i].percent < 50) {
+                  imgSrc = require('../../assets/image/letters/50/' + this.overall[i].name + '.png');
+                } else if (50 <= this.overall[i].percent && this.overall[i].percent < 60) {
+                  imgSrc = require('../../assets/image/letters/60/' + this.overall[i].name + '.png');
+                } else if (60 <= this.overall[i].percent && this.overall[i].percent < 70) {
+                  imgSrc = require('../../assets/image/letters/70/' + this.overall[i].name + '.png');
+                } else if (70 <= this.overall[i].percent && this.overall[i].percent < 80) {
+                  imgSrc = require('../../assets/image/letters/80/' + this.overall[i].name + '.png');
+                } else if (80 <= this.overall[i].percent && this.overall[i].percent < 90) {
+                  imgSrc = require('../../assets/image/letters/90/' + this.overall[i].name + '.png');
+                } else if (90 <= this.overall[i].percent && this.overall[i].percent < 99) {
+                  imgSrc = require('../../assets/image/letters/99/' + this.overall[i].name + '.png');
+                } else if (this.overall[i].percent === 100) {
+                  imgSrc = require('../../assets/image/letters/100/' + this.overall[i].name + '.png');
+                }
+                this.overall[i].imgSrc = imgSrc;
+              }
           if(this.pass7<=6){
             this.evaluate = 'KEEP TRYING';
           }else if(6<this.pass7 && this.pass7<=13){
