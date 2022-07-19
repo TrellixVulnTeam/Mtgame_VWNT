@@ -144,16 +144,27 @@
           <img src="../assets/image/pcloce.png">
         </div>
         <button class="animapng7">
-          <img src="http://monkeytown.monkeytree.com.hk/image/advanced1.gif" v-if="changei1">
-          <img src="http://monkeytown.monkeytree.com.hk/image/advanced2s.gif" v-if="changei2">
-          <img style="margin-top: 5%;" src="http://monkeytown.monkeytree.com.hk/image/advanced3.gif" v-if="changei3">
-          <img src="http://monkeytown.monkeytree.com.hk/image/advanced4s.gif" v-if="changei4">
-          <img src="http://monkeytown.monkeytree.com.hk/image/advanced5.gif" v-if="changei5">
-          <img src="http://monkeytown.monkeytree.com.hk/image/advanced6.gif" v-if="changei6">
-          <img src="http://monkeytown.monkeytree.com.hk/image/advanced7s.gif" v-if="changei7">
-          <img src="http://monkeytown.monkeytree.com.hk/image/advanced8.gif" v-if="changei8">
-          <img src="http://monkeytown.monkeytree.com.hk/image/advanced9.gif" v-if="changei9">
-          <img src="http://monkeytown.monkeytree.com.hk/image/advanced10.gif" v-if="changei10">
+<!--          <img src="http://monkeytown.monkeytree.com.hk/image/advanced1.gif" v-if="changei1">-->
+<!--          <img src="http://monkeytown.monkeytree.com.hk/image/advanced2s.gif" v-if="changei2">-->
+<!--          <img style="margin-top: 5%;" src="http://monkeytown.monkeytree.com.hk/image/advanced3.gif" v-if="changei3">-->
+<!--          <img src="http://monkeytown.monkeytree.com.hk/image/advanced4s.gif" v-if="changei4">-->
+<!--          <img src="http://monkeytown.monkeytree.com.hk/image/advanced5.gif" v-if="changei5">-->
+<!--          <img src="http://monkeytown.monkeytree.com.hk/image/advanced6.gif" v-if="changei6">-->
+<!--          <img src="http://monkeytown.monkeytree.com.hk/image/advanced7s.gif" v-if="changei7">-->
+<!--          <img src="http://monkeytown.monkeytree.com.hk/image/advanced8.gif" v-if="changei8">-->
+<!--          <img src="http://monkeytown.monkeytree.com.hk/image/advanced9.gif" v-if="changei9">-->
+<!--          <img src="http://monkeytown.monkeytree.com.hk/image/advanced10.gif" v-if="changei10">-->
+
+          <img :src="pic+'/image/image2/advanced1.gif'" v-if="changei1">
+          <img :src="pic+'/image/image2/advanced2s.gif'" v-if="changei2">
+          <img :src="pic+'/image/image2/advanced3.gif'" v-if="changei3">
+          <img :src="pic+'/image/image2/advanced4s.gif'" v-if="changei4">
+          <img :src="pic+'/image/image2/advanced5.gif'" v-if="changei5">
+          <img :src="pic+'/image/image2/advanced6.gif'" v-if="changei6">
+          <img :src="pic+'/image/image2/advanced7s.gif'" v-if="changei7">
+          <img :src="pic+'/image/image2/advanced8.gif'" v-if="changei8">
+          <img :src="pic+'/image/image2/advanced9.gif'" v-if="changei9">
+          <img :src="pic+'/image/image2/advanced10.gif'" v-if="changei10">
         </button>
 
         <button class="start" @click="starpop"><span class="startspan">START</span></button>
@@ -189,6 +200,7 @@
         courseId: '',
         style: '',
         action: false,
+        pic:'',
         level: "",
         levels: '',
         startcoin: 0,
@@ -720,6 +732,7 @@
     // document.body.removeEventListener('touchmove',this.bodyScroll,{passive: false});
     // },
     created() {
+      this.pic = this.$axios.defaults.baseURL2;
       console.log(this.$route.query);
       this.loading = true;
       this.star = "http://monkeytown.monkeytree.com.hk/image/season-star2.png";

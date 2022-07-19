@@ -30,7 +30,7 @@
 
             <div class="rightbox" >
               <div id="box2" class="yes">
-                <button class="yesbutton" @click="change">
+                <button class="yesbutton" @click="$tips(true);change()">
                     <img :src=bg />
                 </button>
                 <button class="centermain">
@@ -53,7 +53,7 @@
 
               </div>
               <canvas id="canvas" style="position: absolute;left:0;top:0%;z-index: 99;width: 100%;height: 100%;"
-                            @click="xy($event)"  @mousedown="canvasDown($event)" @mouseup="canvasUp($event)" @mousemove="canvasMove($event)"
+                            @click="$tips(true);xy($event)"  @mousedown="canvasDown($event)" @mouseup="canvasUp($event)" @mousemove="canvasMove($event)"
                             @touchstart="canvasDown($event)" @touchend="canvasUp($event)" @touchmove="canvasMove($event)">
               您的浏览器不支持Canvas
             </canvas>
@@ -261,24 +261,31 @@
 
       change() {
         if (this.onef === false) {
-          this.video = true;
+          if (!this.$refs.videos.paused){
+            this.$refs.videos.load()
+          }
+          this.$refs.videos.play()
         }
-        console.log('点击重新播放');
       },
       xy($event){
         for(var i=0;i<this.centerP.length;i++){
           if(this.centerP[i].corePx-20<=$event.offsetX&&$event.offsetX<=this.centerP[i].corePx+20){
             if(i===0){
-              this.show1=true;
-              // this.$refs.show1.play();
+              if (!this.$refs.show1s[0].paused){
+                this.$refs.show1s[0].load()
+              }
+              this.$refs.show1s[0].play()
             }else if(i===1){
-              this.show2=true;
-              // this.$refs.show2.play();
+              if (!this.$refs.show2s[0].paused){
+                this.$refs.show2s[0].load()
+              }
+              this.$refs.show2s[0].play()
             }else if(i===2){
-              this.show3=true;
-              // this.$refs.show3.play();
+              if (!this.$refs.show3s[0].paused){
+                this.$refs.show3s[0].load()
+              }
+              this.$refs.show3s[0].play()
             }
-            // console.log(i);
           }
         }
       },

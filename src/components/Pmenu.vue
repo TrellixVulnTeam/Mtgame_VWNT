@@ -142,23 +142,27 @@
           <img src="../assets/image/pcloce.png">
         </div>
         <button class="animapng7">
-          <!--<video style="height: 100%;object-fit:fill" src="../assets/video/test.mp4"-->
-                 <!--:controls="videoOptions.controls"-->
-                 <!--loop muted-->
-                 <!--:playsinline="playsinline"-->
-                 <!--@canplay="onPlayerCanplay($event)"-->
-                 <!--autoplay="autoplay" ref="video" v-if="changei1">-->
-          <!--</video>-->
-          <img src="http://monkeytown.monkeytree.com.hk/image/excercise1.gif" v-if="changei1">
-          <img src="http://monkeytown.monkeytree.com.hk/image/excercise2.gif" v-if="changei2">
-          <img src="http://monkeytown.monkeytree.com.hk/image/excercise3.gif" v-if="changei3">
-          <img src="http://monkeytown.monkeytree.com.hk/image/excercise4.gif" v-if="changei4">
-          <img src="http://monkeytown.monkeytree.com.hk/image/excercise5.gif" v-if="changei5">
-          <img src="http://monkeytown.monkeytree.com.hk/image/excercise6.gif" v-if="changei6">
-          <img src="http://monkeytown.monkeytree.com.hk/image/excercise7.gif" v-if="changei7">
-          <img src="http://monkeytown.monkeytree.com.hk/image/excercise8.gif" v-if="changei8">
-          <img src="http://monkeytown.monkeytree.com.hk/image/excercise9.gif" v-if="changei9">
-          <img src="http://monkeytown.monkeytree.com.hk/image/excercise10.gif" v-if="changei10">
+<!--          <img src="http://monkeytown.monkeytree.com.hk/image/excercise1.gif" v-if="changei1">-->
+<!--          <img src="http://monkeytown.monkeytree.com.hk/image/excercise2.gif" v-if="changei2">-->
+<!--          <img src="http://monkeytown.monkeytree.com.hk/image/excercise3.gif" v-if="changei3">-->
+<!--          <img src="http://monkeytown.monkeytree.com.hk/image/excercise4.gif" v-if="changei4">-->
+<!--          <img src="http://monkeytown.monkeytree.com.hk/image/excercise5.gif" v-if="changei5">-->
+<!--          <img src="http://monkeytown.monkeytree.com.hk/image/excercise6.gif" v-if="changei6">-->
+<!--          <img src="http://monkeytown.monkeytree.com.hk/image/excercise7.gif" v-if="changei7">-->
+<!--          <img src="http://monkeytown.monkeytree.com.hk/image/excercise8.gif" v-if="changei8">-->
+<!--          <img src="http://monkeytown.monkeytree.com.hk/image/excercise9.gif" v-if="changei9">-->
+<!--          <img src="http://monkeytown.monkeytree.com.hk/image/excercise10.gif" v-if="changei10">-->
+
+          <img :src="pic+'/image/image2/excercise1.gif'" v-if="changei1">
+          <img :src="pic+'/image/image2/excercise2.gif'" v-if="changei2">
+          <img :src="pic+'/image/image2/excercise3.gif'" v-if="changei3">
+          <img :src="pic+'/image/image2/excercise4.gif'" v-if="changei4">
+          <img :src="pic+'/image/image2/excercise5.gif'" v-if="changei5">
+          <img :src="pic+'/image/image2/excercise6.gif'" v-if="changei6">
+          <img :src="pic+'/image/image2/excercise7.gif'" v-if="changei7">
+          <img :src="pic+'/image/image2/excercise8.gif'" v-if="changei8">
+          <img :src="pic+'/image/image2/excercise9.gif'" v-if="changei9">
+          <img :src="pic+'/image/image2/excercise10.gif'" v-if="changei10">
         </button>
         <button class="start" @click="$tips(true);starpop()"><span class="startspan">START</span></button>
       </div>
@@ -192,6 +196,7 @@
         unit: '',
         unitsId: '',
         levelsId: '',
+        pic:'',
         cources: '',
         courseId: '',
         style: '',
@@ -755,6 +760,7 @@
     // document.body.removeEventListener('touchmove',this.bodyScroll,{passive: false});
     // },
     created() {
+      this.pic = this.$axios.defaults.baseURL2;
       this.loading = true;
       this.star = "http://monkeytown.monkeytree.com.hk/image/season-star2.png";
       this.lightstar = "http://monkeytown.monkeytree.com.hk/image/season-star.png";

@@ -33,7 +33,7 @@
                     <!-- <img style="position: absolute;height: 100%;display: -webkit-box;" src="../../assets/image/blueball.png" v-bind:class="{listimg:!fangda1}"> -->
                   </draggable>
                 </div>
-                <button class="fast" @click="sound1()"  v-bind:class="{answer: issuccess1,listimg:fangda1}">
+                <button class="fast" @click="$tips(true);sound1()"  v-bind:class="{answer: issuccess1,listimg:fangda1}">
                   <img style="position: absolute;height: auto;width:100%;display: block;bottom: 0;" src="../../assets/image/eggbox2.png">
                   <img :src="this.items3[0].bg" class="bgimage">
                   <audio  ref="short1" style="display: none;" >
@@ -53,7 +53,7 @@
                   </draggable>
 
                 </div>
-                <button class="fast2"  @click="sound2()" v-bind:class="{answer: issuccess2,listimg:fangda2}">
+                <button class="fast2"  @click="$tips(true);sound2()" v-bind:class="{answer: issuccess2,listimg:fangda2}">
                   <img style="position: absolute;height: auto;width:100%;display: block;bottom: 0;" src="../../assets/image/eggbox2.png">
                   <img :src="this.items3[1].bg" class="bgimage">
                   <audio ref="short2" style="display: none;" >
@@ -73,7 +73,7 @@
                   </draggable>
 
                 </div>
-                <button class="fast3"  @click="sound3()" v-bind:class="{answer: issuccess3,listimg:fangda3}">
+                <button class="fast3"  @click="$tips(true);sound3()" v-bind:class="{answer: issuccess3,listimg:fangda3}">
                   <img style="position: absolute;height: auto;width:100%;display: block;bottom: 0;" src="../../assets/image/eggbox2.png">
                   <img :src="this.items3[2].bg" class="bgimage">
                   <audio  ref="short3" style="display: none;" >
@@ -180,26 +180,29 @@
       },
       'short1':function (newVal) {
         if (this.short1 === true) {
-        setTimeout(() => {
-          this.$refs.short1.play();
-          this.short1 = false;
-        }, 2000);
+          if (!this.$refs.short1.paused){
+            this.$refs.short1.load()
+          }
+          this.$refs.short1.play()
+          this.short1 = false
         }
       },
       'short2':function (newVal) {
         if (this.short2 === true) {
-          setTimeout(() => {
-            this.$refs.short2.play();
-            this.short2 = false;
-          }, 2000);
+          if (!this.$refs.short2.paused){
+            this.$refs.short2.load()
+          }
+          this.$refs.short2.play()
+          this.short2 = false
         }
       },
       'short3':function (newVal) {
         if (this.short3 === true) {
-          setTimeout(() => {
-            this.$refs.short3.play();
-            this.short3 = false;
-          }, 2000);
+          if (!this.$refs.short3.paused){
+            this.$refs.short3.load()
+          }
+          this.$refs.short3.play()
+          this.short3 = false
         }
       }
     },
@@ -844,14 +847,13 @@
         }
       },
       sound1(){
-          this.short1=true;
-
+        this.short1 = true;
       },
       sound2(){
-        this.short2=true;
+        this.short2 = true;
       },
       sound3(){
-        this.short3=true;
+        this.short3 = true;
       },
       pop(){
         this.popp = !this.popp;

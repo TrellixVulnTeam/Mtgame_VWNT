@@ -39,12 +39,12 @@
                 <!--</p>-->
               </button>
               <div class="inputbarright">
-                <button class="delete" @click="deletes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                <button class="delete" @click="$tips(true);deletes()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
               </div>
               <div class="listbar">
                 <audio v-if="video" autoplay="autoplay">
                   <source :src=audios></audio>
-                <div v-bind:class="{'answer':answer}" class="leftimg" @click="change">
+                <div v-bind:class="{'answer':answer}" class="leftimg" @click="change()">
                   <img :src=images style="width:80%; height:80%; position: absolute;left: 9%;top: 10%;border-radius: 50px;">
                   <img src='../../assets/image/intercircle.png'  style="width: 100%; float: left;">
 
@@ -52,17 +52,17 @@
                 <div class="listbar2">
 
                   <div>
-                    <button v-for="item in items2" :key="item.id" class="answer-items" @click="onkey(item)">
+                    <button v-for="item in items2" :key="item.id" class="answer-items" @click="$tips(true);onkey(item)">
                       <p class="answeritems">{{item.name}}</p>
                     </button>
                   </div>
                   <div>
-                    <button v-for="item in items3" :key="item.id" class="answer-items" @click="onkey(item)">
+                    <button v-for="item in items3" :key="item.id" class="answer-items" @click="$tips(true);onkey(item)">
                       <p class="answeritems">{{item.name}}</p>
                     </button>
                   </div>
                   <div>
-                    <button v-for="item in items4" :key="item.id" class="answer-items" @click="onkey(item)">
+                    <button v-for="item in items4" :key="item.id" class="answer-items" @click="$tips(true);onkey(item)">
                       <p class="answeritems">{{item.name}}</p>
                     </button>
                   </div>
@@ -70,7 +70,7 @@
                 <div class="rightbox">
 
                   <!-- <button class="space" @click="nullspace">Space</button> -->
-                  <button class="enter" @click="enters">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                  <button class="enter" @click="$tips(true);enters()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
                 </div>
               </div>
             </div>

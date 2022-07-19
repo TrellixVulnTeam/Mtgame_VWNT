@@ -66,7 +66,7 @@
               <div class="centersound" >
                 <!--<button class="list-group-item imgbutton"  v-for="element in items1" :key="element.id" @click="change">-->
                  <div class="classimgbg">
-                   <img :src="imagebg" style="height: 100%;" @click="change"/>
+                   <img  :src="imagebg" style="height: 100%;" @click="$tips(true);change()"/>
                  </div>
                   <img src="../../assets/image/inter5repeat.png" class="classimg" v-bind:class="{touming:touming}">
                 <!--</button>-->
@@ -186,13 +186,13 @@
         }
       },
       'video2': function(newVal) {
-        if (this.video2 == true) {
-          // console.log(this.video2);
-          this.$refs.videos2.play();
-          // setTimeout(() => {
-            this.video2 = false;
-          // }, 4000);
-        }
+        // if (this.video2 == true) {
+        //   // console.log(this.video2);
+        //   this.$refs.videos2.play();
+        //   // setTimeout(() => {
+        //     this.video2 = false;
+        //   // }, 4000);
+        // }
       },
       // 'action1': function(newVal) {
       //   if (this.action1 == true) {
@@ -509,10 +509,16 @@
       },
 
       change() {
-        if (this.onef == false) {
-          // this.action1 = true;
-          this.video2 = true;
-        }
+          if (this.onef === false) {
+            if (this.$refs.videos2.paused){
+              this.$refs.videos2.play()
+              console.log(this.$refs.videos2.duration);
+            }else{
+              this.$refs.videos2.load()
+              this.$refs.videos2.play()
+            }
+          }
+
       },
       repeattitle(){
         if (this.onef == false) {
@@ -524,7 +530,7 @@
       //   // console.log(this.$refs.videos.duration); //此时可以获取到duration
         this.duration = this.$refs.videos.duration;
         console.log(this.duration);
-        this.video =true;
+        //this.video =true;
       },
       pop() {
         this.popp = !this.popp;

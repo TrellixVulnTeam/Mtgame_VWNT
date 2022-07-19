@@ -82,7 +82,7 @@
                            data-source="juju" :list="items1" class="list-group" draggable=".item" :disabled="over" style="width:100%; min-height:130px;"
                            :group="{ name: 'people', pull: pullFunction }" @start="start" @end="end" @change="log">
                   <div v-for="(element,index) in items1" :key="element.id" class="item" style="display: inline-block;position: relative;">
-                    <img src="../../assets/image/toutors.png" class="classimg" @click="speak(index)" v-bind:class="{ marginboth:marginboth,touming:element.imgop}" >
+                    <img src="../../assets/image/toutors.png" class="classimg" @click="$tips(true);speak(index)" v-bind:class="{ marginboth:marginboth,touming:element.imgop}" >
                   </div>
                 </draggable>
 
@@ -297,7 +297,7 @@
           this.$refs.playAudio.play();
           setTimeout(() => {
             this.speaksound=false;
-          }, 1500);
+          }, 150);
         }
       },
       pullFunction: function(evt) {

@@ -20,7 +20,7 @@
           <div v-if="!onef" style="width: 100%; height: 90%;text-align: center;display:block;position: fixed;">
             <!--<img src="../../assets/image/phonicsbg.png" style="width: 100%; z-index: -1;background-color: #204900; height: 100%;display:block;position: absolute;">-->
             <div v-if="zhezhao" style="width: 100%; height: 95%;display:block;position: absolute;opacity: 0;z-index: 100;"></div><!-- 遮罩禁止重复点击作用 -->
-            <audio v-if="video" autoplay="autoplay">
+            <audio v-if="video" autoplay="autoplay" ref="audioRef">
               <source :src="audio"></audio>
             <audio v-if="soundsWrong" autoplay="autoplay">
               <source src="../../assets/video/Wrong.mp3" ></audio>
@@ -51,7 +51,7 @@
             </div>
             <div class="leftbox">
               <div id="box2" class="yes">
-                <button class="yesbutton" @click="change">
+                <button class="yesbutton" @click="$tips(true);change()">
                   <img src="../../assets/image/repeat.png" />
                 </button>
 
@@ -132,11 +132,11 @@
         }
       },
       'video': function(newVal) {
-        if (this.video == true) {
-          setTimeout(() => {
-            this.video = false;
-          },4000);
-        }
+        // if (this.video === true) {
+        //   setTimeout(() => {
+        //     this.video = false;
+        //   },4000);
+        // }
       },
 
     },
@@ -270,8 +270,12 @@
         }
       },
       change() {
-        if (this.onef == false) {
-          this.video = true;
+        if (this.onef === false) {
+          if (this.$refs.audioRef.paused){
+            this.$refs.audioRef.play()
+          }else{
+            this.$refs.audioRef.load()
+          }
         }
       },
       changesett() {

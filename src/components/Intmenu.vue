@@ -142,16 +142,27 @@
           <img src="../assets/image/pcloce.png">
         </div>
         <button class="animapng7">
-          <img src="http://monkeytown.monkeytree.com.hk/image/intermediate1.gif" v-if="changei1">
-          <img src="http://monkeytown.monkeytree.com.hk/image/intermediate2.gif" v-if="changei2">
-          <img style="margin-top: 5%;" src="http://monkeytown.monkeytree.com.hk/image/intermediate3.gif" v-if="changei3">
-          <img src="http://monkeytown.monkeytree.com.hk/image/intermediate4.gif" v-if="changei4">
-          <img src="http://monkeytown.monkeytree.com.hk/image/intermediate5.gif" v-if="changei5">
-          <img src="http://monkeytown.monkeytree.com.hk/image/intermediate6.gif" v-if="changei6">
-          <img src="http://monkeytown.monkeytree.com.hk/image/intermediate7.gif" v-if="changei7">
-          <img src="http://monkeytown.monkeytree.com.hk/image/intermediate8.gif" v-if="changei8">
-          <img src="http://monkeytown.monkeytree.com.hk/image/intermediate9.gif" v-if="changei9">
-          <img src="http://monkeytown.monkeytree.com.hk/image/intermediate10.gif" v-if="changei10">
+<!--          <img src="http://monkeytown.monkeytree.com.hk/image/intermediate1.gif" v-if="changei1">-->
+<!--          <img src="http://monkeytown.monkeytree.com.hk/image/intermediate2.gif" v-if="changei2">-->
+<!--          <img style="margin-top: 5%;" src="http://monkeytown.monkeytree.com.hk/image/intermediate3.gif" v-if="changei3">-->
+<!--          <img src="http://monkeytown.monkeytree.com.hk/image/intermediate4.gif" v-if="changei4">-->
+<!--          <img src="http://monkeytown.monkeytree.com.hk/image/intermediate5.gif" v-if="changei5">-->
+<!--          <img src="http://monkeytown.monkeytree.com.hk/image/intermediate6.gif" v-if="changei6">-->
+<!--          <img src="http://monkeytown.monkeytree.com.hk/image/intermediate7.gif" v-if="changei7">-->
+<!--          <img src="http://monkeytown.monkeytree.com.hk/image/intermediate8.gif" v-if="changei8">-->
+<!--          <img src="http://monkeytown.monkeytree.com.hk/image/intermediate9.gif" v-if="changei9">-->
+<!--          <img src="http://monkeytown.monkeytree.com.hk/image/intermediate10.gif" v-if="changei10">-->
+
+          <img :src="pic+'/image/image2/intermediate1.gif'" v-if="changei1">
+          <img :src="pic+'/image/image2/intermediate2.gif'" v-if="changei2">
+          <img style="margin-top: 5%;" :src="pic+'/image/image2/intermediate3.gif'" v-if="changei3">
+          <img :src="pic+'/image/image2/intermediate4.gif'" v-if="changei4">
+          <img :src="pic+'/image/image2/intermediate5.gif'" v-if="changei5">
+          <img :src="pic+'/image/image2/intermediate6.gif'" v-if="changei6">
+          <img :src="pic+'/image/image2/intermediate7.gif'" v-if="changei7">
+          <img :src="pic+'/image/image2/intermediate8.gif'" v-if="changei8">
+          <img :src="pic+'/image/image2/intermediate9.gif'" v-if="changei9">
+          <img :src="pic+'/image/image2/intermediate10.gif'" v-if="changei10">
         </button>
 
 
@@ -172,6 +183,7 @@
     },
     data() {
       return {
+        pic:'',
         loading:false,
         popp: false,
         sum: 0,
@@ -719,6 +731,7 @@
     // document.body.removeEventListener('touchmove',this.bodyScroll,{passive: false});
     // },
     created() {
+      this.pic = this.$axios.defaults.baseURL2;
       this.loading = true;
       this.star = "http://monkeytown.monkeytree.com.hk/image/season-star2.png";
       this.lightstar = "http://monkeytown.monkeytree.com.hk/image/season-star.png";

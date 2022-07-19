@@ -37,29 +37,29 @@
                 <!--</p>-->
               </button>
               <div class="inputbarright">
-                <button class="delete" @click="deletes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                <button class="delete" @click="$tips(true);deletes()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
               </div>
               <div class="listbar">
-                <audio v-if="video" autoplay="autoplay">
+                <audio v-if="video" autoplay="autoplay" ref="videos">
                   <source :src=audios></audio>
-                <div v-bind:class="{'answer':answer}" class="leftimg" @click="change">
+                <div v-bind:class="{'answer':answer}" class="leftimg" @click="$tips(true);change()">
                   <img src='../../assets/image/interrepeat.png'  style="width: 100%; float: left;">
                   <!--<img src="../../assets/image/frame.png" style="width: 100%; float: left;">-->
                 </div>
                 <div class="listbar2">
 
                   <div>
-                    <button v-for="item in items2" :key="item.id" class="answer-items" @click="onkey(item)">
+                    <button v-for="item in items2" :key="item.id" class="answer-items" @click="$tips(true);onkey(item)">
                       <p class="answeritems">{{item.name}}</p>
                     </button>
                   </div>
                   <div>
-                    <button v-for="item in items3" :key="item.id" class="answer-items" @click="onkey(item)">
+                    <button v-for="item in items3" :key="item.id" class="answer-items" @click="$tips(true);onkey(item)">
                       <p class="answeritems">{{item.name}}</p>
                     </button>
                   </div>
                   <div>
-                    <button v-for="item in items4" :key="item.id" class="answer-items" @click="onkey(item)">
+                    <button v-for="item in items4" :key="item.id" class="answer-items" @click="$tips(true);onkey(item)">
                       <p class="answeritems">{{item.name}}</p>
                     </button>
                   </div>
@@ -67,7 +67,7 @@
                 <div class="rightbox">
 
                   <!-- <button class="space" @click="nullspace">Space</button> -->
-                  <button class="enter" @click="enters">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                  <button class="enter" @click="$tips(true);enters()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
                 </div>
               </div>
             </div>
@@ -147,12 +147,7 @@
         }
       },
       'video': function(newVal) {
-        if (this.video === true) {
-          setTimeout(() => {
-            this.video = false;
-            // this.zhezhao = false;
-          }, 5000);
-        }
+
       },
 
     },
@@ -202,7 +197,6 @@
         resume: false,
         cardId: '',
         images: '',
-        truelist: [],
         list2: [],
         items2: [
           {
@@ -382,9 +376,11 @@
         })
       },
       change() {
-        if (this.onef == false) {
-
-          this.video = true;
+        if (this.onef === false) {
+          if (!this.$refs.videos.paused){
+            this.$refs.videos.load()
+          }
+          this.$refs.videos.play()
         }
       },
       changesett() {
@@ -653,8 +649,6 @@
       } else {
         this.show = true;
       }
-
-
       this.$axios.post(this.url, qs.stringify({
         menuId: this.menuId,
         num:20
