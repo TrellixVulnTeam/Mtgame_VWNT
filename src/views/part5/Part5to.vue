@@ -203,7 +203,7 @@
 				</div>
 			</div>
 		</transition>
-		<div class='popContainer' v-show="popp">
+		<div class='popContainer' v-if="popp">
 			<p class="spanp spanp1">{{spanp}}</p>
 			<button class="roleimg">
 				<img src="../../assets/image/score-rule.png" style="height: 100%;" v-if="ruleimg10"/>

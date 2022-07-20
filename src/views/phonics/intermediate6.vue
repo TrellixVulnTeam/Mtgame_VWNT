@@ -65,7 +65,7 @@
         </div>
       </div>
     </transition>
-    <div class='popContainer' v-show="popp">
+    <div class='popContainer' v-if="popp">
       <p class="spanp">{{spanp}}</p>
       <button class="roleimg">
         <img src="../../assets/image/p-rule.png" style="height: 100%;"/>
@@ -108,6 +108,7 @@
       'onef': function(newVal) {
         if(this.onef === true) {
           setTimeout(() => {
+            this.clickBan = true;
             this.onef = false;
             this.zhezhao=false;
             for(var i=0;i<this.buttonlist.length;i++){
@@ -120,16 +121,9 @@
             this.falselist=this.questionname.split("");
             this.random();
             this.truesound=this.pic+this.list1[0].audio;
-            // for(var i=0;i<this.list1.length;i++){
-            //   this.list1[i].bg=this.pic+this.list1[i].bg;
-            //   this.list1[i].audio2=this.pic+this.list1[i].audio2;
-            //   this.list1[i].successful=0;
-            //   this.list1[i].fail=0;
-            // }
-
             this.video=true;
           }, 2000);
-        };
+        }
       },
       'video': function(newVal) {
 
@@ -183,6 +177,7 @@
       return {
         insert:'[',
         popp: false,
+        clickBan:true,
         spanp:'',
         playtime:1,
         countpage:1,
@@ -459,9 +454,12 @@
         // this.buttonlist
       },
       confirms:Debounce(function(){
-        this.confirm()
+        if (this.clickBan){
+          this.confirm()
+        }
       },500),
       confirm(){
+        this.clickBan=false;
         const truelist = this.questionname.split("");
         const answlist = [];
         for(var i=0;i<this.buttonlist.length;i++){
@@ -526,7 +524,6 @@
                   this.buttonlist[i].name=truelist[i];
               }
               this.soundsWrong=false;
-              // setTimeout(() => {
                 for(var i=0;i<this.buttonlist.length;i++){
                 if(this.buttonlist[i].color3===1){
                   this.buttonlist[i].color3=0;
@@ -556,10 +553,8 @@
                   });
                 }, 2000);
               }
-              // }, 500);
             }, 2000);
         }
-
       },
       changesett() {
         if(this.onef===false){

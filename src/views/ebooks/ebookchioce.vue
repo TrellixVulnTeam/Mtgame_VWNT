@@ -348,10 +348,13 @@
       margin-left: 2%;
     }
   }
-
   @media screen and (min-width: 482px) and (max-width: 569px) {
     .box1{
       height: 200%;
+    }
+    .box1 .imgList {
+      height: 20%;
+      width: 112px;
     }
     .fontsize {
       bottom: 16%;
@@ -364,9 +367,62 @@
     .box1{
       height: 200%;
     }
+    .box1 .imgList {
+      height: 20%;
+      width: 130px;
+    }
   }
+  @media screen and (min-width: 737px) and (max-width:811px) {
+    .box1 .imgList {
+      height: 20%;
+      width: 130px;
+    }
+    .fontsizes {
+      margin-top: 17%;
+    }
 
+    .twomenu {
+      padding-top: 18%;
+    }
+    .ebooslength{
+      font-size: 1.1rem;
+    }
 
+  }
+  @media screen and (min-width: 812px) and (max-width:895px) {
+    .books{
+      height: 50px;
+
+    }
+    .box1 {
+      margin-top: 3%;
+      height: 200%;
+    }
+    .ebooslength{
+      font-size: 1.2rem;
+    }
+    .box1 .imgList {
+      height: 20%;
+      width: 130px;
+    }
+  }
+  @media screen and (min-width: 895px) and (max-width:1023px) {
+    .books{
+      height: 50px;
+
+    }
+    .box1 {
+      margin-top: 3%;
+      height: 200%;
+    }
+    .ebooslength{
+      font-size: 1.3rem;
+    }
+    .box1 .imgList {
+      height: 20%;
+      width: 145px;
+    }
+  }
   @media screen and (min-width: 1024px) and (max-width: 1199px) {
     .fontsize {
       bottom: 13%;
@@ -409,13 +465,13 @@
       height: 100%;
       .imgList {
         height: 30%;
+        width: 200px;
       }
     }
     .ebooslength{
       font-size: 1.5rem;
     }
   }
-
   @media screen and (min-width: 1200px)and (max-width: 1600px) {
     .fontsize {
       bottom: 13%;
@@ -461,49 +517,11 @@
       height: 75%;
       .imgList {
         height: 40%;
+        width: 268px;
       }
     }
   }
-   @media screen and (min-width: 895px) and (max-width:1023px) {
-     .books{
-       height: 50px;
 
-     }
-     .box1 {
-       margin-top: 3%;
-       height: 200%;
-     }
-     .ebooslength{
-       font-size: 1.3rem;
-     }
-   }
-  @media screen and (min-width: 812px) and (max-width:895px) {
-      .books{
-        height: 50px;
-
-      }
-      .box1 {
-        margin-top: 3%;
-        height: 200%;
-      }
-    .ebooslength{
-      font-size: 1.2rem;
-    }
-  }
-  @media screen and (min-width: 737px) and (max-width:811px) {
-
-    .fontsizes {
-      margin-top: 17%;
-    }
-
-    .twomenu {
-      padding-top: 18%;
-    }
-    .ebooslength{
-      font-size: 1.1rem;
-    }
-
-  }
   @media screen and (min-width: 1600px){
     .fontsize {
       bottom: 13%;

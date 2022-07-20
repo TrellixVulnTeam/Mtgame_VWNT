@@ -122,7 +122,7 @@
         </div>
       </div>
     </transition>
-    <div class='popContainer' v-show="popp">
+    <div class='popContainer' v-if="popp">
       <p class="spanp spanp1">{{spanp}}</p>
       <button class="roleimg">
         <img src="../../assets/image/p-rule.png" style="height: 100%;" />
@@ -131,7 +131,7 @@
         <div class="close" @click="$tips(true);pop()">
           <img src="../../assets/image/pcloce.png">
         </div>
-        <img class="animapng7" src="http://monkeytown.monkeytree.com.hk/image/excercise2.gif">
+        <img class="animapng7" :src="pic+'/image/image2/excercise2.gif'">
       </div>
     </div>
     <transition name="fades">

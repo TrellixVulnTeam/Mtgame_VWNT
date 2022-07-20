@@ -552,7 +552,7 @@
 			</div>
 		</div>
 		<!-- <router-link to="/about">About</router-link> -->
-		<div class='popContainer' v-show="popp">
+		<div class='popContainer' v-if="popp">
 			<p class="spanp" v-bind:class="{spanp1:changei5||changei6||changei8||changei9}">{{spanp}}</p>
 			<button class="roleimg">
 					<img src="../assets/image/score-rule.png" style="height: 100%;" v-if="ruleimg10"/>

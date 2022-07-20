@@ -52,7 +52,7 @@
           <img src="../../assets/image/Icon_home.png" class="repeat">
         </div>
       </div>
-      <div class='popContainer' v-show="popp">
+      <div class='popContainer' v-if="popp">
         <div class="withcolor">
           <div class="close" @click="$tips(true);pop()">
             <img src="../../assets/image/cloce2.png" style="z-index: 1;position: relative;">

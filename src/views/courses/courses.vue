@@ -264,7 +264,7 @@
         </div>
       </div>
 
-      <div class='popContainer' v-show="popp">
+      <div class='popContainer' v-if="popp">
 
         <div class="withcolor">
           <div class="close"  @click="$tips(true);pop()">

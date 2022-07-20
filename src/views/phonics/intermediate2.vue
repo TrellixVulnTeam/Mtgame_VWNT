@@ -110,7 +110,7 @@
         </div>
       </div>
     </transition>
-    <div class='popContainer' v-show="popp">
+    <div class='popContainer' v-if="popp">
       <p class="spanp">{{spanp}}</p>
       <button class="roleimg">
         <img src="../../assets/image/p-rule.png" style="height: 100%;"/>

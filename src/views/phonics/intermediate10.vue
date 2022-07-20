@@ -88,7 +88,7 @@
         </div>
       </div>
     </transition>
-    <div class='popContainer' v-show="popp">
+    <div class='popContainer' v-if="popp">
       <p class="spanp spanp1">{{spanp}}</p>
       <button class="roleimg">
         <img src="../../assets/image/p-rule.png" style="height: 100%;" />
@@ -335,7 +335,7 @@
         this.popp = !this.popp;
       },
       help() {
-        if (this.onef == false) {
+        if (this.onef === false) {
           this.spanp = "Listen and spell the word. ";
           this.popp = !this.popp;
 
