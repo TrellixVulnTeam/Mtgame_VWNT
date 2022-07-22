@@ -23,7 +23,7 @@ Vue.use(animated);
 // global.jquery = global.$ = jquery;
 // import * from 'tesseract';
 // import OCRAD from "./ocrad.js";
-Vue.config.productionTip = false;
+Vue.config.productionTip = false
 Vue.prototype.$axios = axios;
 Vue.prototype.$tips = tips;
 //axios.defaults.baseURL = 'http://dodosurvey.com/monkeytownHK'  // api 即上面 vue.config.js 中配置的地址
@@ -39,7 +39,7 @@ axios.defaults.baseURL = 'https://gamejava.monkeytree.com.cn';
 
 localStorage.setItem('localurl',axios.defaults.baseURL);
 //版本号，更新需要+1
-localStorage.setItem('version',37);
+localStorage.setItem('version',38);
 //发布 ios OR android
 localStorage.setItem('system','ios');
 //发布到hk版还是cn版

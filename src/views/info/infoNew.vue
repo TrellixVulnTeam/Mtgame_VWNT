@@ -561,7 +561,7 @@
                       <div class="historyLabel" >Score</div>
                     </div>
                   <div class="historyList">
-                    <table style="color: #007BB8; margin-top: -5px;">
+                    <table style="color: #007BB8; margin-top: 0;">
                     <tr v-for="(li,index) in history" :key="index" >
                       <td class="historyLi" style="width: 10%;">{{li.date}}</td>
                       <td class="historyLi" style="width: 10%;left: -2%;position: relative;">{{li.letter}}</td>
@@ -619,7 +619,7 @@
                 </div>
                 <!--Exercise Completion Intervals-->
                 <div class="intervals" v-if="categoryNum === 2">
-                  <img src="../../assets/image/IClock.png" class="iClock">
+                  <img src="../../assets/image/Iclock.png" class="iClock">
                   <div class="intervalsPosition">
                   <p class="intervalsHour">{{ intervalsHour }}</p>
                   <p class="intervalsHours">hrs</p>
@@ -7074,6 +7074,18 @@
         width: 100px;
         height: 100px;
       }
+    }
+  }
+
+  @media screen and (min-width: 1980px){
+    .history{
+      width: 115%;
+      height: 15%;
+      position: absolute;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+      padding-top: 2%;
     }
   }
 </style>

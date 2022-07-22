@@ -985,7 +985,7 @@
 							menuId: this.menuId,
 							unitsId:this.unitsId,
 							unit:this.unit,
-              name:this.UnitsList[7].name,
+              name:this.UnitsList[7].NAME,
               part:this.part,
               level:this.level,
 						}
@@ -1007,7 +1007,7 @@
 								menuId: this.menuId,
 								unitsId:this.unitsId,
 								unit:this.unit,
-                name:this.UnitsList[0].name,
+                name:this.UnitsList[0].NAME,
                 part:this.part,
                 level:this.level,
 							}
@@ -1028,7 +1028,7 @@
 								menuId: this.menuId,
 								unitsId:this.unitsId,
 								unit:this.unit,
-                name:this.UnitsList[2].name,
+                name:this.UnitsList[2].NAME,
                 part:this.part,
                 level:this.level,
 							}
@@ -1049,7 +1049,7 @@
 								menuId: this.menuId,
 								unitsId:this.unitsId,
 								unit:this.unit,
-                name:this.UnitsList[1].name,
+                name:this.UnitsList[1].NAME,
                 part:this.part,
                 level:this.level,
 							}
@@ -1070,7 +1070,7 @@
 								menuId: this.menuId,
 								unitsId:this.unitsId,
 								unit:this.unit,
-                name:this.UnitsList[5].name,
+                name:this.UnitsList[5].NAME,
                 part:this.part,
                 level:this.level,
 							}
@@ -1091,7 +1091,7 @@
 								menuId: this.menuId,
 								unitsId:this.unitsId,
 								unit:this.unit,
-                name:this.UnitsList[3].name,
+                name:this.UnitsList[3].NAME,
                 part:this.part,
                 level:this.level,
 							}
@@ -1112,7 +1112,7 @@
 								menuId: this.menuId,
 								unitsId:this.unitsId,
 								unit:this.unit,
-                name:this.UnitsList[4].name,
+                name:this.UnitsList[4].NAME,
                 part:this.part,
                 level:this.level,
 							}
@@ -1133,7 +1133,7 @@
 								menuId: this.menuId,
 								unitsId:this.unitsId,
 								unit:this.unit,
-                name:this.UnitsList[6].name,
+                name:this.UnitsList[6].NAME,
                 part:this.part,
                 level:this.level,
 							 }

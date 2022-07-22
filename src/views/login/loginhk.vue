@@ -8,7 +8,7 @@
 						<span class="warnspan" v-if="warn">The phone number / email and password that you've entered doesn't match any
 							account.</span>
 						<div class="selectsty"> <span class="d3"></span>
-							<select class="selectsize2"  v-model="selectItem" @change="selectFn($event)">
+							<select class="selectsize2"  v-model="selectItem" @change="$tips(true);selectFn($event)">
 								<option style="background: white!important;" value="852">+852</option>
 								<option style="background: white!important;" value="853">+853</option>
 							</select>
@@ -24,8 +24,8 @@
 							<img src="../../assets/image/error.png" class="error" v-if="warn5" />
 						</div>
 						<div class="inputc1">
-							<button type="button" class="login" @click="login">LOG IN</button>
-							<button type="button" class="visitor" @click="goregister">
+							<button type="button" class="login" @click="$tips(true);login()">LOG IN</button>
+							<button type="button" class="visitor" @click="$tips(true);goregister()">
 								SIGN UP
 							</button>
 						</div>
@@ -33,14 +33,14 @@
 							<div class="item1" v-if="checkbox">
 								<input id="item1" type="radio" name="item" value="pick" v-model="picked" @click="checkboxs" />
 								<label for="item1"></label>
-								<button  type="button" class="remesty" @click="checkboxs">remenber me</button>
-								<button type="button" class="forgsty" @click="forget">forget password ?</button>
+								<button  type="button" class="remesty" @click="$tips(true);checkboxs()">remenber me</button>
+								<button type="button" class="forgsty" @click="$tips(true);forget()">forget password ?</button>
 							</div>
 							<div class="item1" v-if="!checkbox">
 								<input id="item2" type="radio" name="item" value="pick2" v-model="picked" @click="checkboxs" />
 								<label for="item2"></label>
-								<button type="button"  class="remesty" @click="checkboxs">remenber me</button>
-								<button type="button" class="forgsty" @click="forget">forget password ?</button>
+								<button type="button"  class="remesty" @click="$tips(true);checkboxs()">remenber me</button>
+								<button type="button" class="forgsty" @click="$tips(true);forget()">forget password ?</button>
 							</div>
 						</div>
 
@@ -54,7 +54,7 @@
 				<div class="menu" style="color: #44ccc2;">
 					<div v-if="getphone" style="position: relative;margin: 0 4%;width: 92%;">
 						<div style="position: absolute; width:13%;float: left;z-index: 2;">
-							<img src="../../assets/image/leftred.png" class="leftRsty" @click="backlogin">
+							<img src="../../assets/image/leftred.png" class="leftRsty" @click="$tips(true);backlogin()">
 						</div>
 						<div style="position: absolute; width: 30%;float: left;left: 13%;text-align: left;">
 							<span class="warnstyle" v-if="warn1">Enter the phone number or email you've registered at Monkey Tree.</span>
@@ -75,12 +75,12 @@
 							<img src="../../assets/image/error.png" class="error1" v-if="warn2" />
 						</div>
 						<div style="position: absolute; width: 13%;right: 0;text-align: center;display: block;">
-							<img src="../../assets/image/rightblue.png" class="rightBsty" @click="checkcode">
+							<img src="../../assets/image/rightblue.png" class="rightBsty" @click="$tips(true);checkcode()">
 						</div>
 					</div>
 					<div v-if="getcodes">
 						<div style="position: relative; width:13%;float: left;padding-left: 3%;">
-							<img src="../../assets/image/leftred.png" class="leftRsty" @click="backphone">
+							<img src="../../assets/image/leftred.png" class="leftRsty" @click="$tips(true);backphone()">
 						</div>
 						<div style="position: relative; width: 30%;float: left;text-align: left;">
 							<span class="warnstyle" v-if="warn6">Please type the verification code sent to <span style="color:#057bb8;">{{telephone}}</span></span>
@@ -93,18 +93,18 @@
 							<img src="../../assets/image/error.png" class="error1" v-if="warn7" />
 							<div style="width: 100%; display: inline-flex; padding-left: 15px;">
 								<button type="button" class="receive">Don't receive code?</button>
-								<button type="button" class="resend" v-show="!show" @click="checkcode">Resend</button>
+								<button type="button" class="resend" v-show="!show" @click="$tips(true);checkcode()">Resend</button>
 								<button type="button" class="resends" v-show="show">Resend({{this.count}}s)</button>
 							</div>
 						</div>
 						<div style="position: relative; width: 13%;float: right;padding-right: 3%;">
-							<img src="../../assets/image/rightblue.png" class="rightBsty" @click="sencode">
+							<img src="../../assets/image/rightblue.png" class="rightBsty" @click="$tips(true);sencode()">
 						</div>
 					</div>
 					<div v-if="getpassw">
 						<!-- <span class="warn9sty">The password must consist of more than 8 bits of uppercase, lowercase, numeric, and special symbols</span> -->
 						<div style="position: relative; width:13%;float: left;padding-left: 3%;">
-							<img src="../../assets/image/leftred.png" class="leftRsty" @click="backcode">
+							<img src="../../assets/image/leftred.png" class="leftRsty" @click="$tips(true);backcode()">
 						</div>
 						<div style="position: relative; width: 30%;float: left;">
 							<img src="../../assets/image/password.png" class="phone3" />
@@ -120,7 +120,7 @@
 							</div>
 						</div>
 						<div style="position: relative; width: 13%;float: right;padding-right: 3%;">
-							<img src="../../assets/image/rightblue.png" class="rightBsty" @click="register">
+							<img src="../../assets/image/rightblue.png" class="rightBsty" @click="$tips(true);register()">
 						</div>
 					</div>
 					<div v-if="getresult">
