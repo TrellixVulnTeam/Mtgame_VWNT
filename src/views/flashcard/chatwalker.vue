@@ -3398,6 +3398,113 @@
              :style="{zIndex: !alien ? 100 : 1}" @click="showGif('alien')">
       </div>
     </div>
+    <div v-else-if="this.unit === 'My Body' && this.part === 'part1'">
+      <img src="../../assets/image/202009H5 Parts of My Body_MT/Runner_BG/BG_00000.png"
+           style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;"/>
+      <div class="ear">
+        <img src="../../assets/image/202009H5 Parts of My Body_MT/GIF_PNG/png/ear.png" v-if="ear" @click="showGif('ear')">
+        <img src="../../assets/image/202009H5 Parts of My Body_MT/GIF_PNG/gif/ear.gif" style="z-index: 100" v-if="!ear"
+             @click="showGif('ear')">
+      </div>
+      <div class="eat2">
+        <img src="../../assets/image/202009H5 Parts of My Body_MT/GIF_PNG/gif/eat.gif" style="z-index: 100" v-if="!eat2"
+             @click="showGif('eat2')">
+      </div>
+      <div class="eyes">
+        <img src="../../assets/image/202009H5 Parts of My Body_MT/GIF_PNG/png/eyes.png" v-if="eyes" @click="showGif('eyes')">
+        <img src="../../assets/image/202009H5 Parts of My Body_MT/GIF_PNG/gif/eyes.gif" style="z-index: 100" v-if="!eyes"
+             @click="showGif('eyes')">
+      </div>
+      <div class="feet">
+        <img src="../../assets/image/202009H5 Parts of My Body_MT/GIF_PNG/png/feet.png" v-if="feet" @click="showGif('feet')">
+        <img src="../../assets/image/202009H5 Parts of My Body_MT/GIF_PNG/gif/feet.gif" style="z-index: 100" v-if="!feet"
+             @click="showGif('feet')">
+      </div>
+      <div class="hair">
+        <img src="../../assets/image/202009H5 Parts of My Body_MT/GIF_PNG/gif/hair.gif" style="z-index: 100" v-if="!hair"
+             @click="showGif('hair')">
+      </div>
+      <div class="hand">
+        <img src="../../assets/image/202009H5 Parts of My Body_MT/GIF_PNG/gif/hand.gif" style="z-index: 100" v-if="!hand"
+             @click="showGif('hand')">
+      </div>
+      <div class="leg">
+        <img src="../../assets/image/202009H5 Parts of My Body_MT/GIF_PNG/gif/leg.gif" style="z-index: 100" v-if="!leg"
+             @click="showGif('leg')">
+      </div>
+      <div class="look">
+        <img src="../../assets/image/202009H5 Parts of My Body_MT/GIF_PNG/gif/look.gif" style="z-index: 100" v-if="!look"
+             @click="showGif('look')">
+      </div>
+      <div class="mouth">
+        <img src="../../assets/image/202009H5 Parts of My Body_MT/GIF_PNG/png/mouth.png" v-if="alien&&ufo" @click="showGif('alien')">
+        <img src="../../assets/image/202009H5 Parts of My Body_MT/GIF_PNG/gif/mouth.gif" style="z-index: 100" v-if="!alien"
+             @click="showGif('alien')">
+      </div>
+      <div class="nose">
+        <img src="../../assets/image/202009H5 Parts of My Body_MT/GIF_PNG/png/nose.png" v-if="nose" @click="showGif('nose')">
+        <img src="../../assets/image/202009H5 Parts of My Body_MT/GIF_PNG/gif/nose.gif" style="z-index: 100" v-if="!nose"
+             @click="showGif('nose')">
+      </div>
+      <div class="smell">
+        <img src="../../assets/image/202009H5 Parts of My Body_MT/GIF_PNG/png/smell.png" v-if="smell" @click="showGif('smell')">
+        <img src="../../assets/image/202009H5 Parts of My Body_MT/GIF_PNG/gif/smell.gif" style="z-index: 100" v-if="!smell"
+             @click="showGif('smell')">
+      </div>
+      <div class="walk2">
+        <img src="../../assets/image/202009H5 Parts of My Body_MT/GIF_PNG/png/walk.png" v-if="walk2" @click="showGif('walk2')">
+        <img src="../../assets/image/202009H5 Parts of My Body_MT/GIF_PNG/gif/walk.gif" style="z-index: 100" v-if="!walk2"
+             @click="showGif('walk2')">
+      </div>
+      <div class="smellButton">
+        <img src="../../assets/image/202009H5 Parts of My Body_MT/Word/word_smell Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !dark ? 100 : 1}" @click="showGif('dark')">
+      </div>
+      <div class="handButton">
+        <img src="../../assets/image/202009H5 Parts of My Body_MT/Word/word_hand Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !dark ? 100 : 1}" @click="showGif('dark')">
+      </div>
+      <div class="legButton">
+        <img src="../../assets/image/202009H5 Parts of My Body_MT/Word/word_leg Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !dark ? 100 : 1}" @click="showGif('dark')">
+      </div>
+      <div class="lookButton">
+        <img src="../../assets/image/202009H5 Parts of My Body_MT/Word/word_look Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !dark ? 100 : 1}" @click="showGif('dark')">
+      </div>
+      <div class="eyesButton">
+        <img src="../../assets/image/202009H5 Parts of My Body_MT/Word/word_eyes Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !dark ? 100 : 1}" @click="showGif('dark')">
+      </div>
+      <div class="noseButton">
+        <img src="../../assets/image/202009H5 Parts of My Body_MT/Word/word_nose Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !dark ? 100 : 1}" @click="showGif('dark')">
+      </div>
+      <div class="earButton">
+        <img src="../../assets/image/202009H5 Parts of My Body_MT/Word/word_ear Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !dark ? 100 : 1}" @click="showGif('dark')">
+      </div>
+      <div class="mouthButton">
+        <img src="../../assets/image/202009H5 Parts of My Body_MT/Word/word_mouth Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !dark ? 100 : 1}" @click="showGif('dark')">
+      </div>
+      <div class="eat2Button">
+        <img src="../../assets/image/202009H5 Parts of My Body_MT/Word/word_eat Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !dark ? 100 : 1}" @click="showGif('dark')">
+      </div>
+      <div class="hairButton">
+        <img src="../../assets/image/202009H5 Parts of My Body_MT/Word/word_hair Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !dark ? 100 : 1}" @click="showGif('dark')">
+      </div>
+      <div class="walk2Button">
+        <img src="../../assets/image/202009H5 Parts of My Body_MT/Word/word_walk Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !dark ? 100 : 1}" @click="showGif('dark')">
+      </div>
+      <div class="feetButton">
+        <img src="../../assets/image/202009H5 Parts of My Body_MT/Word/word_feet Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !dark ? 100 : 1}" @click="showGif('dark')">
+      </div>
+    </div>
     <div v-else>
     <img src="../../assets/image/H5 Thing/Walker_BG/bg_0.png"
          style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;">
@@ -3920,6 +4027,18 @@ export default {
         },
         local:'',
         cardType:'default',
+        ear:true,
+        eat2:true,
+        eyes:true,
+        feet:true,
+        hair:true,
+        hand:true,
+        leg:true,
+        look:true,
+        mouth:true,
+        nose:true,
+        smell:true,
+        walk2:true,
         alien:true,
         asteroid:true,
         bright:true,
@@ -4517,6 +4636,174 @@ export default {
     position: fixed;
     background-color: #44ccc2;
     z-index: 201;
+  }
+
+  .smellButton img {
+    width: 6%;
+    left: 8%;
+    top: 11%;
+    position: absolute;
+  }
+
+  .lookButton img {
+    width: 6%;
+    left: 8%;
+    top: 11%;
+    position: absolute;
+  }
+
+  .handButton img {
+    width: 6%;
+    left: 8%;
+    top: 11%;
+    position: absolute;
+  }
+
+  .legButton img {
+    width: 6%;
+    left: 8%;
+    top: 11%;
+    position: absolute;
+  }
+
+  .eyesButton img {
+    width: 6%;
+    left: 8%;
+    top: 11%;
+    position: absolute;
+  }
+
+  .noseButton img {
+    width: 6%;
+    left: 8%;
+    top: 11%;
+    position: absolute;
+  }
+
+  .earButton img {
+    width: 6%;
+    left: 8%;
+    top: 11%;
+    position: absolute;
+  }
+
+  .mouthButton img {
+    width: 6%;
+    left: 8%;
+    top: 11%;
+    position: absolute;
+  }
+
+  .hairButton img {
+    width: 6%;
+    left: 8%;
+    top: 11%;
+    position: absolute;
+  }
+
+  .eatButton img {
+    width: 6%;
+    left: 8%;
+    top: 11%;
+    position: absolute;
+  }
+
+  .feetButton img {
+    width: 6%;
+    left: 8%;
+    top: 11%;
+    position: absolute;
+  }
+
+  .walkButton img {
+    width: 6%;
+    left: 8%;
+    top: 11%;
+    position: absolute;
+  }
+
+  .smell img {
+    width: 29%;
+    left: 3%;
+    top: 2%;
+    position: absolute;
+  }
+
+  .hand img {
+    width: 17%;
+    left: 45%;
+    top: 63%;
+    position: absolute;
+  }
+
+  .leg img {
+    width: 17%;
+    left: 45%;
+    top: 63%;
+    position: absolute;
+  }
+
+  .look img {
+    width: 17%;
+    left: 45%;
+    top: 63%;
+    position: absolute;
+  }
+
+  .eyes img {
+    width: 15%;
+    left: 45%;
+    top: 2%;
+    position: absolute;
+  }
+
+  .nose img {
+    width: 15%;
+    left: 42%;
+    top: 24%;
+    position: absolute;
+  }
+
+  .ear img {
+    width: 15%;
+    left: 45%;
+    top: 49%;
+    position: absolute;
+  }
+
+  .mouth img[data-v-580a76d2] {
+    width: 15%;
+    left: 42%;
+    top: 70%;
+    position: absolute;
+  }
+
+  .hair img {
+    width: 17%;
+    left: 45%;
+    top: 63%;
+    position: absolute;
+  }
+
+  .walk2 img {
+    width: 35%;
+    left: 63%;
+    top: 6%;
+    position: absolute;
+  }
+
+  .eat2 img {
+    width: 17%;
+    left: 45%;
+    top: 63%;
+    position: absolute;
+  }
+
+  .feet img {
+    width: 14%;
+    left: 86%;
+    top: 52%;
+    position: absolute;
   }
 
   .darkButton img {
