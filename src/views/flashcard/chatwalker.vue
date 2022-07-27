@@ -3408,7 +3408,7 @@
       </div>
       <div class="eat2">
         <img src="../../assets/image/202009H5 Parts of My Body_MT/GIF_PNG/gif/eat.gif" style="z-index: 100" v-if="!eat2"
-             @click="showGif('eat2')">
+             @click="walkers&&showGif('eat2')">
       </div>
       <div class="eyes">
         <img src="../../assets/image/202009H5 Parts of My Body_MT/GIF_PNG/png/eyes.png" v-if="eyes" @click="showGif('eyes')">
@@ -3416,11 +3416,12 @@
              @click="showGif('eyes')">
       </div>
       <div class="feet">
-        <img src="../../assets/image/202009H5 Parts of My Body_MT/GIF_PNG/png/feet.png" v-if="feet" @click="showGif('feet')">
+        <img src="../../assets/image/202009H5 Parts of My Body_MT/GIF_PNG/png/feet.png" v-if="feet" @click="walkers&&showGif('feet')">
         <img src="../../assets/image/202009H5 Parts of My Body_MT/GIF_PNG/gif/feet.gif" style="z-index: 100" v-if="!feet"
              @click="showGif('feet')">
       </div>
       <div class="hair">
+        <img src="../../assets/image/202009H5 Parts of My Body_MT/GIF_PNG/png/hair.png" v-if="hair&&eat2&&walk2" @click="showGif('hair')">
         <img src="../../assets/image/202009H5 Parts of My Body_MT/GIF_PNG/gif/hair.gif" style="z-index: 100" v-if="!hair"
              @click="showGif('hair')">
       </div>
@@ -3437,9 +3438,9 @@
              @click="showGif('look')">
       </div>
       <div class="mouth">
-        <img src="../../assets/image/202009H5 Parts of My Body_MT/GIF_PNG/png/mouth.png" v-if="alien&&ufo" @click="showGif('alien')">
-        <img src="../../assets/image/202009H5 Parts of My Body_MT/GIF_PNG/gif/mouth.gif" style="z-index: 100" v-if="!alien"
-             @click="showGif('alien')">
+        <img src="../../assets/image/202009H5 Parts of My Body_MT/GIF_PNG/png/mouth.png" v-if="mouth" @click="walkers&&showGif('mouth')">
+        <img src="../../assets/image/202009H5 Parts of My Body_MT/GIF_PNG/gif/mouth.gif" style="z-index: 100" v-if="!mouth"
+             @click="showGif('mouth')">
       </div>
       <div class="nose">
         <img src="../../assets/image/202009H5 Parts of My Body_MT/GIF_PNG/png/nose.png" v-if="nose" @click="showGif('nose')">
@@ -3447,62 +3448,172 @@
              @click="showGif('nose')">
       </div>
       <div class="smell">
-        <img src="../../assets/image/202009H5 Parts of My Body_MT/GIF_PNG/png/smell.png" v-if="smell" @click="showGif('smell')">
+        <img src="../../assets/image/202009H5 Parts of My Body_MT/GIF_PNG/png/smell.png" v-if="smell&&look&&hand&&leg" @click="showGif('smell')">
         <img src="../../assets/image/202009H5 Parts of My Body_MT/GIF_PNG/gif/smell.gif" style="z-index: 100" v-if="!smell"
              @click="showGif('smell')">
       </div>
       <div class="walk2">
-        <img src="../../assets/image/202009H5 Parts of My Body_MT/GIF_PNG/png/walk.png" v-if="walk2" @click="showGif('walk2')">
         <img src="../../assets/image/202009H5 Parts of My Body_MT/GIF_PNG/gif/walk.gif" style="z-index: 100" v-if="!walk2"
              @click="showGif('walk2')">
       </div>
       <div class="smellButton">
-        <img src="../../assets/image/202009H5 Parts of My Body_MT/Word/word_smell Comp 1_00000.png" v-if="walkers"
-             :style="{zIndex: !dark ? 100 : 1}" @click="showGif('dark')">
+        <img src="../../assets/image/202009H5 Parts of My Body_MT/Word/word_smell Comp 1_00000.png"
+             :style="{zIndex: !smell ? 100 : 1}" @click="showGif('smell')">
       </div>
       <div class="handButton">
-        <img src="../../assets/image/202009H5 Parts of My Body_MT/Word/word_hand Comp 1_00000.png" v-if="walkers"
-             :style="{zIndex: !dark ? 100 : 1}" @click="showGif('dark')">
+        <img src="../../assets/image/202009H5 Parts of My Body_MT/Word/word_hand Comp 1_00000.png"
+             :style="{zIndex: !hand ? 100 : 1}" @click="showGif('hand')">
       </div>
       <div class="legButton">
-        <img src="../../assets/image/202009H5 Parts of My Body_MT/Word/word_leg Comp 1_00000.png" v-if="walkers"
-             :style="{zIndex: !dark ? 100 : 1}" @click="showGif('dark')">
+        <img src="../../assets/image/202009H5 Parts of My Body_MT/Word/word_leg Comp 1_00000.png"
+             :style="{zIndex: !leg ? 100 : 1}" @click="showGif('leg')">
       </div>
       <div class="lookButton">
-        <img src="../../assets/image/202009H5 Parts of My Body_MT/Word/word_look Comp 1_00000.png" v-if="walkers"
-             :style="{zIndex: !dark ? 100 : 1}" @click="showGif('dark')">
+        <img src="../../assets/image/202009H5 Parts of My Body_MT/Word/word_look Comp 1_00000.png"
+             :style="{zIndex: !look ? 100 : 1}" @click="showGif('look')">
       </div>
       <div class="eyesButton">
-        <img src="../../assets/image/202009H5 Parts of My Body_MT/Word/word_eyes Comp 1_00000.png" v-if="walkers"
-             :style="{zIndex: !dark ? 100 : 1}" @click="showGif('dark')">
+        <img src="../../assets/image/202009H5 Parts of My Body_MT/Word/word_eyes Comp 1_00000.png"
+             :style="{zIndex: !eyes ? 100 : 1}" @click="showGif('eyes')">
       </div>
       <div class="noseButton">
-        <img src="../../assets/image/202009H5 Parts of My Body_MT/Word/word_nose Comp 1_00000.png" v-if="walkers"
-             :style="{zIndex: !dark ? 100 : 1}" @click="showGif('dark')">
+        <img src="../../assets/image/202009H5 Parts of My Body_MT/Word/word_nose Comp 1_00000.png"
+             :style="{zIndex: !nose ? 100 : 1}" @click="showGif('nose')">
       </div>
       <div class="earButton">
-        <img src="../../assets/image/202009H5 Parts of My Body_MT/Word/word_ear Comp 1_00000.png" v-if="walkers"
-             :style="{zIndex: !dark ? 100 : 1}" @click="showGif('dark')">
+        <img src="../../assets/image/202009H5 Parts of My Body_MT/Word/word_ear Comp 1_00000.png"
+             :style="{zIndex: !ear ? 100 : 1}" @click="showGif('ear')">
       </div>
       <div class="mouthButton">
         <img src="../../assets/image/202009H5 Parts of My Body_MT/Word/word_mouth Comp 1_00000.png" v-if="walkers"
-             :style="{zIndex: !dark ? 100 : 1}" @click="showGif('dark')">
+             :style="{zIndex: !mouth ? 100 : 1}" @click="showGif('mouth')">
       </div>
       <div class="eat2Button">
         <img src="../../assets/image/202009H5 Parts of My Body_MT/Word/word_eat Comp 1_00000.png" v-if="walkers"
-             :style="{zIndex: !dark ? 100 : 1}" @click="showGif('dark')">
+             :style="{zIndex: !eat2 ? 100 : 1}" @click="showGif('eat2')">
       </div>
       <div class="hairButton">
-        <img src="../../assets/image/202009H5 Parts of My Body_MT/Word/word_hair Comp 1_00000.png" v-if="walkers"
-             :style="{zIndex: !dark ? 100 : 1}" @click="showGif('dark')">
+        <img src="../../assets/image/202009H5 Parts of My Body_MT/Word/word_hair Comp 1_00000.png"
+             :style="{zIndex: !hair ? 100 : 1}" @click="showGif('hair')">
       </div>
       <div class="walk2Button">
         <img src="../../assets/image/202009H5 Parts of My Body_MT/Word/word_walk Comp 1_00000.png" v-if="walkers"
-             :style="{zIndex: !dark ? 100 : 1}" @click="showGif('dark')">
+             :style="{zIndex: !walk2 ? 100 : 1}" @click="showGif('walk2')">
       </div>
       <div class="feetButton">
         <img src="../../assets/image/202009H5 Parts of My Body_MT/Word/word_feet Comp 1_00000.png" v-if="walkers"
-             :style="{zIndex: !dark ? 100 : 1}" @click="showGif('dark')">
+             :style="{zIndex: !feet ? 100 : 1}" @click="showGif('feet')">
+      </div>
+    </div>
+    <div v-else-if="this.unit === 'My Body' && this.part === 'part2'">
+      <img src="../../assets/image/202009H5 Keeping Healthy_MT/Runner_BG/BG_00000.png"
+           style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;"/>
+      <div class="brush2">
+        <img src="../../assets/image/202009H5 Keeping Healthy_MT/GIF_PNG/gif/brush.gif" style="z-index: 100" v-if="!brush2"
+             @click="showGif('brush2')">
+      </div>
+      <div class="doctor">
+        <img src="../../assets/image/202009H5 Keeping Healthy_MT/GIF_PNG/png/doctor.png" v-if="doctor" @click="walkers&&showGif('doctor')">
+        <img src="../../assets/image/202009H5 Keeping Healthy_MT/GIF_PNG/gif/doctor.gif" style="z-index: 100" v-if="!doctor"
+             @click="showGif('doctor')">
+      </div>
+      <div class="fruit">
+        <img src="../../assets/image/202009H5 Keeping Healthy_MT/GIF_PNG/png/fruit.png" v-if="fruit" @click="showGif('fruit')">
+        <img src="../../assets/image/202009H5 Keeping Healthy_MT/GIF_PNG/gif/fruit.gif" style="z-index: 100" v-if="!fruit"
+             @click="showGif('fruit')">
+      </div>
+      <div class="germs">
+        <img src="../../assets/image/202009H5 Keeping Healthy_MT/GIF_PNG/png/germs.png" v-if="germs" @click="showGif('germs')">
+        <img src="../../assets/image/202009H5 Keeping Healthy_MT/GIF_PNG/gif/germs.gif" style="z-index: 100" v-if="!germs"
+             @click="showGif('germs')">
+      </div>
+      <div class="run2">
+        <img src="../../assets/image/202009H5 Keeping Healthy_MT/GIF_PNG/png/run.png" v-if="run2" @click="showGif('run2')">
+        <img src="../../assets/image/202009H5 Keeping Healthy_MT/GIF_PNG/gif/run.gif" style="z-index: 100" v-if="!run2"
+             @click="showGif('run2')">
+      </div>
+      <div class="sleep2">
+        <img src="../../assets/image/202009H5 Keeping Healthy_MT/GIF_PNG/png/sleep.png" v-if="sleep2" @click="showGif('sleep2')">
+        <img src="../../assets/image/202009H5 Keeping Healthy_MT/GIF_PNG/gif/sleep.gif" style="z-index: 100" v-if="!sleep2"
+             @click="showGif('sleep2')">
+      </div>
+      <div class="soap">
+        <img src="../../assets/image/202009H5 Keeping Healthy_MT/GIF_PNG/png/soap.png" v-if="soap" @click="showGif('soap')">
+        <img src="../../assets/image/202009H5 Keeping Healthy_MT/GIF_PNG/gif/soap.gif" style="z-index: 100" v-if="!soap"
+             @click="showGif('soap')">
+      </div>
+      <div class="sweets">
+        <img src="../../assets/image/202009H5 Keeping Healthy_MT/GIF_PNG/png/sweets.png" v-if="sweets" @click="showGif('sweets')">
+        <img src="../../assets/image/202009H5 Keeping Healthy_MT/GIF_PNG/gif/sweets.gif" style="z-index: 100" v-if="!sweets"
+             @click="showGif('sweets')">
+      </div>
+      <div class="teeth">
+        <img src="../../assets/image/202009H5 Keeping Healthy_MT/GIF_PNG/png/teeth.png" v-if="teeth&&brush2" @click="walkers&&showGif('teeth')">
+        <img src="../../assets/image/202009H5 Keeping Healthy_MT/GIF_PNG/gif/teeth.gif" style="z-index: 100" v-if="!teeth"
+             @click="showGif('teeth')">
+      </div>
+      <div class="vegetables2">
+        <img src="../../assets/image/202009H5 Keeping Healthy_MT/GIF_PNG/png/vegetables.png" v-if="vegetables2" @click="showGif('vegetables2')">
+        <img src="../../assets/image/202009H5 Keeping Healthy_MT/GIF_PNG/gif/vegetables.gif" style="z-index: 100" v-if="!vegetables2"
+             @click="showGif('vegetables2')">
+      </div>
+      <div class="wash2">
+        <img src="../../assets/image/202009H5 Keeping Healthy_MT/GIF_PNG/png/wash.png" v-if="wash2" @click="walkers&&showGif('wash2')">
+        <img src="../../assets/image/202009H5 Keeping Healthy_MT/GIF_PNG/gif/wash.gif" style="z-index: 100" v-if="!wash2"
+             @click="showGif('wash2')">
+      </div>
+      <div class="water2">
+        <img src="../../assets/image/202009H5 Keeping Healthy_MT/GIF_PNG/png/water.png" v-if="water2" @click="showGif('water2')">
+        <img src="../../assets/image/202009H5 Keeping Healthy_MT/GIF_PNG/gif/water.gif" style="z-index: 100" v-if="!water2"
+             @click="showGif('water2')">
+      </div>
+      <div class="brush2Button">
+        <img src="../../assets/image/202009H5 Keeping Healthy_MT/Word/word_brush Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !brush2 ? 100 : 2}" @click="showGif('brush2')">
+      </div>
+      <div class="doctorButton">
+        <img src="../../assets/image/202009H5 Keeping Healthy_MT/Word/word_doctor Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !doctor ? 100 : 1}" @click="showGif('doctor')">
+      </div>
+      <div class="fruitButton">
+        <img src="../../assets/image/202009H5 Keeping Healthy_MT/Word/word_fruit Comp 1_00000.png"
+             :style="{zIndex: !fruit ? 100 : 1}" @click="showGif('fruit')">
+      </div>
+      <div class="germsButton">
+        <img src="../../assets/image/202009H5 Keeping Healthy_MT/Word/word_germs Comp 1_00000.png"
+             :style="{zIndex: !germs ? 100 : 1}" @click="showGif('germs')">
+      </div>
+      <div class="run2Button">
+        <img src="../../assets/image/202009H5 Keeping Healthy_MT/Word/word_run Comp 1_00000.png"
+             :style="{zIndex: !run2 ? 100 : 1}" @click="showGif('run2')">
+      </div>
+      <div class="sleep2Button">
+        <img src="../../assets/image/202009H5 Keeping Healthy_MT/Word/word_sleep Comp 1_00000.png"
+             :style="{zIndex: !sleep2 ? 100 : 1}" @click="showGif('sleep2')">
+      </div>
+      <div class="soapButton">
+        <img src="../../assets/image/202009H5 Keeping Healthy_MT/Word/word_soap Comp 1_00000.png"
+             :style="{zIndex: !soap ? 100 : 1}" @click="showGif('soap')">
+      </div>
+      <div class="sweetsButton">
+        <img src="../../assets/image/202009H5 Keeping Healthy_MT/Word/word_sweets Comp 1_00000.png"
+             :style="{zIndex: !sweets ? 100 : 2}" @click="showGif('sweets')">
+      </div>
+      <div class="teethButton">
+        <img src="../../assets/image/202009H5 Keeping Healthy_MT/Word/word_teeth Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !teeth ? 100 : 1}" @click="showGif('teeth')">
+      </div>
+      <div class="vegetables2Button">
+        <img src="../../assets/image/202009H5 Keeping Healthy_MT/Word/word_vegetables Comp 1_00000.png"
+             :style="{zIndex: !vegetables2 ? 100 : 1}" @click="showGif('vegetables2')">
+      </div>
+      <div class="wash2Button">
+        <img src="../../assets/image/202009H5 Keeping Healthy_MT/Word/word_wash Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !wash2 ? 100 : 1}" @click="showGif('wash2')">
+      </div>
+      <div class="water2Button">
+        <img src="../../assets/image/202009H5 Keeping Healthy_MT/Word/word_water Comp 1_00000.png"
+             :style="{zIndex: !water2 ? 100 : 1}" @click="showGif('water2')">
       </div>
     </div>
     <div v-else>
@@ -4024,9 +4135,47 @@ export default {
           star:require('../../assets/Flashcard Audio/space/stars.mp3'),
           sun:require('../../assets/Flashcard Audio/space/sun.mp3'),
           ufo:require('../../assets/Flashcard Audio/space/UFO.mp3'),
+
+          //my body
+          ear:require('../../assets/Flashcard Audio/space/UFO.mp3'),
+          eat2:require('../../assets/Flashcard Audio/space/UFO.mp3'),
+          eyes:require('../../assets/Flashcard Audio/space/UFO.mp3'),
+          feet:require('../../assets/Flashcard Audio/space/UFO.mp3'),
+          hair:require('../../assets/Flashcard Audio/space/UFO.mp3'),
+          hand:require('../../assets/Flashcard Audio/space/UFO.mp3'),
+          leg:require('../../assets/Flashcard Audio/space/UFO.mp3'),
+          look:require('../../assets/Flashcard Audio/space/UFO.mp3'),
+          mouth:require('../../assets/Flashcard Audio/space/UFO.mp3'),
+          nose:require('../../assets/Flashcard Audio/space/UFO.mp3'),
+          smell:require('../../assets/Flashcard Audio/space/UFO.mp3'),
+          walk2:require('../../assets/Flashcard Audio/space/UFO.mp3'),
+          brush2:require('../../assets/Flashcard Audio/space/UFO.mp3'),
+          doctor:require('../../assets/Flashcard Audio/space/UFO.mp3'),
+          fruit:require('../../assets/Flashcard Audio/space/UFO.mp3'),
+          germs:require('../../assets/Flashcard Audio/space/UFO.mp3'),
+          run2:require('../../assets/Flashcard Audio/space/UFO.mp3'),
+          sleep2:require('../../assets/Flashcard Audio/space/UFO.mp3'),
+          soap:require('../../assets/Flashcard Audio/space/UFO.mp3'),
+          sweets:require('../../assets/Flashcard Audio/space/UFO.mp3'),
+          teeth:require('../../assets/Flashcard Audio/space/UFO.mp3'),
+          vegetables2:require('../../assets/Flashcard Audio/space/UFO.mp3'),
+          wash2:require('../../assets/Flashcard Audio/space/UFO.mp3'),
+          water2:require('../../assets/Flashcard Audio/space/UFO.mp3'),
         },
         local:'',
         cardType:'default',
+        brush2:true,
+        doctor:true,
+        fruit:true,
+        germs:true,
+        run2:true,
+        sleep2:true,
+        soap:true,
+        sweets:true,
+        teeth:true,
+        vegetables2:true,
+        wash2:true,
+        water2:true,
         ear:true,
         eat2:true,
         eyes:true,
@@ -4638,87 +4787,258 @@ export default {
     z-index: 201;
   }
 
+  .brush2Button img {
+    width: 6%;
+    left: 34%;
+    top: 84%;
+    position: absolute;
+  }
+
+  .doctorButton img {
+    width: 7%;
+    left: 72%;
+    top: 10%;
+    position: absolute;
+  }
+
+  .fruitButton img {
+    width: 6%;
+    left: 84%;
+    top: 77%;
+    position: absolute;
+  }
+
+  .germsButton img {
+    width: 6%;
+    left: 89%;
+    top: 33%;
+    position: absolute;
+  }
+
+  .run2Button img {
+    width: 5%;
+    left: 11%;
+    top: 29%;
+    position: absolute;
+  }
+
+  .sleep2Button img {
+    width: 6%;
+    left: 48%;
+    top: 27%;
+    position: absolute;
+  }
+
+  .soapButton img {
+    width: 6%;
+    left: 14%;
+    top: 83%;
+    position: absolute;
+  }
+
+  .sweetsButton img {
+    width: 7%;
+    left: 51%;
+    top: 90%;
+    position: absolute;
+  }
+
+  .teethButton img{
+    width: 6%;
+    left: 20%;
+    top: 75%;
+    position: absolute;
+  }
+
+  .vegetables2Button img {
+    width: 10%;
+    left: 56%;
+    top: 65%;
+    position: absolute;
+  }
+
+  .wash2Button img {
+    width: 6%;
+    left: 3%;
+    top: 83%;
+    position: absolute;
+  }
+
+  .water2Button img {
+    width: 6%;
+    left: 47%;
+    top: 51%;
+    position: absolute;
+  }
+
+  .brush2 img {
+    width: 27%;
+    left: 18%;
+    top: 46%;
+    position: absolute;
+  }
+
+  .doctor img {
+    width: 29%;
+    left: 64%;
+    top: 9%;
+    position: absolute;
+  }
+
+  .fruit img {
+    width: 32%;
+    left: 67%;
+    top: 47%;
+    position: absolute;
+  }
+
+  .germs img {
+    width: 23%;
+    left: 77%;
+    top: 3%;
+    position: absolute;
+  }
+
+  .run2 img {
+    width: 32%;
+    left: 10%;
+    top: 15%;
+    position: absolute;
+  }
+
+  .sleep2 img {
+    width: 35%;
+    left: 31%;
+    top: 1%;
+    position: absolute;
+  }
+
+  .soap img {
+    width: 8%;
+    left: 13%;
+    top: 85%;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .sweets img {
+    width: 26%;
+    left: 34%;
+    top: 69%;
+    position: absolute;
+    z-index: 2;
+  }
+
+  .vegetables2 img {
+    width: 34%;
+    left: 44%;
+    top: 44%;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .wash2 img {
+    width: 25%;
+    left: 0%;
+    top: 37%;
+    position: absolute;
+  }
+
+  .water2 img {
+    width: 21%;
+    left: 40%;
+    top: 41%;
+    position: absolute;
+  }
+
+  .teeth img {
+    width: 27%;
+    left: 18%;
+    top: 46%;
+    position: absolute;
+  }
+
   .smellButton img {
     width: 6%;
-    left: 8%;
-    top: 11%;
+    left: 6%;
+    top: 9%;
     position: absolute;
   }
 
   .lookButton img {
     width: 6%;
-    left: 8%;
-    top: 11%;
+    left: 22%;
+    top: 31%;
     position: absolute;
   }
 
   .handButton img {
     width: 6%;
     left: 8%;
-    top: 11%;
+    top: 53%;
     position: absolute;
   }
 
   .legButton img {
-    width: 6%;
-    left: 8%;
-    top: 11%;
+    width: 5%;
+    left: 10%;
+    top: 71%;
     position: absolute;
   }
 
   .eyesButton img {
     width: 6%;
-    left: 8%;
-    top: 11%;
+    left: 50%;
+    top: 19%;
     position: absolute;
   }
 
   .noseButton img {
     width: 6%;
-    left: 8%;
-    top: 11%;
+    left: 47%;
+    top: 42%;
     position: absolute;
   }
 
   .earButton img {
-    width: 6%;
-    left: 8%;
-    top: 11%;
+    width: 5%;
+    left: 50%;
+    top: 66%;
     position: absolute;
   }
 
   .mouthButton img {
-    width: 6%;
-    left: 8%;
-    top: 11%;
+    width: 7%;
+    left: 46%;
+    top: 88%;
     position: absolute;
   }
 
   .hairButton img {
     width: 6%;
-    left: 8%;
-    top: 11%;
+    left: 66%;
+    top: 15%;
     position: absolute;
   }
 
-  .eatButton img {
+  .eat2Button img {
     width: 6%;
-    left: 8%;
-    top: 11%;
+    left: 87%;
+    top: 25%;
     position: absolute;
   }
 
   .feetButton img {
     width: 6%;
-    left: 8%;
-    top: 11%;
+    left: 90%;
+    top: 70%;
     position: absolute;
   }
 
-  .walkButton img {
+  .walk2Button img {
     width: 6%;
-    left: 8%;
-    top: 11%;
+    left: 73%;
+    top: 71%;
     position: absolute;
   }
 
@@ -4730,23 +5050,23 @@ export default {
   }
 
   .hand img {
-    width: 17%;
-    left: 45%;
-    top: 63%;
+    width: 29%;
+    left: 3%;
+    top: 2%;
     position: absolute;
   }
 
   .leg img {
-    width: 17%;
-    left: 45%;
-    top: 63%;
+    width: 29%;
+    left: 3%;
+    top: 2%;
     position: absolute;
   }
 
   .look img {
-    width: 17%;
-    left: 45%;
-    top: 63%;
+    width: 29%;
+    left: 3%;
+    top: 2%;
     position: absolute;
   }
 
@@ -4767,11 +5087,11 @@ export default {
   .ear img {
     width: 15%;
     left: 45%;
-    top: 49%;
+    top: 47%;
     position: absolute;
   }
 
-  .mouth img[data-v-580a76d2] {
+  .mouth img {
     width: 15%;
     left: 42%;
     top: 70%;
@@ -4779,9 +5099,9 @@ export default {
   }
 
   .hair img {
-    width: 17%;
-    left: 45%;
-    top: 63%;
+    width: 35%;
+    left: 63%;
+    top: 6%;
     position: absolute;
   }
 
@@ -4793,9 +5113,9 @@ export default {
   }
 
   .eat2 img {
-    width: 17%;
-    left: 45%;
-    top: 63%;
+    width: 35%;
+    left: 63%;
+    top: 6%;
     position: absolute;
   }
 
@@ -11514,6 +11834,177 @@ export default {
   @media only screen and (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 3) ,
   (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 812px) and (max-width: 1023px){
+    .germsButton img {
+      width: 7%;
+      left: 89%;
+      top: 39%;
+      position: absolute;
+    }
+    .sweetsButton img {
+      width: 7%;
+      left: 50%;
+      top: 88%;
+      position: absolute;
+    }
+    .brush2Button img {
+      width: 6%;
+      left: 30%;
+      top: 85%;
+      position: absolute;
+    }
+    .teethButton img {
+      width: 6%;
+      left: 17%;
+      top: 77%;
+      position: absolute;
+    }
+    .soapButton img {
+      width: 6%;
+      left: 11%;
+      top: 84%;
+      position: absolute;
+    }
+    .wash2Button img {
+      width: 6%;
+      left: 1%;
+      top: 82%;
+      position: absolute;
+    }
+    .water2 img {
+      width: 21%;
+      left: 37%;
+      top: 36%;
+      position: absolute;
+    }
+    .sweets img {
+      width: 25%;
+      left: 34%;
+      top: 65%;
+      position: absolute;
+      z-index: 2;
+    }
+    .vegetables2 img {
+      width: 32%;
+      left: 45%;
+      top: 39%;
+      position: absolute;
+      z-index: 1;
+    }
+    .fruit img {
+      width: 30%;
+      left: 68%;
+      top: 42%;
+      position: absolute;
+    }
+    .sleep2 img {
+      width: 33%;
+      left: 31%;
+      top: -3%;
+      position: absolute;
+    }
+    .run2 img {
+      width: 30%;
+      left: 10%;
+      top: 11%;
+      position: absolute;
+    }
+    .teeth img {
+      width: 23%;
+      left: 15%;
+      top: 46%;
+      position: absolute;
+    }
+    .brush2 img {
+      width: 23%;
+      left: 15%;
+      top: 46%;
+      position: absolute;
+    }
+    .soap img {
+      width: 6%;
+      left: 11%;
+      top: 87%;
+      position: absolute;
+      z-index: 1;
+    }
+    .wash2 img {
+      width: 20%;
+      left: 0%;
+      top: 41%;
+      position: absolute;
+    }
+    .mouthButton img {
+      width: 7%;
+      left: 46%;
+      top: 91%;
+      position: absolute;
+    }
+    .noseButton img {
+      width: 6%;
+      left: 46.5%;
+      top: 43%;
+      position: absolute;
+    }
+    .eyesButton img {
+      width: 6%;
+      left: 49.5%;
+      top: 20%;
+      position: absolute;
+    }
+    .eyes img {
+      width: 15%;
+      left: 45%;
+      top: 0;
+      position: absolute;
+    }
+    .feetButton img {
+      width: 6%;
+      left: 90%;
+      top: 73%;
+      position: absolute;
+    }
+    .hair img {
+      width: 32%;
+      left: 65%;
+      top: 4%;
+      position: absolute;
+    }
+    .eat2 img {
+      width: 32%;
+      left: 65%;
+      top: 4%;
+      position: absolute;
+    }
+    .walk2 img {
+      width: 32%;
+      left: 65%;
+      top: 4%;
+      position: absolute;
+    }
+    .smell img {
+      width: 25%;
+      left: 5%;
+      top: 1%;
+      position: absolute;
+    }
+    .look img {
+      width: 25%;
+      left: 5%;
+      top: 1%;
+      position: absolute;
+    }
+    .hand img {
+      width: 25%;
+      left: 5%;
+      top: 1%;
+      position: absolute;
+    }
+    .leg img {
+      width: 25%;
+      left: 5%;
+      top: 1%;
+      position: absolute;
+    }
     .spaceStationButton img {
       width: 12%;
       left: 34%;
@@ -14517,6 +15008,297 @@ export default {
   @media only screen and (min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 1024px) and (max-width: 1600px){
+    .sleep2 img {
+      width: 40%;
+      left: 31%;
+      top: 8%;
+      position: absolute;
+    }
+    .sleep2Button img {
+      width: 9%;
+      left: 46%;
+      top: 31%;
+      position: absolute;
+    }
+    .run2Button img {
+      width: 6%;
+      left: 10%;
+      top: 35%;
+      position: absolute;
+    }
+    .doctorButton img {
+      width: 9%;
+      left: 70%;
+      top: 27%;
+      position: absolute;
+    }
+    .water2Button img {
+      width: 8%;
+      left: 44%;
+      top: 56%;
+      position: absolute;
+    }
+    .germsButton img {
+      width: 8%;
+      left: 88%;
+      top: 35%;
+      position: absolute;
+    }
+    .vegetables2Button img {
+      width: 12%;
+      left: 56%;
+      top: 75%;
+      position: absolute;
+    }
+    .sweetsButton img {
+      width: 8%;
+      left: 51%;
+      top: 89%;
+      position: absolute;
+    }
+    .brush2Button img {
+      width: 7%;
+      left: 34%;
+      top: 88%;
+      position: absolute;
+    }
+    .teethButton img {
+      width: 7%;
+      left: 20%;
+      top: 79%;
+      position: absolute;
+    }
+    .soapButton img {
+      width: 7%;
+      left: 14%;
+      top: 87%;
+      position: absolute;
+    }
+    .soap img {
+      width: 8%;
+      left: 13%;
+      top: 89%;
+      position: absolute;
+      z-index: 1;
+    }
+    .wash2Button img {
+      width: 7%;
+      left: 2%;
+      top: 85%;
+      position: absolute;
+    }
+    .germs img {
+      width: 23%;
+      left: 77%;
+      top: 13%;
+      position: absolute;
+    }
+    .doctor img {
+      width: 29%;
+      left: 64%;
+      top: 27%;
+      position: absolute;
+    }
+    .water2 img {
+      width: 21%;
+      left: 38%;
+      top: 50%;
+      position: absolute;
+    }
+    .fruit img {
+      width: 32%;
+      left: 67%;
+      top: 59%;
+      position: absolute;
+    }
+    .vegetables2 img {
+      width: 34%;
+      left: 44%;
+      top: 56%;
+      position: absolute;
+      z-index: 1;
+    }
+    .sweets img {
+      width: 27%;
+      left: 34%;
+      top: 75%;
+      position: absolute;
+      z-index: 2;
+    }
+    .run2 img {
+      width: 33%;
+      left: 9%;
+      top: 24%;
+      position: absolute;
+    }
+    .teeth img {
+      width: 28%;
+      left: 18%;
+      top: 59%;
+      position: absolute;
+    }
+    .brush2 img {
+      width: 28%;
+      left: 18%;
+      top: 59%;
+      position: absolute;
+    }
+    .wash2 img {
+      width: 25%;
+      left: 0%;
+      top: 54%;
+      position: absolute;
+    }
+    .mouthButton img {
+      width: 8%;
+      left: 47%;
+      top: 86%;
+      position: absolute;
+    }
+    .earButton img {
+      width: 7%;
+      left: 50%;
+      top: 62%;
+      position: absolute;
+    }
+    .noseButton img {
+      width: 8%;
+      left: 47%;
+      top: 42%;
+      position: absolute;
+    }
+    .eyesButton img {
+      width: 8%;
+      left: 50%;
+      top: 18%;
+      position: absolute;
+    }
+    .mouth img {
+      width: 17%;
+      left: 42%;
+      top: 70%;
+      position: absolute;
+    }
+    .ear img {
+      width: 17%;
+      left: 45%;
+      top: 47%;
+      position: absolute;
+    }
+    .nose img {
+      width: 17%;
+      left: 42%;
+      top: 27%;
+      position: absolute;
+    }
+    .eyes img {
+      width: 17%;
+      left: 45%;
+      top: 3%;
+      position: absolute;
+    }
+    .hairButton img {
+      width: 8%;
+      left: 62%;
+      top: 27%;
+      position: absolute;
+    }
+    .eat2Button img {
+      width: 8%;
+      left: 87%;
+      top: 27%;
+      position: absolute;
+    }
+    .walk2Button img {
+      width: 8%;
+      left: 73%;
+      top: 73%;
+      position: absolute;
+    }
+    .feetButton img {
+      width: 7%;
+      left: 89%;
+      top: 66%;
+      position: absolute;
+    }
+    .feet img {
+      width: 15%;
+      left: 85%;
+      top: 52%;
+      position: absolute;
+    }
+    .feetButton img {
+      width: 7%;
+      left: 90%;
+      top: 65%;
+      position: absolute;
+    }
+    .legButton img {
+      width: 7%;
+      left: 9%;
+      top: 76%;
+      position: absolute;
+    }
+    .handButton img {
+      width: 8%;
+      left: 6%;
+      top: 61%;
+      position: absolute;
+    }
+    .lookButton img {
+      width: 8%;
+      left: 25%;
+      top: 42%;
+      position: absolute;
+    }
+    .smellButton img {
+      width: 8%;
+      left: 4%;
+      top: 24%;
+      position: absolute;
+    }
+    .hair img {
+      width: 41%;
+      left: 61%;
+      top: 19%;
+      position: absolute;
+    }
+    .eat2 img {
+      width: 41%;
+      left: 61%;
+      top: 19%;
+      position: absolute;
+    }
+    .walk2 img {
+      width: 41%;
+      left: 61%;
+      top: 19%;
+      position: absolute;
+    }
+    .smell img {
+      width: 33%;
+      left: 1%;
+      top: 18%;
+      position: absolute;
+    }
+    .hand img {
+      width: 33%;
+      left: 1%;
+      top: 18%;
+      position: absolute;
+    }
+    .look img {
+      width: 33%;
+      left: 1%;
+      top: 18%;
+      position: absolute;
+    }
+    .leg img {
+      width: 33%;
+      left: 1%;
+      top: 18%;
+      position: absolute;
+    }
     .planet img {
       width: 66%;
       left: -3%;

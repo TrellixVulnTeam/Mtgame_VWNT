@@ -14,6 +14,7 @@ Vue.prototype.$echarts = echarts;
 import 'default-passive-events'
 import Bounce from 'vue-bounce';
 import "babel-polyfill";
+import fastClick from 'fastclick'
 import animated from 'animate.css' // npm install animate.css --save安装，在引入
 Vue.use(animated);
 
@@ -26,6 +27,7 @@ Vue.use(animated);
 Vue.config.productionTip = false
 Vue.prototype.$axios = axios;
 Vue.prototype.$tips = tips;
+fastClick.attach(document.body)
 //axios.defaults.baseURL = 'http://dodosurvey.com/monkeytownHK'  // api 即上面 vue.config.js 中配置的地址
 
 //axios.defaults.baseURL = 'http://localhost:8080/monkeytownCN';

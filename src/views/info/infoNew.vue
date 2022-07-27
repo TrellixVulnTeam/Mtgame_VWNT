@@ -805,9 +805,7 @@
         stars: [],
         seleinfo: true,
         imageu: '',
-
         pic: "",
-
         url: '/user/',
         url1: '', url2: '', url3: '', url4: '', url5: '', url6: '', url7: '',
         purl1: '', purl2: '', purl3: '',
@@ -1179,10 +1177,7 @@
               this.strengthsMaxNub=this.strengthsMaxNub-3;
             }
           }
-
         }
-        console.log(this.sliceMin,this.sliceMax);
-        console.log(this.overall.slice(this.sliceMin,this.sliceMax));
       },
       categories(str){
         if (str === 1){
@@ -2079,8 +2074,6 @@
     mounted(){
     },
     created() { //生命周期里接收参数
-      console.log('高：'+window.screen.height);
-      console.log('宽：'+window.screen.width);
       this.local = localStorage.getItem('local');
       this.gameImage = localStorage.getItem('gameImage');
       this.firstName = localStorage.getItem('firstName');

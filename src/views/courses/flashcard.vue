@@ -2100,6 +2100,132 @@
             img:require('../../assets/image/In Space/UFO.png')
           }
         ],
+        MyBodyPart1:[
+          {
+            id:1,
+            cardName:'smell',
+            audio:require('../../assets/Flashcard Audio/space/fly.mp3'),
+            img:require('../../assets/image/Parts of My Body/Smell.png')
+          },{
+            id:2,
+            cardName:'hand',
+            audio:require('../../assets/Flashcard Audio/space/rocket.mp3'),
+            img:require('../../assets/image/Parts of My Body/Hand.png')
+          },{
+            id:3,
+            cardName:'leg',
+            audio:require('../../assets/Flashcard Audio/space/rocket.mp3'),
+            img:require('../../assets/image/Parts of My Body/Leg.png')
+          },{
+            id:4,
+            cardName:'look',
+            audio:require('../../assets/Flashcard Audio/space/fire.mp3'),
+            img:require('../../assets/image/Parts of My Body/Look.png')
+          },{
+            id:5,
+            cardName:'eyes',
+            audio:require('../../assets/Flashcard Audio/space/countdown.mp3'),
+            img:require('../../assets/image/Parts of My Body/Eyes.png')
+          },{
+            id:6,
+            cardName:'nose',
+            audio:require('../../assets/Flashcard Audio/space/helmet.mp3'),
+            img:require('../../assets/image/Parts of My Body/Nose.png')
+          },{
+            id:7,
+            cardName:'ear',
+            audio:require('../../assets/Flashcard Audio/space/astronaut.mp3'),
+            img:require('../../assets/image/Parts of My Body/Ear.png')
+          },{
+            id:8,
+            cardName:'hair',
+            audio:require('../../assets/Flashcard Audio/space/spacesuit.mp3'),
+            img:require('../../assets/image/Parts of My Body/Hair.png')
+          },{
+            id:9,
+            cardName:'mouth',
+            audio:require('../../assets/Flashcard Audio/space/fuel.mp3'),
+            img:require('../../assets/image/Parts of My Body/Mouth.png')
+          },{
+            id:10,
+            cardName:'eat',
+            audio:require('../../assets/Flashcard Audio/space/explore.mp3'),
+            img:require('../../assets/image/Parts of My Body/Eat.png')
+          },{
+            id:11,
+            cardName:'walk',
+            audio:require('../../assets/Flashcard Audio/space/scientist.mp3'),
+            img:require('../../assets/image/Parts of My Body/Walk.png')
+          },{
+            id:12,
+            cardName:'feet',
+            audio:require('../../assets/Flashcard Audio/space/radio.mp3'),
+            img:require('../../assets/image/Parts of My Body/Feet.png')
+          }
+        ],
+        MyBodyPart2:[
+          {
+            id:1,
+            cardName:'run',
+            audio:require('../../assets/Flashcard Audio/space/fly.mp3'),
+            img:require('../../assets/image/Keeping Healthy/Run.png')
+          },{
+            id:2,
+            cardName:'soap',
+            audio:require('../../assets/Flashcard Audio/space/rocket.mp3'),
+            img:require('../../assets/image/Keeping Healthy/Soap.png')
+          },{
+            id:3,
+            cardName:'sleep',
+            audio:require('../../assets/Flashcard Audio/space/rocket.mp3'),
+            img:require('../../assets/image/Keeping Healthy/Sleep.png')
+          },{
+            id:4,
+            cardName:'water',
+            audio:require('../../assets/Flashcard Audio/space/fire.mp3'),
+            img:require('../../assets/image/Keeping Healthy/Water.png')
+          },{
+            id:5,
+            cardName:'sweets',
+            audio:require('../../assets/Flashcard Audio/space/countdown.mp3'),
+            img:require('../../assets/image/Keeping Healthy/Sweets.png')
+          },{
+            id:6,
+            cardName:'vegetables',
+            audio:require('../../assets/Flashcard Audio/space/helmet.mp3'),
+            img:require('../../assets/image/Keeping Healthy/Vegetables.png')
+          },{
+            id:7,
+            cardName:'fruit',
+            audio:require('../../assets/Flashcard Audio/space/astronaut.mp3'),
+            img:require('../../assets/image/Keeping Healthy/Fruit.png')
+          },{
+            id:8,
+            cardName:'germs',
+            audio:require('../../assets/Flashcard Audio/space/spacesuit.mp3'),
+            img:require('../../assets/image/Keeping Healthy/Germs.png')
+          },{
+            id:9,
+            cardName:'wash',
+            audio:require('../../assets/Flashcard Audio/space/fuel.mp3'),
+            img:require('../../assets/image/Keeping Healthy/Wash.png')
+          },{
+            id:10,
+            cardName:'teeth',
+            audio:require('../../assets/Flashcard Audio/space/explore.mp3'),
+            img:require('../../assets/image/Keeping Healthy/Teeth.png')
+          },{
+            id:11,
+            cardName:'brush',
+            audio:require('../../assets/Flashcard Audio/space/scientist.mp3'),
+            img:require('../../assets/image/Keeping Healthy/Brush.png')
+          },{
+            id:12,
+            cardName:'doctor',
+            audio:require('../../assets/Flashcard Audio/space/radio.mp3'),
+            img:require('../../assets/image/Keeping Healthy/Doctor.png')
+          }
+        ],
         list:[],
         titleUrl:{
           MyCommunity:require('../../assets/image/2-logo.png'),
@@ -2147,6 +2273,8 @@
           ThemeParkPart2:require('../../assets/image/7-logo2.png'),
           SpacePart1:require('../../assets/image/8-logo1.png'),
           SpacePart2:require('../../assets/image/8-logo2.png'),
+          MyBodyPart1:require('../../assets/image/9-logo1.png'),
+          MyBodyPart2:require('../../assets/image/9-logo2.png'),
         },
         title:'../../assets/image/6-6logo.png',
         flashCardUrl:'http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/9315e4a9-e1ec-4f49-8db5-5b3a9b6ae083.png',

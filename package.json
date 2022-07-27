@@ -17,6 +17,7 @@
     "cordova-plugin-inappbrowser": "^5.0.0",
     "default-passive-events": "^2.0.0",
     "echarts": "^5.3.1",
+    "fastclick": "^1.0.6",
     "imagemin": "^5.0.0",
     "less-loader": "^5.0.0",
     "myscript": "^4.3.0",

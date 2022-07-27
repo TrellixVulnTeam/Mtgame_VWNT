@@ -340,7 +340,8 @@ import $ from "jquery";
 		display: block;
 		position: fixed;
 	}
-	*{
+
+  *{
     user-select:none;
 	    -webkit-touch-callout:none;  /*系统默认菜单被禁用*/
 	    -webkit-user-select:none; /*webkit浏览器*/
