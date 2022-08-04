@@ -599,7 +599,7 @@
                   </div>
                 </div>
                 <!--Scores for key areas-->
-                <div class="areasDiv" v-if="categoryNum === 4">
+                <div class="areasDiv" v-show="categoryNum === 4">
                   <div class="areasButton">
                     <div class="areasButton1" :style="symbolNub ==='1' ? symbolColor:symbolDefaultColor" @click="$tips(true);areas('Vocabulary')">Vocabulary</div>
                     <div class="areasButton1" :style="symbolNub ==='2' ? symbolColor:symbolDefaultColor" @click="$tips(true);areas('Spelling')">Spelling</div>

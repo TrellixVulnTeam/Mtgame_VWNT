@@ -1553,6 +1553,7 @@
               this.stars[i].threestart=true;
             }
           }
+          console.log(this.stars);
         }, res => {
           console.info('false');
         });

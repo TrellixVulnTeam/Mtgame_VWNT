@@ -3616,6 +3616,232 @@
              :style="{zIndex: !water2 ? 100 : 1}" @click="showGif('water2')">
       </div>
     </div>
+    <div v-else-if="this.unit === 'My Weekend' && this.part === 'part1'">
+      <img src="../../assets/image/202010H5 At the Park _MT/Runner_BG/BG_00000.png"
+           style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;"/>
+      <img src="../../assets/image/202010H5 At the Park _MT/Still/STILL_00000.png"
+           style="width: 100%; z-index: -1; height: 100%;display:block;position: absolute;"/>
+      <div class="bike2">
+        <img src="../../assets/image/202010H5 At the Park _MT/GIF_PNG/png/bike.png" v-if="bike2" @click="showGif('bike2')">
+        <img src="../../assets/image/202010H5 At the Park _MT/GIF_PNG/gif/bike.gif" style="z-index: 100" v-if="!bike2"
+             @click="showGif('bike2')">
+      </div>
+      <div class="brush3">
+<!--        <img src="../../assets/image/202010H5 At the Park _MT/GIF_PNG/png/brush.png" v-if="brush3" @click="showGif('brush3')">-->
+        <img src="../../assets/image/202010H5 At the Park _MT/GIF_PNG/gif/brush.gif" style="z-index: 100" v-if="!brush3"
+             @click="showGif('brush3')">
+      </div>
+      <div class="camera">
+        <img src="../../assets/image/202010H5 At the Park _MT/GIF_PNG/png/camera.png" v-if="camera" @click="showGif('camera')">
+        <img src="../../assets/image/202010H5 At the Park _MT/GIF_PNG/gif/camera.gif" style="z-index: 100" v-if="!camera"
+             @click="showGif('camera')">
+      </div>
+      <div class="climb2">
+        <img src="../../assets/image/202010H5 At the Park _MT/GIF_PNG/png/climb.png" v-if="climb2&&jungleGym" @click="showGif('climb2')">
+        <img src="../../assets/image/202010H5 At the Park _MT/GIF_PNG/gif/climb.gif" style="z-index: 100" v-if="!climb2"
+             @click="showGif('climb2')">
+      </div>
+      <div class="jog">
+        <img src="../../assets/image/202010H5 At the Park _MT/GIF_PNG/png/jog.png" v-if="jog" @click="walkers&&showGif('jog')">
+        <img src="../../assets/image/202010H5 At the Park _MT/GIF_PNG/gif/jog.gif" style="z-index: 100" v-if="!jog"
+             @click="showGif('jog')">
+      </div>
+      <div class="jungleGym">
+<!--        <img src="../../assets/image/202010H5 At the Park _MT/GIF_PNG/png/jungle gym.png" v-if="jungleGym" @click="showGif('jungleGym')">-->
+        <img src="../../assets/image/202010H5 At the Park _MT/GIF_PNG/gif/jungle gym.gif" style="z-index: 100" v-if="!jungleGym"
+             @click="showGif('jungleGym')">
+      </div>
+      <div class="kick2">
+        <img src="../../assets/image/202010H5 At the Park _MT/GIF_PNG/png/kick.png" v-if="kick2" @click="walkers&&showGif('kick2')">
+        <img src="../../assets/image/202010H5 At the Park _MT/GIF_PNG/gif/kick.gif" style="z-index: 100" v-if="!kick2"
+             @click="showGif('kick2')">
+      </div>
+      <div class="paint">
+        <img src="../../assets/image/202010H5 At the Park _MT/GIF_PNG/png/paint.png" v-if="paint" @click="showGif('paint')">
+        <img src="../../assets/image/202010H5 At the Park _MT/GIF_PNG/gif/paint.gif" style="z-index: 100" v-if="!paint"
+             @click="showGif('paint')">
+      </div>
+      <div class="picnic2">
+        <img src="../../assets/image/202010H5 At the Park _MT/GIF_PNG/png/picnic.png" v-if="picnic2" @click="showGif('picnic2')">
+        <img src="../../assets/image/202010H5 At the Park _MT/GIF_PNG/gif/picnic.gif" style="z-index: 100" v-if="!picnic2"
+             @click="showGif('picnic2')">
+      </div>
+      <div class="seesaw2">
+        <img src="../../assets/image/202010H5 At the Park _MT/GIF_PNG/png/seesaw.png" v-if="seesaw2" @click="showGif('seesaw2')">
+        <img src="../../assets/image/202010H5 At the Park _MT/GIF_PNG/gif/seesaw.gif" style="z-index: 100" v-if="!seesaw2"
+             @click="showGif('seesaw2')">
+      </div>
+      <div class="swing2">
+        <img src="../../assets/image/202010H5 At the Park _MT/GIF_PNG/png/swing.png" v-if="swing2" @click="showGif('swing2')">
+        <img src="../../assets/image/202010H5 At the Park _MT/GIF_PNG/gif/swing.gif" style="z-index: 100" v-if="!swing2"
+             @click="showGif('swing2')">
+      </div>
+      <div class="kite2">
+        <img src="../../assets/image/202010H5 At the Park _MT/GIF_PNG/png/kite.png" v-if="kite2" @click="showGif('kite2')">
+        <img src="../../assets/image/202010H5 At the Park _MT/GIF_PNG/gif/kite.gif" style="z-index: 100" v-if="!kite2"
+             @click="showGif('kite2')">
+      </div>
+      <div class="bike2Button">
+        <img src="../../assets/image/202010H5 At the Park _MT/Word/word_bike.png"
+             :style="{zIndex: !bike2 ? 100 : 2}" @click="showGif('bike2')">
+      </div>
+      <div class="brush3Button">
+        <img src="../../assets/image/202010H5 At the Park _MT/Word/word_brush.png" v-if="walkers"
+             :style="{zIndex: !brush3 ? 100 : 1}" @click="showGif('brush3')">
+      </div>
+      <div class="cameraButton">
+        <img src="../../assets/image/202010H5 At the Park _MT/Word/word_camera.png"
+             :style="{zIndex: !camera ? 100 : 1}" @click="showGif('camera')">
+      </div>
+      <div class="climb2Button">
+        <img src="../../assets/image/202010H5 At the Park _MT/Word/word_climb.png"
+             :style="{zIndex: !climb2 ? 100 : 1}" @click="showGif('climb2')">
+      </div>
+      <div class="jogButton">
+        <img src="../../assets/image/202010H5 At the Park _MT/Word/word_jog.png" v-if="walkers"
+             :style="{zIndex: !jog ? 100 : 1}" @click="showGif('jog')">
+      </div>
+      <div class="jungleGymButton">
+        <img src="../../assets/image/202010H5 At the Park _MT/Word/word_jungle gym.png" v-if="walkers"
+             :style="{zIndex: !jungleGym ? 100 : 1}" @click="showGif('jungleGym')">
+      </div>
+      <div class="kick2Button">
+        <img src="../../assets/image/202010H5 At the Park _MT/Word/word_kick.png" v-if="walkers"
+             :style="{zIndex: !kick2 ? 100 : 1}" @click="showGif('kick2')">
+      </div>
+      <div class="paintButton">
+        <img src="../../assets/image/202010H5 At the Park _MT/Word/word_paint.png"
+             :style="{zIndex: !paint ? 100 : 2}" @click="showGif('paint')">
+      </div>
+      <div class="picnic2Button">
+        <img src="../../assets/image/202010H5 At the Park _MT/Word/word_picnic.png"
+             :style="{zIndex: !picnic2 ? 100 : 1}" @click="showGif('picnic2')">
+      </div>
+      <div class="seesaw2Button">
+        <img src="../../assets/image/202010H5 At the Park _MT/Word/word_seesaw.png"
+             :style="{zIndex: !seesaw2 ? 100 : 1}" @click="showGif('seesaw2')">
+      </div>
+      <div class="swing2Button">
+        <img src="../../assets/image/202010H5 At the Park _MT/Word/word_swing.png"
+             :style="{zIndex: !swing2 ? 100 : 1}" @click="showGif('swing2')">
+      </div>
+      <div class="kite2Button">
+        <img src="../../assets/image/202010H5 At the Park _MT/Word/word_kite.png"
+             :style="{zIndex: !kite2 ? 100 : 1}" @click="showGif('kite2')">
+      </div>
+    </div>
+    <div v-else-if="this.unit === 'My Weekend' && this.part === 'part2'">
+      <img src="../../assets/image/202010H5 At the Beach_MT/Runner_BG/BG_00000.png"
+           style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;"/>
+      <div class="sandcastle">
+        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/png/sandcastle.png" v-if="sandcastle" @click="showGif('sandcastle')">
+        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/gif/sandcastle.gif" style="z-index: 100" v-if="!sandcastle"
+             @click="showGif('sandcastle')">
+      </div>
+      <div class="paddle">
+<!--        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/png/paddle.png" v-if="paddle" @click="showGif('paddle')">-->
+        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/gif/paddle.gif" style="z-index: 100" v-if="!paddle"
+             @click="showGif('paddle')">
+      </div>
+      <div class="seashell">
+        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/png/seashell.png" v-if="seashell" @click="showGif('seashell')">
+        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/gif/seashell.gif" style="z-index: 100" v-if="!seashell"
+             @click="showGif('seashell')">
+      </div>
+      <div class="boat">
+        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/png/boat.png" v-if="paddle&&boat" @click="walkers&&showGif('boat')">
+        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/gif/boat.gif" style="z-index: 100" v-if="!boat"
+             @click="showGif('boat')">
+      </div>
+      <div class="rod">
+        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/png/rod.png" v-if="rod" @click="showGif('rod')">
+        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/gif/rod.gif" style="z-index: 100" v-if="!rod"
+             @click="showGif('rod')">
+      </div>
+      <div class="read2">
+        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/png/read.png" v-if="read2" @click="showGif('read2')">
+        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/gif/read.gif" style="z-index: 100" v-if="!read2"
+             @click="showGif('read2')">
+      </div>
+      <div class="swim2">
+        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/png/swim.png" v-if="swim2" @click="showGif('swim2')">
+        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/gif/swim.gif" style="z-index: 100" v-if="!swim2"
+             @click="showGif('swim2')">
+      </div>
+      <div class="bucket2">
+        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/png/bucket.png" v-if="bucket2" @click="showGif('bucket2')">
+        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/gif/bucket.gif" style="z-index: 100" v-if="!bucket2"
+             @click="showGif('bucket2')">
+      </div>
+      <div class="dig">
+        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/png/dig.png" v-if="dig" @click="showGif('dig')">
+        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/gif/dig.gif" style="z-index: 100" v-if="!dig"
+             @click="showGif('dig')">
+      </div>
+      <div class="shovel2">
+<!--        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/png/shovel.png" v-if="shovel2" @click="showGif('shovel2')">-->
+        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/gif/shovel.gif" style="z-index: 100" v-if="!shovel2"
+             @click="showGif('shovel2')">
+      </div>
+      <div class="goggles">
+<!--        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/png/goggles.png" v-if="goggles" @click="showGif('goggles')">-->
+        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/gif/goggles.gif" style="z-index: 100" v-if="!goggles"
+             @click="showGif('goggles')">
+      </div>
+      <div class="snorkel">
+        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/png/snorkel.png" v-if="snorkel" @click="walkers&&showGif('snorkel')">
+        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/gif/snorkel.gif" style="z-index: 100" v-if="!snorkel"
+             @click="showGif('snorkel')">
+      </div>
+      <div class="sandcastleButton">
+        <img src="../../assets/image/202010H5 At the Beach_MT/Word/word_sancastle.png"
+             :style="{zIndex: !sandcastle ? 100 : 1}" @click="showGif('sandcastle')">
+      </div>
+      <div class="snorkelButton">
+        <img src="../../assets/image/202010H5 At the Beach_MT/Word/word_snorkel.png" v-if="walkers"
+             :style="{zIndex: !snorkel ? 100 : 1}" @click="showGif('snorkel')">
+      </div>
+      <div class="gogglesButton">
+        <img src="../../assets/image/202010H5 At the Beach_MT/Word/word_goggles.png" v-if="walkers"
+             :style="{zIndex: !goggles ? 100 : 1}" @click="showGif('goggles')">
+      </div>
+      <div class="shovel2Button">
+        <img src="../../assets/image/202010H5 At the Beach_MT/Word/word_shovel.png"
+             :style="{zIndex: !shovel2 ? 100 : 1}" @click="showGif('shovel2')">
+      </div>
+      <div class="digButton">
+        <img src="../../assets/image/202010H5 At the Beach_MT/Word/word_dig.png"
+             :style="{zIndex: !dig ? 100 : 1}" @click="showGif('dig')">
+      </div>
+      <div class="bucket2Button">
+        <img src="../../assets/image/202010H5 At the Beach_MT/Word/word_bucket.png"
+             :style="{zIndex: !bucket2 ? 100 : 1}" @click="showGif('bucket2')">
+      </div>
+      <div class="swim2Button">
+        <img src="../../assets/image/202010H5 At the Beach_MT/Word/word_swim.png"
+             :style="{zIndex: !swim2 ? 100 : 1}" @click="showGif('swim2')">
+      </div>
+      <div class="read2Button">
+        <img src="../../assets/image/202010H5 At the Beach_MT/Word/word_read.png"
+             :style="{zIndex: !read2 ? 100 : 1}" @click="showGif('read2')">
+      </div>
+      <div class="rodButton">
+        <img src="../../assets/image/202010H5 At the Beach_MT/Word/word_rod.png"
+             :style="{zIndex: !rod ? 100 : 1}" @click="showGif('rod')">
+      </div>
+      <div class="boatButton">
+        <img src="../../assets/image/202010H5 At the Beach_MT/Word/word_boat.png" v-if="walkers"
+             :style="{zIndex: !boat ? 100 : 1}" @click="showGif('boat')">
+      </div>
+      <div class="seashellButton">
+        <img src="../../assets/image/202010H5 At the Beach_MT/Word/word_seashell.png"
+             :style="{zIndex: !seashell ? 100 : 1}" @click="showGif('seashell')">
+      </div>
+      <div class="paddleButton">
+        <img src="../../assets/image/202010H5 At the Beach_MT/Word/word_paddle.png" v-if="walkers"
+             :style="{zIndex: !paddle ? 100 : 1}" @click="showGif('paddle')">
+      </div>
+    </div>
     <div v-else>
     <img src="../../assets/image/H5 Thing/Walker_BG/bg_0.png"
          style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;">
@@ -4164,6 +4390,30 @@ export default {
         },
         local:'',
         cardType:'default',
+        sandcastle:true,
+        snorkel:true,
+        goggles:true,
+        shovel2:true,
+        dig:true,
+        bucket2:true,
+        swim2:true,
+        read2:true,
+        rod:true,
+        boat:true,
+        seashell:true,
+        paddle:true,
+        bike2:true,
+        brush3:true,
+        camera:true,
+        climb2:true,
+        jog:true,
+        jungleGym:true,
+        kick2:true,
+        kite2:true,
+        paint:true,
+        picnic2:true,
+        seesaw2:true,
+        swing2:true,
         brush2:true,
         doctor:true,
         fruit:true,
@@ -4785,6 +5035,343 @@ export default {
     position: fixed;
     background-color: #44ccc2;
     z-index: 201;
+  }
+
+  .paddle img {
+    width: 40%;
+    left: 52%;
+    top: 39%;
+    position: absolute;
+  }
+
+  .seashell img {
+    width: 5%;
+    left: 85%;
+    top: 33%;
+    position: absolute;
+  }
+
+  .boat img {
+    width: 40%;
+    left: 52%;
+    top: 39%;
+    position: absolute;
+  }
+
+  .rod img {
+    width: 15%;
+    left: 43%;
+    top: 20%;
+    position: absolute;
+  }
+
+  .read2 img {
+    width: 24%;
+    left: 59%;
+    top: 2%;
+    position: absolute;
+  }
+
+  .swim2 img {
+    width: 40%;
+    left: 5%;
+    top: 35%;
+    position: absolute;
+  }
+
+  .bucket2 img {
+    width: 12%;
+    left: 30%;
+    top: 23%;
+    position: absolute;
+  }
+
+  .dig img {
+    width: 15%;
+    left: 35%;
+    top: 3%;
+    position: absolute;
+  }
+
+  .shovel2 img {
+    width: 15%;
+    left: 35%;
+    top: 3%;
+    position: absolute;
+  }
+
+  .goggles img {
+    width: 40%;
+    left: 5%;
+    top: 65%;
+    position: absolute;
+  }
+
+  .snorkel img {
+    width: 40%;
+    left: 5%;
+    top: 65%;
+    position: absolute;
+  }
+
+  .sandcastle img {
+    width: 30%;
+    left: 5%;
+    top: 4%;
+    position: absolute;
+  }
+
+  .sandcastleButton img {
+    width: 8%;
+    left: 6%;
+    top: 26%;
+    position: absolute;
+  }
+
+  .snorkelButton img {
+    width: 8%;
+    left: 5%;
+    top: 67%;
+    position: absolute;
+  }
+
+  .gogglesButton img {
+    width: 9%;
+    left: 7%;
+    top: 93%;
+    position: absolute;
+  }
+
+  .shovel2Button img {
+    width: 7%;
+    left: 38%;
+    top: 9%;
+    position: absolute;
+  }
+
+  .digButton img {
+    width: 7%;
+    left: 39%;
+    top: 22%;
+    position: absolute;
+  }
+
+  .bucket2Button img {
+    width: 7%;
+    left: 31%;
+    top: 33%;
+    position: absolute;
+  }
+
+  .swim2Button img {
+    width: 7%;
+    left: 35%;
+    top: 57%;
+    position: absolute;
+  }
+
+  .read2Button img {
+    width: 7%;
+    left: 59%;
+    top: 12%;
+    position: absolute;
+  }
+
+  .rodButton img {
+    width: 7%;
+    left: 51%;
+    top: 31%;
+    position: absolute;
+  }
+
+  .boatButton img {
+    width: 8%;
+    left: 57%;
+    top: 54%;
+    position: absolute;
+  }
+
+  .seashellButton img {
+    width: 8%;
+    left: 84%;
+    top: 40%;
+    position: absolute;
+  }
+
+  .paddleButton img {
+    width: 8%;
+    left: 77%;
+    top: 78%;
+    position: absolute;
+  }
+
+  .bike2 img {
+    width: 26%;
+    left: 5%;
+    top: 27%;
+    position: absolute;
+  }
+
+  .brush3 img {
+    width: 25%;
+    left: 67%;
+    top: 34%;
+    position: absolute;
+  }
+
+  .camera img {
+    width: 14%;
+    left: 41%;
+    top: 62%;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .climb2 img {
+    width: 30%;
+    left: 38%;
+    top: 4%;
+    position: absolute;
+  }
+
+  .jog img {
+    width: 16%;
+    left: 7%;
+    top: 8%;
+    position: absolute;
+  }
+
+  .jungleGym img {
+    width: 30%;
+    left: 38%;
+    top: 4%;
+    position: absolute;
+  }
+
+  .kick2 img {
+    width: 29%;
+    left: 68%;
+    top: 2%;
+    position: absolute;
+  }
+
+  .kite2Button img {
+    width: 7%;
+    left: 12%;
+    top: 87%;
+    position: absolute;
+  }
+
+  .paint img {
+    width: 26%;
+    left: 67%;
+    top: 33%;
+    position: absolute;
+  }
+
+  .picnic2 img {
+    width: 50%;
+    left: 8%;
+    top: 31%;
+    position: absolute;
+  }
+
+  .seesaw2 img {
+    width: 18%;
+    left: 68%;
+    top: 21%;
+    position: absolute;
+  }
+
+  .swing2Button img {
+    width: 7%;
+    left: 23%;
+    top: 27%;
+    position: absolute;
+  }
+
+  .bike2Button img {
+    width: 7%;
+    left: 7%;
+    top: 55%;
+    position: absolute;
+  }
+
+  .brush3Button img {
+    width: 6%;
+    left: 84%;
+    top: 50%;
+    position: absolute;
+  }
+
+  .cameraButton img {
+    width: 7%;
+    left: 44%;
+    top: 76%;
+    position: absolute;
+  }
+
+  .climb2Button img {
+    width: 6%;
+    left: 49%;
+    top: 30%;
+    position: absolute;
+  }
+
+  .jogButton img {
+    width: 6%;
+    left: 9%;
+    top: 5%;
+    position: absolute;
+  }
+
+  .jungleGymButton img {
+    width: 10%;
+    left: 47%;
+    top: 4%;
+    position: absolute;
+  }
+
+  .kick2Button img {
+    width: 6%;
+    left: 79%;
+    top: 9%;
+    position: absolute;
+  }
+
+  .kite2 img {
+    width: 24%;
+    left: 14%;
+    top: 60%;
+    position: absolute;
+  }
+
+  .paintButton img {
+    width: 7%;
+    left: 80%;
+    top: 75%;
+    position: absolute;
+  }
+
+  .picnic2Button img {
+    width: 7%;
+    left: 47%;
+    top: 51%;
+    position: absolute;
+  }
+
+  .seesaw2Button img {
+    width: 7%;
+    left: 82%;
+    top: 31%;
+    position: absolute;
+  }
+
+  .swing2 img {
+    width: 17%;
+    left: 18%;
+    top: 5%;
+    position: absolute;
   }
 
   .brush2Button img {
@@ -11834,6 +12421,116 @@ export default {
   @media only screen and (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 3) ,
   (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 812px) and (max-width: 1023px){
+    .brush3 img {
+      width: 25%;
+      left: 67%;
+      top: 33%;
+      position: absolute;
+    }
+    .bike2Button img {
+      width: 7%;
+      left: 7%;
+      top: 57%;
+      position: absolute;
+    }
+    .jogButton img {
+      width: 6%;
+      left: 9%;
+      top: 1%;
+      position: absolute;
+    }
+    .jungleGymButton img {
+      width: 10%;
+      left: 47%;
+      top: 2%;
+      position: absolute;
+    }
+    .picnic2Button img {
+      width: 7%;
+      left: 47%;
+      top: 48%;
+      position: absolute;
+    }
+    .brush3Button img {
+      width: 6%;
+      left: 82%;
+      top: 51%;
+      position: absolute;
+    }
+    .paintButton img {
+      width: 7%;
+      left: 78%;
+      top: 75%;
+      position: absolute;
+    }
+    .camera img {
+      width: 12%;
+      left: 41%;
+      top: 63%;
+      position: absolute;
+      z-index: 1;
+    }
+    .kite2 img {
+      width: 22%;
+      left: 15%;
+      top: 58%;
+      position: absolute;
+    }
+    .picnic2 img {
+      width: 55%;
+      height: 65%;
+      left: 6%;
+      top: 32%;
+      position: absolute;
+    }
+    .bike2 img {
+      width: 24%;
+      left: 5%;
+      top: 25%;
+      position: absolute;
+    }
+    .climb2 img {
+      width: 27%;
+      left: 38%;
+      top: 2%;
+      position: absolute;
+    }
+    .jungleGym img {
+      width: 27%;
+      left: 38%;
+      top: 2%;
+      position: absolute;
+    }
+    .swing2 img {
+      width: 17%;
+      left: 18%;
+      top: 1%;
+      position: absolute;
+    }
+    .jog img {
+      width: 16%;
+      left: 7%;
+      top: 3%;
+      position: absolute;
+    }
+    .kick2 img {
+      width: 29%;
+      left: 68%;
+      top: -2%;
+      position: absolute;
+    }
+    .seesaw2 img {
+      width: 18%;
+      left: 68%;
+      top: 19%;
+      position: absolute;
+    }
+    .paint img {
+      width: 20%;
+      left: 68%;
+      top: 38%;
+      position: absolute;
+    }
     .germsButton img {
       width: 7%;
       left: 89%;
@@ -15008,6 +15705,152 @@ export default {
   @media only screen and (min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 1024px) and (max-width: 1600px){
+    .climb2Button img {
+      width: 8%;
+      left: 49%;
+      top: 30%;
+      position: absolute;
+    }
+    .jungleGymButton img {
+      width: 12%;
+      left: 46%;
+      top: 12%;
+      position: absolute;
+    }
+    .jogButton img {
+      width: 8%;
+      left: 9%;
+      top: 10%;
+      position: absolute;
+    }
+    .swing2Button img {
+      width: 9%;
+      left: 23%;
+      top: 27%;
+      position: absolute;
+    }
+    .bike2Button img {
+      width: 8%;
+      left: 7%;
+      top: 56%;
+      position: absolute;
+    }
+    .picnic2Button img {
+      width: 8%;
+      left: 47%;
+      top: 55%;
+      position: absolute;
+    }
+    .kite2Button img {
+      width: 8%;
+      left: 11%;
+      top: 87%;
+      position: absolute;
+    }
+    .cameraButton img {
+      width: 9%;
+      left: 44%;
+      top: 77%;
+      position: absolute;
+    }
+    .kick2Button img {
+      width: 7%;
+      left: 78%;
+      top: 13%;
+      position: absolute;
+    }
+    .seesaw2Button img {
+      width: 9%;
+      left: 82%;
+      top: 34%;
+      position: absolute;
+    }
+    .brush3Button img {
+      width: 8%;
+      left: 84%;
+      top: 59%;
+      position: absolute;
+    }
+    .paintButton img {
+      width: 9%;
+      left: 80%;
+      top: 78%;
+      position: absolute;
+    }
+    .jungleGym img {
+      width: 30%;
+      left: 38%;
+      top: 14%;
+      position: absolute;
+    }
+    .brush3 img {
+      width: 25%;
+      left: 67%;
+      top: 49%;
+      position: absolute;
+    }
+    .bike2 img {
+      width: 26%;
+      left: 5%;
+      top: 34%;
+      position: absolute;
+      z-index: 1;
+    }
+    .camera img {
+      width: 14%;
+      left: 41%;
+      top: 67%;
+      position: absolute;
+      z-index: 1;
+    }
+    .kite2 img {
+      width: 24%;
+      left: 14%;
+      top: 68%;
+      position: absolute;
+    }
+    .picnic2 img {
+      width: 52%;
+      left: 7%;
+      top: 43%;
+      position: absolute;
+    }
+    .swing2 img {
+      width: 17%;
+      left: 18%;
+      top: 10%;
+      position: absolute;
+    }
+    .jog img {
+      width: 16%;
+      left: 7%;
+      top: 14%;
+      position: absolute;
+    }
+    .climb2 img {
+      width: 30%;
+      left: 38%;
+      top: 14%;
+      position: absolute;
+    }
+    .kick2 img {
+      width: 29%;
+      left: 68%;
+      top: 11%;
+      position: absolute;
+    }
+    .seesaw2 img {
+      width: 18%;
+      left: 68%;
+      top: 26%;
+      position: absolute;
+    }
+    .paint img {
+      width: 26%;
+      left: 67%;
+      top: 48%;
+      position: absolute;
+    }
     .sleep2 img {
       width: 40%;
       left: 31%;
