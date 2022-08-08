@@ -3774,7 +3774,7 @@
              @click="showGif('bucket2')">
       </div>
       <div class="dig">
-        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/png/dig.png" v-if="dig" @click="showGif('dig')">
+        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/png/dig.png" v-if="dig&&shovel2" @click="showGif('dig')">
         <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/gif/dig.gif" style="z-index: 100" v-if="!dig"
              @click="showGif('dig')">
       </div>
@@ -3789,7 +3789,7 @@
              @click="showGif('goggles')">
       </div>
       <div class="snorkel">
-        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/png/snorkel.png" v-if="snorkel" @click="walkers&&showGif('snorkel')">
+        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/png/snorkel.png" v-if="snorkel&&goggles" @click="walkers&&showGif('snorkel')">
         <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/gif/snorkel.gif" style="z-index: 100" v-if="!snorkel"
              @click="showGif('snorkel')">
       </div>
@@ -3842,6 +3842,231 @@
              :style="{zIndex: !paddle ? 100 : 1}" @click="showGif('paddle')">
       </div>
     </div>
+    <div v-else-if="this.unit === 'Wild Animals' && this.part === 'part1'">
+      <img src="../../assets/image/202011H5 In the Ocean_MT/Runner_BG/BG_00000.png"
+           style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;"/>
+      <div class="chase">
+        <!--        <img src="../../assets/image/202011H5 In the Ocean_MT/GIF_PNG/png/chase.png" v-if="chase" @click="showGif('chase')">-->
+        <img src="../../assets/image/202011H5 In the Ocean_MT/GIF_PNG/gif/chase.gif" style="z-index: 100" v-if="!chase"
+             @click="showGif('chase')">
+      </div>
+      <div class="dolphin">
+        <img src="../../assets/image/202011H5 In the Ocean_MT/GIF_PNG/png/dolphin.png" v-if="dolphin" @click="showGif('dolphin')">
+        <img src="../../assets/image/202011H5 In the Ocean_MT/GIF_PNG/gif/dolphin.gif" style="z-index: 100" v-if="!dolphin"
+             @click="showGif('dolphin')">
+      </div>
+      <div class="hide">
+        <img src="../../assets/image/202011H5 In the Ocean_MT/GIF_PNG/png/hide.png" v-if="hide" @click="showGif('hide')">
+        <img src="../../assets/image/202011H5 In the Ocean_MT/GIF_PNG/gif/hide.gif" style="z-index: 100" v-if="!hide"
+             @click="showGif('hide')">
+      </div>
+      <div class="jellyfish">
+        <img src="../../assets/image/202011H5 In the Ocean_MT/GIF_PNG/png/jellyfish.png" v-if="jellyfish&&wiggle" @click="showGif('jellyfish')">
+        <img src="../../assets/image/202011H5 In the Ocean_MT/GIF_PNG/gif/jellyfish.gif" style="z-index: 100" v-if="!jellyfish"
+             @click="showGif('jellyfish')">
+      </div>
+      <div class="octopus">
+        <img src="../../assets/image/202011H5 In the Ocean_MT/GIF_PNG/png/octopus.png" v-if="octopus" @click="showGif('octopus')">
+        <img src="../../assets/image/202011H5 In the Ocean_MT/GIF_PNG/gif/octopus.gif" style="z-index: 100" v-if="!octopus"
+             @click="showGif('octopus')">
+      </div>
+      <div class="seahorse">
+        <img src="../../assets/image/202011H5 In the Ocean_MT/GIF_PNG/png/seahorse.png" v-if="seahorse" @click="showGif('seahorse')">
+        <img src="../../assets/image/202011H5 In the Ocean_MT/GIF_PNG/gif/seahorse.gif" style="z-index: 100" v-if="!seahorse"
+             @click="showGif('seahorse')">
+      </div>
+      <div class="shark">
+        <img src="../../assets/image/202011H5 In the Ocean_MT/GIF_PNG/png/shark.png" v-if="shark&&chase" @click="showGif('shark')">
+        <img src="../../assets/image/202011H5 In the Ocean_MT/GIF_PNG/gif/shark.gif" style="z-index: 100" v-if="!shark"
+             @click="showGif('shark')">
+      </div>
+      <div class="spray">
+        <!--        <img src="../../assets/image/202011H5 In the Ocean_MT/GIF_PNG/png/spray.png" v-if="spray" @click="showGif('spray')">-->
+        <img src="../../assets/image/202011H5 In the Ocean_MT/GIF_PNG/gif/spray.gif" style="z-index: 100" v-if="!spray"
+             @click="showGif('spray')">
+      </div>
+      <div class="starfish">
+        <img src="../../assets/image/202011H5 In the Ocean_MT/GIF_PNG/png/starfish.png" v-if="starfish" @click="walkers&&showGif('starfish')">
+        <img src="../../assets/image/202011H5 In the Ocean_MT/GIF_PNG/gif/starfish.gif" style="z-index: 100" v-if="!starfish"
+             @click="showGif('starfish')">
+      </div>
+      <div class="turtle2">
+        <img src="../../assets/image/202011H5 In the Ocean_MT/GIF_PNG/png/turtle.png" v-if="turtle2" @click="showGif('turtle2')">
+        <img src="../../assets/image/202011H5 In the Ocean_MT/GIF_PNG/gif/turtle.gif" style="z-index: 100" v-if="!turtle2"
+             @click="showGif('turtle2')">
+      </div>
+      <div class="whale">
+        <img src="../../assets/image/202011H5 In the Ocean_MT/GIF_PNG/png/whale.png" v-if="whale&&spray" @click="walkers&&showGif('whale')">
+        <img src="../../assets/image/202011H5 In the Ocean_MT/GIF_PNG/gif/whale.gif" style="z-index: 100" v-if="!whale"
+             @click="showGif('whale')">
+      </div>
+      <div class="wiggle2">
+        <!--        <img src="../../assets/image/202011H5 In the Ocean_MT/GIF_PNG/png/wiggle.png" v-if="wiggle2" @click="showGif('wiggle2')">-->
+        <img src="../../assets/image/202011H5 In the Ocean_MT/GIF_PNG/gif/wiggle.gif" style="z-index: 100" v-if="!wiggle2"
+             @click="showGif('wiggle2')">
+      </div>
+      <div class="chaseButton">
+        <img src="../../assets/image/202011H5 In the Ocean_MT/Word/chase.png"
+             :style="{zIndex: !chase ? 100 : 2}" @click="showGif('chase')">
+      </div>
+      <div class="dolphinButton">
+        <img src="../../assets/image/202011H5 In the Ocean_MT/Word/dolphin.png"
+             :style="{zIndex: !dolphin ? 100 : 1}" @click="showGif('dolphin')">
+      </div>
+      <div class="hideButton">
+        <img src="../../assets/image/202011H5 In the Ocean_MT/Word/hide.png"
+             :style="{zIndex: !hide ? 100 : 1}" @click="showGif('hide')">
+      </div>
+      <div class="jellyfishButton">
+        <img src="../../assets/image/202011H5 In the Ocean_MT/Word/jellyfish.png"
+             :style="{zIndex: !jellyfish ? 100 : 1}" @click="showGif('jellyfish')">
+      </div>
+      <div class="octopusButton">
+        <img src="../../assets/image/202011H5 In the Ocean_MT/Word/octopus.png"
+             :style="{zIndex: !octopus ? 100 : 1}" @click="showGif('octopus')">
+      </div>
+      <div class="seahorseButton">
+        <img src="../../assets/image/202011H5 In the Ocean_MT/Word/seahorse.png"
+             :style="{zIndex: !seahorse ? 100 : 1}" @click="showGif('seahorse')">
+      </div>
+      <div class="sharkButton">
+        <img src="../../assets/image/202011H5 In the Ocean_MT/Word/shark.png" v-if="walkers"
+             :style="{zIndex: !shark ? 100 : 1}" @click="showGif('shark')">
+      </div>
+      <div class="sprayButton">
+        <img src="../../assets/image/202011H5 In the Ocean_MT/Word/spray.png" v-if="walkers"
+             :style="{zIndex: !spray ? 100 : 2}" @click="showGif('spray')">
+      </div>
+      <div class="starfishButton">
+        <img src="../../assets/image/202011H5 In the Ocean_MT/Word/starfish.png" v-if="walkers"
+             :style="{zIndex: !starfish ? 100 : 1}" @click="showGif('starfish')">
+      </div>
+      <div class="turtle2Button">
+        <img src="../../assets/image/202011H5 In the Ocean_MT/Word/turtle.png"
+             :style="{zIndex: !turtle2 ? 100 : 1}" @click="showGif('turtle2')">
+      </div>
+      <div class="whaleButton">
+        <img src="../../assets/image/202011H5 In the Ocean_MT/Word/whale.png" v-if="walkers"
+             :style="{zIndex: !whale ? 100 : 1}" @click="showGif('whale')">
+      </div>
+      <div class="wiggle2Button">
+        <img src="../../assets/image/202011H5 In the Ocean_MT/Word/wiggle.png"
+             :style="{zIndex: !wiggle2 ? 100 : 1}" @click="showGif('wiggle2')">
+      </div>
+    </div>
+    <div v-else-if="this.unit === 'Wild Animals' && this.part === 'part2'">
+      <img src="../../assets/image/202010H5 At the Beach_MT/Runner_BG/BG_00000.png"
+           style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;"/>
+      <div class="sandcastle">
+        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/png/sandcastle.png" v-if="sandcastle" @click="showGif('sandcastle')">
+        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/gif/sandcastle.gif" style="z-index: 100" v-if="!sandcastle"
+             @click="showGif('sandcastle')">
+      </div>
+      <div class="paddle">
+        <!--        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/png/paddle.png" v-if="paddle" @click="showGif('paddle')">-->
+        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/gif/paddle.gif" style="z-index: 100" v-if="!paddle"
+             @click="showGif('paddle')">
+      </div>
+      <div class="seashell">
+        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/png/seashell.png" v-if="seashell" @click="showGif('seashell')">
+        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/gif/seashell.gif" style="z-index: 100" v-if="!seashell"
+             @click="showGif('seashell')">
+      </div>
+      <div class="boat">
+        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/png/boat.png" v-if="paddle&&boat" @click="walkers&&showGif('boat')">
+        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/gif/boat.gif" style="z-index: 100" v-if="!boat"
+             @click="showGif('boat')">
+      </div>
+      <div class="rod">
+        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/png/rod.png" v-if="rod" @click="showGif('rod')">
+        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/gif/rod.gif" style="z-index: 100" v-if="!rod"
+             @click="showGif('rod')">
+      </div>
+      <div class="read2">
+        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/png/read.png" v-if="read2" @click="showGif('read2')">
+        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/gif/read.gif" style="z-index: 100" v-if="!read2"
+             @click="showGif('read2')">
+      </div>
+      <div class="swim2">
+        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/png/swim.png" v-if="swim2" @click="showGif('swim2')">
+        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/gif/swim.gif" style="z-index: 100" v-if="!swim2"
+             @click="showGif('swim2')">
+      </div>
+      <div class="bucket2">
+        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/png/bucket.png" v-if="bucket2" @click="showGif('bucket2')">
+        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/gif/bucket.gif" style="z-index: 100" v-if="!bucket2"
+             @click="showGif('bucket2')">
+      </div>
+      <div class="dig">
+        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/png/dig.png" v-if="dig&&shovel2" @click="showGif('dig')">
+        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/gif/dig.gif" style="z-index: 100" v-if="!dig"
+             @click="showGif('dig')">
+      </div>
+      <div class="shovel2">
+        <!--        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/png/shovel.png" v-if="shovel2" @click="showGif('shovel2')">-->
+        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/gif/shovel.gif" style="z-index: 100" v-if="!shovel2"
+             @click="showGif('shovel2')">
+      </div>
+      <div class="goggles">
+        <!--        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/png/goggles.png" v-if="goggles" @click="showGif('goggles')">-->
+        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/gif/goggles.gif" style="z-index: 100" v-if="!goggles"
+             @click="showGif('goggles')">
+      </div>
+      <div class="snorkel">
+        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/png/snorkel.png" v-if="snorkel&&goggles" @click="walkers&&showGif('snorkel')">
+        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/gif/snorkel.gif" style="z-index: 100" v-if="!snorkel"
+             @click="showGif('snorkel')">
+      </div>
+      <div class="sandcastleButton">
+        <img src="../../assets/image/202010H5 At the Beach_MT/Word/word_sancastle.png"
+             :style="{zIndex: !sandcastle ? 100 : 1}" @click="showGif('sandcastle')">
+      </div>
+      <div class="snorkelButton">
+        <img src="../../assets/image/202010H5 At the Beach_MT/Word/word_snorkel.png" v-if="walkers"
+             :style="{zIndex: !snorkel ? 100 : 1}" @click="showGif('snorkel')">
+      </div>
+      <div class="gogglesButton">
+        <img src="../../assets/image/202010H5 At the Beach_MT/Word/word_goggles.png" v-if="walkers"
+             :style="{zIndex: !goggles ? 100 : 1}" @click="showGif('goggles')">
+      </div>
+      <div class="shovel2Button">
+        <img src="../../assets/image/202010H5 At the Beach_MT/Word/word_shovel.png"
+             :style="{zIndex: !shovel2 ? 100 : 1}" @click="showGif('shovel2')">
+      </div>
+      <div class="digButton">
+        <img src="../../assets/image/202010H5 At the Beach_MT/Word/word_dig.png"
+             :style="{zIndex: !dig ? 100 : 1}" @click="showGif('dig')">
+      </div>
+      <div class="bucket2Button">
+        <img src="../../assets/image/202010H5 At the Beach_MT/Word/word_bucket.png"
+             :style="{zIndex: !bucket2 ? 100 : 1}" @click="showGif('bucket2')">
+      </div>
+      <div class="swim2Button">
+        <img src="../../assets/image/202010H5 At the Beach_MT/Word/word_swim.png"
+             :style="{zIndex: !swim2 ? 100 : 1}" @click="showGif('swim2')">
+      </div>
+      <div class="read2Button">
+        <img src="../../assets/image/202010H5 At the Beach_MT/Word/word_read.png"
+             :style="{zIndex: !read2 ? 100 : 1}" @click="showGif('read2')">
+      </div>
+      <div class="rodButton">
+        <img src="../../assets/image/202010H5 At the Beach_MT/Word/word_rod.png"
+             :style="{zIndex: !rod ? 100 : 1}" @click="showGif('rod')">
+      </div>
+      <div class="boatButton">
+        <img src="../../assets/image/202010H5 At the Beach_MT/Word/word_boat.png" v-if="walkers"
+             :style="{zIndex: !boat ? 100 : 1}" @click="showGif('boat')">
+      </div>
+      <div class="seashellButton">
+        <img src="../../assets/image/202010H5 At the Beach_MT/Word/word_seashell.png"
+             :style="{zIndex: !seashell ? 100 : 1}" @click="showGif('seashell')">
+      </div>
+      <div class="paddleButton">
+        <img src="../../assets/image/202010H5 At the Beach_MT/Word/word_paddle.png" v-if="walkers"
+             :style="{zIndex: !paddle ? 100 : 1}" @click="showGif('paddle')">
+      </div>
+    </div>
+
     <div v-else>
     <img src="../../assets/image/H5 Thing/Walker_BG/bg_0.png"
          style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;">
@@ -4335,7 +4560,6 @@ export default {
           waterSlide:require('../../assets/Flashcard Audio/ThemPark/water slide.mp3'),
           wavePool:require('../../assets/Flashcard Audio/ThemPark/wave pool.mp3'),
           wet:require('../../assets/Flashcard Audio/ThemPark/wet.mp3'),
-
           //space
           fly3:require('../../assets/Flashcard Audio/space/fly.mp3'),
           rocket:require('../../assets/Flashcard Audio/space/rocket.mp3'),
@@ -4361,35 +4585,71 @@ export default {
           star:require('../../assets/Flashcard Audio/space/stars.mp3'),
           sun:require('../../assets/Flashcard Audio/space/sun.mp3'),
           ufo:require('../../assets/Flashcard Audio/space/UFO.mp3'),
-
           //my body
-          ear:require('../../assets/Flashcard Audio/space/UFO.mp3'),
-          eat2:require('../../assets/Flashcard Audio/space/UFO.mp3'),
-          eyes:require('../../assets/Flashcard Audio/space/UFO.mp3'),
-          feet:require('../../assets/Flashcard Audio/space/UFO.mp3'),
-          hair:require('../../assets/Flashcard Audio/space/UFO.mp3'),
-          hand:require('../../assets/Flashcard Audio/space/UFO.mp3'),
-          leg:require('../../assets/Flashcard Audio/space/UFO.mp3'),
-          look:require('../../assets/Flashcard Audio/space/UFO.mp3'),
-          mouth:require('../../assets/Flashcard Audio/space/UFO.mp3'),
-          nose:require('../../assets/Flashcard Audio/space/UFO.mp3'),
-          smell:require('../../assets/Flashcard Audio/space/UFO.mp3'),
-          walk2:require('../../assets/Flashcard Audio/space/UFO.mp3'),
-          brush2:require('../../assets/Flashcard Audio/space/UFO.mp3'),
-          doctor:require('../../assets/Flashcard Audio/space/UFO.mp3'),
-          fruit:require('../../assets/Flashcard Audio/space/UFO.mp3'),
-          germs:require('../../assets/Flashcard Audio/space/UFO.mp3'),
-          run2:require('../../assets/Flashcard Audio/space/UFO.mp3'),
-          sleep2:require('../../assets/Flashcard Audio/space/UFO.mp3'),
-          soap:require('../../assets/Flashcard Audio/space/UFO.mp3'),
-          sweets:require('../../assets/Flashcard Audio/space/UFO.mp3'),
-          teeth:require('../../assets/Flashcard Audio/space/UFO.mp3'),
-          vegetables2:require('../../assets/Flashcard Audio/space/UFO.mp3'),
-          wash2:require('../../assets/Flashcard Audio/space/UFO.mp3'),
-          water2:require('../../assets/Flashcard Audio/space/UFO.mp3'),
+          ear:require('../../assets/Flashcard Audio/myBody/ear.mp3'),
+          eat2:require('../../assets/Flashcard Audio/myBody/eat.mp3'),
+          eyes:require('../../assets/Flashcard Audio/myBody/eyes.mp3'),
+          feet:require('../../assets/Flashcard Audio/myBody/feet.mp3'),
+          hair:require('../../assets/Flashcard Audio/myBody/hair.mp3'),
+          hand:require('../../assets/Flashcard Audio/myBody/hand.mp3'),
+          leg:require('../../assets/Flashcard Audio/myBody/leg.mp3'),
+          look:require('../../assets/Flashcard Audio/myBody/look.mp3'),
+          mouth:require('../../assets/Flashcard Audio/myBody/mouth.mp3'),
+          nose:require('../../assets/Flashcard Audio/myBody/nose.mp3'),
+          smell:require('../../assets/Flashcard Audio/myBody/smell.mp3'),
+          walk2:require('../../assets/Flashcard Audio/myBody/walk.mp3'),
+          brush2:require('../../assets/Flashcard Audio/myBody/brush.mp3'),
+          doctor:require('../../assets/Flashcard Audio/myBody/doctor.mp3'),
+          fruit:require('../../assets/Flashcard Audio/myBody/fruit.mp3'),
+          germs:require('../../assets/Flashcard Audio/myBody/germs.mp3'),
+          run2:require('../../assets/Flashcard Audio/myBody/run.mp3'),
+          sleep2:require('../../assets/Flashcard Audio/myBody/sleep.mp3'),
+          soap:require('../../assets/Flashcard Audio/myBody/soap.mp3'),
+          sweets:require('../../assets/Flashcard Audio/myBody/sweets.mp3'),
+          teeth:require('../../assets/Flashcard Audio/myBody/teeth.mp3'),
+          vegetables2:require('../../assets/Flashcard Audio/myBody/vegetables.mp3'),
+          wash2:require('../../assets/Flashcard Audio/myBody/wash.mp3'),
+          water2:require('../../assets/Flashcard Audio/myBody/water.mp3'),
+          //Weekend
+          sandcastle:require('../../assets/Flashcard Audio/weekend/sandcastle.mp3'),
+          snorkel:require('../../assets/Flashcard Audio/weekend/snorkel.mp3'),
+          goggles:require('../../assets/Flashcard Audio/weekend/goggles.mp3'),
+          shovel2:require('../../assets/Flashcard Audio/weekend/shovel.mp3'),
+          dig:require('../../assets/Flashcard Audio/weekend/Dig.mp3'),
+          bucket2:require('../../assets/Flashcard Audio/weekend/bucket.mp3'),
+          swim2:require('../../assets/Flashcard Audio/weekend/swim.mp3'),
+          read2:require('../../assets/Flashcard Audio/weekend/read.mp3'),
+          rod:require('../../assets/Flashcard Audio/weekend/rod.mp3'),
+          boat:require('../../assets/Flashcard Audio/weekend/boat.mp3'),
+          seashell:require('../../assets/Flashcard Audio/weekend/seashell.mp3'),
+          paddle:require('../../assets/Flashcard Audio/weekend/paddle.mp3'),
+          bike2:require('../../assets/Flashcard Audio/weekend/bike.mp3'),
+          brush3:require('../../assets/Flashcard Audio/weekend/brush.mp3'),
+          camera:require('../../assets/Flashcard Audio/weekend/camera.mp3'),
+          climb2:require('../../assets/Flashcard Audio/weekend/climb.mp3'),
+          jog:require('../../assets/Flashcard Audio/weekend/jog.mp3'),
+          jungleGym:require('../../assets/Flashcard Audio/weekend/jungle gym.mp3'),
+          kick2:require('../../assets/Flashcard Audio/weekend/kick.mp3'),
+          kite2:require('../../assets/Flashcard Audio/weekend/kite.mp3'),
+          paint:require('../../assets/Flashcard Audio/weekend/paint.mp3'),
+          picnic2:require('../../assets/Flashcard Audio/weekend/picnic.mp3'),
+          seesaw2:require('../../assets/Flashcard Audio/weekend/seesaw.mp3'),
+          swing2:require('../../assets/Flashcard Audio/weekend/swing.mp3'),
         },
         local:'',
         cardType:'default',
+        chase:true,
+        dolphin:true,
+        hide:true,
+        jellyfish:true,
+        octopus:true,
+        seahorse:true,
+        shark:true,
+        spray:true,
+        starfish:true,
+        turtle2:true,
+        whale:true,
+        wiggle2:true,
         sandcastle:true,
         snorkel:true,
         goggles:true,
@@ -5035,6 +5295,175 @@ export default {
     position: fixed;
     background-color: #44ccc2;
     z-index: 201;
+  }
+
+  .chase img {
+    width: 40%;
+    left: 15%;
+    top: 36%;
+    position: absolute;
+  }
+
+  .dolphin img {
+    width: 40%;
+    left: 11%;
+    top: -4%;
+    position: absolute;
+  }
+
+  .hide img {
+    width: 12%;
+    left: 56%;
+    top: 82%;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .jellyfish img {
+    width: 22%;
+    left: 38%;
+    top: 46%;
+    position: absolute;
+  }
+
+  .octopus img {
+    width: 22%;
+    left: -1%;
+    top: 31%;
+    position: absolute;
+  }
+
+  .seahorse img {
+    width: 12%;
+    left: 14%;
+    top: 64%;
+    position: absolute;
+  }
+
+  .shark img {
+    width: 40%;
+    left: 15%;
+    top: 36%;
+    position: absolute;
+  }
+
+  .spray img {
+    width: 45%;
+    left: 48%;
+    top: 1%;
+    position: absolute;
+  }
+
+  .starfish img {
+    width: 13%;
+    left: 8%;
+    top: 75%;
+    position: absolute;
+  }
+
+  .turtle2 img {
+    width: 35%;
+    left: 57%;
+    top: 56%;
+    position: absolute;
+  }
+
+  .whale img {
+    width: 45%;
+    left: 48%;
+    top: 1%;
+    position: absolute;
+  }
+
+  .wiggle2 img {
+    width: 22%;
+    left: 38%;
+    top: 46%;
+    position: absolute;
+  }
+
+  .chaseButton img {
+    width: 7%;
+    left: 29%;
+    top: 37%;
+    position: absolute;
+  }
+
+  .dolphinButton img {
+    width: 9%;
+    left: 10%;
+    top: 10%;
+    position: absolute;
+  }
+
+  .hideButton img {
+    width: 7%;
+    left: 65%;
+    top: 92%;
+    position: absolute;
+  }
+
+  .jellyfishButton img {
+    width: 9%;
+    left: 34%;
+    top: 67%;
+    position: absolute;
+  }
+
+  .octopusButton img {
+    width: 9%;
+    left: 2%;
+    top: 29%;
+    position: absolute;
+  }
+
+  .seahorseButton img {
+    width: 9%;
+    left: 11%;
+    top: 69%;
+    position: absolute;
+  }
+
+  .sharkButton img {
+    width: 7%;
+    left: 39%;
+    top: 37%;
+    position: absolute;
+  }
+
+  .sprayButton img {
+    width: 7%;
+    left: 74%;
+    top: 15%;
+    position: absolute;
+  }
+
+  .starfishButton img {
+    width: 9%;
+    left: 14%;
+    top: 91%;
+    position: absolute;
+  }
+
+  .turtle2Button img {
+    width: 7%;
+    left: 80%;
+    top: 77%;
+    position: absolute;
+  }
+
+  .whaleButton img {
+    width: 7%;
+    left: 81%;
+    top: 34%;
+    position: absolute;
+  }
+
+  .wiggle2Button img {
+    width: 7%;
+    left: 39%;
+    top: 88%;
+    position: absolute;
   }
 
   .paddle img {
@@ -12421,6 +12850,114 @@ export default {
   @media only screen and (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 3) ,
   (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 812px) and (max-width: 1023px){
+    .turtle2 img {
+      width: 35%;
+      left: 57%;
+      top: 54%;
+      position: absolute;
+    }
+    .starfish img {
+      width: 11%;
+      left: 9%;
+      top: 75%;
+      position: absolute;
+    }
+    .shovel2 img {
+      width: 15%;
+      left: 35%;
+      top: -1%;
+      position: absolute;
+    }
+    .dig img {
+      width: 15%;
+      left: 35%;
+      top: -1%;
+      position: absolute;
+    }
+    .shovel2Button img {
+      width: 8%;
+      left: 38%;
+      top: 8%;
+      position: absolute;
+    }
+    .sandcastle img {
+      width: 30%;
+      left: 5%;
+      top: -2%;
+      position: absolute;
+    }
+    .bucket2 img {
+      width: 11%;
+      left: 32%;
+      top: 22%;
+      position: absolute;
+    }
+    .bucket2Button img {
+      width: 7%;
+      left: 33%;
+      top: 38%;
+      position: absolute;
+    }
+    .rodButton img {
+      width: 8%;
+      left: 51%;
+      top: 31%;
+      position: absolute;
+    }
+    .read2Button img {
+      width: 8%;
+      left: 58%;
+      top: 12%;
+      position: absolute;
+    }
+    .rod img {
+      width: 15%;
+      left: 45%;
+      top: 18%;
+      position: absolute;
+    }
+    .read2 img {
+      width: 22%;
+      left: 60%;
+      top: -1%;
+      position: absolute;
+    }
+    .seashellButton img {
+      width: 8%;
+      left: 84%;
+      top: 41%;
+      position: absolute;
+    }
+    .paddleButton img {
+      width: 10%;
+      left: 77%;
+      top: 80%;
+      position: absolute;
+    }
+    .snorkel img {
+      width: 40%;
+      left: 5%;
+      top: 61%;
+      position: absolute;
+    }
+    .goggles img {
+      width: 40%;
+      left: 5%;
+      top: 61%;
+      position: absolute;
+    }
+    .boat img {
+      width: 38%;
+      left: 52%;
+      top: 36%;
+      position: absolute;
+    }
+    .paddle img {
+      width: 38%;
+      left: 52%;
+      top: 36%;
+      position: absolute;
+    }
     .brush3 img {
       width: 25%;
       left: 67%;
@@ -15705,6 +16242,283 @@ export default {
   @media only screen and (min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 1024px) and (max-width: 1600px){
+    .dolphinButton img {
+      width: 11%;
+      left: 10%;
+      top: 11%;
+      position: absolute;
+    }
+    .octopusButton img {
+      width: 11%;
+      left: 2%;
+      top: 29%;
+      position: absolute;
+    }
+    .chaseButton img {
+      width: 8%;
+      left: 33%;
+      top: 41%;
+      position: absolute;
+    }
+    .sharkButton img {
+      width: 8%;
+      left: 43%;
+      top: 41%;
+      position: absolute;
+    }
+    .seahorseButton img {
+      width: 11%;
+      left: 13%;
+      top: 69%;
+      position: absolute;
+    }
+    .starfishButton img {
+      width: 11%;
+      left: 14%;
+      top: 91%;
+      position: absolute;
+    }
+    .jellyfishButton img {
+      width: 11%;
+      left: 34%;
+      top: 67%;
+      position: absolute;
+    }
+    .wiggle2Button img {
+      width: 8%;
+      left: 39%;
+      top: 88%;
+      position: absolute;
+    }
+    .sprayButton img {
+      width: 8%;
+      left: 74%;
+      top: 16%;
+      position: absolute;
+    }
+    .whaleButton img {
+      width: 8%;
+      left: 81%;
+      top: 34%;
+      position: absolute;
+    }
+    .turtle2Button img {
+      width: 8%;
+      left: 80%;
+      top: 86%;
+      position: absolute;
+    }
+    .hideButton img {
+      width: 8%;
+      left: 61%;
+      top: 94%;
+      position: absolute;
+    }
+    .seahorse img {
+      width: 15%;
+      left: 14%;
+      top: 71%;
+      position: absolute;
+    }
+    .dolphin img {
+      width: 45%;
+      left: 11%;
+      top: 1%;
+      position: absolute;
+    }
+    .octopus img {
+      width: 25%;
+      left: 0%;
+      top: 31%;
+      position: absolute;
+    }
+    .shark img {
+      width: 45%;
+      left: 15%;
+      top: 42%;
+      position: absolute;
+    }
+    .chase img {
+      width: 45%;
+      left: 15%;
+      top: 42%;
+      position: absolute;
+    }
+    .starfish img {
+      width: 13%;
+      left: 8%;
+      top: 77%;
+      position: absolute;
+    }
+    .jellyfish img {
+      width: 22%;
+      left: 38%;
+      top: 58%;
+      position: absolute;
+    }
+    .wiggle2 img {
+      width: 22%;
+      left: 38%;
+      top: 58%;
+      position: absolute;
+    }
+    .spray img {
+      width: 45%;
+      left: 48%;
+      top: 11%;
+      position: absolute;
+    }
+    .whale img {
+      width: 45%;
+      left: 48%;
+      top: 11%;
+      position: absolute;
+    }
+    .turtle2 img {
+      width: 35%;
+      left: 57%;
+      top: 68%;
+      position: absolute;
+    }
+    .hide img {
+      width: 12%;
+      left: 56%;
+      top: 86%;
+      position: absolute;
+      z-index: 1;
+    }
+    .sandcastleButton img {
+      width: 11%;
+      left: 6%;
+      top: 29%;
+      position: absolute;
+    }
+    .shovel2Button img {
+      width: 10%;
+      left: 37%;
+      top: 15%;
+      position: absolute;
+    }
+    .digButton img {
+      width: 9%;
+      left: 36%;
+      top: 25%;
+      position: absolute;
+    }
+    .bucket2Button img {
+      width: 10%;
+      left: 31%;
+      top: 35%;
+      position: absolute;
+    }
+    .read2Button img {
+      width: 9%;
+      left: 59%;
+      top: 12%;
+      position: absolute;
+    }
+    .rodButton img {
+      width: 9%;
+      left: 51%;
+      top: 31%;
+      position: absolute;
+    }
+    .seashellButton img {
+      width: 10%;
+      left: 83%;
+      top: 40%;
+      position: absolute;
+    }
+    .seashell img {
+      width: 6%;
+      left: 85%;
+      top: 33%;
+      position: absolute;
+    }
+    .swim2Button img {
+      width: 10%;
+      left: 35%;
+      top: 57%;
+      position: absolute;
+    }
+    .boatButton img {
+      width: 10%;
+      left: 57%;
+      top: 54%;
+      position: absolute;
+    }
+    .paddleButton img {
+      width: 11%;
+      left: 77%;
+      top: 78%;
+      position: absolute;
+    }
+    .snorkelButton img {
+      width: 10%;
+      left: 5%;
+      top: 65%;
+      position: absolute;
+    }
+    .gogglesButton img {
+      width: 11%;
+      left: 7%;
+      top: 88%;
+      position: absolute;
+    }
+    .sandcastle img {
+      width: 30%;
+      left: 5%;
+      top: 11%;
+      position: absolute;
+    }
+    .dig img {
+      width: 15%;
+      left: 35%;
+      top: 11%;
+      position: absolute;
+    }
+    .shovel2 img {
+      width: 15%;
+      left: 35%;
+      top: 11%;
+      position: absolute;
+    }
+    .bucket2 img {
+      width: 12%;
+      left: 30%;
+      top: 27%;
+      position: absolute;
+    }
+    .swim2 img {
+      width: 40%;
+      left: 5%;
+      top: 40%;
+      position: absolute;
+    }
+    .rod img {
+      width: 19%;
+      left: 43%;
+      top: 20%;
+      position: absolute;
+    }
+    .read2 img {
+      width: 24%;
+      left: 59%;
+      top: 11%;
+      position: absolute;
+    }
+    .boat img {
+      width: 40%;
+      left: 52%;
+      top: 49%;
+      position: absolute;
+    }
+    .paddle img {
+      width: 40%;
+      left: 52%;
+      top: 49%;
+      position: absolute;
+    }
     .climb2Button img {
       width: 8%;
       left: 49%;

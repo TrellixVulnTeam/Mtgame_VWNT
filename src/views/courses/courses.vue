@@ -284,7 +284,7 @@
             <!--<img src="../../assets/image/moon/s8.png" v-if="this.unitname==='Holidays'" class="imgpart">-->
             <img src="../../assets/image/moon/mybody1.png" v-if="this.unitname==='My Body'" class="imgpart">
             <img src="../../assets/image/moon/myweekend1.png" v-if="this.unitname==='My Weekend'" class="imgpart">
-            <img src="../../assets/image/moon/wildanimals1.png" v-if="this.unitname==='Wild Animals'" class="imgpart">
+            <img src="../../assets/image/moon/in the ocean.png" v-if="this.unitname==='Wild Animals'" class="imgpart">
             <img src="../../assets/image/moon/christmas1.png" v-if="this.unitname==='Christmas'" class="imgpart">
             <img src="../../assets/image/moon/letsgoshopping1.png" v-if="this.unitname==='Let\'s Go Shopping'" class="imgpart">
             <img src="../../assets/image/moon/mycommunity1.png" v-if="this.unitname==='My Community'" class="imgpart">
@@ -312,7 +312,7 @@
             <!--<img src="../../assets/image/moon/s8.png" v-if="this.unitname==='Holidays'" class="imgpart">-->
             <img src="../../assets/image/moon/mybody2.png" v-if="this.unitname==='My Body'" class="imgpart">
             <img src="../../assets/image/moon/myweekend2.png" v-if="this.unitname==='My Weekend'" class="imgpart">
-            <img src="../../assets/image/moon/wildanimals2.png" v-if="this.unitname==='Wild Animals'" class="imgpart">
+            <img src="../../assets/image/moon/in the jungle.png" v-if="this.unitname==='Wild Animals'" class="imgpart">
             <img src="../../assets/image/moon/christmas2.png" v-if="this.unitname==='Christmas'" class="imgpart">
             <img src="../../assets/image/moon/letsgoshopping2.png" v-if="this.unitname==='Let\'s Go Shopping'" class="imgpart">
             <img src="../../assets/image/moon/mycommunity2.png" v-if="this.unitname==='My Community'" class="imgpart">

@@ -2104,62 +2104,62 @@
           {
             id:1,
             cardName:'smell',
-            audio:require('../../assets/Flashcard Audio/space/fly.mp3'),
+            audio:require('../../assets/Flashcard Audio/myBody/smell.mp3'),
             img:require('../../assets/image/Parts of My Body/Smell.png')
           },{
             id:2,
             cardName:'hand',
-            audio:require('../../assets/Flashcard Audio/space/rocket.mp3'),
+            audio:require('../../assets/Flashcard Audio/myBody/hand.mp3'),
             img:require('../../assets/image/Parts of My Body/Hand.png')
           },{
             id:3,
             cardName:'leg',
-            audio:require('../../assets/Flashcard Audio/space/rocket.mp3'),
+            audio:require('../../assets/Flashcard Audio/myBody/leg.mp3'),
             img:require('../../assets/image/Parts of My Body/Leg.png')
           },{
             id:4,
             cardName:'look',
-            audio:require('../../assets/Flashcard Audio/space/fire.mp3'),
+            audio:require('../../assets/Flashcard Audio/myBody/look.mp3'),
             img:require('../../assets/image/Parts of My Body/Look.png')
           },{
             id:5,
             cardName:'eyes',
-            audio:require('../../assets/Flashcard Audio/space/countdown.mp3'),
+            audio:require('../../assets/Flashcard Audio/myBody/eyes.mp3'),
             img:require('../../assets/image/Parts of My Body/Eyes.png')
           },{
             id:6,
             cardName:'nose',
-            audio:require('../../assets/Flashcard Audio/space/helmet.mp3'),
+            audio:require('../../assets/Flashcard Audio/myBody/nose.mp3'),
             img:require('../../assets/image/Parts of My Body/Nose.png')
           },{
             id:7,
             cardName:'ear',
-            audio:require('../../assets/Flashcard Audio/space/astronaut.mp3'),
+            audio:require('../../assets/Flashcard Audio/myBody/ear.mp3'),
             img:require('../../assets/image/Parts of My Body/Ear.png')
           },{
             id:8,
             cardName:'hair',
-            audio:require('../../assets/Flashcard Audio/space/spacesuit.mp3'),
+            audio:require('../../assets/Flashcard Audio/myBody/hair.mp3'),
             img:require('../../assets/image/Parts of My Body/Hair.png')
           },{
             id:9,
             cardName:'mouth',
-            audio:require('../../assets/Flashcard Audio/space/fuel.mp3'),
+            audio:require('../../assets/Flashcard Audio/myBody/mouth.mp3'),
             img:require('../../assets/image/Parts of My Body/Mouth.png')
           },{
             id:10,
             cardName:'eat',
-            audio:require('../../assets/Flashcard Audio/space/explore.mp3'),
+            audio:require('../../assets/Flashcard Audio/myBody/eat.mp3'),
             img:require('../../assets/image/Parts of My Body/Eat.png')
           },{
             id:11,
             cardName:'walk',
-            audio:require('../../assets/Flashcard Audio/space/scientist.mp3'),
+            audio:require('../../assets/Flashcard Audio/myBody/walk.mp3'),
             img:require('../../assets/image/Parts of My Body/Walk.png')
           },{
             id:12,
             cardName:'feet',
-            audio:require('../../assets/Flashcard Audio/space/radio.mp3'),
+            audio:require('../../assets/Flashcard Audio/myBody/feet.mp3'),
             img:require('../../assets/image/Parts of My Body/Feet.png')
           }
         ],
@@ -2167,63 +2167,189 @@
           {
             id:1,
             cardName:'run',
-            audio:require('../../assets/Flashcard Audio/space/fly.mp3'),
+            audio:require('../../assets/Flashcard Audio/myBody/run.mp3'),
             img:require('../../assets/image/Keeping Healthy/Run.png')
           },{
             id:2,
             cardName:'soap',
-            audio:require('../../assets/Flashcard Audio/space/rocket.mp3'),
+            audio:require('../../assets/Flashcard Audio/myBody/soap.mp3'),
             img:require('../../assets/image/Keeping Healthy/Soap.png')
           },{
             id:3,
             cardName:'sleep',
-            audio:require('../../assets/Flashcard Audio/space/rocket.mp3'),
+            audio:require('../../assets/Flashcard Audio/myBody/sleep.mp3'),
             img:require('../../assets/image/Keeping Healthy/Sleep.png')
           },{
             id:4,
             cardName:'water',
-            audio:require('../../assets/Flashcard Audio/space/fire.mp3'),
+            audio:require('../../assets/Flashcard Audio/myBody/water.mp3'),
             img:require('../../assets/image/Keeping Healthy/Water.png')
           },{
             id:5,
             cardName:'sweets',
-            audio:require('../../assets/Flashcard Audio/space/countdown.mp3'),
+            audio:require('../../assets/Flashcard Audio/myBody/sweets.mp3'),
             img:require('../../assets/image/Keeping Healthy/Sweets.png')
           },{
             id:6,
             cardName:'vegetables',
-            audio:require('../../assets/Flashcard Audio/space/helmet.mp3'),
+            audio:require('../../assets/Flashcard Audio/myBody/vegetables.mp3'),
             img:require('../../assets/image/Keeping Healthy/Vegetables.png')
           },{
             id:7,
             cardName:'fruit',
-            audio:require('../../assets/Flashcard Audio/space/astronaut.mp3'),
+            audio:require('../../assets/Flashcard Audio/myBody/fruit.mp3'),
             img:require('../../assets/image/Keeping Healthy/Fruit.png')
           },{
             id:8,
             cardName:'germs',
-            audio:require('../../assets/Flashcard Audio/space/spacesuit.mp3'),
+            audio:require('../../assets/Flashcard Audio/myBody/germs.mp3'),
             img:require('../../assets/image/Keeping Healthy/Germs.png')
           },{
             id:9,
             cardName:'wash',
-            audio:require('../../assets/Flashcard Audio/space/fuel.mp3'),
+            audio:require('../../assets/Flashcard Audio/myBody/wash.mp3'),
             img:require('../../assets/image/Keeping Healthy/Wash.png')
           },{
             id:10,
             cardName:'teeth',
-            audio:require('../../assets/Flashcard Audio/space/explore.mp3'),
+            audio:require('../../assets/Flashcard Audio/myBody/teeth.mp3'),
             img:require('../../assets/image/Keeping Healthy/Teeth.png')
           },{
             id:11,
             cardName:'brush',
-            audio:require('../../assets/Flashcard Audio/space/scientist.mp3'),
+            audio:require('../../assets/Flashcard Audio/myBody/brush.mp3'),
             img:require('../../assets/image/Keeping Healthy/Brush.png')
           },{
             id:12,
             cardName:'doctor',
-            audio:require('../../assets/Flashcard Audio/space/radio.mp3'),
+            audio:require('../../assets/Flashcard Audio/myBody/doctor.mp3'),
             img:require('../../assets/image/Keeping Healthy/Doctor.png')
+          }
+        ],
+        MyWeekendPart1:[
+          {
+            id:1,
+            cardName:'swing',
+            audio:require('../../assets/Flashcard Audio/weekend/swing.mp3'),
+            img:require('../../assets/image/At the Park/Swing.png')
+          },{
+            id:2,
+            cardName:'bike',
+            audio:require('../../assets/Flashcard Audio/weekend/bike.mp3'),
+            img:require('../../assets/image/At the Park/Bike.png')
+          },{
+            id:3,
+            cardName:'kite',
+            audio:require('../../assets/Flashcard Audio/weekend/kite.mp3'),
+            img:require('../../assets/image/At the Park/Kite.png')
+          },{
+            id:4,
+            cardName:'climb',
+            audio:require('../../assets/Flashcard Audio/weekend/climb.mp3'),
+            img:require('../../assets/image/At the Park/Climb.png')
+          },{
+            id:5,
+            cardName:'picnic',
+            audio:require('../../assets/Flashcard Audio/weekend/picnic.mp3'),
+            img:require('../../assets/image/At the Park/Picnic.png')
+          },{
+            id:6,
+            cardName:'camera',
+            audio:require('../../assets/Flashcard Audio/weekend/camera.mp3'),
+            img:require('../../assets/image/At the Park/Camera.png')
+          },{
+            id:7,
+            cardName:'seesaw',
+            audio:require('../../assets/Flashcard Audio/weekend/seesaw.mp3'),
+            img:require('../../assets/image/At the Park/Seesaw.png')
+          },{
+            id:8,
+            cardName:'paint',
+            audio:require('../../assets/Flashcard Audio/weekend/paint.mp3'),
+            img:require('../../assets/image/At the Park/Paint.png')
+          },{
+            id:9,
+            cardName:'jog',
+            audio:require('../../assets/Flashcard Audio/weekend/jog.mp3'),
+            img:require('../../assets/image/At the Park/Jog.png')
+          },{
+            id:10,
+            cardName:'jungle gym',
+            audio:require('../../assets/Flashcard Audio/weekend/jungle gym.mp3'),
+            img:require('../../assets/image/At the Park/Jungle Gym.png')
+          },{
+            id:11,
+            cardName:'kick',
+            audio:require('../../assets/Flashcard Audio/weekend/kick.mp3'),
+            img:require('../../assets/image/At the Park/Kick.png')
+          },{
+            id:12,
+            cardName:'brush',
+            audio:require('../../assets/Flashcard Audio/weekend/brush.mp3'),
+            img:require('../../assets/image/At the Park/Brush.png')
+          }
+        ],
+        MyWeekendPart2:[
+          {
+            id:1,
+            cardName:'sandcastle',
+            audio:require('../../assets/Flashcard Audio/weekend/sandcastle.mp3'),
+            img:require('../../assets/image/At the Beach/Sandcastle.png')
+          },{
+            id:2,
+            cardName:'shovel',
+            audio:require('../../assets/Flashcard Audio/weekend/shovel.mp3'),
+            img:require('../../assets/image/At the Beach/Shovel.png')
+          },{
+            id:3,
+            cardName:'dig',
+            audio:require('../../assets/Flashcard Audio/weekend/Dig.mp3'),
+            img:require('../../assets/image/At the Beach/Dig.png')
+          },{
+            id:4,
+            cardName:'bucket',
+            audio:require('../../assets/Flashcard Audio/weekend/bucket.mp3'),
+            img:require('../../assets/image/At the Beach/Bucket.png')
+          },{
+            id:5,
+            cardName:'swim',
+            audio:require('../../assets/Flashcard Audio/weekend/swim.mp3'),
+            img:require('../../assets/image/At the Beach/Swim.png')
+          },{
+            id:6,
+            cardName:'read',
+            audio:require('../../assets/Flashcard Audio/weekend/read.mp3'),
+            img:require('../../assets/image/At the Beach/Read.png')
+          },{
+            id:7,
+            cardName:'rod',
+            audio:require('../../assets/Flashcard Audio/weekend/rod.mp3'),
+            img:require('../../assets/image/At the Beach/Rod.png')
+          },{
+            id:8,
+            cardName:'seashell',
+            audio:require('../../assets/Flashcard Audio/weekend/seashell.mp3'),
+            img:require('../../assets/image/At the Beach/Seashell.png')
+          },{
+            id:9,
+            cardName:'snorkel',
+            audio:require('../../assets/Flashcard Audio/weekend/snorkel.mp3'),
+            img:require('../../assets/image/At the Beach/Snorkel.png')
+          },{
+            id:10,
+            cardName:'goggles',
+            audio:require('../../assets/Flashcard Audio/weekend/goggles.mp3'),
+            img:require('../../assets/image/At the Beach/Goggles.png')
+          },{
+            id:11,
+            cardName:'boat',
+            audio:require('../../assets/Flashcard Audio/weekend/boat.mp3'),
+            img:require('../../assets/image/At the Beach/Boat.png')
+          },{
+            id:12,
+            cardName:'paddle',
+            audio:require('../../assets/Flashcard Audio/weekend/paddle.mp3'),
+            img:require('../../assets/image/At the Beach/Paddle.png')
           }
         ],
         list:[],
@@ -2275,6 +2401,8 @@
           SpacePart2:require('../../assets/image/8-logo2.png'),
           MyBodyPart1:require('../../assets/image/9-logo1.png'),
           MyBodyPart2:require('../../assets/image/9-logo2.png'),
+          MyWeekendPart1:require('../../assets/image/10-logo1.png'),
+          MyWeekendPart2:require('../../assets/image/10-logo2.png'),
         },
         title:'../../assets/image/6-6logo.png',
         flashCardUrl:'http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/9315e4a9-e1ec-4f49-8db5-5b3a9b6ae083.png',
