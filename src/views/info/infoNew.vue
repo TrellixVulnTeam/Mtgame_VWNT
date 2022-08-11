@@ -599,7 +599,7 @@
                   </div>
                 </div>
                 <!--Scores for key areas-->
-                <div class="areasDiv" v-show="categoryNum === 4">
+                <div class="areasDiv" v-if="categoryNum === 4">
                   <div class="areasButton">
                     <div class="areasButton1" :style="symbolNub ==='1' ? symbolColor:symbolDefaultColor" @click="$tips(true);areas('Vocabulary')">Vocabulary</div>
                     <div class="areasButton1" :style="symbolNub ==='2' ? symbolColor:symbolDefaultColor" @click="$tips(true);areas('Spelling')">Spelling</div>
@@ -3911,7 +3911,9 @@
     }
   }
 
-  @media only screen and (min-width: 570px) and (max-width: 735px) {
+  @media only screen and (min-device-height: 570px) and (max-device-height: 735px) and (-webkit-device-pixel-ratio: 3),
+  (min-device-height: 570px) and (max-device-height: 735px) and (-webkit-device-pixel-ratio: 2),
+  (min-width: 570px) and (max-width: 735px) {
     .menu2Change{
       float: left;
       height: 100%;
@@ -4273,7 +4275,9 @@
     }
   }
 
-  @media only screen and (min-width: 736px) and (max-width: 811px) {
+  @media only screen and (min-device-height: 736px) and (max-device-height: 811px) and (-webkit-device-pixel-ratio: 3),
+  (min-device-height: 736px) and (max-device-height: 811px) and (-webkit-device-pixel-ratio: 2),
+  (min-width: 736px) and (max-width: 811px) {
     .strengthsAbbreviation {
       width: 100%;
       height: 100%;
@@ -4744,7 +4748,6 @@
       font-weight: 600;
       line-height: 15px;
     }
-
     .historyList {
       position: absolute;
       width: 105%;
@@ -5480,7 +5483,9 @@
     }
   }
 
-  @media only screen and (min-width: 895px) and (max-width: 1023px) {
+  @media only screen and (min-device-height: 895px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 3),
+  (min-device-height: 895px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 2),
+  (min-width: 895px) and (max-width: 1023px) {
     .buttonsty {
       border-style: none;
       background: none;
@@ -5937,7 +5942,9 @@
 
   }
 
-  @media only screen and (min-width: 1024px) and (max-width: 1199px) {
+  @media only screen and (min-device-height: 1024px) and (max-device-height: 1199px) and (-webkit-device-pixel-ratio: 3),
+  (min-device-height: 1024px) and (max-device-height: 1199px) and (-webkit-device-pixel-ratio: 2),
+  (min-width: 1024px) and (max-width: 1199px) {
     .AreasP2 {
       color: white;
       font-weight: 700;
@@ -6472,7 +6479,9 @@
 
   }
 
-  @media only screen and (min-width: 1180px) and (max-width: 1180px){
+  @media only screen and (min-device-height: 1180px) and (max-device-height: 1180px) and (-webkit-device-pixel-ratio: 3),
+  (min-device-height: 1180px) and (max-device-height: 1180px) and (-webkit-device-pixel-ratio: 2),
+  (min-width: 1180px) and (max-width: 1180px){
     .cardRight {
       top: 33%;
     }
@@ -6490,7 +6499,9 @@
     }
   }
 
-  @media only screen and (min-width: 1200px) and (max-width: 1600px) {
+  @media only screen and (min-device-height: 1200px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 3),
+  (min-device-height: 1200px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 2),
+  (min-width: 1200px) and (max-width: 1600px) {
     .strengthsAbbreviation {
       width: 100%;
       height: 100%;

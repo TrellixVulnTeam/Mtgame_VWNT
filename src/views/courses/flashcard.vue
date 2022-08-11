@@ -2352,6 +2352,132 @@
             img:require('../../assets/image/At the Beach/Paddle.png')
           }
         ],
+        WildAnimalsPart1:[
+          {
+            id:1,
+            cardName:'dolphin',
+            audio:require('../../assets/Flashcard Audio/wild/swing.mp3'),
+            img:require('../../assets/image/In the Ocean/Dolphin.png')
+          },{
+            id:2,
+            cardName:'octopus',
+            audio:require('../../assets/Flashcard Audio/wild/Octopus.mp3'),
+            img:require('../../assets/image/In the Ocean/Octopus.png')
+          },{
+            id:3,
+            cardName:'seahorse',
+            audio:require('../../assets/Flashcard Audio/wild/seahorse.mp3'),
+            img:require('../../assets/image/In the Ocean/Seahorse.png')
+          },{
+            id:4,
+            cardName:'chase',
+            audio:require('../../assets/Flashcard Audio/wild/chase.mp3'),
+            img:require('../../assets/image/In the Ocean/Chase.png')
+          },{
+            id:5,
+            cardName:'jellyfish',
+            audio:require('../../assets/Flashcard Audio/wild/jellyfish.mp3'),
+            img:require('../../assets/image/In the Ocean/Jellyfish.png')
+          },{
+            id:6,
+            cardName:'wiggle',
+            audio:require('../../assets/Flashcard Audio/wild/wiggle.mp3'),
+            img:require('../../assets/image/In the Ocean/wiggle.png')
+          },{
+            id:7,
+            cardName:'hide',
+            audio:require('../../assets/Flashcard Audio/wild/hide.mp3'),
+            img:require('../../assets/image/In the Ocean/Hide.png')
+          },{
+            id:8,
+            cardName:'turtle',
+            audio:require('../../assets/Flashcard Audio/wild/turtle.mp3'),
+            img:require('../../assets/image/In the Ocean/Turtle.png')
+          },{
+            id:9,
+            cardName:'shark',
+            audio:require('../../assets/Flashcard Audio/wild/shark.mp3'),
+            img:require('../../assets/image/In the Ocean/Shark.png')
+          },{
+            id:10,
+            cardName:'starfish',
+            audio:require('../../assets/Flashcard Audio/wild/starfish.mp3'),
+            img:require('../../assets/image/In the Ocean/Starfish.png')
+          },{
+            id:11,
+            cardName:'spray',
+            audio:require('../../assets/Flashcard Audio/wild/shark.mp3'),
+            img:require('../../assets/image/In the Ocean/Spray.png')
+          },{
+            id:12,
+            cardName:'whale',
+            audio:require('../../assets/Flashcard Audio/wild/whale.mp3'),
+            img:require('../../assets/image/In the Ocean/Whale.png')
+          }
+        ],
+        WildAnimalsPart2:[
+          {
+            id:1,
+            cardName:'lizard',
+            audio:require('../../assets/Flashcard Audio/wild/lizard.mp3'),
+            img:require('../../assets/image/In the Jungle/Lizard.png')
+          },{
+            id:2,
+            cardName:'frog',
+            audio:require('../../assets/Flashcard Audio/wild/frog.mp3'),
+            img:require('../../assets/image/In the Jungle/Frog.png')
+          },{
+            id:3,
+            cardName:'pounce',
+            audio:require('../../assets/Flashcard Audio/wild/pounce.mp3'),
+            img:require('../../assets/image/In the Jungle/Pounce.png')
+          },{
+            id:4,
+            cardName:'snake',
+            audio:require('../../assets/Flashcard Audio/wild/snake.mp3'),
+            img:require('../../assets/image/In the Jungle/Snake.png')
+          },{
+            id:5,
+            cardName:'slither',
+            audio:require('../../assets/Flashcard Audio/wild/slither.mp3'),
+            img:require('../../assets/image/In the Jungle/Slither.png')
+          },{
+            id:6,
+            cardName:'crocodile',
+            audio:require('../../assets/Flashcard Audio/wild/crocodile.mp3'),
+            img:require('../../assets/image/In the Jungle/Crocodile.png')
+          },{
+            id:7,
+            cardName:'parrot',
+            audio:require('../../assets/Flashcard Audio/wild/parrot.mp3'),
+            img:require('../../assets/image/In the Jungle/Parrot.png')
+          },{
+            id:8,
+            cardName:'crawl',
+            audio:require('../../assets/Flashcard Audio/wild/crawl.mp3'),
+            img:require('../../assets/image/In the Jungle/Crawl.png')
+          },{
+            id:9,
+            cardName:'bat',
+            audio:require('../../assets/Flashcard Audio/wild/bat.mp3'),
+            img:require('../../assets/image/In the Jungle/Bat.png')
+          },{
+            id:10,
+            cardName:'jaguar',
+            audio:require('../../assets/Flashcard Audio/wild/jaguar.mp3'),
+            img:require('../../assets/image/In the Jungle/Jaguar.png')
+          },{
+            id:11,
+            cardName:'sloth',
+            audio:require('../../assets/Flashcard Audio/wild/sloth.mp3'),
+            img:require('../../assets/image/In the Jungle/Sloth.png')
+          },{
+            id:12,
+            cardName:'swing',
+            audio:require('../../assets/Flashcard Audio/wild/swing.mp3'),
+            img:require('../../assets/image/In the Jungle/Swing.png')
+          }
+        ],
         list:[],
         titleUrl:{
           MyCommunity:require('../../assets/image/2-logo.png'),
@@ -2403,6 +2529,8 @@
           MyBodyPart2:require('../../assets/image/9-logo2.png'),
           MyWeekendPart1:require('../../assets/image/10-logo1.png'),
           MyWeekendPart2:require('../../assets/image/10-logo2.png'),
+          WildAnimalsPart1:require('../../assets/image/11-logo1.png'),
+          WildAnimalsPart2:require('../../assets/image/11-logo2.png'),
         },
         title:'../../assets/image/6-6logo.png',
         flashCardUrl:'http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/9315e4a9-e1ec-4f49-8db5-5b3a9b6ae083.png',

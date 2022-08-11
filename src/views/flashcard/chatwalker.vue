@@ -3627,7 +3627,6 @@
              @click="showGif('bike2')">
       </div>
       <div class="brush3">
-<!--        <img src="../../assets/image/202010H5 At the Park _MT/GIF_PNG/png/brush.png" v-if="brush3" @click="showGif('brush3')">-->
         <img src="../../assets/image/202010H5 At the Park _MT/GIF_PNG/gif/brush.gif" style="z-index: 100" v-if="!brush3"
              @click="showGif('brush3')">
       </div>
@@ -3647,7 +3646,6 @@
              @click="showGif('jog')">
       </div>
       <div class="jungleGym">
-<!--        <img src="../../assets/image/202010H5 At the Park _MT/GIF_PNG/png/jungle gym.png" v-if="jungleGym" @click="showGif('jungleGym')">-->
         <img src="../../assets/image/202010H5 At the Park _MT/GIF_PNG/gif/jungle gym.gif" style="z-index: 100" v-if="!jungleGym"
              @click="showGif('jungleGym')">
       </div>
@@ -3739,7 +3737,6 @@
              @click="showGif('sandcastle')">
       </div>
       <div class="paddle">
-<!--        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/png/paddle.png" v-if="paddle" @click="showGif('paddle')">-->
         <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/gif/paddle.gif" style="z-index: 100" v-if="!paddle"
              @click="showGif('paddle')">
       </div>
@@ -3779,12 +3776,10 @@
              @click="showGif('dig')">
       </div>
       <div class="shovel2">
-<!--        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/png/shovel.png" v-if="shovel2" @click="showGif('shovel2')">-->
         <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/gif/shovel.gif" style="z-index: 100" v-if="!shovel2"
              @click="showGif('shovel2')">
       </div>
       <div class="goggles">
-<!--        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/png/goggles.png" v-if="goggles" @click="showGif('goggles')">-->
         <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/gif/goggles.gif" style="z-index: 100" v-if="!goggles"
              @click="showGif('goggles')">
       </div>
@@ -3846,7 +3841,6 @@
       <img src="../../assets/image/202011H5 In the Ocean_MT/Runner_BG/BG_00000.png"
            style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;"/>
       <div class="chase">
-        <!--        <img src="../../assets/image/202011H5 In the Ocean_MT/GIF_PNG/png/chase.png" v-if="chase" @click="showGif('chase')">-->
         <img src="../../assets/image/202011H5 In the Ocean_MT/GIF_PNG/gif/chase.gif" style="z-index: 100" v-if="!chase"
              @click="showGif('chase')">
       </div>
@@ -3881,7 +3875,6 @@
              @click="showGif('shark')">
       </div>
       <div class="spray">
-        <!--        <img src="../../assets/image/202011H5 In the Ocean_MT/GIF_PNG/png/spray.png" v-if="spray" @click="showGif('spray')">-->
         <img src="../../assets/image/202011H5 In the Ocean_MT/GIF_PNG/gif/spray.gif" style="z-index: 100" v-if="!spray"
              @click="showGif('spray')">
       </div>
@@ -3901,7 +3894,6 @@
              @click="showGif('whale')">
       </div>
       <div class="wiggle2">
-        <!--        <img src="../../assets/image/202011H5 In the Ocean_MT/GIF_PNG/png/wiggle.png" v-if="wiggle2" @click="showGif('wiggle2')">-->
         <img src="../../assets/image/202011H5 In the Ocean_MT/GIF_PNG/gif/wiggle.gif" style="z-index: 100" v-if="!wiggle2"
              @click="showGif('wiggle2')">
       </div>
@@ -3955,115 +3947,115 @@
       </div>
     </div>
     <div v-else-if="this.unit === 'Wild Animals' && this.part === 'part2'">
-      <img src="../../assets/image/202010H5 At the Beach_MT/Runner_BG/BG_00000.png"
+      <img src="../../assets/image/202011H5 In the Jungle_MT/Runner_BG/BG_00000.png"
            style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;"/>
-      <div class="sandcastle">
-        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/png/sandcastle.png" v-if="sandcastle" @click="showGif('sandcastle')">
-        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/gif/sandcastle.gif" style="z-index: 100" v-if="!sandcastle"
-             @click="showGif('sandcastle')">
+      <img src="../../assets/image/202011H5 In the Jungle_MT/still/Still_00000.png"
+           style="width: 100%; z-index: -1; height: 100%;display:block;position: absolute;"/>
+      <div class="bat">
+        <img src="../../assets/image/202011H5 In the Jungle_MT/GIF_PNG/png/bat.png" v-if="bat" @click="walkers&&showGif('bat')">
+        <img src="../../assets/image/202011H5 In the Jungle_MT/GIF_PNG/gif/bat.gif" style="z-index: 100" v-if="!bat"
+             @click="showGif('bat')">
       </div>
-      <div class="paddle">
-        <!--        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/png/paddle.png" v-if="paddle" @click="showGif('paddle')">-->
-        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/gif/paddle.gif" style="z-index: 100" v-if="!paddle"
-             @click="showGif('paddle')">
+      <div class="lizard2">
+        <img src="../../assets/image/202011H5 In the Jungle_MT/GIF_PNG/png/lizard.png" v-if="lizard2" @click="showGif('lizard2')">
+        <img src="../../assets/image/202011H5 In the Jungle_MT/GIF_PNG/gif/lizard.gif" style="z-index: 100" v-if="!lizard2"
+             @click="showGif('lizard2')">
       </div>
-      <div class="seashell">
-        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/png/seashell.png" v-if="seashell" @click="showGif('seashell')">
-        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/gif/seashell.gif" style="z-index: 100" v-if="!seashell"
-             @click="showGif('seashell')">
+      <div class="jaguar">
+        <img src="../../assets/image/202011H5 In the Jungle_MT/GIF_PNG/gif/jaguar.gif" style="z-index: 100" v-if="!jaguar"
+             @click="showGif('jaguar')">
       </div>
-      <div class="boat">
-        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/png/boat.png" v-if="paddle&&boat" @click="walkers&&showGif('boat')">
-        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/gif/boat.gif" style="z-index: 100" v-if="!boat"
-             @click="showGif('boat')">
+      <div class="frog">
+        <img src="../../assets/image/202011H5 In the Jungle_MT/GIF_PNG/png/frog.png" v-if="frog" @click="showGif('frog')">
+        <img src="../../assets/image/202011H5 In the Jungle_MT/GIF_PNG/gif/frog.gif" style="z-index: 100" v-if="!frog"
+             @click="showGif('frog')">
       </div>
-      <div class="rod">
-        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/png/rod.png" v-if="rod" @click="showGif('rod')">
-        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/gif/rod.gif" style="z-index: 100" v-if="!rod"
-             @click="showGif('rod')">
+      <div class="pounce">
+        <img src="../../assets/image/202011H5 In the Jungle_MT/GIF_PNG/png/pounce.png" v-if="pounce&&jaguar" @click="showGif('pounce')">
+        <img src="../../assets/image/202011H5 In the Jungle_MT/GIF_PNG/gif/pounce.gif" style="z-index: 100" v-if="!pounce"
+             @click="showGif('pounce')">
       </div>
-      <div class="read2">
-        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/png/read.png" v-if="read2" @click="showGif('read2')">
-        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/gif/read.gif" style="z-index: 100" v-if="!read2"
-             @click="showGif('read2')">
+      <div class="sloth">
+        <img src="../../assets/image/202011H5 In the Jungle_MT/GIF_PNG/png/sloth.png" v-if="sloth" @click="walkers&&showGif('sloth')">
+        <img src="../../assets/image/202011H5 In the Jungle_MT/GIF_PNG/gif/sloth.gif" style="z-index: 100" v-if="!sloth"
+             @click="showGif('sloth')">
       </div>
-      <div class="swim2">
-        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/png/swim.png" v-if="swim2" @click="showGif('swim2')">
-        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/gif/swim.gif" style="z-index: 100" v-if="!swim2"
-             @click="showGif('swim2')">
+      <div class="snake2">
+        <img src="../../assets/image/202011H5 In the Jungle_MT/GIF_PNG/png/snake.png" v-if="snake2&&slither" @click="showGif('snake2')">
+        <img src="../../assets/image/202011H5 In the Jungle_MT/GIF_PNG/gif/snake.gif" style="z-index: 100" v-if="!snake2"
+             @click="showGif('snake2')">
       </div>
-      <div class="bucket2">
-        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/png/bucket.png" v-if="bucket2" @click="showGif('bucket2')">
-        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/gif/bucket.gif" style="z-index: 100" v-if="!bucket2"
-             @click="showGif('bucket2')">
+      <div class="crocodile2">
+        <img src="../../assets/image/202011H5 In the Jungle_MT/GIF_PNG/png/crocodile.png" v-if="crocodile2" @click="showGif('crocodile2')">
+        <img src="../../assets/image/202011H5 In the Jungle_MT/GIF_PNG/gif/crocodile.gif" style="z-index: 100" v-if="!crocodile2"
+             @click="showGif('crocodile2')">
       </div>
-      <div class="dig">
-        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/png/dig.png" v-if="dig&&shovel2" @click="showGif('dig')">
-        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/gif/dig.gif" style="z-index: 100" v-if="!dig"
-             @click="showGif('dig')">
+      <div class="swing3">
+        <img src="../../assets/image/202011H5 In the Jungle_MT/GIF_PNG/png/monkey.png" v-if="swing3" @click="walkers&&showGif('swing3')">
+        <img src="../../assets/image/202011H5 In the Jungle_MT/GIF_PNG/gif/monkey.gif" style="z-index: 100" v-if="!swing3"
+             @click="showGif('swing3')">
       </div>
-      <div class="shovel2">
-        <!--        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/png/shovel.png" v-if="shovel2" @click="showGif('shovel2')">-->
-        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/gif/shovel.gif" style="z-index: 100" v-if="!shovel2"
-             @click="showGif('shovel2')">
+      <div class="slither">
+        <img src="../../assets/image/202011H5 In the Jungle_MT/GIF_PNG/gif/slither.gif" style="z-index: 100" v-if="!slither"
+             @click="showGif('slither')">
       </div>
-      <div class="goggles">
-        <!--        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/png/goggles.png" v-if="goggles" @click="showGif('goggles')">-->
-        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/gif/goggles.gif" style="z-index: 100" v-if="!goggles"
-             @click="showGif('goggles')">
+      <div class="parrot2">
+        <img src="../../assets/image/202011H5 In the Jungle_MT/GIF_PNG/png/parrot.png" v-if="parrot2" @click="showGif('parrot2')">
+        <img src="../../assets/image/202011H5 In the Jungle_MT/GIF_PNG/gif/parrot.gif" style="z-index: 100" v-if="!parrot2"
+             @click="showGif('parrot2')">
       </div>
-      <div class="snorkel">
-        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/png/snorkel.png" v-if="snorkel&&goggles" @click="walkers&&showGif('snorkel')">
-        <img src="../../assets/image/202010H5 At the Beach_MT/GIF_PNG/gif/snorkel.gif" style="z-index: 100" v-if="!snorkel"
-             @click="showGif('snorkel')">
+      <div class="crawl2">
+        <img src="../../assets/image/202011H5 In the Jungle_MT/GIF_PNG/png/crawl.png" v-if="crawl2" @click="showGif('crawl2')">
+        <img src="../../assets/image/202011H5 In the Jungle_MT/GIF_PNG/gif/crawl.gif" style="z-index: 100" v-if="!crawl2"
+             @click="showGif('crawl2')">
       </div>
-      <div class="sandcastleButton">
-        <img src="../../assets/image/202010H5 At the Beach_MT/Word/word_sancastle.png"
-             :style="{zIndex: !sandcastle ? 100 : 1}" @click="showGif('sandcastle')">
+      <div class="batButton">
+        <img src="../../assets/image/202011H5 In the Jungle_MT/Word/word_bat.png" v-if="walkers"
+             :style="{zIndex: !bat ? 100 : 1}" @click="showGif('bat')">
       </div>
-      <div class="snorkelButton">
-        <img src="../../assets/image/202010H5 At the Beach_MT/Word/word_snorkel.png" v-if="walkers"
-             :style="{zIndex: !snorkel ? 100 : 1}" @click="showGif('snorkel')">
+      <div class="lizard2Button">
+        <img src="../../assets/image/202011H5 In the Jungle_MT/Word/word_lizard.png"
+             :style="{zIndex: !lizard2 ? 100 : 1}" @click="showGif('lizard2')">
       </div>
-      <div class="gogglesButton">
-        <img src="../../assets/image/202010H5 At the Beach_MT/Word/word_goggles.png" v-if="walkers"
-             :style="{zIndex: !goggles ? 100 : 1}" @click="showGif('goggles')">
+      <div class="jaguarButton">
+        <img src="../../assets/image/202011H5 In the Jungle_MT/Word/word_jaguar.png" v-if="walkers"
+             :style="{zIndex: !jaguar ? 100 : 1}" @click="showGif('jaguar')">
       </div>
-      <div class="shovel2Button">
-        <img src="../../assets/image/202010H5 At the Beach_MT/Word/word_shovel.png"
-             :style="{zIndex: !shovel2 ? 100 : 1}" @click="showGif('shovel2')">
+      <div class="frogButton">
+        <img src="../../assets/image/202011H5 In the Jungle_MT/Word/word_frog.png"
+             :style="{zIndex: !frog ? 100 : 1}" @click="showGif('frog')">
       </div>
-      <div class="digButton">
-        <img src="../../assets/image/202010H5 At the Beach_MT/Word/word_dig.png"
-             :style="{zIndex: !dig ? 100 : 1}" @click="showGif('dig')">
+      <div class="pounceButton">
+        <img src="../../assets/image/202011H5 In the Jungle_MT/Word/word_pounce.png"
+             :style="{zIndex: !pounce ? 100 : 1}" @click="showGif('pounce')">
       </div>
-      <div class="bucket2Button">
-        <img src="../../assets/image/202010H5 At the Beach_MT/Word/word_bucket.png"
-             :style="{zIndex: !bucket2 ? 100 : 1}" @click="showGif('bucket2')">
+      <div class="slothButton">
+        <img src="../../assets/image/202011H5 In the Jungle_MT/Word/word_sloth.png" v-if="walkers"
+             :style="{zIndex: !sloth ? 100 : 1}" @click="showGif('sloth')">
       </div>
-      <div class="swim2Button">
-        <img src="../../assets/image/202010H5 At the Beach_MT/Word/word_swim.png"
-             :style="{zIndex: !swim2 ? 100 : 1}" @click="showGif('swim2')">
+      <div class="snake2Button">
+        <img src="../../assets/image/202011H5 In the Jungle_MT/Word/word_snake.png"
+             :style="{zIndex: !snake2 ? 100 : 1}" @click="showGif('snake2')">
       </div>
-      <div class="read2Button">
-        <img src="../../assets/image/202010H5 At the Beach_MT/Word/word_read.png"
-             :style="{zIndex: !read2 ? 100 : 1}" @click="showGif('read2')">
+      <div class="crocodile2Button">
+        <img src="../../assets/image/202011H5 In the Jungle_MT/Word/word_crocodile.png"
+             :style="{zIndex: !crocodile2 ? 100 : 1}" @click="showGif('crocodile2')">
       </div>
-      <div class="rodButton">
-        <img src="../../assets/image/202010H5 At the Beach_MT/Word/word_rod.png"
-             :style="{zIndex: !rod ? 100 : 1}" @click="showGif('rod')">
+      <div class="swing3Button">
+        <img src="../../assets/image/202011H5 In the Jungle_MT/Word/word_swing.png" v-if="walkers"
+             :style="{zIndex: !swing3 ? 100 : 1}" @click="showGif('swing3')">
       </div>
-      <div class="boatButton">
-        <img src="../../assets/image/202010H5 At the Beach_MT/Word/word_boat.png" v-if="walkers"
-             :style="{zIndex: !boat ? 100 : 1}" @click="showGif('boat')">
+      <div class="slitherButton">
+        <img src="../../assets/image/202011H5 In the Jungle_MT/Word/word_slither.png"
+             :style="{zIndex: !slither ? 100 : 1}" @click="showGif('slither')">
       </div>
-      <div class="seashellButton">
-        <img src="../../assets/image/202010H5 At the Beach_MT/Word/word_seashell.png"
-             :style="{zIndex: !seashell ? 100 : 1}" @click="showGif('seashell')">
+      <div class="parrot2Button">
+        <img src="../../assets/image/202011H5 In the Jungle_MT/Word/word_parrot.png"
+             :style="{zIndex: !parrot2 ? 100 : 1}" @click="showGif('parrot2')">
       </div>
-      <div class="paddleButton">
-        <img src="../../assets/image/202010H5 At the Beach_MT/Word/word_paddle.png" v-if="walkers"
-             :style="{zIndex: !paddle ? 100 : 1}" @click="showGif('paddle')">
+      <div class="crawl2Button">
+        <img src="../../assets/image/202011H5 In the Jungle_MT/Word/word_crawl.png"
+             :style="{zIndex: !crawl2 ? 100 : 1}" @click="showGif('crawl2')">
       </div>
     </div>
 
@@ -4635,9 +4627,46 @@ export default {
           picnic2:require('../../assets/Flashcard Audio/weekend/picnic.mp3'),
           seesaw2:require('../../assets/Flashcard Audio/weekend/seesaw.mp3'),
           swing2:require('../../assets/Flashcard Audio/weekend/swing.mp3'),
+          //wild animals
+          bat:require('../../assets/Flashcard Audio/wild/bat.mp3'),
+          lizard2:require('../../assets/Flashcard Audio/wild/lizard.mp3'),
+          jaguar:require('../../assets/Flashcard Audio/wild/jaguar.mp3'),
+          frog:require('../../assets/Flashcard Audio/wild/frog.mp3'),
+          pounce:require('../../assets/Flashcard Audio/wild/pounce.mp3'),
+          sloth:require('../../assets/Flashcard Audio/wild/sloth.mp3'),
+          snake2:require('../../assets/Flashcard Audio/wild/snake.mp3'),
+          crocodile2:require('../../assets/Flashcard Audio/wild/crocodile.mp3'),
+          swing3:require('../../assets/Flashcard Audio/wild/swing.mp3'),
+          slither:require('../../assets/Flashcard Audio/wild/slither.mp3'),
+          parrot2:require('../../assets/Flashcard Audio/wild/parrot.mp3'),
+          crawl2:require('../../assets/Flashcard Audio/wild/crawl.mp3'),
+          chase:require('../../assets/Flashcard Audio/wild/chase.mp3'),
+          dolphin:require('../../assets/Flashcard Audio/wild/dolphin.mp3'),
+          hide:require('../../assets/Flashcard Audio/wild/hide.mp3'),
+          jellyfish:require('../../assets/Flashcard Audio/wild/jellyfish.mp3'),
+          octopus:require('../../assets/Flashcard Audio/wild/Octopus.mp3'),
+          seahorse:require('../../assets/Flashcard Audio/wild/seahorse.mp3'),
+          shark:require('../../assets/Flashcard Audio/wild/shark.mp3'),
+          spray:require('../../assets/Flashcard Audio/wild/spray.mp3'),
+          starfish:require('../../assets/Flashcard Audio/wild/starfish.mp3'),
+          turtle2:require('../../assets/Flashcard Audio/wild/turtle.mp3'),
+          whale:require('../../assets/Flashcard Audio/wild/whale.mp3'),
+          wiggle2:require('../../assets/Flashcard Audio/wild/wiggle.mp3'),
         },
         local:'',
         cardType:'default',
+        bat:true,
+        lizard2:true,
+        jaguar:true,
+        frog:true,
+        pounce:true,
+        sloth:true,
+        snake2:true,
+        crocodile2:true,
+        swing3:true,
+        slither:true,
+        parrot2:true,
+        crawl2:true,
         chase:true,
         dolphin:true,
         hide:true,
@@ -5295,6 +5324,174 @@ export default {
     position: fixed;
     background-color: #44ccc2;
     z-index: 201;
+  }
+
+  .bat img {
+    width: 10%;
+    left: 2%;
+    top: 2%;
+    position: absolute;
+  }
+
+  .lizard2 img {
+    width: 23%;
+    left: -2%;
+    top: 14%;
+    position: absolute;
+  }
+
+  .jaguar img {
+    width: 45%;
+    left: 19%;
+    top: 35%;
+    position: absolute;
+  }
+
+  .frog img {
+    width: 12%;
+    left: 7%;
+    top: 70%;
+    position: absolute;
+  }
+
+  .pounce img {
+    width: 45%;
+    left: 19%;
+    top: 35%;
+    position: absolute;
+  }
+
+  .sloth img {
+    width: 30%;
+    left: 22%;
+    top: -4%;
+    position: absolute;
+  }
+
+  .snake2 img {
+    width: 20%;
+    left: 47%;
+    top: 28%;
+    position: absolute;
+  }
+
+  .crocodile2 img {
+    width: 35%;
+    left: 44%;
+    top: 46%;
+    position: absolute;
+  }
+
+  .swing3 img {
+    width: 30%;
+    left: 55%;
+    top: 0%;
+    position: absolute;
+  }
+
+  .slither img {
+    width: 20%;
+    left: 47%;
+    top: 28%;
+    position: absolute;
+  }
+
+  .parrot2 img {
+    width: 18%;
+    left: 81%;
+    top: 3%;
+    position: absolute;
+  }
+
+  .crawl2 img {
+    width: 15%;
+    left: 85%;
+    top: 46%;
+    position: absolute;
+  }
+
+  .lizard2Button img {
+    width: 7%;
+    left: 19%;
+    top: 34%;
+    position: absolute;
+  }
+
+  .batButton img {
+    width: 7%;
+    left: 10%;
+    top: 6%;
+    position: absolute;
+  }
+
+  .jaguarButton img {
+    width: 7%;
+    left: 13%;
+    top: 52%;
+    position: absolute;
+  }
+
+  .frogButton img {
+    width: 7%;
+    left: 13%;
+    top: 87%;
+    position: absolute;
+  }
+
+  .pounceButton img {
+    width: 9%;
+    left: 24%;
+    top: 65%;
+    position: absolute;
+  }
+
+  .slothButton img {
+    width: 7%;
+    left: 47%;
+    top: 14%;
+    position: absolute;
+  }
+
+  .snake2Button img {
+    width: 7%;
+    left: 51%;
+    top: 30%;
+    position: absolute;
+  }
+
+  .crocodile2Button img {
+    width: 10%;
+    left: 58%;
+    top: 76%;
+    position: absolute;
+  }
+
+  .swing3Button img {
+    width: 7%;
+    left: 74%;
+    top: 6%;
+    position: absolute;
+  }
+
+  .slitherButton img {
+    width: 7%;
+    left: 65%;
+    top: 44%;
+    position: absolute;
+  }
+
+  .parrot2Button img {
+    width: 7%;
+    left: 86%;
+    top: 36%;
+    position: absolute;
+  }
+
+  .crawl2Button img {
+    width: 7%;
+    left: 91%;
+    top: 78%;
+    position: absolute;
   }
 
   .chase img {
@@ -12850,6 +13047,84 @@ export default {
   @media only screen and (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 3) ,
   (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 812px) and (max-width: 1023px){
+    .slitherButton img {
+      width: 7%;
+      left: 62%;
+      top: 43%;
+      position: absolute;
+    }
+    .snake2 img {
+      width: 18%;
+      left: 48%;
+      top: 27%;
+      position: absolute;
+    }
+    .slither img {
+      width: 18%;
+      left: 48%;
+      top: 27%;
+      position: absolute;
+    }
+    .sloth img {
+      width: 28%;
+      left: 22%;
+      top: -6%;
+      position: absolute;
+    }
+    .bat img {
+      width: 10%;
+      left: 4%;
+      top: 0%;
+      position: absolute;
+    }
+    .lizard2 img {
+      width: 22%;
+      left: -2%;
+      top: 14%;
+      position: absolute;
+    }
+    .pounce img {
+      width: 45%;
+      left: 19%;
+      top: 31%;
+      position: absolute;
+    }
+    .jaguar img {
+      width: 45%;
+      left: 19%;
+      top: 31%;
+      position: absolute;
+    }
+    .frog img {
+      width: 12%;
+      left: 7%;
+      top: 68%;
+      position: absolute;
+    }
+    .swing3 img {
+      width: 30%;
+      left: 55%;
+      top: 0%;
+      position: absolute;
+    }
+    .crocodile2 img {
+      width: 33%;
+      left: 45%;
+      top: 43%;
+      position: absolute;
+    }
+    .parrot2 img {
+      width: 15%;
+      left: 83%;
+      top: 4%;
+      position: absolute;
+    }
+    .crawl2Button img {
+      width: 7%;
+      left: 91%;
+      top: 82%;
+      position: absolute;
+    }
     .turtle2 img {
       width: 35%;
       left: 57%;
@@ -16242,6 +16517,150 @@ export default {
   @media only screen and (min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 1024px) and (max-width: 1600px){
+    .batButton img {
+      width: 8%;
+      left: 11%;
+      top: 6%;
+      position: absolute;
+    }
+    .lizard2Button img {
+      width: 8%;
+      left: 19%;
+      top: 34%;
+      position: absolute;
+    }
+    .jaguarButton img {
+      width: 8%;
+      left: 13%;
+      top: 52%;
+      position: absolute;
+    }
+    .pounceButton img {
+      width: 10%;
+      left: 24%;
+      top: 65%;
+      position: absolute;
+    }
+    .slothButton img {
+      width: 8%;
+      left: 47%;
+      top: 14%;
+      position: absolute;
+    }
+    .snake2Button img {
+      width: 8%;
+      left: 51%;
+      top: 31%;
+      position: absolute;
+    }
+    .swing3Button img {
+      width: 8%;
+      left: 74%;
+      top: 6%;
+      position: absolute;
+    }
+    .slitherButton img {
+      width: 8%;
+      left: 65%;
+      top: 44%;
+      position: absolute;
+    }
+    .parrot2Button img {
+      width: 8%;
+      left: 86%;
+      top: 36%;
+      position: absolute;
+    }
+    .frogButton img {
+      width: 8%;
+      left: 13%;
+      top: 87%;
+      position: absolute;
+    }
+    .crocodile2Button img {
+      width: 12%;
+      left: 55%;
+      top: 75%;
+      position: absolute;
+    }
+    .crawl2Button img {
+      width: 8%;
+      left: 89%;
+      top: 78%;
+      position: absolute;
+    }
+    .bat img {
+      width: 10%;
+      left: 4%;
+      top: 2%;
+      position: absolute;
+    }
+    .sloth img {
+      width: 30%;
+      left: 22%;
+      top: 1%;
+      position: absolute;
+    }
+    .lizard2 img {
+      width: 23%;
+      left: -2%;
+      top: 18%;
+      position: absolute;
+    }
+    .pounce img {
+      width: 50%;
+      left: 19%;
+      top: 39%;
+      position: absolute;
+    }
+    .jaguar img {
+      width: 50%;
+      left: 19%;
+      top: 39%;
+      position: absolute;
+    }
+    .snake2 img {
+      width: 20%;
+      left: 47%;
+      top: 32%;
+      position: absolute;
+    }
+    .slither img {
+      width: 20%;
+      left: 47%;
+      top: 32%;
+      position: absolute;
+    }
+    .swing3 img {
+      width: 30%;
+      left: 55%;
+      top: 0%;
+      position: absolute;
+    }
+    .parrot2 img {
+      width: 18%;
+      left: 81%;
+      top: 11%;
+      position: absolute;
+    }
+    .frog img {
+      width: 12%;
+      left: 7%;
+      top: 74%;
+      position: absolute;
+    }
+    .crocodile2 img {
+      width: 35%;
+      left: 44%;
+      top: 52%;
+      position: absolute;
+    }
+    .crawl2 img {
+      width: 15%;
+      left: 85%;
+      top: 52%;
+      position: absolute;
+    }
     .dolphinButton img {
       width: 11%;
       left: 10%;
