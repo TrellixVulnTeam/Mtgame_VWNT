@@ -2478,6 +2478,384 @@
             img:require('../../assets/image/In the Jungle/Swing.png')
           }
         ],
+        LetsGoShoppingPart1:[
+          {
+            id:1,
+            cardName:'ball',
+            audio:require('../../assets/Flashcard Audio/shop/ball.mp3'),
+            img:require('../../assets/image/At the Toy Shop/Ball.png')
+          },{
+            id:2,
+            cardName:'catch',
+            audio:require('../../assets/Flashcard Audio/shop/catch.mp3'),
+            img:require('../../assets/image/At the Toy Shop/Catch.png')
+          },{
+            id:3,
+            cardName:'computer',
+            audio:require('../../assets/Flashcard Audio/shop/computer.mp3'),
+            img:require('../../assets/image/At the Toy Shop/Computer.png')
+          },{
+            id:4,
+            cardName:'crayons',
+            audio:require('../../assets/Flashcard Audio/shop/crayons.mp3'),
+            img:require('../../assets/image/At the Toy Shop/Crayons.png')
+          },{
+            id:5,
+            cardName:'cuddles',
+            audio:require('../../assets/Flashcard Audio/shop/cuddle.mp3'),
+            img:require('../../assets/image/At the Toy Shop/Cuddles.png')
+          },{
+            id:6,
+            cardName:'doll',
+            audio:require('../../assets/Flashcard Audio/shop/doll.mp3'),
+            img:require('../../assets/image/At the Toy Shop/Doll.png')
+          },{
+            id:7,
+            cardName:'dollhouse',
+            audio:require('../../assets/Flashcard Audio/shop/dollhouse.mp3'),
+            img:require('../../assets/image/At the Toy Shop/Dollhouse.png')
+          },{
+            id:8,
+            cardName:'draw',
+            audio:require('../../assets/Flashcard Audio/shop/draw.mp3'),
+            img:require('../../assets/image/At the Toy Shop/Draw.png')
+          },{
+            id:9,
+            cardName:'puzzle',
+            audio:require('../../assets/Flashcard Audio/shop/puzzle.mp3'),
+            img:require('../../assets/image/At the Toy Shop/Puzzle.png')
+          },{
+            id:10,
+            cardName:'shelf',
+            audio:require('../../assets/Flashcard Audio/shop/shelf.mp3'),
+            img:require('../../assets/image/At the Toy Shop/Shelf.png')
+          },{
+            id:11,
+            cardName:'teddy',
+            audio:require('../../assets/Flashcard Audio/shop/teddy.mp3'),
+            img:require('../../assets/image/At the Toy Shop/Teddy.png')
+          },{
+            id:12,
+            cardName:'Yo-yo',
+            audio:require('../../assets/Flashcard Audio/shop/yo-yo.mp3'),
+            img:require('../../assets/image/At the Toy Shop/Yo-yo.png')
+          }
+        ],
+        LetsGoShoppingPart2:[
+          {
+            id:1,
+            cardName:'basket',
+            audio:require('../../assets/Flashcard Audio/shop/basket.mp3'),
+            img:require('../../assets/image/At the Supermarket/Basket.png')
+          },{
+            id:2,
+            cardName:'bread',
+            audio:require('../../assets/Flashcard Audio/shop/bread.mp3'),
+            img:require('../../assets/image/At the Supermarket/Bread.png')
+          },{
+            id:3,
+            cardName:'candy',
+            audio:require('../../assets/Flashcard Audio/shop/candy.mp3'),
+            img:require('../../assets/image/At the Supermarket/Candy.png')
+          },{
+            id:4,
+            cardName:'carry',
+            audio:require('../../assets/Flashcard Audio/shop/carry.mp3'),
+            img:require('../../assets/image/At the Supermarket/Carry.png')
+          },{
+            id:5,
+            cardName:'cart',
+            audio:require('../../assets/Flashcard Audio/shop/cart.mp3'),
+            img:require('../../assets/image/At the Supermarket/Cart.png')
+          },{
+            id:6,
+            cardName:'clerk',
+            audio:require('../../assets/Flashcard Audio/shop/clerk.mp3'),
+            img:require('../../assets/image/At the Supermarket/Clerk.png')
+          },{
+            id:7,
+            cardName:'lettuce',
+            audio:require('../../assets/Flashcard Audio/shop/lettuce.mp3'),
+            img:require('../../assets/image/At the Supermarket/Lettuce.png')
+          },{
+            id:8,
+            cardName:'meat',
+            audio:require('../../assets/Flashcard Audio/shop/meat.mp3'),
+            img:require('../../assets/image/At the Supermarket/Meat.png')
+          },{
+            id:9,
+            cardName:'money',
+            audio:require('../../assets/Flashcard Audio/shop/money.mp3'),
+            img:require('../../assets/image/At the Supermarket/Money.png')
+          },{
+            id:10,
+            cardName:'pay',
+            audio:require('../../assets/Flashcard Audio/shop/pay.mp3'),
+            img:require('../../assets/image/At the Supermarket/Pay.png')
+          },{
+            id:11,
+            cardName:'push',
+            audio:require('../../assets/Flashcard Audio/shop/push.mp3'),
+            img:require('../../assets/image/At the Supermarket/Push.png')
+          },{
+            id:12,
+            cardName:'tomato',
+            audio:require('../../assets/Flashcard Audio/shop/CR - Jan - tomato.mp3'),
+            img:require('../../assets/image/At the Supermarket/Tomato.png')
+          }
+        ],
+        MyCommunityPart1:[
+        {
+          id:1,
+          cardName:'bakery',
+          audio:require('../../assets/Flashcard Audio/community/bakery.mp3'),
+          img:require('../../assets/image/The Places/Bakery.png')
+        },{
+          id:2,
+          cardName:'bus stop',
+          audio:require('../../assets/Flashcard Audio/community/bus stop.mp3'),
+          img:require('../../assets/image/The Places/Bus stop.png')
+        },{
+          id:3,
+          cardName:'fire station',
+          audio:require('../../assets/Flashcard Audio/community/fire station.mp3'),
+          img:require('../../assets/image/The Places/Fire Station.png')
+        },{
+          id:4,
+          cardName:'hospital',
+          audio:require('../../assets/Flashcard Audio/community/hospital.mp3'),
+          img:require('../../assets/image/The Places/Hospital.png')
+        },{
+          id:5,
+          cardName:'library',
+          audio:require('../../assets/Flashcard Audio/community/library.mp3'),
+          img:require('../../assets/image/The Places/Library.png')
+        },{
+          id:6,
+          cardName:'park',
+          audio:require('../../assets/Flashcard Audio/community/park.mp3'),
+          img:require('../../assets/image/The Places/Park.png')
+        },{
+          id:7,
+          cardName:'police station',
+          audio:require('../../assets/Flashcard Audio/community/police station.mp3'),
+          img:require('../../assets/image/The Places/Police Station.png')
+        },{
+          id:8,
+          cardName:'restaurant',
+          audio:require('../../assets/Flashcard Audio/community/restaurant.mp3'),
+          img:require('../../assets/image/The Places/Restaurant.png')
+        },{
+          id:9,
+          cardName:'school',
+          audio:require('../../assets/Flashcard Audio/community/school.mp3'),
+          img:require('../../assets/image/The Places/School.png')
+        },{
+          id:10,
+          cardName:'shop',
+          audio:require('../../assets/Flashcard Audio/community/shop.mp3'),
+          img:require('../../assets/image/The Places/Shop.png')
+        },{
+          id:11,
+          cardName:'visit',
+          audio:require('../../assets/Flashcard Audio/community/visit.mp3'),
+          img:require('../../assets/image/The Places/Visit.png')
+        },{
+          id:12,
+          cardName:'wait',
+          audio:require('../../assets/Flashcard Audio/community/wait.mp3'),
+          img:require('../../assets/image/The Places/Wait.png')
+        }
+      ],
+        MyCommunityPart2:[
+          {
+            id:1,
+            cardName:'ambulance',
+            audio:require('../../assets/Flashcard Audio/community/ambulance.mp3'),
+            img:require('../../assets/image/The People/Ambulance.png')
+          },{
+            id:2,
+            cardName:'chef',
+            audio:require('../../assets/Flashcard Audio/community/chef.mp3'),
+            img:require('../../assets/image/The People/Chef.png')
+          },{
+            id:3,
+            cardName:'cook',
+            audio:require('../../assets/Flashcard Audio/community/cook.mp3'),
+            img:require('../../assets/image/The People/Cook.png')
+          },{
+            id:4,
+            cardName:'doctor',
+            audio:require('../../assets/Flashcard Audio/community/doctor.mp3'),
+            img:require('../../assets/image/The People/Doctor.png')
+          },{
+            id:5,
+            cardName:'firefighter',
+            audio:require('../../assets/Flashcard Audio/community/firefighter.mp3'),
+            img:require('../../assets/image/The People/Firefighter.png')
+          },{
+            id:6,
+            cardName:'help',
+            audio:require('../../assets/Flashcard Audio/community/help.mp3'),
+            img:require('../../assets/image/The People/Help.png')
+          },{
+            id:7,
+            cardName:'letters',
+            audio:require('../../assets/Flashcard Audio/community/letters.mp3'),
+            img:require('../../assets/image/The People/Letters.png')
+          },{
+            id:8,
+            cardName:'mailperson',
+            audio:require('../../assets/Flashcard Audio/community/mailperson.mp3'),
+            img:require('../../assets/image/The People/Mailperson.png')
+          },{
+            id:9,
+            cardName:'nurse',
+            audio:require('../../assets/Flashcard Audio/community/nurse.mp3'),
+            img:require('../../assets/image/The People/Nurse.png')
+          },{
+            id:10,
+            cardName:'policeman',
+            audio:require('../../assets/Flashcard Audio/community/policeman.mp3'),
+            img:require('../../assets/image/The People/Policeman.png')
+          },{
+            id:11,
+            cardName:'teacher',
+            audio:require('../../assets/Flashcard Audio/community/teacher.mp3'),
+            img:require('../../assets/image/The People/Teacher.png')
+          },{
+            id:12,
+            cardName:'vet',
+            audio:require('../../assets/Flashcard Audio/community/vet.mp3'),
+            img:require('../../assets/image/The People/Vet.png')
+          }
+        ],
+        FunTimePart1:[
+          {
+            id:1,
+            cardName:'bake',
+            audio:require('../../assets/Flashcard Audio/community/bakery.mp3'),
+            img:require('../../assets/image/indoor/Bake.png')
+          },{
+            id:2,
+            cardName:'book',
+            audio:require('../../assets/Flashcard Audio/community/bus stop.mp3'),
+            img:require('../../assets/image/indoor/Book.png')
+          },{
+            id:3,
+            cardName:'cookies',
+            audio:require('../../assets/Flashcard Audio/community/fire station.mp3'),
+            img:require('../../assets/image/indoor/Cookies.png')
+          },{
+            id:4,
+            cardName:'dance',
+            audio:require('../../assets/Flashcard Audio/community/hospital.mp3'),
+            img:require('../../assets/image/indoor/Dance.png')
+          },{
+            id:5,
+            cardName:'listen',
+            audio:require('../../assets/Flashcard Audio/community/library.mp3'),
+            img:require('../../assets/image/indoor/Listen.png')
+          },{
+            id:6,
+            cardName:'oven',
+            audio:require('../../assets/Flashcard Audio/community/park.mp3'),
+            img:require('../../assets/image/indoor/Oven.png')
+          },{
+            id:7,
+            cardName:'paintbrush',
+            audio:require('../../assets/Flashcard Audio/community/police station.mp3'),
+            img:require('../../assets/image/indoor/Paintbrush.png')
+          },{
+            id:8,
+            cardName:'piano',
+            audio:require('../../assets/Flashcard Audio/community/restaurant.mp3'),
+            img:require('../../assets/image/indoor/Piano.png')
+          },{
+            id:9,
+            cardName:'picture',
+            audio:require('../../assets/Flashcard Audio/community/school.mp3'),
+            img:require('../../assets/image/indoor/Picture.png')
+          },{
+            id:10,
+            cardName:'read',
+            audio:require('../../assets/Flashcard Audio/community/shop.mp3'),
+            img:require('../../assets/image/indoor/Read.png')
+          },{
+            id:11,
+            cardName:'TV',
+            audio:require('../../assets/Flashcard Audio/community/visit.mp3'),
+            img:require('../../assets/image/indoor/TV.png')
+          },{
+            id:12,
+            cardName:'video game',
+            audio:require('../../assets/Flashcard Audio/community/wait.mp3'),
+            img:require('../../assets/image/indoor/Video Game.png')
+          }
+        ],
+        FunTimePart2:[
+          {
+            id:1,
+            cardName:'basketball',
+            audio:require('../../assets/Flashcard Audio/community/ambulance.mp3'),
+            img:require('../../assets/image/outdoor/Basketball.png')
+          },{
+            id:2,
+            cardName:'bike',
+            audio:require('../../assets/Flashcard Audio/community/chef.mp3'),
+            img:require('../../assets/image/outdoor/Bike.png')
+          },{
+            id:3,
+            cardName:'camp',
+            audio:require('../../assets/Flashcard Audio/community/cook.mp3'),
+            img:require('../../assets/image/outdoor/Camp.png')
+          },{
+            id:4,
+            cardName:'fishing rod',
+            audio:require('../../assets/Flashcard Audio/community/doctor.mp3'),
+            img:require('../../assets/image/outdoor/Fishing Rod.png')
+          },{
+            id:5,
+            cardName:'goggles',
+            audio:require('../../assets/Flashcard Audio/community/firefighter.mp3'),
+            img:require('../../assets/image/outdoor/Goggles.png')
+          },{
+            id:6,
+            cardName:'helmet',
+            audio:require('../../assets/Flashcard Audio/community/help.mp3'),
+            img:require('../../assets/image/outdoor/Helmet.png')
+          },{
+            id:7,
+            cardName:'jog',
+            audio:require('../../assets/Flashcard Audio/community/letters.mp3'),
+            img:require('../../assets/image/outdoor/Jog.png')
+          },{
+            id:8,
+            cardName:'racket',
+            audio:require('../../assets/Flashcard Audio/community/mailperson.mp3'),
+            img:require('../../assets/image/outdoor/Racket.png')
+          },{
+            id:9,
+            cardName:'soccer',
+            audio:require('../../assets/Flashcard Audio/community/nurse.mp3'),
+            img:require('../../assets/image/outdoor/Soccer.png')
+          },{
+            id:10,
+            cardName:'swim',
+            audio:require('../../assets/Flashcard Audio/community/policeman.mp3'),
+            img:require('../../assets/image/outdoor/Swim.png')
+          },{
+            id:11,
+            cardName:'tennis',
+            audio:require('../../assets/Flashcard Audio/community/teacher.mp3'),
+            img:require('../../assets/image/outdoor/Tennis.png')
+          },{
+            id:12,
+            cardName:'tent',
+            audio:require('../../assets/Flashcard Audio/community/vet.mp3'),
+            img:require('../../assets/image/outdoor/Tent.png')
+          }
+        ],
         list:[],
         titleUrl:{
           MyCommunity:require('../../assets/image/2-logo.png'),
@@ -2531,6 +2909,8 @@
           MyWeekendPart2:require('../../assets/image/10-logo2.png'),
           WildAnimalsPart1:require('../../assets/image/11-logo1.png'),
           WildAnimalsPart2:require('../../assets/image/11-logo2.png'),
+          LetsGoShoppingPart1:require('../../assets/image/1-logo1.png'),
+          LetsGoShoppingPart2:require('../../assets/image/1-logo2.png'),
         },
         title:'../../assets/image/6-6logo.png',
         flashCardUrl:'http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/9315e4a9-e1ec-4f49-8db5-5b3a9b6ae083.png',
@@ -2624,12 +3004,12 @@
             this.list = this.$data[this.unit.replaceAll(" ", "") + this.part.replaceAll("p", "P")].slice(8,20);
         }else{
           if (this.level === 'WALKERS') {
-            this.list = this.$data[this.unit.replaceAll(" ", "") + this.part.replaceAll("p", "P")].slice(0, 8);
+            this.list = this.$data[this.unit.replaceAll(" ", "").replaceAll("'","").replaceAll("!","") + this.part.replaceAll("p", "P")].slice(0, 8);
           } else {
-            this.list = this.$data[this.unit.replaceAll(" ", "") + this.part.replaceAll("p", "P")];
+            this.list = this.$data[this.unit.replaceAll(" ", "").replaceAll("'","").replaceAll("!","") + this.part.replaceAll("p", "P")];
           }
         }
-        this.title = this.$data.titleUrl[this.unit.replaceAll(" ", "") + this.part.replaceAll("p", "P")];
+        this.title = this.$data.titleUrl[this.unit.replaceAll(" ", "").replaceAll("'","").replaceAll("!","") + this.part.replaceAll("p", "P")];
       },
       //pop向左右切换卡牌
       turnpop(turn){
