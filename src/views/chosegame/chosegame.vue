@@ -1709,9 +1709,6 @@
 			    top: -20px;
 			    right: -37px;
 			}
-			// .personer-box .alistimg:last-child {
-			//     padding-right: 12%;
-			// }
 		}
 		@media screen and (min-width: 900px)  and (max-width:1023px){
 				.styleunit{
@@ -1911,7 +1908,7 @@
       transform: scale(1.5);
     }
     .chart-room-out{
-      top: 22%;
+      top: 15%;
       transform: scale(1.5);
       .chartroom-title{
       transform: scale(1.5);

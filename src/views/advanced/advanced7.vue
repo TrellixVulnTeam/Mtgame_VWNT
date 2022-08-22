@@ -149,7 +149,6 @@
               };
               this.centerP.push(coreP);
             }
-            console.log(this.centerP);
             this.canvasObj = canvas;
             this.canvasH = imgBox.clientHeight; // 存储canvas的高度，用于清空画布
             canvas.width = imgBox.clientWidth; // 动态赋值canvas的宽度
@@ -199,6 +198,7 @@
     },
     data() {
       return {
+        insert:'[',
         showNum: false,
         popp: false,
         ruleimg8: false,
@@ -431,7 +431,6 @@
             anwserIndex = index;
           }
 
-
           if (this.context.isPointInPath(item.corePx, item.corePy)) {
             isSelect = true;
             anwserList.push(item);
@@ -459,16 +458,18 @@
               this.list1[anwserIndex].bluesuccess = 1;
               // this.changecolor=true;
               this.showstart = true;
-
               this.account += 1;
               this.soundscorrect = true;
-              //console.log(this.listB.length);
+              if (this.countpage-1 !==9){
+                this.insert = this.insert+"{'phonics_detail_id':"+this.listF[this.countpage-1][0].phonics_detail_id+",'ansResult':1},";
+              }else{
+                this.insert = this.insert+"{'phonics_detail_id':"+this.listF[this.countpage-1][0].phonics_detail_id+",'ansResult':1}]";
+              }
               if (this.countpage == this.listF.length) {
                 setTimeout(() => {
                   this.showstart = false;
                   this.soundscorrect = false;
                   // this.changecolor=false;
-
                   this.$router.push({
                     //核心语句
                     path: "/presult", //跳转的路径
@@ -478,7 +479,8 @@
                       account: this.account,
                       menuId: this.menuId,
                       unitsId: this.unitsId,
-                      unit: this.unit
+                      unit: this.unit,
+                      insert:this.insert
                     }
                   });
                 }, 2000);
@@ -502,7 +504,11 @@
               this.list1[anwserIndex].redsuccess = 1;
               // this.changecolor2=true;
               this.canvasObj.height = this.canvasH;
-
+              if (this.countpage-1 !==9){
+                this.insert = this.insert+"{'phonics_detail_id':"+this.listF[this.countpage-1][0].phonics_detail_id+",'ansResult':0},";
+              }else{
+                this.insert = this.insert+"{'phonics_detail_id':"+this.listF[this.countpage-1][0].phonics_detail_id+",'ansResult':0}]";
+              }
               setTimeout(() => {
                 this.soundsWrong = false;
                 this.list1[anwserIndex].redsuccess = 0;
@@ -526,7 +532,8 @@
                         account: this.account,
                         menuId: this.menuId,
                         unitsId: this.unitsId,
-                        unit: this.unit
+                        unit: this.unit,
+                        insert:this.insert
                       }
                     });
 
@@ -678,7 +685,7 @@
           this.list1[l].audio = this.pic + this.list1[l].audio2;
           this.list1[l].bg = this.pic + this.list1[l].bg;
           // if(this.list1[l].score=="1"){
-          this.audio = this.pic + this.list1[0].audio;
+          this.audio = this.list1[0].audio;
           // }
         }
         if (this.onef == true) {
@@ -1208,11 +1215,11 @@
   (min-device-height: 812px) and (max-device-height: 895px) and (-webkit-device-pixel-ratio: 2) ,
   (min-device-height: 812px) and (max-device-height: 895px) and (-webkit-device-pixel-ratio: 3){
     .imglist {
-      width: 55%;
+      width: 50%;
       text-align: center;
       position: absolute;
       left: 27%;
-      top: 33%;
+      top: 37%;
       border-radius: 30px;
     }
     .twomenu {

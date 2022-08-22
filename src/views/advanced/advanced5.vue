@@ -272,6 +272,7 @@
     },
     data() {
       return {
+        insert:'[',
         showNum: false,
         popp: false,
         items:'items',
@@ -517,6 +518,12 @@
                   this.countpage+=1;
                   this.ended1 = false;
                   this.soundscorrect=true;
+                 if (this.countpage-2 !==9){
+                   this.insert = this.insert+"{'phonics_detail_id':"+this.listH[this.countpage-2][0].phonics_detail_id+",'ansResult':1},";
+                 }else{
+                   this.insert = this.insert+"{'phonics_detail_id':"+this.listH[this.countpage-2][0].phonics_detail_id+",'ansResult':1}]";
+                 }
+                 console.log(this.insert);
                   setTimeout(() => {
                     this.soundscorrect=false;
                     this.ended1 = true;
@@ -532,7 +539,8 @@
                             account:this.count,
                             menuId: this.menuId,
                             unitsId:this.unitsId,
-                            unit:this.unit
+                            unit:this.unit,
+                            insert:this.insert
                           }
                         });
                       }, 1500);
@@ -547,6 +555,12 @@
                   this.soundsWrong=true;
                   this.countpage+=1;
                   this.redcolor=true;
+                 if (this.countpage-2 !==9){
+                   this.insert = this.insert+"{'phonics_detail_id':"+this.listH[this.countpage-2][0].phonics_detail_id+",'ansResult':0},";
+                 }else{
+                   this.insert = this.insert+"{'phonics_detail_id':"+this.listH[this.countpage-2][0].phonics_detail_id+",'ansResult':0}]";
+                 }
+                 console.log(this.insert);
                   setTimeout(() => {
                     this.redcolor=false;
                     this.over=false;
@@ -571,7 +585,8 @@
                             account:this.count,
                             menuId: this.menuId,
                             unitsId:this.unitsId,
-                            unit:this.unit
+                            unit:this.unit,
+                            insert:this.insert
                           }
                         });
                       }, 1500);

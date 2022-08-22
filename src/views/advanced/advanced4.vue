@@ -206,6 +206,7 @@
     },
     data() {
       return {
+        insert:'[',
         popp: false,
         ruleimg8: false,
         spanp: '',
@@ -314,11 +315,18 @@
           this.countpage += 1;
         }
         this.zhezhao = true;
+        console.log(this.items1);
         console.log(this.items1[0].score);
         if (this.items1[0].score === '1') {
           this.ended1 = false;
           this.soundscorrect = true;
           this.account += 1;
+          if (this.countpage-2 !==9){
+            this.insert = this.insert+"{'phonics_detail_id':"+this.listE[this.countpage-2][0].phonics_detail_id+",'ansResult':1},";
+          }else{
+            this.insert = this.insert+"{'phonics_detail_id':"+this.listE[this.countpage-2][0].phonics_detail_id+",'ansResult':1}]";
+          }
+          console.log(this.insert);
           setTimeout(() => {
             if (this.countpage <= this.listE.length) {
               setTimeout(() => {
@@ -342,16 +350,13 @@
                   path: "/presult", //跳转的路径
                   query: {
                     //路由传参时push和query搭配使用 ，作用时传递参数
-                    // id: this.id,
-                    // account: this.account,
-                    // type: this.type,
-                    // sum: this.sum,
                     type: this.type,
                     partName: 'advanced4',
                     account: this.account,
                     menuId: this.menuId,
                     unitsId: this.unitsId,
-                    unit: this.unit
+                    unit: this.unit,
+                    insert:this.insert
                   }
                 });
 
@@ -361,6 +366,13 @@
         } else {
           this.issuccess1 = true;
           this.soundsWrong = true;
+          console.log(this.countpage);
+          if (this.countpage-2 !==9){
+            this.insert = this.insert+"{'phonics_detail_id':"+this.listE[this.countpage-2][0].phonics_detail_id+",'ansResult':0},";
+          }else{
+            this.insert = this.insert+"{'phonics_detail_id':"+this.listE[this.countpage-2][0].phonics_detail_id+",'ansResult':0}]";
+          }
+          console.log(this.insert);
           setTimeout(() => {
             this.soundsWrong = false;
             if (this.countpage <= this.listE.length) {
@@ -386,20 +398,15 @@
                   path: "/presult", //跳转的路径
                   query: {
                     //路由传参时push和query搭配使用 ，作用时传递参数
-                    // id: this.id,
-                    // account: this.account,
-                    // type: this.type,
-                    // sum: this.sum,
                     type: this.type,
                     partName: 'advanced4',
                     account: this.account,
                     menuId: this.menuId,
                     unitsId: this.unitsId,
-                    unit: this.unit
+                    unit: this.unit,
+                    insert:this.insert
                   }
                 });
-
-
               }, 1000);
             }
           }, 2000);
@@ -414,6 +421,12 @@
         if (this.items1[0].score === '1') {
           this.issuccess2 = true;
           this.soundsWrong = true;
+          if (this.countpage-2 !==9){
+            this.insert = this.insert+"{'phonics_detail_id':"+this.listE[this.countpage-2][0].phonics_detail_id+",'ansResult':0},";
+          }else{
+            this.insert = this.insert+"{'phonics_detail_id':"+this.listE[this.countpage-2][0].phonics_detail_id+",'ansResult':0}]";
+          }
+          console.log(this.insert);
           setTimeout(() => {
             this.soundsWrong = false;
             if (this.countpage <= this.listE.length) {
@@ -438,16 +451,13 @@
                   path: "/presult", //跳转的路径
                   query: {
                     //路由传参时push和query搭配使用 ，作用时传递参数
-                    // id: this.id,
-                    // account: this.account,
-                    // type: this.type,
-                    // sum: this.sum,
                     type: this.type,
                     partName: 'advanced4',
                     account: this.account,
                     menuId: this.menuId,
                     unitsId: this.unitsId,
-                    unit: this.unit
+                    unit: this.unit,
+                    insert:this.insert
                   }
                 });
 
@@ -458,6 +468,12 @@
           this.ended2 = false;
           this.soundscorrect = true;
           this.account += 1;
+          if (this.countpage-2 !==9){
+            this.insert = this.insert+"{'phonics_detail_id':"+this.listE[this.countpage-2][0].phonics_detail_id+",'ansResult':1},";
+          }else{
+            this.insert = this.insert+"{'phonics_detail_id':"+this.listE[this.countpage-2][0].phonics_detail_id+",'ansResult':1}]";
+          }
+          console.log(this.insert);
           setTimeout(() => {
             this.soundscorrect = false;
             if (this.countpage <= this.listE.length) {
@@ -476,23 +492,19 @@
               }, 1000);
               // this.items1.bg=this.pic+this.items1.bg;
             } else {
-
               setTimeout(() => {
                 this.$router.push({
                   //核心语句
                   path: "/presult", //跳转的路径
                   query: {
                     //路由传参时push和query搭配使用 ，作用时传递参数
-                    // id: this.id,
-                    // account: this.account,
-                    // type: this.type,
-                    // sum: this.sum,
                     type: this.type,
                     partName: 'advanced4',
                     account: this.account,
                     menuId: this.menuId,
                     unitsId: this.unitsId,
-                    unit: this.unit
+                    unit: this.unit,
+                    insert:this.insert
                   }
                 });
               }, 1000);

@@ -38,25 +38,25 @@
           <img @click="$tips(true);change3()" src="../assets/image/inter31.png" style="position: sticky;height: 50%;margin-top: 28%;margin-left: 3%">
         </div>
 <!--        yes or no收-->
-<!--        <div class="listimg">-->
-<!--          <img :src=lightstar class="imgposit" v-if="stars[3].onestart">-->
-<!--          <img :src=star class="imgposit" v-if="!stars[3].onestart">-->
-<!--          <img :src=lightstar style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="stars[3].twostart">-->
-<!--          <img :src=star style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="!stars[3].twostart">-->
-<!--          <img :src=lightstar class="imgposit1" v-if="stars[3].threestart">-->
-<!--          <img :src=star class="imgposit1" v-if="!stars[3].threestart">-->
-<!--          <img @click="$tips(true);change4" src="../assets/image/inter41.png" style="position: sticky;height: 50%;margin-top: 30%;margin-left: 4%">-->
-<!--        </div>-->
+        <div class="listimg">
+          <img :src=lightstar class="imgposit" v-if="stars[3].onestart">
+          <img :src=star class="imgposit" v-if="!stars[3].onestart">
+          <img :src=lightstar style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="stars[3].twostart">
+          <img :src=star style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="!stars[3].twostart">
+          <img :src=lightstar class="imgposit1" v-if="stars[3].threestart">
+          <img :src=star class="imgposit1" v-if="!stars[3].threestart">
+          <img @click="$tips(true);change4()" src="../assets/image/inter41.png" style="position: sticky;height: 50%;margin-top: 30%;margin-left: 4%">
+        </div>
 <!--        letter scrabble收-->
-<!--        <div class="listimg">-->
-<!--          <img :src=lightstar class="imgposit" v-if="stars[4].onestart">-->
-<!--          <img :src=star class="imgposit" v-if="!stars[4].onestart">-->
-<!--          <img :src=lightstar style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="stars[4].twostart">-->
-<!--          <img :src=star style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="!stars[4].twostart">-->
-<!--          <img :src=lightstar class="imgposit1" v-if="stars[4].threestart">-->
-<!--          <img :src=star class="imgposit1" v-if="!stars[4].threestart">-->
-<!--          <img @click="$tips(true);change5" src="../assets/image/inter51.png" style="position: sticky;height: 50%;margin-top: 30%;margin-left: 3%">-->
-<!--        </div>-->
+        <div class="listimg">
+          <img :src=lightstar class="imgposit" v-if="stars[4].onestart">
+          <img :src=star class="imgposit" v-if="!stars[4].onestart">
+          <img :src=lightstar style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="stars[4].twostart">
+          <img :src=star style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="!stars[4].twostart">
+          <img :src=lightstar class="imgposit1" v-if="stars[4].threestart">
+          <img :src=star class="imgposit1" v-if="!stars[4].threestart">
+          <img @click="$tips(true);change5()" src="../assets/image/inter51.png" style="position: sticky;height: 50%;margin-top: 30%;margin-left: 3%">
+        </div>
 <!--        circle the sound-->
         <div class="listimg">
           <img :src=lightstar class="imgposit" v-if="stars[5].onestart">
@@ -68,15 +68,15 @@
           <img @click="$tips(true);change6()" src="../assets/image/inter61.png" style="position: sticky;height: 50%;margin-top: 30%;margin-left: 3%">
         </div>
 <!--        odd word out收-->
-<!--        <div class="listimg">-->
-<!--          <img :src=lightstar class="imgposit" v-if="stars[6].onestart">-->
-<!--          <img :src=star class="imgposit" v-if="!stars[6].onestart">-->
-<!--          <img :src=lightstar style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="stars[6].twostart">-->
-<!--          <img :src=star style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="!stars[6].twostart">-->
-<!--          <img :src=lightstar class="imgposit1" v-if="stars[6].threestart">-->
-<!--          <img :src=star class="imgposit1" v-if="!stars[6].threestart">-->
-<!--          <img @click="$tips(true);change7" src="../assets/image/inter71.png" style="position: sticky;height: 50%;margin-top: 30%;margin-left: 3%">-->
-<!--        </div>-->
+        <div class="listimg">
+          <img :src=lightstar class="imgposit" v-if="stars[6].onestart">
+          <img :src=star class="imgposit" v-if="!stars[6].onestart">
+          <img :src=lightstar style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="stars[6].twostart">
+          <img :src=star style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="!stars[6].twostart">
+          <img :src=lightstar class="imgposit1" v-if="stars[6].threestart">
+          <img :src=star class="imgposit1" v-if="!stars[6].threestart">
+          <img @click="$tips(true);change7()" src="../assets/image/inter71.png" style="position: sticky;height: 50%;margin-top: 30%;margin-left: 3%">
+        </div>
         <div class="listimg">
           <img :src=lightstar class="imgposit" v-if="stars[7].onestart">
           <img :src=star class="imgposit" v-if="!stars[7].onestart">
