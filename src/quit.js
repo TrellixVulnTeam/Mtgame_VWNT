@@ -82,7 +82,6 @@ var alertiframe = document.createElement("DIV");
 
 // 弹出网络提示
 window.alertMsg = function (txt) {
-
 		var strHtml='';
         alertFram.id = "alertFram";
         alertFram.style.position = "absolute";
@@ -211,11 +210,32 @@ window.alertMsg4 = function (txt) {
   strHtml =  "<div style='width:24%;padding:10px 0;margin:0 38%;bottom: 15%;position: absolute;background-color:white;border-radius:10px;color:black;'> <button style='width:100%;font-family: pepper;font-size: 0.7rem;height:100%;color: red; border: none;background: none;'>"
     +txt+"</button></div>" ;
   alertFram.innerHTML = strHtml;
-  document.body.appendChild(alertFram);
-  // setTimeout((function () {
-  //     alertFram.style.display = "none";
-  // }), 2000)
+  let app=document.getElementById('app');
+  app.appendChild(alertFram);
 };
+
+// 弹出账号注销提示
+window.alertCancellation = function (txt) {
+  var strHtml='';
+  alertFram.id = "alertFram";
+  alertFram.style.position = "absolute";
+  alertFram.style.width = "100%";
+  alertFram.style.height = "100%";
+  alertFram.style.display = "block";
+  alertFram.style.textAlign = "center";
+  alertFram.style.top = 0;
+  // alertFram.style.background = "blank";
+  // alertFram.style.color = "white";
+  alertFram.style.zIndex = "10001";
+  strHtml =  "<div style='width:50%;height:65%;margin:8% auto;position: relative;background-color:white;border-radius:20px;color:black;'><h2 style='width:100%;font-family: pepper;padding:10px 0;'>Cancel Account</h2><p style='width:90%;font-family: pepper;height:40%;margin:5%;top:20%;position:absolute;'>"
+    +txt+"</p><button style='width:90%;font-size: 20px;height:40px;margin:5%;border:none;border-radius:10px;bottom: 0; position: absolute;left: 0;color:white;background-color:#FF0000;' onclick='cancellation()'>Confirm</button>" +
+    "<button style='width:90%;height:40px;font-size: 20px;margin:5%;border:none;border-radius:10px;bottom: 50px; position: absolute;left: 0;color:white;background-color:#48C0F0;' onclick='test()'>Cancel</button></div>" ;
+  alertFram.innerHTML = strHtml;
+  let app=document.getElementById('app');
+  app.appendChild(alertFram);
+
+};
+
 window.alertMsg5 = function (txt) {
 
   var strHtml='';

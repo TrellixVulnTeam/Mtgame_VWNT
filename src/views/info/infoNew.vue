@@ -65,10 +65,12 @@
           <div class="logoutsty">
             <button class="buttonsty" @click="$tips(true);logout()">LOG OUT</button>
           </div>
-          <h3 class="title1" v-if="local === 'cn'"><span class="title"
-                                                         @click="PrivacyPolicy('service')">用户协议</span>和<span
-            class="title" @click="PrivacyPolicy('Privacy')">隐私声明</span></h3>
-          <!--          <h3 class="title1"><a class="title" target="_blank" href="http://103.218.241.33/monkeytreeApp/www2/privacyhk.html">隱私政策</a></h3>-->
+          <div class="logoutsty2">
+            <button class="buttonsty" @click="$tips(true);cancellation()">CANCELLATION</button>
+          </div>
+          <h3 class="title1" v-if="local === 'cn'">
+            <span class="title" @click="PrivacyPolicy('service')">用户协议</span>和<span class="title" @click="PrivacyPolicy('Privacy')">隐私声明</span>
+          </h3>
         </div>
         <div class="rightmenu">
           <div class="topMenu">
@@ -1908,9 +1910,14 @@ export default {
 
       localStorage.setItem("userId", '');
     },
+    cancellation(){
+      alertCancellation("Please confirm again whether to cancel the account?");
+    },
     //统计
     Statistics() {
       this.loading = true;
+      console.log(this);
+      console.log(this.$axios);
       this.$axios.post('/user/getTimeLog', qs.stringify({
         studentId: localStorage.getItem('studentId'),
         level: this.level,
@@ -2853,6 +2860,7 @@ tr {
   background-color: #F96046;
   border-radius: 50px;
   height: 10%;
+  margin-bottom: 5px;
   display: inline-block;
 }
 
@@ -2864,6 +2872,27 @@ tr {
   font-weight: bold;
   height: 100%;
   padding: 0 10px;
+  font-family: pepper;
+}
+
+.logoutsty2 {
+  width: 85%;
+  background-color: #FF0000;
+  border-radius: 50px;
+  height: 10%;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+.logoutsty2 button {
+  border-style: none;
+  background: none;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: bold;
+  height: 100%;
+  padding: 0 10px;
+  white-space: nowrap;
   font-family: pepper;
 }
 
@@ -3512,6 +3541,17 @@ tr {
 }
 
 @media only screen and (max-width: 569px) {
+  .title1 {
+    color: white;
+    font-size: 0.7rem;
+    margin-top: -1%;
+  }
+  .title {
+    color: white;
+    font-size: 0.7rem;
+    margin-top: 3%;
+    text-decoration: underline;
+  }
   .strengthsAbbreviation {
     width: 100%;
     height: 100%;
@@ -4000,14 +4040,18 @@ tr {
   }
 
   .lefticon {
-    padding-top: 3%;
+    padding-top: 1%;
   }
 
   .logoutsty button {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
 
   .logoutsty1 button {
+    font-size: 0.7rem;
+  }
+
+  .logoutsty2 button {
     font-size: 0.7rem;
   }
 
@@ -4075,6 +4119,25 @@ tr {
 @media only screen and (min-device-height: 570px) and (max-device-height: 735px) and (-webkit-device-pixel-ratio: 3),
 (min-device-height: 570px) and (max-device-height: 735px) and (-webkit-device-pixel-ratio: 2),
 (min-width: 570px) and (max-width: 735px) {
+  .lefticon{
+    width: 25%;
+    padding-top: 3%;
+    height: 75%;
+    float: left;
+    left: 2%;
+    position: absolute;
+  }
+  .title {
+    color: white;
+    font-size: 0.7rem;
+    margin-top: 3%;
+    text-decoration: underline;
+  }
+  .title1 {
+    color: white;
+    font-size: 0.7rem;
+    margin-top: 0;
+  }
   .menu2Change {
     float: left;
     height: 100%;
@@ -4491,6 +4554,17 @@ tr {
 @media only screen and (min-device-height: 736px) and (max-device-height: 811px) and (-webkit-device-pixel-ratio: 3),
 (min-device-height: 736px) and (max-device-height: 811px) and (-webkit-device-pixel-ratio: 2),
 (min-width: 736px) and (max-width: 811px) {
+  .title {
+    color: white;
+    font-size: 0.7rem;
+    margin-top: 3%;
+    text-decoration: underline;
+  }
+  .title1 {
+    color: white;
+    font-size: 0.7rem;
+    margin-top: 0;
+  }
   .strengthsAbbreviation {
     width: 100%;
     height: 100%;
@@ -4926,6 +5000,18 @@ tr {
 }
 
 @media only screen and (min-width: 812px) and (max-width: 894px) {
+  .title1 {
+    color: white;
+    font-size: 0.9rem;
+    margin-top: -2%;
+  }
+  .logoutsty2 {
+    width: 85%;
+    background-color: #FF0000;
+    border-radius: 50px;
+    height: 10%;
+    display: inline-block;
+  }
 
   .menu2 {
     float: left;
@@ -5334,7 +5420,7 @@ tr {
   }
 
   .lefticon {
-    padding-top: 3%;
+    padding-top: 1%;
   }
 
   .topMenu {
@@ -5403,6 +5489,21 @@ tr {
 
 @media only screen and (min-device-height: 812px) and (max-device-height: 894px) and (-webkit-device-pixel-ratio: 3),
 (min-device-height: 812px) and (max-device-height: 894px) and (-webkit-device-pixel-ratio: 2) {
+  .lefticon {
+    padding-top: 1%;
+  }
+  .title1 {
+    color: white;
+    font-size: 0.9rem;
+    margin-top: -2%;
+  }
+  .logoutsty2 {
+    width: 85%;
+    background-color: #FF0000;
+    border-radius: 50px;
+    height: 10%;
+    display: inline-block;
+  }
   .historyLabel {
     display: inline;
     width: 5%;
@@ -6257,7 +6358,20 @@ tr {
   }
 
   .lefticon {
-    padding-top: 5%;
+    padding-top: 2%;
+  }
+
+  .title1 {
+    color: white;
+    font-size: 0.7rem;
+    margin-top: 0;
+  }
+
+  .title {
+    color: white;
+    font-size: 0.7rem;
+    margin-top: 3%;
+    text-decoration: underline;
   }
 
   .addimg {
@@ -6622,7 +6736,7 @@ tr {
   }
 
   .pointPosition {
-    margin-top: -9%;
+    margin-top: -7%;
   }
 
   .cRight {
@@ -6720,7 +6834,7 @@ tr {
   }
 
   .lefticon {
-    padding-top: 12%;
+    padding-top: 11%;
   }
 
   .bluecicle {
@@ -6745,6 +6859,10 @@ tr {
   }
 
   .logoutsty1 button {
+    font-size: 1.2rem;
+  }
+
+  .logoutsty2 button {
     font-size: 1.2rem;
   }
 
@@ -7163,7 +7281,7 @@ tr {
   }
 
   .lefticon {
-    padding-top: 15%;
+    padding-top: 11%;
   }
 
   .bluecicle {
@@ -7188,6 +7306,10 @@ tr {
   }
 
   .logoutsty1 button {
+    font-size: 1.8rem;
+  }
+
+  .logoutsty2 button {
     font-size: 1.8rem;
   }
 
@@ -7377,7 +7499,7 @@ tr {
   }
 
   .lefticon {
-    padding-top: 8%;
+    padding-top: 6%;
   }
 
   .bluecicle {
@@ -7408,6 +7530,10 @@ tr {
   }
 
   .logoutsty button {
+    font-size: 2rem;
+  }
+
+  .logoutsty2 button {
     font-size: 2rem;
   }
 

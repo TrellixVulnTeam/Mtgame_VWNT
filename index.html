@@ -22,6 +22,7 @@
     <!-- <script type="text/javascript"  src="./ocrad.js"></script> -->
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, viewport-fit=cover">
     <script src="http://api.html5media.info/1.1.8/html5media.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>Monkey Town</title><style>*{
     user-select:none;
   }
@@ -254,6 +255,27 @@
 
     function test() {
       alertFram.style.display = "none";
+    }
+    function cancellation(){
+
+      axios.defaults.baseURL = localStorage.getItem('localurl');
+      axios.post('/user/cancellation?studentId='+localStorage.getItem('studentId'), {
+      })
+        .then(function (response) {
+          alertFram.style.display = "none";
+          setTimeout((function () {
+            if (response.data.success){
+              alertMsg4("Successfully Cancellation")
+              setTimeout((function () {
+                alertFram.style.display = "none";
+              }), 3000)
+            }
+          }), 1000)
+        })
+        .catch(function (error) {
+          console.log(error);
+          alertFram.style.display = "none";
+        });
     }
     // document.addEventListener("pause", function(){
     // 	//从前台切换到后台

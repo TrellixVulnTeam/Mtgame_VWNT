@@ -34,7 +34,7 @@
 
             <div class="rightbox">
               <div id="box2" class="yes">
-                Which word doesn't make the <span class="red">{{titlequesion}}</span>sound ?
+                Which word does not make the <span class="red">{{titlequesion}}</span> sound ?
 
               </div>
               <div class="buttons" id="imgBox">
@@ -45,9 +45,9 @@
                   <img class="listgroup" src="../../assets/image/arepeatball2.png" v-if="index==1">
                   <img class="listgroup" src="../../assets/image/arepeatball3.png" v-if="index==2">
                   <img :src=li.bg class="imglist">
-                  <audio id="show1s" ref="show1s" :src="li.audio" v-if="index==0"></audio>
-                  <audio id="show2s" ref="show2s" :src="li.audio" v-if="index==1"></audio>
-                  <audio id="show3s" ref="show3s" :src="li.audio" v-if="index==2"></audio>
+                  <audio id="show1s" ref="show1s" :src="li.audio2" v-if="index==0"></audio>
+                  <audio id="show2s" ref="show2s" :src="li.audio2" v-if="index==1"></audio>
+                  <audio id="show3s" ref="show3s" :src="li.audio2" v-if="index==2"></audio>
                 </button>
 
               </div>
@@ -126,10 +126,11 @@
             for (var l = 0; l < this.list1.length; l++) {
               this.list1[l].successful = 0;
               this.list1[l].fail = 0;
-              this.list1[l].audio = this.pic + this.list1[l].audio2;
+              this.list1[l].audio = this.pic + this.list1[l].audio;
+              this.list1[l].audio2 = this.pic + this.list1[l].audio2;
               this.list1[l].bg = this.pic + this.list1[l].bg;
               // if(this.list1[l].score=="1"){
-              this.audio = this.pic + this.list1[0].audio;
+              this.audio =  this.list1[0].audio;
               // }
             }
             this.onef = false;
@@ -682,7 +683,8 @@
         for (var l = 0; l < this.list1.length; l++) {
           this.list1[l].successful = 0;
           this.list1[l].fail = 0;
-          this.list1[l].audio = this.pic + this.list1[l].audio2;
+          this.list1[l].audio = this.pic + this.list1[l].audio;
+          this.list1[l].audio2 = this.pic + this.list1[l].audio2;
           this.list1[l].bg = this.pic + this.list1[l].bg;
           // if(this.list1[l].score=="1"){
           this.audio = this.list1[0].audio;
@@ -832,7 +834,7 @@
   .yes {
     /*height: 5.5rem;*/
     width: 100%;
-    margin-top: 7%;
+    margin-top: 6%;
     color: white;
     font-size: 1.5rem;
     font-family: pepper;
@@ -883,11 +885,10 @@
   }
 
   .listgroup {
-    /*height: 11rem;*/
     width: 100%;
     text-align: center;
     vertical-align: middle;
-
+    position: relative;
   }
 
   .listitems {
@@ -896,14 +897,9 @@
     display: flex;
     position: relative;
     background: none;
-    /*background-image: url(http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/egg.png);*/
-    /*background-repeat: no-repeat;*/
-    /*background-size: contain;*/
-    /*background-position: center;*/
     margin: 0;
     bottom: 0;
     width: 30%;
-    /*top: 20%;*/
   }
 
   .imglist {

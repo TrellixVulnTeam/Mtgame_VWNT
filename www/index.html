@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=format-detection content="telephone=no"><meta name=msapplication-tap-highlight content=no><meta name=viewport content="user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1,width=device-width,height=device-height,viewport-fit=cover"><script src=http://api.html5media.info/1.1.8/html5media.min.js></script><title>Monkey Town</title><style>*{
+<!DOCTYPE html><html><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=format-detection content="telephone=no"><meta name=msapplication-tap-highlight content=no><meta name=viewport content="user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1,width=device-width,height=device-height,viewport-fit=cover"><script src=http://api.html5media.info/1.1.8/html5media.min.js></script><script src=https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js></script><title>Monkey Town</title><style>*{
     user-select:none;
   }
   /*#body {*/
@@ -59,7 +59,7 @@
 
       /*iframe {*/
         /*border: none;*/
-      /*}*/</style><link href=css/app.49b41371de75954cad2f8561733ffd9a.css rel=stylesheet></head><body id=body><div id=app style="padding: 0;margin: 0;"></div><script type=text/javascript src=js/manifest.23e9651325d0cf365b3c.js></script><script type=text/javascript src=js/app.11f4ec3b195c99a44f69.js></script></body><script>function setFontsize(){
+      /*}*/</style><link href=css/app.b28b0295fbd588510b40cbdf54fafbb0.css rel=stylesheet></head><body id=body><div id=app style="padding: 0;margin: 0;"></div><script type=text/javascript src=js/manifest.a5df949b2aa1ad3232e6.js></script><script type=text/javascript src=js/app.2c1aff87d07eb450cdb3.js></script></body><script>function setFontsize(){
       if(document.documentElement.clientWidth===0){
         setTimeout(function(){
           setFontsize();
@@ -217,6 +217,27 @@
 
     function test() {
       alertFram.style.display = "none";
+    }
+    function cancellation(){
+
+      axios.defaults.baseURL = localStorage.getItem('localurl');
+      axios.post('/user/cancellation?studentId='+localStorage.getItem('studentId'), {
+      })
+        .then(function (response) {
+          alertFram.style.display = "none";
+          setTimeout((function () {
+            if (response.data.success){
+              alertMsg4("Successfully Cancellation")
+              setTimeout((function () {
+                alertFram.style.display = "none";
+              }), 3000)
+            }
+          }), 1000)
+        })
+        .catch(function (error) {
+          console.log(error);
+          alertFram.style.display = "none";
+        });
     }
     // document.addEventListener("pause", function(){
     // 	//从前台切换到后台

@@ -6,10 +6,10 @@
 	font-family:'kg';
 	src: url('KG.ttf');
 }
-@font-face {
-	font-family:'LH';
-	src: url('LetterHunt.ttf');
-}
+/*@font-face {*/
+/*	font-family:'LH';*/
+/*	src: url('LetterHunt.ttf');*/
+/*}*/
 @font-face {
 	font-family:'OldR';
 	src: url('Oldenburg-Regular.ttf');

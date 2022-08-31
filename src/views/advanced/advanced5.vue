@@ -523,7 +523,6 @@
                  }else{
                    this.insert = this.insert+"{'phonics_detail_id':"+this.listH[this.countpage-2][0].phonics_detail_id+",'ansResult':1}]";
                  }
-                 console.log(this.insert);
                   setTimeout(() => {
                     this.soundscorrect=false;
                     this.ended1 = true;
@@ -560,18 +559,13 @@
                  }else{
                    this.insert = this.insert+"{'phonics_detail_id':"+this.listH[this.countpage-2][0].phonics_detail_id+",'ansResult':0}]";
                  }
-                 console.log(this.insert);
                   setTimeout(() => {
                     this.redcolor=false;
                     this.over=false;
                     this.soundsWrong=false;
                     var data1=this.listH[this.countpage-2][0].question.split('');
                     for(var i=0;i<data1.length;i++){
-                      // if(this['items'+(i+2)][0].name!=data1[i]){
                         this['items'+(i+2)][0].name=data1[i];
-                      // }else {
-                      //   console.log('false');
-                      // }
                     }
                     this.bluecolor=true;
                     if(this.countpage>this.question){
@@ -1920,9 +1914,6 @@
   @media screen and (min-device-height: 1024px) and (max-device-height: 1199px) and (-webkit-device-pixel-ratio: 2) ,
   (min-device-height: 1024px) and (max-device-height: 1199px) and (-webkit-device-pixel-ratio: 3),
   (min-width: 1024px) and (max-width: 1199px){
-    .alldrag {
-      top: 40%;
-    }
     .twomenu {
       padding-top: 26%;
     }
@@ -1984,6 +1975,7 @@
       height: 85px;
     }
     .alldrag{
+      top:40%;
       bottom: 5%;
     }
     .sort{
@@ -2294,9 +2286,6 @@
   @media screen and (min-device-height: 1366px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 2) ,
   (min-device-height: 1366px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 3),
   (min-width: 1366px) and (max-width: 1600px){
-    .alldrag {
-      top: 40%;
-    }
     .twomenu {
       padding-top: 26%;
     }
@@ -2362,6 +2351,7 @@
       height: 120px;
     }
     .alldrag{
+      top: 40%;
       bottom: 5%;
     }
     .sort{

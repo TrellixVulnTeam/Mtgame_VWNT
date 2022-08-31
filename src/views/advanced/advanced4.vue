@@ -26,7 +26,7 @@
               <source src="../../assets/video/correct.mp3" ></audio>
             <div class="topbox" v-if="!reload">
               <button class="textsize">
-                <span>Does the picture make a <span style="color: #f42a64">{{titname}}</span> sound?</span>
+                <span>Does the word make a <span style="color: #f42a64">{{titname}}</span> sound?</span>
                 <!--<audio   ref="videos"   autoplay="autoplay" :src="audio1">-->
                  <!--</audio>-->
                 <audio  @canplay="getDuration"   ref="videos" id="videos" autoplay="autoplay" :src="audio1"></audio>
@@ -78,9 +78,9 @@
 
                   <div id="box4" class="no dragArea list-group" @click="red">
                     <img src="../../assets/image/noflower2.png" class="noflower3" />
-                    <div v-bind:class="{listimg:fangda2}" class="no1" id="no1">
+                    <div v-bind:class="{answer: issuccess2,listimg:fangda2}" class="no1" id="no1">
 <!--                      <img src="../../assets/image/noflower.png" style="width: 100%;" />-->
-                      <img src="../../assets/image/noflower1.png" v-bind:class="{ answer: issuccess2}" class="noflower1"/>
+                      <img src="../../assets/image/noflower1.png"  class="noflower1"/>
 <!--                      <img src="../../assets/image/noflower2.png" class="noflower2" />-->
                       <div class="list-group-item" v-for="(element,index) in items4" :key="index">
                         <!--  {{ element.name }} -->
@@ -417,7 +417,6 @@
           this.countpage += 1;
         }
         this.zhezhao = true;
-        console.log(this.items1[0].score);
         if (this.items1[0].score === '1') {
           this.issuccess2 = true;
           this.soundsWrong = true;
@@ -426,7 +425,6 @@
           }else{
             this.insert = this.insert+"{'phonics_detail_id':"+this.listE[this.countpage-2][0].phonics_detail_id+",'ansResult':0}]";
           }
-          console.log(this.insert);
           setTimeout(() => {
             this.soundsWrong = false;
             if (this.countpage <= this.listE.length) {
@@ -473,7 +471,6 @@
           }else{
             this.insert = this.insert+"{'phonics_detail_id':"+this.listE[this.countpage-2][0].phonics_detail_id+",'ansResult':1}]";
           }
-          console.log(this.insert);
           setTimeout(() => {
             this.soundscorrect = false;
             if (this.countpage <= this.listE.length) {
