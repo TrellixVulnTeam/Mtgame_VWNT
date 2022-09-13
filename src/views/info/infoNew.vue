@@ -6482,7 +6482,7 @@ tr {
     height: 100%;
     left: -4%;
     font-size: 1.4rem;
-    font-family: 'kg';
+    font-family: 'kg',serif;
     font-weight: 600;
     color: #9c9c9c;
     position: relative;

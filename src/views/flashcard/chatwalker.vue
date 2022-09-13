@@ -4058,7 +4058,341 @@
              :style="{zIndex: !crawl2 ? 100 : 1}" @click="showGif('crawl2')">
       </div>
     </div>
-
+    <div v-else-if="this.unit === 'My Community' && this.part === 'part1'">
+      <img src="../../assets/image/The Places_MT/Runner_BG/runners_BG-02.png"
+           style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;"/>
+      <div class="bakery">
+        <img src="../../assets/image/The Places_MT/GIF_PNG/PNG/bakery.png" v-if="bakery" @click="showGif('bakery')">
+        <img src="../../assets/image/The Places_MT/GIF_PNG/GIF/bakery.gif" style="z-index: 100" v-if="!bakery"
+             @click="showGif('bakery')">
+      </div>
+      <div class="busStop">
+<!--        <img src="../../assets/image/The Places_MT/GIF_PNG/PNG/bus stop.png" v-if="busStop" @click="showGif('busStop')">-->
+        <img src="../../assets/image/The Places_MT/GIF_PNG/GIF/bus stop.gif" style="z-index: 100" v-if="!busStop"
+             @click="showGif('busStop')">
+      </div>
+      <div class="fireStation">
+        <img src="../../assets/image/The Places_MT/GIF_PNG/PNG/fire station.png" v-if="fireStation" @click="walkers&&showGif('fireStation')">
+        <img src="../../assets/image/The Places_MT/GIF_PNG/GIF/fire station.gif" style="z-index: 100" v-if="!fireStation"
+             @click="showGif('fireStation')">
+      </div>
+      <div class="hospital">
+        <img src="../../assets/image/The Places_MT/GIF_PNG/PNG/hospital.png" v-if="hospital" @click="showGif('hospital')">
+        <img src="../../assets/image/The Places_MT/GIF_PNG/GIF/hospital.gif" style="z-index: 100" v-if="!hospital"
+             @click="showGif('hospital')">
+      </div>
+      <div class="library">
+<!--        <img src="../../assets/image/The Places_MT/GIF_PNG/PNG/library.png" v-if="library" @click="showGif('library')">-->
+        <img src="../../assets/image/The Places_MT/GIF_PNG/GIF/library.gif" style="z-index: 100" v-if="!library"
+             @click="showGif('library')">
+      </div>
+      <div class="park">
+        <img src="../../assets/image/The Places_MT/GIF_PNG/PNG/park.png" v-if="park" @click="showGif('park')">
+        <img src="../../assets/image/The Places_MT/GIF_PNG/GIF/park.gif" style="z-index: 100" v-if="!park"
+             @click="showGif('park')">
+      </div>
+      <div class="policeStation">
+        <img src="../../assets/image/The Places_MT/GIF_PNG/PNG/police station.png" v-if="policeStation" @click="walkers&&showGif('policeStation')">
+        <img src="../../assets/image/The Places_MT/GIF_PNG/GIF/police station.gif" style="z-index: 100" v-if="!policeStation"
+             @click="showGif('policeStation')">
+      </div>
+      <div class="restaurant">
+        <img src="../../assets/image/The Places_MT/GIF_PNG/PNG/restaurant.png" v-if="restaurant" @click="showGif('restaurant')">
+        <img src="../../assets/image/The Places_MT/GIF_PNG/GIF/restaurant.gif" style="z-index: 100" v-if="!restaurant"
+             @click="showGif('restaurant')">
+      </div>
+      <div class="school">
+        <img src="../../assets/image/The Places_MT/GIF_PNG/PNG/school.png" v-if="school" @click="showGif('school')">
+        <img src="../../assets/image/The Places_MT/GIF_PNG/GIF/school.gif" style="z-index: 100" v-if="!school"
+             @click="showGif('school')">
+      </div>
+      <div class="shop">
+        <img src="../../assets/image/The Places_MT/GIF_PNG/PNG/shop.png" v-if="shop" @click="showGif('shop')">
+        <img src="../../assets/image/The Places_MT/GIF_PNG/GIF/shop.gif" style="z-index: 100" v-if="!shop"
+             @click="showGif('shop')">
+      </div>
+      <div class="visit">
+        <img src="../../assets/image/The Places_MT/GIF_PNG/PNG/visit.png" v-if="visit" @click="showGif('visit')">
+        <img src="../../assets/image/The Places_MT/GIF_PNG/GIF/visit.gif" style="z-index: 100" v-if="!visit"
+             @click="showGif('visit')">
+      </div>
+      <div class="wait">
+        <img src="../../assets/image/The Places_MT/GIF_PNG/PNG/wait.png" v-if="wait" @click="showGif('wait')">
+        <img src="../../assets/image/The Places_MT/GIF_PNG/GIF/wait.gif" style="z-index: 100" v-if="!wait"
+             @click="showGif('wait')">
+      </div>
+      <div class="bakeryButton">
+        <img src="../../assets/image/The Places_MT/Word/bakery.png"
+             :style="{zIndex: !bakery ? 100 : 1}" @click="showGif('bakery')">
+      </div>
+      <div class="busStopButton">
+        <img src="../../assets/image/The Places_MT/Word/BUS STOP.png" v-if="walkers"
+             :style="{zIndex: !busStop ? 100 : 1}" @click="showGif('busStop')">
+      </div>
+      <div class="fireStationButton">
+        <img src="../../assets/image/The Places_MT/Word/fire station.png" v-if="walkers"
+             :style="{zIndex: !fireStation ? 100 : 1}" @click="showGif('fireStation')">
+      </div>
+      <div class="hospitalButton">
+        <img src="../../assets/image/The Places_MT/Word/HOSPITAL.png"
+             :style="{zIndex: !hospital ? 100 : 1}" @click="showGif('hospital')">
+      </div>
+      <div class="libraryButton">
+        <img src="../../assets/image/The Places_MT/Word/LIBRARY.png" v-if="walkers"
+             :style="{zIndex: !library ? 100 : 1}" @click="showGif('library')">
+      </div>
+      <div class="parkButton">
+        <img src="../../assets/image/The Places_MT/Word/park.png"
+             :style="{zIndex: !park ? 100 : 1}" @click="showGif('park')">
+      </div>
+      <div class="policeStationButton">
+        <img src="../../assets/image/The Places_MT/Word/POLICE STATION.png" v-if="walkers"
+             :style="{zIndex: !policeStation ? 100 : 1}" @click="showGif('policeStation')">
+      </div>
+      <div class="restaurantButton">
+        <img src="../../assets/image/The Places_MT/Word/RESTAURANT.png"
+             :style="{zIndex: !restaurant ? 100 : 1}" @click="showGif('restaurant')">
+      </div>
+      <div class="schoolButton">
+        <img src="../../assets/image/The Places_MT/Word/SCHOOL.png"
+             :style="{zIndex: !school ? 100 : 1}" @click="showGif('school')">
+      </div>
+      <div class="shopButton">
+        <img src="../../assets/image/The Places_MT/Word/SHOP.png"
+             :style="{zIndex: !shop ? 100 : 1}" @click="showGif('shop')">
+      </div>
+      <div class="visitButton">
+        <img src="../../assets/image/The Places_MT/Word/VISIT.png"
+             :style="{zIndex: !visit ? 100 : 1}" @click="showGif('visit')">
+      </div>
+      <div class="waitButton">
+        <img src="../../assets/image/The Places_MT/Word/WAIT.png"
+             :style="{zIndex: !wait ? 100 : 1}" @click="showGif('wait')">
+      </div>
+    </div>
+    <div v-else-if="this.unit === 'My Community' && this.part === 'part2'">
+      <img src="../../assets/image/The People_MT/Runner_BG/BG-01.png"
+           style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;"/>
+      <div class="ambulance2">
+        <img src="../../assets/image/The People_MT/GIF_PNG/PNG/ambulance.png" v-if="ambulance2" @click="showGif('ambulance2')">
+        <img src="../../assets/image/The People_MT/GIF_PNG/GIF/ambulance.gif" style="z-index: 100" v-if="!ambulance2"
+             @click="showGif('ambulance2')">
+      </div>
+      <div class="chef2">
+        <img src="../../assets/image/The People_MT/GIF_PNG/GIF/chef.gif" style="z-index: 100" v-if="!chef2"
+             @click="showGif('chef2')">
+      </div>
+      <div class="cook">
+        <img src="../../assets/image/The People_MT/GIF_PNG/PNG/cook.png" v-if="cook&&chef2" @click="showGif('cook')">
+        <img src="../../assets/image/The People_MT/GIF_PNG/GIF/cook.gif" style="z-index: 100" v-if="!cook"
+             @click="showGif('cook')">
+      </div>
+      <div class="doctor2">
+        <img src="../../assets/image/The People_MT/GIF_PNG/PNG/doctor.png" v-if="doctor2" @click="showGif('doctor2')">
+        <img src="../../assets/image/The People_MT/GIF_PNG/GIF/doctor.gif" style="z-index: 100" v-if="!doctor2"
+             @click="showGif('doctor2')">
+      </div>
+      <div class="fireFighter">
+        <img src="../../assets/image/The People_MT/GIF_PNG/PNG/firefighter.png" v-if="fireFighter" @click="walkers&&showGif('fireFighter')">
+        <img src="../../assets/image/The People_MT/GIF_PNG/GIF/firefighter.gif" style="z-index: 100" v-if="!fireFighter"
+             @click="showGif('fireFighter')">
+      </div>
+      <div class="help">
+        <img src="../../assets/image/The People_MT/GIF_PNG/PNG/help.png" v-if="help" @click="showGif('help')">
+        <img src="../../assets/image/The People_MT/GIF_PNG/GIF/help.gif" style="z-index: 100" v-if="!help"
+             @click="showGif('help')">
+      </div>
+      <div class="letters">
+        <img src="../../assets/image/The People_MT/GIF_PNG/PNG/letters.png" v-if="letters" @click="walkers&&showGif('letters')">
+        <img src="../../assets/image/The People_MT/GIF_PNG/GIF/letters.gif" style="z-index: 100" v-if="!letters"
+             @click="showGif('letters')">
+      </div>
+      <div class="mailPerson">
+        <img src="../../assets/image/The People_MT/GIF_PNG/PNG/mail person.png" v-if="mailPerson" @click="walkers&&showGif('mailPerson')">
+        <img src="../../assets/image/The People_MT/GIF_PNG/GIF/mail-person.gif" style="z-index: 100" v-if="!mailPerson"
+             @click="showGif('mailPerson')">
+      </div>
+      <div class="nurse">
+        <img src="../../assets/image/The People_MT/GIF_PNG/PNG/nurse.png" v-if="nurse" @click="showGif('nurse')">
+        <img src="../../assets/image/The People_MT/GIF_PNG/GIF/nurse.gif" style="z-index: 100" v-if="!nurse"
+             @click="showGif('nurse')">
+      </div>
+      <div class="policeman">
+        <img src="../../assets/image/The People_MT/GIF_PNG/PNG/policeman.png" v-if="policeman" @click="walkers&&showGif('policeman')">
+        <img src="../../assets/image/The People_MT/GIF_PNG/GIF/policeman.gif" style="z-index: 100" v-if="!policeman"
+             @click="showGif('policeman')">
+      </div>
+      <div class="teacher2">
+        <img src="../../assets/image/The People_MT/GIF_PNG/PNG/teacher.png" v-if="teacher2" @click="showGif('teacher2')">
+        <img src="../../assets/image/The People_MT/GIF_PNG/GIF/teacher.gif" style="z-index: 100" v-if="!teacher2"
+             @click="showGif('teacher2')">
+      </div>
+      <div class="vet">
+        <img src="../../assets/image/The People_MT/GIF_PNG/PNG/vet.png" v-if="vet" @click="showGif('vet')">
+        <img src="../../assets/image/The People_MT/GIF_PNG/GIF/vet.gif" style="z-index: 100" v-if="!vet"
+             @click="showGif('vet')">
+      </div>
+      <div class="ambulance2Button">
+        <img src="../../assets/image/The People_MT/Word/ambulance.png"
+             :style="{zIndex: !ambulance2 ? 100 : 1}" @click="showGif('ambulance2')">
+      </div>
+      <div class="chef2Button">
+        <img src="../../assets/image/The People_MT/Word/chef.png"
+             :style="{zIndex: !chef2 ? 100 : 1}" @click="showGif('chef2')">
+      </div>
+      <div class="cookButton">
+        <img src="../../assets/image/The People_MT/Word/cook.png"
+             :style="{zIndex: !cook ? 100 : 1}" @click="showGif('cook')">
+      </div>
+      <div class="doctor2Button">
+        <img src="../../assets/image/The People_MT/Word/doctor.png"
+             :style="{zIndex: !doctor2 ? 100 : 1}" @click="showGif('doctor2')">
+      </div>
+      <div class="fireFighterButton">
+        <img src="../../assets/image/The People_MT/Word/firefighter.png" v-if="walkers"
+             :style="{zIndex: !fireFighter ? 100 : 1}" @click="showGif('fireFighter')">
+      </div>
+      <div class="helpButton">
+        <img src="../../assets/image/The People_MT/Word/help.png"
+             :style="{zIndex: !help ? 100 : 1}" @click="showGif('help')">
+      </div>
+      <div class="lettersButton">
+        <img src="../../assets/image/The People_MT/Word/letters.png" v-if="walkers"
+             :style="{zIndex: !letters ? 100 : 1}" @click="showGif('letters')">
+      </div>
+      <div class="mailPersonButton">
+        <img src="../../assets/image/The People_MT/Word/mail person.png" v-if="walkers"
+             :style="{zIndex: !mailPerson ? 100 : 1}" @click="showGif('mailPerson')">
+      </div>
+      <div class="nurseButton">
+        <img src="../../assets/image/The People_MT/Word/nurse.png"
+             :style="{zIndex: !nurse ? 100 : 1}" @click="showGif('nurse')">
+      </div>
+      <div class="policemanButton">
+        <img src="../../assets/image/The People_MT/Word/policeman.png" v-if="walkers"
+             :style="{zIndex: !policeman ? 100 : 1}" @click="showGif('policeman')">
+      </div>
+      <div class="teacher2Button">
+        <img src="../../assets/image/The People_MT/Word/teacher.png"
+             :style="{zIndex: !teacher2 ? 100 : 1}" @click="showGif('teacher2')">
+      </div>
+      <div class="vetButton">
+        <img src="../../assets/image/The People_MT/Word/Vet.png"
+             :style="{zIndex: !vet ? 100 : 1}" @click="showGif('vet')">
+      </div>
+    </div>
+    <div v-else-if="this.unit === 'Fun Time!' && this.part === 'part1'">
+      <img src="../../assets/image/indoor_MT/Runner_BG/bg_0000.png"
+           style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;"/>
+      <div class="bake2">
+        <img src="../../assets/image/indoor_MT/GIF_PNG/png/bake.png" v-if="bake2&&oven" @click="showGif('bake2')">
+        <img src="../../assets/image/indoor_MT/GIF_PNG/GIF/bake.gif" style="z-index: 100" v-if="!bake2"
+             @click="showGif('bake2')">
+      </div>
+      <div class="book2">
+        <img src="../../assets/image/indoor_MT/GIF_PNG/png/book.png" v-if="book2" @click="showGif('book2')">
+        <img src="../../assets/image/indoor_MT/GIF_PNG/GIF/book.gif" style="z-index: 100" v-if="!book2"
+             @click="showGif('book2')">
+      </div>
+      <div class="cookies">
+        <img src="../../assets/image/indoor_MT/GIF_PNG/png/cookies.png" v-if="cookies" @click="showGif('cookies')">
+        <img src="../../assets/image/indoor_MT/GIF_PNG/GIF/cookies.gif" style="z-index: 100" v-if="!cookies"
+             @click="showGif('cookies')">
+      </div>
+      <div class="dance">
+        <img src="../../assets/image/indoor_MT/GIF_PNG/png/dance.png" v-if="dance" @click="walkers&&showGif('dance')">
+        <img src="../../assets/image/indoor_MT/GIF_PNG/GIF/dance.gif" style="z-index: 100" v-if="!dance"
+             @click="showGif('dance')">
+      </div>
+      <div class="listen2">
+        <img src="../../assets/image/indoor_MT/GIF_PNG/png/listen.png" v-if="listen2" @click="walkers&&showGif('listen2')">
+        <img src="../../assets/image/indoor_MT/GIF_PNG/GIF/listen.gif" style="z-index: 100" v-if="!listen2"
+             @click="showGif('listen2')">
+      </div>
+      <div class="oven">
+<!--        <img src="../../assets/image/indoor_MT/GIF_PNG/png/oven.png" v-if="oven" @click="showGif('oven')">-->
+        <img src="../../assets/image/indoor_MT/GIF_PNG/GIF/oven.gif" style="z-index: 100" v-if="!oven"
+             @click="showGif('oven')">
+      </div>
+      <div class="paintbrush">
+        <img src="../../assets/image/indoor_MT/GIF_PNG/png/paintbrush.png" v-if="paintbrush" @click="showGif('paintbrush')">
+        <img src="../../assets/image/indoor_MT/GIF_PNG/GIF/paintbrush.gif" style="z-index: 100" v-if="!paintbrush"
+             @click="showGif('paintbrush')">
+      </div>
+      <div class="piano">
+        <img src="../../assets/image/indoor_MT/GIF_PNG/png/piano.png" v-if="piano" @click="walkers&&showGif('piano')">
+        <img src="../../assets/image/indoor_MT/GIF_PNG/GIF/piano.gif" style="z-index: 100" v-if="!piano"
+             @click="showGif('piano')">
+      </div>
+      <div class="picture">
+        <img src="../../assets/image/indoor_MT/GIF_PNG/png/picture.png" v-if="picture" @click="showGif('picture')">
+        <img src="../../assets/image/indoor_MT/GIF_PNG/GIF/picture.gif" style="z-index: 100" v-if="!picture"
+             @click="showGif('picture')">
+      </div>
+      <div class="read3">
+        <img src="../../assets/image/indoor_MT/GIF_PNG/png/read.png" v-if="read3" @click="showGif('read3')">
+        <img src="../../assets/image/indoor_MT/GIF_PNG/GIF/read.gif" style="z-index: 100" v-if="!read3"
+             @click="showGif('read3')">
+      </div>
+      <div class="TV">
+<!--        <img src="../../assets/image/indoor_MT/GIF_PNG/png/TV.png" v-if="TV" @click="showGif('TV')">-->
+        <img src="../../assets/image/indoor_MT/GIF_PNG/GIF/tv.gif" style="z-index: 100" v-if="!TV"
+             @click="showGif('TV')">
+      </div>
+      <div class="videoGame">
+        <img src="../../assets/image/indoor_MT/GIF_PNG/png/videoGame.png" v-if="videoGame" @click="showGif('videoGame')">
+        <img src="../../assets/image/indoor_MT/GIF_PNG/GIF/video-game.gif" style="z-index: 100" v-if="!videoGame"
+             @click="showGif('videoGame')">
+      </div>
+      <div class="bake2Button">
+        <img src="../../assets/image/indoor_MT/Word/word_bake_0.png"
+             :style="{zIndex: !bake2 ? 100 : 1}" @click="showGif('bake2')">
+      </div>
+      <div class="book2Button">
+        <img src="../../assets/image/indoor_MT/Word/word_book_0.png"
+             :style="{zIndex: !book2 ? 100 : 1}" @click="showGif('book2')">
+      </div>
+      <div class="cookiesButton">
+        <img src="../../assets/image/indoor_MT/Word/word_cookies_00.png"
+             :style="{zIndex: !cookies ? 100 : 1}" @click="showGif('cookies')">
+      </div>
+      <div class="danceButton">
+        <img src="../../assets/image/indoor_MT/Word/word_dance_0.png" v-if="walkers"
+             :style="{zIndex: !dance ? 100 : 1}" @click="showGif('dance')">
+      </div>
+      <div class="listen2Button">
+        <img src="../../assets/image/indoor_MT/Word/word_listen_00.png" v-if="walkers"
+             :style="{zIndex: !listen2 ? 100 : 1}" @click="showGif('listen2')">
+      </div>
+      <div class="ovenButton">
+        <img src="../../assets/image/indoor_MT/Word/word_oven_00.png"
+             :style="{zIndex: !oven ? 100 : 1}" @click="showGif('oven')">
+      </div>
+      <div class="paintbrushButton">
+        <img src="../../assets/image/indoor_MT/Word/word_paintbrush_00.png"
+             :style="{zIndex: !paintbrush ? 100 : 1}" @click="showGif('paintbrush')">
+      </div>
+      <div class="pianoButton">
+        <img src="../../assets/image/indoor_MT/Word/word_piano_00.png" v-if="walkers"
+             :style="{zIndex: !piano ? 100 : 1}" @click="showGif('piano')">
+      </div>
+      <div class="pictureButton">
+        <img src="../../assets/image/indoor_MT/Word/word_picture_00.png"
+             :style="{zIndex: !picture ? 100 : 1}" @click="showGif('picture')">
+      </div>
+      <div class="read3Button">
+        <img src="../../assets/image/indoor_MT/Word/word_read_00.png"
+             :style="{zIndex: !read3 ? 100 : 1}" @click="showGif('read3')">
+      </div>
+      <div class="TVButton">
+        <img src="../../assets/image/indoor_MT/Word/word_TV_0.png"
+             :style="{zIndex: !TV ? 100 : 1}" @click="showGif('TV')">
+      </div>
+      <div class="videoGameButton">
+        <img src="../../assets/image/indoor_MT/Word/word_video game_00.png" v-if="walkers"
+             :style="{zIndex: !videoGame ? 100 : 1}" @click="showGif('videoGame')">
+      </div>
+    </div>
     <div v-else>
     <img src="../../assets/image/H5 Thing/Walker_BG/bg_0.png"
          style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;">
@@ -4652,9 +4986,70 @@ export default {
           turtle2:require('../../assets/Flashcard Audio/wild/turtle.mp3'),
           whale:require('../../assets/Flashcard Audio/wild/whale.mp3'),
           wiggle2:require('../../assets/Flashcard Audio/wild/wiggle.mp3'),
+          //MyCommunity
+          bakery:require('../../assets/Flashcard Audio/community/bakery.mp3'),
+          busStop:require('../../assets/Flashcard Audio/community/bus stop.mp3'),
+          fireStation:require('../../assets/Flashcard Audio/community/fire station.mp3'),
+          hospital:require('../../assets/Flashcard Audio/community/hospital.mp3'),
+          library:require('../../assets/Flashcard Audio/community/library.mp3'),
+          park:require('../../assets/Flashcard Audio/community/park.mp3'),
+          policeStation:require('../../assets/Flashcard Audio/community/police station.mp3'),
+          restaurant:require('../../assets/Flashcard Audio/community/restaurant.mp3'),
+          school:require('../../assets/Flashcard Audio/community/school.mp3'),
+          shop:require('../../assets/Flashcard Audio/community/shop.mp3'),
+          visit:require('../../assets/Flashcard Audio/community/visit.mp3'),
+          wait:require('../../assets/Flashcard Audio/community/wait.mp3'),
+          ambulance2:require('../../assets/Flashcard Audio/community/ambulance.mp3'),
+          chef2:require('../../assets/Flashcard Audio/community/chef.mp3'),
+          cook:require('../../assets/Flashcard Audio/community/cook.mp3'),
+          doctor2:require('../../assets/Flashcard Audio/community/doctor.mp3'),
+          fireFighter:require('../../assets/Flashcard Audio/community/firefighter.mp3'),
+          help:require('../../assets/Flashcard Audio/community/help.mp3'),
+          letters:require('../../assets/Flashcard Audio/community/letters.mp3'),
+          mailPerson:require('../../assets/Flashcard Audio/community/mailperson.mp3'),
+          nurse:require('../../assets/Flashcard Audio/community/nurse.mp3'),
+          policeman:require('../../assets/Flashcard Audio/community/policeman.mp3'),
+          teacher2:require('../../assets/Flashcard Audio/community/teacher.mp3'),
+          vet:require('../../assets/Flashcard Audio/community/vet.mp3'),
         },
         local:'',
         cardType:'default',
+        bake2:true,
+        book2:true,
+        cookies:true,
+        dance:true,
+        listen2:true,
+        oven:true,
+        paintbrush:true,
+        piano:true,
+        picture:true,
+        read3:true,
+        TV:true,
+        videoGame:true,
+        bakery:true,
+        busStop:true,
+        fireStation:true,
+        hospital:true,
+        library:true,
+        park:true,
+        policeStation:true,
+        restaurant:true,
+        school:true,
+        shop:true,
+        visit:true,
+        wait:true,
+        ambulance2:true,
+        chef2:true,
+        cook:true,
+        doctor2:true,
+        fireFighter:true,
+        help:true,
+        letters:true,
+        mailPerson:true,
+        nurse:true,
+        policeman:true,
+        teacher2:true,
+        vet:true,
         bat:true,
         lizard2:true,
         jaguar:true,
@@ -5324,6 +5719,517 @@ export default {
     position: fixed;
     background-color: #44ccc2;
     z-index: 201;
+  }
+
+  .bake2Button img{
+    width: 5%;
+    left: 72%;
+    top: 45%;
+    position: absolute;
+  }
+
+  .book2Button img {
+    width: 5%;
+    left: 4%;
+    top: 85%;
+    position: absolute;
+  }
+
+  .cookiesButton img {
+    width: 7%;
+    left: 79%;
+    top: 72%;
+    position: absolute;
+  }
+
+  .danceButton img {
+    width: 7%;
+    left: 21%;
+    top: 25%;
+    position: absolute;
+  }
+
+  .listen2Button img {
+    width: 7%;
+    left: 30%;
+    top: 16%;
+    position: absolute;
+  }
+
+  .ovenButton img {
+    width: 6%;
+    left: 78%;
+    top: 16%;
+    position: absolute;
+  }
+
+  .paintbrushButton img {
+    width: 9%;
+    left: 53%;
+    top: 82%;
+    position: absolute;
+  }
+
+  .pianoButton img {
+    width: 6%;
+    left: 61%;
+    top: 56%;
+    position: absolute;
+  }
+
+  .pictureButton img {
+    width: 7%;
+    left: 32%;
+    top: 82%;
+    position: absolute;
+  }
+
+  .read3Button img {
+    width: 6%;
+    left: 27%;
+    top: 67%;
+    position: absolute;
+  }
+
+  .TVButton img {
+    width: 5%;
+    left: 7%;
+    top: 11%;
+    position: absolute;
+  }
+
+  .videoGameButton img {
+    width: 9%;
+    left: 4%;
+    top: 47%;
+    position: absolute;
+  }
+
+  .bake2 img {
+    width: 19%;
+    left: 74.5%;
+    top: 18%;
+    position: absolute;
+  }
+
+  .book2 img {
+    width: 15%;
+    left: -0.5%;
+    top: 74%;
+    position: absolute;
+  }
+
+  .cookies img {
+    width: 28%;
+    left: 72.5%;
+    top: 46%;
+    position: absolute;
+  }
+
+  .dance img {
+    width: 13%;
+    left: 23.5%;
+    top: 26%;
+    position: absolute;
+  }
+
+  .listen2 img {
+    width: 14%;
+    left: 40.5%;
+    top: 14%;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .oven img {
+    width: 14%;
+    left: 80.5%;
+    top: 21%;
+    position: absolute;
+  }
+
+  .paintbrush img {
+    width: 15%;
+    left: 46.5%;
+    top: 57%;
+    position: absolute;
+  }
+
+  .piano img {
+    width: 21%;
+    left: 47.5%;
+    top: 4%;
+    position: absolute;
+  }
+
+  .picture img {
+    width: 11%;
+    left: 29.5%;
+    top: 51%;
+    position: absolute;
+  }
+
+  .read3 img {
+    width: 10%;
+    left: 15.5%;
+    top: 58%;
+    position: absolute;
+  }
+
+  .TV img {
+    width: 10%;
+    left: 5.5%;
+    top: 20%;
+    position: absolute;
+  }
+
+  .videoGame img {
+    width: 13.5%;
+    height: 44%;
+    left: 2.5%;
+    top: 20%;
+    position: absolute;
+  }
+
+  .ambulance2Button img {
+    width: 8%;
+    left: 22%;
+    top: 68%;
+    position: absolute;
+  }
+
+  .chef2Button img {
+    width: 5%;
+    left: 94%;
+    top: 86%;
+    position: absolute;
+  }
+
+  .cookButton img {
+    width: 5%;
+    left: 84%;
+    top: 67%;
+    position: absolute;
+  }
+
+  .doctor2Button img {
+    width: 6%;
+    left: 2%;
+    top: 51%;
+    position: absolute;
+  }
+
+  .fireFighterButton img {
+    width: 8%;
+    left: 69%;
+    top: 22%;
+    position: absolute;
+  }
+
+  .helpButton img {
+    width: 4.5%;
+    left: 46%;
+    top: 31%;
+    position: absolute;
+  }
+
+  .lettersButton img {
+    width: 6%;
+    left: 74%;
+    top: 82%;
+    position: absolute;
+  }
+
+  .mailPersonButton img {
+    width: 9%;
+    left: 67%;
+    top: 71%;
+    position: absolute;
+  }
+
+  .nurseButton img {
+    width: 5%;
+    left: 12%;
+    top: 51%;
+    position: absolute;
+  }
+
+  .policemanButton img {
+    width: 8%;
+    left: 27%;
+    top: 5%;
+    position: absolute;
+  }
+
+  .teacher2Button img {
+    width: 7%;
+    left: 6%;
+    top: 28%;
+    position: absolute;
+  }
+
+  .vetButton img {
+    width: 4%;
+    left: 42%;
+    top: 46%;
+    position: absolute;
+  }
+
+  .ambulance2 img {
+    width: 8%;
+    left: 22%;
+    top: 56%;
+    position: absolute;
+  }
+
+  .chef2 img {
+    width: 13%;
+    left: 85.5%;
+    top: 49%;
+    position: absolute;
+  }
+
+  .cook img {
+    width: 19%;
+    left: 81.5%;
+    top: 49%;
+    position: absolute;
+  }
+
+  .doctor2 img {
+    width: 8%;
+    left: 2%;
+    top: 57%;
+    position: absolute;
+  }
+
+  .fireFighter img {
+    width: 28%;
+    left: 69%;
+    top: 1%;
+    position: absolute;
+  }
+
+  .help img {
+    width: 9%;
+    left: 44%;
+    top: 3%;
+    position: absolute;
+  }
+
+  .letters img {
+    width: 10%;
+    left: 70%;
+    top: 85%;
+    position: absolute;
+  }
+
+  .mailPerson img {
+    width: 13%;
+    left: 62%;
+    top: 50%;
+    position: absolute;
+  }
+
+  .nurse img {
+    width: 8%;
+    left: 10%;
+    top: 59%;
+    position: absolute;
+  }
+
+  .policeman img {
+    width: 15%;
+    left: 30%;
+    top: 4%;
+    position: absolute;
+  }
+
+  .teacher2 img {
+    width: 13%;
+    left: 3%;
+    top: 4%;
+    position: absolute;
+  }
+
+  .vet img {
+    width: 21%;
+    left: 37%;
+    top: 44%;
+    position: absolute;
+  }
+
+  .bakery img {
+    width: 30%;
+    left: 27%;
+    top: 50%;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .busStop img {
+    width: 40%;
+    left: 64%;
+    top: 51%;
+    position: absolute;
+  }
+
+  .fireStation img {
+    width: 22%;
+    left: 46%;
+    top: 34%;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .hospital img {
+    width: 55%;
+    left: 51%;
+    top: -23%;
+    position: absolute;
+  }
+
+  .library img {
+    width: 30%;
+    left: 22%;
+    top: 29%;
+    position: absolute;
+  }
+
+  .park img {
+    width: 80%;
+    height: 42%;
+    left: -11%;
+    top: -2%;
+    position: absolute;
+  }
+
+  .policeStation img {
+    width: 37%;
+    left: 63%;
+    top: 29%;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .restaurant img {
+    width: 60%;
+    left: -14%;
+    top: 47%;
+    position: absolute;
+  }
+
+  .school img {
+    width: 41%;
+    left: -6%;
+    top: 20%;
+    position: absolute;
+  }
+
+  .shop img {
+    width: 20%;
+    left: 51%;
+    top: 52%;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .visit img {
+    width: 30%;
+    left: 22%;
+    top: 29%;
+    position: absolute;
+  }
+
+  .wait img {
+    width: 40%;
+    left: 64%;
+    top: 65%;
+    position: absolute;
+  }
+
+  .bakeryButton img {
+    width: 6%;
+    left: 40%;
+    top: 89%;
+    position: absolute;
+  }
+
+  .busStopButton img {
+    width: 7%;
+    left: 85%;
+    top: 68%;
+    position: absolute;
+  }
+
+  .fireStationButton img {
+    width: 8%;
+    left: 51%;
+    top: 32%;
+    position: absolute;
+  }
+
+  .hospitalButton img {
+    width: 7%;
+    left: 61%;
+    top: 7%;
+    position: absolute;
+  }
+
+  .libraryButton img {
+    width: 6%;
+    left: 34%;
+    top: 34%;
+    position: absolute;
+  }
+
+  .parkButton img {
+    width: 5%;
+    left: 19%;
+    top: 7%;
+    position: absolute;
+  }
+
+  .policeStationButton img {
+    width: 11%;
+    left: 68%;
+    top: 57%;
+    position: absolute;
+  }
+
+  .restaurantButton img {
+    width: 9%;
+    left: 19%;
+    top: 68%;
+    position: absolute;
+  }
+
+  .schoolButton img {
+    width: 7%;
+    left: 11%;
+    top: 57%;
+    position: absolute;
+  }
+
+  .shopButton img {
+    width: 5%;
+    left: 58%;
+    top: 90%;
+    position: absolute;
+  }
+
+  .visitButton img {
+    width: 5%;
+    left: 29%;
+    top: 54%;
+    position: absolute;
+  }
+
+  .waitButton img {
+    width: 5%;
+    left: 87%;
+    top: 86%;
+    position: absolute;
   }
 
   .bat img {
@@ -13047,6 +13953,285 @@ export default {
   @media only screen and (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 3) ,
   (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 812px) and (max-width: 1023px){
+    .videoGameButton img {
+      width: 9%;
+      left: 6%;
+      top: 47%;
+      position: absolute;
+    }
+    .TVButton img {
+      width: 4%;
+      left: 9%;
+      top: 13%;
+      position: absolute;
+    }
+    .danceButton img {
+      width: 6%;
+      left: 22%;
+      top: 25%;
+      position: absolute;
+    }
+    .listen2Button img {
+      width: 6%;
+      left: 35%;
+      top: 16%;
+      position: absolute;
+    }
+    .ovenButton img {
+      width: 5%;
+      left: 78%;
+      top: 16%;
+      position: absolute;
+    }
+    .read3Button img {
+      width: 6%;
+      left: 24%;
+      top: 67%;
+      position: absolute;
+    }
+    .paintbrushButton img {
+      width: 9%;
+      left: 50%;
+      top: 85%;
+      position: absolute;
+    }
+    .TV img {
+      width: 11%;
+      height: 36%;
+      left: 4.5%;
+      top: 19%;
+      position: absolute;
+    }
+    .dance img {
+      width: 12%;
+      left: 23.5%;
+      top: 24%;
+      position: absolute;
+    }
+    .book2 img {
+      width: 14%;
+      left: -0.5%;
+      top: 72%;
+      position: absolute;
+    }
+    .read3 img {
+      width: 9%;
+      left: 15.5%;
+      top: 56%;
+      position: absolute;
+    }
+    .picture img {
+      width: 9%;
+      left: 30.5%;
+      top: 53%;
+      position: absolute;
+    }
+    .paintbrush img {
+      width: 13%;
+      left: 46.5%;
+      top: 56%;
+      position: absolute;
+    }
+    .listen2 img {
+      width: 12%;
+      left: 40.5%;
+      top: 14%;
+      position: absolute;
+      z-index: 1;
+    }
+    .piano img {
+      width: 19%;
+      left: 50.5%;
+      top: 4%;
+      position: absolute;
+    }
+    .oven img {
+      width: 12%;
+      left: 80.5%;
+      top: 21%;
+      position: absolute;
+    }
+    .bake2 img {
+      width: 17%;
+      left: 75.5%;
+      top: 17%;
+      position: absolute;
+    }
+    .cookies img {
+      width: 26%;
+      left: 74.5%;
+      top: 42%;
+      position: absolute;
+    }
+    .doctor2Button img {
+      width: 6%;
+      left: 3%;
+      top: 50%;
+      position: absolute;
+    }
+    .teacher2Button img {
+      width: 7%;
+      left: 5%;
+      top: 27%;
+      position: absolute;
+    }
+    .letters img {
+      width: 9%;
+      left: 71%;
+      top: 85%;
+      position: absolute;
+    }
+    .mailPerson img {
+      width: 11%;
+      left: 62%;
+      top: 50%;
+      position: absolute;
+    }
+    .vet img {
+      width: 18%;
+      left: 38%;
+      top: 44%;
+      position: absolute;
+    }
+    .doctor2 img {
+      width: 7%;
+      left: 3%;
+      top: 56%;
+      position: absolute;
+    }
+    .nurse img {
+      width: 7%;
+      left: 11%;
+      top: 58%;
+      position: absolute;
+    }
+    .fireFighter img {
+      width: 32%;
+      height: 38%;
+      left: 67%;
+      top: 2%;
+      position: absolute;
+    }
+    .help img {
+      width: 8%;
+      left: 45%;
+      top: 2%;
+      position: absolute;
+    }
+    .policeman img {
+      width: 13%;
+      left: 30%;
+      top: 4%;
+      position: absolute;
+    }
+    .teacher2 img {
+      width: 11%;
+      left: 3%;
+      top: 4%;
+      position: absolute;
+    }
+    .park img {
+      width: 80%;
+      height: 44%;
+      left: -11%;
+      top: -4%;
+      position: absolute;
+    }
+    .libraryButton img {
+      width: 6%;
+      left: 34%;
+      top: 30%;
+      position: absolute;
+    }
+    .schoolButton img {
+      width: 7%;
+      left: 11%;
+      top: 58%;
+      position: absolute;
+    }
+    .restaurantButton img {
+      width: 9%;
+      left: 19%;
+      top: 65%;
+      position: absolute;
+    }
+    .shopButton img {
+      width: 5%;
+      left: 58%;
+      top: 89%;
+      position: absolute;
+    }
+    .school img {
+      width: 41%;
+      left: -6%;
+      top: 16%;
+      position: absolute;
+    }
+    .visit img {
+      width: 29%;
+      left: 24%;
+      top: 26%;
+      position: absolute;
+    }
+    .library img {
+      width: 29%;
+      left: 24%;
+      top: 26%;
+      position: absolute;
+    }
+    .fireStation img {
+      width: 21%;
+      left: 47%;
+      top: 31%;
+      position: absolute;
+      z-index: 1;
+    }
+    .policeStation img {
+      width: 37%;
+      left: 64%;
+      top: 23%;
+      position: absolute;
+      z-index: 1;
+    }
+    .restaurant img {
+      width: 60%;
+      left: -14%;
+      top: 40%;
+      position: absolute;
+    }
+    .bakery img {
+      width: 30%;
+      left: 27%;
+      top: 44%;
+      position: absolute;
+      z-index: 1;
+    }
+    .shop img {
+      width: 20%;
+      height: 45%;
+      left: 51%;
+      top: 51%;
+      position: absolute;
+      z-index: 1;
+    }
+    .busStop img {
+      width: 40%;
+      left: 64%;
+      top: 47%;
+      position: absolute;
+    }
+    .wait img {
+      width: 40%;
+      left: 64%;
+      top: 61%;
+      position: absolute;
+    }
+    .hospital img {
+      width: 55%;
+      left: 51%;
+      top: -35%;
+      position: absolute;
+    }
     .slitherButton img {
       width: 7%;
       left: 62%;
@@ -16517,6 +17702,364 @@ export default {
   @media only screen and (min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 1024px) and (max-width: 1600px){
+    .TV img {
+      width: 13%;
+      height: 35%;
+      left: 4%;
+      top: 20%;
+      position: absolute;
+    }
+    .oven img {
+      width: 17%;
+      left: 80.5%;
+      top: 23%;
+      position: absolute;
+    }
+    .TVButton img {
+      width: 6%;
+      left: 7%;
+      top: 12%;
+      position: absolute;
+    }
+    .videoGameButton img {
+      width: 11%;
+      left: 4%;
+      top: 47%;
+      position: absolute;
+    }
+    .listen2Button img {
+      width: 8%;
+      left: 30%;
+      top: 16%;
+      position: absolute;
+    }
+    .danceButton img {
+      width: 8%;
+      left: 21%;
+      top: 25%;
+      position: absolute;
+    }
+    .pianoButton img {
+      width: 8%;
+      left: 61%;
+      top: 56%;
+      position: absolute;
+    }
+    .ovenButton img {
+      width: 7%;
+      left: 78%;
+      top: 16%;
+      position: absolute;
+    }
+    .bake2Button img {
+      width: 7%;
+      left: 72%;
+      top: 45%;
+      position: absolute;
+    }
+    .book2Button img {
+      width: 6%;
+      left: 4%;
+      top: 85%;
+      position: absolute;
+    }
+    .read3Button img {
+      width: 7%;
+      left: 27%;
+      top: 67%;
+      position: absolute;
+    }
+    .pictureButton img {
+      width: 8%;
+      left: 31%;
+      top: 82%;
+      position: absolute;
+    }
+    .paintbrushButton img {
+      width: 11%;
+      left: 53%;
+      top: 82%;
+      position: absolute;
+    }
+    .cookiesButton img {
+      width: 9%;
+      left: 82%;
+      top: 80%;
+      position: absolute;
+    }
+    .dance img {
+      width: 16%;
+      left: 19.5%;
+      top: 29%;
+      position: absolute;
+    }
+    .listen2 img {
+      width: 17%;
+      left: 39.5%;
+      top: 19%;
+      position: absolute;
+      z-index: 1;
+    }
+    .piano img {
+      width: 25%;
+      left: 45.5%;
+      top: 14%;
+      position: absolute;
+    }
+    .bake2 img {
+      width: 25%;
+      left: 72.5%;
+      top: 19%;
+      position: absolute;
+    }
+    .book2 img {
+      width: 16%;
+      left: -1.5%;
+      top: 75%;
+      position: absolute;
+    }
+    .read3 img {
+      width: 13%;
+      left: 13.5%;
+      top: 60%;
+      position: absolute;
+    }
+    .picture img {
+      width: 13%;
+      left: 28.5%;
+      top: 56%;
+      position: absolute;
+    }
+    .paintbrush img {
+      width: 18%;
+      left: 45.5%;
+      top: 63%;
+      position: absolute;
+    }
+    .cookies img {
+      width: 28%;
+      left: 72.5%;
+      top: 59%;
+      position: absolute;
+    }
+    .chef2 img {
+      width: 13%;
+      left: 85.5%;
+      top: 61%;
+      position: absolute;
+    }
+    .cook img {
+      width: 19%;
+      left: 81.5%;
+      top: 61%;
+      position: absolute;
+    }
+    .mailPerson img {
+      width: 14%;
+      left: 61%;
+      top: 58%;
+      position: absolute;
+    }
+    .letters img {
+      width: 10%;
+      left: 70%;
+      top: 87%;
+      position: absolute;
+    }
+    .vet img {
+      width: 24%;
+      left: 35%;
+      top: 51%;
+      position: absolute;
+    }
+    .doctor2 img {
+      width: 10%;
+      left: 1%;
+      top: 61%;
+      position: absolute;
+    }
+    .nurse img {
+      width: 10%;
+      left: 10%;
+      top: 63%;
+      position: absolute;
+    }
+    .ambulance2 img {
+      width: 8%;
+      left: 22%;
+      top: 59%;
+      position: absolute;
+    }
+    .fireFighter img {
+      width: 35%;
+      height: 40%;
+      left: 65.5%;
+      top: 1%;
+      position: absolute;
+    }
+    .help img {
+      width: 11%;
+      left: 44%;
+      top: 6%;
+      position: absolute;
+    }
+    .policeman img {
+      width: 16%;
+      left: 29%;
+      top: 12%;
+      position: absolute;
+    }
+    .teacher2 img {
+      width: 15%;
+      left: 2%;
+      top: 10%;
+      position: absolute;
+    }
+    .waitButton img {
+      width: 6%;
+      left: 86%;
+      top: 87%;
+      position: absolute;
+    }
+    .park img {
+      width: 79.5%;
+      height: 41.5%;
+      left: -11%;
+      top: -1.5%;
+      position: absolute;
+    }
+    .parkButton img {
+      width: 6%;
+      left: 20%;
+      top: 12%;
+      position: absolute;
+    }
+    .hospitalButton img {
+      width: 8%;
+      left: 61%;
+      top: 14%;
+      position: absolute;
+    }
+    .schoolButton img {
+      width: 8%;
+      left: 10%;
+      top: 56%;
+      position: absolute;
+    }
+    .libraryButton img {
+      width: 7%;
+      left: 34%;
+      top: 35%;
+      position: absolute;
+    }
+    .fireStationButton img {
+      width: 10%;
+      left: 50%;
+      top: 36%;
+      position: absolute;
+    }
+    .policeStationButton img {
+      width: 13%;
+      left: 68%;
+      top: 56%;
+      position: absolute;
+    }
+    .restaurantButton img {
+      width: 11%;
+      left: 18%;
+      top: 73%;
+      position: absolute;
+    }
+    .bakeryButton img {
+      width: 7%;
+      left: 40%;
+      top: 87%;
+      position: absolute;
+    }
+    .shopButton img {
+      width: 6%;
+      left: 58%;
+      top: 88%;
+      position: absolute;
+    }
+    .busStopButton img {
+      width: 9%;
+      left: 84%;
+      top: 72%;
+      position: absolute;
+    }
+    .hospital img {
+      width: 55%;
+      left: 51%;
+      top: -11%;
+      position: absolute;
+    }
+    .school img {
+      width: 41%;
+      left: -6%;
+      top: 29%;
+      position: absolute;
+    }
+    .visit img {
+      width: 30%;
+      left: 22%;
+      top: 35%;
+      position: absolute;
+    }
+    .library img {
+      width: 30%;
+      left: 22%;
+      top: 35%;
+      position: absolute;
+    }
+    .fireStation img {
+      width: 22%;
+      left: 46%;
+      top: 38%;
+      position: absolute;
+      z-index: 1;
+    }
+    .policeStation img {
+      width: 37%;
+      left: 64%;
+      top: 35%;
+      position: absolute;
+      z-index: 1;
+    }
+    .restaurant img {
+      width: 60%;
+      left: -14%;
+      top: 59%;
+      position: absolute;
+    }
+    .bakery img {
+      width: 30%;
+      left: 27%;
+      top: 60%;
+      position: absolute;
+      z-index: 1;
+    }
+    .shop img {
+      width: 20%;
+      left: 51%;
+      top: 61%;
+      position: absolute;
+      z-index: 1;
+    }
+    .wait img {
+      width: 40%;
+      height: 28%;
+      left: 64%;
+      top: 67%;
+      position: absolute;
+    }
+    .busStop img {
+      width: 40%;
+      height: 50%;
+      left: 64%;
+      top: 55%;
+      position: absolute;
+    }
     .batButton img {
       width: 8%;
       left: 11%;

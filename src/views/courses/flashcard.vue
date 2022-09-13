@@ -6,7 +6,7 @@
 
       <transition name="fade1">
         <div style="width: 100%;height: 100%;">
-          <img src="../../assets/image/picture.png" class="backbutton" @click="$tips(true);gocard()" v-if="this.unit!=='Our World'&&this.unit!=='My Home'&&this.unit!=='Fun Time!'&&this.unit!=='My Community'"/>
+          <img src="../../assets/image/picture.png" class="backbutton" @click="$tips(true);gocard()" v-if="this.unit!=='Our World'&&this.unit!=='My Home'"/>
           <img :src="title" class="toptitle">
           <div>
             <div class="cardleft">
@@ -2612,60 +2612,60 @@
           img:require('../../assets/image/The Places/Bakery.png')
         },{
           id:2,
-          cardName:'bus stop',
-          audio:require('../../assets/Flashcard Audio/community/bus stop.mp3'),
-          img:require('../../assets/image/The Places/Bus stop.png')
-        },{
-          id:3,
-          cardName:'fire station',
-          audio:require('../../assets/Flashcard Audio/community/fire station.mp3'),
-          img:require('../../assets/image/The Places/Fire Station.png')
-        },{
-          id:4,
-          cardName:'hospital',
-          audio:require('../../assets/Flashcard Audio/community/hospital.mp3'),
-          img:require('../../assets/image/The Places/Hospital.png')
-        },{
-          id:5,
           cardName:'library',
           audio:require('../../assets/Flashcard Audio/community/library.mp3'),
           img:require('../../assets/image/The Places/Library.png')
         },{
-          id:6,
+          id:3,
           cardName:'park',
           audio:require('../../assets/Flashcard Audio/community/park.mp3'),
           img:require('../../assets/image/The Places/Park.png')
         },{
-          id:7,
-          cardName:'police station',
-          audio:require('../../assets/Flashcard Audio/community/police station.mp3'),
-          img:require('../../assets/image/The Places/Police Station.png')
-        },{
-          id:8,
+            id:4,
+            cardName:'hospital',
+            audio:require('../../assets/Flashcard Audio/community/hospital.mp3'),
+            img:require('../../assets/image/The Places/Hospital.png')
+          },{
+          id:5,
           cardName:'restaurant',
           audio:require('../../assets/Flashcard Audio/community/restaurant.mp3'),
           img:require('../../assets/image/The Places/Restaurant.png')
         },{
-          id:9,
+          id:6,
           cardName:'school',
           audio:require('../../assets/Flashcard Audio/community/school.mp3'),
           img:require('../../assets/image/The Places/School.png')
         },{
-          id:10,
-          cardName:'shop',
-          audio:require('../../assets/Flashcard Audio/community/shop.mp3'),
-          img:require('../../assets/image/The Places/Shop.png')
-        },{
-          id:11,
+          id:7,
           cardName:'visit',
           audio:require('../../assets/Flashcard Audio/community/visit.mp3'),
           img:require('../../assets/image/The Places/Visit.png')
         },{
-          id:12,
+          id:8,
           cardName:'wait',
           audio:require('../../assets/Flashcard Audio/community/wait.mp3'),
           img:require('../../assets/image/The Places/Wait.png')
-        }
+        },{
+            id:9,
+            cardName:'fire station',
+            audio:require('../../assets/Flashcard Audio/community/fire station.mp3'),
+            img:require('../../assets/image/The Places/Fire Station.png')
+          },{
+            id:10,
+            cardName:'police station',
+            audio:require('../../assets/Flashcard Audio/community/police station.mp3'),
+            img:require('../../assets/image/The Places/Police Station.png')
+          },{
+            id:11,
+            cardName:'shop',
+            audio:require('../../assets/Flashcard Audio/community/shop.mp3'),
+            img:require('../../assets/image/The Places/Shop.png')
+          },{
+            id:12,
+            cardName:'bus stop',
+            audio:require('../../assets/Flashcard Audio/community/bus stop.mp3'),
+            img:require('../../assets/image/The Places/Bus stop.png')
+          }
       ],
         MyCommunityPart2:[
           {
@@ -2675,59 +2675,59 @@
             img:require('../../assets/image/The People/Ambulance.png')
           },{
             id:2,
-            cardName:'chef',
-            audio:require('../../assets/Flashcard Audio/community/chef.mp3'),
-            img:require('../../assets/image/The People/Chef.png')
-          },{
-            id:3,
-            cardName:'cook',
-            audio:require('../../assets/Flashcard Audio/community/cook.mp3'),
-            img:require('../../assets/image/The People/Cook.png')
-          },{
-            id:4,
             cardName:'doctor',
             audio:require('../../assets/Flashcard Audio/community/doctor.mp3'),
             img:require('../../assets/image/The People/Doctor.png')
           },{
-            id:5,
-            cardName:'firefighter',
-            audio:require('../../assets/Flashcard Audio/community/firefighter.mp3'),
-            img:require('../../assets/image/The People/Firefighter.png')
-          },{
-            id:6,
-            cardName:'help',
-            audio:require('../../assets/Flashcard Audio/community/help.mp3'),
-            img:require('../../assets/image/The People/Help.png')
-          },{
-            id:7,
-            cardName:'letters',
-            audio:require('../../assets/Flashcard Audio/community/letters.mp3'),
-            img:require('../../assets/image/The People/Letters.png')
-          },{
-            id:8,
-            cardName:'mailperson',
-            audio:require('../../assets/Flashcard Audio/community/mailperson.mp3'),
-            img:require('../../assets/image/The People/Mailperson.png')
-          },{
-            id:9,
+            id:3,
             cardName:'nurse',
             audio:require('../../assets/Flashcard Audio/community/nurse.mp3'),
             img:require('../../assets/image/The People/Nurse.png')
           },{
-            id:10,
-            cardName:'policeman',
-            audio:require('../../assets/Flashcard Audio/community/policeman.mp3'),
-            img:require('../../assets/image/The People/Policeman.png')
+            id:4,
+            cardName:'vet',
+            audio:require('../../assets/Flashcard Audio/community/vet.mp3'),
+            img:require('../../assets/image/The People/Vet.png')
           },{
-            id:11,
+            id:5,
+            cardName:'chef',
+            audio:require('../../assets/Flashcard Audio/community/chef.mp3'),
+            img:require('../../assets/image/The People/Chef.png')
+          },{
+            id:6,
+            cardName:'cook',
+            audio:require('../../assets/Flashcard Audio/community/cook.mp3'),
+            img:require('../../assets/image/The People/Cook.png')
+          },{
+            id:7,
+            cardName:'help',
+            audio:require('../../assets/Flashcard Audio/community/help.mp3'),
+            img:require('../../assets/image/The People/Help.png')
+          },{
+            id:8,
             cardName:'teacher',
             audio:require('../../assets/Flashcard Audio/community/teacher.mp3'),
             img:require('../../assets/image/The People/Teacher.png')
           },{
+            id:9,
+            cardName:'firefighter',
+            audio:require('../../assets/Flashcard Audio/community/firefighter.mp3'),
+            img:require('../../assets/image/The People/Firefighter.png')
+          },{
+            id:10,
+            cardName:'letters',
+            audio:require('../../assets/Flashcard Audio/community/letters.mp3'),
+            img:require('../../assets/image/The People/Letters.png')
+          },{
+            id:11,
+            cardName:'mail person',
+            audio:require('../../assets/Flashcard Audio/community/mailperson.mp3'),
+            img:require('../../assets/image/The People/Mailperson.png')
+          },{
             id:12,
-            cardName:'vet',
-            audio:require('../../assets/Flashcard Audio/community/vet.mp3'),
-            img:require('../../assets/image/The People/Vet.png')
+            cardName:'policeman',
+            audio:require('../../assets/Flashcard Audio/community/policeman.mp3'),
+            img:require('../../assets/image/The People/Policeman.png')
           }
         ],
         FunTimePart1:[
