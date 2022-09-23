@@ -6,7 +6,7 @@
 
       <transition name="fade1">
         <div style="width: 100%;height: 100%;">
-          <img src="../../assets/image/picture.png" class="backbutton" @click="$tips(true);gocard()" v-if="this.unit!=='Our World'&&this.unit!=='My Home'"/>
+          <img src="../../assets/image/picture.png" class="backbutton" @click="$tips(true);gocard()"/>
           <img :src="title" class="toptitle">
           <div>
             <div class="cardleft">
@@ -2748,49 +2748,49 @@
             img:require('../../assets/image/indoor/Cookies.png')
           },{
             id:4,
-            cardName:'dance',
-            audio:require('../../assets/Flashcard Audio/community/hospital.mp3'),
-            img:require('../../assets/image/indoor/Dance.png')
-          },{
-            id:5,
-            cardName:'listen',
-            audio:require('../../assets/Flashcard Audio/community/library.mp3'),
-            img:require('../../assets/image/indoor/Listen.png')
-          },{
-            id:6,
             cardName:'oven',
             audio:require('../../assets/Flashcard Audio/community/park.mp3'),
             img:require('../../assets/image/indoor/Oven.png')
           },{
-            id:7,
+            id:5,
             cardName:'paintbrush',
             audio:require('../../assets/Flashcard Audio/community/police station.mp3'),
             img:require('../../assets/image/indoor/Paintbrush.png')
           },{
-            id:8,
-            cardName:'piano',
-            audio:require('../../assets/Flashcard Audio/community/restaurant.mp3'),
-            img:require('../../assets/image/indoor/Piano.png')
-          },{
-            id:9,
+            id:6,
             cardName:'picture',
             audio:require('../../assets/Flashcard Audio/community/school.mp3'),
             img:require('../../assets/image/indoor/Picture.png')
           },{
-            id:10,
+            id:7,
             cardName:'read',
             audio:require('../../assets/Flashcard Audio/community/shop.mp3'),
             img:require('../../assets/image/indoor/Read.png')
           },{
-            id:11,
+            id:8,
             cardName:'TV',
             audio:require('../../assets/Flashcard Audio/community/visit.mp3'),
             img:require('../../assets/image/indoor/TV.png')
           },{
-            id:12,
+            id:9,
             cardName:'video game',
             audio:require('../../assets/Flashcard Audio/community/wait.mp3'),
             img:require('../../assets/image/indoor/Video Game.png')
+          },{
+            id:10,
+            cardName:'dance',
+            audio:require('../../assets/Flashcard Audio/community/hospital.mp3'),
+            img:require('../../assets/image/indoor/Dance.png')
+          },{
+            id:11,
+            cardName:'listen',
+            audio:require('../../assets/Flashcard Audio/community/library.mp3'),
+            img:require('../../assets/image/indoor/Listen.png')
+          },{
+            id:12,
+            cardName:'piano',
+            audio:require('../../assets/Flashcard Audio/community/restaurant.mp3'),
+            img:require('../../assets/image/indoor/Piano.png')
           }
         ],
         FunTimePart2:[
@@ -2811,49 +2811,49 @@
             img:require('../../assets/image/outdoor/Camp.png')
           },{
             id:4,
-            cardName:'fishing rod',
-            audio:require('../../assets/Flashcard Audio/community/doctor.mp3'),
-            img:require('../../assets/image/outdoor/Fishing Rod.png')
-          },{
-            id:5,
-            cardName:'goggles',
-            audio:require('../../assets/Flashcard Audio/community/firefighter.mp3'),
-            img:require('../../assets/image/outdoor/Goggles.png')
-          },{
-            id:6,
-            cardName:'helmet',
-            audio:require('../../assets/Flashcard Audio/community/help.mp3'),
-            img:require('../../assets/image/outdoor/Helmet.png')
-          },{
-            id:7,
             cardName:'jog',
             audio:require('../../assets/Flashcard Audio/community/letters.mp3'),
             img:require('../../assets/image/outdoor/Jog.png')
           },{
-            id:8,
-            cardName:'racket',
-            audio:require('../../assets/Flashcard Audio/community/mailperson.mp3'),
-            img:require('../../assets/image/outdoor/Racket.png')
-          },{
-            id:9,
+            id:5,
             cardName:'soccer',
             audio:require('../../assets/Flashcard Audio/community/nurse.mp3'),
             img:require('../../assets/image/outdoor/Soccer.png')
           },{
-            id:10,
+            id:6,
             cardName:'swim',
             audio:require('../../assets/Flashcard Audio/community/policeman.mp3'),
             img:require('../../assets/image/outdoor/Swim.png')
           },{
-            id:11,
+            id:7,
             cardName:'tennis',
             audio:require('../../assets/Flashcard Audio/community/teacher.mp3'),
             img:require('../../assets/image/outdoor/Tennis.png')
           },{
-            id:12,
+            id:8,
             cardName:'tent',
             audio:require('../../assets/Flashcard Audio/community/vet.mp3'),
             img:require('../../assets/image/outdoor/Tent.png')
+          },{
+            id:9,
+            cardName:'fishing rod',
+            audio:require('../../assets/Flashcard Audio/community/doctor.mp3'),
+            img:require('../../assets/image/outdoor/Fishing Rod.png')
+          },{
+            id:10,
+            cardName:'goggles',
+            audio:require('../../assets/Flashcard Audio/community/firefighter.mp3'),
+            img:require('../../assets/image/outdoor/Goggles.png')
+          },{
+            id:11,
+            cardName:'racket',
+            audio:require('../../assets/Flashcard Audio/community/mailperson.mp3'),
+            img:require('../../assets/image/outdoor/Racket.png')
+          },{
+            id:12,
+            cardName:'helmet',
+            audio:require('../../assets/Flashcard Audio/community/help.mp3'),
+            img:require('../../assets/image/outdoor/Helmet.png')
           }
         ],
         MyHomePart1:[
@@ -2894,7 +2894,7 @@
             img:require('../../assets/image/Room/Kitchen.png')
           },{
             id:8,
-            cardName:'livingroom',
+            cardName:'living room',
             audio:require('../../assets/Flashcard Audio/community/restaurant.mp3'),
             img:require('../../assets/image/Room/Livingroom.png')
           },{
@@ -2927,185 +2927,185 @@
             img:require('../../assets/image/Thing/Bed.png')
           },{
             id:2,
-            cardName:'cupboard',
-            audio:require('../../assets/Flashcard Audio/community/chef.mp3'),
-            img:require('../../assets/image/Thing/Cupboard.png')
-          },{
-            id:3,
-            cardName:'desk',
-            audio:require('../../assets/Flashcard Audio/community/cook.mp3'),
-            img:require('../../assets/image/Thing/Desk.png')
-          },{
-            id:4,
             cardName:'lamp',
             audio:require('../../assets/Flashcard Audio/community/doctor.mp3'),
             img:require('../../assets/image/Thing/Lamp.png')
           },{
-            id:5,
+            id:3,
             cardName:'wash',
             audio:require('../../assets/Flashcard Audio/community/firefighter.mp3'),
             img:require('../../assets/image/Thing/Wash.png')
           },{
-            id:6,
-            cardName:'mirror',
-            audio:require('../../assets/Flashcard Audio/community/help.mp3'),
-            img:require('../../assets/image/Thing/Mirror.png')
-          },{
-            id:7,
+            id:4,
             cardName:'phone',
             audio:require('../../assets/Flashcard Audio/community/letters.mp3'),
             img:require('../../assets/image/Thing/Phone.png')
           },{
-            id:8,
+            id:5,
             cardName:'sink',
             audio:require('../../assets/Flashcard Audio/community/mailperson.mp3'),
             img:require('../../assets/image/Thing/Sink.png')
           },{
-            id:9,
+            id:6,
             cardName:'sleep',
             audio:require('../../assets/Flashcard Audio/community/nurse.mp3'),
             img:require('../../assets/image/Thing/Sleep.png')
           },{
-            id:10,
+            id:7,
             cardName:'sofa',
             audio:require('../../assets/Flashcard Audio/community/policeman.mp3'),
             img:require('../../assets/image/Thing/Sofa.png')
           },{
-            id:11,
+            id:8,
             cardName:'toilet',
             audio:require('../../assets/Flashcard Audio/community/teacher.mp3'),
             img:require('../../assets/image/Thing/Toilet.png')
           },{
-            id:12,
+            id:9,
             cardName:'wardrobe',
             audio:require('../../assets/Flashcard Audio/community/vet.mp3'),
             img:require('../../assets/image/Thing/Wardrobe.png')
+          },{
+            id:10,
+            cardName:'mirror',
+            audio:require('../../assets/Flashcard Audio/community/help.mp3'),
+            img:require('../../assets/image/Thing/Mirror.png')
+          },{
+            id:11,
+            cardName:'cupboard',
+            audio:require('../../assets/Flashcard Audio/community/chef.mp3'),
+            img:require('../../assets/image/Thing/Cupboard.png')
+          },{
+            id:12,
+            cardName:'desk',
+            audio:require('../../assets/Flashcard Audio/community/cook.mp3'),
+            img:require('../../assets/image/Thing/Desk.png')
           }
         ],
         OurWorldPart1:[
           {
             id:1,
-            cardName:'airplane',
-            audio:require('../../assets/Flashcard Audio/community/bakery.mp3'),
-            img:require('../../assets/image/Sky/Airplane.png')
-          },{
-            id:2,
             cardName:'bird',
             audio:require('../../assets/Flashcard Audio/community/bus stop.mp3'),
             img:require('../../assets/image/Sky/Bird.png')
           },{
-            id:3,
-            cardName:'cloud',
-            audio:require('../../assets/Flashcard Audio/community/fire station.mp3'),
-            img:require('../../assets/image/Sky/Cloud.png')
-          },{
-            id:4,
-            cardName:'fall',
-            audio:require('../../assets/Flashcard Audio/community/hospital.mp3'),
-            img:require('../../assets/image/Sky/fall (1).png')
-          },{
-            id:5,
+            id:2,
             cardName:'fly',
             audio:require('../../assets/Flashcard Audio/community/library.mp3'),
             img:require('../../assets/image/Sky/Fly.png')
           },{
-            id:6,
+            id:3,
             cardName:'gaze',
             audio:require('../../assets/Flashcard Audio/community/park.mp3'),
             img:require('../../assets/image/Sky/Gaze.png')
           },{
-            id:7,
+            id:4,
             cardName:'lightning',
             audio:require('../../assets/Flashcard Audio/community/police station.mp3'),
             img:require('../../assets/image/Sky/Lightning.png')
           },{
-            id:8,
+            id:5,
             cardName:'moon',
             audio:require('../../assets/Flashcard Audio/community/restaurant.mp3'),
             img:require('../../assets/image/Sky/Moon.png')
           },{
-            id:9,
-            cardName:'rain',
-            audio:require('../../assets/Flashcard Audio/community/school.mp3'),
-            img:require('../../assets/image/Sky/Rain.png')
-          },{
-            id:10,
+            id:6,
             cardName:'rainbow',
             audio:require('../../assets/Flashcard Audio/community/shop.mp3'),
             img:require('../../assets/image/Sky/Rainbow.png')
           },{
-            id:11,
+            id:7,
             cardName:'star',
             audio:require('../../assets/Flashcard Audio/community/visit.mp3'),
             img:require('../../assets/image/Sky/Star.png')
           },{
-            id:12,
+            id:8,
             cardName:'sun',
             audio:require('../../assets/Flashcard Audio/community/wait.mp3'),
             img:require('../../assets/image/Sky/Sun.png')
+          },{
+            id:9,
+            cardName:'airplane',
+            audio:require('../../assets/Flashcard Audio/community/bakery.mp3'),
+            img:require('../../assets/image/Sky/Airplane.png')
+          },{
+            id:10,
+            cardName:'rain',
+            audio:require('../../assets/Flashcard Audio/community/school.mp3'),
+            img:require('../../assets/image/Sky/Rain.png')
+          },{
+            id:11,
+            cardName:'cloud',
+            audio:require('../../assets/Flashcard Audio/community/fire station.mp3'),
+            img:require('../../assets/image/Sky/Cloud.png')
+          },{
+            id:12,
+            cardName:'fall',
+            audio:require('../../assets/Flashcard Audio/community/hospital.mp3'),
+            img:require('../../assets/image/Sky/fall (1).png')
           }
         ],
         OurWorldPart2:[
           {
             id:1,
-            cardName:'animals',
-            audio:require('../../assets/Flashcard Audio/community/ambulance.mp3'),
-            img:require('../../assets/image/Land/Animals.png')
-          },{
-            id:2,
             cardName:'bridge',
             audio:require('../../assets/Flashcard Audio/community/chef.mp3'),
             img:require('../../assets/image/Land/Bridge.png')
           },{
-            id:3,
+            id:2,
             cardName:'build',
             audio:require('../../assets/Flashcard Audio/community/cook.mp3'),
             img:require('../../assets/image/Land/Build.png')
           },{
-            id:4,
+            id:3,
             cardName:'climb',
             audio:require('../../assets/Flashcard Audio/community/doctor.mp3'),
             img:require('../../assets/image/Land/Climb.png')
           },{
-            id:5,
+            id:4,
             cardName:'flowers',
             audio:require('../../assets/Flashcard Audio/community/firefighter.mp3'),
             img:require('../../assets/image/Land/Flowers.png')
           },{
-            id:6,
+            id:5,
             cardName:'house',
             audio:require('../../assets/Flashcard Audio/community/help.mp3'),
             img:require('../../assets/image/Land/House.png')
           },{
-            id:7,
+            id:6,
             cardName:'mountain',
             audio:require('../../assets/Flashcard Audio/community/letters.mp3'),
             img:require('../../assets/image/Land/Mountain.png')
           },{
-            id:8,
-            cardName:'ocean',
-            audio:require('../../assets/Flashcard Audio/community/mailperson.mp3'),
-            img:require('../../assets/image/Land/Ocean.png')
-          },{
-            id:9,
-            cardName:'people',
-            audio:require('../../assets/Flashcard Audio/community/nurse.mp3'),
-            img:require('../../assets/image/Land/People.png')
-          },{
-            id:10,
+            id:7,
             cardName:'river',
             audio:require('../../assets/Flashcard Audio/community/policeman.mp3'),
             img:require('../../assets/image/Land/River.png')
           },{
-            id:11,
-            cardName:'road',
-            audio:require('../../assets/Flashcard Audio/community/teacher.mp3'),
-            img:require('../../assets/image/Land/Road.png')
-          },{
-            id:12,
+            id:8,
             cardName:'tree',
             audio:require('../../assets/Flashcard Audio/community/vet.mp3'),
             img:require('../../assets/image/Land/Tree.png')
+          },{
+            id:9,
+            cardName:'ocean',
+            audio:require('../../assets/Flashcard Audio/community/mailperson.mp3'),
+            img:require('../../assets/image/Land/Ocean.png')
+          },{
+            id:10,
+            cardName:'people',
+            audio:require('../../assets/Flashcard Audio/community/nurse.mp3'),
+            img:require('../../assets/image/Land/People.png')
+          },{
+            id:11,
+            cardName:'animals',
+            audio:require('../../assets/Flashcard Audio/community/ambulance.mp3'),
+            img:require('../../assets/image/Land/Animals.png')
+          },{
+            id:12,
+            cardName:'road',
+            audio:require('../../assets/Flashcard Audio/community/teacher.mp3'),
+            img:require('../../assets/image/Land/Road.png')
           }
         ],
         list:[],

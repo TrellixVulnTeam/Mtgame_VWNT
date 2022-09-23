@@ -567,15 +567,6 @@
 					<img src="../assets/image/cloce.png">
 				</div>
 				<button class="animapng7">
-<!--          <img  src="http://monkeytown.monkeytree.com.hk/image/a.gif" v-if="changei1">-->
-<!--          <img  src="http://monkeytown.monkeytree.com.hk/image/b.gif" v-if="changei2">-->
-<!--				  <img  src="http://monkeytown.monkeytree.com.hk/image/c.gif" v-if="changei3">-->
-<!--				  <img  src="http://monkeytown.monkeytree.com.hk/image/d.gif" v-if="changei4">-->
-<!--				  <img  src="http://monkeytown.monkeytree.com.hk/image/e.gif" v-if="changei5">-->
-<!--				  <img  src="http://monkeytown.monkeytree.com.hk/image/f.gif" v-if="changei6">-->
-<!--				  <img  src="http://monkeytown.monkeytree.com.hk/image/g.gif" v-if="changei7">-->
-<!--				  <img  src="http://monkeytown.monkeytree.com.hk/image/h.gif" v-if="changei8">-->
-<!--				  <img  src="http://monkeytown.monkeytree.com.hk/image/boss.gif" v-if="changei9">-->
 
           <img  :src="pic+'/image/image2/a.gif'" v-if="changei1">
           <img  :src="pic+'/image/image2/b.gif'" v-if="changei2">

@@ -4340,7 +4340,8 @@
              @click="showGif('TV')">
       </div>
       <div class="videoGame">
-        <img src="../../assets/image/indoor_MT/GIF_PNG/png/videoGame.png" v-if="videoGame" @click="showGif('videoGame')">
+        <img src="../../assets/image/indoor_MT/GIF_PNG/png/videoGame.png" v-if="videoGame&&walkers&&TV" @click="showGif('videoGame')">
+        <img src="../../assets/image/indoor_MT/GIF_PNG/png/videoGame.png" v-if="videoGame&&!walkers&&TV" @click="showGif('TV')">
         <img src="../../assets/image/indoor_MT/GIF_PNG/GIF/video-game.gif" style="z-index: 100" v-if="!videoGame"
              @click="showGif('videoGame')">
       </div>
@@ -4391,6 +4392,570 @@
       <div class="videoGameButton">
         <img src="../../assets/image/indoor_MT/Word/word_video game_00.png" v-if="walkers"
              :style="{zIndex: !videoGame ? 100 : 1}" @click="showGif('videoGame')">
+      </div>
+    </div>
+    <div v-else-if="this.unit === 'Fun Time!' && this.part === 'part2'">
+      <img src="../../assets/image/outdoor_MT/Runner_BG/bg_00000.png"
+           style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;"/>
+      <div class="basketball">
+        <img src="../../assets/image/outdoor_MT/GIF_PNG/PNG/GIF_basketball_0000.png" v-if="basketball" @click="showGif('basketball')">
+        <img src="../../assets/image/outdoor_MT/GIF_PNG/GIF/basketball.gif" style="z-index: 100" v-if="!basketball"
+             @click="showGif('basketball')">
+      </div>
+      <div class="bike3">
+        <img src="../../assets/image/outdoor_MT/GIF_PNG/PNG/GIF_bike_0000.png" v-if="bike3" @click="showGif('bike3')">
+        <img src="../../assets/image/outdoor_MT/GIF_PNG/GIF/bike.gif" style="z-index: 100" v-if="!bike3"
+             @click="showGif('bike3')">
+      </div>
+      <div class="camp">
+        <img src="../../assets/image/outdoor_MT/GIF_PNG/PNG/GIF_camp_0000.png" v-if="camp" @click="showGif('camp')">
+        <img src="../../assets/image/outdoor_MT/GIF_PNG/GIF/camp.gif" style="z-index: 100" v-if="!camp"
+             @click="showGif('camp')">
+      </div>
+      <div class="fishing">
+        <img src="../../assets/image/outdoor_MT/GIF_PNG/PNG/GIF_fishing rod Comp 1_0000.png" v-if="fishing" @click="walkers&&showGif('fishing')">
+        <img src="../../assets/image/outdoor_MT/GIF_PNG/GIF/fishing rod.gif" style="z-index: 100" v-if="!fishing"
+             @click="showGif('fishing')">
+      </div>
+      <div class="goggles2">
+        <img src="../../assets/image/outdoor_MT/GIF_PNG/PNG/GIF_goggles_0000.png" v-if="goggles2" @click="walkers&&showGif('goggles2')">
+        <img src="../../assets/image/outdoor_MT/GIF_PNG/GIF/goggles.gif" style="z-index: 100" v-if="!goggles2"
+             @click="showGif('goggles2')">
+      </div>
+      <div class="helmet2">
+        <img src="../../assets/image/outdoor_MT/GIF_PNG/PNG/GIF_helmet_0000.png" v-if="helmet2" @click="walkers&&showGif('helmet2')">
+        <img src="../../assets/image/outdoor_MT/GIF_PNG/GIF/helmet.gif" style="z-index: 100" v-if="!helmet2"
+             @click="showGif('helmet2')">
+      </div>
+      <div class="jog2">
+        <img src="../../assets/image/outdoor_MT/GIF_PNG/PNG/GIF_jog_0000.png" v-if="jog2" @click="showGif('jog2')">
+        <img src="../../assets/image/outdoor_MT/GIF_PNG/GIF/jog.gif" style="z-index: 100" v-if="!jog2"
+             @click="showGif('jog2')">
+      </div>
+      <div class="racket">
+<!--        <img src="../../assets/image/outdoor_MT/GIF_PNG/PNG/GIF_racket_0000.png" v-if="racket" @click="showGif('racket')">-->
+        <img src="../../assets/image/outdoor_MT/GIF_PNG/GIF/racket.gif" style="z-index: 100" v-if="!racket"
+             @click="showGif('racket')">
+      </div>
+      <div class="soccer">
+        <img src="../../assets/image/outdoor_MT/GIF_PNG/PNG/GIF_soccer Comp 1_0000.png" v-if="soccer" @click="showGif('soccer')">
+        <img src="../../assets/image/outdoor_MT/GIF_PNG/GIF/soccer.gif" style="z-index: 100" v-if="!soccer"
+             @click="showGif('soccer')">
+      </div>
+      <div class="swim3">
+        <img src="../../assets/image/outdoor_MT/GIF_PNG/PNG/GIF_swim_0000.png" v-if="swim3" @click="showGif('swim3')">
+        <img src="../../assets/image/outdoor_MT/GIF_PNG/GIF/swim.gif" style="z-index: 100" v-if="!swim3"
+             @click="showGif('swim3')">
+      </div>
+      <div class="tennis">
+        <img src="../../assets/image/outdoor_MT/GIF_PNG/PNG/GIF_tennis_0000.png" v-if="tennis" @click="showGif('tennis')">
+        <img src="../../assets/image/outdoor_MT/GIF_PNG/GIF/tennis.gif" style="z-index: 100" v-if="!tennis"
+             @click="showGif('tennis')">
+      </div>
+      <div class="tent2">
+        <img src="../../assets/image/outdoor_MT/GIF_PNG/PNG/GIF_tent_0000.png" v-if="tent2" @click="showGif('tent2')">
+        <img src="../../assets/image/outdoor_MT/GIF_PNG/GIF/tent.gif" style="z-index: 100" v-if="!tent2"
+             @click="showGif('tent2')">
+      </div>
+      <div class="basketballButton">
+        <img src="../../assets/image/outdoor_MT/Word/word_basketball Comp 1_00000.png"
+             :style="{zIndex: !basketball ? 100 : 1}" @click="showGif('basketball')">
+      </div>
+      <div class="bike3Button">
+        <img src="../../assets/image/outdoor_MT/Word/word_bike Comp 1_00000.png"
+             :style="{zIndex: !bike3 ? 100 : 1}" @click="showGif('bike3')">
+      </div>
+      <div class="campButton">
+        <img src="../../assets/image/outdoor_MT/Word/word_camp Comp 1_0.png"
+             :style="{zIndex: !camp ? 100 : 1}" @click="showGif('camp')">
+      </div>
+      <div class="fishingButton">
+        <img src="../../assets/image/outdoor_MT/Word/word_fishing rod Comp 1_0.png" v-if="walkers"
+             :style="{zIndex: !fishing ? 100 : 1}" @click="showGif('fishing')">
+      </div>
+      <div class="goggles2Button">
+        <img src="../../assets/image/outdoor_MT/Word/word_goggles Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !goggles2 ? 100 : 1}" @click="showGif('goggles2')">
+      </div>
+      <div class="helmet2Button">
+        <img src="../../assets/image/outdoor_MT/Word/word_helmet Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !helmet2 ? 100 : 1}" @click="showGif('helmet2')">
+      </div>
+      <div class="jog2Button">
+        <img src="../../assets/image/outdoor_MT/Word/word_jog Comp 1_00000.png"
+             :style="{zIndex: !jog2 ? 100 : 1}" @click="showGif('jog2')">
+      </div>
+      <div class="racketButton">
+        <img src="../../assets/image/outdoor_MT/Word/word_racket Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !racket ? 100 : 1}" @click="showGif('racket')">
+      </div>
+      <div class="soccerButton">
+        <img src="../../assets/image/outdoor_MT/Word/word_soccer Comp 1_00000.png"
+             :style="{zIndex: !soccer ? 100 : 1}" @click="showGif('soccer')">
+      </div>
+      <div class="swim3Button">
+        <img src="../../assets/image/outdoor_MT/Word/word_swim Comp 1_0.png"
+             :style="{zIndex: !swim3 ? 100 : 1}" @click="showGif('swim3')">
+      </div>
+      <div class="tennisButton">
+        <img src="../../assets/image/outdoor_MT/Word/word_tennis Comp 1_00000.png"
+             :style="{zIndex: !tennis ? 100 : 1}" @click="showGif('tennis')">
+      </div>
+      <div class="tent2Button">
+        <img src="../../assets/image/outdoor_MT/Word/word_tent Comp 1_00000.png"
+             :style="{zIndex: !tent2 ? 100 : 1}" @click="showGif('tent2')">
+      </div>
+    </div>
+    <div v-else-if="this.unit === 'My Home' && this.part === 'part1'">
+      <img src="../../assets/image/H5 Thing/Walker_BG/bg_0.png"
+           style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;">
+      <!--<img src="../../assets/image/shuzhi.png" style="width: 100%;display:block;position: absolute;">-->
+      <div class="mirror">
+        <img src="../../assets/image/H5 Thing/PNG/mirror.png" v-if="mirror" @click="showGif('mirror')">
+        <img src="../../assets/image/H5 Thing/GIF/mirror.gif" style="z-index: 100" v-if="!mirror&&walkers"
+             @click="showGif('mirror')">
+      </div>
+      <div class="mirrorbutton">
+        <img src="../../assets/image/H5 Thing/Word/word_mirror Comp 1_0.png" v-if="walkers"
+             :style="{zIndex: !mirror ? 100 : 1}" @click="showGif('mirror')">
+      </div>
+      <div class="wardrobe">
+        <img src="../../assets/image/H5 Thing/PNG/wardrobe.png" v-if="wardrobe" @click="showGif('wardrobe')">
+        <img src="../../assets/image/H5 Thing/GIF/wardrobe.gif" style="z-index: 100" v-if="!wardrobe&&walkers"
+             @click="showGif('wardrobe')">
+      </div>
+
+      <div class="bed">
+        <img src="../../assets/image/H5 Thing/PNG/bed.png" v-if="bed" @click="showGif('bed')">
+        <img src="../../assets/image/H5 Thing/GIF/bed.gif" style="z-index: 100" v-if="!bed"
+             @click="showGif('bed')">
+      </div>
+      <div class="bedbutton">
+        <img src="../../assets/image/H5 Thing/Word/word_bed Comp 1_0.png"
+             :style="{zIndex: !bed ? 100 : 1}" @click="showGif('bed')">
+      </div>
+      <div class="sleep">
+        <img src="../../assets/image/H5 Thing/PNG/sleep2.png" v-if="sleep" @click="showGif('sleep')">
+        <img src="../../assets/image/H5 Thing/GIF/sleep.gif" style="z-index: 100" v-if="!sleep"
+             @click="showGif('sleep')">
+      </div>
+      <div class="wardrobebutton">
+        <img src="../../assets/image/H5 Thing/Word/word_wardrobe_0.png" v-if="walkers"
+             :style="{zIndex: !wardrobe ? 100 : 1}" @click="showGif('wardrobe')">
+      </div>
+      <div class="sleepbutton">
+        <img src="../../assets/image/H5 Thing/Word/word_sleep Comp 1_0.png"
+             :style="{zIndex: !sleep ? 100 : 1}" @click="showGif('sleep')">
+      </div>
+      <div class="desk">
+        <img src="../../assets/image/H5 Thing/PNG/desk.png" v-if="desk" @click="showGif('desk')">
+        <img src="../../assets/image/H5 Thing/GIF/desk.gif" style="z-index: 100" v-if="!desk&&walkers"
+             @click="showGif('desk')">
+      </div>
+      <div class="deskbutton">
+        <img src="../../assets/image/H5 Thing/Word/word_ desk Comp 1_0.png" v-if="walkers"
+             :style="{zIndex: !desk ? 100 : 1}" @click="showGif('desk')">
+      </div>
+      <div class="chair">
+        <img src="../../assets/image/H5 Thing/Still object/Stillobject_Chair Comp 1_0.png">
+      </div>
+      <div class="wash">
+        <img src="../../assets/image/H5 Thing/PNG/wash.png" v-if="wash" @click="showGif('wash')">
+        <img src="../../assets/image/H5 Thing/GIF/wash.gif" style="z-index: 100" v-if="!wash"
+             @click="showGif('wash')">
+        <img src="../../assets/image/H5 Thing/GIF/sink.gif" style="z-index: 100" v-if="!sink" @click="showGif('sink')">
+      </div>
+      <div class="washbutton">
+        <img src="../../assets/image/H5 Thing/Word/word_wash Comp 1_0.png"  :style="{zIndex: !wash ? 100 : 1}"
+             @click="showGif('wash')">
+      </div>
+      <div class="sink">
+        <img src="../../assets/image/H5 Thing/Word/word_sink_0.png" v-if="wash" :style="{zIndex: !sink ? 100 : 1}"
+             @click="showGif('sink')">
+      </div>
+      <div class="toilet"  >
+        <img src="../../assets/image/H5 Thing/PNG/toilet.png" v-if="toilet" @click="showGif('toilet')">
+        <img src="../../assets/image/H5 Thing/GIF/toilet.gif" style="z-index: 100" v-if="!toilet"
+             @click="showGif('toilet')">
+      </div>
+      <div class="toiletbutton" >
+        <img src="../../assets/image/H5 Thing/Word/word_toilet Comp 1_0.png" :style="{zIndex: !toilet ? 100 : 1}"
+             @click="showGif('toilet')">
+      </div>
+      <div class="lamp">
+        <img src="../../assets/image/H5 Thing/PNG/lamp.png" v-if="lamp" @click="showGif('lamp')">
+        <img src="../../assets/image/H5 Thing/GIF/lamp.gif" style="z-index: 100" v-if="!lamp" @click="showGif('lamp')">
+      </div>
+      <div class="lampbutton">
+        <img src="../../assets/image/H5 Thing/Word/word_lamp Comp 1_0.png" :style="{zIndex: !lamp ? 100 : 1}"
+             @click="showGif('lamp')">
+      </div>
+      <div class="sofa">
+        <img src="../../assets/image/H5 Thing/PNG/sofa.png" v-if="sofa" @click="showGif('sofa')">
+        <img src="../../assets/image/H5 Thing/GIF/sofa.gif" style="z-index: 100" v-if="!sofa" @click="showGif('sofa')">
+      </div>
+      <div class="sofabutton">
+        <img src="../../assets/image/H5 Thing/Word/word_sofa Comp 1_0.png" :style="{zIndex: !sofa ? 100 : 1}"
+             @click="showGif('sofa')">
+      </div>
+      <div class="phone" >
+        <img src="../../assets/image/H5 Thing/Still object/StillObject_table_0.png" class="img2">
+        <img src="../../assets/image/H5 Thing/PNG/phone.png" class="img1" v-if="phone" @click="showGif('phone')">
+        <img src="../../assets/image/H5 Thing/GIF/phone.gif" class="img1" style="z-index: 100" v-if="!phone"
+             @click="showGif('phone')">
+      </div>
+      <div class="phonebutton" >
+        <img src="../../assets/image/H5 Thing/Word/word_phone Comp 1_0.png" :style="{zIndex: !phone ? 100 : 1}"
+             @click="showGif('phone')">
+      </div>
+      <div class="cupboard">
+        <img src="../../assets/image/H5 Thing/PNG/cupboard.png" v-if="cupboard" @click="showGif('cupboard')">
+        <img src="../../assets/image/H5 Thing/GIF/cupboard.gif" style="z-index: 100" v-if="!cupboard"
+             @click="showGif('cupboard')">
+      </div>
+      <div class="cupboardbutton">
+        <img src="../../assets/image/H5 Thing/Word/word_cupboard Comp 1_0.png" v-if="walkers"
+             :style="{zIndex: !cupboard ? 100 : 1}" @click="showGif('cupboard')">
+      </div>
+    </div>
+    <div v-else-if="this.unit === 'My Home' && this.part === 'part2'">
+      <img src="../../assets/image/Room_MT/Runner_BG/bg_0.png"
+           style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;"/>
+      <div class="bathroom">
+        <img src="../../assets/image/Room_MT/Png/bathroom.png" v-if="bathroom" @click="showGif('bathroom')">
+        <img src="../../assets/image/Room_MT/GIF/bathroom.gif" style="z-index: 100" v-if="!bathroom"
+             @click="showGif('bathroom')">
+      </div>
+      <div class="bedroom">
+        <img src="../../assets/image/Room_MT/Png/bedroom.png" v-if="bedroom" @click="showGif('bedroom')">
+        <img src="../../assets/image/Room_MT/GIF/bedroom.gif" style="z-index: 100" v-if="!bedroom"
+             @click="showGif('bedroom')">
+      </div>
+      <div class="dining">
+        <img src="../../assets/image/Room_MT/Png/dining room.png" v-if="dining" @click="showGif('dining')">
+        <img src="../../assets/image/Room_MT/GIF/dining-room.gif" style="z-index: 100" v-if="!dining"
+             @click="showGif('dining')">
+      </div>
+      <div class="door">
+        <img src="../../assets/image/Room_MT/Png/door.png" v-if="door" @click="showGif('door')">
+        <img src="../../assets/image/Room_MT/GIF/door.gif" style="z-index: 100" v-if="!door"
+             @click="showGif('door')">
+      </div>
+      <div class="flowers2">
+        <img src="../../assets/image/Room_MT/Png/flowers.png" v-if="flowers2" @click="walkers&&showGif('flowers2')">
+        <img src="../../assets/image/Room_MT/GIF/flowers.gif" style="z-index: 100" v-if="!flowers2"
+             @click="showGif('flowers2')">
+      </div>
+      <div class="garden">
+        <img src="../../assets/image/Room_MT/Png/garden.png" v-if="garden" @click="walkers&&showGif('garden')">
+        <img src="../../assets/image/Room_MT/GIF/garden.gif" style="z-index: 100" v-if="!garden"
+             @click="showGif('garden')">
+      </div>
+      <div class="kitchen">
+        <img src="../../assets/image/Room_MT/Png/kitchen.png" v-if="kitchen" @click="showGif('kitchen')">
+        <img src="../../assets/image/Room_MT/GIF/kitchen.gif" style="z-index: 100" v-if="!kitchen"
+             @click="showGif('kitchen')">
+      </div>
+      <div class="window">
+<!--        <img src="../../assets/image/Room_MT/Png/window.png" v-if="window" @click="showGif('window')">-->
+        <img src="../../assets/image/Room_MT/GIF/window.gif" style="z-index: 100" v-if="!window"
+             @click="showGif('window')">
+      </div>
+      <div class="living">
+        <img src="../../assets/image/Room_MT/Png/living room.png" v-if="living" @click="showGif('living')">
+        <img src="../../assets/image/Room_MT/GIF/living-room.gif" style="z-index: 100" v-if="!living"
+             @click="showGif('living')">
+      </div>
+      <div class="open">
+        <img src="../../assets/image/Room_MT/Png/open.png" v-if="open" @click="showGif('open')">
+        <img src="../../assets/image/Room_MT/GIF/open.gif" style="z-index: 100" v-if="!open"
+             @click="showGif('open')">
+      </div>
+      <div class="shower">
+<!--        <img src="../../assets/image/Room_MT/Png/shower.png" v-if="shower" @click="showGif('shower')">-->
+        <img src="../../assets/image/Room_MT/GIF/shower.gif" style="z-index: 100" v-if="!shower"
+             @click="showGif('shower')">
+      </div>
+      <div class="stairs">
+        <img src="../../assets/image/Room_MT/Png/stairs.png" v-if="stairs" @click="walkers&&showGif('stairs')">
+        <img src="../../assets/image/Room_MT/GIF/stairs.gif" style="z-index: 100" v-if="!stairs"
+             @click="showGif('stairs')">
+      </div>
+      <div class="bathroomButton">
+        <img src="../../assets/image/Room_MT/Word/word_bathroom Comp 1_0.png"
+             :style="{zIndex: !bathroom ? 100 : 1}" @click="showGif('bathroom')">
+      </div>
+      <div class="bedroomButton">
+        <img src="../../assets/image/Room_MT/Word/word_bedroom Comp 1_0.png"
+             :style="{zIndex: !bedroom ? 100 : 1}" @click="showGif('bedroom')">
+      </div>
+      <div class="diningButton">
+        <img src="../../assets/image/Room_MT/Word/word_dining room Comp 1_0.png"
+             :style="{zIndex: !dining ? 100 : 1}" @click="showGif('dining')">
+      </div>
+      <div class="doorButton">
+        <img src="../../assets/image/Room_MT/Word/word_door Comp 1_0.png"
+             :style="{zIndex: !door ? 100 : 1}" @click="showGif('door')">
+      </div>
+      <div class="flowers2Button">
+        <img src="../../assets/image/Room_MT/Word/word_flowers Comp 1_0.png" v-if="walkers"
+             :style="{zIndex: !flowers2 ? 100 : 1}" @click="showGif('flowers2')">
+      </div>
+      <div class="gardenButton">
+        <img src="../../assets/image/Room_MT/Word/word_garden Comp 1_0.png" v-if="walkers"
+             :style="{zIndex: !garden ? 100 : 1}" @click="showGif('garden')">
+      </div>
+      <div class="kitchenButton">
+        <img src="../../assets/image/Room_MT/Word/word_kitchen Comp 1_0.png"
+             :style="{zIndex: !kitchen ? 100 : 1}" @click="showGif('kitchen')">
+      </div>
+      <div class="livingButton">
+        <img src="../../assets/image/Room_MT/Word/word_living room Comp 1_0.png"
+             :style="{zIndex: !living ? 100 : 1}" @click="showGif('living')">
+      </div>
+      <div class="openButton">
+        <img src="../../assets/image/Room_MT/Word/word_open Comp 1_0.png"
+             :style="{zIndex: !open ? 100 : 1}" @click="showGif('open')">
+      </div>
+      <div class="showerButton">
+        <img src="../../assets/image/Room_MT/Word/word_shower Comp 1_0.png"
+             :style="{zIndex: !shower ? 100 : 1}" @click="showGif('shower')">
+      </div>
+      <div class="stairsButton">
+        <img src="../../assets/image/Room_MT/Word/word_stairs Comp 1_0.png" v-if="walkers"
+             :style="{zIndex: !stairs ? 100 : 1}" @click="showGif('stairs')">
+      </div>
+      <div class="windowButton">
+        <img src="../../assets/image/Room_MT/Word/word_window Comp 1_0.png" v-if="walkers"
+             :style="{zIndex: !window ? 100 : 1}" @click="showGif('window')">
+      </div>
+    </div>
+    <div v-else-if="this.unit === 'Our World' && this.part === 'part1'">
+      <img src="../../assets/image/Sky_MT/Runner_BG/bg_00000.png"
+           style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;"/>
+      <div class="airplane2">
+        <img src="../../assets/image/Sky_MT/Png/airplane.png" v-if="airplane2" @click="walkers&&showGif('airplane2')">
+        <img src="../../assets/image/Sky_MT/GIF/airplane.gif" style="z-index: 100" v-if="!airplane2"
+             @click="showGif('airplane2')">
+      </div>
+      <div class="bird2">
+        <img src="../../assets/image/Sky_MT/Png/bird.png" v-if="bird2" @click="showGif('bird2')">
+        <img src="../../assets/image/Sky_MT/GIF/bird.gif" style="z-index: 100" v-if="!bird2"
+             @click="showGif('bird2')">
+      </div>
+      <div class="cloud">
+        <img src="../../assets/image/Sky_MT/Png/cloud.png" v-if="cloud" @click="walkers&&showGif('cloud')">
+        <img src="../../assets/image/Sky_MT/GIF/cloud.gif" style="z-index: 100" v-if="!cloud"
+             @click="showGif('cloud')">
+      </div>
+      <div class="fall2">
+<!--        <img src="../../assets/image/Sky_MT/Png/fall.png" v-if="fall2" @click="showGif('fall2')">-->
+        <img src="../../assets/image/Sky_MT/GIF/fall.gif" style="z-index: 100" v-if="!fall2"
+             @click="showGif('fall2')">
+      </div>
+      <div class="fly4">
+        <img src="../../assets/image/Sky_MT/Png/fly.png" v-if="fly4" @click="showGif('fly4')">
+        <img src="../../assets/image/Sky_MT/GIF/fly.gif" style="z-index: 100" v-if="!fly4"
+             @click="showGif('fly4')">
+      </div>
+      <div class="gaze">
+        <img src="../../assets/image/Sky_MT/Png/gaze.png" v-if="gaze" @click="showGif('gaze')">
+        <img src="../../assets/image/Sky_MT/GIF/gaze.gif" style="z-index: 100" v-if="!gaze"
+             @click="showGif('gaze')">
+      </div>
+      <div class="lighting">
+        <img src="../../assets/image/Sky_MT/Png/lightning.png" v-if="lighting" @click="showGif('lighting')">
+        <img src="../../assets/image/Sky_MT/GIF/lightning.gif" style="z-index: 100" v-if="!lighting"
+             @click="showGif('lighting')">
+      </div>
+      <div class="moon2">
+        <img src="../../assets/image/Sky_MT/Png/moon.png" v-if="moon2" @click="showGif('moon2')">
+        <img src="../../assets/image/Sky_MT/GIF/moon.gif" style="z-index: 100" v-if="!moon2"
+             @click="showGif('moon2')">
+      </div>
+      <div class="rain3">
+        <img src="../../assets/image/Sky_MT/Png/rain.png" v-if="rain3" @click="walkers&&showGif('rain3')">
+        <img src="../../assets/image/Sky_MT/GIF/rain.gif" style="z-index: 100" v-if="!rain3"
+             @click="showGif('rain3')">
+      </div>
+      <div class="rainbow">
+        <img src="../../assets/image/Sky_MT/Png/rainbow.png" v-if="rainbow" @click="showGif('rainbow')">
+        <img src="../../assets/image/Sky_MT/GIF/rainbow.gif" style="z-index: 100" v-if="!rainbow"
+             @click="showGif('rainbow')">
+      </div>
+      <div class="star3">
+        <img src="../../assets/image/Sky_MT/Png/star.png" v-if="star3" @click="showGif('star3')">
+        <img src="../../assets/image/Sky_MT/GIF/star.gif" style="z-index: 100" v-if="!star3"
+             @click="showGif('star3')">
+      </div>
+      <div class="sun3">
+        <img src="../../assets/image/Sky_MT/Png/sun.png" v-if="sun3" @click="showGif('sun3')">
+        <img src="../../assets/image/Sky_MT/GIF/sun.gif" style="z-index: 100" v-if="!sun3"
+             @click="showGif('sun3')">
+      </div>
+      <div class="airplane2Button">
+        <img src="../../assets/image/Sky_MT/Word/word_airplane Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !airplane2 ? 100 : 1}" @click="showGif('airplane2')">
+      </div>
+      <div class="bird2Button">
+        <img src="../../assets/image/Sky_MT/Word/word_bird Comp 1_00000.png"
+             :style="{zIndex: !bird2 ? 100 : 1}" @click="showGif('bird2')">
+      </div>
+      <div class="cloudButton">
+        <img src="../../assets/image/Sky_MT/Word/word_cloud Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !cloud ? 100 : 1}" @click="showGif('cloud')">
+      </div>
+      <div class="fall2Button">
+        <img src="../../assets/image/Sky_MT/Word/word_fall Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !fall2 ? 100 : 1}" @click="showGif('fall2')">
+      </div>
+      <div class="fly4Button">
+        <img src="../../assets/image/Sky_MT/Word/word_fly Comp 1_00000.png"
+             :style="{zIndex: !fly4 ? 100 : 1}" @click="showGif('fly4')">
+      </div>
+      <div class="gazeButton">
+        <img src="../../assets/image/Sky_MT/Word/word_gaze Comp 1_00000.png"
+             :style="{zIndex: !gaze ? 100 : 1}" @click="showGif('gaze')">
+      </div>
+      <div class="lightingButton">
+        <img src="../../assets/image/Sky_MT/Word/word_lightning Comp 1_00000.png"
+             :style="{zIndex: !lighting ? 100 : 1}" @click="showGif('lighting')">
+      </div>
+      <div class="moon2Button">
+        <img src="../../assets/image/Sky_MT/Word/word_moon Comp 1_00000.png"
+             :style="{zIndex: !moon2 ? 100 : 1}" @click="showGif('moon2')">
+      </div>
+      <div class="rain3Button">
+        <img src="../../assets/image/Sky_MT/Word/word_rain Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !rain3 ? 100 : 1}" @click="showGif('rain3')">
+      </div>
+      <div class="rainbowButton">
+        <img src="../../assets/image/Sky_MT/Word/word_rainbow Comp 1_00000.png"
+             :style="{zIndex: !rainbow ? 100 : 1}" @click="showGif('rainbow')">
+      </div>
+      <div class="star3Button">
+        <img src="../../assets/image/Sky_MT/Word/word_star Comp 1_00000.png"
+             :style="{zIndex: !star3 ? 100 : 1}" @click="showGif('star3')">
+      </div>
+      <div class="sun3Button">
+        <img src="../../assets/image/Sky_MT/Word/word_sun Comp 1_00000.png"
+             :style="{zIndex: !sun3 ? 100 : 1}" @click="showGif('sun3')">
+      </div>
+    </div>
+    <div v-else-if="this.unit === 'Our World' && this.part === 'part2'">
+      <img src="../../assets/image/Land_MT/Runner_BG/bg_00000.png"
+           style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;"/>
+      <div class="landStill">
+      <img src="../../assets/image/Land_MT/stillObj/StillObj_00000.png"
+           style="z-index: -1;"/>
+      </div>
+      <div class="animals2">
+        <img src="../../assets/image/Land_MT/Png/animals.png" v-if="animals2" @click="walkers&&showGif('animals2')">
+        <img src="../../assets/image/Land_MT/GIF/animals.gif" style="z-index: 100" v-if="!animals2"
+             @click="showGif('animals2')">
+      </div>
+      <div class="bridge">
+        <img src="../../assets/image/Land_MT/Png/brigde.png" v-if="bridge" @click="showGif('bridge')">
+        <img src="../../assets/image/Land_MT/GIF/brigde.gif" style="z-index: 100" v-if="!bridge"
+             @click="showGif('bridge')">
+      </div>
+      <div class="build">
+        <img src="../../assets/image/Land_MT/Png/build.png" v-if="build" @click="showGif('build')">
+        <img src="../../assets/image/Land_MT/GIF/build.gif" style="z-index: 100" v-if="!build"
+             @click="showGif('build')">
+      </div>
+      <div class="climb3">
+        <img src="../../assets/image/Land_MT/Png/climb.png" v-if="climb3" @click="showGif('climb3')">
+        <img src="../../assets/image/Land_MT/GIF/climb.gif" style="z-index: 100" v-if="!climb3"
+             @click="showGif('climb3')">
+      </div>
+      <div class="flowers3">
+        <img src="../../assets/image/Land_MT/Png/flowers.png" v-if="flowers3" @click="showGif('flowers3')">
+        <img src="../../assets/image/Land_MT/GIF/flowers.gif" style="z-index: 100" v-if="!flowers3"
+             @click="showGif('flowers3')">
+      </div>
+      <div class="house">
+        <img src="../../assets/image/Land_MT/Png/house.png" v-if="house" @click="showGif('house')">
+        <img src="../../assets/image/Land_MT/GIF/house.gif" style="z-index: 100" v-if="!house"
+             @click="showGif('house')">
+      </div>
+      <div class="mountain">
+        <img src="../../assets/image/Land_MT/Png/mountain.png" v-if="mountain" @click="showGif('mountain')">
+        <img src="../../assets/image/Land_MT/GIF/mountain.gif" style="z-index: 100" v-if="!mountain"
+             @click="showGif('mountain')">
+      </div>
+      <div class="ocean">
+        <img src="../../assets/image/Land_MT/Png/ocean.png" v-if="ocean" @click="walkers&&showGif('ocean')">
+        <img src="../../assets/image/Land_MT/GIF/ocean.gif" style="z-index: 100" v-if="!ocean"
+             @click="showGif('ocean')">
+      </div>
+      <div class="people">
+        <img src="../../assets/image/Land_MT/Png/people.png" v-if="people" @click="walkers&&showGif('people')">
+        <img src="../../assets/image/Land_MT/GIF/people.gif" style="z-index: 100" v-if="!people"
+             @click="showGif('people')">
+      </div>
+      <div class="river">
+        <img src="../../assets/image/Land_MT/Png/river.png" v-if="river" @click="showGif('river')">
+        <img src="../../assets/image/Land_MT/GIF/river.gif" style="z-index: 100" v-if="!river"
+             @click="showGif('river')">
+      </div>
+      <div class="road">
+        <img src="../../assets/image/Land_MT/Png/road.png" v-if="road" @click="walkers&&showGif('road')">
+        <img src="../../assets/image/Land_MT/GIF/road.gif" style="z-index: 100" v-if="!road"
+             @click="showGif('road')">
+      </div>
+      <div class="tree2">
+        <img src="../../assets/image/Land_MT/Png/tree.png" v-if="tree2" @click="showGif('tree2')">
+        <img src="../../assets/image/Land_MT/GIF/tree.gif" style="z-index: 100" v-if="!tree2"
+             @click="showGif('tree2')">
+      </div>
+      <div class="animals2Button">
+        <img src="../../assets/image/Land_MT/Word/word_animals Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !animals2 ? 100 : 1}" @click="showGif('animals2')">
+      </div>
+      <div class="bridgeButton">
+        <img src="../../assets/image/Land_MT/Word/word_bridge Comp 1_00000.png"
+             :style="{zIndex: !bridge ? 100 : 1}" @click="showGif('bridge')">
+      </div>
+      <div class="buildButton">
+        <img src="../../assets/image/Land_MT/Word/word_build Comp 1_00000.png"
+             :style="{zIndex: !build ? 100 : 1}" @click="showGif('build')">
+      </div>
+      <div class="climb3Button">
+        <img src="../../assets/image/Land_MT/Word/word_climb Comp 1_00000.png"
+             :style="{zIndex: !climb3 ? 100 : 1}" @click="showGif('climb3')">
+      </div>
+      <div class="flowers3Button">
+        <img src="../../assets/image/Land_MT/Word/word_flowers Comp 1_00000.png"
+             :style="{zIndex: !flowers3 ? 100 : 1}" @click="showGif('flowers3')">
+      </div>
+      <div class="houseButton">
+        <img src="../../assets/image/Land_MT/Word/word_house Comp 1_00000.png"
+             :style="{zIndex: !house ? 100 : 1}" @click="showGif('house')">
+      </div>
+      <div class="mountainButton">
+        <img src="../../assets/image/Land_MT/Word/word_mountain Comp 1_00000.png"
+             :style="{zIndex: !mountain ? 100 : 1}" @click="showGif('mountain')">
+      </div>
+      <div class="oceanButton">
+        <img src="../../assets/image/Land_MT/Word/word_ocean Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !ocean ? 100 : 1}" @click="showGif('ocean')">
+      </div>
+      <div class="peopleButton">
+        <img src="../../assets/image/Land_MT/Word/word_people Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !people ? 100 : 1}" @click="showGif('people')">
+      </div>
+      <div class="riverButton">
+        <img src="../../assets/image/Land_MT/Word/word_river Comp 1_00000.png"
+             :style="{zIndex: !river ? 100 : 1}" @click="showGif('river')">
+      </div>
+      <div class="roadButton">
+        <img src="../../assets/image/Land_MT/Word/word_road Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !road ? 100 : 1}" @click="showGif('road')">
+      </div>
+      <div class="tree2Button">
+        <img src="../../assets/image/Land_MT/Word/word_tree Comp 1_00000.png"
+             :style="{zIndex: !tree2 ? 100 : 1}" @click="showGif('tree2')">
       </div>
     </div>
     <div v-else>
@@ -5011,9 +5576,120 @@ export default {
           policeman:require('../../assets/Flashcard Audio/community/policeman.mp3'),
           teacher2:require('../../assets/Flashcard Audio/community/teacher.mp3'),
           vet:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          //FUN TIME
+          bake2:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          book2:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          cookies:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          dance:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          listen2:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          oven:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          paintbrush:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          piano:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          picture:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          read3:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          TV:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          videoGame:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          basketball:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          bike3:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          camp:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          fishing:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          goggles2:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          helmet2:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          jog2:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          racket:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          soccer:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          swim3:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          tennis:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          tent2:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          //my home
+          bathroom:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          bedroom:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          dining:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          door:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          flowers2:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          garden:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          kitchen:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          living:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          open:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          shower:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          stairs:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          window:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          mirror:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          wardrobe:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          bed:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          desk:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          sleep:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          wash:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          sink:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          toilet:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          lamp:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          sofa:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          phone:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          cupboard:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          //our world
+          airplane2:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          bird2:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          cloud:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          fall2:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          fly4:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          gaze:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          lighting:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          moon2:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          rain3:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          rainbow:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          star3:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          sun3:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          animals2:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          bridge:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          build:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          climb3:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          flowers3:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          house:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          mountain:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          ocean:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          people:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          river:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          road:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          tree2:require('../../assets/Flashcard Audio/community/vet.mp3'),
         },
         local:'',
         cardType:'default',
+        airplane2:true,
+        bird2:true,
+        cloud:true,
+        fall2:true,
+        fly4:true,
+        gaze:true,
+        lighting:true,
+        moon2:true,
+        rain3:true,
+        rainbow:true,
+        star3:true,
+        sun3:true,
+        animals2:true,
+        bridge:true,
+        build:true,
+        climb3:true,
+        flowers3:true,
+        house:true,
+        mountain:true,
+        ocean:true,
+        people:true,
+        river:true,
+        road:true,
+        tree2:true,
+        bathroom:true,
+        bedroom:true,
+        dining:true,
+        door:true,
+        flowers2:true,
+        garden:true,
+        kitchen:true,
+        living:true,
+        open:true,
+        shower:true,
+        stairs:true,
+        window:true,
         bake2:true,
         book2:true,
         cookies:true,
@@ -5026,6 +5702,18 @@ export default {
         read3:true,
         TV:true,
         videoGame:true,
+        basketball:true,
+        bike3:true,
+        camp:true,
+        fishing:true,
+        goggles2:true,
+        helmet2:true,
+        jog2:true,
+        racket:true,
+        soccer:true,
+        swim3:true,
+        tennis:true,
+        tent2:true,
         bakery:true,
         busStop:true,
         fireStation:true,
@@ -5497,19 +6185,19 @@ export default {
         shovel:true,
         thirsty:true,
         water:true,
-        mirror: true,
-        wardrobe: true,
-        bed: true,
-        desk: true,
-        sleep: true,
-        wash: true,
-        sink: true,
-        toilet: true,
-        lamp: true,
-        sofa: true,
-        phone: true,
-        cupboard: true,
-        walkers: true,
+        mirror:true,
+        wardrobe:true,
+        bed:true,
+        desk:true,
+        sleep:true,
+        wash:true,
+        sink:true,
+        toilet:true,
+        lamp:true,
+        sofa:true,
+        phone:true,
+        cupboard:true,
+        walkers:true,
         level: '',
         part: '',
         popp: false,
@@ -5528,14 +6216,14 @@ export default {
         zhezhao: false,
         list1: [],
         truesound: '',
-        onef: true,
+        onef:true,
         fade: 'fade',
         levels: 0,
-        flag2: true,
+        flag2:true,
         video: false,
         soundsWrong: false,
         soundscorrect: false,
-        show: true,
+        show:true,
         resume3: false,
         id: '',
         page: this.page++,
@@ -5548,7 +6236,7 @@ export default {
         type: 'chatwalker',
         sum: 0,
         score: "",
-        issuccess: true,
+        issuccess:true,
         issuccess2: false,
         issuccess1: false,
         canvasObj: null,
@@ -5557,7 +6245,7 @@ export default {
         pic: "",
         questionsize: 0,
         url: '/phonics/phonics',
-        canvasMoveUse: true,
+        canvasMoveUse:true,
         centerP: [], // 存储数组图片中心点的位置
         // 配置参数
         config: {
@@ -5721,6 +6409,704 @@ export default {
     z-index: 201;
   }
 
+  .landStill img {
+    width: 33%;
+    left: 23.5%;
+    top: 89%;
+    position: absolute;
+  }
+
+  .animals2 img {
+    width: 6%;
+    left: 70.5%;
+    top: 43%;
+    z-index: 2;
+    position: absolute;
+  }
+
+  .bridge img {
+    width: 32%;
+    left: 70.5%;
+    top: 41%;
+    z-index: 1;
+    position: absolute;
+  }
+
+  .build img {
+    width: 15%;
+    left: 75.5%;
+    top: 66%;
+    z-index: 1;
+    position: absolute;
+  }
+
+  .climb3 img {
+    width: 28%;
+    left: 0%;
+    top: 35%;
+    z-index: 1;
+    position: absolute;
+  }
+
+  .flowers3 img {
+    width: 15%;
+    left: 17.5%;
+    top: 75%;
+    z-index: 1;
+    position: absolute;
+  }
+
+  .house img {
+    width: 18%;
+    left: 48.5%;
+    top: 48%;
+    z-index: 1;
+    position: absolute;
+  }
+
+  .mountain img {
+    width: 105%;
+    left: -12.5%;
+    top: -6%;
+    position: absolute;
+  }
+
+  .ocean img {
+    width: 65%;
+    left: 31.5%;
+    top: 6%;
+    position: absolute;
+  }
+
+  .people img {
+    width: 12%;
+    left: 38%;
+    top: 67%;
+    position: absolute;
+  }
+
+  .river img {
+    width: 41%;
+    left: 52.5%;
+    top: 34%;
+    position: absolute;
+  }
+
+  .road img {
+    width: 21%;
+    left: 40.5%;
+    top: 60%;
+    position: absolute;
+  }
+
+  .tree2 img {
+    width: 10%;
+    left: 43.5%;
+    top: 48%;
+    position: absolute;
+  }
+
+  .animals2Button img {
+    width: 6%;
+    left: 64%;
+    top: 47%;
+    position: absolute;
+  }
+
+  .bridgeButton img {
+    width: 6%;
+    left: 81%;
+    top: 53%;
+    position: absolute;
+  }
+
+  .buildButton img {
+    width: 6%;
+    left: 68%;
+    top: 70%;
+    position: absolute;
+  }
+
+  .climb3Button img {
+    width: 6%;
+    left: 13%;
+    top: 60%;
+    position: absolute;
+  }
+
+  .flowers3Button img {
+    width: 7%;
+    left: 29%;
+    top: 87%;
+    position: absolute;
+  }
+
+  .houseButton img {
+    width: 6%;
+    left: 55%;
+    top: 46%;
+    position: absolute;
+  }
+
+  .mountainButton img {
+    width: 9%;
+    left: 12%;
+    top: 20%;
+    position: absolute;
+  }
+
+  .oceanButton img {
+    width: 6%;
+    left: 64%;
+    top: 15%;
+    position: absolute;
+  }
+
+  .peopleButton img {
+    width: 7%;
+    left: 30%;
+    top: 70%;
+    position: absolute;
+  }
+
+  .riverButton img {
+    width: 6%;
+    left: 63%;
+    top: 78%;
+    position: absolute;
+  }
+
+  .roadButton img {
+    width: 6%;
+    left: 35%;
+    top: 60%;
+    position: absolute;
+  }
+
+  .tree2Button img {
+    width: 6%;
+    left: 45%;
+    top: 39%;
+    position: absolute;
+  }
+
+  .airplane2 img {
+    width: 33%;
+    left: 61.5%;
+    top: 44%;
+    z-index: 1;
+    position: absolute;
+  }
+
+  .bird2 img {
+    width: 15%;
+    left: 29.5%;
+    top: 73%;
+    z-index: 2;
+    position: absolute;
+  }
+
+  .cloud img {
+    width: 21%;
+    left: 53.5%;
+    top: 2%;
+    position: absolute;
+  }
+
+  .fall2 img {
+    width: 36%;
+    left: 31.5%;
+    top: 11%;
+    position: absolute;
+  }
+
+  .fly4 img {
+    width: 17%;
+    left: 50.5%;
+    top: 72%;
+    z-index: 2;
+    position: absolute;
+  }
+
+  .gaze img {
+    width: 17%;
+    left: 0.5%;
+    top: 52%;
+    position: absolute;
+  }
+
+  .lighting img {
+    width: 23%;
+    left: 20.5%;
+    top: -6%;
+    position: absolute;
+  }
+
+  .moon2 img {
+    width: 17%;
+    left: 4.5%;
+    top: -2%;
+    position: absolute;
+  }
+
+  .rain3 img {
+    width: 25%;
+    left: 35.5%;
+    top: 20%;
+    z-index: 1;
+    position: absolute;
+  }
+
+  .rainbow img {
+    width: 58%;
+    left: 43.5%;
+    top: 23%;
+    position: absolute;
+  }
+
+  .star3 img {
+    width: 7%;
+    left: 6.5%;
+    top: 28%;
+    position: absolute;
+  }
+
+  .sun3 img {
+    width: 20%;
+    left: 78.5%;
+    top: -3%;
+    position: absolute;
+  }
+
+  .airplane2Button img {
+    width: 8%;
+    left: 82%;
+    top: 85%;
+    position: absolute;
+  }
+
+  .bird2Button img {
+    width: 7%;
+    left: 42%;
+    top: 70%;
+    position: absolute;
+  }
+
+  .cloudButton img {
+    width: 7%;
+    left: 56%;
+    top: 22%;
+    position: absolute;
+  }
+
+  .fall2Button img {
+    width: 6%;
+    left: 31%;
+    top: 61%;
+    position: absolute;
+  }
+
+  .fly4Button img {
+    width: 6%;
+    left: 63%;
+    top: 85%;
+    position: absolute;
+  }
+
+  .gazeButton img {
+    width: 7%;
+    left: 15%;
+    top: 50%;
+    position: absolute;
+  }
+
+  .lightingButton img {
+    width: 9%;
+    left: 24%;
+    top: 34%;
+    position: absolute;
+  }
+
+  .moon2Button img {
+    width: 7%;
+    left: 7%;
+    top: 24%;
+    position: absolute;
+  }
+
+  .rain3Button img {
+    width: 6%;
+    left: 40%;
+    top: 22%;
+    position: absolute;
+  }
+
+  .rainbowButton img {
+    width: 9%;
+    left: 69%;
+    top: 47%;
+    position: absolute;
+  }
+
+  .star3Button img {
+    width: 7%;
+    left: 0%;
+    top: 34%;
+    position: absolute;
+  }
+
+  .sun3Button img {
+    width: 7%;
+    left: 73%;
+    top: 5%;
+    position: absolute;
+  }
+
+  .bathroomButton img {
+    width: 7%;
+    left: 49%;
+    top: 37%;
+    position: absolute;
+  }
+
+  .bedroomButton img {
+    width: 7%;
+    left: 20%;
+    top: 37%;
+    position: absolute;
+  }
+
+  .diningButton img {
+    width: 8%;
+    left: 31%;
+    top: 50%;
+    position: absolute;
+  }
+
+  .doorButton img {
+    width: 5%;
+    left: 6%;
+    top: 45%;
+    position: absolute;
+  }
+
+  .flowers2Button img {
+    width: 6%;
+    left: 88%;
+    top: 68%;
+    position: absolute;
+  }
+
+  .gardenButton img {
+    width: 7%;
+    left: 73%;
+    top: 68%;
+    position: absolute;
+  }
+
+  .kitchenButton img {
+    width: 7%;
+    left: 42%;
+    top: 83%;
+    position: absolute;
+  }
+
+  .livingButton img {
+    width: 8%;
+    left: 79%;
+    top: 32%;
+    position: absolute;
+  }
+
+  .openButton img {
+    width: 5%;
+    left: 63%;
+    top: 76%;
+    position: absolute;
+  }
+
+  .showerButton img {
+    width: 7%;
+    left: 42%;
+    top: 4%;
+    position: absolute;
+  }
+
+  .stairsButton img {
+    width: 6%;
+    left: 6%;
+    top: 68%;
+    position: absolute;
+  }
+
+  .windowButton img {
+    width: 7%;
+    left: 11%;
+    top: 11%;
+    position: absolute;
+  }
+
+  .bathroom img {
+    width: 36%;
+    height: 37%;
+    left: 31.5%;
+    top: 11%;
+    position: absolute;
+  }
+
+  .bedroom img {
+    width: 36.2%;
+    height: 50%;
+    left: 0%;
+    top: 9%;
+    -webkit-transform: rotate(-1deg);
+    transform: rotate(-1deg);
+    position: absolute;
+  }
+
+  .dining img {
+    width: 25%;
+    left: 35.5%;
+    top: 42%;
+    position: absolute;
+  }
+
+  .door img {
+    width: 6%;
+    left: 11.5%;
+    top: 36%;
+    position: absolute;
+  }
+
+  .flowers2 img {
+    width: 13%;
+    left: 85.5%;
+    top: 54%;
+    z-index: 1;
+    position: absolute;
+  }
+
+  .garden img {
+    width: 34%;
+    left: 66.5%;
+    top: 10%;
+    position: absolute;
+  }
+
+  .kitchen img {
+    width: 22%;
+    left: 26%;
+    top: 68%;
+    transform: rotate(-2deg);
+    position: absolute;
+  }
+
+  .living img {
+    width: 35%;
+    left: 56.5%;
+    top: 13%;
+    transform: rotate(4deg);
+    position: absolute;
+  }
+
+  .open img {
+    width: 12%;
+    left: 57%;
+    top: 54%;
+    position: absolute;
+  }
+
+  .shower img {
+    width: 16%;
+    left: 35.5%;
+    top: 10%;
+    position: absolute;
+  }
+
+  .stairs img {
+    width: 11.5%;
+    left: 12%;
+    top: 53%;
+    position: absolute;
+  }
+
+  .window img {
+    width: 7%;
+    left: 11.5%;
+    top: 16%;
+    position: absolute;
+  }
+
+  .basketballButton img {
+    width: 9%;
+    left: 34%;
+    top: 86%;
+    position: absolute;
+  }
+
+  .bike3Button img {
+    width: 5%;
+    left: 31%;
+    top: 55%;
+    position: absolute;
+  }
+
+  .campButton img {
+    width: 6%;
+    left: 12%;
+    top: 37%;
+    position: absolute;
+  }
+
+  .fishingButton img {
+    width: 9%;
+    left: 73%;
+    top: 27%;
+    position: absolute;
+  }
+
+  .goggles2Button img {
+    width: 7%;
+    left: 86%;
+    top: 41%;
+    position: absolute;
+  }
+
+  .helmet2Button img {
+    width: 7%;
+    left: 50%;
+    top: 35%;
+    position: absolute;
+  }
+
+  .jog2Button img {
+    width: 5%;
+    left: 44%;
+    top: 19%;
+    position: absolute;
+  }
+
+  .racketButton img {
+    width: 7%;
+    left: 70%;
+    top: 53%;
+    position: absolute;
+  }
+
+  .soccerButton img {
+    width: 7%;
+    left: 19%;
+    top: 72%;
+    position: absolute;
+  }
+
+  .swim3Button img {
+    width: 6%;
+    left: 71%;
+    top: 14%;
+    position: absolute;
+  }
+
+  .tennisButton img {
+    width: 7%;
+    left: 64%;
+    top: 81%;
+    position: absolute;
+  }
+
+  .tent2Button img {
+    width: 5%;
+    left: 9%;
+    top: 14%;
+    position: absolute;
+  }
+
+  .basketball img {
+    width: 4%;
+    left: 35.5%;
+    top: 73%;
+    position: absolute;
+  }
+
+  .bike3 img {
+    width: 18%;
+    left: 35.5%;
+    top: 34%;
+    position: absolute;
+  }
+
+  .camp img {
+    width: 24%;
+    left: 1.5%;
+    top: 34%;
+    position: absolute;
+  }
+
+  .fishing img {
+    width: 11%;
+    left: 63.5%;
+    top: 23%;
+    position: absolute;
+  }
+
+  .goggles2 img {
+    width: 6%;
+    left: 79.5%;
+    top: 38%;
+    position: absolute;
+  }
+
+  .helmet2 img {
+    width: 6%;
+    left: 44.5%;
+    top: 31%;
+    position: absolute;
+  }
+
+  .jog2 img {
+    width: 8%;
+    left: 47.5%;
+    top: 14%;
+    position: absolute;
+  }
+
+  .racket img {
+    width: 12%;
+    left: 81.5%;
+    top: 49%;
+    position: absolute;
+  }
+
+  .soccer img {
+    width: 18%;
+    left: 18.5%;
+    top: 75%;
+    position: absolute;
+  }
+
+  .swim3 img {
+    width: 19%;
+    left: 75.5%;
+    top: 16%;
+    position: absolute;
+  }
+
+  .tennis img {
+    width: 48%;
+    height: 45%;
+    left: 53.5%;
+    top: 48%;
+    position: absolute;
+    transform: rotate(2deg);
+  }
+
+  .tent2 img {
+    width: 30%;
+    left: 8.5%;
+    top: 5%;
+    position: absolute;
+  }
+
   .bake2Button img{
     width: 5%;
     left: 72%;
@@ -5737,8 +7123,8 @@ export default {
 
   .cookiesButton img {
     width: 7%;
-    left: 79%;
-    top: 72%;
+    left: 85%;
+    top: 74%;
     position: absolute;
   }
 
@@ -5800,7 +7186,7 @@ export default {
 
   .videoGameButton img {
     width: 9%;
-    left: 4%;
+    left: 6%;
     top: 47%;
     position: absolute;
   }
@@ -13344,14 +14730,12 @@ export default {
     top: 54%;
     left: 30%;
     position: absolute;
-
     .img1 {
       width: 40%;
       right: 48%;
       top: 52%;
       position: absolute;
     }
-
     .img2 {
       width: 70%;
       top: 56%;
@@ -13368,7 +14752,6 @@ export default {
     top: 55%;
     left: 29%;
     position: absolute;
-
     img {
       width: 50%;
       top: 50%;
@@ -13385,14 +14768,12 @@ export default {
     top: 40%;
     left: 30%;
     position: absolute;
-
     img {
       width: 55%;
       top: 55%;
       left: 43%;
       position: absolute;
     }
-
   }
 
   .cupboardbutton {
@@ -13511,7 +14892,6 @@ export default {
       left: 0;
     }
   }
-
 
   @media screen and (min-width: 1600px) {
     .tower{
@@ -13953,6 +15333,362 @@ export default {
   @media only screen and (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 3) ,
   (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 812px) and (max-width: 1023px){
+    .roadButton img {
+      width: 6%;
+      left: 37%;
+      top: 57%;
+      position: absolute;
+    }
+    .tree2Button img {
+      width: 6%;
+      left: 45%;
+      top: 35%;
+      position: absolute;
+    }
+    .houseButton img {
+      width: 6%;
+      left: 55%;
+      top: 44%;
+      position: absolute;
+    }
+    .animals2Button img {
+      width: 7%;
+      left: 63%;
+      top: 43%;
+      position: absolute;
+    }
+    .buildButton img {
+      width: 6%;
+      left: 70%;
+      top: 67%;
+      position: absolute;
+    }
+    .climb3Button img {
+      width: 7%;
+      left: 13%;
+      top: 60%;
+      position: absolute;
+    }
+    .tree2 img {
+      width: 10%;
+      left: 43.5%;
+      top: 44%;
+      position: absolute;
+    }
+    .house img {
+      width: 17%;
+      left: 49.5%;
+      top: 47%;
+      z-index: 1;
+      position: absolute;
+    }
+    .people img {
+      width: 12%;
+      left: 38%;
+      top: 65%;
+      position: absolute;
+    }
+    .bridge img {
+      width: 32%;
+      left: 70.5%;
+      top: 39%;
+      z-index: 1;
+      position: absolute;
+    }
+    .mountain img {
+      width: 115%;
+      height: 95%;
+      left: -19.5%;
+      top: -5%;
+      position: absolute;
+    }
+    .build img {
+      width: 13%;
+      left: 76.5%;
+      top: 66%;
+      z-index: 1;
+      position: absolute;
+    }
+    .river img {
+      width: 35%;
+      left: 55.5%;
+      top: 34%;
+      position: absolute;
+    }
+    .landStill img {
+      width: 33%;
+      left: 23.5%;
+      top: 87%;
+      position: absolute;
+    }
+    .flowers3 img {
+      width: 15%;
+      left: 17.5%;
+      top: 71%;
+      z-index: 1;
+      position: absolute;
+    }
+    .climb3 img {
+      width: 24%;
+      left: 0%;
+      top: 35%;
+      z-index: 1;
+      position: absolute;
+    }
+    .fall2 img {
+      width: 30%;
+      left: 28.5%;
+      top: 9%;
+      position: absolute;
+    }
+    .moon2 img {
+      width: 13%;
+      left: 6.5%;
+      top: -2%;
+      position: absolute;
+    }
+    .rain3Button img {
+      width: 6%;
+      left: 43%;
+      top: 22%;
+      position: absolute;
+    }
+    .cloudButton img {
+      width: 7%;
+      left: 56%;
+      top: 23%;
+      position: absolute;
+    }
+    .rain3 img {
+      width: 20%;
+      left: 35.5%;
+      top: 25%;
+      z-index: 1;
+      position: absolute;
+    }
+    .sun3Button img {
+      width: 6%;
+      left: 74%;
+      top: 8%;
+      position: absolute;
+    }
+    .sun3 img {
+      width: 16%;
+      left: 79.5%;
+      top: -4%;
+      position: absolute;
+    }
+    .fly4Button img {
+      width: 5%;
+      left: 67%;
+      top: 86%;
+      position: absolute;
+    }
+    .fly4 img {
+      width: 17%;
+      left: 52.5%;
+      top: 76%;
+      z-index: 2;
+      position: absolute;
+    }
+    .airplane2 img {
+      width: 31%;
+      left: 63.5%;
+      top: 41%;
+      z-index: 1;
+      position: absolute;
+    }
+    .rainbow img {
+      width: 57%;
+      left: 45.5%;
+      top: 19%;
+      position: absolute;
+    }
+    .bird2 img {
+      width: 15%;
+      left: 28.5%;
+      top: 72%;
+      z-index: 2;
+      position: absolute;
+    }
+    .gaze img {
+      width: 16%;
+      left: 0.5%;
+      top: 51%;
+      position: absolute;
+    }
+    .gardenButton img {
+      width: 7%;
+      left: 79%;
+      top: 68%;
+      position: absolute;
+    }
+    .flowers2 img {
+      width: 9%;
+      left: 90.5%;
+      top: 55%;
+      z-index: 1;
+      position: absolute;
+    }
+    .garden img {
+      width: 28%;
+      left: 73.5%;
+      top: 11%;
+      position: absolute;
+    }
+    .shower img{
+      width: 14%;
+      left: 38.5%;
+      top: 9%;
+      position: absolute;
+    }
+    .living img {
+      width: 33%;
+      left: 57.5%;
+      top: 9%;
+      transform: rotate(3deg);
+      position: absolute;
+    }
+    .door img {
+      width: 5%;
+      left: 12.5%;
+      top: 37%;
+      position: absolute;
+    }
+    .stairs img {
+      width: 9%;
+      left: 13%;
+      top: 54%;
+      position: absolute;
+    }
+    .open img {
+      width: 11%;
+      left: 57%;
+      top: 54%;
+      transform: rotate(6deg);
+      position: absolute;
+    }
+    .dining img {
+      width: 21%;
+      left: 36.5%;
+      top: 43%;
+      position: absolute;
+    }
+    .kitchen img {
+      width: 22%;
+      left: 25%;
+      top: 63%;
+      transform: rotate(-7deg);
+      position: absolute;
+    }
+    .campButton img {
+      width: 6%;
+      left: 12%;
+      top: 34%;
+      position: absolute;
+    }
+    .tent2 img {
+      width: 26%;
+      left: 8.5%;
+      top: 2%;
+      position: absolute;
+    }
+    .camp img {
+      width: 23%;
+      left: 2.5%;
+      top: 31%;
+      position: absolute;
+    }
+    .tent2 img {
+      width: 27%;
+      left: 8.5%;
+      top: 2%;
+      position: absolute;
+    }
+    .soccer img {
+      width: 17%;
+      left: 18.5%;
+      top: 75%;
+      position: absolute;
+    }
+    .basketball img {
+      width: 3%;
+      left: 35.5%;
+      top: 72%;
+      position: absolute;
+    }
+    .basketballButton img {
+      width: 10%;
+      left: 34%;
+      top: 89%;
+      position: absolute;
+    }
+    .jog2Button img {
+      width: 4%;
+      left: 44%;
+      top: 19%;
+      position: absolute;
+    }
+    .bike3Button img {
+      width: 5%;
+      left: 31%;
+      top: 52%;
+      position: absolute;
+    }
+    .helmet2Button img {
+      width: 6%;
+      left: 52%;
+      top: 33%;
+      position: absolute;
+    }
+    .jog2 img {
+      width: 8%;
+      left: 47.5%;
+      top: 11%;
+      position: absolute;
+    }
+    .bike3 img {
+      width: 17%;
+      left: 36.5%;
+      top: 31%;
+      position: absolute;
+    }
+    .racket img {
+      width: 12%;
+      left: 81.5%;
+      top: 47%;
+      position: absolute;
+    }
+    .swim3 img {
+      width: 19%;
+      left: 75.5%;
+      top: 15%;
+      position: absolute;
+    }
+    .fishing img {
+      width: 12%;
+      left: 61.5%;
+      top: 14%;
+      position: absolute;
+    }
+    .goggles2Button img {
+      width: 7%;
+      left: 81%;
+      top: 43%;
+      position: absolute;
+    }
+    .goggles2 img {
+      width: 6%;
+      left: 74.5%;
+      top: 41%;
+      position: absolute;
+    }
+    .cookiesButton img {
+      width: 7%;
+      left: 85%;
+      top: 72%;
+      position: absolute;
+    }
     .videoGameButton img {
       width: 9%;
       left: 6%;
@@ -17702,6 +19438,552 @@ export default {
   @media only screen and (min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 1024px) and (max-width: 1600px){
+    .oceanButton img {
+      width: 7%;
+      left: 64%;
+      top: 15%;
+      position: absolute;
+    }
+    .mountainButton img {
+      width: 11%;
+      left: 13%;
+      top: 25%;
+      position: absolute;
+    }
+    .peopleButton img {
+      width: 8%;
+      left: 30%;
+      top: 73%;
+      position: absolute;
+    }
+    .roadButton img {
+      width: 7%;
+      left: 36%;
+      top: 60%;
+      position: absolute;
+    }
+    .tree2Button img {
+      width: 6%;
+      left: 45%;
+      top: 44%;
+      position: absolute;
+    }
+    .houseButton img {
+      width: 7%;
+      left: 55%;
+      top: 50%;
+      position: absolute;
+    }
+    .animals2Button img {
+      width: 7%;
+      left: 63%;
+      top: 47%;
+      position: absolute;
+    }
+    .bridgeButton img {
+      width: 7%;
+      left: 80%;
+      top: 54%;
+      position: absolute;
+    }
+    .buildButton img {
+      width: 7%;
+      left: 68%;
+      top: 68%;
+      position: absolute;
+    }
+    .riverButton img {
+      width: 7%;
+      left: 63%;
+      top: 78%;
+      position: absolute;
+    }
+    .climb3Button img {
+      width: 7%;
+      left: 15%;
+      top: 60%;
+      position: absolute;
+    }
+    .flowers3Button img {
+      width: 8%;
+      left: 29%;
+      top: 87%;
+      position: absolute;
+    }
+    .tree2 img {
+      width: 10%;
+      left: 43.5%;
+      top: 51%;
+      position: absolute;
+    }
+    .road img {
+      width: 21%;
+      left: 40.5%;
+      top: 62%;
+      position: absolute;
+    }
+    .house img {
+      width: 20%;
+      left: 47.5%;
+      top: 52%;
+      z-index: 1;
+      position: absolute;
+    }
+    .ocean img {
+      width: 95%;
+      left: 6.5%;
+      top: 6%;
+      position: absolute;
+    }
+    .animals2 img {
+      width: 7%;
+      left: 70.5%;
+      top: 45%;
+      z-index: 2;
+      position: absolute;
+    }
+    .bridge img {
+      width: 34%;
+      left: 68.5%;
+      top: 45%;
+      z-index: 1;
+      position: absolute;
+    }
+    .build img {
+      width: 18%;
+      left: 76.5%;
+      top: 69%;
+      z-index: 1;
+      position: absolute;
+    }
+    .river img {
+      width: 41%;
+      height: 66%;
+      left: 52.5%;
+      top: 34%;
+      position: absolute;
+    }
+    .landStill img {
+      width: 34%;
+      left: 20.5%;
+      top: 92%;
+      z-index: 2;
+      position: absolute;
+    }
+    .people img {
+      width: 12%;
+      left: 38%;
+      top: 71%;
+      position: absolute;
+    }
+    .mountain img {
+      width: 105%;
+      height: 100%;
+      left: -12.5%;
+      top: -8%;
+      position: absolute;
+    }
+    .flowers3 img {
+      width: 15%;
+      left: 17.5%;
+      top: 82%;
+      z-index: 3;
+      position: absolute;
+    }
+    .climb3 img {
+      width: 38%;
+      left: 0%;
+      top: 37%;
+      z-index: 1;
+      position: absolute;
+    }
+    .fall2 img {
+      width: 32%;
+      left: 30.5%;
+      top: 14%;
+      position: absolute;
+    }
+    .gazeButton img {
+      width: 8%;
+      left: 14%;
+      top: 59%;
+      position: absolute;
+    }
+    .lightingButton img {
+      width: 10%;
+      left: 22%;
+      top: 28%;
+      position: absolute;
+    }
+    .cloudButton img {
+      width: 8%;
+      left: 56%;
+      top: 20%;
+      position: absolute;
+    }
+    .rainbowButton img {
+      width: 10%;
+      left: 65%;
+      top: 55%;
+      position: absolute;
+    }
+    .airplane2Button img {
+      width: 9%;
+      left: 83%;
+      top: 85%;
+      position: absolute;
+    }
+    .fly4Button img {
+      width: 6%;
+      left: 61%;
+      top: 87%;
+      position: absolute;
+    }
+    .bird2Button img {
+      width: 7%;
+      left: 42%;
+      top: 75%;
+      position: absolute;
+    }
+    .lighting img {
+      width: 23%;
+      left: 19.5%;
+      top: -1%;
+      position: absolute;
+    }
+    .moon2 img {
+      width: 18%;
+      left: 3.5%;
+      top: 2%;
+      position: absolute;
+    }
+    .rain3 img {
+      width: 25%;
+      left: 31.5%;
+      top: 24%;
+      z-index: 1;
+      position: absolute;
+    }
+    .cloud img {
+      width: 21%;
+      left: 53.5%;
+      top: 5%;
+      position: absolute;
+    }
+    .airplane2 img {
+      width: 35%;
+      left: 59.5%;
+      top: 56%;
+      z-index: 1;
+      position: absolute;
+    }
+    .fly4 img {
+      width: 17%;
+      left: 46.5%;
+      top: 79%;
+      z-index: 2;
+      position: absolute;
+    }
+    .rainbow img {
+      width: 65%;
+      left: 38.5%;
+      top: 37%;
+      position: absolute;
+    }
+    .bird2 img {
+      width: 15%;
+      left: 29.5%;
+      top: 78%;
+      z-index: 2;
+      position: absolute;
+    }
+    .gaze img {
+      width: 17%;
+      left: 0.5%;
+      top: 62%;
+      position: absolute;
+    }
+    .window img {
+      width: 8%;
+      left: 10.5%;
+      top: 18%;
+      position: absolute;
+    }
+    .showerButton img {
+      width: 9%;
+      left: 41%;
+      top: 5%;
+      position: absolute;
+    }
+    .bathroomButton img {
+      width: 9%;
+      left: 46%;
+      top: 37%;
+      position: absolute;
+    }
+    .livingButton img {
+      width: 11%;
+      left: 77%;
+      top: 36%;
+      position: absolute;
+    }
+    .diningButton img {
+      width: 11%;
+      left: 31%;
+      top: 54%;
+      position: absolute;
+    }
+    .bedroomButton img {
+      width: 10%;
+      left: 20%;
+      top: 37%;
+      position: absolute;
+    }
+    .windowButton img {
+      width: 9%;
+      left: 11%;
+      top: 11%;
+      position: absolute;
+    }
+    .bedroomButton img {
+      width: 8%;
+      left: 20%;
+      top: 37%;
+      position: absolute;
+    }
+    .doorButton img {
+      width: 6%;
+      left: 5%;
+      top: 45%;
+      position: absolute;
+    }
+    .stairsButton img {
+      width: 7%;
+      left: 7%;
+      top: 68%;
+      position: absolute;
+    }
+    .kitchenButton img {
+      width: 9%;
+      left: 36%;
+      top: 81%;
+      position: absolute;
+    }
+    .openButton img {
+      width: 7%;
+      left: 60%;
+      top: 78%;
+      position: absolute;
+    }
+    .gardenButton img {
+      width: 9%;
+      left: 73%;
+      top: 68%;
+      position: absolute;
+    }
+    .flowers2Button img {
+      width: 8%;
+      left: 88%;
+      top: 69%;
+      position: absolute;
+    }
+    .bathroom img {
+      width: 36%;
+      left: 31.5%;
+      top: 10%;
+      position: absolute;
+    }
+    .dining img {
+      width: 24%;
+      left: 37.5%;
+      top: 50%;
+      position: absolute;
+    }
+    .living img {
+      width: 38%;
+      left: 53.5%;
+      top: 22%;
+      transform: rotate(-2deg);
+      position: absolute;
+    }
+    .door img {
+      width: 7%;
+      left: 11.5%;
+      top: 40%;
+      position: absolute;
+    }
+    .stairs img {
+      width: 13%;
+      left: 12%;
+      top: 55%;
+      position: absolute;
+    }
+    .open img {
+      width: 14%;
+      left: 55%;
+      top: 58%;
+      transform: rotate(-6deg);
+      position: absolute;
+    }
+    .kitchen img {
+      width: 32%;
+      left: 20%;
+      top: 64.5%;
+      -webkit-transform: rotate(5deg);
+      transform: rotate(5deg);
+      position: absolute;
+    }
+    .flowers2 img {
+      width: 13%;
+      left: 85.5%;
+      top: 58%;
+      z-index: 1;
+      position: absolute;
+    }
+    .garden img {
+      width: 34%;
+      left: 66.5%;
+      top: 27%;
+      position: absolute;
+    }
+    .helmet2 img {
+      width: 7%;
+      left: 44.5%;
+      top: 36%;
+      position: absolute;
+    }
+    .racket img {
+      width: 12%;
+      left: 81.5%;
+      top: 52%;
+      position: absolute;
+    }
+    .tent2Button img {
+      width: 7%;
+      left: 8%;
+      top: 14%;
+      position: absolute;
+    }
+    .campButton img {
+      width: 8%;
+      left: 11%;
+      top: 38%;
+      position: absolute;
+    }
+    .tent2 img {
+      width: 32%;
+      left: 7.5%;
+      top: 12%;
+      position: absolute;
+    }
+    .jog2Button img {
+      width: 6%;
+      left: 41%;
+      top: 19%;
+      position: absolute;
+    }
+    .jog2 img {
+      width: 10%;
+      left: 46.5%;
+      top: 15%;
+      position: absolute;
+    }
+    .helmet2Button img {
+      width: 9%;
+      left: 50%;
+      top: 34%;
+      position: absolute;
+    }
+    .bike3Button img {
+      width: 7%;
+      left: 31%;
+      top: 54%;
+      position: absolute;
+    }
+    .camp img {
+      width: 24%;
+      left: 1.5%;
+      top: 42%;
+      position: absolute;
+    }
+    .bike3 img {
+      width: 20%;
+      left: 35.5%;
+      top: 38%;
+      position: absolute;
+    }
+    .swim3Button img {
+      width: 7%;
+      left: 71%;
+      top: 14%;
+      position: absolute;
+    }
+    .swim3 img {
+      width: 21%;
+      left: 75.5%;
+      top: 16%;
+      position: absolute;
+    }
+    .fishingButton img {
+      width: 11%;
+      left: 73%;
+      top: 27%;
+      position: absolute;
+    }
+    .fishing img {
+      width: 15%;
+      left: 60.5%;
+      top: 17%;
+      position: absolute;
+    }
+    .goggles2Button img {
+      width: 9%;
+      left: 85%;
+      top: 43%;
+      position: absolute;
+    }
+    .goggles2 img {
+      width: 8%;
+      left: 75.5%;
+      top: 41%;
+      position: absolute;
+    }
+    .racketButton img {
+      width: 9%;
+      left: 74%;
+      top: 53%;
+      position: absolute;
+    }
+    .tennisButton img {
+      width: 9%;
+      left: 64%;
+      top: 81%;
+      position: absolute;
+    }
+    .soccerButton img {
+      width: 9%;
+      left: 18%;
+      top: 72%;
+      position: absolute;
+    }
+    .basketballButton img {
+      width: 12%;
+      left: 32%;
+      top: 85%;
+      position: absolute;
+    }
+    .basketball img {
+      width: 5%;
+      left: 34.5%;
+      top: 73%;
+      position: absolute;
+    }
+    .soccer img {
+      width: 19%;
+      left: 18.5%;
+      top: 81%;
+      position: absolute;
+    }
     .TV img {
       width: 13%;
       height: 35%;
@@ -17729,8 +20011,8 @@ export default {
     }
     .listen2Button img {
       width: 8%;
-      left: 30%;
-      top: 16%;
+      left: 33%;
+      top: 20%;
       position: absolute;
     }
     .danceButton img {
