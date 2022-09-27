@@ -356,8 +356,8 @@
                             //     that.falselist.splice(f, 1);
                             //   }
                             // }
-                      } else {
-                        console.log(361);
+                      }
+                      else {
                         for (var g = 0; g < that.list1.length; g++) {
                           if (connection.targetId === that.list1[g].targetId) {
                               if (that.falselist.length <= 0) {
@@ -423,7 +423,6 @@
                             that.zhezhao = false;
                           } else {
                             setTimeout(() => {
-                              console.log(that.right);
                               that.zhezhao = false;
                               that.$router.push({
                                 //核心语句
@@ -541,7 +540,7 @@
                                         //路由传参时push和query搭配使用 ，作用时传递参数
                                         type: that.type,
                                         partName: 'partNameD',
-                                        account: that.account,
+                                        account: that.right,
                                         menuId: that.menuId,
                                         unitsId: that.unitsId,
                                         unit: that.unit,
