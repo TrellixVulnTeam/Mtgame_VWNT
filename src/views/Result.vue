@@ -505,6 +505,7 @@
 			if(this.type=="part3to"){
 				this.scorename="MISTAKES";
 			}
+      alertImg(this.$axios.defaults.baseURL2);
 			this.$axios.post(this.url1, qs.stringify({
 				menuDetailId:this.menuId,
 				partName:this.partName,
@@ -557,8 +558,14 @@
 				}, 800);
 			 },100);
 			 }
+        setTimeout(() => {
+            document.getElementById('alertFram').style.display = 'none'}
+          ,1000)
 			}, res => {
 				alertMsg("You must be connected to the internet.<br>Please connect and try again.");
+        setTimeout(() => {
+            document.getElementById('alertFram').style.display = 'none'}
+          ,1000)
 			});
       // 统计时间
        var endtimestamp = (new Date()).getTime();

@@ -590,7 +590,6 @@
         this.list2=[];this.list1=[];
         for( var i=0;i<this.list.length;i++){
           this.list1.push(this.list[i]);
-          // that.list2.push(that.list[i]);
         }
         for(var u=0;u<this.list.length;u++){
           this.list2.push({
@@ -601,20 +600,10 @@
             name:this.list[u].name,
             showbg:this.list[u].showbg,
             targetId:this.list[u].targetId2,
-
           })
-
         }
         this.truelist = [];
         this.falselist = [];
-        // var leng=that.list.length/2-1;
-        //   that.list2=[];that.list1=[];
-        // for(var i=leng+1;i<that.list.length;i++){
-        // 	that.list2.push(that.list[i]);
-        // }
-        // for(var i=0;i<leng+1;i++){
-        // 	that.list1.push(that.list[i]);
-        // }
         this.zhezhao=false;
       },
       loadimg(){

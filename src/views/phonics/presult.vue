@@ -150,6 +150,7 @@
 		},
 		data() {
 			return {
+			  loading:false,
 				show: Boolean,
 				id: '',
 				get1:false,
@@ -487,6 +488,7 @@
       }else {
         this.url=this.url1;
       }
+      alertImg(this.$axios.defaults.baseURL2);
 			this.$axios.post(this.url, qs.stringify({
 				menuId:this.menuId,
 				score:this.account,
@@ -538,8 +540,14 @@
 				}, 800);
 			 },100);
 			 }
+      setTimeout(() => {
+          document.getElementById('alertFram').style.display = 'none'}
+        ,1000)
 			}, res => {
 				alertMsg("You must be connected to the internet.<br>Please connect and try again.");
+        setTimeout(() => {
+            document.getElementById('alertFram').style.display = 'none'}
+          ,1000)
 			});
 			// 统计时间
 			 var endtimestamp = (new Date()).getTime();

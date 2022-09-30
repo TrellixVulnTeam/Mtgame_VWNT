@@ -111,7 +111,7 @@
                     <!-- <img  src="../../assets/image/star_frame.png" class="imgstar2"/> -->
                   </div>
                 </div>
-
+                <button class="undo" @click="undo()">Undo</button>
               </div>
             </div>
           </div>
@@ -367,8 +367,6 @@
                                 //     that.truelist.splice(t, 1);
                                 //   }
                                 // }
-                              } else {
-                                that.falselist.push(connection.targetId);
                               }
                           }
                         }
@@ -653,6 +651,34 @@
     },
 
     methods: {
+      undo(){
+        this.onef = true;
+        this.loaded=false;
+        this.list = this.listD[this.countpage - 1];
+        this.list2 = [];
+        this.list1 = [];
+        this.falselist = [];
+        this.truelist = [];
+        for (var i = 0; i < this.list.length; i++) {
+          this.list1.push(this.list[i]);
+        }
+        for (var u = 0; u < this.list.length; u++) {
+          this.list2.push({
+            bg: this.list[u].bg,
+            id: this.list[u].id2,
+            changecolor: this.list[u].changecolor,
+            course_id: this.list[u].course_id,
+            issuccess: this.list[u].issuccess,
+            name: this.list[u].name,
+            question_Id: this.list[u].question_Id,
+            showbg: this.list[u].showbg,
+            t_part_detail_id: this.list[u].t_part_detail_id,
+            targetId: this.list[u].targetId2,
+            units_id: this.list[u].units_id,
+          })
+        }
+        this.zhezhao = false;
+      },
       makesound(li){
         // console.log(li);
         if(li.showbg===0){
@@ -891,6 +917,21 @@
     display: flex;
     background-color: #fcffd1;
     z-index: -1;
+  }
+
+  .undo{
+    position: absolute;
+    top: 20%;
+    right: 2%;
+    border: none;
+    width: 100px;
+    color: white;
+    font-size: 1.5rem;
+    font-family: pepper,serif;
+    background: url("../../assets/image/listbg.png") center;
+    border-radius: 15px;
+    height: 50px;
+    background-size: contain;
   }
 
   .foo {
