@@ -6297,22 +6297,22 @@ export default {
     },
     methods: {
       //点击播放动画
-      async showGif(name){
-        if (name===undefined || this.word){
-          this.zhezhao = !this.zhezhao;
-          this.$data[this.word]=!this.$data[this.word];
-          this.word=null;
-        }else {
-          this.word=name;
-          let audio = new Audio();
-          this.$data[this.word]=!this.$data[this.word];
-          this.zhezhao = !this.zhezhao;
-          audio.src=this.$data.mp3[this.word];
-          if(this.word){
-            await audio.play();
-          }
-        }
-      },
+       async showGif(name) {
+         if (name === undefined || this.word) {
+           this.zhezhao = !this.zhezhao;
+           this.$data[this.word] = !this.$data[this.word];
+           this.word = null;
+         } else {
+           this.word = name;
+           let audio = new Audio();
+           this.$data[this.word] = !this.$data[this.word];
+           this.zhezhao = !this.zhezhao;
+           audio.src = this.$data.mp3[this.word];
+           if (this.word) {
+             await audio.play();
+           }
+         }
+       },
       bodyScroll(event) {
         event.preventDefault();
       },

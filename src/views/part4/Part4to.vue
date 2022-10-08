@@ -351,23 +351,16 @@
                     //connection.targetId值右边命中的id，that.list1[i].targetId指右边本身的id
                       if (connection.targetId === that.list1[i].targetId) {
                             that.truelist.push(connection.targetId);
-                            // for (var f = 0; f < that.falselist.length; f++) {
-                            //   if (that.falselist[f] === connection.suspendedElementId) {
-                            //     that.falselist.splice(f, 1);
-                            //   }
-                            // }
+                            for (var f = 0; f < that.falselist.length; f++) {
+                              if (that.falselist[f] === connection.suspendedElementId) {
+                                that.falselist.splice(f, 1);
+                              }
+                            }
                       }
                       else {
                         for (var g = 0; g < that.list1.length; g++) {
                           if (connection.targetId === that.list1[g].targetId) {
-                              if (that.falselist.length <= 0) {
                                 that.falselist.push(connection.targetId);
-                                // for (var t = 0; t < that.truelist.length; t++) {
-                                //   if (that.truelist[t] === connection.suspendedElementId) {
-                                //     that.truelist.splice(t, 1);
-                                //   }
-                                // }
-                              }
                           }
                         }
                       }
