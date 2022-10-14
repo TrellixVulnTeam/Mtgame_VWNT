@@ -785,9 +785,8 @@
 				 }, 300);
 				 }else{
           this.loading = true;
-
+          setTimeout(()=>{this.change()},1000);
         }
-        //[{"checked":true,"product":{"avalilabilityQty":23,"b2bListedStatus":"LISTED","b2bMinimumToOrder":1,"b2cListedStatus":"LISTED","b2cMinimumToOrder":1,"conditionId1":8,"conditionId2":287,"conditionId3":288,"conditionId4":289,"conditionName1":"TERE","conditionName2":"GLOSS BLACK (Tuhua)","conditionName3":"DISC","conditionName4":"M","description":"","masterId":51,"masterPhotos":{"bigPhotoPath":"/images/master/2020/12/51-KhZxcD-big.png","isCheckout":true,"isFanfare":true,"isGallery":false,"isHomeRangeList":true,"isProfile":true,"isRange":false,"isSlide":false,"masterId":51,"mediumPhotoPath":"/images/master/2020/12/51-KhZxcD-medium.png","photoId":329,"photoPath":"/images/master/2020/12/51-KhZxcD.png","photoSorting":7,"smallPhotoPath":"/images/master/2020/12/51-KhZxcD-small.png","status":1,"url":"KhZxcD"},"productId":285,"productNamePo":"CHAPTER2 TERE FRAMESET(DISC BRAKE), COL#27, MEDIUM","productNameWebsite":"CHAPTER2 TERE FRAMESET(DISC BRAKE), C#27(GLOSS BLACK , TUHUA), MEDIUM","remark1":"MODEL","remark2":"COLOR","remark3":"BRAKE","remark4":"SIZE","sku":"117012FSMED27","standardCost":"3618.85","statusId":101,"subTitle":"ESSENTIAL COLLECTION ","totalPiecesMade":"","type":"FRAMESET","typeId":155,"unitOfMeasure":"SET","unitOfMeasureId":158},"productId":285,"quantity":1,"subTotal":296999,"unitPrice":296999}]
 			},
 			change2() {
 				if(this.UnitsList.length!=0){
@@ -804,6 +803,7 @@
 				}, 300);
 				}else{
           this.loading = true;
+          setTimeout(()=>{this.change2()},1000);
         }
 			},
 			change3() {
@@ -826,6 +826,7 @@
 				}, 300);
 				}else{
           this.loading = true;
+          setTimeout(()=>{this.change3()},1000);
         }
 			},
 			change4() {
@@ -843,6 +844,7 @@
 				}, 300);
 				}else{
           this.loading = true;
+          setTimeout(()=>{this.change4()},1000);
         }
 			},
 			change5() {
@@ -860,6 +862,7 @@
 				}, 300);
 				}else{
           this.loading = true;
+          setTimeout(()=>{this.change5()},1000);
         }
 			},
 			change6() {
@@ -877,6 +880,7 @@
 				}, 300);
 				}else{
           this.loading = true;
+          setTimeout(()=>{this.change6()},1000);
         }
 			},
 			change7() {
@@ -894,6 +898,7 @@
 				}, 300);
 				}else{
           this.loading = true;
+          setTimeout(()=>{this.change7()},1000);
         }
 			},
 			change8() {
@@ -911,6 +916,7 @@
 				}, 300);
 				}else{
           this.loading = true;
+          setTimeout(()=>{this.change8()},1000);
         }
 			},
 			bigboss(){
@@ -926,6 +932,7 @@
 				this.game = '9'
 				}else{
           this.loading = true;
+          setTimeout(()=>{this.bigboss()},1000);
         }
 			},
 			pop(){
@@ -959,7 +966,7 @@
 			},
 			starpop(){
 				var audio = document.getElementById('music');
-					audio.pause();
+        audio.pause();
         this.loading = true;
 				if(this.game==='8'){
 				setTimeout(() => {

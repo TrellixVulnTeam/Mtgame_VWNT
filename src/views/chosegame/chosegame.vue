@@ -613,11 +613,13 @@
 				let that=this;
 				this.levelsId=li.levels_detail_id;
 				this.url3=this.url+"Units";
+				this.loading = true;
 				this.$axios.post(this.url3,qs.stringify({
 				studentId:localStorage.getItem('studentId'),
 				levelsId:this.levelsId
 				})).then(res=>{
 				this.unitsList=res.data.unitsList;
+				this.loading = false;
 				}, res => {
 				    alertMsg("You must be connected to the internet.<br>Please connect and try again.");
 				})

@@ -313,21 +313,26 @@
           }
 
         } else {
+          if(this.phonicsList[0].id !== undefined){
             this.phonics = true;
             this.walkers = false;
             this.runners = false;
             this.advanced = false;
-            this.url2 = this.url + "phonics";
-            this.$axios.post(this.url2, qs.stringify({
-              studentId: localStorage.getItem('studentId'),
-              // courseId:this.courseId
-            })).then(res => {
-              this.phonicsList = res.data.phonicsList;
-
-            }, res => {
-              alertMsg("You must be connected to the internet.<br>Please connect and try again.");
-            })
-          // }, 1000);
+            // this.url2 = this.url + "phonics";
+            // this.$axios.post(this.url2, qs.stringify({
+            //   studentId: localStorage.getItem('studentId'),
+            // })).then(res => {
+            //   this.phonicsList = res.data.phonicsList;
+            //   console.log(this.phonicsList);
+            // }, res => {
+            //   alertMsg("You must be connected to the internet.<br>Please connect and try again.");
+            // })
+          }else{
+            alertImg(this.$axios.defaults.baseURL2);
+            setTimeout(() => {
+                document.getElementById('alertFram').style.display = 'none'}
+              ,1000)
+          }
         }
       },
       home() {
@@ -454,7 +459,6 @@
       this.pic = this.$axios.defaults.baseURL2;
       this.cources = this.$route.query.cources;
       this.style = this.$route.query.style; //接受参数关键代码
-      //无用if
       if (this.$route.query.phonicsId) {
         this.level = this.$route.query.level;
         this.phonicsId = this.$route.query.phonicsId;
@@ -520,7 +524,6 @@
       }, res => {
         alertMsg("You must be connected to the internet.<br>Please connect and try again.");
       })
-
     }
   };
 </script>

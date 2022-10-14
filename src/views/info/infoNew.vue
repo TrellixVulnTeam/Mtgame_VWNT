@@ -91,7 +91,7 @@
               <!--<span v-if="page2"><img src="../../assets/image/rightarrow.png" class="spanimg"></span>-->
               <span v-if="page2" v-bind:class="{opciay:opciay2}" @click="$tips(true);section2()">{{ level }}</span>
               <!--<span v-if="page6"><img src="../../assets/image/rightarrow.png" class="spanimg"></span>-->
-              <!--<span v-if="page6" v-bind:class="{opciay:opciay6}" @click="section3">{{unitname}}</span>-->
+              <!--<span v-if="page6" v-bind:class="{opciay:opciay6}" @click="section3">{{·unitname}}</span>-->
               <span v-if="page3"><img src="../../assets/image/rightarrow.png" class="spanimg"></span>
               <span v-if="page3" v-bind:class="{opciay:opciay3}" @click="$tips(true);section3()">{{ unitname }}</span>
               <span v-if="page4"><img src="../../assets/image/rightarrow.png" class="spanimg"></span>
@@ -1865,7 +1865,6 @@ export default {
               twostart: false,
               threestart: false,
             });
-
           } else if (this.detailList[i].star == "1") {
             this.detailList[i].stars.push({
               onestart: true,
@@ -1887,11 +1886,8 @@ export default {
               threestart: true,
 
             });
-
           }
-
         }
-
       }, res => {
         alertMsg("You must be connected to the internet.<br>Please connect and try again.");
       });
@@ -1916,8 +1912,6 @@ export default {
     //统计
     Statistics() {
       this.loading = true;
-      console.log(this);
-      console.log(this.$axios);
       this.$axios.post('/user/getTimeLog', qs.stringify({
         studentId: localStorage.getItem('studentId'),
         level: this.level,

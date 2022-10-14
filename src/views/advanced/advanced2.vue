@@ -313,7 +313,6 @@
           this.context.stroke();
         }else{
           this.canvasMoveUse = false;
-          return;
         }
       },
       canvasMove(e) {
