@@ -514,6 +514,13 @@ import $ from "jquery";
 		bottom: 0%;
 	}
 
+  .undo {
+    width: 9%;
+    position: absolute;
+    right: 18%;
+    bottom: 11%;
+  }
+
 	@media screen and (max-width: 481px) {
 		.fontsize {
 			font-family: pepper;
@@ -569,6 +576,12 @@ import $ from "jquery";
 			bottom: 14%;
 			width: 13%;
 		}
+    .undo {
+      width: 11%;
+      position: absolute;
+      right: 19%;
+      bottom: 21%;
+    }
 	}
 
 	@media screen and (min-width: 812px) and (max-width: 1023px) {
@@ -591,6 +604,13 @@ import $ from "jquery";
 			right: 5%;
 			bottom: 0%;
 		}
+
+    .undo {
+      width: 8.5%;
+      position: absolute;
+      right: 17%;
+      bottom: 11%;
+    }
 	}
 
   @media screen and (min-width: 1200px) and (max-width: 1600px){
@@ -614,6 +634,12 @@ import $ from "jquery";
 			bottom: 14%;
 			width: 13%;
 		}
+    .undo {
+      width: 11%;
+      position: absolute;
+      right: 19%;
+      bottom: 21%;
+    }
 	}
 
   @media screen and (min-width: 1600px)  {

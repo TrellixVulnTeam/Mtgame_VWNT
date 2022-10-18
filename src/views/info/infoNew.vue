@@ -137,7 +137,7 @@
                         <p class="unitname">{{ li.name }}</p>
                         <p class="unitcoin">
                           <img src="../../assets/image/star_frame.png">
-                          {{ li.stars }}</p>
+                          {{ li.start }}</p>
                       </div>
 
                     </li>
@@ -275,7 +275,7 @@
                     <li class="listimg2" @click="$tips(true);next4(li)" v-for="(li,index) in menu" :key="index">
                       <!-- <img src="../../assets/image/BGselect.png"  > -->
                       <div class="neirong">
-                        <p class="unitname">{{ li.name }}</p>
+                        <p class="unitname">{{ li.NAME }}</p>
                         <p class="unitcoin">
                           <!-- <img src="../../assets/image/star_frame.png" style="width: 1.1rem;">
 									<img src="../../assets/image/star_frame.png" style="width: 1.1rem;">

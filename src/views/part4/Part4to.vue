@@ -111,7 +111,7 @@
                     <!-- <img  src="../../assets/image/star_frame.png" class="imgstar2"/> -->
                   </div>
                 </div>
-                <button class="undo" @click="undo()">Undo</button>
+<!--                <button class="undo1" @click="undo()">Undo</button>-->
               </div>
             </div>
           </div>
@@ -169,9 +169,32 @@
             <img src="../../assets/image/1-1pause.png" class=" repeat" v-if="bgimg[22].active">
             <img src="../../assets/image/2-2pause.png" class=" repeat" v-if="bgimg[23].active">
           </div>
-          <!-- <div @click="change">
-						<img src="../../assets/image/Icon_Repeat.png" class=" repeat">
-					</div> -->
+           <div @click="$tips(true);undo()">
+            <img src="../../assets/image/Undo icon 23.png" class="undo" v-if="bgimg[0].active">
+            <img src="../../assets/image/Undo icon 7.png" class="undo" v-if="bgimg[1].active">
+            <img src="../../assets/image/Undo icon 9.png" class="undo" v-if="bgimg[2].active">
+            <img src="../../assets/image/Undo icon 11.png" class="undo" v-if="bgimg[3].active">
+            <img src="../../assets/image/Undo icon 13.png" class="undo" v-if="bgimg[4].active">
+            <img src="../../assets/image/Undo icon 14.png" class="undo" v-if="bgimg[5].active">
+            <img src="../../assets/image/Undo icon 16.png" class="undo" v-if="bgimg[6].active">
+            <img src="../../assets/image/Undo icon 18.png" class="undo" v-if="bgimg[7].active">
+            <img src="../../assets/image/Undo icon 20.png" class="undo" v-if="bgimg[8].active">
+            <img src="../../assets/image/Undo icon 22.png" class="undo" v-if="bgimg[9].active">
+            <img src="../../assets/image/Undo icon 2.png" class="undo" v-if="bgimg[10].active">
+            <img src="../../assets/image/Undo icon 4.png" class="undo" v-if="bgimg[11].active">
+            <img src="../../assets/image/Undo icon 5.png" class="undo" v-if="bgimg[12].active">
+            <img src="../../assets/image/Undo icon 6.png" class="undo" v-if="bgimg[13].active">
+            <img src="../../assets/image/Undo icon 8.png" class="undo" v-if="bgimg[14].active">
+            <img src="../../assets/image/Undo icon 10.png" class="undo" v-if="bgimg[15].active">
+            <img src="../../assets/image/Undo icon 12.png" class="undo" v-if="bgimg[16].active">
+            <img src="../../assets/image/Undo icon 14.png" class="undo" v-if="bgimg[17].active">
+            <img src="../../assets/image/Undo icon 15.png" class="undo" v-if="bgimg[18].active">
+            <img src="../../assets/image/Undo icon 17.png" class="undo" v-if="bgimg[19].active">
+            <img src="../../assets/image/Undo icon 19.png" class="undo" v-if="bgimg[20].active">
+            <img src="../../assets/image/Undo icon 21.png" class="undo" v-if="bgimg[21].active">
+            <img src="../../assets/image/Undo icon 1.png" class="undo" v-if="bgimg[22].active">
+            <img src="../../assets/image/Undo icon 3.png" class="undo" v-if="bgimg[23].active">
+          </div>
         </div>
 
       </div>
@@ -912,7 +935,7 @@
     z-index: -1;
   }
 
-  .undo{
+  .undo2{
     position: absolute;
     top: 20%;
     right: 2%;
