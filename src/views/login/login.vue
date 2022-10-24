@@ -809,6 +809,8 @@
 		text-align: center;
 		position: fixed;
 		background-color: #44ccc2;
+    //background-image: url("../../assets/image/Artboard.png");
+    //background-size: 100% 100%;
 	}
 
 	.menu {

@@ -41,7 +41,7 @@ axios.defaults.baseURL = 'https://gamejava.monkeytree.com.cn';
 
 localStorage.setItem('localurl',axios.defaults.baseURL);
 //版本号，更新需要+1
-localStorage.setItem('version',39);
+localStorage.setItem('version',40);
 //发布 ios OR android
 localStorage.setItem('system','ios');
 //发布到hk版还是cn版

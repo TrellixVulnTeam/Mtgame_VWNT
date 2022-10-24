@@ -68,7 +68,7 @@
                  <div class="classimgbg">
                    <img  :src="imagebg" style="height: 100%;" @click="$tips(true);change()"/>
                  </div>
-                  <img src="../../assets/image/inter5repeat.png" class="classimg" v-bind:class="{touming:touming}">
+                  <img src="../../assets/image/inter5repeat.png" class="classimg" v-bind:class="{touming:touming}" @click="$tips(true);change()">
                 <!--</button>-->
               </div>
               <div class="allansw2">

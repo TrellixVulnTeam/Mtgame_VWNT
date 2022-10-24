@@ -2280,7 +2280,7 @@
           },{
             id:11,
             cardName:'kick',
-            audio:require('../../assets/Flashcard Audio/weekend/kick.mp3'),
+            audio:require('../../assets/Flashcard Audio/september/Kick.mp3'),
             img:require('../../assets/image/At the Park/Kick.png')
           },{
             id:12,

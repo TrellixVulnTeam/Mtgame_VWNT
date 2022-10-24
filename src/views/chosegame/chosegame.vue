@@ -291,8 +291,6 @@
             <img src="../../assets/image/moon/clothes1.png" v-if="this.unitname==='Clothes'" class="imgpart">
             <img src="../../assets/image/moon/themeparks1.png" v-if="this.unitname==='Theme Park'" class="imgpart">
             <img src="../../assets/image/moon/space1.png" v-if="this.unitname==='Space'" class="imgpart">
-            <!--<img src="../../assets/image/moon/s7.png" v-if="this.unitname==='My Family'" class="imgpart">-->
-            <!--<img src="../../assets/image/moon/s8.png" v-if="this.unitname==='Holidays'" class="imgpart">-->
             <img src="../../assets/image/moon/mybody1.png" v-if="this.unitname==='My Body'" class="imgpart">
             <img src="../../assets/image/moon/myweekend1.png" v-if="this.unitname==='My Weekend'" class="imgpart">
             <img src="../../assets/image/moon/in the ocean.png" v-if="this.unitname==='Wild Animals'" class="imgpart">
@@ -319,8 +317,6 @@
             <img src="../../assets/image/moon/clothes2.png" v-if="this.unitname==='Clothes'" class="imgpart">
             <img src="../../assets/image/moon/themeparks2.png" v-if="this.unitname==='Theme Park'" class="imgpart">
             <img src="../../assets/image/moon/space2.png" v-if="this.unitname==='Space'" class="imgpart">
-            <!--<img src="../../assets/image/moon/s7.png" v-if="this.unitname==='My Family'" class="imgpart">-->
-            <!--<img src="../../assets/image/moon/s8.png" v-if="this.unitname==='Holidays'" class="imgpart">-->
             <img src="../../assets/image/moon/mybody2.png" v-if="this.unitname==='My Body'" class="imgpart">
             <img src="../../assets/image/moon/myweekend2.png" v-if="this.unitname==='My Weekend'" class="imgpart">
             <img src="../../assets/image/moon/in the jungle.png" v-if="this.unitname==='Wild Animals'" class="imgpart">
@@ -347,8 +343,6 @@
             <img src="../../assets/image/moon/clothes3.png" v-if="this.unitname==='Clothes'" class="imgpart">
             <img src="../../assets/image/moon/themeparks3.png" v-if="this.unitname==='Theme Park'" class="imgpart">
             <img src="../../assets/image/moon/space3.png" v-if="this.unitname==='Space'" class="imgpart">
-            <!--<img src="../../assets/image/moon/s7.png" v-if="this.unitname==='My Family'" class="imgpart">-->
-            <!--<img src="../../assets/image/moon/s8.png" v-if="this.unitname==='Holidays'" class="imgpart">-->
             <img src="../../assets/image/moon/mybody3.png" v-if="this.unitname==='My Body'" class="imgpart">
             <img src="../../assets/image/moon/myweekend3.png" v-if="this.unitname==='My Weekend'" class="imgpart">
             <img src="../../assets/image/moon/wildanimals3.png" v-if="this.unitname==='Wild Animals'" class="imgpart">

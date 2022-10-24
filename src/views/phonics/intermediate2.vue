@@ -530,10 +530,10 @@
             if (this.list1[anwserIndex].score==='1') {
               /*回答正确在这里写效果*/
               this.soundscorrect=true;
-              if (this.countpage-2 !==9){
-                this.insert = this.insert+"{'phonics_detail_id':"+this.listG[this.countpage-2][0].phonics_detail_id+",'ansResult':1},";
+              if (this.countpage !==10){
+                this.insert = this.insert+"{'phonics_detail_id':"+this.listG[this.countpage-1][0].phonics_detail_id+",'ansResult':1},";
               }else{
-                this.insert = this.insert+"{'phonics_detail_id':"+this.listG[this.countpage-2][0].phonics_detail_id+",'ansResult':1}]";
+                this.insert = this.insert+"{'phonics_detail_id':"+this.listG[this.countpage-1][0].phonics_detail_id+",'ansResult':1}]";
               }
               setTimeout(() => {
                 this.soundscorrect=false;
