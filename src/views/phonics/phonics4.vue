@@ -368,16 +368,24 @@ b'c
         event.preventDefault();
       },
       xy($event){
+        let imgsty = document.getElementsByClassName('imgsty');
         for(var i=0;i<this.centerP.length;i++){
-          if(this.centerP[i].corePx-20<=$event.offsetX&&$event.offsetX<=this.centerP[i].corePx+20){
+          // if(this.centerP[i].corePx-20<=$event.offsetX&&$event.offsetX<=this.centerP[i].corePx+20){
+          if(this.centerP[i].corePx-imgsty[i].offsetParent.offsetWidth/2<=$event.offsetX
+          && $event.offsetX<=this.centerP[i].corePx+imgsty[i].offsetParent.offsetWidth/2){
+            let audio = new Audio();
             if(i===0){
-              this.show1=true;
+              //this.show1=true;
+              audio.src = this.list1[0].audio2;
             }else if(i===1){
-              this.show2=true;
+              //this.show2=true;
+              audio.src = this.list1[1].audio2;
             }else if(i===2){
-              this.show3=true;
+              //this.show3=true;
+              audio.src = this.list1[2].audio2;
             }
-            // console.log(i);
+            audio.play();
+            console.log(i);
           }
         }
       },
@@ -423,13 +431,13 @@ b'c
               canvasX = e.changedTouches[0].clientX - t.parentNode.offsetLeft;
               canvasY = e.changedTouches[0].clientY - t.parentNode.offsetTop;
             }
-          };
+          }
           this.context.beginPath();
           this.context.moveTo(canvasX, canvasY);
           this.context.stroke();
         }else{
           this.canvasMoveUse = false;
-          return;
+
         }
 
       },
@@ -449,7 +457,7 @@ b'c
           } else {
             canvasX = e.changedTouches[0].clientX - t.parentNode.offsetLeft;
             canvasY = e.changedTouches[0].clientY - t.parentNode.offsetTop;
-          };
+          }
           // 连接到移动的位置并上色
           this.context.lineTo(canvasX, canvasY);
           this.context.stroke();
@@ -540,7 +548,7 @@ b'c
                                 menuId: this.menuId,
                                 unitsId:this.unitsId,
                                 unit:this.unit,
-                                insert:this,insert
+                                insert:this.insert
                               }
                             });
 
@@ -716,7 +724,9 @@ b'c
       },
       listen() {
         if(this.onef === false&&this.video===false){
-          this.video=true;
+          //this.video=true;
+          let audio = new Audio(this.truesound);
+          audio.play();
         }
       },
       sound(){

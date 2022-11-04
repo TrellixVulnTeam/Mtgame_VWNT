@@ -491,9 +491,11 @@
       },
 
       change() {
-        if (this.onef == false&&this.video2==false) {
+        if (this.onef == false) {
           // this.action1 = true;
-          this.video2 = true;
+          //this.video2 = true;
+          let audio = new Audio(this.pic+this.items1[0].audio2);
+          audio.play();
         }
       },
       pop() {

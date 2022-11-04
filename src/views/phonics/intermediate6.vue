@@ -616,8 +616,10 @@
         })
       },
       listen() {
-        if(this.onef === false&&this.video===false){
-          this.video=true;
+        if(this.onef === false){
+          //this.video=true;
+          let audio = new Audio(this.truesound);
+          audio.play();
         }
       },
       sound(){

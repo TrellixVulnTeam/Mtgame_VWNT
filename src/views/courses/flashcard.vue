@@ -3163,6 +3163,9 @@
           WildAnimalsPart2:require('../../assets/image/11-logo2.png'),
           LetsGoShoppingPart1:require('../../assets/image/1-logo1.png'),
           LetsGoShoppingPart2:require('../../assets/image/1-logo2.png'),
+          ChristmasPart1:require('../../assets/image/12-logo1-1.png'),
+          ChristmasPart2:require('../../assets/image/12-logo2-1.png'),
+          ChristmasPart3:require('../../assets/image/12-logo-1.png'),
         },
         title:'../../assets/image/6-6logo.png',
         flashCardUrl:'http://gamejava.monkeytree.com.hk/monkeytownHK/image/img/9315e4a9-e1ec-4f49-8db5-5b3a9b6ae083.png',
@@ -3207,7 +3210,27 @@
           });
       },
       turncard(turn){
-        this.part = (this.part === 'part1') ? 'part2' : 'part1';
+        if (this.unit === 'Christmas'){
+          if (turn === 'left'){
+            if (this.part === 'part1'){
+              this.part = 'part3';
+            }else if (this.part === 'part2'){
+              this.part = 'part1';
+            }else if (this.part === 'part3'){
+              this.part = 'part2';
+            }
+          }else if(turn === 'right'){
+            if (this.part === 'part1'){
+              this.part = 'part2';
+            }else if (this.part === 'part2'){
+              this.part = 'part3';
+            }else if (this.part === 'part3'){
+              this.part = 'part1';
+            }
+          }
+        }else{
+          this.part = (this.part === 'part1') ? 'part2' : 'part1';
+        }
         this.createdpop();
       },
       pop() {

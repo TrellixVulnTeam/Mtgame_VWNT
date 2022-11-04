@@ -146,12 +146,11 @@
         }
       },
       'video': function(newVal) {
-        if (this.video == true) {
-          setTimeout(() => {
-            this.video = false;
-            // this.zhezhao = false;
-          }, 5000);
-        }
+         if (this.video === true) {
+           setTimeout(() => {
+             this.video = false;
+           }, 5000);
+         }
       },
 
     },
@@ -374,10 +373,11 @@
         })
       },
       change() {
-        if (this.onef == false) {
-
-          this.video = true;
-        }
+        // if (this.onef === false) {
+        //   this.video = true;
+        // }
+        let audio = new Audio(this.audios);
+        audio.play();
       },
       changesett() {
         if (this.action == false && this.onef == false) {

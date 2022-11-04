@@ -4958,6 +4958,274 @@
              :style="{zIndex: !tree2 ? 100 : 1}" @click="showGif('tree2')">
       </div>
     </div>
+    <div v-else-if="this.unit === 'Christmas' && this.part === 'part1'">
+      <img src="../../assets/image/Winter time_MT/Runner_BG/BG_00000.png"
+           style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;"/>
+      <div class="WinterStill">
+        <img src="../../assets/image/Winter time_MT/Still/still_03.png"
+             style="z-index: -1;"/>
+      </div>
+      <div class="boots2">
+<!--        <img src="../../assets/image/Winter time_MT/GIF_PNG/png/boots.png" v-if="boots2" @click="showGif('boots2')">-->
+        <img src="../../assets/image/Winter time_MT/GIF_PNG/gif/boots.gif" style="z-index: 100" v-if="!boots2"
+             @click="showGif('boots2')">
+      </div>
+      <div class="fireplace2">
+        <img src="../../assets/image/Winter time_MT/GIF_PNG/png/fireplace.png" v-if="fireplace2" @click="walkers&&showGif('fireplace2')">
+        <img src="../../assets/image/Winter time_MT/GIF_PNG/gif/fireplace.gif" style="z-index: 100" v-if="!fireplace2"
+             @click="showGif('fireplace2')">
+      </div>
+      <div class="gloves">
+        <img src="../../assets/image/Winter time_MT/GIF_PNG/png/gloves.png" v-if="gloves&&boots2" @click="showGif('gloves')">
+        <img src="../../assets/image/Winter time_MT/GIF_PNG/gif/gloves.gif" style="z-index: 100" v-if="!gloves"
+             @click="showGif('gloves')">
+      </div>
+      <div class="hotChocolate2">
+        <img src="../../assets/image/Winter time_MT/GIF_PNG/png/hot chocolate.png" v-if="hotChocolate2" @click="showGif('hotChocolate2')">
+        <img src="../../assets/image/Winter time_MT/GIF_PNG/gif/hot chocolate.gif" style="z-index: 100" v-if="!hotChocolate2"
+             @click="showGif('hotChocolate2')">
+      </div>
+      <div class="scarf2">
+        <img src="../../assets/image/Winter time_MT/GIF_PNG/png/scarf.png" v-if="scarf2" @click="showGif('scarf2')">
+        <img src="../../assets/image/Winter time_MT/GIF_PNG/gif/scarf.gif" style="z-index: 100" v-if="!scarf2"
+             @click="showGif('scarf2')">
+      </div>
+      <div class="shiver2">
+        <img src="../../assets/image/Winter time_MT/GIF_PNG/png/shiver.png" v-if="shiver2" @click="walkers&&showGif('shiver2')">
+        <img src="../../assets/image/Winter time_MT/GIF_PNG/gif/shiver.gif" style="z-index: 100" v-if="!shiver2"
+             @click="showGif('shiver2')">
+      </div>
+      <div class="shovel3">
+        <img src="../../assets/image/Winter time_MT/GIF_PNG/png/shovel.png" v-if="shovel3" @click="walkers&&showGif('shovel3')">
+        <img src="../../assets/image/Winter time_MT/GIF_PNG/gif/shovel.gif" style="z-index: 100" v-if="!shovel3"
+             @click="showGif('shovel3')">
+      </div>
+      <div class="skate">
+        <img src="../../assets/image/Winter time_MT/GIF_PNG/png/skate.png" v-if="skate" @click="showGif('skate')">
+        <img src="../../assets/image/Winter time_MT/GIF_PNG/gif/skate.gif" style="z-index: 100" v-if="!skate"
+             @click="showGif('skate')">
+      </div>
+      <div class="snow3">
+        <img src="../../assets/image/Winter time_MT/GIF_PNG/png/snow.png" v-if="snow3" @click="showGif('snow3')">
+        <img src="../../assets/image/Winter time_MT/GIF_PNG/gif/snow.gif" style="z-index: 100" v-if="!snow3"
+             @click="showGif('snow3')">
+      </div>
+      <div class="snowball">
+<!--        <img src="../../assets/image/Winter time_MT/GIF_PNG/png/snowball.png" v-if="snowball" @click="showGif('snowball')">-->
+        <img src="../../assets/image/Winter time_MT/GIF_PNG/gif/snow ball.gif" style="z-index: 100" v-if="!snowball"
+             @click="showGif('snowball')">
+      </div>
+      <div class="snowman2">
+        <img src="../../assets/image/Winter time_MT/GIF_PNG/png/snowman.png" v-if="snowman2" @click="showGif('snowman2')">
+        <img src="../../assets/image/Winter time_MT/GIF_PNG/gif/snowman.gif" style="z-index: 100" v-if="!snowman2"
+             @click="showGif('snowman2')">
+      </div>
+      <div class="throw2">
+        <img src="../../assets/image/Winter time_MT/GIF_PNG/png/throw.png" v-if="throw2" @click="showGif('throw2')">
+        <img src="../../assets/image/Winter time_MT/GIF_PNG/gif/throw.gif" style="z-index: 100" v-if="!throw2"
+             @click="showGif('throw2')">
+      </div>
+      <div class="boots2Button">
+        <img src="../../assets/image/Winter time_MT/Word/word_boots Comp 2_00000.png" v-if="walkers"
+             :style="{zIndex: !boots2 ? 100 : 1}" @click="showGif('boots2')">
+      </div>
+      <div class="fireplace2Button">
+        <img src="../../assets/image/Winter time_MT/Word/word_fireplace Comp 1_00000.png"
+             :style="{zIndex: !fireplace2 ? 100 : 1}" @click="showGif('fireplace2')">
+      </div>
+      <div class="glovesButton">
+        <img src="../../assets/image/Winter time_MT/Word/word_gloves Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !gloves ? 100 : 1}" @click="showGif('gloves')">
+      </div>
+      <div class="hotChocolate2Button">
+        <img src="../../assets/image/Winter time_MT/Word/word_hot chocolate Comp 1_00000.png"
+             :style="{zIndex: !hotChocolate2 ? 100 : 1}" @click="showGif('hotChocolate2')">
+      </div>
+      <div class="scarf2Button">
+        <img src="../../assets/image/Winter time_MT/Word/word_scarf Comp 1_00000.png"
+             :style="{zIndex: !scarf2 ? 100 : 1}" @click="showGif('scarf2')">
+      </div>
+      <div class="shiver2Button">
+        <img src="../../assets/image/Winter time_MT/Word/word_shiver Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !shiver2 ? 100 : 1}" @click="showGif('shiver2')">
+      </div>
+      <div class="shovel3Button">
+        <img src="../../assets/image/Winter time_MT/Word/word_shovel Comp 1_00000.png" v-if="walkers"
+             :style="{zIndex: !shovel3 ? 100 : 1}" @click="showGif('shovel3')">
+      </div>
+      <div class="skateButton">
+        <img src="../../assets/image/Winter time_MT/Word/word_skate Comp 1_00000.png"
+             :style="{zIndex: !skate ? 100 : 1}" @click="showGif('skate')">
+      </div>
+      <div class="snow3Button">
+        <img src="../../assets/image/Winter time_MT/Word/word_snow 2 Comp 1_00000.png"
+             :style="{zIndex: !snow3 ? 100 : 1}" @click="showGif('snow3')">
+      </div>
+      <div class="snowballButton">
+        <img src="../../assets/image/Winter time_MT/Word/word_snow Comp 1_00000.png"
+             :style="{zIndex: !snowball ? 100 : 1}" @click="showGif('snowball')">
+      </div>
+      <div class="snowman2Button">
+        <img src="../../assets/image/Winter time_MT/Word/word_snowman Comp 1_00000.png"
+             :style="{zIndex: !snowman2 ? 100 : 1}" @click="showGif('snowman2')">
+      </div>
+      <div class="throw2Button">
+        <img src="../../assets/image/Winter time_MT/Word/word_throw Comp 1_00000.png"
+             :style="{zIndex: !throw2 ? 100 : 1}" @click="showGif('throw2')">
+      </div>
+    </div>
+    <div v-else-if="this.unit === 'Christmas' && (this.part === 'part2' || this.part === 'part3')">
+      <img src="../../assets/image/Time for Christmas_MT/Runner_PNG/BG_00000.png"
+           style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;"/>
+      <div class="ChristmasStill">
+        <img src="../../assets/image/Time for Christmas_MT/still/still_00001.png"
+             style="z-index: -1;"/>
+      </div>
+      <div class="bells2">
+        <img src="../../assets/image/Time for Christmas_MT/GIF_PNG/png/bells.png" v-if="bells2" @click="showGif('bells2')">
+        <img src="../../assets/image/Time for Christmas_MT/GIF_PNG/gif/bells.gif" style="z-index: 100" v-if="!bells2"
+             @click="showGif('bells2')">
+      </div>
+      <div class="card2">
+        <img src="../../assets/image/Time for Christmas_MT/GIF_PNG/png/card.png" v-if="card2" @click="walkers&&showGif('card2')">
+        <img src="../../assets/image/Time for Christmas_MT/GIF_PNG/gif/card.gif" style="z-index: 100" v-if="!card2"
+             @click="showGif('card2')">
+      </div>
+      <div class="chimney">
+        <img src="../../assets/image/Time for Christmas_MT/GIF_PNG/png/chimney.png" v-if="chimney" @click="showGif('chimney')">
+        <img src="../../assets/image/Time for Christmas_MT/GIF_PNG/gif/chimney.gif" style="z-index: 100" v-if="!chimney"
+             @click="showGif('chimney')">
+      </div>
+      <div class="ChristmasTree">
+        <img src="../../assets/image/Time for Christmas_MT/GIF_PNG/png/Christmas tree.png" v-if="ChristmasTree" @click="showGif('ChristmasTree')">
+        <img src="../../assets/image/Time for Christmas_MT/GIF_PNG/gif/Christmas tree.gif" style="z-index: 100" v-if="!ChristmasTree"
+             @click="showGif('ChristmasTree')">
+      </div>
+      <div class="elf3">
+        <img src="../../assets/image/Time for Christmas_MT/GIF_PNG/png/elf.png" v-if="elf3" @click="walkers&&showGif('elf3')">
+        <img src="../../assets/image/Time for Christmas_MT/GIF_PNG/gif/elf.gif" style="z-index: 100" v-if="!elf3"
+             @click="showGif('elf3')">
+      </div>
+      <div class="give">
+        <img src="../../assets/image/Time for Christmas_MT/GIF_PNG/png/give.png" v-if="give" @click="walkers&&showGif('give')">
+        <img src="../../assets/image/Time for Christmas_MT/GIF_PNG/gif/give.gif" style="z-index: 100" v-if="!give"
+             @click="showGif('give')">
+      </div>
+      <div class="hang2">
+<!--        <img src="../../assets/image/Time for Christmas_MT/GIF_PNG/png/hang.png" v-if="hang2" @click="showGif('hang2')">-->
+        <img src="../../assets/image/Time for Christmas_MT/GIF_PNG/gif/hang.gif" style="z-index: 100" v-if="!hang2"
+             @click="showGif('hang2')">
+      </div>
+      <div class="jingle">
+        <img src="../../assets/image/Time for Christmas_MT/GIF_PNG/png/jingle.png" v-if="jingle" @click="showGif('jingle')">
+        <img src="../../assets/image/Time for Christmas_MT/GIF_PNG/gif/jingle.gif" style="z-index: 100" v-if="!jingle"
+             @click="showGif('jingle')">
+      </div>
+      <div class="ornament2">
+<!--        <img src="../../assets/image/Time for Christmas_MT/GIF_PNG/png/ornament.png" v-if="ornament2" @click="showGif('ornament2')">-->
+        <img src="../../assets/image/Time for Christmas_MT/GIF_PNG/gif/ornament.gif" style="z-index: 100" v-if="!ornament2"
+             @click="showGif('ornament2')">
+      </div>
+      <div class="present2">
+        <img src="../../assets/image/Time for Christmas_MT/GIF_PNG/png/present.png" v-if="present2" @click="showGif('present2')">
+        <img src="../../assets/image/Time for Christmas_MT/GIF_PNG/gif/present.gif" style="z-index: 100" v-if="!present2"
+             @click="showGif('present2')">
+      </div>
+      <div class="reindeer2">
+        <img src="../../assets/image/Time for Christmas_MT/GIF_PNG/png/reindeer.png" v-if="reindeer2" @click="showGif('reindeer2')">
+        <img src="../../assets/image/Time for Christmas_MT/GIF_PNG/gif/reindeer.gif" style="z-index: 100" v-if="!reindeer2"
+             @click="showGif('reindeer2')">
+      </div>
+      <div class="santaClaus2">
+        <img src="../../assets/image/Time for Christmas_MT/GIF_PNG/png/Santa Claus.png" v-if="santaClaus2" @click="showGif('santaClaus2')">
+        <img src="../../assets/image/Time for Christmas_MT/GIF_PNG/gif/Santa Claus.gif" style="z-index: 100" v-if="!santaClaus2"
+             @click="showGif('santaClaus2')">
+      </div>
+      <div class="shocking">
+        <img src="../../assets/image/Time for Christmas_MT/GIF_PNG/png/shocking.png" v-if="shocking" @click="showGif('shocking')">
+        <img src="../../assets/image/Time for Christmas_MT/GIF_PNG/gif/shocking.gif" style="z-index: 100" v-if="!shocking"
+             @click="showGif('shocking')">
+      </div>
+      <div class="sleigh2">
+        <img src="../../assets/image/Time for Christmas_MT/GIF_PNG/png/sleigh.png" v-if="sleigh2" @click="showGif('sleigh2')">
+        <img src="../../assets/image/Time for Christmas_MT/GIF_PNG/gif/sleigh.gif" style="z-index: 100" v-if="!sleigh2"
+             @click="showGif('sleigh2')">
+      </div>
+      <div class="slide2">
+        <img src="../../assets/image/Time for Christmas_MT/GIF_PNG/png/slide.png" v-if="slide2" @click="walkers&&showGif('slide2')">
+        <img src="../../assets/image/Time for Christmas_MT/GIF_PNG/gif/slide.gif" style="z-index: 100" v-if="!slide2"
+             @click="showGif('slide2')">
+      </div>
+      <div class="wrap2">
+        <img src="../../assets/image/Time for Christmas_MT/GIF_PNG/png/wrap.png" v-if="wrap2" @click="showGif('wrap2')">
+        <img src="../../assets/image/Time for Christmas_MT/GIF_PNG/gif/wrap.gif" style="z-index: 100" v-if="!wrap2"
+             @click="showGif('wrap2')">
+      </div>
+      <div class="bells2Button">
+        <img src="../../assets/image/Time for Christmas_MT/Word/bells.png"
+             :style="{zIndex: !bells2 ? 100 : 1}" @click="showGif('bells2')">
+      </div>
+      <div class="card2Button">
+        <img src="../../assets/image/Time for Christmas_MT/Word/card.png" v-if="walkers"
+             :style="{zIndex: !card2 ? 100 : 1}" @click="showGif('card2')">
+      </div>
+      <div class="chimneyButton">
+        <img src="../../assets/image/Time for Christmas_MT/Word/chimney.png"
+             :style="{zIndex: !chimney ? 100 : 1}" @click="showGif('chimney')">
+      </div>
+      <div class="ChristmasTreeButton">
+        <img src="../../assets/image/Time for Christmas_MT/Word/christmas tree.png"
+             :style="{zIndex: !ChristmasTree ? 100 : 1}" @click="showGif('ChristmasTree')">
+      </div>
+      <div class="elf3Button">
+        <img src="../../assets/image/Time for Christmas_MT/Word/elf.png" v-if="walkers"
+             :style="{zIndex: !elf3 ? 100 : 1}" @click="showGif('elf3')">
+      </div>
+      <div class="giveButton">
+        <img src="../../assets/image/Time for Christmas_MT/Word/give.png" v-if="walkers"
+             :style="{zIndex: !give ? 100 : 1}" @click="showGif('give')">
+      </div>
+      <div class="hang2Button">
+        <img src="../../assets/image/Time for Christmas_MT/Word/hang.png"
+             :style="{zIndex: !hang2 ? 100 : 1}" @click="showGif('hang2')">
+      </div>
+      <div class="jingleButton">
+        <img src="../../assets/image/Time for Christmas_MT/Word/jingle.png"
+             :style="{zIndex: !jingle ? 100 : 1}" @click="showGif('jingle')">
+      </div>
+      <div class="ornament2Button">
+        <img src="../../assets/image/Time for Christmas_MT/Word/ornament.png"
+             :style="{zIndex: !ornament2 ? 100 : 1}" @click="showGif('ornament2')">
+      </div>
+      <div class="present2Button">
+        <img src="../../assets/image/Time for Christmas_MT/Word/present.png"
+             :style="{zIndex: !present2 ? 100 : 1}" @click="showGif('present2')">
+      </div>
+      <div class="reindeer2Button">
+        <img src="../../assets/image/Time for Christmas_MT/Word/reindeer.png"
+             :style="{zIndex: !reindeer2 ? 100 : 1}" @click="showGif('reindeer2')">
+      </div>
+      <div class="santaClaus2Button">
+        <img src="../../assets/image/Time for Christmas_MT/Word/Santa Claus.png"
+             :style="{zIndex: !santaClaus2 ? 100 : 1}" @click="showGif('santaClaus2')">
+      </div>
+      <div class="shockingButton">
+        <img src="../../assets/image/Time for Christmas_MT/Word/shocking.png"
+             :style="{zIndex: !shocking ? 100 : 1}" @click="showGif('shocking')">
+      </div>
+      <div class="sleigh2Button">
+        <img src="../../assets/image/Time for Christmas_MT/Word/sleigh.png"
+             :style="{zIndex: !sleigh2 ? 100 : 1}" @click="showGif('sleigh2')">
+      </div>
+      <div class="slide2Button">
+        <img src="../../assets/image/Time for Christmas_MT/Word/slide.png" v-if="walkers"
+             :style="{zIndex: !slide2 ? 100 : 1}" @click="showGif('slide2')">
+      </div>
+      <div class="wrap2Button">
+        <img src="../../assets/image/Time for Christmas_MT/Word/wrap.png"
+             :style="{zIndex: !wrap2 ? 100 : 1}" @click="showGif('wrap2')">
+      </div>
+    </div>
     <div v-else>
     <img src="../../assets/image/H5 Thing/Walker_BG/bg_0.png"
          style="width: 100%; z-index: -2;background-color: #204900; height: 100%;display:block;position: absolute;">
@@ -5651,9 +5919,66 @@ export default {
           river:require('../../assets/Flashcard Audio/community/vet.mp3'),
           road:require('../../assets/Flashcard Audio/community/vet.mp3'),
           tree2:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          //Christmas
+          bells2:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          card2:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          chimney:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          ChristmasTree:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          elf3:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          give:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          hang2:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          jingle:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          ornament2:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          present2:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          reindeer2:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          santaClaus2:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          shocking:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          sleigh2:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          slide2:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          wrap2:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          boots2:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          fireplace2:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          gloves:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          hotChocolate2:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          scarf2:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          shiver2:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          shovel3:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          skate:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          snow3:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          snowball:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          snowman2:require('../../assets/Flashcard Audio/community/vet.mp3'),
+          throw2:require('../../assets/Flashcard Audio/community/vet.mp3'),
         },
         local:'',
         cardType:'default',
+        bells2:true,
+        card2:true,
+        chimney:true,
+        ChristmasTree:true,
+        elf3:true,
+        give:true,
+        hang2:true,
+        jingle:true,
+        ornament2:true,
+        present2:true,
+        reindeer2:true,
+        santaClaus2:true,
+        shocking:true,
+        sleigh2:true,
+        slide2:true,
+        wrap2:true,
+        boots2:true,
+        fireplace2:true,
+        gloves:true,
+        hotChocolate2:true,
+        scarf2:true,
+        shiver2:true,
+        shovel3:true,
+        skate:true,
+        snow3:true,
+        snowball:true,
+        snowman2:true,
+        throw2:true,
         airplane2:true,
         bird2:true,
         cloud:true,
@@ -6407,6 +6732,419 @@ export default {
     position: fixed;
     background-color: #44ccc2;
     z-index: 201;
+  }
+
+  .bells2Button img {
+    width: 6%;
+    left: 59%;
+    top: 69%;
+    position: absolute;
+  }
+
+  .card2Button img {
+    width: 5%;
+    left: 14%;
+    top: 81%;
+    position: absolute;
+  }
+
+  .chimneyButton img {
+    width: 7%;
+    left: 54%;
+    top: 53%;
+    position: absolute;
+  }
+
+  .ChristmasTreeButton img {
+    width: 10%;
+    left: 8%;
+    top: 10%;
+    position: absolute;
+  }
+
+  .elf3Button img {
+    width: 6%;
+    left: 57%;
+    top: 84%;
+    position: absolute;
+  }
+
+  .giveButton img {
+    width: 5%;
+    left: 4%;
+    top: 41%;
+    position: absolute;
+  }
+
+  .hang2Button img {
+    width: 6%;
+    left: 24%;
+    top: 10%;
+    position: absolute;
+  }
+
+  .jingleButton img {
+    width: 6%;
+    left: 85%;
+    top: 47%;
+    position: absolute;
+  }
+
+  .ornament2Button img {
+    width: 8%;
+    left: 1%;
+    top: 18%;
+    position: absolute;
+  }
+
+  .present2Button img {
+    width: 6%;
+    left: 13%;
+    top: 47%;
+    position: absolute;
+  }
+
+  .reindeer2Button img {
+    width: 7%;
+    left: 69%;
+    top: 75%;
+    position: absolute;
+  }
+
+  .santaClaus2Button img {
+    width: 9%;
+    left: 56%;
+    top: 21%;
+    position: absolute;
+  }
+
+  .shockingButton img {
+    width: 8%;
+    left: 29%;
+    top: 70%;
+    position: absolute;
+  }
+
+  .sleigh2Button img {
+    width: 6%;
+    left: 85%;
+    top: 72%;
+    position: absolute;
+  }
+
+  .slide2Button img {
+    width: 6%;
+    left: 84%;
+    top: 22%;
+    position: absolute;
+  }
+
+  .wrap2Button img {
+    width: 6%;
+    left: 35%;
+    top: 46%;
+    position: absolute;
+  }
+
+  .ChristmasStill img {
+    width: 95%;
+    left: 2.8%;
+    top: -5%;
+    transform: rotate(1deg);
+    position: absolute;
+  }
+
+  .bells2 img {
+    width: 7%;
+    left: 58.5%;
+    top: 69%;
+    position: absolute;
+  }
+
+  .card2 img {
+    width: 10%;
+    left: 12.5%;
+    top: 68%;
+    position: absolute;
+  }
+
+  .chimney img {
+    width: 16%;
+    left: 49.5%;
+    top: 20%;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .ChristmasTree img {
+    width: 28%;
+    left: 2.5%;
+    top: 0%;
+    position: absolute;
+  }
+
+  .elf3 img {
+    width: 14%;
+    left: 47.5%;
+    top: 78%;
+    position: absolute;
+  }
+
+  .give img {
+    width: 33%;
+    height: 53%;
+    left: -0.5%;
+    top: 2%;
+    position: absolute;
+  }
+
+  .hang2 img {
+    width: 28%;
+    left: 2.5%;
+    top: 0%;
+    position: absolute;
+  }
+
+  .jingle img {
+    width: 11%;
+    left: 82.5%;
+    top: 48%;
+    position: absolute;
+  }
+
+  .ornament2 img {
+    width: 28%;
+    left: 2.5%;
+    top: 0%;
+    position: absolute;
+  }
+
+  .present2 img {
+    width: 10%;
+    left: 11.5%;
+    top: 37%;
+    position: absolute;
+  }
+
+  .reindeer2 img {
+    width: 11%;
+    left: 67.5%;
+    top: 78%;
+    position: absolute;
+  }
+
+  .santaClaus2 img {
+    width: 15%;
+    left: 49.5%;
+    top: 22%;
+    position: absolute;
+  }
+
+  .shocking img {
+    width: 9%;
+    left: 27.5%;
+    top: 75%;
+    position: absolute;
+  }
+
+  .sleigh2 img {
+    width: 24%;
+    left: 76.5%;
+    top: 64%;
+    position: absolute;
+  }
+
+  .slide2 img {
+    width: 28%;
+    left: 71.5%;
+    top: 6%;
+    position: absolute;
+  }
+
+  .wrap2 img {
+    width: 20%;
+    left: 30.5%;
+    top: 19%;
+    position: absolute;
+  }
+
+  .WinterStill img {
+    width: 90%;
+    height: 90%;
+    left: 0%;
+    top: 10%;
+    position: absolute;
+  }
+
+  .boots2Button img {
+    width: 6%;
+    left: 61%;
+    top: 72%;
+    position: absolute;
+  }
+
+  .fireplace2Button img {
+    width: 8%;
+    left: 31%;
+    top: 30%;
+    position: absolute;
+  }
+
+  .glovesButton img {
+    width: 6%;
+    left: 51%;
+    top: 47%;
+    position: absolute;
+  }
+
+  .hotChocolate2Button img {
+    width: 10%;
+    left: 14%;
+    top: 42%;
+    position: absolute;
+  }
+
+  .scarf2Button img {
+    width: 5%;
+    left: 24%;
+    top: 63%;
+    position: absolute;
+  }
+
+  .shiver2Button img {
+    width: 6%;
+    left: 6%;
+    top: 20%;
+    position: absolute;
+  }
+
+  .shovel3Button img {
+    width: 6%;
+    left: 30%;
+    top: 85%;
+    position: absolute;
+  }
+
+  .skateButton img {
+    width: 6%;
+    left: 72%;
+    top: 29%;
+    position: absolute;
+  }
+
+  .snow3Button img {
+    width: 6%;
+    left: 15%;
+    top: 87%;
+    position: absolute;
+  }
+
+  .snowballButton img {
+    width: 8%;
+    left: 84%;
+    top: 46%;
+    position: absolute;
+  }
+
+  .snowman2Button img {
+    width: 8%;
+    left: 48%;
+    top: 5%;
+    position: absolute;
+  }
+
+  .throw2Button img {
+    width: 6%;
+    left: 89%;
+    top: 70%;
+    position: absolute;
+  }
+
+  .boots2 img {
+    width: 22%;
+    left: 54.5%;
+    top: 30%;
+    position: absolute;
+  }
+
+  .fireplace2 img {
+    width: 16%;
+    left: 25.5%;
+    top: 0%;
+    position: absolute;
+  }
+
+  .gloves img {
+    width: 22%;
+    left: 54.5%;
+    top: 30%;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .hotChocolate2 img {
+    width: 6%;
+    left: 14.5%;
+    top: 43%;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .scarf2 img {
+    width: 18%;
+    height: 33%;
+    left: 12%;
+    top: 52.5%;
+    position: absolute;
+  }
+
+  .shiver2 img {
+    width: 17%;
+    left: 1.5%;
+    top: 23%;
+    position: absolute;
+  }
+
+  .shovel3 img {
+    width: 25%;
+    left: 25.5%;
+    top: 40%;
+    position: absolute;
+  }
+
+  .skate img {
+    width: 25%;
+    left: 71.5%;
+    top: 2%;
+    position: absolute;
+  }
+
+  .snow3 img {
+    width: 13%;
+    left: 2.5%;
+    top: 79%;
+    position: absolute;
+  }
+
+  .snowball img {
+    width: 13%;
+    left: 72.5%;
+    top: 41%;
+    position: absolute;
+  }
+
+  .snowman2 img {
+    width: 23%;
+    left: 41.5%;
+    top: 1%;
+    position: absolute;
+  }
+
+  .throw2 img {
+    width: 50%;
+    left: 46.5%;
+    top: 42%;
+    position: absolute;
   }
 
   .landStill img {
@@ -15333,6 +16071,223 @@ export default {
   @media only screen and (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 3) ,
   (min-device-height: 812px) and (max-device-height: 1023px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 812px) and (max-width: 1023px){
+    .jingle img {
+      width: 11%;
+      left: 82.5%;
+      top: 45%;
+      position: absolute;
+      z-index: 1;
+    }
+    .ornament2 img {
+      width: 22%;
+      left: 4.5%;
+      top: 4%;
+      position: absolute;
+    }
+    .ChristmasTree img {
+      width: 22%;
+      left: 4.5%;
+      top: 4%;
+      position: absolute;
+    }
+    .give img {
+      width: 30%;
+      height: 50%;
+      left: 0.5%;
+      top: 4%;
+      position: absolute;
+    }
+    .hang2 img {
+      width: 25%;
+      left: 4.5%;
+      top: 1%;
+      position: absolute;
+    }
+    .jingleButton img {
+      width: 6%;
+      left: 85%;
+      top: 44%;
+      position: absolute;
+    }
+    .slide2Button img {
+      width: 6%;
+      left: 84%;
+      top: 19%;
+      position: absolute;
+    }
+    .santaClaus2Button img {
+      width: 9%;
+      left: 56%;
+      top: 8%;
+      position: absolute;
+    }
+    .chimneyButton img {
+      width: 7%;
+      left: 54%;
+      top: 43%;
+      position: absolute;
+    }
+    .bells2 img {
+      width: 7%;
+      left: 57.5%;
+      top: 60%;
+      position: absolute;
+    }
+    .bells2Button img {
+      width: 6%;
+      left: 59%;
+      top: 58%;
+      position: absolute;
+    }
+    .reindeer2Button img {
+      width: 7%;
+      left: 69%;
+      top: 64%;
+      position: absolute;
+    }
+    .elf3Button img {
+      width: 6%;
+      left: 57%;
+      top: 81%;
+      position: absolute;
+    }
+    .elf3 img {
+      width: 14%;
+      left: 47.5%;
+      top: 73%;
+      position: absolute;
+    }
+    .reindeer2 img {
+      width: 11%;
+      left: 65.5%;
+      top: 66%;
+      position: absolute;
+    }
+    .chimney img {
+      width: 14.5%;
+      left: 51%;
+      top: 9%;
+      position: absolute;
+      z-index: 1;
+    }
+    .santaClaus2 img {
+      width: 12%;
+      left: 51.5%;
+      top: 10%;
+      position: absolute;
+    }
+    .ChristmasStill img {
+      width: 80%;
+      left: 12%;
+      top: -14%;
+      transform: rotate(4deg);
+      position: absolute;
+    }
+    .wrap2 img {
+      width: 20%;
+      left: 30.5%;
+      top: 15%;
+      position: absolute;
+    }
+    .sleigh2 img {
+      width: 23%;
+      left: 77.5%;
+      top: 61%;
+      position: absolute;
+    }
+    .slide2 img {
+      width: 28%;
+      left: 71.5%;
+      top: 0%;
+      position: absolute;
+    }
+    .snowball img {
+      width: 12%;
+      left: 73.5%;
+      top: 38%;
+      position: absolute;
+    }
+    .fireplace2 img {
+      width: 14%;
+      left: 27.5%;
+      top: 0%;
+      position: absolute;
+    }
+    .snowballButton img {
+      width: 8%;
+      left: 84%;
+      top: 44%;
+      position: absolute;
+    }
+    .skateButton img {
+      width: 6.5%;
+      left: 72%;
+      top: 29%;
+      position: absolute;
+    }
+    .hotChocolate2Button img {
+      width: 10%;
+      left: 14%;
+      top: 40%;
+      position: absolute;
+    }
+    .hotChocolate2 img {
+      width: 6%;
+      left: 14.5%;
+      top: 41%;
+      position: absolute;
+      z-index: 1;
+    }
+    .snow3 img {
+      width: 12%;
+      left: 2.5%;
+      top: 79%;
+      position: absolute;
+    }
+    .shiver2 img {
+      width: 14%;
+      left: 2.5%;
+      top: 25%;
+      position: absolute;
+    }
+    .shovel3 img {
+      width: 20%;
+      left: 27.5%;
+      top: 40%;
+      position: absolute;
+    }
+    .snowman2 img {
+      width: 23%;
+      left: 41.5%;
+      top: -2%;
+      position: absolute;
+    }
+    .gloves img {
+      width: 22%;
+      left: 53.5%;
+      top: 35%;
+      position: absolute;
+      z-index: 1;
+    }
+    .boots2 img {
+      width: 22%;
+      left: 53.5%;
+      top: 35%;
+      position: absolute;
+      z-index: 1;
+    }
+    .skate img {
+      width: 21%;
+      left: 72.5%;
+      top: 2%;
+      position: absolute;
+    }
+    .throw2 img {
+      width: 46%;
+      left: 49.5%;
+      top: 39%;
+      position: absolute;
+    }
     .roadButton img {
       width: 6%;
       left: 37%;
@@ -19438,6 +20393,348 @@ export default {
   @media only screen and (min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 3),
   (min-device-height: 1024px) and (max-device-height: 1600px) and (-webkit-device-pixel-ratio: 2),
   (min-width: 1024px) and (max-width: 1600px){
+    .give img {
+      width: 31%;
+      height: 42%;
+      left: 0.5%;
+      top: 11%;
+      position: absolute;
+    }
+    .ornament2 img {
+      width: 30%;
+      left: 1.5%;
+      top: 11%;
+      position: absolute;
+    }
+    .hang2 img {
+      width: 30%;
+      left: 1.5%;
+      top: 11%;
+      position: absolute;
+    }
+    .ChristmasTreeButton img {
+      width: 15%;
+      left: 6%;
+      top: 10%;
+      position: absolute;
+    }
+    .ornament2Button img {
+      width: 11%;
+      left: 1%;
+      top: 18%;
+      position: absolute;
+    }
+    .hang2Button img {
+      width: 7%;
+      left: 23%;
+      top: 16%;
+      position: absolute;
+    }
+    .giveButton img {
+      width: 6%;
+      left: 3%;
+      top: 41%;
+      position: absolute;
+    }
+    .present2Button img {
+      width: 9%;
+      left: 11%;
+      top: 52%;
+      position: absolute;
+    }
+    .wrap2Button img {
+      width: 6%;
+      left: 36%;
+      top: 46%;
+      position: absolute;
+    }
+    .card2Button img {
+      width: 7%;
+      left: 13%;
+      top: 81%;
+      position: absolute;
+    }
+    .shockingButton img {
+      width: 9%;
+      left: 29%;
+      top: 72%;
+      position: absolute;
+    }
+    .elf3Button img {
+      width: 7%;
+      left: 58%;
+      top: 81%;
+      position: absolute;
+    }
+    .bells2Button img {
+      width: 7%;
+      left: 60%;
+      top: 63%;
+      position: absolute;
+    }
+    .reindeer2Button img {
+      width: 9%;
+      left: 68%;
+      top: 72%;
+      position: absolute;
+    }
+    .chimneyButton img {
+      width: 8%;
+      left: 53%;
+      top: 52%;
+      position: absolute;
+    }
+    .santaClaus2Button img {
+      width: 11%;
+      left: 54%;
+      top: 23%;
+      position: absolute;
+    }
+    .slide2Button img {
+      width: 7%;
+      left: 82%;
+      top: 25%;
+      position: absolute;
+    }
+    .jingleButton img {
+      width: 7%;
+      left: 85%;
+      top: 49%;
+      position: absolute;
+    }
+    .sleigh2Button img {
+      width: 7%;
+      left: 87%;
+      top: 75%;
+      position: absolute;
+    }
+    .present2 img {
+      width: 11%;
+      left: 10.5%;
+      top: 40%;
+      position: absolute;
+    }
+    .ChristmasTree img {
+      width: 32%;
+      left: 0.5%;
+      top: 10%;
+      position: absolute;
+    }
+    .wrap2 img {
+      width: 20%;
+      left: 30.5%;
+      top: 26%;
+      position: absolute;
+    }
+    .bells2Button img {
+      width: 6%;
+      left: 60%;
+      top: 65%;
+      position: absolute;
+    }
+    .bells2 img {
+      width: 7%;
+      left: 59.5%;
+      top: 65%;
+      position: absolute;
+    }
+    .elf3 img {
+      width: 16%;
+      left: 47.5%;
+      top: 76%;
+      position: absolute;
+    }
+    .reindeer2 img {
+      width: 12%;
+      left: 65.5%;
+      top: 74%;
+      position: absolute;
+    }
+    .santaClaus2 img {
+      width: 15%;
+      left: 49.5%;
+      top: 25%;
+      position: absolute;
+    }
+    .chimney img {
+      width: 17%;
+      left: 49.5%;
+      top: 26%;
+      position: absolute;
+      z-index: 1;
+    }
+    .ChristmasStill img{
+      width: 105%;
+      left: -2.5%;
+      top: 6%;
+      transform: rotate(-2deg);
+      position: absolute;
+    }
+    .card2 img {
+      width: 10%;
+      left: 12.5%;
+      top: 71%;
+      position: absolute;
+    }
+    .shocking img {
+      width: 9%;
+      left: 27.5%;
+      top: 76%;
+      position: absolute;
+    }
+    .slide2 img {
+      width: 30%;
+      left: 70.5%;
+      top: 14%;
+      position: absolute;
+    }
+    .jingle img {
+      width: 13%;
+      left: 81.5%;
+      top: 51%;
+      position: absolute;
+    }
+    .sleigh2 img {
+      width: 24%;
+      left: 76.5%;
+      top: 71%;
+      position: absolute;
+    }
+    .WinterStill img {
+      width: 100%;
+      left: 0%;
+      top: 18%;
+      position: absolute;
+    }
+    .snowball img {
+      width: 13%;
+      left: 72.5%;
+      top: 52%;
+      position: absolute;
+    }
+    .hotChocolate2Button img {
+      width: 14%;
+      left: 14%;
+      top: 42%;
+      position: absolute;
+    }
+    .shiver2Button img {
+      width: 7%;
+      left: 6%;
+      top: 33%;
+      position: absolute;
+    }
+    .scarf2Button img {
+      width: 7%;
+      left: 24%;
+      top: 63%;
+      position: absolute;
+    }
+    .snow3Button img {
+      width: 7%;
+      left: 15%;
+      top: 87%;
+      position: absolute;
+    }
+    .shovel3Button img {
+      width: 7%;
+      left: 32%;
+      top: 79%;
+      position: absolute;
+    }
+    .glovesButton img {
+      width: 8%;
+      left: 50%;
+      top: 49%;
+      position: absolute;
+    }
+    .snowman2Button img {
+      width: 10%;
+      left: 50%;
+      top: 11%;
+      position: absolute;
+    }
+    .boots2Button img {
+      width: 7%;
+      left: 60%;
+      top: 72%;
+      position: absolute;
+    }
+    .snowballButton img {
+      width: 9%;
+      left: 84%;
+      top: 54%;
+      position: absolute;
+    }
+    .throw2Button img {
+      width: 7%;
+      left: 89%;
+      top: 73%;
+      position: absolute;
+    }
+    .skate img {
+      width: 25%;
+      left: 71.5%;
+      top: 12%;
+      position: absolute;
+    }
+    .fireplace2 img {
+      width: 16%;
+      left: 25.5%;
+      top: 8%;
+      position: absolute;
+    }
+    .hotChocolate2 img {
+      width: 6%;
+      left: 14.5%;
+      top: 45%;
+      position: absolute;
+      z-index: 1;
+    }
+    .shiver2 img {
+      width: 17%;
+      left: 1.5%;
+      top: 37%;
+      position: absolute;
+    }
+    .snow3 img {
+      width: 16%;
+      left: 1.5%;
+      top: 81%;
+      position: absolute;
+    }
+    .shovel3 img {
+      width: 25%;
+      left: 26.5%;
+      top: 43%;
+      position: absolute;
+    }
+    .snowman2 img {
+      width: 23%;
+      left: 43.5%;
+      top: 11%;
+      position: absolute;
+    }
+    .boots2 img {
+      width: 24%;
+      left: 53.5%;
+      top: 39%;
+      position: absolute;
+      z-index: 1;
+    }
+    .gloves img {
+      width: 24%;
+      left: 53.5%;
+      top: 39%;
+      position: absolute;
+      z-index: 1;
+    }
+    .throw2 img {
+      width: 50%;
+      left: 46.5%;
+      top: 53%;
+      position: absolute;
+    }
     .oceanButton img {
       width: 7%;
       left: 64%;

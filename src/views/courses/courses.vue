@@ -328,6 +328,9 @@
             <img src="../../assets/image/moon/schooltime2.png" v-if="this.unitname==='School Time'" class="imgpart">
           </button>
 
+          <button class="animapng7" @click="$tips(true);tohome(3)" v-if="this.unitname==='Christmas'">
+            <img src="../../assets/image/moon/christmas3.png" class="imgpart">
+          </button>
         </div>
       </div>
     </div>
@@ -430,7 +433,23 @@
               cources:this.cources
             }
           });
+        }else if(e===3){
+          this.walkers = false;
+          this.$router.push({
+            path: '/flashcard',
+            query: {
+              unit:this.unitname,
+              unitsId:this.unitsId,
+              levelsId:this.levelsId,
+              courseId:this.courseId,
+              part:'part3',
+              style:this.style,
+              level:this.level,
+              cources:this.cources
+            }
+          });
         }
+
 
       },
       back() {

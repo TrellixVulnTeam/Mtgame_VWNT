@@ -289,11 +289,7 @@
       localStorage.setItem('gamename',this.gamename);
       var timestamp = (new Date()).getTime();
       localStorage.setItem('startTimeid',timestamp);
-      if(localStorage.getItem('gamemusic')==="false"){
-        this.show=false;
-      }else{
-        this.show=true;
-      }
+      this.show = localStorage.getItem('gamemusic') !== "false";
       this.$axios.post(this.url, qs.stringify({
         menuId: this.menuId,
         num:12
@@ -412,15 +408,21 @@
       xy($event){
         for(var i=0;i<this.centerP.length;i++){
           if(this.centerP[i].corePx-20<=$event.offsetX&&$event.offsetX<=this.centerP[i].corePx+20){
+            let audio = new Audio();
             if(i===0){
-              this.show1=true;
+              //this.show1=true;
+              audio.src=this.list1[0].audio2;
             }else if(i===1){
-              this.show2=true;
+              //this.show2=true;
+              audio.src=this.list1[1].audio2;
             }else if(i===2){
-              this.show3=true;
+              //this.show3=true;
+              audio.src=this.list1[2].audio2;
             }else if(i===3){
-              this.show4=true;
+              //this.show4=true;
+              audio.src=this.list1[3].audio2;
             }
+            audio.play();
           }
         }
       },

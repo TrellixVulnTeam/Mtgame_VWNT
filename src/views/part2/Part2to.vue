@@ -411,20 +411,17 @@
         console.log(li);
       },
       xy($event){
-		    if (this.playing === false){
-		      this.playing=true;
           let audio = new Audio();
+          let imgsty = document.getElementsByClassName('imgsty');
           for(let i=0; i<this.centerP.length; i++){
-            if(this.centerP[i].corePx-80<=$event.offsetX&&$event.offsetX<=this.centerP[i].corePx+80&&this.centerP[i].corePy-80<=$event.offsetY&&$event.offsetY<=this.centerP[i].corePy+80){
+            if(this.centerP[i].corePx-imgsty[i].offsetWidth/2<=$event.offsetX
+              && $event.offsetX<=this.centerP[i].corePx+imgsty[i].offsetWidth/2
+              && this.centerP[i].corePy-imgsty[i].offsetHeight/2<=$event.offsetY
+              && $event.offsetY<=this.centerP[i].corePy+imgsty[i].offsetHeight/2){
               audio.src = this.pic+this.list1[i].audio;
             }
           }
           audio.play();
-          setTimeout(() => {
-            this.playing=false;
-          },2000);
-        }
-
       },
       loadsize(){
         // console.log('11111111');
@@ -510,7 +507,7 @@
 					} else {
 						canvasX = e.changedTouches[0].clientX - t.parentNode.offsetLeft;
 						canvasY = e.changedTouches[0].clientY - t.parentNode.offsetTop;
-					};
+					}
 					// 连接到移动的位置并上色
 					this.context.lineTo(canvasX, canvasY);
 					this.context.stroke();

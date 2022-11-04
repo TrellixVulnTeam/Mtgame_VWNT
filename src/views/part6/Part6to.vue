@@ -222,8 +222,6 @@
 					this.onef = false;
 
 						// this.video = true;
-
-
 					}, 2000);
 
 				}
@@ -498,12 +496,15 @@
 				}
 			},
 			change() {
-				if(this.onef === false){
-          if (this.$refs.videos.paused){
-            this.video=true;
-          }else
-            this.$refs.videos.load();
-          }
+				if(this.onef === false) {
+          // if (this.$refs.videos.paused){
+          //   this.video=true;
+          // }else
+          //   this.$refs.videos.load();
+          // }
+          let audio = new Audio(this.audio);
+          audio.play();
+        }
 			},
 			changesett() {
 					if(this.action==false&&this.onef==false){

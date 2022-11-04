@@ -145,7 +145,8 @@
             let imgsty = document.getElementsByClassName('imgsty');
             for (let i = 0; i < imgsty.length; i++) {
               let coreP = { // 获取图片中心点位置
-                corePx: imgsty[i].offsetLeft + imgsty[i].offsetWidth / 2,
+                corePx: imgBox.offsetLeft + imgsty[i].offsetLeft + imgsty[i].offsetWidth / 2,
+
                 corePy: imgBox.offsetTop + imgsty[i].offsetTop + imgsty[i].offsetHeight / 2
               };
               this.centerP.push(coreP);
@@ -189,7 +190,6 @@
       'show3': function (newVal) {
         // console.log(this.$refs.show3s.duration);
         if (this.show3 === true) {
-          console.log(this.$refs.show3s[0]);
           this.$refs.show3s[0].play();
           // setTimeout(() => {
           this.show3 = false;
@@ -347,18 +347,34 @@
         }
       },
       xy($event) {
+        let imgBox = document.getElementById('imgBox');
+        let imgsty = document.getElementsByClassName('imgsty');
+        let imglist = document.getElementsByClassName('imglist');
         for (var i = 0; i < this.centerP.length; i++) {
-          if (this.centerP[i].corePx - 50 <= $event.offsetX && $event.offsetX <= this.centerP[i].corePx + 50) {
+          // if(i===2){
+          //    console.log(imgBox.offsetTop + imglist[i].offsetTop <= $event.offsetY);
+          //    console.log($event.offsetY <=imgBox.offsetTop + imglist[i].offsetTop + imglist[i].offsetHeight );
+          //   console.log($event.offsetY);
+          //   console.log(imgBox.offsetTop + imglist[i].offsetTop);
+          //   console.log(imgBox.offsetTop + imglist[i].offsetTop + imglist[i].offsetHeight);
+          // }
+          // if (this.centerP[i].corePx - 50 <= $event.offsetX && $event.offsetX <= this.centerP[i].corePx + 50) {
+          if (this.centerP[i].corePx + imgBox.offsetLeft - imgsty[i].offsetWidth / 2 + 20 <= $event.offsetX
+            && $event.offsetX <= this.centerP[i].corePx - imgBox.offsetLeft + imgsty[i].offsetWidth / 2
+            && imgBox.offsetTop + imglist[i].offsetTop <= $event.offsetY
+            && $event.offsetY <=imgBox.offsetTop + imglist[i].offsetTop + imglist[i].offsetHeight) {
+            let audio = new Audio();
             if (i === 0) {
-              this.show1 = true;
-              // this.$refs.show1.play();
+              //this.show1 = true;
+              audio.src = this.list1[0].audio2
             } else if (i === 1) {
-              this.show2 = true;
-              // this.$refs.show2.play();
+              //this.show2 = true;
+              audio.src = this.list1[1].audio2
             } else if (i === 2) {
-              this.show3 = true;
-              // this.$refs.show3.play();
+              //this.show3 = true;
+              audio.src = this.list1[2].audio2
             }
+            audio.play();
             console.log(i);
           }
         }
@@ -873,7 +889,6 @@
   .buttons {
     width: 100%;
     position: absolute;
-    /*padding:0 5%;*/
     margin-top: 10%;
     height: 100%;
     border: none;

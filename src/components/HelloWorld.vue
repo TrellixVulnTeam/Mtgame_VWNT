@@ -95,7 +95,7 @@
 						<img src="../assets/image/9-logo.png" style="width: 50%;" v-if="bgimg[6].active&&part=='part3'">
 						<img src="../assets/image/10-logo.png" style="width: 50%;" v-if="bgimg[7].active&&part=='part3'">
 						<img src="../assets/image/11-logo.png" style="width: 50%;" v-if="bgimg[8].active&&part=='part3'">
-						<img src="../assets/image/12-logo.png" style="width: 50%;" v-if="bgimg[9].active&&part=='part3'">
+						<img src="../assets/image/12-logo-1.png" style="width: 50%;" v-if="bgimg[9].active&&part=='part3'">
             <img src="../assets/image/1-logo.png" style="width: 50%;" v-if="bgimg[10].active&&part=='part3'">
 						<img src="../assets/image/2-logo.png" style="width: 50%;" v-if="bgimg[11].active&&part=='part3'">
 						<img src="../assets/image/3-3logo.png" style="width: 50%;" v-if="bgimg[12].active&&part=='part3'">

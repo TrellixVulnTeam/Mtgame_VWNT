@@ -43,7 +43,7 @@
                     <img src="../../assets/image/answerbg.png" class="bglist" />
                   </div>
                 </div>
-                <button class="undo" @click="undo()">Undo</button>
+<!--                <button class="undo" @click="undo()">Undo</button>-->
               </div>
             </div>
           </div>
@@ -56,9 +56,9 @@
           <div @click="$tips(true);changesett()">
             <img src="../../assets/image/p-pause.png" class=" repeat">
           </div>
-          <!-- <div @click="change">
-						<img src="../../assets/image/Icon_Repeat.png" class=" repeat">
-					</div> -->
+          <div @click="$tips(true);undo()">
+            <img src="../../assets/image/Undo icon 24.png" class="undo">
+          </div>
         </div>
 
       </div>
@@ -659,7 +659,6 @@
       },
       loadimg() {
         this.loaded = true;
-        // console.log(this.loaded);
       },
       help() {
         if (this.onef == false) {
@@ -675,12 +674,15 @@
         }
       },
       makesound(li) {
-        if(li.showbg==0){
-        li.showbg = 1;
-        setTimeout(() => {
-          li.showbg = 0;
-        }, 3000);
-        }
+        let audio = new Audio();
+        audio.src = this.pic+li.audio;
+        audio.play();
+        // if(li.showbg==0){
+        // li.showbg = 1;
+        // setTimeout(() => {
+        //   li.showbg = 0;
+        // }, 3000);
+        // }
       },
       changesett() {
         if (this.action == false && this.onef == false) {
@@ -858,22 +860,22 @@
     background-color: #44ccc2;
     z-index: 201;
   }
-  .undo{
-    position: absolute;
-    top: 20%;
-    right: 2%;
-    border: none;
-    background: none;
-    background-image: url("../../assets/image/listbg.png");
-    width: 100px;
-    color: white;
-    font-size: 1.5rem;
-    font-family: pepper;
-    background-position: center;
-    border-radius: 15px;
-    height: 50px;
-    background-size: contain;
-  }
+  //.undo{
+  //  position: absolute;
+  //  top: 20%;
+  //  right: 2%;
+  //  border: none;
+  //  background: none;
+  //  background-image: url("../../assets/image/listbg.png");
+  //  width: 100px;
+  //  color: white;
+  //  font-size: 1.5rem;
+  //  font-family: pepper;
+  //  background-position: center;
+  //  border-radius: 15px;
+  //  height: 50px;
+  //  background-size: contain;
+  //}
   .twomenu {
     padding-top: 18%;
     display: flex;

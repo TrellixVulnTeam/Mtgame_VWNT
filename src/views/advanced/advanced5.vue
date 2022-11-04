@@ -394,7 +394,9 @@
       },
       listen() {
         if(this.onef == false){
-          this.video=true;
+          //this.video=true;
+          let audio = new Audio(this.audio);
+          audio.play();
         }
       },
 

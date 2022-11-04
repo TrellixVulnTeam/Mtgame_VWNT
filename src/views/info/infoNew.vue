@@ -149,119 +149,85 @@
                 <!--<li class="listimg1">-->
                 <div class="neirong">
                   <button class="animapng7" @click="$tips(true);tohome(1)">
-                    <!--<img  src="../../assets/image/4-4p1.png" class="imgpart" >-->
-                    <img src="../../assets/image/moon/mealtime1.png" v-if="this.unitname==='MEAL TIME'" class="imgpart">
-                    <img src="../../assets/image/moon/onthefarm1.png" v-if="this.unitname==='ON THE FARM'"
-                         class="imgpart">
+
+                    <img src="../../assets/image/moon/mealtime1.png" v-if="this.unitname==='Meal Time'"  class="imgpart">
+                    <img src="../../assets/image/moon/onthefarm1.png" v-if="this.unitname==='On the Farm'" class="imgpart">
                     <img src="../../assets/image/moon/seasons1.png" v-if="this.unitname==='Seasons'" class="imgpart">
-                    <img src="../../assets/image/moon/transportation1.png" v-if="this.unitname==='Transportation'"
-                         class="imgpart">
+                    <img src="../../assets/image/moon/transportation1.png" v-if="this.unitname==='Transportation'" class="imgpart">
                     <img src="../../assets/image/moon/bugs1.png" v-if="this.unitname==='Bugs'" class="imgpart">
                     <img src="../../assets/image/moon/clothes1.png" v-if="this.unitname==='Clothes'" class="imgpart">
-                    <img src="../../assets/image/moon/themeparks1.png" v-if="this.unitname==='Theme Park'"
-                         class="imgpart">
+                    <img src="../../assets/image/moon/themeparks1.png" v-if="this.unitname==='Theme Park'" class="imgpart">
                     <img src="../../assets/image/moon/space1.png" v-if="this.unitname==='Space'" class="imgpart">
-                    <!--<img src="../../assets/image/moon/s7.png" v-if="this.unitname==='My Family'" class="imgpart">-->
-                    <!--<img src="../../assets/image/moon/s8.png" v-if="this.unitname==='Holidays'" class="imgpart">-->
                     <img src="../../assets/image/moon/mybody1.png" v-if="this.unitname==='My Body'" class="imgpart">
-                    <img src="../../assets/image/moon/myweekend1.png" v-if="this.unitname==='My Weekend'"
-                         class="imgpart">
-                    <img src="../../assets/image/moon/wildanimals1.png" v-if="this.unitname==='Wild Animals'"
-                         class="imgpart">
-                    <img src="../../assets/image/moon/christmas1.png" v-if="this.unitname==='Christmas'"
-                         class="imgpart">
-                    <img src="../../assets/image/moon/letsgoshopping1.png" v-if="this.unitname==='Let\'s Go Shopping'"
-                         class="imgpart">
-                    <img src="../../assets/image/moon/mycommunity1.png" v-if="this.unitname==='My Community'"
-                         class="imgpart">
+                    <img src="../../assets/image/moon/myweekend1.png" v-if="this.unitname==='My Weekend'" class="imgpart">
+                    <img src="../../assets/image/moon/in the ocean.png" v-if="this.unitname==='Wild Animals'" class="imgpart">
+                    <img src="../../assets/image/moon/christmas1.png" v-if="this.unitname==='Christmas'" class="imgpart">
+                    <img src="../../assets/image/moon/letsgoshopping1.png" v-if="this.unitname==='Let\'s Go Shopping'" class="imgpart">
+                    <img src="../../assets/image/moon/mycommunity1.png" v-if="this.unitname==='My Community'" class="imgpart">
                     <img src="../../assets/image/moon/funtime1.png" v-if="this.unitname==='Fun Time!'" class="imgpart">
                     <img src="../../assets/image/moon/myhome1.png" v-if="this.unitname==='My Home'" class="imgpart">
                     <img src="../../assets/image/moon/ourworld1.png" v-if="this.unitname==='Our World'" class="imgpart">
-                    <img src="../../assets/image/moon/fairytales1.png" v-if="this.unitname==='Fairy Tales'"
-                         class="imgpart">
-                    <img src="../../assets/image/moon/schooltime1.png" v-if="this.unitname==='School Life'"
-                         class="imgpart">
+                    <img src="../../assets/image/moon/fairytales1.png" v-if="this.unitname==='Fairy Tales'" class="imgpart">
+                    <img src="../../assets/image/moon/schooltime1.png" v-if="this.unitname==='School Time'" class="imgpart">
                     <img src="../../assets/image/moon/animals1.png" v-if="this.unitname==='Animals'" class="imgpart">
-                    <img src="../../assets/image/moon/myfamily1.png" v-if="this.unitname==='Family Time'"
-                         class="imgpart">
+                    <img src="../../assets/image/moon/myfamily1.png" v-if="this.unitname==='Family Time'" class="imgpart">
                     <img src="../../assets/image/moon/holidays1.png" v-if="this.unitname==='Holidays'" class="imgpart">
-
+                    <img src="../../assets/image/moon/Exploration1.png" v-if="this.unitname==='Exploration'" class="imgpart">
+                    <img src="../../assets/image/moon/summerfun1.png" v-if="this.unitname==='Summer Fun'" class="imgpart">
                   </button>
                   <button class="animapng7" @click="$tips(true);tohome(2)">
-                    <img src="../../assets/image/moon/mealtime2.png" v-if="this.unitname==='MEAL TIME'" class="imgpart">
-                    <img src="../../assets/image/moon/onthefarm2.png" v-if="this.unitname==='ON THE FARM'"
-                         class="imgpart">
+
+                    <img src="../../assets/image/moon/mealtime2.png" v-if="this.unitname==='Meal Time'"  class="imgpart">
+                    <img src="../../assets/image/moon/onthefarm2.png" v-if="this.unitname==='On the Farm'" class="imgpart">
                     <img src="../../assets/image/moon/seasons2.png" v-if="this.unitname==='Seasons'" class="imgpart">
-                    <img src="../../assets/image/moon/transportation2.png" v-if="this.unitname==='Transportation'"
-                         class="imgpart">
+                    <img src="../../assets/image/moon/transportation2.png" v-if="this.unitname==='Transportation'" class="imgpart">
                     <img src="../../assets/image/moon/bugs2.png" v-if="this.unitname==='Bugs'" class="imgpart">
                     <img src="../../assets/image/moon/clothes2.png" v-if="this.unitname==='Clothes'" class="imgpart">
-                    <img src="../../assets/image/moon/themeparks2.png" v-if="this.unitname==='Theme Park'"
-                         class="imgpart">
+                    <img src="../../assets/image/moon/themeparks2.png" v-if="this.unitname==='Theme Park'" class="imgpart">
                     <img src="../../assets/image/moon/space2.png" v-if="this.unitname==='Space'" class="imgpart">
-                    <!--<img src="../../assets/image/moon/s7.png" v-if="this.unitname==='My Family'" class="imgpart">-->
-                    <!--<img src="../../assets/image/moon/s8.png" v-if="this.unitname==='Holidays'" class="imgpart">-->
                     <img src="../../assets/image/moon/mybody2.png" v-if="this.unitname==='My Body'" class="imgpart">
-                    <img src="../../assets/image/moon/myweekend2.png" v-if="this.unitname==='My Weekend'"
-                         class="imgpart">
-                    <img src="../../assets/image/moon/wildanimals2.png" v-if="this.unitname==='Wild Animals'"
-                         class="imgpart">
-                    <img src="../../assets/image/moon/christmas2.png" v-if="this.unitname==='Christmas'"
-                         class="imgpart">
-                    <img src="../../assets/image/moon/letsgoshopping2.png" v-if="this.unitname==='Let\'s Go Shopping'"
-                         class="imgpart">
-                    <img src="../../assets/image/moon/mycommunity2.png" v-if="this.unitname==='My Community'"
-                         class="imgpart">
+                    <img src="../../assets/image/moon/myweekend2.png" v-if="this.unitname==='My Weekend'" class="imgpart">
+                    <img src="../../assets/image/moon/in the jungle.png" v-if="this.unitname==='Wild Animals'" class="imgpart">
+                    <img src="../../assets/image/moon/christmas2.png" v-if="this.unitname==='Christmas'" class="imgpart">
+                    <img src="../../assets/image/moon/letsgoshopping2.png" v-if="this.unitname==='Let\'s Go Shopping'" class="imgpart">
+                    <img src="../../assets/image/moon/mycommunity2.png" v-if="this.unitname==='My Community'" class="imgpart">
                     <img src="../../assets/image/moon/funtime2.png" v-if="this.unitname==='Fun Time!'" class="imgpart">
                     <img src="../../assets/image/moon/myhome2.png" v-if="this.unitname==='My Home'" class="imgpart">
                     <img src="../../assets/image/moon/ourworld2.png" v-if="this.unitname==='Our World'" class="imgpart">
-                    <img src="../../assets/image/moon/fairytales2.png" v-if="this.unitname==='Fairy Tales'"
-                         class="imgpart">
-                    <img src="../../assets/image/moon/schooltime2.png" v-if="this.unitname==='School Life'"
-                         class="imgpart">
+                    <img src="../../assets/image/moon/fairytales2.png" v-if="this.unitname==='Fairy Tales'" class="imgpart">
+                    <img src="../../assets/image/moon/schooltime2.png" v-if="this.unitname==='School Time'" class="imgpart">
                     <img src="../../assets/image/moon/animals2.png" v-if="this.unitname==='Animals'" class="imgpart">
-                    <img src="../../assets/image/moon/myfamily2.png" v-if="this.unitname==='Family Time'"
-                         class="imgpart">
+                    <img src="../../assets/image/moon/myfamily2.png" v-if="this.unitname==='Family Time'" class="imgpart">
                     <img src="../../assets/image/moon/holidays2.png" v-if="this.unitname==='Holidays'" class="imgpart">
-
+                    <img src="../../assets/image/moon/Exploration2.png" v-if="this.unitname==='Exploration'" class="imgpart">
+                    <img src="../../assets/image/moon/summerfun2.png" v-if="this.unitname==='Summer Fun'" class="imgpart">
                   </button>
                   <button class="animapng7" @click="$tips(true);tohome(3)">
-                    <img src="../../assets/image/moon/mealtime3.png" v-if="this.unitname==='MEAL TIME'" class="imgpart">
-                    <img src="../../assets/image/moon/onthefarm3.png" v-if="this.unitname==='ON THE FARM'"
-                         class="imgpart">
+
+                    <img src="../../assets/image/moon/mealtime3.png" v-if="this.unitname==='Meal Time'"  class="imgpart">
+                    <img src="../../assets/image/moon/onthefarm3.png" v-if="this.unitname==='On the Farm'" class="imgpart">
                     <img src="../../assets/image/moon/seasons3.png" v-if="this.unitname==='Seasons'" class="imgpart">
-                    <img src="../../assets/image/moon/transportation3.png" v-if="this.unitname==='Transportation'"
-                         class="imgpart">
+                    <img src="../../assets/image/moon/transportation3.png" v-if="this.unitname==='Transportation'" class="imgpart">
                     <img src="../../assets/image/moon/bugs3.png" v-if="this.unitname==='Bugs'" class="imgpart">
                     <img src="../../assets/image/moon/clothes3.png" v-if="this.unitname==='Clothes'" class="imgpart">
-                    <img src="../../assets/image/moon/themeparks3.png" v-if="this.unitname==='Theme Park'"
-                         class="imgpart">
+                    <img src="../../assets/image/moon/themeparks3.png" v-if="this.unitname==='Theme Park'" class="imgpart">
                     <img src="../../assets/image/moon/space3.png" v-if="this.unitname==='Space'" class="imgpart">
-                    <!--<img src="../../assets/image/moon/s7.png" v-if="this.unitname==='My Family'" class="imgpart">-->
-                    <!--<img src="../../assets/image/moon/s8.png" v-if="this.unitname==='Holidays'" class="imgpart">-->
                     <img src="../../assets/image/moon/mybody3.png" v-if="this.unitname==='My Body'" class="imgpart">
-                    <img src="../../assets/image/moon/myweekend3.png" v-if="this.unitname==='My Weekend'"
-                         class="imgpart">
-                    <img src="../../assets/image/moon/wildanimals3.png" v-if="this.unitname==='Wild Animals'"
-                         class="imgpart">
-                    <img src="../../assets/image/moon/christmas3.png" v-if="this.unitname==='Christmas'"
-                         class="imgpart">
-                    <img src="../../assets/image/moon/letsgoshopping3.png" v-if="this.unitname==='Let\'s Go Shopping'"
-                         class="imgpart">
-                    <img src="../../assets/image/moon/mycommunity3.png" v-if="this.unitname==='My Community'"
-                         class="imgpart">
+                    <img src="../../assets/image/moon/myweekend3.png" v-if="this.unitname==='My Weekend'" class="imgpart">
+                    <img src="../../assets/image/moon/wildanimals3.png" v-if="this.unitname==='Wild Animals'" class="imgpart">
+                    <img src="../../assets/image/moon/christmas3.png" v-if="this.unitname==='Christmas'" class="imgpart">
+                    <img src="../../assets/image/moon/letsgoshopping3.png" v-if="this.unitname==='Let\'s Go Shopping'" class="imgpart">
+                    <img src="../../assets/image/moon/mycommunity3.png" v-if="this.unitname==='My Community'" class="imgpart">
                     <img src="../../assets/image/moon/funtime3.png" v-if="this.unitname==='Fun Time!'" class="imgpart">
                     <img src="../../assets/image/moon/myhome3.png" v-if="this.unitname==='My Home'" class="imgpart">
                     <img src="../../assets/image/moon/ourworld3.png" v-if="this.unitname==='Our World'" class="imgpart">
-                    <img src="../../assets/image/moon/fairytales3.png" v-if="this.unitname==='Fairy Tales'"
-                         class="imgpart">
-                    <img src="../../assets/image/moon/schooltime3.png" v-if="this.unitname==='School Life'"
-                         class="imgpart">
+                    <img src="../../assets/image/moon/fairytales3.png" v-if="this.unitname==='Fairy Tales'" class="imgpart">
+                    <img src="../../assets/image/moon/schooltime3.png" v-if="this.unitname==='School Time'" class="imgpart">
                     <img src="../../assets/image/moon/animals3.png" v-if="this.unitname==='Animals'" class="imgpart">
-                    <img src="../../assets/image/moon/myfamily3.png" v-if="this.unitname==='Family Time'"
-                         class="imgpart">
+                    <img src="../../assets/image/moon/myfamily3.png" v-if="this.unitname==='Family Time'" class="imgpart">
                     <img src="../../assets/image/moon/holidays3.png" v-if="this.unitname==='Holidays'" class="imgpart">
-
+                    <img src="../../assets/image/moon/Exploration3.png" v-if="this.unitname==='Exploration'" class="imgpart">
+                    <img src="../../assets/image/moon/summerfun3.png" v-if="this.unitname==='Summer Fun'" class="imgpart">
                   </button>
                 </div>
                 <!--</li>-->
@@ -813,6 +779,7 @@ export default {
       pass7: '',
       pass30: '',
       pass: '0',
+      part:1,
       local: '',
       history: [],
       overall: [],
@@ -1605,6 +1572,7 @@ export default {
       this.ifboss1 = false;
       this.ifboss2 = false;
       if (e === 1) {
+        this.part = 1;
         this.url4 = this.url + "MenuPart1";
         this.$axios.post(this.url4, qs.stringify({
           studentId: localStorage.getItem('studentId'),
@@ -1615,39 +1583,7 @@ export default {
           for (let i in res.data.UnitsList) {
             this.menu.push(res.data.UnitsList[i]); //属性
           }
-          // for (let b in res.data.UnitsList2) {
-          //   this.menuboss.push(res.data.UnitsList2[b]); //属性
-          // }
-          //
-          // for(var i=0;i<this.menuboss.length;i++){
-          //   this.menuboss[i].stars = [];
-          //   if(this.menuboss[i].star=="0"){
-          //     this.menuboss[i].stars.push({
-          //       onestart1: false,
-          //       onestart2: false,
-          //       onestart3:false,
-          //     });
-          //   }else if(this.menuboss[i].star=="1"){
-          //     this.menuboss[i].stars.push({
-          //       onestart1: true,
-          //       onestart2: false,
-          //       onestart3:false,
-          //     });
-          //   }else if(this.menuboss[i].star=="2"){
-          //     this.menuboss[i].stars.push({
-          //       onestart1: true,
-          //       onestart2: true,
-          //       onestart3:false,
-          //     });
-          //   }else if(this.menuboss[i].star=="3"){
-          //     this.menuboss[i].stars.push({
-          //       onestart1: true,
-          //       onestart2: true,
-          //       onestart3:true,
-          //     });
-          //   }
-          // }
-          // this.menu.splice(8,1);
+          this.menu.splice(6, 1);
           for (var i = 0; i < this.menu.length; i++) {
             this.menu[i].stars = [];
             if (this.menu[i].star == "0") {
@@ -1681,6 +1617,7 @@ export default {
           alertMsg("You must be connected to the internet.<br>Please connect and try again.");
         });
       } else if (e == 2) {
+        this.part = 2;
         this.url4 = this.url + "MenuPart2";
         this.$axios.post(this.url4, qs.stringify({
           studentId: localStorage.getItem('studentId'),
@@ -1691,7 +1628,7 @@ export default {
           for (let i in res.data.UnitsList) {
             this.menu.push(res.data.UnitsList[i]); //属性
           }
-
+          this.menu.splice(6, 1);
           for (var i = 0; i < this.menu.length; i++) {
             this.menu[i].stars = [];
             if (this.menu[i].star == "0") {
@@ -1725,6 +1662,7 @@ export default {
           alertMsg("You must be connected to the internet.<br>Please connect and try again.");
         });
       } else if (e == 3) {
+        this.part = 3;
         this.url4 = this.url + "Menu";
         this.$axios.post(this.url4, qs.stringify({
           studentId: localStorage.getItem('studentId'),
@@ -1735,7 +1673,6 @@ export default {
           for (let i in res.data.UnitsList) {
             this.menu.push(res.data.UnitsList[i]); //属性
           }
-
           this.menu.splice(8, 1);
           for (var i = 0; i < this.menu.length; i++) {
             this.menu[i].stars = [];
@@ -1799,7 +1736,13 @@ export default {
       this.ifboss2 = false;
       this.menuname = li.name;
       this.detailList = [];
-      this.menuId = li.menu_detail_id;
+      if (this.part === 1){
+        this.menuId = li.menu_detail_id_1;
+      }else if (this.part === 2){
+        this.menuId = li.menu_detail_id_2;
+      }else if (this.part === 3){
+        this.menuId = li.menu_detail_id;
+      }
       this.url4 = this.url + "details";
       if (li.name == "Memory") {
         this.scoreormis = "Mistake";
@@ -1808,7 +1751,8 @@ export default {
       }
       this.$axios.post(this.url4, qs.stringify({
         studentId: localStorage.getItem('studentId'),
-        menuId: this.menuId
+        menuId: this.menuId,
+        part: this.part
       })).then(res => {
         for (let j in res.data.detailList) {
           this.detailList.push(res.data.detailList[j]); //属性

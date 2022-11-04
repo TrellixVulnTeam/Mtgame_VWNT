@@ -137,8 +137,8 @@
             let imgsty = document.getElementsByClassName('imgsty');
             for (let i=0; i<imgsty.length; i++) {
               let coreP = { // 获取图片中心点位置
-                corePx: imgsty[i].offsetLeft + imgsty[i].offsetWidth/2,
-                corePy: imgBox.offsetTop+imgsty[i].offsetTop + imgsty[i].offsetHeight/2
+                corePx: imgBox.offsetLeft + imgsty[i].offsetLeft + imgsty[i].offsetWidth/2,
+                corePy: imgBox.offsetTop + imgsty[i].offsetTop + imgsty[i].offsetHeight/2
               };
               this.centerP.push(coreP);
             }
@@ -277,17 +277,22 @@
       xy($event){
         for(var i=0;i<this.centerP.length;i++){
           if(this.centerP[i].corePx-20<=$event.offsetX&&$event.offsetX<=this.centerP[i].corePx+20){
+            let audio = new Audio();
             if(i===0){
-              this.show1=true;
+              //this.show1=true;
               // this.$refs.show1.play();
+              audio.src = this.list1[0].audio
             }else if(i===1){
-              this.show2=true;
+              //this.show2=true;
               // this.$refs.show2.play();
+              audio.src = this.list1[1].audio
             }else if(i===2){
-              this.show3=true;
+              //this.show3=true;
               // this.$refs.show3.play();
+              audio.src = this.list1[2].audio
             }
-            // console.log(i);
+            audio.play();
+            console.log(i);
           }
         }
       },
@@ -354,7 +359,6 @@
         for(var i=0;i<this.list1.length;i++){
           if (this.list1[i].score==='1') { // 获取正确选项下标
             successIndex = i;
-            console.log(i);
           }
         }
         if (!isSelect) { // 没有选中

@@ -165,7 +165,6 @@
     name: "intermediate8",
     watch: {
       'onef': function(newVal) {
-        console.log('watch'+new Date().toLocaleTimeString());
         if(this.onef === true) {
           setTimeout(() => {
             this.onef = false;
@@ -293,7 +292,6 @@
       }
     },
     created() { //生命周期里接收参数
-      console.log('created开头'+new Date().toLocaleTimeString());
       this.pic=this.$axios.defaults.baseURL2;
       this.unit = this.$route.query.unit;
       this.unitsId=this.$route.query.unitsId;
@@ -327,7 +325,6 @@
           this.list1[i].sound=0;
           this.list1[i].fail=0;
         }
-        console.log('created的onef前面'+new Date().toLocaleTimeString());
         if(this.onef === true) {
             this.onef = false;
             this.video=true;
@@ -337,7 +334,6 @@
             const canvas = document.getElementById('canvas'); // 初次进来初始化画布
             let imgBox = document.getElementById('imgBox');
             let imgsty = document.getElementsByClassName('imgsty');
-            console.log('mounted'+new Date().toLocaleTimeString());
             for (let i=0; i<imgsty.length; i++) {
               //这里会报错，是因为图片没有加载出来就获取图片的中心位置，适当延长setTimeout的时间，等待图片加载完毕再获取中心位置
               let coreP = { // 获取图片中心点位置
@@ -393,28 +389,32 @@
         event.preventDefault();
       },
       xy($event){
-        console.log($event);
         for(var i=0;i<this.centerP.length;i++){
           if(this.centerP[i].corePx-80<=$event.offsetX&&$event.offsetX<=this.centerP[i].corePx+80&&this.centerP[i].corePy-80<=$event.offsetY&&$event.offsetY<=this.centerP[i].corePy+80){
+            let audio = new Audio();
             if(i===0){
-              if(this.show1===false){
-                this.show1=true;
-              }
-
+              // if(this.show1===false){
+              //   this.show1=true;
+              // }
+              audio.src = this.list1[0].audio;
             }else if(i===1){
-              if(this.show2===false){
-                this.show2=true;
-              }
+              // if(this.show2===false){
+              //   this.show2=true;
+              // }
+              audio.src = this.list1[1].audio;
             }else if(i===2){
-              if(this.show3===false){
-                this.show3=true;
-              }
+              // if(this.show3===false){
+              //   this.show3=true;
+              // }
+              audio.src = this.list1[2].audio;
             }else if(i===3){
-              if(this.show4===false){
-                this.show4=true;
-              }
+              // if(this.show4===false){
+              //   this.show4=true;
+              // }
+              audio.src = this.list1[3].audio;
             }
-
+            audio.play();
+            console.log(i);
           }
         }
       },

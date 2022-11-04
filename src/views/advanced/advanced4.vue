@@ -512,8 +512,9 @@
 
       change() {
         if (this.onef == false) {
-          // this.action1 = true;
-          this.video2 = true;
+          //this.video2 = true;
+          let audio = new Audio(this.audio2);
+          audio.play();
         }
       },
       repeattitle(){

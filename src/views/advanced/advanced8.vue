@@ -818,13 +818,19 @@
         }
       },
       sound1(){
-          this.short1=true;
+          // this.short1=true;
+        let audio = new Audio(this.items3[0].audio);
+        audio.play();
       },
       sound2(){
-        this.short2=true;
+        // this.short2=true;
+        let audio = new Audio(this.items3[1].audio);
+        audio.play();
       },
       sound3(){
-        this.short3=true;
+        // this.short3=true;
+        let audio = new Audio(this.items3[2].audio);
+        audio.play();
       },
       pop(){
         this.popp = !this.popp;

@@ -376,7 +376,7 @@
               this.list1[anwserIndex].redsuccess=1;
               this.changecolor2=true;
               this.canvasObj.height = this.canvasH;
-              if (this.countpage-1 !==9){
+              if (this.countpage !==10){
                 this.insert = this.insert+"{'phonics_detail_id':"+this.listF[this.countpage-1][0].phonics_detail_id+",'ansResult':0},";
               }else{
                 this.insert = this.insert+"{'phonics_detail_id':"+this.listF[this.countpage-1][0].phonics_detail_id+",'ansResult':0}]";
@@ -501,7 +501,9 @@
       },*/
       change() {
         if (this.onef === false) {
-          document.getElementById("videos").play();
+          // document.getElementById("videos").play();
+          let audio = new Audio(this.audio);
+          audio.play();
         }
       },
       changesett() {
