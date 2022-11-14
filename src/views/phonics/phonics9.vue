@@ -1532,7 +1532,7 @@
 
 
     .answer-items{
-      height: 7rem;
+      height: 6rem;
       margin: 30px 0 0 0.5rem;
       font-size: 3.5rem;
     }

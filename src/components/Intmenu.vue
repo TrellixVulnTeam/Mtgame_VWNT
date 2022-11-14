@@ -11,8 +11,8 @@
         <button :style="{fontFamily: unit==='Ii' ? 'OldR' : 'pepper'}">{{unit}}</button>
       </h2>
       <div class="menulist" id="scrollbody">
-
-        <div class="listimg listfirst">
+<!--        yes or no-->
+        <div class="listimg listfirst" v-if="unit!=='Sight Words'">
           <img :src=lightstar class="imgposit" v-if="stars[0].onestart">
           <img :src=star class="imgposit" v-if="!stars[0].onestart">
           <img :src=lightstar style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="stars[0].twostart">
@@ -21,7 +21,8 @@
           <img :src=star class="imgposit1" v-if="!stars[0].threestart">
           <img @click="$tips(true);change()" src="../assets/image/inter1.png" style="position: sticky;height: 65%">
         </div>
-        <div class="listimg">
+<!--        circle the picture-->
+        <div class="listimg" v-if="unit!=='Sight Words'">
           <img :src=lightstar class="imgposit" v-if="stars[1].onestart">
           <img :src=star class="imgposit" v-if="!stars[1].onestart">
           <img :src=lightstar style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="stars[1].twostart">
@@ -30,7 +31,8 @@
           <img :src=star class="imgposit1" v-if="!stars[1].threestart">
           <img @click="$tips(true);change2()" src="../assets/image/inter2.png" style="position: sticky;height: 65%">
         </div>
-        <div class="listimg">
+<!--        circle the blend-->
+        <div class="listimg" v-if="unit!=='Sight Words'">
           <img :src=lightstar class="imgposit" v-if="stars[2].onestart">
           <img :src=star class="imgposit" v-if="!stars[2].onestart">
           <img :src=lightstar style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="stars[2].twostart">
@@ -39,7 +41,8 @@
           <img :src=star class="imgposit1" v-if="!stars[2].threestart">
           <img @click="$tips(true);change3()" src="../assets/image/inter3.png" style="position: sticky;height: 65%">
         </div>
-        <div class="listimg">
+<!--        match the blend-->
+        <div class="listimg" v-if="unit!=='Sight Words'">
           <img :src=lightstar class="imgposit" v-if="stars[3].onestart">
           <img :src=star class="imgposit" v-if="!stars[3].onestart">
           <img :src=lightstar style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="stars[3].twostart">
@@ -48,6 +51,7 @@
           <img :src=star class="imgposit1" v-if="!stars[3].threestart">
           <img @click="$tips(true);change4()" src="../assets/image/inter4.png" style="position: sticky;height: 65%">
         </div>
+<!--        select the blend-->
         <div class="listimg">
           <img :src=lightstar class="imgposit" v-if="stars[4].onestart">
           <img :src=star class="imgposit" v-if="!stars[4].onestart">
@@ -57,7 +61,8 @@
           <img :src=star class="imgposit1" v-if="!stars[4].threestart">
           <img @click="$tips(true);change5()" src="../assets/image/inter5.png" style="position: sticky;height: 65%">
         </div>
-        <div class="listimg">
+<!--        letter scrabble-->
+        <div class="listimg" v-if="unit!=='Ending Sounds' && unit!=='Sight Words'">
           <img :src=lightstar class="imgposit" v-if="stars[5].onestart">
           <img :src=star class="imgposit" v-if="!stars[5].onestart">
           <img :src=lightstar style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="stars[5].twostart">
@@ -66,7 +71,8 @@
           <img :src=star class="imgposit1" v-if="!stars[5].threestart">
           <img @click="$tips(true);change6()" src="../assets/image/inter6.png" style="position: sticky;height: 65%">
         </div>
-        <div class="listimg">
+<!--        match the word-->
+        <div class="listimg" v-if="unit!=='Ending Sounds' ">
           <img :src=lightstar class="imgposit" v-if="stars[6].onestart">
           <img :src=star class="imgposit" v-if="!stars[6].onestart">
           <img :src=lightstar style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="stars[6].twostart">
@@ -75,7 +81,8 @@
           <img :src=star class="imgposit1" v-if="!stars[6].threestart">
           <img @click="$tips(true);change7()" src="../assets/image/inter7.png" style="position: sticky;height: 65%">
         </div>
-        <div class="listimg">
+<!--        odd word out-->
+        <div class="listimg" v-if="unit!=='Ending Sounds'">
           <img :src=lightstar class="imgposit" v-if="stars[7].onestart">
           <img :src=star class="imgposit" v-if="!stars[7].onestart">
           <img :src=lightstar style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="stars[7].twostart">
@@ -84,7 +91,8 @@
           <img :src=star class="imgposit1" v-if="!stars[7].threestart">
           <img @click="$tips(true);change8()" src="../assets/image/inter8.png" style="position: sticky;height: 65%">
         </div>
-        <div class="listimg">
+<!--        look and spell-->
+        <div class="listimg" v-if="unit!=='Ending Sounds' && unit!=='Sight Words'">
           <img :src=lightstar class="imgposit" v-if="stars[8].onestart">
           <img :src=star class="imgposit" v-if="!stars[8].onestart">
           <img :src=lightstar style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="stars[8].twostart">
@@ -93,7 +101,8 @@
           <img :src=star class="imgposit1" v-if="!stars[8].threestart">
           <img @click="$tips(true);change9()" src="../assets/image/inter9.png" style="position: sticky;height: 65%">
         </div>
-        <div class="listimg bosimg">
+<!--        listen the spell-->
+        <div class="listimg bosimg" v-if="unit!=='Ending Sounds'">
           <img :src=lightstar class="imgposit" v-if="stars[9].onestart">
           <img :src=star class="imgposit" v-if="!stars[9].onestart">
           <img :src=lightstar style="position: relative;height: 11%;top: 23%;left: 1%;z-index: 2;" v-if="stars[9].twostart">
@@ -1523,7 +1532,6 @@
     }
   }
 
-
   @media screen and (min-width: 736px) and (max-width:811px) {
     .roleimg {
       // height: 45%;
@@ -1668,6 +1676,11 @@
   }
 
   @media screen and (min-width: 1600px){
+
+    .menulist {
+      height: 85%;
+    }
+
     .imgposit {
       margin-left: 2%;
     }

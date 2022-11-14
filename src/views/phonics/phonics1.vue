@@ -20,7 +20,8 @@
           <div v-if="!onef" style="width: 100%; height: 90%;text-align: center;display:block;position: fixed;">
             <!--<img src="../../assets/image/phonicsbg.png" style="width: 100%; z-index: -1;background-color: #204900; height: 100%;display:block;position: absolute;">-->
             <div v-if="zhezhao" style="width: 100%; height: 80%;display:block;position: absolute;opacity: 0;z-index: 100;"></div>
-            <audio @canplay="getDuration"   ref="videos" id="videos"  autoplay="autoplay" :src="audio">
+<!--            <audio @canplay="getDuration"   ref="videos" id="videos"  autoplay="autoplay" :src="audio">-->
+            <audio  ref="videos" id="videos" :src="audio">
 
             </audio>
             <audio v-if="soundsWrong" autoplay="autoplay">
@@ -155,6 +156,9 @@
           <div @click="$tips(true);changesett()">
             <img src="../../assets/image/p-pause.png" class="repeat">
           </div>
+          <div @click="repeat()">
+            <img src="../../assets/image/repeat icon 1.png" class="pause">
+          </div>
         </div>
       </div>
     </transition>
@@ -214,7 +218,6 @@
           this.list1 = this.listF[this.countpage - 1];
           this.scoreacount = this.allscoreacount;
           for (var i = 0; i < this.list1.length; i++) {
-            // this.list1[i].bg = this.pic + this.list1[i].bg;
             this.list1[i].start=0;
             this.list1[i].ifshow=0;
             this.list1[i].colorsty=Math.floor(Math.random() + 0.5);
@@ -223,8 +226,9 @@
               this.audio = this.pic + this.list1[i].audio;
               this.phonicsDetailId =this.list1[i].pid;
             }
+
           }
-          // console.log(this.countpage);
+
           setTimeout(() => {
             setTimeout(() => {
               var test=document.getElementsByClassName('imgsty');
@@ -239,7 +243,7 @@
                   }else {
                     var radoms=Math.random()*(3.5-3+1)+3;
                   }
-                  this.listradom[0]=Math.floor(Math.random() * (30 - 0+1)) + 0;
+                  this.listradom[0]=Math.floor(Math.random() * (30 + 1));
                   this.listradom[1]=Math.floor(Math.random() * (360 - 330+1)) + 330;
                   var radoms1=Math.floor(Math.random()*this.listradom.length);
 
@@ -249,16 +253,12 @@
                 }
                 for (var i = 0; i < this.list1.length; i++) {
                   this.list1[i].ifshow=1;
-                  // if(this.list1[i].score===1){
-                  //   this.titlequesion = this.list1[i].title;
-                  //   this.audio = this.pic + this.list1[i].audio;
-                  // }
                 }
               }
-
               this.zhezhao=false;
             },500);
             // this.video = true;
+            this.repeat();
             this.onef = false;
           }, 2000);
 
@@ -358,9 +358,11 @@
 
     methods: {
       getDuration() {
-        console.log(this.$refs.videos.duration); //此时可以获取到duration
-        this.duration = this.$refs.videos.duration;
-        this.video=true;
+        if(this.onef) {
+          console.log(this.$refs.videos.duration); //此时可以获取到duration
+          this.duration = this.$refs.videos.duration;
+          this.video = true;
+        }
       },
       change() {
         if (this.onef == false) {
@@ -391,6 +393,11 @@
           // }
         }
       },
+      repeat(){
+        console.log(this.audio);
+        let audio = new Audio(this.audio);
+        audio.play();
+      },
       anser(li){
         if(this.scoreacount>0){
           this.zhezhao=true;
@@ -399,7 +406,8 @@
             li.start=1;
             li.ifshow=0;
             setTimeout(() => {
-              li.start=0; this.scoreacount-=1;
+              li.start=0;
+              this.scoreacount-=1;
               this.zhezhao=false;
               this.soundscorrect=false;
               if(this.scoreacount===0){
@@ -558,9 +566,7 @@
             this.phonicsDetailId =this.list1[i].pid;
           }
         }
-      // }, res => {
-      //   alertMsg("You must be connected to the internet.<br>Please connect and try again.");
-      // });
+
       if (this.onef === true) {
         setTimeout(() => {
           // this.video = true;
@@ -603,6 +609,7 @@
               }
             }
             this.zhezhao=false;
+            this.repeat();
           },3000);
           // console.log(document.getElementsByClassName('imgsty'));
 
@@ -810,9 +817,6 @@
   }
   .imgsty{
     width: 100%;
-    /*background-image: url("../../assets/image/lizione.png");*/
-    /*background-size: contain;*/
-    /*background-repeat: no-repeat;*/
   }
 
   .fontsize {
@@ -840,9 +844,6 @@
     display: inline;
     border:none;
     background: none;
-    /*background-image: url("../../assets/image/lizione.png");*/
-    /*background-size: contain;*/
-    /*background-repeat: no-repeat;*/
   }
   .contain {
     width: 100%;
